@@ -310,6 +310,28 @@ export default function Tracker() {
                                   </span>
                                   {f ? ` ${code(f.away.name)}` : ""}
                                 </span>
+                                <span className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.62rem] sm:hidden">
+                                  <span className="text-faint">
+                                    Stake <span className="tnum text-muted">{money(b.stake)}</span>
+                                  </span>
+                                  <span className="text-faint">
+                                    @ <span className="tnum text-muted">{b.odds.toFixed(2)}</span>
+                                  </span>
+                                  <span className="text-faint">
+                                    Win{" "}
+                                    <span
+                                      className={`tnum ${
+                                        b.status === "won"
+                                          ? "text-acid"
+                                          : b.status === "lost"
+                                            ? "text-faint line-through"
+                                            : "text-ink"
+                                      }`}
+                                    >
+                                      {money(b.potential)}
+                                    </span>
+                                  </span>
+                                </span>
                               </div>
 
                               <span className="tnum order-2 text-right font-mono text-sm text-muted sm:order-none">
@@ -387,6 +409,28 @@ export default function Tracker() {
                                     </div>
                                     <span className="mt-1 block font-mono text-[0.62rem] text-faint">
                                       Slip №{s.slipNo} · placed {s.placedAt}
+                                    </span>
+                                    <span className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.62rem] sm:hidden">
+                                      <span className="text-faint">
+                                        Stake <span className="tnum text-muted">{money(s.stake)}</span>
+                                      </span>
+                                      <span className="text-faint">
+                                        @ <span className="tnum text-muted">{s.odds.toFixed(2)}</span>
+                                      </span>
+                                      <span className="text-faint">
+                                        Win{" "}
+                                        <span
+                                          className={`tnum ${
+                                            s.status === "won"
+                                              ? "text-acid"
+                                              : s.status === "lost"
+                                                ? "text-faint line-through"
+                                                : "text-ink"
+                                          }`}
+                                        >
+                                          {money(s.potential)}
+                                        </span>
+                                      </span>
                                     </span>
                                   </div>
 
