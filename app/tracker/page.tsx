@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { mytTime, etTime, mytDayLabel, kickoffState } from "@/lib/data";
+import { mytTime, etTime, mytDayLabel, mytDayKey, kickoffState } from "@/lib/data";
 import {
   betSlip,
   settleAll,
@@ -89,6 +89,23 @@ function KickoffState({ iso, nowMs }: { iso: string; nowMs: number }) {
   );
 }
 
+function Chevron() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className="size-4 shrink-0 text-faint transition-transform duration-300 group-open:rotate-180"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
 function Stat({ label, value, tone = "ink" }: { label: string; value: string; tone?: "ink" | "acid" | "rose" | "muted" }) {
   const toneMap = { ink: "text-ink", acid: "text-acid", rose: "text-rose", muted: "text-muted" } as const;
   return (
@@ -104,6 +121,20 @@ export default function Tracker() {
   const totals = slipTotals(settled);
   const groups = groupByMatch(settled);
   const now = Date.now();
+
+  // Bucket matches into MYT days (kickoff order preserved from groupByMatch).
+  const dayOrder: string[] = [];
+  const dayMap = new Map<string, { label: string; groups: typeof groups }>();
+  for (const g of groups) {
+    const iso = g.fixture?.kickoffUTC;
+    const key = iso ? mytDayKey(iso) : "tbd";
+    if (!dayMap.has(key)) {
+      dayMap.set(key, { label: iso ? mytDayLabel(iso) : "Date TBC", groups: [] });
+      dayOrder.push(key);
+    }
+    dayMap.get(key)!.groups.push(g);
+  }
+  const days = dayOrder.map((key) => ({ key, ...dayMap.get(key)! }));
 
   const placed = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Asia/Kuala_Lumpur",
@@ -161,106 +192,150 @@ export default function Tracker() {
         </div>
       </section>
 
-      <div className="mt-10 space-y-6">
-        {groups.map((g) => {
-          const f = g.fixture;
-          const matchStaked = g.bets.reduce((s, b) => s + b.stake, 0);
-          const matchReturned = g.bets
-            .filter((b) => b.status === "won")
-            .reduce((s, b) => s + b.potential, 0);
+      <div className="mt-10 space-y-12">
+        {days.map((day) => {
+          const settledInDay = day.groups.filter(
+            (g) => g.fixture && kickoffState(g.fixture.kickoffUTC, now).state === "finished",
+          ).length;
           return (
-            <section key={g.matchId} className="overflow-hidden rounded-3xl border border-line bg-card/40">
-              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-pitch-2/40 px-5 py-4">
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="font-display text-lg font-extrabold uppercase tracking-tight">
-                      {f ? `${f.home.flag} ${f.home.name}` : g.matchId}
-                    </span>
-                    <span className="font-mono text-xs text-faint">v</span>
-                    <span className="font-display text-lg font-extrabold uppercase tracking-tight">
-                      {f ? `${f.away.name} ${f.away.flag}` : ""}
-                    </span>
-                  </div>
-                  {f && (
-                    <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                      Group {f.group} · {mytDayLabel(f.kickoffUTC)} · {mytTime(f.kickoffUTC)} MYT
-                      <span className="text-faint/70"> ({etTime(f.kickoffUTC)} ET)</span>
-                    </p>
-                  )}
-                </div>
-                <div className="flex flex-col items-end gap-2">
-                  {f && <KickoffState iso={f.kickoffUTC} nowMs={now} />}
-                  <ScoreReadout result={g.result} fixture={f} />
-                </div>
+            <section key={day.key}>
+              <div className="mb-4 flex items-baseline justify-between border-b border-line/60 pb-2">
+                <h2 className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">
+                  {day.label}
+                </h2>
+                <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                  {settledInDay}/{day.groups.length} settled
+                </span>
               </div>
 
-              <div className="hidden grid-cols-[1fr_auto_auto_auto_auto] gap-4 px-5 py-2.5 font-mono text-[0.6rem] uppercase tracking-wider text-faint sm:grid">
-                <span>Pick</span>
-                <span className="text-right">Odds</span>
-                <span className="text-right">Stake</span>
-                <span className="text-right">Returns</span>
-                <span className="text-right">Status</span>
-              </div>
-
-              <ul className="divide-y divide-line/60">
-                {g.bets.map((b) => (
-                  <li
-                    key={b.id}
-                    className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto_auto]"
-                  >
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${
-                            b.period === "HT" ? "bg-sky/15 text-sky" : "bg-acid/15 text-acid"
-                          }`}
-                        >
-                          {b.period}
-                        </span>
-                        <span className="truncate text-sm text-ink">{b.label}</span>
-                      </div>
-                      <span className="mt-1 block font-mono text-[0.62rem] text-faint">
-                        Target {f ? `${code(f.home.name)} ` : ""}
-                        <span className="tnum text-muted">
-                          {b.home}
-                          {"–"}
-                          {b.away}
-                        </span>
-                        {f ? ` ${code(f.away.name)}` : ""}
-                      </span>
-                    </div>
-
-                    <span className="tnum order-2 text-right font-mono text-sm text-muted sm:order-none">
-                      {b.odds.toFixed(2)}
-                    </span>
-                    <span className="tnum hidden text-right font-mono text-sm text-muted sm:block">
-                      {money(b.stake)}
-                    </span>
-                    <span
-                      className={`tnum hidden text-right font-mono text-sm sm:block ${
-                        b.status === "won" ? "text-acid" : b.status === "lost" ? "text-faint line-through" : "text-ink"
-                      }`}
+              <div className="space-y-4">
+                {day.groups.map((g) => {
+                  const f = g.fixture;
+                  const finished = f ? kickoffState(f.kickoffUTC, now).state === "finished" : false;
+                  const won = g.bets.filter((b) => b.status === "won").length;
+                  const lost = g.bets.filter((b) => b.status === "lost").length;
+                  const matchStaked = g.bets.reduce((s, b) => s + b.stake, 0);
+                  const matchReturned = g.bets
+                    .filter((b) => b.status === "won")
+                    .reduce((s, b) => s + b.potential, 0);
+                  return (
+                    <details
+                      key={g.matchId}
+                      open={!finished}
+                      className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden"
                     >
-                      {money(b.potential)}
-                    </span>
-                    <span className="order-3 flex justify-end sm:order-none">
-                      <StatusPill status={b.status} />
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                      <summary className="flex cursor-pointer select-none flex-wrap items-center justify-between gap-3 bg-pitch-2/40 px-5 py-4">
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2">
+                            <span className="font-display text-lg font-extrabold uppercase tracking-tight">
+                              {f ? `${f.home.flag} ${f.home.name}` : g.matchId}
+                            </span>
+                            <span className="font-mono text-xs text-faint">v</span>
+                            <span className="font-display text-lg font-extrabold uppercase tracking-tight">
+                              {f ? `${f.away.name} ${f.away.flag}` : ""}
+                            </span>
+                          </div>
+                          {f && (
+                            <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                              Group {f.group} · {mytTime(f.kickoffUTC)} MYT
+                              <span className="text-muted/70"> ({etTime(f.kickoffUTC)} ET)</span>
+                              {finished && (
+                                <span className="text-muted">
+                                  {" · "}
+                                  <span className="text-acid">{won}W</span>
+                                  {" · "}
+                                  <span className="text-rose">{lost}L</span>
+                                </span>
+                              )}
+                            </p>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="flex flex-col items-end gap-2">
+                            {f && <KickoffState iso={f.kickoffUTC} nowMs={now} />}
+                            <ScoreReadout result={g.result} fixture={f} />
+                          </div>
+                          <Chevron />
+                        </div>
+                      </summary>
 
-              <div className="flex items-center justify-between border-t border-line bg-pitch-2/30 px-5 py-3 font-mono text-[0.66rem] text-faint">
-                <span className="uppercase tracking-wider">
-                  {g.bets.length} bets · staked {money(matchStaked)}
-                </span>
-                <span className="tnum">
-                  {matchReturned > 0 ? (
-                    <span className="text-acid">Returned {money(matchReturned)}</span>
-                  ) : (
-                    <span>Max return {money(g.bets.reduce((s, b) => s + b.potential, 0))}</span>
-                  )}
-                </span>
+                      <div className="border-t border-line">
+                        <div className="hidden grid-cols-[1fr_auto_auto_auto_auto] gap-4 px-5 py-2.5 font-mono text-[0.6rem] uppercase tracking-wider text-faint sm:grid">
+                          <span>Pick</span>
+                          <span className="text-right">Odds</span>
+                          <span className="text-right">Stake</span>
+                          <span className="text-right">Returns</span>
+                          <span className="text-right">Status</span>
+                        </div>
+
+                        <ul className="divide-y divide-line/60">
+                          {g.bets.map((b) => (
+                            <li
+                              key={b.id}
+                              className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto_auto]"
+                            >
+                              <div className="min-w-0">
+                                <div className="flex items-center gap-2">
+                                  <span
+                                    className={`rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${
+                                      b.period === "HT" ? "bg-sky/15 text-sky" : "bg-acid/15 text-acid"
+                                    }`}
+                                  >
+                                    {b.period}
+                                  </span>
+                                  <span className="truncate text-sm text-ink">{b.label}</span>
+                                </div>
+                                <span className="mt-1 block font-mono text-[0.62rem] text-faint">
+                                  Target {f ? `${code(f.home.name)} ` : ""}
+                                  <span className="tnum text-muted">
+                                    {b.home}
+                                    {"–"}
+                                    {b.away}
+                                  </span>
+                                  {f ? ` ${code(f.away.name)}` : ""}
+                                </span>
+                              </div>
+
+                              <span className="tnum order-2 text-right font-mono text-sm text-muted sm:order-none">
+                                {b.odds.toFixed(2)}
+                              </span>
+                              <span className="tnum hidden text-right font-mono text-sm text-muted sm:block">
+                                {money(b.stake)}
+                              </span>
+                              <span
+                                className={`tnum hidden text-right font-mono text-sm sm:block ${
+                                  b.status === "won"
+                                    ? "text-acid"
+                                    : b.status === "lost"
+                                      ? "text-faint line-through"
+                                      : "text-ink"
+                                }`}
+                              >
+                                {money(b.potential)}
+                              </span>
+                              <span className="order-3 flex justify-end sm:order-none">
+                                <StatusPill status={b.status} />
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="flex items-center justify-between border-t border-line bg-pitch-2/30 px-5 py-3 font-mono text-[0.66rem] text-faint">
+                          <span className="uppercase tracking-wider">
+                            {g.bets.length} bets · staked {money(matchStaked)}
+                          </span>
+                          <span className="tnum">
+                            {matchReturned > 0 ? (
+                              <span className="text-acid">Returned {money(matchReturned)}</span>
+                            ) : (
+                              <span>Max return {money(g.bets.reduce((s, b) => s + b.potential, 0))}</span>
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                    </details>
+                  );
+                })}
               </div>
             </section>
           );

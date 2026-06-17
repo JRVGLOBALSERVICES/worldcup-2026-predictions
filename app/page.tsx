@@ -4,6 +4,23 @@ import { fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/li
 
 export const revalidate = 1800; // re-pick "today" every 30 min on Vercel
 
+function Chevron() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className="size-4 shrink-0 text-faint transition-transform duration-300 group-open:rotate-180"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
 export default function Home() {
   const days = fixturesByMytDay();
   const now = Date.now();
@@ -83,24 +100,42 @@ export default function Home() {
       <h2 className="mb-4 mt-14 font-display text-sm font-bold uppercase tracking-[0.18em] text-faint">
         Full group-stage schedule
       </h2>
-      <div className="space-y-10">
-        {upcoming.map((d) => (
-          <div key={d.key}>
-            <div className="mb-3 flex items-baseline justify-between">
-              <h3 className="font-display text-lg font-extrabold uppercase tracking-tight">
-                {d.label}
-              </h3>
-              <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                {d.fixtures.filter((f) => hasPrediction(f.id)).length}/{d.fixtures.length} called
-              </span>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {d.fixtures.map((f) => (
-                <MatchCard key={f.id} fixture={f} />
-              ))}
-            </div>
-          </div>
-        ))}
+      <div className="space-y-5">
+        {upcoming.map((d) => {
+          const last = d.fixtures[d.fixtures.length - 1];
+          const dayFinished = new Date(last.kickoffUTC).getTime() + liveWindow <= now;
+          return (
+            <details
+              key={d.key}
+              open={!dayFinished}
+              className="group rounded-2xl [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="mb-3 flex cursor-pointer select-none items-baseline justify-between border-b border-line/60 pb-2">
+                <span className="flex items-baseline gap-3">
+                  <h3 className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">
+                    {d.label}
+                  </h3>
+                  {dayFinished && (
+                    <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
+                      finished
+                    </span>
+                  )}
+                </span>
+                <span className="flex items-center gap-3">
+                  <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                    {d.fixtures.filter((f) => hasPrediction(f.id)).length}/{d.fixtures.length} called
+                  </span>
+                  <Chevron />
+                </span>
+              </summary>
+              <div className="grid gap-3 pt-1 sm:grid-cols-2">
+                {d.fixtures.map((f) => (
+                  <MatchCard key={f.id} fixture={f} />
+                ))}
+              </div>
+            </details>
+          );
+        })}
       </div>
 
       <footer className="mt-20 border-t border-line pt-8 text-sm text-faint">
