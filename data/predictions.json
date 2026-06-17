@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-17T15:57:12.000Z",
+    "generatedAt": "2026-06-17T19:23:58.688Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -129,119 +129,120 @@
     "eng-cro-2026-06-17": {
       "win": {
         "pick": "England",
-        "fairOdds": "1.70",
-        "reason": "Opta supercomputer gives England 55.9% vs Croatia 20.8%. England topped qualifying 8/8, 22 scored, 0 conceded, 10 straight competitive clean sheets and last 6 won. Croatia's spine (Modric 40, Perisic, Kovacic) is elite but aging and slow at the back; Vuskovic/Sutalo a young, untested CB axis. England's press and Kane-Bellingham axis should edge a controlled win, though Croatia's midfield control can keep it tight."
+        "fairOdds": "1.85",
+        "reason": "England field their strongest XI with Kane in career-best form (61 goals for Bayern in 2025-26) and a deeper squad. Croatia leaving Kovacic on the bench weakens their midfield control against the Rice-Anderson pivot. England favored but Croatia's tournament experience and Modric keep it from being a rout."
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "3.40",
-        "alt": "0-0",
-        "altOdds": "3.10"
+        "score": "0-0",
+        "fairOdds": "2.50",
+        "alt": "1-0",
+        "altOdds": "3.40"
       },
       "htft": {
-        "pick": "England/England",
-        "fairOdds": "2.90"
+        "pick": "Draw/England",
+        "fairOdds": "4.50"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.50"
+        "score": "1-0",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Harry Kane",
-          "fairOdds": "2.30",
+          "fairOdds": "2.10",
           "banker": true,
-          "note": "Captain, England's primary penalty taker and focal point; prolific vs aging Croatia CBs. Strongest anytime-scorer banker."
+          "note": "England's penalty taker and the most prolific striker in the tournament (61 goals club 2025-26); central reference point and primary goal threat."
         },
         {
           "player": "Jude Bellingham",
-          "fairOdds": "4.00",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "Operating as No.10 behind Kane; arrives late into the box and a set-piece threat."
+          "note": "Driving from the No.10 role, arrives late in the box behind Kane; secondary goal threat from deep runs."
         },
         {
           "player": "Anthony Gordon",
-          "fairOdds": "4.50",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Won the left-wing berth over Rashford; direct runner at Stanisic, cuts inside onto his right."
+          "note": "Starts on the left wing; pace in behind Croatia's back three, cutting inside onto his stronger foot."
         },
         {
-          "player": "Andrej Kramaric",
+          "player": "Petar Musa",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Croatia's most reliable finisher; likely impact/starter option, takes a penalty if Kovacic absent."
+          "note": "Croatia's lone starting striker in red-hot form (12 in 13 MLS); plays his club football at this very AT&T Stadium for FC Dallas — main away threat fed by Baturina."
         }
       ],
       "assists": [
         {
-          "player": "Bukayo Saka",
-          "fairOdds": "4.50",
-          "banker": false,
-          "note": "Fitness in doubt after season-end discomfort; if fit (even off bench) he is England's top chance-creator."
-        },
-        {
           "player": "Jude Bellingham",
-          "fairOdds": "5.00",
+          "fairOdds": "4.00",
           "banker": false,
-          "note": "Through-balls and link play from the 10; feeds Kane and overlapping James."
-        },
-        {
-          "player": "Luka Modric",
-          "fairOdds": "6.00",
-          "banker": false,
-          "note": "Croatia's deep playmaker and set-piece deliverer; nearly all Croatia creation runs through him."
-        }
-      ],
-      "penalty": {
-        "likelihood": "low-medium",
-        "taker": "Harry Kane",
-        "backup": "Jude Bellingham",
-        "note": "Kane is England's designated penalty taker (elite conversion). For Croatia, Modric/Kovacic or Kramaric. Roughly 25-30% chance of a spot-kick in the match."
-      },
-      "lineups": {
-        "home": "Pickford, James, Stones, Konsa, O'Reilly, Rice, Anderson, Madueke, Bellingham, Gordon, Kane",
-        "away": "Livakovic, Stanisic, Vuskovic, Gvardiol, Sutalo, Modric, Kovacic, Perisic, Sucic, Baturina, Musa",
-        "status": "probable"
-      },
-      "playerNotes": [
-        {
-          "player": "Tino Livramento",
-          "team": "England",
-          "note": "OUT of the tournament - calf injury in training; replaced by Trevoh Chalobah 24h before kickoff."
-        },
-        {
-          "player": "Bukayo Saka",
-          "team": "England",
-          "note": "Major doubt - season-end discomfort, didn't start final two warm-ups; Madueke likely starts right wing if Saka benched."
+          "note": "Primary creator from the No.10, feeding Kane and the wingers."
         },
         {
           "player": "Reece James",
-          "team": "England",
-          "note": "Only just back from a hamstring issue but expected to start at right-back; fitness worth monitoring."
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Right-back and a corner/free-kick deliverer for England; overlaps Madueke and whips crosses for Kane."
         },
+        {
+          "player": "Martin Baturina",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Croatia's chief creative outlet in the advanced role; the designated supplier to Musa and a set-piece option."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Harry Kane (England) / Luka Modric (Croatia)",
+        "backup": "Bukayo Saka (England, from bench) / Ivan Perisic (Croatia)",
+        "note": "Kane is England's automatic spot-kick taker. With Kovacic and Kramaric benched, Modric is Croatia's on-pitch penalty taker, with Perisic the next option and Budimir the bench backup. Modric, Perisic, Pasalic and Baturina share set-piece duties."
+      },
+      "lineups": {
+        "home": "Jordan Pickford, Reece James, John Stones, Ezri Konsa, Nico O'Reilly, Elliot Anderson, Declan Rice, Noni Madueke, Jude Bellingham, Anthony Gordon, Harry Kane",
+        "away": "Dominik Livakovic, Josip Sutalo, Luka Vuskovic, Josko Gvardiol, Josip Stanisic, Luka Sucic, Luka Modric, Ivan Perisic, Mario Pasalic, Martin Baturina, Petar Musa",
+        "status": "confirmed"
+      },
+      "playerNotes": [
         {
           "player": "Harry Kane",
           "team": "England",
-          "note": "Captain, penalty taker and main goal threat; faces a young, slow Croatia CB pairing."
+          "note": "Career-best form, 61 goals for Bayern in 2025-26 and second European Golden Shoe; penalty taker and focal point."
+        },
+        {
+          "player": "Ezri Konsa",
+          "team": "England",
+          "note": "Starts at centre-back alongside Stones; Marc Guehi drops to the bench — a notable selection call."
+        },
+        {
+          "player": "Nico O'Reilly",
+          "team": "England",
+          "note": "Starts at left-back, the least-experienced England starter; Croatia may target his flank with Stanisic and Pasalic."
         },
         {
           "player": "Luka Modric",
           "team": "Croatia",
-          "note": "Starts at 40; orchestrates everything but a physical/pace mismatch against England's press over 90 minutes."
+          "note": "Captains at 40 after recovering from a cheekbone fracture; controls midfield and is the on-pitch penalty taker with Kovacic benched."
         },
         {
-          "player": "Josko Gvardiol",
+          "player": "Petar Musa",
           "team": "Croatia",
-          "note": "Back from a long lay-off (earlier leg fracture concern); key to containing England's left side, but match-sharpness a question."
+          "note": "Preferred over Kramaric at striker; plays his MLS football at AT&T Stadium for FC Dallas, a familiarity edge in the venue."
+        },
+        {
+          "player": "Mateo Kovacic",
+          "team": "Croatia",
+          "note": "BENCHED despite featuring in predicted XIs; his absence from the engine room weakens Croatia's ball progression against Rice and Anderson."
         }
       ],
-      "confidence": "high",
+      "confidence": "medium",
       "sources": [
-        "https://www.espn.com/soccer/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
-        "https://www.skysports.com/football/news/12016/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad",
-        "https://theanalyst.com/articles/england-vs-croatia-prediction-world-cup-2026-match-preview",
-        "https://www.sportsmole.co.uk/football/england/world-cup-2026/predicted-lineups/saka-status-gordon-or-rashford-predicted-england-xi-vs-croatia_599272.html",
-        "https://www.sportsmole.co.uk/football/croatia/world-cup-2026/predicted-lineups/modric-starts-and-striker-surprise-predicted-croatia-xi-vs-england_599298.html"
+        "https://worldsoccertalk.com/world-cup/is-harry-kane-playing-england-vs-croatia-projected-lineups-of-the-2026-world-cup-group-l-match/",
+        "https://football-italia.net/2026-world-cup-england-vs-croatia-line-ups/",
+        "https://www.espn.com/soccer/match/_/gameId/760437/croatia-england",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://sports.yahoo.com/articles/england-world-cup-roster-2026-110001429.html",
+        "https://www.fotmob.com/players/709796/petar-musa"
       ]
     },
     "gha-pan-2026-06-17": {
