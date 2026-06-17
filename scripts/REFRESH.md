@@ -27,8 +27,31 @@ Repo lives at `/root/repos/worldcup-2026` on the VPS.
    scorer/assist/penalty picks to the actual starters.
 3. Build, commit, push. Optionally ping Rj only if a pick materially changed.
 
+## Result settlement — the Bet Tracker (`/tracker`)
+
+`data/bets.json` holds Mike's correct-score slip and a `results` map keyed by
+`matchId`. The tracker page settles each bet (won/lost/pending) by comparing the
+bet's `home`/`away` target to the real score, so **the cron must fill real scores
+in** for the tracker to settle.
+
+On every refresh run, for any match in `data/bets.json.results` that has **kicked
+off or finished**, do live web search for the score and update its entry:
+
+- At/after half-time → set `results.<matchId>.ht = { "home": H, "away": A }`
+  (goals in **home–away** order, exactly as the fixture lists home/away — note
+  Colombia is the *away* side vs Uzbekistan).
+- At/after full-time → set `results.<matchId>.ft = { "home": H, "away": A }`.
+- Leave `null` until that period's score is real. Never guess a score.
+
+Then `npm run build`, commit (`data: settle bet results <date>`), push. Vercel
+redeploys and the tracker flips the affected lines to Won (green) / Lost (red).
+When all four matches are final, post Rj a one-line settled summary
+(W/L count + net P&L from the tracker totals).
+
 ## Notes
 
 - Predictions are reasoned estimates, not live odds — keep the disclaimer intact.
 - `matchId` = `<home3>-<away3>-<YYYY-MM-DD>` (slug = first 3 letters, a–z only).
 - Never delete prior predictions; only add/update.
+- Bet results in `bets.json` are FACTS (real final scores) — only ever fill them
+  from a verified live source, never from the prediction model.
