@@ -43,7 +43,8 @@ export type SpecialGrade =
   | { type: "firstScorerAndScore"; player: string; home: number; away: number }
   | { type: "scoredAndScore"; player: string; home: number; away: number }
   | { type: "drawAndFirstScorer"; player: string }
-  | { type: "freeKickGoal"; player: string };
+  | { type: "freeKickGoal"; player: string }
+  | { type: "bttsEachOver"; line: number };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -261,6 +262,13 @@ export function gradeSpecial(special: Special): BetStatus {
     case "freeKickGoal":
       hit = goalsBy(goals, g.player).some((gl) => gl.freeKick === true);
       break;
+    case "bttsEachOver": {
+      // Both teams score strictly more than `line` goals (line=1 → 2+ each).
+      const home = goals.filter((gl) => gl.team === "home" && !gl.ownGoal).length;
+      const away = goals.filter((gl) => gl.team === "away" && !gl.ownGoal).length;
+      hit = home > g.line && away > g.line;
+      break;
+    }
   }
   return hit ? "won" : "lost";
 }
