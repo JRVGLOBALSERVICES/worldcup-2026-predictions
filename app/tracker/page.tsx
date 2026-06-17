@@ -319,7 +319,7 @@ export default function Tracker() {
                                 <div className="flex items-center gap-2">
                                   <span
                                     className={`rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${
-                                      b.period === "HT" ? "bg-sky/15 text-sky" : "bg-acid/15 text-acid"
+                                      b.period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid"
                                     }`}
                                   >
                                     {b.period}
@@ -399,10 +399,10 @@ export default function Tracker() {
                         {matchSpecials.length > 0 && (
                           <div className="border-t border-line">
                             <div className="flex items-center gap-2 bg-pitch-2/50 px-5 py-2.5">
-                              <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-sky">
+                              <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-mint">
                                 Player props
                               </span>
-                              <span className="rounded-full border border-sky/40 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-sky">
+                              <span className="rounded-full border border-mint/40 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-mint">
                                 1xBet · auto-settle
                               </span>
                               <span className="ml-auto font-mono text-[0.6rem] uppercase tracking-wider text-faint">
@@ -427,7 +427,7 @@ export default function Tracker() {
                                 >
                                   <div className="min-w-0">
                                     <div className="flex items-center gap-2">
-                                      <span className="rounded-sm bg-sky/15 px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-sky">
+                                      <span className="rounded-sm bg-mint/15 px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-mint">
                                         {s.market}
                                       </span>
                                       <span className="truncate text-sm text-ink">{s.label}</span>

@@ -1,19 +1,43 @@
 @import "tailwindcss";
 
+/* Hallmark · redesign: Bold-palette re-skin · tone: utilitarian · anchor hue: lime 121
+ * pre-emit critique: P5 H4 E5 S4 R5 V4
+ * Palette = the "Bold" 5-colour system (COLOURlovers): slate ground · mint
+ * secondary · lime primary energy accent · coral attention · crimson negative.
+ * Dark surfaces are tinted from the slate hue (~248) so the whole UI reads as
+ * one slate family; lime does the heavy lifting, everything else is restraint. */
 @theme {
-  --color-pitch: oklch(0.17 0.015 160);
-  --color-pitch-2: oklch(0.21 0.018 162);
-  --color-card: oklch(0.235 0.018 165);
-  --color-line: oklch(0.32 0.02 165);
+  /* Ground — dark surfaces tinted from slate #556270 (hue ~248) */
+  --color-pitch: oklch(0.19 0.022 248);
+  --color-pitch-2: oklch(0.23 0.024 248);
+  --color-card: oklch(0.265 0.026 248);
+  --color-line: oklch(0.40 0.03 246);
+  --color-slate: oklch(0.47 0.03 245); /* #556270 — the literal slate, for raised chrome */
+
+  /* Text — pure white, muted via opacity only */
   --color-ink: oklch(1 0 0);
   --color-muted: oklch(1 0 0 / 0.72);
   --color-faint: oklch(1 0 0 / 0.5);
-  --color-acid: oklch(0.87 0.21 135);
-  --color-acid-dim: oklch(0.62 0.13 138);
-  --color-amber: oklch(0.81 0.15 72);
-  --color-sky: oklch(0.78 0.11 230);
-  --color-rose: oklch(0.66 0.2 18);
-  --color-rose-dim: oklch(0.5 0.13 18);
+
+  /* Lime #C7F464 — primary energy accent (CTAs, profit, won, key figure) */
+  --color-acid: oklch(0.91 0.18 121);
+  --color-acid-dim: oklch(0.72 0.14 124);
+
+  /* Mint #4ECDC4 — secondary accent (info, player props, HT, upcoming) */
+  --color-mint: oklch(0.79 0.11 189);
+  --color-mint-dim: oklch(0.62 0.085 191);
+
+  /* Coral #FF6B6B — warm attention (live, medium confidence) */
+  --color-amber: oklch(0.72 0.175 32);
+
+  /* Crimson #C44D58 — negative (lost, P&L down) */
+  --color-rose: oklch(0.62 0.16 15);
+  --color-rose-dim: oklch(0.48 0.12 15);
+
+  /* One-off tints lifted from inline values (token discipline) */
+  --color-bloom: oklch(0.55 0.09 190 / 0.16); /* mint-cast hero bloom */
+  --color-hairline: oklch(1 0 0 / 0.022);      /* .stripes pitch markings */
+  --color-on-acid: oklch(0.2 0.02 248);        /* ink on lime fills (selection) */
 
   --font-display: var(--font-archivo), system-ui, sans-serif;
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
@@ -29,13 +53,18 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     background:
-      radial-gradient(120% 70% at 50% -10%, oklch(0.26 0.05 148 / 0.55), transparent 60%),
+      radial-gradient(120% 70% at 50% -10%, var(--color-bloom), transparent 60%),
       var(--color-pitch);
     min-height: 100dvh;
   }
   ::selection {
     background: var(--color-acid);
-    color: oklch(0.17 0.02 160);
+    color: var(--color-on-acid);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-acid);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
@@ -47,8 +76,8 @@
 .stripes {
   background-image: repeating-linear-gradient(
     90deg,
-    oklch(1 0 0 / 0.022) 0px,
-    oklch(1 0 0 / 0.022) 2px,
+    var(--color-hairline) 0px,
+    var(--color-hairline) 2px,
     transparent 2px,
     transparent 56px
   );
