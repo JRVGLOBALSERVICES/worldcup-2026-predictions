@@ -35,15 +35,29 @@ export function LiveScore({ matchId }: { matchId: string }) {
   if (!lm || lm.state === "scheduled") return null;
   const hot = lm.state === "live" || lm.state === "halftime";
   return (
-    <div className="mt-3 flex items-center justify-between rounded-xl border border-line/70 bg-pitch-2/50 px-3 py-2">
-      <StateTag lm={lm} />
-      <div
-        className={`tnum font-display text-2xl font-black leading-none ${hot ? "text-ink" : "text-muted"}`}
-      >
-        {lm.score.home}
-        <span className="px-1.5 text-faint">–</span>
-        {lm.score.away}
+    <div className="mt-3 rounded-xl border border-line/70 bg-pitch-2/50 px-3 py-2">
+      <div className="flex items-center justify-between">
+        <StateTag lm={lm} />
+        <div
+          className={`tnum font-display text-2xl font-black leading-none ${hot ? "text-ink" : "text-muted"}`}
+        >
+          {lm.score.home}
+          <span className="px-1.5 text-faint">–</span>
+          {lm.score.away}
+        </div>
       </div>
+      {lm.goals.length > 0 && (
+        <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1 border-t border-line/50 pt-2">
+          {lm.goals.map((g, i) => (
+            <li key={i} className="flex items-center gap-1 font-mono text-[0.6rem] leading-none">
+              <span className="tnum text-faint">{g.minute != null ? `${g.minute}'` : "•"}</span>
+              <span className={g.team === "home" ? "text-acid" : "text-mint"}>{g.scorer}</span>
+              {g.penalty && <span className="text-amber">(P)</span>}
+              {g.ownGoal && <span className="text-rose">(OG)</span>}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

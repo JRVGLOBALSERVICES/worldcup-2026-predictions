@@ -9,8 +9,15 @@ import type { LiveMatch } from "@/lib/live";
  * cadence: 5s while anything is live or near kickoff, 30s when only near, and
  * fully idle otherwise so we never hammer ESPN out of season.
  */
-type LiveCtx = { matches: Record<string, LiveMatch>; updatedAt: number | null };
-const Ctx = createContext<LiveCtx>({ matches: {}, updatedAt: null });
+type LiveCtx = {
+  matches: Record<string, LiveMatch>;
+  updatedAt: number | null;
+  /** Epoch ms when the next poll fires — drives the visible refresh countdown. */
+  nextRefreshAt: number | null;
+  /** True while any tracked fixture is live or at half-time (fast 5s cadence). */
+  anyLive: boolean;
+};
+const Ctx = createContext<LiveCtx>({ matches: {}, updatedAt: null, nextRefreshAt: null, anyLive: false });
 
 type LivePayload = { updatedAt: number; anyLive: boolean; matches: Record<string, LiveMatch> };
 
@@ -30,6 +37,7 @@ export function LiveProvider({
 }) {
   const [matches, setMatches] = useState<Record<string, LiveMatch>>({});
   const [updatedAt, setUpdatedAt] = useState<number | null>(null);
+  const [nextRefreshAt, setNextRefreshAt] = useState<number | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -55,7 +63,12 @@ export function LiveProvider({
       // Fast (5s) while a match is actually live; slow (30s) when only near
       // kickoff; stop entirely when nothing is live and nothing is near.
       const delay = anyLive ? 5000 : near ? 30000 : 0;
-      if (delay > 0) timer.current = setTimeout(tick, delay);
+      if (delay > 0) {
+        setNextRefreshAt(Date.now() + delay);
+        timer.current = setTimeout(tick, delay);
+      } else {
+        setNextRefreshAt(null);
+      }
     }
 
     tick();
@@ -65,7 +78,13 @@ export function LiveProvider({
     };
   }, [kickoffs]);
 
-  return <Ctx.Provider value={{ matches, updatedAt }}>{children}</Ctx.Provider>;
+  const anyLive = Object.values(matches).some(
+    (m) => m.state === "live" || m.state === "halftime",
+  );
+
+  return (
+    <Ctx.Provider value={{ matches, updatedAt, nextRefreshAt, anyLive }}>{children}</Ctx.Provider>
+  );
 }
 
 export function useLive(): LiveCtx {

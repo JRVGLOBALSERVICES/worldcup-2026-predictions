@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MatchCard } from "@/components/MatchCard";
 import { LiveProvider } from "@/components/LiveProvider";
+import { LiveRefreshPill } from "@/components/RefreshCountdown";
 import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
 
 export const revalidate = 1800; // re-pick "today" every 30 min on Vercel
@@ -93,11 +94,14 @@ export default function Home() {
 
       <LiveProvider kickoffs={fixtures.map((f) => f.kickoffUTC)}>
       <section className="mt-12">
-        <div className="mb-4 flex items-baseline gap-3">
-          <h2 className="font-display text-2xl font-black uppercase tracking-tight text-acid">
-            {isToday(featured.key) ? "Today" : "Next up"}
-          </h2>
-          <span className="font-mono text-sm text-muted">{featured.label}</span>
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+          <div className="flex items-baseline gap-3">
+            <h2 className="font-display text-2xl font-black uppercase tracking-tight text-acid">
+              {isToday(featured.key) ? "Today" : "Next up"}
+            </h2>
+            <span className="font-mono text-sm text-muted">{featured.label}</span>
+          </div>
+          <LiveRefreshPill />
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {featured.fixtures.map((f) => (
