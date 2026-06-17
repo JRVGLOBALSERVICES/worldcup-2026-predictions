@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-17T19:23:58.688Z",
+    "generatedAt": "2026-06-17T22:05:38.113Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -247,120 +247,122 @@
     },
     "gha-pan-2026-06-17": {
       "win": {
-        "pick": "Draw",
-        "fairOdds": "3.30",
-        "reason": "Ghana lost 4 of their last 5 (conceding 11) and are without their entire spine - Kudus, Salisu AND Partey (denied Canada entry) all out. Panama are unbeaten through CONCACAF qualifying, defensively drilled under Christiansen, and Opta's supercomputer actually favors them (45%). Bookmakers shade Ghana on individual quality from Semenyo/Inaki Williams, but a depleted, leaky Ghana vs a compact, experienced Panama points to a tight, low-scoring stalemate in a tournament opener both sides must avoid losing."
+        "pick": "Ghana",
+        "fairOdds": "2.10",
+        "reason": "Ghana carry the clear individual-quality edge in attack with in-form Semenyo (Premier League standout, market-leading ~30% anytime scorer probability) plus captain Jordan Ayew (7 goals in qualifying) and Nuamah running wide. Panama, despite Partey (visa) and Kudus (injury) being out, still face a Ghana front line that is more dangerous than the surprise Waterman-Barcenas pairing Christiansen has picked. Panama benching Fajardo, Diaz, Davis and Godoy weakens their central goal threat and set-piece pedigree, leaving them reliant on counters; Ghana should edge a tight, lower-scoring opener."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.20",
+        "fairOdds": "2.30",
         "alt": "1-0 Ghana",
-        "altOdds": "4.50"
+        "altOdds": "4.00"
       },
       "htft": {
-        "pick": "Draw/Draw",
-        "fairOdds": "5.00"
+        "pick": "Draw/Ghana",
+        "fairOdds": "4.50"
       },
       "fullTime": {
-        "score": "1-1",
+        "score": "1-0",
         "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Antoine Semenyo",
-          "fairOdds": "3.60",
+          "fairOdds": "3.30",
           "banker": true,
-          "note": "Ghana's standout attacking threat with Kudus out; carries the forward line, in-form and direct from the left."
+          "note": "Unanimous market leader (~+230, 29.7% implied); virtually all Ghana's final-third output runs through him with Partey and Kudus absent."
         },
         {
           "player": "Jordan Ayew",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Captain, penalty taker and qualifying talisman with 7 goals in 10 - Ghana's central focal point up top."
+        },
+        {
+          "player": "Cecilio Waterman",
           "fairOdds": "4.20",
           "banker": false,
-          "note": "Captain, primary penalty taker (perfect 17/17 career record) and set-piece/free-kick option; 6 goals in qualifying Group I."
+          "note": "Panama's surprise starter and market-leading scorer threat (~+220/+300), 14 international goals, the counter-attack outlet up top."
         },
         {
-          "player": "Jose Fajardo",
-          "fairOdds": "5.50",
+          "player": "Ernest Nuamah",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Panama's central striker, focal point of their counter-attacks and set-piece presence."
-        },
-        {
-          "player": "Inaki Williams",
-          "fairOdds": "4.80",
-          "banker": false,
-          "note": "Pace in behind a high Panama line; off-bench or starting wide threat for Ghana."
+          "note": "Wide forward at ~4/1, direct runner who stretches Panama's deep block from the flank."
         }
       ],
       "assists": [
         {
           "player": "Antoine Semenyo",
-          "fairOdds": "5.00",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "Chief creator/carrier with Kudus absent; cuts inside to feed runners."
+          "note": "Creates as much as he scores; Fox Sports flagged a Semenyo goal+assist double as a live angle."
         },
         {
-          "player": "Adalberto Carrasquilla",
-          "fairOdds": "5.50",
+          "player": "Jordan Ayew",
+          "fairOdds": "4.80",
           "banker": true,
-          "note": "Panama's creative engine, the link between defence and attack; main chance-creator and set-piece deliverer."
+          "note": "Added 7 assists alongside 7 goals in qualifying - Ghana's primary creator-finisher link."
         },
         {
-          "player": "Yoel Barcenas",
-          "fairOdds": "6.50",
+          "player": "Jose Luis Rodriguez",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "Wide creativity and crossing for Panama from the right/attacking flank."
+          "note": "Panama's main transition outlet and a free-kick/corner taker now Davis and Carrasquilla are benched."
         }
       ],
       "penalty": {
-        "likelihood": "medium",
-        "taker": "Jordan Ayew",
-        "backup": "Antoine Semenyo",
-        "note": "Ayew is Ghana's designated penalty taker with a flawless 17/17 senior conversion record; for Panama, Carrasquilla/Murillo handle spot-kicks."
+        "likelihood": "low",
+        "taker": "Cecilio Waterman",
+        "backup": "Yoel Barcenas",
+        "note": "With listed pen-takers Davis and Carrasquilla both benched, Waterman is the on-pitch penalty option for Panama; for Ghana, Jordan Ayew remains the designated taker with a flawless senior record."
       },
       "lineups": {
         "home": "Ati-Zigi, Senaya, Adjetey, Opoku, Mensah, Owusu, Yirenkyi, Nuamah, Boakye, Semenyo, Ayew",
-        "away": "Mosquera, Farina, Escobar, Cordoba, Murillo, Harvey, Godoy, Davis, Barcenas, Fajardo, Diaz",
-        "status": "probable"
+        "away": "Mosquera, Blackman, Cordoba, Ramos, Andrade, Murillo, Martinez, Harvey, Rodriguez, Barcenas, Waterman",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Mohammed Kudus",
-          "team": "Ghana",
-          "note": "OUT - quadriceps injury with a rehab setback ended his season; ruled out of the World Cup entirely."
-        },
-        {
-          "player": "Thomas Partey",
-          "team": "Ghana",
-          "note": "OUT for the opener - denied entry into Canada by host government; a huge loss to Ghana's midfield base."
-        },
-        {
-          "player": "Mohammed Salisu",
-          "team": "Ghana",
-          "note": "OUT - injury; weakens Ghana's central defence, opening starts for Opoku/Adjetey."
-        },
-        {
           "player": "Antoine Semenyo",
           "team": "Ghana",
-          "note": "Talisman with Kudus/Partey gone; Ghana's main goal threat and creator from the left."
+          "note": "In world-class form after a prolific Premier League season; the single most-cited player in the fixture and Ghana's whole attacking plan with Partey/Kudus out."
         },
         {
-          "player": "Adalberto Carrasquilla",
-          "team": "Panama",
-          "note": "Midfield orchestrator partnering captain Godoy; given freedom to dictate and create."
+          "player": "Jordan Ayew",
+          "team": "Ghana",
+          "note": "Captain, penalty taker and qualifying driving force (7G/7A in 10) at his third World Cup with 120 caps."
         },
         {
-          "player": "Amir Murillo",
+          "player": "Cecilio Waterman",
           "team": "Panama",
-          "note": "Russia 2018 veteran right wing-back; provides width, ball progression and defensive solidity."
+          "note": "34-year-old surprise starter up front, 14 goals in 55 caps and Dimers' highest Panama scoring projection; now also Panama's on-pitch penalty option."
+        },
+        {
+          "player": "Yoel Barcenas",
+          "team": "Panama",
+          "note": "Captain in this XI (98 caps, 8 goals); a winger pushed forward, on free-kick and corner duty driving Panama's set pieces."
+        },
+        {
+          "player": "Jose Luis Rodriguez",
+          "team": "Panama",
+          "note": "Key transition threat Christiansen trusts to create in the final third, plus free-kick and corner taker now Davis/Carrasquilla are benched."
+        },
+        {
+          "player": "Christian Martinez",
+          "team": "Panama",
+          "note": "Starts in central midfield with Godoy benched - a younger, more energetic legs option to screen and break up Ghana's link play."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://theanalyst.com/articles/ghana-vs-panama-prediction-world-cup-2026-match-preview",
-        "https://www.espn.com/espn/story/_/id/48878999/antoine-semenyo-thomas-partey-headline-ghana-provisional-fifa-world-cup-squad-injured-mohammed-kudus-out",
-        "https://www.graphic.com.gh/sports/sports-news/kudus-and-salisu-miss-world-cup-through-injury-as-ghana-names-provisional-squad.html",
-        "https://www.sportsmole.co.uk/football/ghana/world-cup-2026/predicted-lineups/who-replaces-partey-ghana-predicted-xi-vs-panama_599286.html",
-        "https://footyghana.com/2025/03/jordan-ayew-ghana-captain-has-100-penalty-conversion-statistics/"
+        "https://www.rotowire.com/soccer/article/ghana-vs-panama-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-118362",
+        "https://khelnow.com/football/world-football-panama-starting-lineup-vs-ghana-fifa-world-cup-202606",
+        "https://www.fanduel.com/research/ghana-vs-panama-prediction-world-cup-2026-best-anytime-goalscorer-bets-today-match-with-odds",
+        "https://www.cbssports.com/soccer/news/ghana-panama-odds-prediction-line-time-2026-world-cup-picks-best-bets/",
+        "https://en.wikipedia.org/wiki/Cecilio_Waterman",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://sports.yahoo.com/articles/ghana-vs-panama-predicted-lineup-060000349.html"
       ]
     },
     "uzb-col-2026-06-17": {
