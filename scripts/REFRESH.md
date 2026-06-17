@@ -85,6 +85,23 @@ props to Won (green) / Lost (red) — no manual grading. When all four matches
 are final, post Rj a one-line settled summary (W/L count + net P&L from the
 tracker totals).
 
+## Daily fixture-time check vs ESPN (06:00 MYT, automatic)
+
+The whole app derives MYT + ET display from each fixture's `kickoffUTC`, so a
+wrong UTC value shows a wrong time everywhere. To prevent drift, a deterministic
+script reconciles every fixture against ESPN's official FIFA feed:
+
+    node scripts/verify-fixtures-espn.mjs          # dry-run, report drift
+    node scripts/verify-fixtures-espn.mjs --write   # correct kickoffUTC in place
+
+It matches fixtures to ESPN events by team name (same ALIAS/normalise rules as
+`lib/live.ts` — keep the two ALIAS maps in sync) and treats ESPN as truth. The
+bridge cron **"WC2026 daily fixture-time check vs ESPN"** (`0 6 * * *` MYT) runs
+it with `--write`, and only builds/commits/pushes + messages Rj when something
+actually changed (or a fixture can't be matched to ESPN — that needs a new
+ALIAS entry). Clean days are silent. Do NOT hand-edit kickoff times; let the
+script own them.
+
 ## Notes
 
 - Predictions are reasoned estimates, not live odds — keep the disclaimer intact.
