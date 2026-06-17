@@ -7,6 +7,8 @@ import {
   slipTotals,
   groupByMatch,
   settleSpecials,
+  specialsTotals,
+  mergeTotals,
   money,
   type SettledBet,
   type MatchResult,
@@ -124,6 +126,10 @@ export default function Tracker() {
   const specials = settleSpecials();
   const now = Date.now();
 
+  // Slip-wide totals INCLUDING player props — the top bar must show the true
+  // all-in figure (score bets + props), not just the 12 correct-score lines.
+  const allTotals = mergeTotals(totals, specialsTotals(specials));
+
   // Player props belong UNDER the match they're on — bucket them by matchId so
   // each match card carries its own props instead of a detached section.
   const specialsByMatch = new Map<string, typeof specials>();
@@ -154,8 +160,8 @@ export default function Tracker() {
     minute: "2-digit",
   }).format(new Date(betSlip.meta.placedAt));
 
-  const settledPnlTone = totals.settledPnl > 0 ? "acid" : totals.settledPnl < 0 ? "rose" : "muted";
-  const pnlValue = `${totals.settledPnl > 0 ? "+" : ""}${money(totals.settledPnl)}`;
+  const settledPnlTone = allTotals.settledPnl > 0 ? "acid" : allTotals.settledPnl < 0 ? "rose" : "muted";
+  const pnlValue = `${allTotals.settledPnl > 0 ? "+" : ""}${money(allTotals.settledPnl)}`;
 
   return (
     <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
@@ -181,7 +187,7 @@ export default function Tracker() {
           Bet tracker · {betSlip.meta.owner}&rsquo;s slip
         </p>
         <h1 className="max-w-3xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl">
-          Twelve bets. One slip. Settled in real time.
+          {allTotals.count} bets. One slip. Settled in real time.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
           Every stake placed on the four Jun 18 fixtures, tracked in Malaysia time. Each line settles
@@ -190,14 +196,19 @@ export default function Tracker() {
         </p>
 
         <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Stat label="Total staked" value={money(totals.staked)} />
-          <Stat label="Max return" value={money(totals.potential)} tone="acid" />
+          <Stat label="Total staked" value={money(allTotals.staked)} />
+          <Stat label="Total bets" value={`${allTotals.count}`} tone="ink" />
+          <Stat label="Max return" value={money(allTotals.potential)} tone="acid" />
           <Stat label="Settled P&L" value={pnlValue} tone={settledPnlTone} />
-          <Stat label="Result" value={`${totals.won}W · ${totals.lost}L · ${totals.pending}P`} tone="muted" />
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-2 font-mono text-[0.66rem] text-faint">
           <span className="rounded-full border border-line px-2.5 py-1">Placed {placed} MYT</span>
-          <span className="rounded-full border border-line px-2.5 py-1">{totals.count} bets · all RM10</span>
+          <span className="rounded-full border border-line px-2.5 py-1">
+            {totals.count} score · {specials.length} props · all RM10
+          </span>
+          <span className="rounded-full border border-line px-2.5 py-1">
+            {allTotals.won}W · {allTotals.lost}L · {allTotals.pending}P
+          </span>
           <span className="rounded-full border border-line px-2.5 py-1">Returns = stake × odds</span>
         </div>
       </section>
@@ -207,15 +218,29 @@ export default function Tracker() {
           const settledInDay = day.groups.filter(
             (g) => g.fixture && kickoffState(g.fixture.kickoffUTC, now).state === "finished",
           ).length;
+          // Day-level summary (score bets + player props) — "total for today".
+          const dayLines = [
+            ...day.groups.flatMap((g) => g.bets),
+            ...day.groups.flatMap((g) => specialsByMatch.get(g.matchId) ?? []),
+          ];
+          const dayCount = dayLines.length;
+          const dayStaked = dayLines.reduce((s, b) => s + b.stake, 0);
+          const dayPotential = dayLines.reduce((s, b) => s + b.potential, 0);
           return (
             <section key={day.key}>
-              <div className="mb-4 flex items-baseline justify-between border-b border-line/60 pb-2">
+              <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-line/60 pb-2">
                 <h2 className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">
                   {day.label}
                 </h2>
-                <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                  {settledInDay}/{day.groups.length} settled
-                </span>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                  <span className="tnum">
+                    {dayCount} bets · staked <span className="text-muted">{money(dayStaked)}</span>
+                  </span>
+                  <span className="tnum">
+                    max win <span className="text-acid">{money(dayPotential)}</span>
+                  </span>
+                  <span>{settledInDay}/{day.groups.length} settled</span>
+                </div>
               </div>
 
               <div className="space-y-4">

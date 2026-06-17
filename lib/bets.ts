@@ -281,3 +281,18 @@ export function settleSpecials(): SettledSpecial[] {
 export function specialsTotals(settled: SettledSpecial[]): SlipTotals {
   return slipTotals(settled as unknown as SettledBet[]);
 }
+
+/** Merge two totals into one — used to fold player props into the slip-wide / per-day summary. */
+export function mergeTotals(a: SlipTotals, b: SlipTotals): SlipTotals {
+  return {
+    count: a.count + b.count,
+    staked: a.staked + b.staked,
+    potential: a.potential + b.potential,
+    won: a.won + b.won,
+    lost: a.lost + b.lost,
+    pending: a.pending + b.pending,
+    settledPnl: a.settledPnl + b.settledPnl,
+    settledStake: a.settledStake + b.settledStake,
+    returned: a.returned + b.returned,
+  };
+}
