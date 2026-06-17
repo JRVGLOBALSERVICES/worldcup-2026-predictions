@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { fixtures, getFixture, getPrediction, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
-import { KickoffClock } from "@/components/KickoffClock";
+import { LiveProvider } from "@/components/LiveProvider";
+import { MatchHeaderScore, LiveStatusLine, LiveGoalLog } from "@/components/LiveScore";
 
 export function generateStaticParams() {
   return fixtures.map((f) => ({ id: f.id }));
@@ -47,6 +48,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   };
 
   return (
+    <LiveProvider kickoffs={[fixture.kickoffUTC]}>
     <main className="mx-auto max-w-3xl px-4 pb-24 sm:px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -70,21 +72,20 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
 
         <div className="flex items-center justify-between gap-4">
           <Team flag={fixture.home.flag} name={fixture.home.name} />
-          <div className="shrink-0 text-center">
-            <div className="tnum font-display text-3xl font-black text-acid sm:text-4xl">
-              {mytTime(fixture.kickoffUTC)}
-            </div>
-            <div className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
-              MYT · {etTime(fixture.kickoffUTC)} ET
-            </div>
-          </div>
+          <MatchHeaderScore
+            matchId={fixture.id}
+            mytLabel={mytTime(fixture.kickoffUTC)}
+            etLabel={etTime(fixture.kickoffUTC)}
+          />
           <Team flag={fixture.away.flag} name={fixture.away.name} align="right" />
         </div>
 
         <div className="mt-5 border-t border-line/70 pt-3 text-center text-sm">
-          <KickoffClock kickoffUTC={fixture.kickoffUTC} />
+          <LiveStatusLine matchId={fixture.id} kickoffUTC={fixture.kickoffUTC} />
         </div>
       </header>
+
+      <LiveGoalLog matchId={fixture.id} />
 
       <div className="mt-8">
         {pred ? (
@@ -106,6 +107,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
         <p className="leading-relaxed text-muted">⚠️ {predictionFile.meta.disclaimer}</p>
       </footer>
     </main>
+    </LiveProvider>
   );
 }
 

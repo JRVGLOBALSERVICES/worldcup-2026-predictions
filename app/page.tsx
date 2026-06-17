@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MatchCard } from "@/components/MatchCard";
-import { fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
+import { LiveProvider } from "@/components/LiveProvider";
+import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
 
 export const revalidate = 1800; // re-pick "today" every 30 min on Vercel
 
@@ -90,6 +91,7 @@ export default function Home() {
         </div>
       </section>
 
+      <LiveProvider kickoffs={fixtures.map((f) => f.kickoffUTC)}>
       <section className="mt-12">
         <div className="mb-4 flex items-baseline gap-3">
           <h2 className="font-display text-2xl font-black uppercase tracking-tight text-acid">
@@ -143,6 +145,7 @@ export default function Home() {
           );
         })}
       </div>
+      </LiveProvider>
 
       <footer className="mt-20 border-t border-line pt-8 text-sm text-faint">
         <p className="max-w-2xl leading-relaxed">{predictionFile.meta.method}</p>

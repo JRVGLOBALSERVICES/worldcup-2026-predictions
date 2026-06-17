@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Fixture } from "@/lib/types";
 import { mytTime, etTime, getPrediction } from "@/lib/data";
-import { KickoffClock } from "./KickoffClock";
+import { LiveScore, LiveStatusLine } from "./LiveScore";
 import { OddsPill, StatusBadge } from "./atoms";
 
 export function MatchCard({ fixture }: { fixture: Fixture }) {
@@ -42,8 +42,10 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
         </div>
       </div>
 
+      <LiveScore matchId={fixture.id} />
+
       <div className="mt-4 flex items-center justify-between border-t border-line/70 pt-3 text-[0.72rem]">
-        <KickoffClock kickoffUTC={fixture.kickoffUTC} />
+        <LiveStatusLine matchId={fixture.id} kickoffUTC={fixture.kickoffUTC} />
         <div className="flex items-center gap-2">
           {pred && <StatusBadge status={pred.lineups.status} />}
           <span className="tnum font-mono text-faint">{etTime(fixture.kickoffUTC)} ET</span>
