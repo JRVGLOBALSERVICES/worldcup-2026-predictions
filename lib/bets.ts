@@ -20,6 +20,47 @@ export type Bet = {
 export type Score = { home: number; away: number } | null;
 export type MatchResult = { ht: Score; ft: Score };
 
+/** One scraped goal. `team` is relative to the fixture's listed home/away sides.
+ *  Goals are stored in chronological scoring order — first non-own-goal = first scorer. */
+export type Goal = {
+  team: "home" | "away";
+  scorer: string;
+  minute?: number;
+  assist?: string | null;
+  freeKick?: boolean;
+  penalty?: boolean;
+  ownGoal?: boolean;
+};
+
+export type MatchEvents = { status: "scheduled" | "live" | "finished"; goals: Goal[] };
+
+/** Machine-gradable rule attached to each special so the cron settles it without a human. */
+export type SpecialGrade =
+  | { type: "scored"; player: string }
+  | { type: "scoreAndAssist"; player: string }
+  | { type: "assistsOver"; player: string; line: number }
+  | { type: "firstScorer"; player: string }
+  | { type: "firstScorerAndScore"; player: string; home: number; away: number }
+  | { type: "scoredAndScore"; player: string; home: number; away: number }
+  | { type: "drawAndFirstScorer"; player: string }
+  | { type: "freeKickGoal"; player: string };
+
+/** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
+export type Special = {
+  id: string;
+  slipNo: string;
+  matchId: string;
+  player: string;
+  market: string;
+  label: string;
+  odds: number;
+  stake: number;
+  placedAt: string;
+  grade?: SpecialGrade;
+  /** Manual safety valve: overrides the auto-grade if a scrape was wrong. */
+  statusOverride?: BetStatus;
+};
+
 export type BetSlipFile = {
   meta: {
     owner: string;
@@ -30,13 +71,21 @@ export type BetSlipFile = {
     disclaimer: string;
   };
   results: Record<string, MatchResult>;
+  matchEventsNote?: string;
+  matchEvents?: Record<string, MatchEvents>;
   bets: Bet[];
+  specialsNote?: string;
+  specials?: Special[];
 };
 
 export const betSlip = betsJson as BetSlipFile;
 
 export function getResult(matchId: string): MatchResult {
   return betSlip.results[matchId] ?? { ht: null, ft: null };
+}
+
+export function getEvents(matchId: string): MatchEvents {
+  return betSlip.matchEvents?.[matchId] ?? { status: "scheduled", goals: [] };
 }
 
 /** Settle one correct-score bet against the relevant period's score. */
@@ -139,4 +188,96 @@ export function groupByMatch(settled: SettledBet[]): MatchGroup[] {
 
 export function money(n: number, currency = betSlip.meta.currency): string {
   return `${currency}${n.toFixed(2)}`;
+}
+
+// ── Specials (1xBet player props, auto-graded off scraped match events) ──────
+
+export type SettledSpecial = Special & {
+  status: BetStatus;
+  fixture: Fixture | undefined;
+  potential: number;
+  /** +profit on a win, −stake on a loss, 0 while pending. */
+  pnl: number;
+};
+
+/** Loose name match — "Ronaldo" matches "Cristiano Ronaldo", case-insensitive, either direction. */
+function nameMatch(a: string, b: string): boolean {
+  const x = a.trim().toLowerCase();
+  const y = b.trim().toLowerCase();
+  return x === y || x.includes(y) || y.includes(x);
+}
+
+const realGoals = (goals: Goal[]) => goals.filter((g) => !g.ownGoal);
+const goalsBy = (goals: Goal[], player: string) =>
+  realGoals(goals).filter((g) => nameMatch(g.scorer, player));
+const assistsBy = (goals: Goal[], player: string) =>
+  goals.filter((g) => g.assist && nameMatch(g.assist, player));
+const firstScorer = (goals: Goal[]): string | null => realGoals(goals)[0]?.scorer ?? null;
+const isFinalScore = (ft: Score, home: number, away: number) =>
+  !!ft && ft.home === home && ft.away === away;
+const isDraw = (ft: Score) => !!ft && ft.home === ft.away;
+
+/**
+ * Auto-grade a single special off scraped match events + the final score.
+ * Returns "pending" until the match is finished (events.status === "finished").
+ * A manual `statusOverride` always wins (bad-scrape safety valve).
+ */
+export function gradeSpecial(special: Special): BetStatus {
+  if (special.statusOverride) return special.statusOverride;
+  const g = special.grade;
+  if (!g) return "pending";
+
+  const events = getEvents(special.matchId);
+  const ft = getResult(special.matchId).ft;
+  if (events.status !== "finished") return "pending";
+
+  const { goals } = events;
+  let hit = false;
+  switch (g.type) {
+    case "scored":
+      hit = goalsBy(goals, g.player).length > 0;
+      break;
+    case "scoreAndAssist":
+      hit = goalsBy(goals, g.player).length > 0 && assistsBy(goals, g.player).length > 0;
+      break;
+    case "assistsOver":
+      hit = assistsBy(goals, g.player).length > g.line;
+      break;
+    case "firstScorer":
+      hit = !!firstScorer(goals) && nameMatch(firstScorer(goals)!, g.player);
+      break;
+    case "firstScorerAndScore":
+      hit =
+        !!firstScorer(goals) &&
+        nameMatch(firstScorer(goals)!, g.player) &&
+        isFinalScore(ft, g.home, g.away);
+      break;
+    case "scoredAndScore":
+      hit = goalsBy(goals, g.player).length > 0 && isFinalScore(ft, g.home, g.away);
+      break;
+    case "drawAndFirstScorer":
+      hit = isDraw(ft) && !!firstScorer(goals) && nameMatch(firstScorer(goals)!, g.player);
+      break;
+    case "freeKickGoal":
+      hit = goalsBy(goals, g.player).some((gl) => gl.freeKick === true);
+      break;
+  }
+  return hit ? "won" : "lost";
+}
+
+export function settleSpecials(): SettledSpecial[] {
+  return (betSlip.specials ?? []).map((s) => {
+    const status = gradeSpecial(s);
+    return {
+      ...s,
+      status,
+      fixture: getFixture(s.matchId),
+      potential: s.stake * s.odds,
+      pnl: status === "won" ? s.stake * (s.odds - 1) : status === "lost" ? -s.stake : 0,
+    };
+  });
+}
+
+export function specialsTotals(settled: SettledSpecial[]): SlipTotals {
+  return slipTotals(settled as unknown as SettledBet[]);
 }

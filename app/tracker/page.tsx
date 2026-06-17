@@ -6,6 +6,8 @@ import {
   settleAll,
   slipTotals,
   groupByMatch,
+  settleSpecials,
+  specialsTotals,
   money,
   type SettledBet,
   type MatchResult,
@@ -120,6 +122,9 @@ export default function Tracker() {
   const settled = settleAll();
   const totals = slipTotals(settled);
   const groups = groupByMatch(settled);
+  const specials = settleSpecials();
+  const specialTotals = specialsTotals(specials);
+  const specialFixture = specials[0]?.fixture;
   const now = Date.now();
 
   // Bucket matches into MYT days (kickoff order preserved from groupByMatch).
@@ -341,6 +346,133 @@ export default function Tracker() {
           );
         })}
       </div>
+
+      {specials.length > 0 &&
+        (() => {
+          const sf = specialFixture;
+          const specialsFinished = sf
+            ? kickoffState(sf.kickoffUTC, now).state === "finished"
+            : false;
+          return (
+            <section className="mt-12">
+              <div className="mb-4 flex items-baseline justify-between border-b border-line/60 pb-2">
+                <h2 className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">
+                  Specials · Player props
+                </h2>
+                <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                  {specialTotals.won + specialTotals.lost}/{specialTotals.count} settled
+                </span>
+              </div>
+
+              <details
+                open={!specialsFinished}
+                className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden"
+              >
+                <summary className="flex cursor-pointer select-none flex-wrap items-center justify-between gap-3 bg-pitch-2/40 px-5 py-4">
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-display text-lg font-extrabold uppercase tracking-tight">
+                        {sf ? `${sf.home.flag} ${sf.home.name}` : "Portugal"}
+                      </span>
+                      <span className="font-mono text-xs text-faint">v</span>
+                      <span className="font-display text-lg font-extrabold uppercase tracking-tight">
+                        {sf ? `${sf.away.name} ${sf.away.flag}` : "DR Congo"}
+                      </span>
+                      <span className="rounded-full border border-sky/40 px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-wider text-sky">
+                        1xBet · manual
+                      </span>
+                    </div>
+                    <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                      {sf ? `${mytTime(sf.kickoffUTC)} MYT` : "Jun 18 · MYT"}
+                      {" · "}
+                      {specials.length} player props
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex flex-col items-end gap-2">
+                      {sf && <KickoffState iso={sf.kickoffUTC} nowMs={now} />}
+                      <span className="font-mono text-[0.66rem] text-faint">
+                        staked {money(specialTotals.staked)}
+                      </span>
+                    </div>
+                    <Chevron />
+                  </div>
+                </summary>
+
+                <div className="border-t border-line">
+                  <div className="hidden grid-cols-[1fr_auto_auto_auto_auto] gap-4 px-5 py-2.5 font-mono text-[0.6rem] uppercase tracking-wider text-faint sm:grid">
+                    <span>Selection</span>
+                    <span className="text-right">Odds</span>
+                    <span className="text-right">Stake</span>
+                    <span className="text-right">Returns</span>
+                    <span className="text-right">Status</span>
+                  </div>
+
+                  <ul className="divide-y divide-line/60">
+                    {specials.map((s) => (
+                      <li
+                        key={s.id}
+                        className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto_auto]"
+                      >
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2">
+                            <span className="rounded-sm bg-sky/15 px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-sky">
+                              {s.market}
+                            </span>
+                            <span className="truncate text-sm text-ink">{s.label}</span>
+                          </div>
+                          <span className="mt-1 block font-mono text-[0.62rem] text-faint">
+                            Slip №{s.slipNo} · placed {s.placedAt}
+                          </span>
+                        </div>
+
+                        <span className="tnum order-2 text-right font-mono text-sm text-muted sm:order-none">
+                          {s.odds.toFixed(2)}
+                        </span>
+                        <span className="tnum hidden text-right font-mono text-sm text-muted sm:block">
+                          {money(s.stake)}
+                        </span>
+                        <span
+                          className={`tnum hidden text-right font-mono text-sm sm:block ${
+                            s.status === "won"
+                              ? "text-acid"
+                              : s.status === "lost"
+                                ? "text-faint line-through"
+                                : "text-ink"
+                          }`}
+                        >
+                          {money(s.potential)}
+                        </span>
+                        <span className="order-3 flex justify-end sm:order-none">
+                          <StatusPill status={s.status} />
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex items-center justify-between border-t border-line bg-pitch-2/30 px-5 py-3 font-mono text-[0.66rem] text-faint">
+                    <span className="uppercase tracking-wider">
+                      {specials.length} props · staked {money(specialTotals.staked)}
+                    </span>
+                    <span className="tnum">
+                      {specialTotals.returned > 0 ? (
+                        <span className="text-acid">Returned {money(specialTotals.returned)}</span>
+                      ) : (
+                        <span>Max return {money(specialTotals.potential)}</span>
+                      )}
+                    </span>
+                  </div>
+                </div>
+              </details>
+
+              {betSlip.specialsNote && (
+                <p className="mt-3 max-w-2xl font-mono text-[0.66rem] leading-relaxed text-faint">
+                  {betSlip.specialsNote}
+                </p>
+              )}
+            </section>
+          );
+        })()}
 
       <footer className="mt-16 border-t border-line pt-8 text-sm text-faint">
         <p className="max-w-2xl leading-relaxed text-muted">{betSlip.meta.note}</p>

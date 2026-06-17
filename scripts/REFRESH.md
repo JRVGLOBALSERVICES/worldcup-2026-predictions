@@ -43,10 +43,47 @@ off or finished**, do live web search for the score and update its entry:
 - At/after full-time → set `results.<matchId>.ft = { "home": H, "away": A }`.
 - Leave `null` until that period's score is real. Never guess a score.
 
+### Player-prop specials auto-settle — fill `matchEvents` after full-time
+
+The `/tracker` specials (real 1xBet player props on Portugal v DR Congo) are
+**no longer hand-flipped**. They carry a machine `grade` rule and settle off
+`data/bets.json.matchEvents` automatically. The cron's only job after a match
+ends is to **scrape the goal-by-goal events and fill them in** — the grader
+(`lib/bets.ts gradeSpecial`) does the rest.
+
+When a match with specials is **finished**, do live web search (BBC/FIFA/
+Flashscore/ESPN match report) for the full goal list, then set
+`matchEvents.<matchId>`:
+
+```json
+"por-drc-2026-06-17": {
+  "status": "finished",
+  "goals": [
+    { "team": "home", "scorer": "Cristiano Ronaldo", "minute": 12, "assist": null, "penalty": true },
+    { "team": "home", "scorer": "Rafael Leao", "minute": 34, "assist": "Bruno Fernandes" }
+  ]
+}
+```
+
+Rules for `matchEvents`:
+- `goals` MUST be in **chronological scoring order** — the grader treats the
+  first non-own-goal as the *first scorer*.
+- `team` is `"home"`/`"away"` relative to how the fixture lists the sides.
+- Use **full player names** (the matcher is loose: "Ronaldo" ⊆ "Cristiano
+  Ronaldo"), include `assist` (full name or `null`), and set `freeKick: true`
+  ONLY for a goal scored directly from a free kick, `penalty`/`ownGoal` as they
+  apply.
+- Set `status: "finished"` only once the match is actually over. Until then the
+  specials stay `pending` — never fill events for a match that hasn't ended.
+- Also fill `results.<matchId>.ft` (above) so score-dependent specials grade.
+- If a scrape is wrong and a line settled incorrectly, set `statusOverride`
+  ("won"/"lost") on that special to hand-correct it.
+
 Then `npm run build`, commit (`data: settle bet results <date>`), push. Vercel
-redeploys and the tracker flips the affected lines to Won (green) / Lost (red).
-When all four matches are final, post Rj a one-line settled summary
-(W/L count + net P&L from the tracker totals).
+redeploys and the tracker flips BOTH the correct-score lines and the player
+props to Won (green) / Lost (red) — no manual grading. When all four matches
+are final, post Rj a one-line settled summary (W/L count + net P&L from the
+tracker totals).
 
 ## Notes
 
