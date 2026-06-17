@@ -51,7 +51,13 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
       {/* lineups */}
       <div>
         <div className="mb-3 flex items-center gap-3">
-          <SectionLabel>Probable line-ups</SectionLabel>
+          <SectionLabel>
+            {pred.lineups.status === "confirmed"
+              ? "Confirmed line-ups"
+              : pred.lineups.status === "unconfirmed"
+                ? "Line-ups (TBC)"
+                : "Probable line-ups"}
+          </SectionLabel>
           <StatusBadge status={pred.lineups.status} />
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
