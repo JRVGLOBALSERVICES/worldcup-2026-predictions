@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
 import { inPlayBet, inPlaySpecial, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
+import { RefreshCountdown } from "./RefreshCountdown";
 
 // ── serialisable payload the server page hands down (no functions/classes) ────
 export type BetRow = {
@@ -86,6 +87,7 @@ function useLive(base: TrackerBase) {
   const [live, setLive] = useState<Record<string, LiveMatch>>({});
   const [updatedAt, setUpdatedAt] = useState<number | null>(null);
   const [pollFast, setPollFast] = useState(false);
+  const [nextRefreshAt, setNextRefreshAt] = useState<number | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -112,7 +114,12 @@ function useLive(base: TrackerBase) {
       setPollFast(fast);
       // Stop entirely once nothing is live and nothing is near (saves the idle heartbeat).
       const delay = fast ? 5000 : near ? 30000 : 0;
-      if (delay > 0) timer.current = setTimeout(tick, delay);
+      if (delay > 0) {
+        setNextRefreshAt(Date.now() + delay);
+        timer.current = setTimeout(tick, delay);
+      } else {
+        setNextRefreshAt(null);
+      }
     }
 
     tick();
@@ -122,7 +129,7 @@ function useLive(base: TrackerBase) {
     };
   }, [base.days]);
 
-  return { live, updatedAt, pollFast };
+  return { live, updatedAt, pollFast, nextRefreshAt };
 }
 
 // ── pills ─────────────────────────────────────────────────────────────────────
@@ -236,7 +243,7 @@ function Performance({ rows }: { rows: InPlay[] }) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 export default function LiveTracker({ base }: { base: TrackerBase }) {
-  const { live, updatedAt, pollFast } = useLive(base);
+  const { live, updatedAt, pollFast, nextRefreshAt } = useLive(base);
   const cur = base.meta.currency;
 
   // Live "if it ended now" P&L across every line that has a verdict.
@@ -313,7 +320,11 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
               Updated {new Date(updatedAt).toLocaleTimeString("en-GB", { timeZone: "Asia/Kuala_Lumpur", hour: "2-digit", minute: "2-digit", second: "2-digit" })} MYT
             </span>
           )}
-          {pollFast && <span className="rounded-full border border-acid-dim px-2.5 py-1 text-acid">● auto-refresh on</span>}
+          {anyMatchLive ? (
+            <RefreshCountdown nextAt={nextRefreshAt} active={anyMatchLive} />
+          ) : (
+            pollFast && <span className="rounded-full border border-acid-dim px-2.5 py-1 text-acid">● auto-refresh on</span>
+          )}
         </div>
       </section>
 
@@ -359,6 +370,22 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
                       </summary>
 
                       <div className="border-t border-line">
+                        {/* Live goal feed — scorers, assists & minutes while the match is on */}
+                        {lm && (lm.state === "live" || lm.state === "halftime") && (
+                          <div className="border-b border-line bg-pitch-2/40 px-5 py-4">
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <span className="inline-flex items-center gap-1.5 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-amber">
+                                <span className="size-1.5 animate-pulse rounded-full bg-amber motion-reduce:animate-none" />
+                                {lm.state === "halftime" ? "Half-time" : `Live ${lm.statusDetail}`} · goals so far
+                              </span>
+                              <Performance rows={allV} />
+                            </div>
+                            <div className="mt-2.5">
+                              <GoalLog live={lm} m={m} />
+                            </div>
+                          </div>
+                        )}
+
                         {/* End-of-game performance banner */}
                         {finished && lm && (
                           <div className="border-b border-line bg-pitch-2/50 px-5 py-4">

@@ -5,6 +5,7 @@ import { fixtures, getFixture, getPrediction, mytTime, mytDayLabel, etTime, pred
 import { PredictionView } from "@/components/PredictionView";
 import { LiveProvider } from "@/components/LiveProvider";
 import { MatchHeaderScore, LiveStatusLine, LiveGoalLog } from "@/components/LiveScore";
+import { LiveRefreshPill } from "@/components/RefreshCountdown";
 
 export function generateStaticParams() {
   return fixtures.map((f) => ({ id: f.id }));
@@ -80,8 +81,9 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
           <Team flag={fixture.away.flag} name={fixture.away.name} align="right" />
         </div>
 
-        <div className="mt-5 border-t border-line/70 pt-3 text-center text-sm">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-line/70 pt-3 text-center text-sm">
           <LiveStatusLine matchId={fixture.id} kickoffUTC={fixture.kickoffUTC} />
+          <LiveRefreshPill />
         </div>
       </header>
 
