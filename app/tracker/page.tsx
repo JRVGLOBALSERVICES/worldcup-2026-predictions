@@ -324,15 +324,15 @@ export default function Tracker() {
                               className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto_auto]"
                             >
                               <div className="min-w-0">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-start gap-2">
                                   <span
-                                    className={`rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${
+                                    className={`mt-0.5 shrink-0 rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${
                                       b.period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid"
                                     }`}
                                   >
                                     {b.period}
                                   </span>
-                                  <span className="truncate text-sm text-ink">{b.label}</span>
+                                  <span className="text-sm text-ink">{b.label}</span>
                                 </div>
                                 <span className="mt-1 block font-mono text-[0.62rem] text-faint">
                                   Target {f ? `${code(f.home.name)} ` : ""}
@@ -434,11 +434,11 @@ export default function Tracker() {
                                   className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto_auto]"
                                 >
                                   <div className="min-w-0">
-                                    <div className="flex items-center gap-2">
-                                      <span className="rounded-sm bg-mint/15 px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-mint">
+                                    <div className="flex items-start gap-2">
+                                      <span className="mt-0.5 shrink-0 rounded-sm bg-mint/15 px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-mint">
                                         {s.market}
                                       </span>
-                                      <span className="truncate text-sm text-ink">{s.label}</span>
+                                      <span className="text-sm text-ink">{s.label}</span>
                                     </div>
                                     <span className="mt-1 block font-mono text-[0.62rem] text-faint">
                                       Slip №{s.slipNo} · placed {s.placedAt}
