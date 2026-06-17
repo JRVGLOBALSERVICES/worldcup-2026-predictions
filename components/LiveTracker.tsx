@@ -347,6 +347,9 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
                   const betVerdicts = m.bets.map((b) => gradeBet(b, lm));
                   const spVerdicts = m.specials.map((s) => gradeSpecial(s, lm));
                   const allV = [...betVerdicts, ...spVerdicts];
+                  // Float winning lines to the top, still-on next, losses last.
+                  const orderedBets = orderByVerdict(m.bets, betVerdicts);
+                  const orderedSpecials = orderByVerdict(m.specials, spVerdicts);
                   const matchStaked = [...m.bets, ...m.specials].reduce((x, r) => x + r.stake, 0);
                   const matchReturned = [...m.bets, ...m.specials].filter((_, i) => allV[i]?.verdict === "won").reduce((x, r) => x + r.potential, 0);
 
@@ -407,7 +410,7 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
                           </div>
                         )}
 
-                        <RowList title={null} rows={m.bets} verdicts={betVerdicts} currency={cur} chip={(r) => (r as BetRow).period} chipCls={(r) => ((r as BetRow).period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid")} />
+                        <RowList title={null} rows={orderedBets.rows} verdicts={orderedBets.verdicts} currency={cur} chip={(r) => (r as BetRow).period} chipCls={(r) => ((r as BetRow).period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid")} />
 
                         {m.specials.length > 0 && (
                           <div className="border-t border-line">
@@ -415,7 +418,7 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
                               <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-mint">Player props</span>
                               <span className="rounded-full border border-mint/40 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-mint">1xBet · live grade</span>
                             </div>
-                            <RowList title={null} rows={m.specials} verdicts={spVerdicts} currency={cur} chip={(r) => (r as SpecialRow).market} chipCls={() => "bg-mint/15 text-mint"} />
+                            <RowList title={null} rows={orderedSpecials.rows} verdicts={orderedSpecials.verdicts} currency={cur} chip={(r) => (r as SpecialRow).market} chipCls={() => "bg-mint/15 text-mint"} />
                           </div>
                         )}
                       </div>
@@ -446,6 +449,27 @@ function rank(live: LiveMatch | undefined): number {
   if (live.state === "live" || live.state === "halftime") return 0;
   if (live.state === "finished") return 2;
   return 1;
+}
+
+// Order bet rows by live status: winning first, then still-on, then losses.
+//   winning  → on track now / already won (green)
+//   still on → mathematically alive, or not yet kicked off (amber/idle)
+//   loss     → out of reach now, or already lost (red)
+const VERDICT_ORDER: Record<LiveVerdict, number> = {
+  winning: 0,
+  won: 1,
+  alive: 2,
+  scheduled: 3,
+  dead: 4,
+  lost: 5,
+};
+
+/** Re-order rows and their verdicts together by status. Stable within a bucket,
+ *  so a match's original bet order is preserved among equal verdicts. */
+function orderByVerdict<T>(rows: T[], verdicts: InPlay[]): { rows: T[]; verdicts: InPlay[] } {
+  const idx = rows.map((_, i) => i);
+  idx.sort((a, b) => VERDICT_ORDER[verdicts[a].verdict] - VERDICT_ORDER[verdicts[b].verdict]);
+  return { rows: idx.map((i) => rows[i]), verdicts: idx.map((i) => verdicts[i]) };
 }
 
 function RowList({
