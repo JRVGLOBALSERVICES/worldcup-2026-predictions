@@ -10,7 +10,7 @@ const archivo = Archivo({
   weight: ["600", "700", "800", "900"],
 });
 
-const SITE = "https://worldcup-2026-predictions.vercel.app";
+const SITE = "https://worldcup-2026-orpin-zeta.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

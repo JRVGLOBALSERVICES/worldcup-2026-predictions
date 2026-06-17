@@ -6,7 +6,7 @@ scorers, anytime assists, and the penalty + likely taker** — all in **Malaysia
 (MYT)**, built from live team-news research on both squads and refreshed daily (and
 again near kickoff when line-ups are confirmed).
 
-Live: https://worldcup-2026-predictions.vercel.app
+Live: https://worldcup-2026-orpin-zeta.vercel.app
 
 ## Stack
 

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { fixtures, predictionFile } from "@/lib/data";
 
-const SITE = "https://worldcup-2026-predictions.vercel.app";
+const SITE = "https://worldcup-2026-orpin-zeta.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(predictionFile.meta.generatedAt);
