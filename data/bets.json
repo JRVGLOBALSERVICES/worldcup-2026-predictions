@@ -1,10 +1,10 @@
 {
   "meta": {
     "owner": "Rj",
-    "placedAt": "2026-06-18T02:02:00.000Z",
+    "placedAt": "2026-06-17T10:00:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "9 real 1xBet single bets placed 18/06 02:02–02:06 MYT — 7 correct-score + 2 specials across Portugal v DR Congo and England v Croatia. Total staked RM100. Stakes vary (RM5–RM20). Bets settle automatically off final/half-time scores + scraped events.",
+    "note": "Two real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. All settle automatically off final/half-time scores + scraped events.",
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
@@ -69,7 +69,139 @@
   },
   "bets": [
     {
+      "id": "por-ht-1-0",
+      "matchId": "por-drc-2026-06-17",
+      "side": "Portugal",
+      "period": "HT",
+      "label": "Portugal to lead 1–0 at half-time",
+      "home": 1,
+      "away": 0,
+      "odds": 3.1,
+      "stake": 10
+    },
+    {
+      "id": "por-ft-2-0",
+      "matchId": "por-drc-2026-06-17",
+      "side": "Portugal",
+      "period": "FT",
+      "label": "Portugal to win 2–0",
+      "home": 2,
+      "away": 0,
+      "odds": 5.5,
+      "stake": 10
+    },
+    {
+      "id": "por-ft-3-0",
+      "matchId": "por-drc-2026-06-17",
+      "side": "Portugal",
+      "period": "FT",
+      "label": "Portugal to win 3–0",
+      "home": 3,
+      "away": 0,
+      "odds": 7.5,
+      "stake": 10
+    },
+    {
+      "id": "eng-ht-1-0",
+      "matchId": "eng-cro-2026-06-17",
+      "side": "England",
+      "period": "HT",
+      "label": "England to lead 1–0 at half-time",
+      "home": 1,
+      "away": 0,
+      "odds": 3.5,
+      "stake": 10
+    },
+    {
+      "id": "eng-ft-2-1",
+      "matchId": "eng-cro-2026-06-17",
+      "side": "England",
+      "period": "FT",
+      "label": "England to win 2–1",
+      "home": 2,
+      "away": 1,
+      "odds": 8.5,
+      "stake": 10
+    },
+    {
+      "id": "eng-ft-1-1",
+      "matchId": "eng-cro-2026-06-17",
+      "side": "Draw",
+      "period": "FT",
+      "label": "Match to finish 1–1",
+      "home": 1,
+      "away": 1,
+      "odds": 6.5,
+      "stake": 10
+    },
+    {
       "id": "eng-ft-3-1",
+      "matchId": "eng-cro-2026-06-17",
+      "side": "England",
+      "period": "FT",
+      "label": "England to win 3–1",
+      "home": 3,
+      "away": 1,
+      "odds": 13,
+      "stake": 10
+    },
+    {
+      "id": "gha-ht-0-0",
+      "matchId": "gha-pan-2026-06-17",
+      "side": "Draw",
+      "period": "HT",
+      "label": "Goalless at half-time (0–0)",
+      "home": 0,
+      "away": 0,
+      "odds": 2.52,
+      "stake": 10
+    },
+    {
+      "id": "gha-ft-1-1",
+      "matchId": "gha-pan-2026-06-17",
+      "side": "Draw",
+      "period": "FT",
+      "label": "Match to finish 1–1",
+      "home": 1,
+      "away": 1,
+      "odds": 6.5,
+      "stake": 10
+    },
+    {
+      "id": "col-ht-1-0",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Colombia",
+      "period": "HT",
+      "label": "Colombia to lead 1–0 at half-time",
+      "home": 0,
+      "away": 1,
+      "odds": 3.1,
+      "stake": 10
+    },
+    {
+      "id": "col-ft-2-0",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Colombia",
+      "period": "FT",
+      "label": "Colombia to win 2–0",
+      "home": 0,
+      "away": 2,
+      "odds": 5.5,
+      "stake": 10
+    },
+    {
+      "id": "col-ft-2-1",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Colombia",
+      "period": "FT",
+      "label": "Colombia to win 2–1",
+      "home": 1,
+      "away": 2,
+      "odds": 8.5,
+      "stake": 10
+    },
+    {
+      "id": "eng-ft-3-1-s4365",
       "slipNo": "83222964365",
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
@@ -108,7 +240,7 @@
       "placedAt": "18/06 02:05"
     },
     {
-      "id": "eng-ft-2-1",
+      "id": "eng-ft-2-1-s4407",
       "slipNo": "83222974407",
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
@@ -160,8 +292,163 @@
       "placedAt": "18/06 02:03"
     }
   ],
-  "specialsNote": "Real 1xBet single bets on the 18/06 02:0x slip. BTTS-2+ auto-grades off the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride) — the \"any other\" leg has no clean machine rule.",
+  "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
   "specials": [
+    {
+      "id": "sp-83207394547",
+      "slipNo": "83207394547",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Ronaldo",
+      "market": "Goal + assist",
+      "label": "Ronaldo scores and sets up a goal",
+      "odds": 8.9,
+      "stake": 10,
+      "placedAt": "17/06 20:21",
+      "grade": {
+        "type": "scoreAndAssist",
+        "player": "Ronaldo"
+      }
+    },
+    {
+      "id": "sp-83207367259",
+      "slipNo": "83207367259",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Bruno Fernandes",
+      "market": "2+ assists",
+      "label": "Bruno Fernandes makes 2 or more assists",
+      "odds": 17,
+      "stake": 10,
+      "placedAt": "17/06 20:20",
+      "grade": {
+        "type": "assistsOver",
+        "player": "Bruno Fernandes",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83207323869",
+      "slipNo": "83207323869",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Bruno Fernandes",
+      "market": "Draw + 1st goal",
+      "label": "Match is a draw and Bruno Fernandes scores the first goal",
+      "odds": 60,
+      "stake": 10,
+      "placedAt": "17/06 20:18",
+      "grade": {
+        "type": "drawAndFirstScorer",
+        "player": "Bruno Fernandes"
+      }
+    },
+    {
+      "id": "sp-83207320915",
+      "slipNo": "83207320915",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Ronaldo",
+      "market": "Draw + 1st goal",
+      "label": "Match is a draw and Ronaldo scores the first goal",
+      "odds": 33,
+      "stake": 10,
+      "placedAt": "17/06 20:18",
+      "grade": {
+        "type": "drawAndFirstScorer",
+        "player": "Ronaldo"
+      }
+    },
+    {
+      "id": "sp-83207278723",
+      "slipNo": "83207278723",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Bruno Fernandes",
+      "market": "Free-kick goal",
+      "label": "Bruno Fernandes scores straight from a free kick",
+      "odds": 13,
+      "stake": 10,
+      "placedAt": "17/06 20:17",
+      "grade": {
+        "type": "freeKickGoal",
+        "player": "Bruno Fernandes"
+      }
+    },
+    {
+      "id": "sp-83207264701",
+      "slipNo": "83207264701",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Ronaldo",
+      "market": "Anytime goal",
+      "label": "Ronaldo scores at any time in the match",
+      "odds": 8.5,
+      "stake": 10,
+      "placedAt": "17/06 20:17",
+      "grade": {
+        "type": "scored",
+        "player": "Ronaldo"
+      }
+    },
+    {
+      "id": "sp-83207258911",
+      "slipNo": "83207258911",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Bruno Fernandes",
+      "market": "Goal + 2–0 win",
+      "label": "Bruno Fernandes scores and the match ends 2–0",
+      "odds": 15,
+      "stake": 10,
+      "placedAt": "17/06 20:17",
+      "grade": {
+        "type": "scoredAndScore",
+        "player": "Bruno Fernandes",
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "id": "sp-83207204019",
+      "slipNo": "83207204019",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Bruno Fernandes",
+      "market": "First goal",
+      "label": "Bruno Fernandes scores the first goal of the match",
+      "odds": 28,
+      "stake": 10,
+      "placedAt": "17/06 20:15",
+      "grade": {
+        "type": "firstScorer",
+        "player": "Bruno Fernandes"
+      }
+    },
+    {
+      "id": "sp-83207195997",
+      "slipNo": "83207195997",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Ronaldo",
+      "market": "First goal",
+      "label": "Ronaldo scores the first goal of the match",
+      "odds": 15,
+      "stake": 10,
+      "placedAt": "17/06 20:15",
+      "grade": {
+        "type": "firstScorer",
+        "player": "Ronaldo"
+      }
+    },
+    {
+      "id": "sp-83207177883",
+      "slipNo": "83207177883",
+      "matchId": "por-drc-2026-06-17",
+      "player": "Ronaldo",
+      "market": "1st goal + 3–0 win",
+      "label": "Ronaldo scores first and the match ends 3–0",
+      "odds": 25,
+      "stake": 10,
+      "placedAt": "17/06 20:14",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Ronaldo",
+        "home": 3,
+        "away": 0
+      }
+    },
     {
       "id": "sp-83222821419",
       "slipNo": "83222821419",
