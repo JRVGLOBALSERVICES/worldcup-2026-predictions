@@ -438,12 +438,6 @@ export default function Tracker() {
         })}
       </div>
 
-      {betSlip.specialsNote && specials.length > 0 && (
-        <p className="mt-6 max-w-2xl font-mono text-[0.66rem] leading-relaxed text-faint">
-          {betSlip.specialsNote}
-        </p>
-      )}
-
       <footer className="mt-16 border-t border-line pt-8 text-sm text-faint">
         <p className="max-w-2xl leading-relaxed text-muted">{betSlip.meta.note}</p>
         <p className="mt-3 max-w-2xl leading-relaxed">⚠️ {betSlip.meta.disclaimer}</p>
