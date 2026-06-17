@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "owner": "Mike",
+    "placedAt": "2026-06-17T10:00:00.000Z",
+    "currency": "RM",
+    "unitStake": 10,
+    "note": "Correct-score slip across the four Jun 18 (MYT) fixtures. All stakes RM10. Bets settle automatically off the final/half-time scores once results are entered.",
+    "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
+  },
+  "results": {
+    "por-drc-2026-06-17": { "ht": null, "ft": null },
+    "eng-cro-2026-06-17": { "ht": null, "ft": null },
+    "gha-pan-2026-06-17": { "ht": null, "ft": null },
+    "uzb-col-2026-06-17": { "ht": null, "ft": null }
+  },
+  "bets": [
+    { "id": "por-ht-1-0", "matchId": "por-drc-2026-06-17", "side": "Portugal", "period": "HT", "label": "Portugal to lead 1–0 at half-time", "home": 1, "away": 0, "odds": 3.1, "stake": 10 },
+    { "id": "por-ft-2-0", "matchId": "por-drc-2026-06-17", "side": "Portugal", "period": "FT", "label": "Portugal to win 2–0", "home": 2, "away": 0, "odds": 5.5, "stake": 10 },
+    { "id": "por-ft-3-0", "matchId": "por-drc-2026-06-17", "side": "Portugal", "period": "FT", "label": "Portugal to win 3–0", "home": 3, "away": 0, "odds": 7.5, "stake": 10 },
+
+    { "id": "eng-ht-1-0", "matchId": "eng-cro-2026-06-17", "side": "England", "period": "HT", "label": "England to lead 1–0 at half-time", "home": 1, "away": 0, "odds": 3.5, "stake": 10 },
+    { "id": "eng-ft-2-1", "matchId": "eng-cro-2026-06-17", "side": "England", "period": "FT", "label": "England to win 2–1", "home": 2, "away": 1, "odds": 8.5, "stake": 10 },
+    { "id": "eng-ft-1-1", "matchId": "eng-cro-2026-06-17", "side": "Draw", "period": "FT", "label": "Match to finish 1–1", "home": 1, "away": 1, "odds": 6.5, "stake": 10 },
+    { "id": "eng-ft-3-1", "matchId": "eng-cro-2026-06-17", "side": "England", "period": "FT", "label": "England to win 3–1", "home": 3, "away": 1, "odds": 13, "stake": 10 },
+
+    { "id": "gha-ht-0-0", "matchId": "gha-pan-2026-06-17", "side": "Draw", "period": "HT", "label": "Goalless at half-time (0–0)", "home": 0, "away": 0, "odds": 2.52, "stake": 10 },
+    { "id": "gha-ft-1-1", "matchId": "gha-pan-2026-06-17", "side": "Draw", "period": "FT", "label": "Match to finish 1–1", "home": 1, "away": 1, "odds": 6.5, "stake": 10 },
+
+    { "id": "col-ht-1-0", "matchId": "uzb-col-2026-06-17", "side": "Colombia", "period": "HT", "label": "Colombia to lead 1–0 at half-time", "home": 0, "away": 1, "odds": 3.1, "stake": 10 },
+    { "id": "col-ft-2-0", "matchId": "uzb-col-2026-06-17", "side": "Colombia", "period": "FT", "label": "Colombia to win 2–0", "home": 0, "away": 2, "odds": 5.5, "stake": 10 },
+    { "id": "col-ft-2-1", "matchId": "uzb-col-2026-06-17", "side": "Colombia", "period": "FT", "label": "Colombia to win 2–1", "home": 1, "away": 2, "odds": 8.5, "stake": 10 }
+  ]
+}

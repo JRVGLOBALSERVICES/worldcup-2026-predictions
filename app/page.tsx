@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MatchCard } from "@/components/MatchCard";
 import { fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
 
@@ -37,9 +38,12 @@ export default function Home() {
             Matchday Edge
           </span>
         </div>
-        <span className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-faint">
-          All times MYT
-        </span>
+        <nav className="flex items-center gap-4 font-mono text-[0.66rem] uppercase tracking-[0.18em]">
+          <span className="text-acid">Predictions</span>
+          <Link href="/tracker" className="text-faint transition-colors hover:text-ink">
+            Tracker
+          </Link>
+        </nav>
       </header>
 
       <section className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-10">
