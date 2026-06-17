@@ -1,141 +1,482 @@
 {
   "meta": {
-    "generatedAt": "2026-06-17T09:30:00.000Z",
+    "generatedAt": "2026-06-17T09:51:18.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
   "predictions": {
     "por-drc-2026-06-17": {
-      "win": { "pick": "Portugal", "fairOdds": "2/7", "reason": "Nations League champions with a top-tier midfield face a DR Congo side set up to frustrate and counter." },
-      "halfTime": { "score": "Portugal 1-0", "fairOdds": "2/1", "alt": "0-0", "altOdds": "9/4" },
-      "htft": { "pick": "Portugal / Portugal", "fairOdds": "8/13" },
-      "fullTime": { "score": "Portugal 2-0", "fairOdds": "9/2" },
+      "win": {
+        "pick": "Portugal",
+        "fairOdds": "1.45",
+        "reason": "Opta supercomputer gives Portugal 54.5% win vs 23.2% DR Congo, 22.3% draw. Portugal unbeaten in last 5 (3 straight friendly wins pre-tournament), arguably best midfield in the tournament (Vitinha, B.Fernandes, J.Neves, Bernardo Silva) plus deep attack. DR Congo set up to defend deep in a compact 4-5-1/5-3-2 and counter, which caps Portugal's margin but not the result."
+      },
+      "halfTime": {
+        "score": "1-0",
+        "fairOdds": "2.50",
+        "alt": "0-0",
+        "altOdds": "3.20"
+      },
+      "htft": {
+        "pick": "Portugal/Portugal",
+        "fairOdds": "1.95"
+      },
+      "fullTime": {
+        "score": "2-0",
+        "fairOdds": "5.50"
+      },
       "scorers": [
-        { "player": "Cristiano Ronaldo", "fairOdds": "21/20", "banker": true, "note": "Leads the line at his 6th World Cup; 28 goals in 30 club games and Portugal's penalty/free-kick man." },
-        { "player": "Bruno Fernandes", "fairOdds": "9/4", "banker": false, "note": "Creative hub and secondary penalty option; arrives late into the box." },
-        { "player": "Rafael Leão", "fairOdds": "5/2", "banker": false, "note": "Most explosive wide threat; one moment of pace settles a low-block game." },
-        { "player": "Bernardo Silva", "fairOdds": "3/1", "banker": false, "note": "Drifts inside off the right to finish in tight spaces against a packed defence." }
+        {
+          "player": "Cristiano Ronaldo",
+          "fairOdds": "2.30",
+          "banker": true,
+          "note": "Captain at his sixth WC, top scorer in Portugal's qualifying group (5 goals), penalty taker, scored in WC openers before (Ghana 2022). Central striker in Martinez's 4-2-3-1."
+        },
+        {
+          "player": "Goncalo Ramos",
+          "fairOdds": "3.50",
+          "banker": false,
+          "note": "Sharp PSG finisher and the natural No.9 alternative/sub; reliable late-game scorer if Ronaldo is rotated or Portugal chase a second-half goal vs a tiring deep block."
+        },
+        {
+          "player": "Bruno Fernandes",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "Back in his favoured No.10 role, on penalties/free-kicks as backup, arrives in the box; record 21 PL assists this season but also a goal threat from range."
+        },
+        {
+          "player": "Pedro Neto",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Direct wide threat cutting in on his stronger foot against a back five; one-on-one dribbler likely to find space late as DR Congo's block fatigues."
+        }
       ],
       "assists": [
-        { "player": "Bruno Fernandes", "fairOdds": "9/5", "banker": true, "note": "Chief chance creator from open play and set-pieces; main supply to Ronaldo." },
-        { "player": "Vitinha", "fairOdds": "11/4", "banker": false, "note": "Controls tempo from deep, threading line-breaking passes through the block." },
-        { "player": "Nuno Mendes", "fairOdds": "10/3", "banker": false, "note": "Marauding left-back overlapping Leão for cutbacks." }
+        {
+          "player": "Bruno Fernandes",
+          "fairOdds": "2.90",
+          "banker": true,
+          "note": "Primary creator from the No.10 role; league's standout assist man (21 PL assists), main set-piece and through-ball supplier to Ronaldo."
+        },
+        {
+          "player": "Nuno Mendes",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Overlapping left-back delivering cutbacks/crosses against a compact block; one of Portugal's most advanced full-back outlets."
+        },
+        {
+          "player": "Vitinha",
+          "fairOdds": "4.80",
+          "banker": false,
+          "note": "Deep-lying playmaker controlling tempo; line-breaking passes to release Neto/Bernardo and feed the box against a low block."
+        }
       ],
-      "penalty": { "likelihood": "11/8", "taker": "Cristiano Ronaldo", "backup": "Bruno Fernandes", "note": "Territorial dominance vs a deep block invites box contact; Ronaldo is the designated taker (~85% career)." },
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Cristiano Ronaldo",
+        "backup": "Bruno Fernandes",
+        "note": "DR Congo defend deep with a packed box (Wan-Bissaka, Mbemba, Tuanzebe, Masuaku), raising the chance of a box foul over 90 minutes. Ronaldo is the established first-choice penalty taker, Bruno Fernandes the reliable backup."
+      },
       "lineups": {
-        "home": "Diogo Costa; Cancelo, Rúben Dias, Inácio, Nuno Mendes; João Neves, Vitinha; Bernardo Silva, Bruno Fernandes, Leão; Ronaldo",
-        "away": "Mpasi; Tuanzebe, Mbemba, Kapuadi; Wan-Bissaka, Sadiki, Moutoussamy, Mukau, Masuaku; Wissa, Bakambu",
+        "home": "Diogo Costa, Joao Cancelo, Ruben Dias, Goncalo Inacio, Nuno Mendes, Vitinha, Joao Neves, Bruno Fernandes, Pedro Neto, Cristiano Ronaldo, Bernardo Silva",
+        "away": "Lionel Mpasi, Aaron Wan-Bissaka, Chancel Mbemba, Axel Tuanzebe, Arthur Masuaku, Chadrac Akolo Elia, Samuel Moutoussamy, Noah Sadiki, Ngal'ayel Mukau, Gael Mbuku, Yoane Wissa",
         "status": "probable"
       },
       "playerNotes": [
-        { "player": "Cristiano Ronaldo", "team": "Portugal", "note": "Central striker at 41 in a record 6th World Cup; 28 goals in 30 for Al Nassr, primary penalty + free-kick taker." },
-        { "player": "Bruno Fernandes", "team": "Portugal", "note": "Creative engine and tempo-setter, leads chance creation; secondary penalty option behind Ronaldo." },
-        { "player": "Rafael Leão", "team": "Portugal", "note": "Most explosive wide outlet; the pace-and-power profile that unlocks a deep DR Congo block." },
-        { "player": "Yoane Wissa", "team": "DR Congo", "note": "Newcastle forward, the Leopards' main counter threat on the left; carries pace to hurt Portugal in transition." },
-        { "player": "Chancel Mbemba", "team": "DR Congo", "note": "Captain and most-capped player (107+ caps) marshalling the back three; their organisation hinges on him." },
-        { "player": "Cédric Bakambu", "team": "DR Congo", "note": "Veteran striker and record scorer (21 intl goals); holds the ball up, though club form has dipped." }
+        {
+          "player": "Cristiano Ronaldo",
+          "team": "Portugal",
+          "note": "41, sixth World Cup, 226 caps / 143 goals (both records). First-choice penalty taker; led qualifying scoring with 5. The match's headline figure and main goal threat."
+        },
+        {
+          "player": "Bruno Fernandes",
+          "team": "Portugal",
+          "note": "Back in his preferred No.10; record-breaking PL assist season. Primary creator, on free-kicks and backup penalties."
+        },
+        {
+          "player": "Ruben Dias",
+          "team": "Portugal",
+          "note": "Defensive leader; had injury problems in the second half of the club season but is fit for the opener and expected to start at centre-back."
+        },
+        {
+          "player": "Yoane Wissa",
+          "team": "DR Congo",
+          "note": "Star man and main attacking outlet; 9 international goals. Injury-hit, underwhelming Newcastle season, but DR Congo's chief counter-attacking threat."
+        },
+        {
+          "player": "Cedric Bakambu",
+          "team": "DR Congo",
+          "note": "Veteran striker, squad's top scorer (21 international goals); big-game experience, likely to feature as a focal point or impact option off the bench."
+        },
+        {
+          "player": "Aaron Wan-Bissaka",
+          "team": "DR Congo",
+          "note": "Premier League full-back anchoring a likely back five; key to containing Portugal's wide overloads from Neto and Nuno Mendes."
+        }
       ],
       "confidence": "high",
-      "sources": ["rotowire.com", "si.com", "sportsmole.co.uk", "messivsronaldo.app"]
+      "sources": [
+        "https://theanalyst.com/articles/portugal-vs-dr-congo-prediction-world-cup-2026-match-preview",
+        "https://www.rotowire.com/soccer/article/portugal-vs-dr-congo-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-118360",
+        "https://www.si.com/soccer/portugal-vs-dr-congo-world-cup-preview-predictions-lineups-6-17-26",
+        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/predicted-lineups/wan-bissaka-wissa-among-notable-starters-how-congo-dr-could-line-up-vs-portugal_599292.html",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/cristiano-ronaldo-roberto-martinez-portugal-squad-announcement",
+        "https://www.aljazeera.com/sports/2026/6/16/ronaldos-last-dance-as-portugal-face-dr-congo-in-world-cup"
+      ]
     },
     "eng-cro-2026-06-17": {
-      "win": { "pick": "England", "fairOdds": "8/13", "reason": "Unbeaten in last 3 vs Croatia, 0 conceded in 8 qualifiers; Croatia shipped 10 in their last 6." },
-      "halfTime": { "score": "England 1-0", "fairOdds": "5/2", "alt": "0-0", "altOdds": "2/1" },
-      "htft": { "pick": "England / England", "fairOdds": "13/8" },
-      "fullTime": { "score": "England 2-0", "fairOdds": "13/2" },
+      "win": {
+        "pick": "England",
+        "fairOdds": "1.70",
+        "reason": "Opta supercomputer gives England 55.9% vs Croatia 20.8%. England topped qualifying 8/8, 22 scored, 0 conceded, 10 straight competitive clean sheets and last 6 won. Croatia's spine (Modric 40, Perisic, Kovacic) is elite but aging and slow at the back; Vuskovic/Sutalo a young, untested CB axis. England's press and Kane-Bellingham axis should edge a controlled win, though Croatia's midfield control can keep it tight."
+      },
+      "halfTime": {
+        "score": "1-0",
+        "fairOdds": "3.40",
+        "alt": "0-0",
+        "altOdds": "3.10"
+      },
+      "htft": {
+        "pick": "England/England",
+        "fairOdds": "2.90"
+      },
+      "fullTime": {
+        "score": "2-1",
+        "fairOdds": "8.50"
+      },
       "scorers": [
-        { "player": "Harry Kane", "fairOdds": "5/6", "banker": true, "note": "Captain and spot-kick taker; 61 goals in 2025-26 for Bayern, Golden Boot favourite." },
-        { "player": "Jude Bellingham", "fairOdds": "9/4", "banker": false, "note": "Advanced No.10 with late runs into the box; second goal threat from midfield." },
-        { "player": "Anthony Gordon", "fairOdds": "3/1", "banker": false, "note": "Favoured to start left wing; direct runner to exploit Croatia's leaky back line." },
-        { "player": "Bukayo Saka", "fairOdds": "11/4", "banker": false, "note": "Cuts inside off the right despite a managed Achilles issue." }
+        {
+          "player": "Harry Kane",
+          "fairOdds": "2.30",
+          "banker": true,
+          "note": "Captain, England's primary penalty taker and focal point; prolific vs aging Croatia CBs. Strongest anytime-scorer banker."
+        },
+        {
+          "player": "Jude Bellingham",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Operating as No.10 behind Kane; arrives late into the box and a set-piece threat."
+        },
+        {
+          "player": "Anthony Gordon",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Won the left-wing berth over Rashford; direct runner at Stanisic, cuts inside onto his right."
+        },
+        {
+          "player": "Andrej Kramaric",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Croatia's most reliable finisher; likely impact/starter option, takes a penalty if Kovacic absent."
+        }
       ],
       "assists": [
-        { "player": "Bukayo Saka", "fairOdds": "5/2", "banker": true, "note": "Right-side chance creator; deliveries and cutbacks for Kane and Bellingham." },
-        { "player": "Jude Bellingham", "fairOdds": "3/1", "banker": false, "note": "Links midfield to Kane; through-balls and set-up runs." },
-        { "player": "Reece James", "fairOdds": "4/1", "banker": false, "note": "Right-back overlaps and crossing; key set-piece delivery." }
+        {
+          "player": "Bukayo Saka",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Fitness in doubt after season-end discomfort; if fit (even off bench) he is England's top chance-creator."
+        },
+        {
+          "player": "Jude Bellingham",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Through-balls and link play from the 10; feeds Kane and overlapping James."
+        },
+        {
+          "player": "Luka Modric",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Croatia's deep playmaker and set-piece deliverer; nearly all Croatia creation runs through him."
+        }
       ],
-      "penalty": { "likelihood": "9/4", "taker": "Harry Kane", "backup": "Jude Bellingham", "note": "Croatia's stretched, error-prone defence concedes regularly; Kane is automatic from the spot." },
+      "penalty": {
+        "likelihood": "low-medium",
+        "taker": "Harry Kane",
+        "backup": "Jude Bellingham",
+        "note": "Kane is England's designated penalty taker (elite conversion). For Croatia, Modric/Kovacic or Kramaric. Roughly 25-30% chance of a spot-kick in the match."
+      },
       "lineups": {
-        "home": "Pickford; James, Stones, Guéhi, O'Reilly; Anderson, Rice; Saka, Bellingham, Gordon; Kane (4-2-3-1)",
-        "away": "Livaković; Stanišić, Vušković, Gvardiol; Sutalo, Modrić, Kovačić, Perišić; Sučić, Baturina; Musa",
+        "home": "Pickford, James, Stones, Konsa, O'Reilly, Rice, Anderson, Madueke, Bellingham, Gordon, Kane",
+        "away": "Livakovic, Stanisic, Vuskovic, Gvardiol, Sutalo, Modric, Kovacic, Perisic, Sucic, Baturina, Musa",
         "status": "probable"
       },
       "playerNotes": [
-        { "player": "Harry Kane", "team": "England", "note": "Talismanic captain and penalty taker; a Europe-leading 61 goals in 2025-26, the clear focal point and Golden Boot favourite." },
-        { "player": "Jude Bellingham", "team": "England", "note": "Central creator/runner behind Kane; secondary goal + assist threat with late box arrivals." },
-        { "player": "Bukayo Saka", "team": "England", "note": "Right-wing matchwinner managing a minor Achilles issue; cuts in to shoot and supplies cutbacks." },
-        { "player": "Luka Modrić", "team": "Croatia", "note": "40-year-old captain at a record 6th World Cup (now AC Milan); still the metronome but legs short for 90 high-tempo minutes." },
-        { "player": "Petar Musa", "team": "Croatia", "note": "Lone striker, in good MLS form (12 in 13) but isolated against a settled England backline." },
-        { "player": "Ivan Perišić", "team": "Croatia", "note": "Veteran wide threat after 26 goal involvements for PSV; Croatia's main outlet and aerial set-piece danger." }
-      ],
-      "confidence": "medium",
-      "sources": ["theanalyst.com", "racingpost.com", "sportsmole.co.uk", "fifa.com"]
-    },
-    "gha-pan-2026-06-17": {
-      "win": { "pick": "Ghana (Draw No Bet)", "fairOdds": "8/11", "reason": "Personnel edge through Semenyo and Jordan Ayew despite missing Kudus and Partey; Panama lack playmaker Carrasquilla — take Ghana with the draw insured in a tight game." },
-      "halfTime": { "score": "0-0", "fairOdds": "11/10", "alt": "Ghana 1-0", "altOdds": "10/3" },
-      "htft": { "pick": "Draw / Ghana", "fairOdds": "9/2" },
-      "fullTime": { "score": "Ghana 1-0", "fairOdds": "5/1" },
-      "scorers": [
-        { "player": "Jordan Ayew", "fairOdds": "11/4", "banker": true, "note": "Captain, penalty taker and qualifying top scorer (7); leads the line and is Ghana's likeliest source with Kudus out." },
-        { "player": "Antoine Semenyo", "fairOdds": "3/1", "banker": false, "note": "Ghana's most in-form attacker after a strong PL season; pace and end product from wide." },
-        { "player": "Ismael Díaz", "fairOdds": "10/3", "banker": false, "note": "Panama's qualifying top scorer (8, 2 pens) and penalty taker; dangerous on the counter." },
-        { "player": "José Fajardo", "fairOdds": "9/2", "banker": false, "note": "Physical striker with 4 qualifying goals; aerial set-piece threat in a low-scoring game." }
-      ],
-      "assists": [
-        { "player": "Antoine Semenyo", "fairOdds": "7/2", "banker": true, "note": "Primary wide creator for Ghana; most probable assist provider with Kudus absent." },
-        { "player": "Jordan Ayew", "fairOdds": "4/1", "banker": false, "note": "Drops to link play and takes set pieces; creates as well as finishes." },
-        { "player": "Ismael Díaz", "fairOdds": "5/1", "banker": false, "note": "Panama's chief creator on transitions with Carrasquilla missing." }
-      ],
-      "penalty": { "likelihood": "11/4", "taker": "Jordan Ayew", "backup": "Ismael Díaz", "note": "Both sides defend deep and physically; a spot-kick from a congested box is plausible. Ayew takes for Ghana, Díaz for Panama." },
-      "lineups": {
-        "home": "Ati-Zigi; Senaya, Adjetey, Opoku, Mensah; Owusu, Yirenkyi, Nuamah; Boakye, Ayew, Semenyo — no Kudus (injury), Salisu (ACL), Partey (visa)",
-        "away": "Mosquera; Ramos, Córdoba, Andrade; Murillo, Godoy, Harvey, Davis; Rodríguez, Díaz, Fajardo — Carrasquilla a doubt",
-        "status": "probable"
-      },
-      "playerNotes": [
-        { "player": "Jordan Ayew", "team": "Ghana", "note": "Captain and talisman at his 3rd World Cup; 7 in qualifying, the penalty/set-piece taker and focal point with Kudus ruled out." },
-        { "player": "Antoine Semenyo", "team": "Ghana", "note": "Most in-form Ghanaian after a standout PL campaign; pace and directness make him the biggest open-play danger." },
-        { "player": "Ernest Nuamah", "team": "Ghana", "note": "Lyon attacker adding creativity and carrying through midfield, filling the void left by Kudus and Partey." },
-        { "player": "Ismael Díaz", "team": "Panama", "note": "León forward and Panama's qualifying top scorer (8); dynamic on the counter, the primary threat and penalty taker." },
-        { "player": "Adalberto Carrasquilla", "team": "Panama", "note": "2024 CONCACAF Player of the Year and key playmaker, but a muscular injury makes him a doubt — a major blow to Panama's ball progression." },
-        { "player": "José Fajardo", "team": "Panama", "note": "Experienced (68 caps) physical striker; leads the press and offers an aerial set-piece threat." }
-      ],
-      "confidence": "medium",
-      "sources": ["sports.yahoo.com", "sportsmole.co.uk", "covers.com", "beinsports.com", "khelnow.com"]
-    },
-    "uzb-col-2026-06-17": {
-      "win": { "pick": "Colombia", "fairOdds": "4/6", "reason": "Superior individual quality, 4 wins in last 5 (15 scored, 4 conceded); Uzbekistan debutants missing creator Masharipov." },
-      "halfTime": { "score": "0-0", "fairOdds": "13/8", "alt": "Colombia 1-0", "altOdds": "9/4" },
-      "htft": { "pick": "Draw / Colombia", "fairOdds": "4/1" },
-      "fullTime": { "score": "Colombia 2-0", "fairOdds": "9/2" },
-      "scorers": [
-        { "player": "Luis Díaz", "fairOdds": "11/10", "banker": true, "note": "Primary threat; 7 goals + 3 assists in qualifying, relentless runner who exploits the spaces wide of a back three." },
-        { "player": "Luis Suárez", "fairOdds": "7/4", "banker": false, "note": "Lone striker and central focal point with Durán dropped; poacher's instinct for second-half chances at altitude." },
-        { "player": "James Rodríguez", "fairOdds": "11/4", "banker": false, "note": "Orchestrator and penalty/free-kick taker; can score from range or the spot." },
-        { "player": "Jhon Córdoba", "fairOdds": "10/3", "banker": false, "note": "Impact sub in the final 30 as Colombia chase a late goal." }
-      ],
-      "assists": [
-        { "player": "James Rodríguez", "fairOdds": "9/4", "banker": true, "note": "CONMEBOL-high 6 assists and 61 key passes in qualifying; chief creator to break the low block." },
-        { "player": "Luis Díaz", "fairOdds": "3/1", "banker": false, "note": "3 assists in qualifying; cutbacks from the left for Suárez." },
-        { "player": "Daniel Muñoz", "fairOdds": "9/2", "banker": false, "note": "Overlapping right-back supplying crosses against a deep side." }
-      ],
-      "penalty": { "likelihood": "7/4", "taker": "James Rodríguez", "backup": "Luis Díaz", "note": "Heavy possession vs a deep block invites box congestion; James scored two penalties in qualifying." },
-      "lineups": {
-        "home": "Yusupov; Ashurmatov, Khusanov, Abdullaev; Nasrullayev, Hamrobekov, Shukurov, Sayfiyev; Fayzullaev, Urunov; Shomurodov (3-4-2-1)",
-        "away": "Vargas; Muñoz, Sánchez, Lucumí, Mojica; Lerma, Ríos; Arias, Rodríguez, Díaz; Suárez (4-2-3-1)",
-        "status": "probable"
-      },
-      "playerNotes": [
-        { "player": "Luis Díaz", "team": "Colombia", "note": "Talisman left winger in excellent form (7 goals, 3 assists in qualifying); incessant running and 1v1 quality is Colombia's most reliable route." },
-        { "player": "James Rodríguez", "team": "Colombia", "note": "34-year-old captain and playmaker, CONMEBOL's top creator in qualifying (6 assists); primary set-piece and penalty taker." },
-        { "player": "Luis Suárez", "team": "Colombia", "note": "Lone striker with Durán dropped after a fall-out with Lorenzo; the central finisher feeding off Díaz and James." },
-        { "player": "Eldor Shomurodov", "team": "Uzbekistan", "note": "Captain and all-time top scorer (44 in 90 caps); carries the entire counter-attacking threat as lone forward." },
-        { "player": "Abdukodir Khusanov", "team": "Uzbekistan", "note": "Manchester City centre-back, the squad's standout talent; anchors an organised back three that must absorb pressure." },
-        { "player": "Abbosbek Fayzullaev", "team": "Uzbekistan", "note": "Creative spark and set-piece taker; carries the bulk of chance-creation with Masharipov a doubt." }
+        {
+          "player": "Tino Livramento",
+          "team": "England",
+          "note": "OUT of the tournament - calf injury in training; replaced by Trevoh Chalobah 24h before kickoff."
+        },
+        {
+          "player": "Bukayo Saka",
+          "team": "England",
+          "note": "Major doubt - season-end discomfort, didn't start final two warm-ups; Madueke likely starts right wing if Saka benched."
+        },
+        {
+          "player": "Reece James",
+          "team": "England",
+          "note": "Only just back from a hamstring issue but expected to start at right-back; fitness worth monitoring."
+        },
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "note": "Captain, penalty taker and main goal threat; faces a young, slow Croatia CB pairing."
+        },
+        {
+          "player": "Luka Modric",
+          "team": "Croatia",
+          "note": "Starts at 40; orchestrates everything but a physical/pace mismatch against England's press over 90 minutes."
+        },
+        {
+          "player": "Josko Gvardiol",
+          "team": "Croatia",
+          "note": "Back from a long lay-off (earlier leg fracture concern); key to containing England's left side, but match-sharpness a question."
+        }
       ],
       "confidence": "high",
-      "sources": ["rotowire.com", "sportsmole.co.uk", "espn.com", "goal.com"]
+      "sources": [
+        "https://www.espn.com/soccer/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries",
+        "https://www.skysports.com/football/news/12016/13554613/world-cup-2026-tino-livramento-suffers-hamstring-injury-and-replaced-by-trevoh-chalobah-in-england-squad",
+        "https://theanalyst.com/articles/england-vs-croatia-prediction-world-cup-2026-match-preview",
+        "https://www.sportsmole.co.uk/football/england/world-cup-2026/predicted-lineups/saka-status-gordon-or-rashford-predicted-england-xi-vs-croatia_599272.html",
+        "https://www.sportsmole.co.uk/football/croatia/world-cup-2026/predicted-lineups/modric-starts-and-striker-surprise-predicted-croatia-xi-vs-england_599298.html"
+      ]
+    },
+    "gha-pan-2026-06-17": {
+      "win": {
+        "pick": "Draw",
+        "fairOdds": "3.30",
+        "reason": "Ghana lost 4 of their last 5 (conceding 11) and are without their entire spine - Kudus, Salisu AND Partey (denied Canada entry) all out. Panama are unbeaten through CONCACAF qualifying, defensively drilled under Christiansen, and Opta's supercomputer actually favors them (45%). Bookmakers shade Ghana on individual quality from Semenyo/Inaki Williams, but a depleted, leaky Ghana vs a compact, experienced Panama points to a tight, low-scoring stalemate in a tournament opener both sides must avoid losing."
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.20",
+        "alt": "1-0 Ghana",
+        "altOdds": "4.50"
+      },
+      "htft": {
+        "pick": "Draw/Draw",
+        "fairOdds": "5.00"
+      },
+      "fullTime": {
+        "score": "1-1",
+        "fairOdds": "6.50"
+      },
+      "scorers": [
+        {
+          "player": "Antoine Semenyo",
+          "fairOdds": "3.60",
+          "banker": true,
+          "note": "Ghana's standout attacking threat with Kudus out; carries the forward line, in-form and direct from the left."
+        },
+        {
+          "player": "Jordan Ayew",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Captain, primary penalty taker (perfect 17/17 career record) and set-piece/free-kick option; 6 goals in qualifying Group I."
+        },
+        {
+          "player": "Jose Fajardo",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Panama's central striker, focal point of their counter-attacks and set-piece presence."
+        },
+        {
+          "player": "Inaki Williams",
+          "fairOdds": "4.80",
+          "banker": false,
+          "note": "Pace in behind a high Panama line; off-bench or starting wide threat for Ghana."
+        }
+      ],
+      "assists": [
+        {
+          "player": "Antoine Semenyo",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Chief creator/carrier with Kudus absent; cuts inside to feed runners."
+        },
+        {
+          "player": "Adalberto Carrasquilla",
+          "fairOdds": "5.50",
+          "banker": true,
+          "note": "Panama's creative engine, the link between defence and attack; main chance-creator and set-piece deliverer."
+        },
+        {
+          "player": "Yoel Barcenas",
+          "fairOdds": "6.50",
+          "banker": false,
+          "note": "Wide creativity and crossing for Panama from the right/attacking flank."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Jordan Ayew",
+        "backup": "Antoine Semenyo",
+        "note": "Ayew is Ghana's designated penalty taker with a flawless 17/17 senior conversion record; for Panama, Carrasquilla/Murillo handle spot-kicks."
+      },
+      "lineups": {
+        "home": "Ati-Zigi, Senaya, Adjetey, Opoku, Mensah, Owusu, Yirenkyi, Nuamah, Boakye, Semenyo, Ayew",
+        "away": "Mosquera, Farina, Escobar, Cordoba, Murillo, Harvey, Godoy, Davis, Barcenas, Fajardo, Diaz",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Mohammed Kudus",
+          "team": "Ghana",
+          "note": "OUT - quadriceps injury with a rehab setback ended his season; ruled out of the World Cup entirely."
+        },
+        {
+          "player": "Thomas Partey",
+          "team": "Ghana",
+          "note": "OUT for the opener - denied entry into Canada by host government; a huge loss to Ghana's midfield base."
+        },
+        {
+          "player": "Mohammed Salisu",
+          "team": "Ghana",
+          "note": "OUT - injury; weakens Ghana's central defence, opening starts for Opoku/Adjetey."
+        },
+        {
+          "player": "Antoine Semenyo",
+          "team": "Ghana",
+          "note": "Talisman with Kudus/Partey gone; Ghana's main goal threat and creator from the left."
+        },
+        {
+          "player": "Adalberto Carrasquilla",
+          "team": "Panama",
+          "note": "Midfield orchestrator partnering captain Godoy; given freedom to dictate and create."
+        },
+        {
+          "player": "Amir Murillo",
+          "team": "Panama",
+          "note": "Russia 2018 veteran right wing-back; provides width, ball progression and defensive solidity."
+        }
+      ],
+      "confidence": "medium",
+      "sources": [
+        "https://theanalyst.com/articles/ghana-vs-panama-prediction-world-cup-2026-match-preview",
+        "https://www.espn.com/espn/story/_/id/48878999/antoine-semenyo-thomas-partey-headline-ghana-provisional-fifa-world-cup-squad-injured-mohammed-kudus-out",
+        "https://www.graphic.com.gh/sports/sports-news/kudus-and-salisu-miss-world-cup-through-injury-as-ghana-names-provisional-squad.html",
+        "https://www.sportsmole.co.uk/football/ghana/world-cup-2026/predicted-lineups/who-replaces-partey-ghana-predicted-xi-vs-panama_599286.html",
+        "https://footyghana.com/2025/03/jordan-ayew-ghana-captain-has-100-penalty-conversion-statistics/"
+      ]
+    },
+    "uzb-col-2026-06-17": {
+      "win": {
+        "pick": "Colombia",
+        "fairOdds": "1.55",
+        "reason": "Colombia carry vastly superior European-based talent (Diaz at Bayern, Lucumi, Lerma, Sanchez) and warmed up with wins over Costa Rica and Jordan; Opta favours them at 62.4% and bookmakers price them heavy favourites. Uzbekistan are on their first-ever WC and lost warm-ups to Canada and Netherlands. Altitude at Azteca (2,250m) and a debut-tournament cagey opener are the only brakes on the margin."
+      },
+      "halfTime": {
+        "score": "0-1",
+        "fairOdds": "2.70",
+        "alt": "0-0",
+        "altOdds": "3.30"
+      },
+      "htft": {
+        "pick": "Colombia/Colombia",
+        "fairOdds": "2.30"
+      },
+      "fullTime": {
+        "score": "0-2",
+        "fairOdds": "5.50"
+      },
+      "scorers": [
+        {
+          "player": "Luis Suarez",
+          "fairOdds": "3.20",
+          "banker": true,
+          "note": "Lead striker in the 4-2-3-1; main central finisher, in-form club season (the young Colombian Luis Javier Suarez, not the Uruguayan)."
+        },
+        {
+          "player": "Luis Diaz",
+          "fairOdds": "2.90",
+          "banker": true,
+          "note": "Colombia's most dangerous runner in behind, 15 Bundesliga goals; cuts in from left, also a penalty option."
+        },
+        {
+          "player": "James Rodriguez",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Captain at No.10, primary set-piece + likely first-choice penalty taker."
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Uzbekistan captain and all-time top scorer; lone outlet if they break, best chance on a set-piece/counter."
+        }
+      ],
+      "assists": [
+        {
+          "player": "James Rodriguez",
+          "fairOdds": "3.40",
+          "banker": true,
+          "note": "Chief creator and dead-ball deliverer from the No.10 role."
+        },
+        {
+          "player": "Daniel Munoz",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Overlapping right-back, key crossing source down Colombia's right."
+        },
+        {
+          "player": "Luis Diaz",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Pulls defenders and squares for the striker; cut-backs from the left."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Luis Diaz",
+        "backup": "James Rodriguez",
+        "note": "Colombia likely to draw fouls vs a low block; Diaz/James share spot-kick duty, James the experienced backup. Altitude-tired defending late raises penalty odds slightly."
+      },
+      "lineups": {
+        "home": "Yusupov; Ashurmatov, Khusanov, Urozov; Sayfiev, Mozgovoy, Shukurov, Nasrullaev; Fayzullaev, Masharipov; Shomurodov",
+        "away": "Vargas; Munoz, Sanchez, Lucumi, Mojica; Lerma, Rios; Arias, Rodriguez, Diaz; Suarez",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Abdukodir Khusanov",
+          "team": "Uzbekistan",
+          "note": "Man City centre-back, rising star; anchors the back three, key to containing Diaz/Suarez."
+        },
+        {
+          "player": "Jaloliddin Masharipov",
+          "team": "Uzbekistan",
+          "note": "Doubt/fitness risk - missed both warm-ups with a back issue after a serious knee injury, no minutes in over a year."
+        },
+        {
+          "player": "Eldor Shomurodov",
+          "team": "Uzbekistan",
+          "note": "Captain and all-time leading scorer; the lone genuine goal threat."
+        },
+        {
+          "player": "Luis Diaz",
+          "team": "Colombia",
+          "note": "Bayern Munich winger, 15 Bundesliga goals; undisputed attacking leader making WC debut."
+        },
+        {
+          "player": "James Rodriguez",
+          "team": "Colombia",
+          "note": "34yo captain at No.10; minor recent knock but declared fit; set-piece + penalty taker."
+        },
+        {
+          "player": "Jhon Duran",
+          "team": "Colombia",
+          "note": "Did NOT make the 26-man squad - not available; striker duties fall to Luis Suarez."
+        }
+      ],
+      "confidence": "high",
+      "sources": [
+        "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/predicted-lineups/diaz-rodriguez-ready-for-world-cup-opener-predicted-colombia-xi-vs-uzbekistan_599304.html",
+        "https://www.squawka.com/en/news/world-cup/uzbekistan-world-cup-2026-fixtures-squad-analysis/",
+        "https://www.olympics.com/en/news/fifa-world-cup-2026-colombia-players-squad-list-key-stats-schedule",
+        "https://theanalyst.com/articles/uzbekistan-vs-colombia-prediction-world-cup-2026-match-preview",
+        "https://www.rotowire.com/soccer/article/uzbekistan-vs-colombia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-118365"
+      ]
     }
   }
 }
