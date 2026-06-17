@@ -4,7 +4,7 @@
     "placedAt": "2026-06-17T10:00:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "Two real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. All settle automatically off final/half-time scores + scraped events.",
+    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. All settle automatically off final/half-time scores + scraped events.",
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
@@ -290,6 +290,19 @@
       "odds": 4.75,
       "stake": 10,
       "placedAt": "18/06 02:03"
+    },
+    {
+      "id": "eng-ft-0-0-s0707",
+      "slipNo": "83229500707",
+      "matchId": "eng-cro-2026-06-17",
+      "side": "Draw",
+      "period": "FT",
+      "label": "Match to finish 0–0",
+      "home": 0,
+      "away": 0,
+      "odds": 10.6,
+      "stake": 10,
+      "placedAt": "18/06 04:03"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -474,6 +487,22 @@
       "odds": 40,
       "stake": 5,
       "placedAt": "18/06 02:06"
+    },
+    {
+      "id": "sp-83229541461",
+      "slipNo": "83229541461",
+      "matchId": "eng-cro-2026-06-17",
+      "player": "—",
+      "market": "HT/FT — England / Croatia",
+      "label": "England ahead at half-time and Croatia to win full-time (HT/FT W1/W2)",
+      "odds": 41,
+      "stake": 10,
+      "placedAt": "18/06 04:04",
+      "grade": {
+        "type": "htft",
+        "ht": "1",
+        "ft": "2"
+      }
     }
   ]
 }

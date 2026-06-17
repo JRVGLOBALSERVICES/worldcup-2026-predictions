@@ -44,7 +44,8 @@ export type SpecialGrade =
   | { type: "scoredAndScore"; player: string; home: number; away: number }
   | { type: "drawAndFirstScorer"; player: string }
   | { type: "freeKickGoal"; player: string }
-  | { type: "bttsEachOver"; line: number };
+  | { type: "bttsEachOver"; line: number }
+  | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -267,6 +268,15 @@ export function gradeSpecial(special: Special): BetStatus {
       const home = goals.filter((gl) => gl.team === "home" && !gl.ownGoal).length;
       const away = goals.filter((gl) => gl.team === "away" && !gl.ownGoal).length;
       hit = home > g.line && away > g.line;
+      break;
+    }
+    case "htft": {
+      // Half-time AND full-time 1X2 outcome must both match.
+      const ht = getResult(special.matchId).ht;
+      if (!ht || !ft) break;
+      const outcome = (s: { home: number; away: number }) =>
+        s.home > s.away ? "1" : s.home < s.away ? "2" : "X";
+      hit = outcome(ht) === g.ht && outcome(ft) === g.ft;
       break;
     }
   }
