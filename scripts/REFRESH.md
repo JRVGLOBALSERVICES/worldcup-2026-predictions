@@ -29,7 +29,7 @@ Repo lives at `/root/repos/worldcup-2026` on the VPS.
 
 ## Result settlement — the Bet Tracker (`/tracker`)
 
-`data/bets.json` holds Mike's correct-score slip and a `results` map keyed by
+`data/bets.json` holds Rj's correct-score slip and a `results` map keyed by
 `matchId`. The tracker page settles each bet (won/lost/pending) by comparing the
 bet's `home`/`away` target to the real score, so **the cron must fill real scores
 in** for the tracker to settle.
