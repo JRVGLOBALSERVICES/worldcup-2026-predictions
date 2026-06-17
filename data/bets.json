@@ -8,14 +8,14 @@
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
-    "por-drc-2026-06-17": { "ht": null, "ft": null },
+    "por-drc-2026-06-17": { "ht": { "home": 1, "away": 1 }, "ft": { "home": 1, "away": 1 } },
     "eng-cro-2026-06-17": { "ht": null, "ft": null },
     "gha-pan-2026-06-17": { "ht": null, "ft": null },
     "uzb-col-2026-06-17": { "ht": null, "ft": null }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
   "matchEvents": {
-    "por-drc-2026-06-17": { "status": "scheduled", "goals": [] },
+    "por-drc-2026-06-17": { "status": "finished", "goals": [ { "team": "home", "scorer": "Joao Neves", "minute": 6, "assist": "Pedro Neto", "penalty": false, "ownGoal": false }, { "team": "away", "scorer": "Yoane Wissa", "minute": 45, "assist": "Arthur Masuaku", "penalty": false, "ownGoal": false } ] },
     "eng-cro-2026-06-17": { "status": "scheduled", "goals": [] },
     "gha-pan-2026-06-17": { "status": "scheduled", "goals": [] },
     "uzb-col-2026-06-17": { "status": "scheduled", "goals": [] }
