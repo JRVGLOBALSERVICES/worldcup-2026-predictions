@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Matchday Edge — World Cup 2026 Predictions
 
-## Getting Started
+A daily-updating prediction web app for the 2026 FIFA World Cup. Every group-stage
+fixture is called the way Rj bets it — **win, half-time & full-time score, anytime
+scorers, anytime assists, and the penalty + likely taker** — all in **Malaysia time
+(MYT)**, built from live team-news research on both squads and refreshed daily (and
+again near kickoff when line-ups are confirmed).
 
-First, run the development server:
+Live: https://worldcup-2026-predictions.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- **Next.js 16** (App Router, Turbopack) + **React 19** — fully static/SSG; every
+  match page is prerendered, the home page revalidates every 30 min (ISR) to re-pick
+  "Today".
+- **Tailwind v4** (CSS-first `@theme` tokens, OKLCH palette).
+- **TypeScript**, `next/font` (Archivo + Geist + Geist Mono, self-hosted, zero CLS).
+- **Vercel** hosting. No client 3D/WebGL — it's a data app, so it's fast and
+  SEO-complete (real HTML, `SportsEvent` JSON-LD, sitemap, robots).
+
+## Design system
+
+Floodlit-pitch editorial — dark, broadcast-graphic feel, one accent doing the work.
+
+| Token | Value | Role |
+|-------|-------|------|
+| `--color-pitch` | `oklch(0.17 0.015 160)` | near-black green base |
+| `--color-card` | `oklch(0.235 0.018 165)` | surfaces |
+| `--color-line` | `oklch(0.32 0.02 165)` | borders |
+| `--color-ink` | `oklch(0.97 0.01 150)` | primary text |
+| `--color-muted` / `--color-faint` | `oklch(0.72…)` / `oklch(0.56…)` | secondary text |
+| `--color-acid` | `oklch(0.87 0.21 135)` | electric lime — picks, bankers, live |
+| `--color-amber` | `oklch(0.81 0.15 72)` | penalties |
+
+- **Type:** Archivo (800/900, uppercase, tight tracking) for display + team names;
+  Geist for body; **Geist Mono with `tabular-nums`** for every odds figure and clock.
+- **Motion:** restrained. One live `setInterval` countdown clock; `prefers-reduced-motion`
+  honoured globally.
+- Anti-AI-slop checks applied (`design-3d-stack.md` §anti-slop, §5, §8): no bento
+  default, asymmetric editorial hero, single accent, OKLCH, specific copy.
+
+## Data model
+
+```
+data/fixtures.json     — all 52 group-stage matches (kickoffs stored as UTC ISO;
+                         the client renders MYT via Intl + Asia/Kuala_Lumpur)
+data/predictions.json  — { meta, predictions: { <matchId>: Prediction } }
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A `Prediction` carries: `win`, `halfTime`, `fullTime`, `htft`, `scorers[]`,
+`assists[]`, `penalty` (likelihood + taker + backup), `lineups` (probable XIs +
+status), `playerNotes[]` (deep per-player research), `confidence`, `sources[]`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`matchId` format: `<home3>-<away3>-<YYYY-MM-DD>`, e.g. `por-drc-2026-06-17`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How predictions are generated
 
-## Learn More
+Per fixture, deep live research on **both** squads — probable starting XI, injuries
+/ suspensions / squad news, recent form, set-piece + penalty takers — via web search,
+then reasoned analytical estimates (NOT live bookmaker prices) in Rj's fixed market
+order. Example of live research changing the call: Ghana's Kudus (injury) and Partey
+(visa) were ruled out, so Jordan Ayew became the banker scorer + penalty taker;
+Colombia's Jhon Durán was dropped from the squad, moving Luis Suárez to lead the line.
 
-To learn more about Next.js, take a look at the following resources:
+### Daily / near-kickoff refresh
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`scripts/build-fixtures.mjs` regenerates `data/fixtures.json` from a compact table.
+Prediction refresh is driven by Friday (the WhatsApp bridge) on a schedule:
+- **Daily** (morning MYT): regenerate predictions for that day's fixtures, commit, push
+  → Vercel redeploys.
+- **Near kickoff**: re-run the affected matches when confirmed XIs drop, flip
+  `lineups.status` to `confirmed`, push.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See `scripts/REFRESH.md` for the operator runbook.
 
-## Deploy on Vercel
+## Local dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install
+node scripts/build-fixtures.mjs   # (re)build fixtures.json
+npm run dev                        # http://localhost:3000
+npm run build && npm run start     # production build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Disclaimer
+
+All predictions are reasoned analytical estimates from research, **not** live
+bookmaker prices. Fun-money only — always check the actual odds before staking.
