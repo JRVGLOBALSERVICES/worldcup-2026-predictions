@@ -14,10 +14,11 @@
   --color-line: oklch(0.40 0.03 246);
   --color-slate: oklch(0.47 0.03 245); /* #556270 — the literal slate, for raised chrome */
 
-  /* Text — pure white, muted via opacity only */
+  /* Text — pure white only (no slate/grey shades). Black is reserved for
+   * text on light fills (lime chips), via --color-pitch / --color-on-acid. */
   --color-ink: oklch(1 0 0);
-  --color-muted: oklch(1 0 0 / 0.72);
-  --color-faint: oklch(1 0 0 / 0.5);
+  --color-muted: oklch(1 0 0);
+  --color-faint: oklch(1 0 0);
 
   /* Lime #C7F464 — primary energy accent (CTAs, profit, won, key figure) */
   --color-acid: oklch(0.91 0.18 121);

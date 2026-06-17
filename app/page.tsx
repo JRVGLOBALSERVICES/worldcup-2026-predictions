@@ -33,7 +33,14 @@ export default function Home() {
       return new Date(last.kickoffUTC).getTime() + liveWindow > now;
     }) ?? days[days.length - 1];
 
-  const upcoming = days.filter((d) => d.key !== featured.key);
+  const dayHasEnded = (d: (typeof days)[number]) => {
+    const last = d.fixtures[d.fixtures.length - 1];
+    return new Date(last.kickoffUTC).getTime() + liveWindow <= now;
+  };
+  // Ended days drop to the bottom of the schedule; live/upcoming days stay on
+  // top in kickoff order, finished ones trail after (also in kickoff order).
+  const rest = days.filter((d) => d.key !== featured.key);
+  const upcoming = [...rest.filter((d) => !dayHasEnded(d)), ...rest.filter(dayHasEnded)];
   const updated = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Asia/Kuala_Lumpur",
     day: "numeric",
@@ -102,8 +109,7 @@ export default function Home() {
       </h2>
       <div className="space-y-5">
         {upcoming.map((d) => {
-          const last = d.fixtures[d.fixtures.length - 1];
-          const dayFinished = new Date(last.kickoffUTC).getTime() + liveWindow <= now;
+          const dayFinished = dayHasEnded(d);
           return (
             <details
               key={d.key}

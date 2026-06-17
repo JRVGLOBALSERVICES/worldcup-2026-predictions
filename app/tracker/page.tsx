@@ -244,7 +244,15 @@ export default function Tracker() {
               </div>
 
               <div className="space-y-4">
-                {day.groups.map((g) => {
+                {[...day.groups]
+                  .sort((a, b) => {
+                    // Ended matches sink to the bottom; live/upcoming stay on top
+                    // (kickoff order preserved within each bucket).
+                    const ended = (g: (typeof day.groups)[number]) =>
+                      g.fixture && kickoffState(g.fixture.kickoffUTC, now).state === "finished" ? 1 : 0;
+                    return ended(a) - ended(b);
+                  })
+                  .map((g) => {
                   const f = g.fixture;
                   const finished = f ? kickoffState(f.kickoffUTC, now).state === "finished" : false;
                   const won = g.bets.filter((b) => b.status === "won").length;
@@ -279,7 +287,7 @@ export default function Tracker() {
                           {f && (
                             <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
                               Group {f.group} · {mytTime(f.kickoffUTC)} MYT
-                              <span className="text-muted/70"> ({etTime(f.kickoffUTC)} ET)</span>
+                              <span className="text-muted"> ({etTime(f.kickoffUTC)} ET)</span>
                               {finished && (
                                 <span className="text-muted">
                                   {" · "}
