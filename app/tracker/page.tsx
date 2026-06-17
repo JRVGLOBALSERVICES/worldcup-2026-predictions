@@ -379,7 +379,7 @@ export default function Tracker() {
                         {sf ? `${sf.away.name} ${sf.away.flag}` : "DR Congo"}
                       </span>
                       <span className="rounded-full border border-sky/40 px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-wider text-sky">
-                        1xBet · manual
+                        1xBet · auto-settle
                       </span>
                     </div>
                     <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
