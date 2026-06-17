@@ -39,11 +39,14 @@ const ALIAS: Record<string, string> = {
   iranislamicrepublic: "iran",
   iriran: "iran",
   turkiye: "turkey",
+  trkiye: "turkey", // ESPN "Türkiye" — diacritic stripped by norm()
   unitedstates: "usa",
   unitedstatesofamerica: "usa",
   czechia: "czechrepublic",
   capeverde: "caboverde",
   cotedivoire: "ivorycoast",
+  bosniaherzegovina: "bosnia", // ESPN "Bosnia-Herzegovina"
+  curaao: "curacao", // ESPN "Curaçao" — ç stripped by norm()
 };
 
 const norm = (s: string): string => {
