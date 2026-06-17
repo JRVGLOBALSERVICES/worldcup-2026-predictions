@@ -19,8 +19,14 @@
       }
     },
     "eng-cro-2026-06-17": {
-      "ht": null,
-      "ft": null
+      "ht": {
+        "home": 2,
+        "away": 2
+      },
+      "ft": {
+        "home": 4,
+        "away": 2
+      }
     },
     "gha-pan-2026-06-17": {
       "ht": null,
@@ -55,8 +61,57 @@
       ]
     },
     "eng-cro-2026-06-17": {
-      "status": "scheduled",
-      "goals": []
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Harry Kane",
+          "minute": 12,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Martin Baturina",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Harry Kane",
+          "minute": 42,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Petar Musa",
+          "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Jude Bellingham",
+          "minute": 47,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Marcus Rashford",
+          "minute": 85,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ]
     },
     "gha-pan-2026-06-17": {
       "status": "scheduled",
@@ -486,7 +541,8 @@
       "label": "Harry Kane scores first goal and match ends any other score",
       "odds": 40,
       "stake": 5,
-      "placedAt": "18/06 02:06"
+      "placedAt": "18/06 02:06",
+      "statusOverride": "won"
     },
     {
       "id": "sp-83229541461",
