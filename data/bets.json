@@ -4,7 +4,7 @@
     "placedAt": "2026-06-17T10:00:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. All settle automatically off final/half-time scores + scraped events.",
+    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. Batch 5 (18/06 08:39–08:40): 3 more 1xBet singles — Uzb-Col W1 @9.3 (RM10) + 2 Gha-Pan correct scores 0–1 & 1–0 @4.5 (RM10 each), RM30 total. All settle automatically off final/half-time scores + scraped events.",
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
@@ -364,6 +364,32 @@
       "odds": 10.6,
       "stake": 10,
       "placedAt": "18/06 04:03"
+    },
+    {
+      "id": "gha-ft-0-1-s4081",
+      "slipNo": "83237904081",
+      "matchId": "gha-pan-2026-06-17",
+      "side": "Panama",
+      "period": "FT",
+      "label": "Match to finish 0–1 (Panama)",
+      "home": 0,
+      "away": 1,
+      "odds": 4.5,
+      "stake": 10,
+      "placedAt": "18/06 08:39"
+    },
+    {
+      "id": "gha-ft-1-0-s1469",
+      "slipNo": "83237901469",
+      "matchId": "gha-pan-2026-06-17",
+      "side": "Ghana",
+      "period": "FT",
+      "label": "Match to finish 1–0 (Ghana)",
+      "home": 1,
+      "away": 0,
+      "odds": 4.5,
+      "stake": 10,
+      "placedAt": "18/06 08:39"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -613,6 +639,21 @@
         "type": "goalsOver",
         "player": "Diaz",
         "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83237918973",
+      "slipNo": "83237918973",
+      "matchId": "uzb-col-2026-06-17",
+      "player": "—",
+      "market": "Match winner — W1",
+      "label": "Uzbekistan to win (1X2 W1)",
+      "odds": 9.3,
+      "stake": 10,
+      "placedAt": "18/06 08:40",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "1"
       }
     }
   ]

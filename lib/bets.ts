@@ -46,7 +46,8 @@ export type SpecialGrade =
   | { type: "freeKickGoal"; player: string }
   | { type: "bttsEachOver"; line: number }
   | { type: "goalsOver"; player: string; line: number }
-  | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" };
+  | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
+  | { type: "matchResult"; outcome: "1" | "X" | "2" };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -282,6 +283,13 @@ export function gradeSpecial(special: Special): BetStatus {
       const outcome = (s: { home: number; away: number }) =>
         s.home > s.away ? "1" : s.home < s.away ? "2" : "X";
       hit = outcome(ht) === g.ht && outcome(ft) === g.ft;
+      break;
+    }
+    case "matchResult": {
+      // Full-time 1X2 outcome (1 = home win, X = draw, 2 = away win).
+      if (!ft) break;
+      const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+      hit = outcome === g.outcome;
       break;
     }
   }
