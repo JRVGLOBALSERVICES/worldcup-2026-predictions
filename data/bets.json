@@ -4,7 +4,7 @@
     "placedAt": "2026-06-17T10:00:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. Batch 5 (18/06 08:39–08:40): 3 more 1xBet singles — Uzb-Col W1 @9.3 (RM10) + 2 Gha-Pan correct scores 0–1 & 1–0 @4.5 (RM10 each), RM30 total. All settle automatically off final/half-time scores + scraped events. Batch 6 (18/06 09:22–09:25): 4 Uzb-Col 1st-half correct scores 0–0 @3.125 / 0–1 @3.2 / 1–1 @10 / 1–0 @9.5 (RM10 each) + 2 Luis Suárez first-goalscorer combos — first goal & 0–1 @13.7 (RM10) and first goal & Any Other Score @26 (RM10), RM60 total. Batch 7 (18/06 11:29): 2 Uzb-Col full-time correct scores — 3–2 @51 (RM10) + 2–2 @20 (RM20), RM30 total. Balance → 192.8 MYR.",
+    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. Batch 5 (18/06 08:39–08:40): 3 more 1xBet singles — Uzb-Col W1 @9.3 (RM10) + 2 Gha-Pan correct scores 0–1 & 1–0 @4.5 (RM10 each), RM30 total. All settle automatically off final/half-time scores + scraped events. Batch 6 (18/06 09:22–09:25): 4 Uzb-Col 1st-half correct scores 0–0 @3.125 / 0–1 @3.2 / 1–1 @10 / 1–0 @9.5 (RM10 each) + 2 Luis Suárez first-goalscorer combos — first goal & 0–1 @13.7 (RM10) and first goal & Any Other Score @26 (RM10), RM60 total. Batch 7 (18/06 11:29): 2 Uzb-Col full-time correct scores — 3–2 @51 (RM10) + 2–2 @20 (RM20), RM30 total. Batch 8 (18/06 11:33): 1 Uzb-Col full-time correct score — 2–3 (Colombia win) @13 (RM10). Balance → 182.8 MYR.",
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
@@ -468,6 +468,19 @@
       "odds": 11,
       "stake": 20,
       "placedAt": "18/06 11:29"
+    },
+    {
+      "id": "uzbcol-ft-2-3-s0661",
+      "slipNo": "83240940661",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Colombia",
+      "period": "FT",
+      "label": "Colombia to win 3–2",
+      "home": 2,
+      "away": 3,
+      "odds": 13,
+      "stake": 10,
+      "placedAt": "18/06 11:33"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
