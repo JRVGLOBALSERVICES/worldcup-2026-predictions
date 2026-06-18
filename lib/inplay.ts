@@ -125,6 +125,27 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         return { verdict: "alive", note: first ? `${player} 1st · ${cur.home}–${cur.away}` : `${cur.home}–${cur.away}` };
       return { verdict: "dead", note: `Score out of reach` };
 
+    case "firstScorerAndScoreOther": {
+      // Wins if the player scores first AND the final score lands OUTSIDE the
+      // bookmaker's listed grid ("Any Other Score"). Mirror of the case above
+      // with the grid test inverted. Until FT the score can still drift on/off
+      // the grid, so it stays "alive" rather than ever dying early.
+      if (first && !nameMatch(first, player)) return { verdict: "lost", note: `First goal: ${first}` };
+      const onGrid = (h: number, a: number) =>
+        g.excludeScores.some((s) => s.home === h && s.away === a);
+      if (done) {
+        return first && nameMatch(first, player) && !onGrid(cur.home, cur.away)
+          ? { verdict: "won", note: `${player} 1st + ${cur.home}–${cur.away} (other) ✓` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      if (first && nameMatch(first, player) && !onGrid(cur.home, cur.away))
+        return { verdict: "winning", note: `${player} 1st · ${cur.home}–${cur.away} (other)` };
+      return {
+        verdict: "alive",
+        note: first ? `${player} 1st · ${cur.home}–${cur.away}` : `${cur.home}–${cur.away}`,
+      };
+    }
+
     case "scoredAndScore":
       if (done) {
         return scored > 0 && eq(cur, g.home, g.away)
