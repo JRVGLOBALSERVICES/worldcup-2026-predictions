@@ -47,7 +47,8 @@ export type SpecialGrade =
   | { type: "bttsEachOver"; line: number }
   | { type: "goalsOver"; player: string; line: number }
   | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
-  | { type: "matchResult"; outcome: "1" | "X" | "2" };
+  | { type: "matchResult"; outcome: "1" | "X" | "2" }
+  | { type: "firstScorerAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -255,6 +256,15 @@ export function gradeSpecial(special: Special): BetStatus {
         !!firstScorer(goals) &&
         nameMatch(firstScorer(goals)!, g.player) &&
         isFinalScore(ft, g.home, g.away);
+      break;
+    case "firstScorerAndScoreOther":
+      // Player scores first AND the final score is NOT any of the bookmaker's
+      // explicitly-listed scorelines ("Any Other Score" catch-all bucket).
+      hit =
+        !!ft &&
+        !!firstScorer(goals) &&
+        nameMatch(firstScorer(goals)!, g.player) &&
+        !g.excludeScores.some((s) => s.home === ft.home && s.away === ft.away);
       break;
     case "scoredAndScore":
       hit = goalsBy(goals, g.player).length > 0 && isFinalScore(ft, g.home, g.away);

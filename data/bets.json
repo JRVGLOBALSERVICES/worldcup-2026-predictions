@@ -4,7 +4,7 @@
     "placedAt": "2026-06-17T10:00:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. Batch 5 (18/06 08:39–08:40): 3 more 1xBet singles — Uzb-Col W1 @9.3 (RM10) + 2 Gha-Pan correct scores 0–1 & 1–0 @4.5 (RM10 each), RM30 total. All settle automatically off final/half-time scores + scraped events.",
+    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. Batch 5 (18/06 08:39–08:40): 3 more 1xBet singles — Uzb-Col W1 @9.3 (RM10) + 2 Gha-Pan correct scores 0–1 & 1–0 @4.5 (RM10 each), RM30 total. All settle automatically off final/half-time scores + scraped events. Batch 6 (18/06 09:22–09:25): 4 Uzb-Col 1st-half correct scores 0–0 @3.125 / 0–1 @3.2 / 1–1 @10 / 1–0 @9.5 (RM10 each) + 2 Luis Suárez first-goalscorer combos — first goal & 0–1 @13.7 (RM10) and first goal & Any Other Score @26 (RM10), RM60 total. Balance 250.8 → 190.8 MYR.",
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
@@ -390,6 +390,58 @@
       "odds": 4.5,
       "stake": 10,
       "placedAt": "18/06 08:39"
+    },
+    {
+      "id": "uzbcol-ht-0-0-s2533",
+      "slipNo": "83238732533",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Draw",
+      "period": "HT",
+      "label": "Goalless at half-time (0–0)",
+      "home": 0,
+      "away": 0,
+      "odds": 3.125,
+      "stake": 10,
+      "placedAt": "18/06 09:22"
+    },
+    {
+      "id": "uzbcol-ht-0-1-s5433",
+      "slipNo": "83238735433",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Colombia",
+      "period": "HT",
+      "label": "Colombia to lead 0–1 at half-time",
+      "home": 0,
+      "away": 1,
+      "odds": 3.2,
+      "stake": 10,
+      "placedAt": "18/06 09:22"
+    },
+    {
+      "id": "uzbcol-ht-1-1-s7295",
+      "slipNo": "83238737295",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Draw",
+      "period": "HT",
+      "label": "1–1 at half-time",
+      "home": 1,
+      "away": 1,
+      "odds": 10,
+      "stake": 10,
+      "placedAt": "18/06 09:22"
+    },
+    {
+      "id": "uzbcol-ht-1-0-s0751",
+      "slipNo": "83238740751",
+      "matchId": "uzb-col-2026-06-17",
+      "side": "Uzbekistan",
+      "period": "HT",
+      "label": "Uzbekistan to lead 1–0 at half-time",
+      "home": 1,
+      "away": 0,
+      "odds": 9.5,
+      "stake": 10,
+      "placedAt": "18/06 09:22"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -654,6 +706,104 @@
       "grade": {
         "type": "matchResult",
         "outcome": "1"
+      }
+    },
+    {
+      "id": "sp-83238786677",
+      "slipNo": "83238786677",
+      "matchId": "uzb-col-2026-06-17",
+      "player": "Luis Suarez",
+      "market": "First goal + match score 0–1",
+      "label": "Luis Suárez scores first goal and match ends 0–1 (Colombia)",
+      "odds": 13.7,
+      "stake": 10,
+      "placedAt": "18/06 09:24",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Suarez",
+        "home": 0,
+        "away": 1
+      }
+    },
+    {
+      "id": "sp-83238794529",
+      "slipNo": "83238794529",
+      "matchId": "uzb-col-2026-06-17",
+      "player": "Luis Suarez",
+      "market": "First goal + match score Any Other",
+      "label": "Luis Suárez scores first goal and match ends in any other score",
+      "odds": 26,
+      "stake": 10,
+      "placedAt": "18/06 09:25",
+      "grade": {
+        "type": "firstScorerAndScoreOther",
+        "player": "Suarez",
+        "excludeScores": [
+          {
+            "home": 0,
+            "away": 0
+          },
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 0,
+            "away": 2
+          },
+          {
+            "home": 0,
+            "away": 3
+          },
+          {
+            "home": 1,
+            "away": 0
+          },
+          {
+            "home": 1,
+            "away": 1
+          },
+          {
+            "home": 1,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 3
+          },
+          {
+            "home": 2,
+            "away": 0
+          },
+          {
+            "home": 2,
+            "away": 1
+          },
+          {
+            "home": 2,
+            "away": 2
+          },
+          {
+            "home": 2,
+            "away": 3
+          },
+          {
+            "home": 3,
+            "away": 0
+          },
+          {
+            "home": 3,
+            "away": 1
+          },
+          {
+            "home": 3,
+            "away": 2
+          },
+          {
+            "home": 3,
+            "away": 3
+          }
+        ]
       }
     }
   ]
