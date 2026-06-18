@@ -62,6 +62,12 @@ export type SpecialGrade =
   | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
   | { type: "matchResult"; outcome: "1" | "X" | "2" }
   | { type: "firstScorerAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
+  // Player scores first AND a 1X2 outcome (1 = home win, X = draw, 2 = away win).
+  | { type: "firstScorerAndResult"; player: string; outcome: "1" | "X" | "2" }
+  // Player scores at any time AND the final score is NOT any listed scoreline ("Any Other Score").
+  | { type: "scoredAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
+  // Correct score of the SECOND HALF alone (full-time minus half-time goals).
+  | { type: "secondHalfScore"; home: number; away: number }
   // Card markets — graded off the same accent-safe nameMatch as scorers/assists.
   // "carded" = player shown any card (yellow or red); "sentOff" = player dismissed (red).
   | { type: "carded"; player: string }
@@ -293,6 +299,30 @@ export function gradeSpecial(special: Special): BetStatus {
     case "scoredAndScore":
       hit = goalsBy(goals, g.player).length > 0 && isFinalScore(ft, g.home, g.away);
       break;
+    case "scoredAndScoreOther":
+      // Player scores anytime AND the final score is OUTSIDE the listed grid.
+      hit =
+        !!ft &&
+        goalsBy(goals, g.player).length > 0 &&
+        !g.excludeScores.some((s) => s.home === ft.home && s.away === ft.away);
+      break;
+    case "firstScorerAndResult": {
+      // Player scores first AND the full-time 1X2 outcome matches.
+      if (!ft) break;
+      const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+      hit =
+        !!firstScorer(goals) &&
+        nameMatch(firstScorer(goals)!, g.player) &&
+        outcome === g.outcome;
+      break;
+    }
+    case "secondHalfScore": {
+      // Correct score of the second half alone = full-time minus half-time goals.
+      const ht = getResult(special.matchId).ht;
+      if (!ht || !ft) break;
+      hit = ft.home - ht.home === g.home && ft.away - ht.away === g.away;
+      break;
+    }
     case "drawAndFirstScorer":
       hit = isDraw(ft) && !!firstScorer(goals) && nameMatch(firstScorer(goals)!, g.player);
       break;

@@ -160,6 +160,60 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       if (reachable(cur, g.home, g.away)) return { verdict: "alive", note: scored > 0 ? `${player} scored · need ${g.home}–${g.away}` : `Live ${cur.home}–${cur.away}` };
       return { verdict: "dead", note: "Score out of reach" };
 
+    case "scoredAndScoreOther": {
+      // Player scores anytime AND the final score lands OUTSIDE the listed grid.
+      const onGrid = (h: number, a: number) =>
+        g.excludeScores.some((s) => s.home === h && s.away === a);
+      if (done) {
+        return scored > 0 && !onGrid(cur.home, cur.away)
+          ? { verdict: "won", note: `${player} scored + ${cur.home}–${cur.away} (other) ✓` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      if (scored > 0 && !onGrid(cur.home, cur.away))
+        return { verdict: "winning", note: `${player} scored · ${cur.home}–${cur.away} (other)` };
+      return {
+        verdict: "alive",
+        note: scored > 0 ? `${player} scored · ${cur.home}–${cur.away}` : `${player} yet to score`,
+      };
+    }
+
+    case "firstScorerAndResult": {
+      // Player scores first AND the full-time 1X2 result matches. The first-goal
+      // leg locks lost the moment someone else scores; the result swings between
+      // winning/alive until the whistle (a side can still get the result).
+      const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      const sideLabel = g.outcome === "1" ? "home win" : g.outcome === "2" ? "away win" : "draw";
+      if (first && !nameMatch(first, player)) return { verdict: "lost", note: `First goal: ${first}` };
+      if (done) {
+        return first && nameMatch(first, player) && out(cur.home, cur.away) === g.outcome
+          ? { verdict: "won", note: `${player} 1st + ${sideLabel} ✓` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      if (first && nameMatch(first, player) && out(cur.home, cur.away) === g.outcome)
+        return { verdict: "winning", note: `${player} 1st · ${sideLabel} on track ${cur.home}–${cur.away}` };
+      return {
+        verdict: "alive",
+        note: first ? `${player} 1st · need ${sideLabel} · ${cur.home}–${cur.away}` : `No goals yet · need ${sideLabel}`,
+      };
+    }
+
+    case "secondHalfScore": {
+      // Correct score of the second half alone (current minus the half-time score).
+      const ht = live.htScore;
+      if (!ht) return { verdict: "alive", note: "2nd-half score — settles after the break" };
+      const sh = { home: cur.home - ht.home, away: cur.away - ht.away };
+      if (done) {
+        return sh.home === g.home && sh.away === g.away
+          ? { verdict: "won", note: `2nd half ${sh.home}–${sh.away} ✓` }
+          : { verdict: "lost", note: `2nd half ${sh.home}–${sh.away}` };
+      }
+      if (sh.home === g.home && sh.away === g.away)
+        return { verdict: "winning", note: `2nd half ${sh.home}–${sh.away} on track` };
+      if (sh.home <= g.home && sh.away <= g.away)
+        return { verdict: "alive", note: `2nd half ${sh.home}–${sh.away} · still on` };
+      return { verdict: "dead", note: `2nd half ${sh.home}–${sh.away} — out of reach` };
+    }
+
     case "drawAndFirstScorer":
       if (first && !nameMatch(first, player)) return { verdict: "lost", note: `First goal: ${first}` };
       if (done) {
