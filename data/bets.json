@@ -4,7 +4,7 @@
     "placedAt": "2026-06-17T10:00:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. All settle automatically off final/half-time scores + scraped events.",
+    "note": "Three real bet batches on the Jun 18 (MYT) fixtures. Batch 1 (17/06 20:14–20:21): correct-score grid across all four fixtures (RM10 each) + 10 Por-DRC player-prop specials. Batch 2 (18/06 02:02–02:06): 9 single bets — 7 correct-score + 2 specials on Por-DRC and Eng-Cro, RM100 total. Batch 3 (18/06 04:03–04:04): 2 Eng-Cro single bets — Correct Score 0–0 @10.6 + HT/FT England/Croatia @41, RM20 total. Batch 4 (18/06 08:41): 3 Uzb-Col Luis Diaz player props — brace @9.3 (RM20), first goal + 0–1 @12 (RM10), over 1.5 goals @7.6 (RM10), RM40 total. All settle automatically off final/half-time scores + scraped events.",
     "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
@@ -564,6 +564,55 @@
         "type": "htft",
         "ht": "1",
         "ft": "2"
+      }
+    },
+    {
+      "id": "sp-83237945359",
+      "slipNo": "83237945359",
+      "matchId": "uzb-col-2026-06-17",
+      "player": "Luis Diaz",
+      "market": "Player brace (2 goals)",
+      "label": "Luis Diaz to score 2 goals (brace)",
+      "odds": 9.3,
+      "stake": 20,
+      "placedAt": "18/06 08:41",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Diaz",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83237939347",
+      "slipNo": "83237939347",
+      "matchId": "uzb-col-2026-06-17",
+      "player": "Luis Diaz",
+      "market": "First goal + match score 0–1",
+      "label": "Luis Diaz scores first goal and match ends 0–1 (Colombia)",
+      "odds": 12,
+      "stake": 10,
+      "placedAt": "18/06 08:41",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Diaz",
+        "home": 0,
+        "away": 1
+      }
+    },
+    {
+      "id": "sp-83237936785",
+      "slipNo": "83237936785",
+      "matchId": "uzb-col-2026-06-17",
+      "player": "Luis Diaz",
+      "market": "Player total goals over 1.5",
+      "label": "Luis Diaz to score over 1.5 goals (2+)",
+      "odds": 7.6,
+      "stake": 10,
+      "placedAt": "18/06 08:41",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Diaz",
+        "line": 1.5
       }
     }
   ]
