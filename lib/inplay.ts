@@ -175,6 +175,66 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         ? { verdict: "lost", note: "No free-kick goal" }
         : { verdict: "alive", note: `${player} free-kick — confirmed at FT` };
 
+    case "goalsOver":
+      // Player scores strictly more than `line` (line 1.5 → 2+). Goals only
+      // accrue, so once over the line it's a locked win.
+      if (scored > g.line) return { verdict: "won", note: `${player}: ${scored} goals ✓` };
+      return done
+        ? { verdict: "lost", note: `${player}: ${scored} goals` }
+        : { verdict: "alive", note: `${player}: ${scored}/${Math.ceil(g.line + 0.5)} goals` };
+
+    case "bttsEachOver": {
+      // Both teams strictly over `line` each (line 1 → 2+ each). Locked once met.
+      const home = goals.filter((gl) => gl.team === "home" && !gl.ownGoal).length;
+      const away = goals.filter((gl) => gl.team === "away" && !gl.ownGoal).length;
+      const need = Math.ceil(g.line + 0.5);
+      if (home > g.line && away > g.line) return { verdict: "won", note: `Both ${need}+ ✓ (${home}–${away})` };
+      return done
+        ? { verdict: "lost", note: `Ended ${home}–${away} (need ${need} each)` }
+        : { verdict: "alive", note: `${home}–${away} · need ${need} each` };
+    }
+
+    case "htft": {
+      // HT 1X2 AND FT 1X2 must both match. The HT leg locks at the break: if the
+      // half-time result is wrong it's dead, no matter the full-time score.
+      const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      const lab = (o: string) => (o === "1" ? "home" : o === "2" ? "away" : "draw");
+      const ht = live.htScore;
+      if (ht && out(ht.home, ht.away) !== g.ht)
+        return { verdict: "dead", note: `HT ${ht.home}–${ht.away} — needed ${lab(g.ht)} at the break` };
+      if (done) {
+        return ht && out(ht.home, ht.away) === g.ht && out(cur.home, cur.away) === g.ft
+          ? { verdict: "won", note: `${lab(g.ht)}/${lab(g.ft)} ✓` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      if (ht) {
+        // Half-time leg already correct — down to the full-time result now.
+        return out(cur.home, cur.away) === g.ft
+          ? { verdict: "winning", note: `HT ${lab(g.ht)} ✓ · FT on track ${cur.home}–${cur.away}` }
+          : { verdict: "alive", note: `HT ${lab(g.ht)} ✓ · need ${lab(g.ft)} · ${cur.home}–${cur.away}` };
+      }
+      // First half still in play.
+      return out(cur.home, cur.away) === g.ht
+        ? { verdict: "winning", note: `1st-half ${lab(g.ht)} on track · ${cur.home}–${cur.away}` }
+        : { verdict: "alive", note: `Need ${lab(g.ht)} at HT · ${cur.home}–${cur.away}` };
+    }
+
+    case "matchResult": {
+      // Full-time 1X2. A match winner is never locked until FT — a side that's
+      // behind or level can still get the result — so before FT it only swings
+      // between "winning" (current 1X2 matches) and "alive", never "dead".
+      const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      const sideLabel = g.outcome === "1" ? "home win" : g.outcome === "2" ? "away win" : "draw";
+      if (done) {
+        return out(cur.home, cur.away) === g.outcome
+          ? { verdict: "won", note: `${sideLabel} ✓ (${cur.home}–${cur.away})` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      return out(cur.home, cur.away) === g.outcome
+        ? { verdict: "winning", note: `Need ${sideLabel} · live ${cur.home}–${cur.away}` }
+        : { verdict: "alive", note: `Need ${sideLabel} · live ${cur.home}–${cur.away}` };
+    }
+
     default:
       return { verdict: "scheduled", note: "Not started" };
   }
