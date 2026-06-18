@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { mytTime, etTime, mytDayKey, mytDayLabel, nowMytDayKey } from "@/lib/data";
+import { mytTime, etTime, mytDayKey, mytDayLabel } from "@/lib/data";
 import {
   betSlip,
   settleAll,
@@ -88,16 +88,23 @@ export default function TrackerPage() {
     dayMap.get(key)!.matches.push(m);
   }
 
-  // "Today" in MYT. A late-night kickoff (e.g. 00:00 MYT) buckets into the next
-  // calendar day, so the slate Rj placed "tonight" can read as tomorrow's date —
-  // featuredKey resolves to that current/most-recent active day either way.
-  const todayKey = nowMytDayKey();
+  // Featured day = the live/upcoming slate Rj is actively betting on, NOT the
+  // calendar date. Bets placed late at night (MYT) for matches that kick off
+  // after midnight bucket into the NEXT MYT day, so "today's bets" = the next
+  // active matchday. Mirror the home page: earliest dated day whose last match
+  // hasn't finished yet (115-min live window); else the most recent dated day.
+  const now = Date.now();
+  const liveWindow = 115 * 60 * 1000;
+  const lastKickoff = (k: string) =>
+    dayMap.get(k)!.matches.reduce((mx, m) => {
+      const t = m.kickoffUTC ? new Date(m.kickoffUTC).getTime() : 0;
+      return t > mx ? t : mx;
+    }, 0);
   const datedKeys = dayOrder.filter((k) => k !== "tbd").sort(); // ascending
   const featuredKey =
-    dayMap.has(todayKey) && todayKey !== "tbd"
-      ? todayKey
-      : // newest day that has already started (key <= today); else the soonest upcoming
-        [...datedKeys].reverse().find((k) => k <= todayKey) ?? datedKeys[0] ?? "tbd";
+    datedKeys.find((k) => lastKickoff(k) + liveWindow > now) ??
+    datedKeys[datedKeys.length - 1] ??
+    "tbd";
 
   // Featured day pinned first, then remaining days newest-first; "tbd" bucket last.
   const days = dayOrder

@@ -68,6 +68,10 @@ export type SpecialGrade =
   | { type: "scoredAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
   // Correct score of the SECOND HALF alone (full-time minus half-time goals).
   | { type: "secondHalfScore"; home: number; away: number }
+  // Both named players each score at any time ("Both Players To Score - Yes").
+  | { type: "bothScored"; players: string[] }
+  // A 1X2 outcome AND both teams score ("W1/W2/Draw + Both Teams To Score - Yes").
+  | { type: "resultAndBtts"; outcome: "1" | "X" | "2" }
   // Card markets — graded off the same accent-safe nameMatch as scorers/assists.
   // "carded" = player shown any card (yellow or red); "sentOff" = player dismissed (red).
   | { type: "carded"; player: string }
@@ -321,6 +325,17 @@ export function gradeSpecial(special: Special): BetStatus {
       const ht = getResult(special.matchId).ht;
       if (!ht || !ft) break;
       hit = ft.home - ht.home === g.home && ft.away - ht.away === g.away;
+      break;
+    }
+    case "bothScored":
+      // Every listed player scores at least one (non-own) goal.
+      hit = g.players.every((p) => goalsBy(goals, p).length > 0);
+      break;
+    case "resultAndBtts": {
+      // 1X2 outcome AND both teams scored (final score shows ≥1 each).
+      if (!ft) break;
+      const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+      hit = outcome === g.outcome && ft.home >= 1 && ft.away >= 1;
       break;
     }
     case "drawAndFirstScorer":

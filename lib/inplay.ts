@@ -214,6 +214,34 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       return { verdict: "dead", note: `2nd half ${sh.home}–${sh.away} — out of reach` };
     }
 
+    case "bothScored": {
+      // Every listed player must score. Goals only accrue, so once all have
+      // scored it's a locked win; settles lost if FT arrives with any short.
+      const tally = g.players.map((p) => ({ p, n: goalsBy(goals, p).length }));
+      if (tally.every((t) => t.n > 0)) return { verdict: "won", note: `Both scored ✓` };
+      const missing = tally.filter((t) => t.n === 0).map((t) => t.p).join(", ");
+      return done
+        ? { verdict: "lost", note: `${missing} didn't score` }
+        : { verdict: "alive", note: tally.map((t) => `${t.p} ${t.n > 0 ? "✓" : "—"}`).join(" · ") };
+    }
+
+    case "resultAndBtts": {
+      // 1X2 outcome AND both teams score. Like matchResult, the winner isn't
+      // locked until FT, so before the whistle it only swings winning/alive.
+      const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      const sideLabel = g.outcome === "1" ? "home win" : g.outcome === "2" ? "away win" : "draw";
+      const btts = cur.home >= 1 && cur.away >= 1;
+      const onTrack = out(cur.home, cur.away) === g.outcome && btts;
+      if (done) {
+        return onTrack
+          ? { verdict: "won", note: `${sideLabel} + both scored ✓ (${cur.home}–${cur.away})` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      return onTrack
+        ? { verdict: "winning", note: `${sideLabel} + BTTS on track · ${cur.home}–${cur.away}` }
+        : { verdict: "alive", note: `Need ${sideLabel} + both to score · ${cur.home}–${cur.away}` };
+    }
+
     case "drawAndFirstScorer":
       if (first && !nameMatch(first, player)) return { verdict: "lost", note: `First goal: ${first}` };
       if (done) {
