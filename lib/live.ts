@@ -217,14 +217,31 @@ async function fetchDate(param: string): Promise<EspnEvent[]> {
  */
 export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Record<string, LiveMatch>> {
   const WINDOW_BEFORE = 15 * 60 * 1000;
-  const WINDOW_AFTER = 3 * 60 * 60 * 1000;
+  // Keep resolving a match well past the whistle (≈3h game + buffer) so the
+  // final score + goal log stay on the page for hours after full time, not just
+  // during play. Below ~6h, a match that ended would silently revert to its
+  // static "kickoff time" card.
+  const WINDOW_AFTER = 6 * 60 * 60 * 1000;
   const relevant = fixtures.filter((f) => {
     const ko = new Date(f.kickoffUTC).getTime();
     return nowMs >= ko - WINDOW_BEFORE && nowMs <= ko + WINDOW_AFTER;
   });
   if (relevant.length === 0) return {};
 
-  const params = [...new Set(relevant.map((f) => dateParam(new Date(f.kickoffUTC))))];
+  // ESPN buckets a fixture under its US-local match date, which for any kickoff
+  // in the 00:00–~05:00 UTC window is the PREVIOUS calendar day from our UTC
+  // date (e.g. Uzbekistan–Colombia at 02:00Z is on ESPN's prior day). Query both
+  // the kickoff UTC date and the day before, then dedupe — cheap insurance that
+  // late-UTC kickoffs actually match an ESPN event instead of returning empty.
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const params = [
+    ...new Set(
+      relevant.flatMap((f) => {
+        const ko = new Date(f.kickoffUTC);
+        return [dateParam(ko), dateParam(new Date(ko.getTime() - DAY_MS))];
+      }),
+    ),
+  ];
   const wantIds = new Set(relevant.map((f) => f.id));
 
   const out: Record<string, LiveMatch> = {};
