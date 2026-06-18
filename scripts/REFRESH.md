@@ -85,6 +85,23 @@ props to Won (green) / Lost (red) — no manual grading. When all four matches
 are final, post Rj a one-line settled summary (W/L count + net P&L from the
 tracker totals).
 
+## Result snapshot for the match-page verdict (`data/results.json`)
+
+The match page renders a **"How the call landed"** verdict block (`components/Verdict.tsx`)
+grading each AI market against the real result, market by market, plus which named
+scorers actually scored. It reads `data/results.json`, which persists FT score +
+goal list past the live-feed window (so a verdict stays on the page for days). A
+deterministic script pulls this straight from ESPN — never hand-edit it:
+
+    node scripts/build-results.mjs           # write data/results.json
+    node scripts/build-results.mjs --check    # report only (exit 2 on change)
+
+On every refresh/settlement run, run `node scripts/build-results.mjs` alongside the
+bets settlement above, then build/commit/push. It only writes kicked-off matches
+(live + finished); scheduled matches stay absent so pre-match pages stay static.
+Same ALIAS/normalise rules as `lib/live.ts` — keep the three ALIAS maps
+(`lib/live.ts`, `verify-fixtures-espn.mjs`, `build-results.mjs`) in sync.
+
 ## Daily fixture-time check vs ESPN (06:00 MYT, automatic)
 
 The whole app derives MYT + ET display from each fixture's `kickoffUTC`, so a

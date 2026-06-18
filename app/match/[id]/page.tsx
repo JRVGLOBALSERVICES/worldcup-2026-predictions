@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { fixtures, getFixture, getPrediction, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
+import { VerdictBlock } from "@/components/Verdict";
 import { LiveProvider } from "@/components/LiveProvider";
 import { MatchHeaderScore, LiveStatusLine, LiveGoalLog } from "@/components/LiveScore";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
@@ -88,6 +89,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       </header>
 
       <LiveGoalLog matchId={fixture.id} />
+
+      {pred && (
+        <div className="mt-8">
+          <VerdictBlock fixture={fixture} pred={pred} />
+        </div>
+      )}
 
       <div className="mt-8">
         {pred ? (
