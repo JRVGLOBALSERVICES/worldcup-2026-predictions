@@ -108,6 +108,17 @@ function resultFromEvent(ev, fixture) {
     };
   });
 
+  // Bookings ride the same details array (filtered out of `goals` by !scoringPlay).
+  // redCard covers straight reds AND second-yellow dismissals — check it first.
+  const cards = (comp?.details ?? [])
+    .filter((d) => d.yellowCard || d.redCard)
+    .map((d) => ({
+      team: d.team?.id === homeId ? "home" : "away",
+      player: (d.athletesInvolved ?? [])[0]?.displayName ?? "Unknown",
+      minute: d.clock?.value != null ? Math.round(d.clock.value / 60) : null,
+      type: d.redCard ? "red" : "yellow",
+    }));
+
   const reachedHt = state === "finished" || (ev.status?.period ?? 0) >= 2;
   let ht = null;
   if (reachedHt) {
@@ -126,6 +137,7 @@ function resultFromEvent(ev, fixture) {
     ft: state === "finished" ? score : null,
     score,
     goals,
+    cards,
     updatedAt: new Date(ev.date ?? Date.now()).toISOString(),
   };
 }

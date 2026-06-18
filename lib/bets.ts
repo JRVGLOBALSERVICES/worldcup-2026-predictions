@@ -32,7 +32,20 @@ export type Goal = {
   ownGoal?: boolean;
 };
 
-export type MatchEvents = { status: "scheduled" | "live" | "finished"; goals: Goal[] };
+/** One scraped booking. `team` is relative to the fixture's listed home/away.
+ *  `type: "red"` covers a straight red OR a second-yellow dismissal. */
+export type Card = {
+  team: "home" | "away";
+  player: string;
+  minute?: number;
+  type: "yellow" | "red";
+};
+
+export type MatchEvents = {
+  status: "scheduled" | "live" | "finished";
+  goals: Goal[];
+  cards?: Card[];
+};
 
 /** Machine-gradable rule attached to each special so the cron settles it without a human. */
 export type SpecialGrade =
@@ -48,7 +61,11 @@ export type SpecialGrade =
   | { type: "goalsOver"; player: string; line: number }
   | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
   | { type: "matchResult"; outcome: "1" | "X" | "2" }
-  | { type: "firstScorerAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] };
+  | { type: "firstScorerAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
+  // Card markets — graded off the same accent-safe nameMatch as scorers/assists.
+  // "carded" = player shown any card (yellow or red); "sentOff" = player dismissed (red).
+  | { type: "carded"; player: string }
+  | { type: "sentOff"; player: string };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -222,6 +239,8 @@ const goalsBy = (goals: Goal[], player: string) =>
 const assistsBy = (goals: Goal[], player: string) =>
   goals.filter((g) => g.assist && nameMatch(g.assist, player));
 const firstScorer = (goals: Goal[]): string | null => realGoals(goals)[0]?.scorer ?? null;
+/** Bookings for a player — accent-safe, same matcher as goals/assists. */
+const cardsBy = (cards: Card[], player: string) => cards.filter((c) => nameMatch(c.player, player));
 const isFinalScore = (ft: Score, home: number, away: number) =>
   !!ft && ft.home === home && ft.away === away;
 const isDraw = (ft: Score) => !!ft && ft.home === ft.away;
@@ -241,6 +260,7 @@ export function gradeSpecial(special: Special): BetStatus {
   if (events.status !== "finished") return "pending";
 
   const { goals } = events;
+  const cards = events.cards ?? [];
   let hit = false;
   switch (g.type) {
     case "scored":
@@ -306,6 +326,14 @@ export function gradeSpecial(special: Special): BetStatus {
       hit = outcome === g.outcome;
       break;
     }
+    case "carded":
+      // Player shown any card during the match (yellow or red).
+      hit = cardsBy(cards, g.player).length > 0;
+      break;
+    case "sentOff":
+      // Player dismissed — a red (straight or second-yellow, both stored as "red").
+      hit = cardsBy(cards, g.player).some((c) => c.type === "red");
+      break;
   }
   return hit ? "won" : "lost";
 }

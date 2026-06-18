@@ -1,4 +1,4 @@
-import type { Goal, Score, SpecialGrade, BetStatus } from "./bets";
+import type { Goal, Card, Score, SpecialGrade, BetStatus } from "./bets";
 import type { LiveMatch } from "./live";
 
 /** Minimal shapes the graders read — so both the full Bet/Special and the
@@ -40,6 +40,7 @@ const realGoals = (g: Goal[]) => g.filter((x) => !x.ownGoal);
 const goalsBy = (g: Goal[], p: string) => realGoals(g).filter((x) => nameMatch(x.scorer, p));
 const assistsBy = (g: Goal[], p: string) => g.filter((x) => x.assist && nameMatch(x.assist, p));
 const firstScorer = (g: Goal[]): string | null => realGoals(g)[0]?.scorer ?? null;
+const cardsBy = (c: Card[], p: string) => c.filter((x) => nameMatch(x.player, p));
 
 // ── correct-score bets ────────────────────────────────────────────────────────
 export function inPlayBet(bet: BetLike, live: LiveMatch | undefined): InPlay {
@@ -83,6 +84,7 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
   if (!g || !live || live.state === "scheduled") return { verdict: "scheduled", note: "Not started" };
 
   const goals = live.goals;
+  const cards = live.cards;
   const done = live.state === "finished";
   const cur = live.score;
   const player = "player" in g ? g.player : "";
@@ -235,6 +237,28 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       return out(cur.home, cur.away) === g.outcome
         ? { verdict: "winning", note: `Need ${sideLabel} · live ${cur.home}–${cur.away}` }
         : { verdict: "alive", note: `Need ${sideLabel} · live ${cur.home}–${cur.away}` };
+    }
+
+    case "carded": {
+      // Player shown any card. Once booked it's a locked win — bookings don't get
+      // taken back mid-match. Stays alive until then, settles lost if FT with none.
+      const playerCards = cardsBy(cards, player);
+      if (playerCards.length > 0) {
+        const red = playerCards.some((c) => c.type === "red");
+        return { verdict: "won", note: `${player} ${red ? "sent off" : "booked"} ✓` };
+      }
+      return done
+        ? { verdict: "lost", note: `${player} not booked` }
+        : { verdict: "alive", note: `${player} not booked yet` };
+    }
+
+    case "sentOff": {
+      // Player dismissed (red — straight or second yellow). Locked win once red.
+      if (cardsBy(cards, player).some((c) => c.type === "red"))
+        return { verdict: "won", note: `${player} sent off ✓` };
+      return done
+        ? { verdict: "lost", note: `${player} not sent off` }
+        : { verdict: "alive", note: `${player} on the pitch` };
     }
 
     default:

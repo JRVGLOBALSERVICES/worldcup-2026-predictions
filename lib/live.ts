@@ -1,5 +1,5 @@
 import { fixtures } from "./data";
-import type { Goal } from "./bets";
+import type { Goal, Card } from "./bets";
 import resultsFile from "@/data/results.json";
 
 /** Persisted ESPN snapshots (written by scripts/build-results.mjs). */
@@ -15,6 +15,12 @@ type PersistedResult = {
     assist: string | null;
     penalty: boolean;
     ownGoal: boolean;
+  }[];
+  cards?: {
+    team: "home" | "away";
+    player: string;
+    minute: number | null;
+    type: "yellow" | "red";
   }[];
   updatedAt: string;
 };
@@ -39,6 +45,12 @@ function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
       assist: g.assist,
       penalty: g.penalty,
       ownGoal: g.ownGoal,
+    })),
+    cards: (r.cards ?? []).map((c) => ({
+      team: c.team,
+      player: c.player,
+      minute: c.minute ?? undefined,
+      type: c.type,
     })),
   };
 }
@@ -70,6 +82,7 @@ export type LiveMatch = {
   htScore: { home: number; away: number } | null;
   ftScore: { home: number; away: number } | null;
   goals: Goal[];
+  cards: Card[];
 };
 
 // ESPN occasionally spells a nation differently from our fixtures. Map the few
@@ -127,6 +140,8 @@ type EspnDetail = {
   scoringPlay?: boolean;
   penaltyKick?: boolean;
   ownGoal?: boolean;
+  yellowCard?: boolean;
+  redCard?: boolean;
   athletesInvolved?: EspnAthlete[];
 };
 type EspnCompetitor = {
@@ -206,6 +221,21 @@ function normaliseEvent(ev: EspnEvent): LiveMatch | null {
     };
   });
 
+  // Bookings, oriented to our home/away. ESPN flags second-yellow dismissals with
+  // redCard:true (often alongside yellowCard:true) — check red first so they grade
+  // as "sent off", not just "carded".
+  const cards: Card[] = (comp?.details ?? [])
+    .filter((d) => d.yellowCard || d.redCard)
+    .map((d) => {
+      const side: "home" | "away" = d.team?.id === homeId ? "home" : "away";
+      return {
+        team: side,
+        player: d.athletesInvolved?.[0]?.displayName ?? "Unknown",
+        minute: d.clock?.value != null ? Math.round(d.clock.value / 60) : undefined,
+        type: d.redCard ? "red" : "yellow",
+      };
+    });
+
   // Half-time score: derivable once we've reached the break or beyond.
   const reachedHt = state === "halftime" || state === "finished" || (ev.status?.period ?? 0) >= 2;
   let htScore: LiveMatch["htScore"] = null;
@@ -238,6 +268,7 @@ function normaliseEvent(ev: EspnEvent): LiveMatch | null {
     htScore,
     ftScore: state === "finished" ? score : null,
     goals,
+    cards,
   };
 }
 
