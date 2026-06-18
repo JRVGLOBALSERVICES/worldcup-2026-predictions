@@ -22,6 +22,7 @@ import { dirname, join } from "node:path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const FIXTURES_PATH = join(__dirname, "..", "data", "fixtures.json");
 const RESULTS_PATH = join(__dirname, "..", "data", "results.json");
+const BETS_PATH = join(__dirname, "..", "data", "bets.json");
 const ESPN_BASE =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
 
@@ -142,6 +143,65 @@ function resultFromEvent(ev, fixture) {
   };
 }
 
+/**
+ * Settle the bet slip (`data/bets.json`) deterministically from the same ESPN
+ * results, so the tracker flips Won/Lost the moment a match is final — without
+ * waiting for the hourly AI settlement cron, which can run mid-match and leave a
+ * late-finishing game stuck on "Awaiting result" until its next pass.
+ *
+ * Strictly ADDITIVE: only fills what's empty. It never overwrites a score that's
+ * already set, never downgrades a `matchEvents` entry the AI cron filled with
+ * richer data (assists from BBC/Flashscore that ESPN's feed lacks), and never
+ * touches per-special `statusOverride` hand-corrections. Returns true if it
+ * changed anything. Mutates `bets` in place.
+ */
+function settleBetsFromResults(bets, results) {
+  let changed = false;
+  bets.results ??= {};
+  bets.matchEvents ??= {};
+
+  for (const [id, r] of Object.entries(results)) {
+    if (r.state !== "finished") continue; // only settle final scores
+
+    // Correct-score layer: fill ht/ft only where still null (a real score is a
+    // fact; once set, leave it — the AI cron or a hand-fix may have refined it).
+    const rec = (bets.results[id] ??= { ht: null, ft: null });
+    if (rec.ft == null && r.ft) {
+      rec.ft = { home: r.ft.home, away: r.ft.away };
+      changed = true;
+    }
+    if (rec.ht == null && r.ht) {
+      rec.ht = { home: r.ht.home, away: r.ht.away };
+      changed = true;
+    }
+
+    // Player-prop layer: only fill when not already finished, so we never clobber
+    // an AI-enriched goal list (with assists) by overwriting it with ESPN's.
+    const ev = bets.matchEvents[id];
+    if (!ev || ev.status !== "finished") {
+      bets.matchEvents[id] = {
+        status: "finished",
+        goals: r.goals.map((g) => ({
+          team: g.team,
+          scorer: g.scorer,
+          minute: g.minute,
+          assist: g.assist,
+          penalty: g.penalty === true,
+          ownGoal: g.ownGoal === true,
+        })),
+        cards: (r.cards ?? []).map((c) => ({
+          team: c.team,
+          player: c.player,
+          minute: c.minute,
+          type: c.type,
+        })),
+      };
+      changed = true;
+    }
+  }
+  return changed;
+}
+
 async function main() {
   const fixtures = JSON.parse(readFileSync(FIXTURES_PATH, "utf8"));
 
@@ -213,13 +273,35 @@ async function main() {
   }
   const changed = prevResults !== JSON.stringify(results);
 
+  // Settle the bet slip from these same results (additive — fills only gaps).
+  let bets = null;
+  let betsChanged = false;
+  try {
+    bets = JSON.parse(readFileSync(BETS_PATH, "utf8"));
+    const before = JSON.stringify(bets);
+    settleBetsFromResults(bets, results);
+    betsChanged = JSON.stringify(bets) !== before;
+  } catch {
+    /* no bet slip (or unreadable) — results.json still gets written below */
+  }
+
   console.log(`Results: ${finished} finished, ${live} live, ${Object.keys(results).length} total.`);
   if (CHECK_ONLY) {
-    console.log(changed ? "CHANGED (use without --check to write)." : "No change.");
-    process.exit(changed ? 2 : 0);
+    const any = changed || betsChanged;
+    console.log(
+      `${changed ? "results.json CHANGED" : "results.json clean"}; ${betsChanged ? "bets.json CHANGED" : "bets.json clean"}` +
+        (any ? " (use without --check to write)." : "."),
+    );
+    process.exit(any ? 2 : 0);
   }
   writeFileSync(RESULTS_PATH, next);
   console.log(changed ? `Wrote ${RESULTS_PATH}` : `No change; rewrote ${RESULTS_PATH} anyway (timestamp).`);
+  if (bets && betsChanged) {
+    writeFileSync(BETS_PATH, JSON.stringify(bets, null, 2) + "\n");
+    console.log(`Settled bet slip → wrote ${BETS_PATH}`);
+  } else if (bets) {
+    console.log("Bet slip already settled for all finished matches; no change.");
+  }
 }
 
 main().catch((e) => {

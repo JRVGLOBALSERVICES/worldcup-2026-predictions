@@ -34,6 +34,17 @@ Repo lives at `/root/repos/worldcup-2026` on the VPS.
 bet's `home`/`away` target to the real score, so **the cron must fill real scores
 in** for the tracker to settle.
 
+> **Auto-settle (deterministic, since 2026-06-18).** `scripts/build-results.mjs`
+> now ALSO settles `bets.json` straight from ESPN — it fills `results.<id>.ht/ft`
+> and `matchEvents.<id>` (goals + cards) for any **finished** fixture on the slip.
+> This closes the timing hole where a match finished between hourly cron passes
+> and sat on "Awaiting result". It is strictly **additive**: it only fills empty
+> slots, never overwrites a score or a richer AI-filled goal list (assists), and
+> never touches a special's `statusOverride`. So just running the snapshotter
+> settles the slip; the AI steps below are now only for **enrichment** (assists
+> ESPN omits, a mis-scrape correction) — not for the core settle. Run it on a
+> tight cadence on match days and the tracker flips Won/Lost at full time.
+
 On every refresh run, for any match in `data/bets.json.results` that has **kicked
 off or finished**, do live web search for the score and update its entry:
 
