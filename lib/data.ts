@@ -29,6 +29,11 @@ export function mytDayKey(iso: string): string {
   }).format(new Date(iso));
 }
 
+/** Current day key in MYT — the "today" the tracker buckets and features against. */
+export function nowMytDayKey(): string {
+  return mytDayKey(new Date().toISOString());
+}
+
 export function mytDayLabel(iso: string): string {
   return new Intl.DateTimeFormat("en-GB", {
     timeZone: MYT,

@@ -43,12 +43,14 @@ export type MatchRow = {
   bets: BetRow[];
   specials: SpecialRow[];
 };
-export type DayRow = { key: string; label: string; matches: MatchRow[] };
+export type DayRow = { key: string; label: string; matches: MatchRow[]; isFeatured?: boolean };
 export type TrackerBase = {
   meta: { owner: string; currency: string; note: string; disclaimer: string; placedLabel: string };
   counts: { score: number; props: number };
   staked: number;
   potential: number;
+  season: { counts: { score: number; props: number }; staked: number; potential: number };
+  featuredKey: string;
   days: DayRow[];
 };
 
@@ -246,11 +248,13 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
   const { live, updatedAt, pollFast, nextRefreshAt } = useLive(base);
   const cur = base.meta.currency;
 
-  // Live "if it ended now" P&L across every line that has a verdict.
+  // Live "if it ended now" P&L — scoped to today's featured slate, matching the
+  // staked / max-return figures in the hero (season roll-up lives below).
+  const heroDays = base.days.filter((d) => d.isFeatured);
   let livePnl = 0;
   let securedReturns = 0;
   let anyMatchLive = false;
-  for (const d of base.days) {
+  for (const d of heroDays) {
     for (const m of d.matches) {
       const lm = live[m.matchId];
       if (lm && (lm.state === "live" || lm.state === "halftime")) anyMatchLive = true;
@@ -299,11 +303,12 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
           )}
         </div>
         <h1 className="max-w-3xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl">
-          {base.counts.score + base.counts.props} bets. One slip. Settled live.
+          {base.counts.score + base.counts.props} bets today. Settled live.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-          Every stake tracked in Malaysia time. While a match is on, each line updates second-by-second —
-          green when it&rsquo;s winning, amber while it&rsquo;s still alive, red once it can&rsquo;t land.
+          Today&rsquo;s slate, tracked in Malaysia time. While a match is on, each line updates second-by-second —
+          green when it&rsquo;s winning, amber while it&rsquo;s still alive, red once it can&rsquo;t land. Previous
+          days sit below.
         </p>
 
         <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -314,7 +319,10 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-2 font-mono text-[0.66rem] text-faint">
           <span className="rounded-full border border-line px-2.5 py-1">Placed {base.meta.placedLabel} MYT</span>
-          <span className="rounded-full border border-line px-2.5 py-1">{base.counts.score} score · {base.counts.props} props</span>
+          <span className="rounded-full border border-line px-2.5 py-1">{base.counts.score} score · {base.counts.props} props today</span>
+          <span className="rounded-full border border-line px-2.5 py-1 text-faint">
+            Season: {base.season.counts.score + base.season.counts.props} bets · staked {money(base.season.staked, cur)} · max {money(base.season.potential, cur)}
+          </span>
           {updatedAt && (
             <span className="rounded-full border border-line px-2.5 py-1">
               Updated {new Date(updatedAt).toLocaleTimeString("en-GB", { timeZone: "Asia/Kuala_Lumpur", hour: "2-digit", minute: "2-digit", second: "2-digit" })} MYT
@@ -334,7 +342,12 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
           return (
             <section key={day.key}>
               <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-line/60 pb-2">
-                <h2 className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">{day.label}</h2>
+                <h2 className="flex items-baseline gap-2.5 font-display text-lg font-extrabold uppercase tracking-tight text-ink">
+                  {day.isFeatured && (
+                    <span className="self-center rounded-full bg-acid px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-pitch">Today</span>
+                  )}
+                  {day.label}
+                </h2>
                 <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
                   {day.matches.reduce((n, m) => n + m.bets.length + m.specials.length, 0)} bets
                 </span>

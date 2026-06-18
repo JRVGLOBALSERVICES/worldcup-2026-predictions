@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { mytTime, etTime, mytDayKey, mytDayLabel } from "@/lib/data";
+import { mytTime, etTime, mytDayKey, mytDayLabel, nowMytDayKey } from "@/lib/data";
 import {
   betSlip,
   settleAll,
@@ -87,14 +87,43 @@ export default function TrackerPage() {
     }
     dayMap.get(key)!.matches.push(m);
   }
-  // Most recent day first (today on top), then previous days; "tbd" bucket last.
+
+  // "Today" in MYT. A late-night kickoff (e.g. 00:00 MYT) buckets into the next
+  // calendar day, so the slate Rj placed "tonight" can read as tomorrow's date —
+  // featuredKey resolves to that current/most-recent active day either way.
+  const todayKey = nowMytDayKey();
+  const datedKeys = dayOrder.filter((k) => k !== "tbd").sort(); // ascending
+  const featuredKey =
+    dayMap.has(todayKey) && todayKey !== "tbd"
+      ? todayKey
+      : // newest day that has already started (key <= today); else the soonest upcoming
+        [...datedKeys].reverse().find((k) => k <= todayKey) ?? datedKeys[0] ?? "tbd";
+
+  // Featured day pinned first, then remaining days newest-first; "tbd" bucket last.
   const days = dayOrder
-    .map((k) => dayMap.get(k)!)
+    .map((k) => {
+      const d = dayMap.get(k)!;
+      const isFeatured = k === featuredKey;
+      return { ...d, isFeatured };
+    })
     .sort((a, b) => {
+      if (a.isFeatured) return -1;
+      if (b.isFeatured) return 1;
       if (a.key === "tbd") return 1;
       if (b.key === "tbd") return -1;
       return b.key.localeCompare(a.key);
     });
+
+  // Hero summary is scoped to the featured (today's) bets — staked / max return /
+  // counts off today, not the whole season. Season-to-date is shown as a sub-line.
+  const featuredDay = days.find((d) => d.isFeatured);
+  const featuredRows = (featuredDay?.matches ?? []).flatMap((m) => [...m.bets, ...m.specials]);
+  const todayTotals = {
+    staked: featuredRows.reduce((s, r) => s + r.stake, 0),
+    potential: featuredRows.reduce((s, r) => s + r.potential, 0),
+    score: (featuredDay?.matches ?? []).reduce((n, m) => n + m.bets.length, 0),
+    props: (featuredDay?.matches ?? []).reduce((n, m) => n + m.specials.length, 0),
+  };
 
   const placedLabel = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Asia/Kuala_Lumpur",
@@ -112,9 +141,16 @@ export default function TrackerPage() {
       disclaimer: betSlip.meta.disclaimer,
       placedLabel,
     },
-    counts: { score: settled.length, props: specials.length },
-    staked: allTotals.staked,
-    potential: allTotals.potential,
+    // Hero counts/totals = today's slate; season is the all-time roll-up below it.
+    counts: { score: todayTotals.score, props: todayTotals.props },
+    staked: todayTotals.staked,
+    potential: todayTotals.potential,
+    season: {
+      counts: { score: settled.length, props: specials.length },
+      staked: allTotals.staked,
+      potential: allTotals.potential,
+    },
+    featuredKey,
     days,
   };
 
