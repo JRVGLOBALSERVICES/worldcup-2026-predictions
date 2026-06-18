@@ -1,5 +1,47 @@
 import { fixtures } from "./data";
 import type { Goal } from "./bets";
+import resultsFile from "@/data/results.json";
+
+/** Persisted ESPN snapshots (written by scripts/build-results.mjs). */
+type PersistedResult = {
+  state: "live" | "finished";
+  ht: { home: number; away: number } | null;
+  ft: { home: number; away: number } | null;
+  score: { home: number; away: number };
+  goals: {
+    team: "home" | "away";
+    scorer: string;
+    minute: number | null;
+    assist: string | null;
+    penalty: boolean;
+    ownGoal: boolean;
+  }[];
+  updatedAt: string;
+};
+const persistedResults = (resultsFile as { results: Record<string, PersistedResult> }).results;
+
+/** Map a durable persisted result into the LiveMatch shape the UI consumes. */
+function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
+  const score = r.ft ?? r.score;
+  return {
+    matchId,
+    state: r.state,
+    statusDetail: r.state === "finished" ? "FT" : "Live",
+    minute: null,
+    period: 2,
+    score,
+    htScore: r.ht,
+    ftScore: r.ft ?? (r.state === "finished" ? score : null),
+    goals: r.goals.map((g) => ({
+      team: g.team,
+      scorer: g.scorer,
+      minute: g.minute ?? undefined,
+      assist: g.assist,
+      penalty: g.penalty,
+      ownGoal: g.ownGoal,
+    })),
+  };
+}
 
 /**
  * Live score ingestion from ESPN's public, keyless soccer scoreboard.
@@ -226,7 +268,19 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
     const ko = new Date(f.kickoffUTC).getTime();
     return nowMs >= ko - WINDOW_BEFORE && nowMs <= ko + WINDOW_AFTER;
   });
-  if (relevant.length === 0) return {};
+
+  // Durable base layer: every persisted result (finished matches that have
+  // fallen out of the live window above). ESPN data fetched below overwrites
+  // these for anything still inside the window, so live/just-ended matches stay
+  // fresh while older finished matches keep their final score + goal log forever
+  // (until results.json is pruned). This is what stops a day-old match — e.g.
+  // Portugal–DR Congo — from silently reverting to its static kickoff time.
+  const out: Record<string, LiveMatch> = {};
+  for (const [id, r] of Object.entries(persistedResults)) {
+    out[id] = persistedToLiveMatch(id, r);
+  }
+
+  if (relevant.length === 0) return out;
 
   // ESPN buckets a fixture under its US-local match date, which for any kickoff
   // in the 00:00–~05:00 UTC window is the PREVIOUS calendar day from our UTC
@@ -244,7 +298,6 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
   ];
   const wantIds = new Set(relevant.map((f) => f.id));
 
-  const out: Record<string, LiveMatch> = {};
   const batches = await Promise.allSettled(params.map(fetchDate));
   for (const b of batches) {
     if (b.status !== "fulfilled") continue;
