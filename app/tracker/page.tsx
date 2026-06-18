@@ -87,7 +87,14 @@ export default function TrackerPage() {
     }
     dayMap.get(key)!.matches.push(m);
   }
-  const days = dayOrder.map((k) => dayMap.get(k)!);
+  // Most recent day first (today on top), then previous days; "tbd" bucket last.
+  const days = dayOrder
+    .map((k) => dayMap.get(k)!)
+    .sort((a, b) => {
+      if (a.key === "tbd") return 1;
+      if (b.key === "tbd") return -1;
+      return b.key.localeCompare(a.key);
+    });
 
   const placedLabel = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Asia/Kuala_Lumpur",
