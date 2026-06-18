@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { mytTime, etTime, mytDayKey, mytDayLabel } from "@/lib/data";
+import { mytTime, etTime, mytDayKey, mytDayLabel, getFixture } from "@/lib/data";
 import {
   betSlip,
   settleAll,
   slipTotals,
   groupByMatch,
+  getResult,
   settleSpecials,
   specialsTotals,
   mergeTotals,
@@ -38,8 +39,27 @@ export default function TrackerPage() {
     specialsByMatch.get(s.matchId)!.push(s);
   }
 
+  // A match with ONLY specials (e.g. first-goal+score combos and no regular
+  // correct-score bet) never appears in groupByMatch(settled), which is keyed
+  // off regular bets — so its slips would silently vanish. Synthesize an
+  // empty-bets group for every specials-only match, then re-sort by kickoff.
+  const groupIds = new Set(groups.map((g) => g.matchId));
+  const specialsOnly = [...specialsByMatch.keys()]
+    .filter((id) => !groupIds.has(id))
+    .map((matchId) => ({
+      matchId,
+      fixture: getFixture(matchId),
+      result: getResult(matchId),
+      bets: [] as (typeof groups)[number]["bets"],
+    }));
+  const allGroups = [...groups, ...specialsOnly].sort((a, b) => {
+    const ta = a.fixture ? new Date(a.fixture.kickoffUTC).getTime() : 0;
+    const tb = b.fixture ? new Date(b.fixture.kickoffUTC).getTime() : 0;
+    return ta - tb;
+  });
+
   // Build matchId-ordered match rows, then bucket into MYT days.
-  const matchRows: MatchRow[] = groups.map((g) => {
+  const matchRows: MatchRow[] = allGroups.map((g) => {
     const f = g.fixture;
     const sp = specialsByMatch.get(g.matchId) ?? [];
     return {
