@@ -29,9 +29,11 @@ const reachable = (cur: { home: number; away: number }, h: number, a: number) =>
   cur.home <= h && cur.away <= a;
 
 // ── name + goal helpers (mirror bets.ts so live and final agree) ──────────────
+const deburr = (s: string): string =>
+  s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
 function nameMatch(a: string, b: string): boolean {
-  const x = a.trim().toLowerCase();
-  const y = b.trim().toLowerCase();
+  const x = deburr(a);
+  const y = deburr(b);
   return x === y || x.includes(y) || y.includes(x);
 }
 const realGoals = (g: Goal[]) => g.filter((x) => !x.ownGoal);

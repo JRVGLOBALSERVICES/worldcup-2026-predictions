@@ -205,10 +205,14 @@ export type SettledSpecial = Special & {
   pnl: number;
 };
 
-/** Loose name match — "Ronaldo" matches "Cristiano Ronaldo", case-insensitive, either direction. */
+/** Strip diacritics so ESPN's "Luis Díaz" / "Daniel Muñoz" match plain-ASCII picks. */
+const deburr = (s: string): string =>
+  s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
+
+/** Loose name match — "Ronaldo" matches "Cristiano Ronaldo", case- and accent-insensitive, either direction. */
 function nameMatch(a: string, b: string): boolean {
-  const x = a.trim().toLowerCase();
-  const y = b.trim().toLowerCase();
+  const x = deburr(a);
+  const y = deburr(b);
   return x === y || x.includes(y) || y.includes(x);
 }
 
