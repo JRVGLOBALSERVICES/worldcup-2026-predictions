@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-18T15:24:11.838Z",
+    "generatedAt": "2026-06-18T21:44:42.476Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -726,121 +726,122 @@
     },
     "can-qat-2026-06-18": {
       "win": {
-        "pick": "Canada",
-        "fairOdds": "1.62",
-        "reason": "Home co-hosts at BC Place with markedly superior individual quality (Jonathan David, Larin, Buchanan) and a partisan Vancouver crowd. Both sides drew their openers 1-1, but Canada controlled long stretches vs Bosnia and need a win to advance; Qatar sit deep and counter, making them hard but beatable."
+        "pick": "Canada (draw no bet)",
+        "fairOdds": "1.55",
+        "reason": "Confirmed Canada XI (Crepeau; Johnston, Cornelius, De Fougerolles, Laryea; Buchanan, Eustaquio, Kone, Ahmed; Larin, J.David) fields its full first-choice attack with Davies held in reserve, and at BC Place the co-hosts should dominate a Qatar 4-3-3 that mustered only 0.76 xG, 6 shots and 32% possession vs Switzerland. Opta sims Canada at 72.9%, books ~1.28-1.29. But Qatar's Madibo-Gaber-Laye screen plus the Khoukhi/Pedro Miguel block frustrated a Swiss side that ran up 3.24 xG and still only drew via a stoppage-time leveller, exactly the deep-block-out-xG'd-yet-survives pattern; Canada have never won a WC match in 7 tries and were wasteful vs Bosnia. Draw is live at +470, so DNB at ~1.55 is the honest price on a real ~55-60% clean Canada edge, not implied certainty."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
+        "fairOdds": "2.10",
         "alt": "1-0",
-        "altOdds": "3.10"
+        "altOdds": "2.90"
       },
       "htft": {
         "pick": "Draw/Canada",
         "fairOdds": "4.20"
       },
       "fullTime": {
-        "score": "2-0",
-        "fairOdds": "6.50"
+        "score": "1-0",
+        "fairOdds": "5.50"
       },
       "scorers": [
         {
           "player": "Jonathan David",
-          "fairOdds": "2.30",
-          "banker": true,
-          "note": "Canada's talisman and primary penalty taker; leads the line and is the most likely Canadian scorer at home."
+          "fairOdds": "2.10",
+          "banker": false,
+          "note": "Confirmed starter and Canada's penalty taker (scored twice from the spot vs Iceland in warm-up); shortest anytime price at +110. NOT a banker - poor recent form, 1 goal since early Feb at Juventus, and blazed a chance over vs Bosnia."
         },
         {
           "player": "Cyle Larin",
-          "fairOdds": "2.90",
+          "fairOdds": "3.10",
           "banker": false,
-          "note": "Came off the bench to score the 78th-minute equalizer vs Bosnia; strikes-partner to David and aerial penalty-box threat."
+          "note": "Now starts after his super-sub volley equaliser vs Bosnia; penalty backup behind David. Aging marquee striker - explicitly NOT a banker, streaky finisher reliant on service."
         },
         {
-          "player": "Tani Oluwaseyi",
+          "player": "Tajon Buchanan",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Impact forward off the bench; pace and direct running against a tiring deep block."
+          "note": "Confirmed RW, rediscovered form at Villarreal; cuts inside onto his left, secondary goal route if Qatar sit deep."
         },
         {
           "player": "Akram Afif",
-          "fairOdds": "5.00",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Qatar's chief creator, penalty taker and set-piece outlet; main route to a Qatari goal on the counter or from a spot-kick."
+          "note": "Qatar's confirmed talisman, pen + free-kick + corner taker; the only realistic away scorer on the counter. Qatar created almost nothing vs Switzerland (0.76 xG), so this is value-against-the-grain, not a likely event."
         }
       ],
       "assists": [
         {
-          "player": "Tajon Buchanan",
-          "fairOdds": "4.00",
-          "banker": true,
-          "note": "Provides the width in Marsch's 4-4-2; key crossing and cut-back source for David and Larin."
-        },
-        {
-          "player": "Alistair Johnston",
-          "fairOdds": "4.80",
+          "player": "Ali Ahmed",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Attacking right-back who overlaps and delivers; recurring set-piece and open-play crossing threat."
+          "note": "Confirmed start over Davies/Millar - Vancouver Whitecaps academy product getting a homecoming start; ball-carrying creator from the left, a live assist source vs a deep block."
         },
         {
-          "player": "Jonathan David",
+          "player": "Tajon Buchanan",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Links play and lays off for Larin; also wins and earns set pieces with his box presence."
+          "note": "Whips crosses for David/Larin from the right; primary supply line against a low Qatar block."
+        },
+        {
+          "player": "Akram Afif",
+          "fairOdds": "7.00",
+          "banker": false,
+          "note": "Record 10 assists at 2019 Asian Cup; takes Qatar's corners/free-kicks, so any Qatar goal (incl. a Khoukhi/Pedro Miguel set-piece header) likely runs through him."
         }
       ],
       "penalty": {
         "likelihood": "moderate",
-        "taker": "Jonathan David",
-        "backup": "Cyle Larin",
-        "note": "David takes and frequently earns penalties (most fouled in the box for Canada); Larin is the backup. Canada's possession dominance against a deep Qatar block raises spot-kick odds."
+        "taker": "Jonathan David (Canada)",
+        "backup": "Cyle Larin (Canada); Akram Afif for Qatar",
+        "note": "Canada dominate the ball and David is the squad's most-fouled-in-box player + designated taker, so a Canada spot-kick is the most probable; if Qatar win one it's Afif. Deep-block congestion keeps this only moderate, not high."
       },
       "lineups": {
-        "home": "St. Clair; Johnston, Cornelius, de Fougerolles, Laryea; Buchanan, Eustaquio, Kone, Osorio; J. David, Larin",
-        "away": "Abunada; Homam Ahmed, Pedro Miguel, Khoukhi, Al Oui; Fathy, Gaber, Seydinaissa Laye; Afif, Abdurisag, Edmilson Junior",
-        "status": "probable"
+        "home": "Crepeau; Johnston, Cornelius, de Fougerolles, Laryea; Buchanan, Eustaquio, Kone, Ali Ahmed; J. David, Larin",
+        "away": "Abunada; Al Oui, Pedro Miguel, Khoukhi, Homam El Amin; Madibo, Gaber, Issa Laye; Edmilson Junior, Abdurisag, Afif",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
           "player": "Alphonso Davies",
           "team": "Canada",
-          "note": "Captain managing a hamstring injury; close to fitness but not projected to start at BC Place, with Richie Laryea deputizing at left-back. Likely impact sub."
+          "note": "FIT but named only on the bench - Marsch trusts the settled Buchanan/Ahmed wide pairing and is easing Davies back, so Canadas first-half ceiling is slightly lower than full strength; a strong 60-70min game-changer if Qatars block holds, which raises late-Canada-goal value."
         },
         {
-          "player": "Moise Bombito",
+          "player": "Maxime Crepeau",
           "team": "Canada",
-          "note": "Not fully recovered from a left tibia injury; youngster Luc de Fougerolles expected to start at centre-back again alongside Cornelius."
+          "note": "Starts over Dayne St. Clair (Marsch called it the hardest decision of his career) - reliable but untested at this level, so any Crepeau error is a live tail risk on Qatars rare counters."
         },
         {
           "player": "Jonathan David",
           "team": "Canada",
-          "note": "Primary striker and penalty taker; the squad's standout finisher and most likely Canadian scorer."
+          "note": "The pen taker and shortest anytime scorer (+110) but arrives in genuinely poor form (1 goal since early February) and missed a presentable chance vs Bosnia - do not treat him as a lock."
         },
         {
-          "player": "Akram Afif",
+          "player": "Cyle Larin",
+          "team": "Canada",
+          "note": "Earned this start off his super-sub equaliser vs Bosnia; an aging, service-dependent finisher - a sensible scorer flyer, never a banker."
+        },
+        {
+          "player": "Boualem Khoukhi",
           "team": "Qatar",
-          "note": "Star winger, penalty taker and set-piece taker (corners/free kicks); involved in nearly every Qatar attacking phase, their biggest threat."
+          "note": "Captain/CB who scored the stoppage-time leveller vs Switzerland - with Pedro Miguel he makes Qatar a genuine set-piece header threat off Afif deliveries, the main route to an away goal."
         },
         {
           "player": "Almoez Ali",
           "team": "Qatar",
-          "note": "Top scorer in Asian WC qualifying (12 goals) and secondary penalty option; aerial focal point if started or introduced."
-        },
-        {
-          "player": "Hassan Al-Haydos",
-          "team": "Qatar",
-          "note": "Captain and most-capped player (188 caps); came out of retirement at Lopetegui's request, an experienced game-management option off the bench."
+          "note": "Top scorer in AFC qualifying, starts on the bench behind Abdurisag - a dangerous 60min+ introduction if Qatar chase, so a Qatar clean sheet AND a late Qatar goal both carry more weight than the lopsided xG suggests."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.rotowire.com/soccer/article/canada-vs-qatar-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-118506",
-        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/predicted-lineups/davies-is-pushing-to-return-predicted-canada-lineup-vs-qatar_599331.html",
-        "https://www.espn.com/soccer/match/_/gameId/760416/bosnia-herzegovina-canada",
-        "https://www.espn.com/soccer/match/_/gameId/760420/switzerland-qatar",
-        "https://www.squawka.com/ca/news/canada-set-piece-takers/",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://www.whoscored.com/news/KsZ7CiiczkSBJ725qMvvKg/show/20260618-canada-vs-qatar-confirmed-lineup-1781815975",
+        "https://www.mlssoccer.com/competitions/fifa-world-cup/news/canada-starting-lineup-vs-qatar-2026-fifa-world-cup-opener",
+        "https://lastwordonsports.com/football/2026/06/18/canada-vs-qatar-team-news-lineups/",
+        "https://theanalyst.com/articles/canada-vs-qatar-prediction-world-cup-2026-match-preview",
+        "https://www.cbc.ca/sports/soccer/worldcup/maxime-crepeau-named-canada-s-starting-goalkeeper-for-world-cup-9.7223714",
+        "https://www.washingtonpost.com/sports/soccer/2026/06/17/world-cup-canada-ali-ahmed-vancouver-whitecaps/16d3c58e-6a7d-11f1-830e-133d20cadd28_story.html",
+        "https://www.foxsports.com/articles/soccer/akram-afif-lit-up-the-asian-cup-perhaps-a-return-to-europe-beckons-for-qatars-hattrick-hero"
       ]
     },
     "mex-sou-2026-06-18": {
