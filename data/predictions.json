@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-18T09:04:06.289Z",
+    "generatedAt": "2026-06-18T15:24:11.838Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -486,8 +486,8 @@
     "cze-sou-2026-06-18": {
       "win": {
         "pick": "Czechia",
-        "fairOdds": "2.05",
-        "reason": "Czechia carry more individual quality (Schick, Souček) and a proven set-piece threat, while South Africa are weakened by the suspensions of Sithole and Zwane after their Mexico defeat; both lost their openers so this is close but the Czechs edge it."
+        "fairOdds": "2.10",
+        "reason": "Czechia field both Schick and Hložek up top in a 3-5-2 with Krejčí an aerial set-piece weapon from the back three (he already headed home the opener vs South Korea), and the Czechs scored the most set-piece goals in UEFA qualifying (10). But South Africa under Broos defend in a disciplined deep block with elite keeper Williams behind it, and lost their openers only narrowly in shape, so a draw is genuinely live."
       },
       "halfTime": {
         "score": "0-0",
@@ -500,106 +500,109 @@
         "fairOdds": "4.50"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.50"
+        "score": "1-1",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Patrik Schick",
-          "fairOdds": "2.40",
-          "banker": true,
-          "note": "Leverkusen striker and Czechia's talisman; 25 goals in 52 caps and 8 in qualifying, the focal point of the 3-4-2-1."
-        },
-        {
-          "player": "Lyle Foster",
-          "fairOdds": "3.30",
+          "fairOdds": "2.50",
           "banker": false,
-          "note": "Burnley striker leading the line alone for Bafana; main route to goal with his pressing and link play."
+          "note": "Leverkusen's form striker (16 Bundesliga goals, 9 in his last 7), Czech qualifying top-scorer and penalty taker; main threat but treated measured given SA's deep block and Williams behind it — not a banker."
         },
         {
           "player": "Ladislav Krejčí",
-          "fairOdds": "4.50",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Captain and centre-back who headed the opener vs South Korea; constant aerial set-piece threat (4 goal involvements in last 5 caps)."
+          "note": "Set-piece aerial weapon from the back three; already scored the headed opener vs South Korea and the Czechs convert heavily from corners/long throws — South Africa's biggest tracking problem at dead balls."
         },
         {
-          "player": "Relebohile Mofokeng",
+          "player": "Iqraam Rayners",
           "fairOdds": "5.00",
           "banker": false,
-          "note": "21-year-old Orlando Pirates winger with pace and unpredictability; one of South Africa's penalty takers."
+          "note": "Leads the SA line in Foster's absence; 12 PSL goals for Sundowns this season at 0.76/90, the focal point for any counter-attacking break."
+        },
+        {
+          "player": "Adam Hložek",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Partners Schick up top in the 3-5-2; mobile second striker who drops and runs the channels, a secondary finisher off Czech build-up and set-piece scraps."
         }
       ],
       "assists": [
         {
-          "player": "Lukáš Provod",
-          "fairOdds": "4.50",
-          "banker": true,
-          "note": "Creative No.10 behind Schick in the 3-4-2-1; Czechia's main chance creator from open play."
-        },
-        {
           "player": "Oswin Appollis",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Pirates wide man providing width and crosses for Foster in the 4-2-3-1."
+          "note": "SA's most direct outlet — pace and width on the flank, draws fouls and delivers; also a free-kick/corner option, the likeliest creator on the break."
         },
         {
           "player": "Vladimír Coufal",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Right wing-back delivering crosses into a box stacked with Schick, Hložek and Krejčí; Czechia attempted the most crosses in qualifying (284)."
+        },
+        {
+          "player": "Thapelo Maseko",
           "fairOdds": "6.50",
           "banker": false,
-          "note": "Experienced right wing-back who delivers from wide and dead-ball areas."
+          "note": "Pace on the opposite flank; SA's counter-attack runs through Maseko and Appollis in transition feeding Rayners."
         }
       ],
       "penalty": {
-        "likelihood": "Medium (~22%)",
+        "likelihood": "Medium (~20%)",
         "taker": "Patrik Schick",
-        "backup": "Relebohile Mofokeng",
-        "note": "Schick is Czechia's primary spot-kick option; Mofokeng is among South Africa's listed penalty takers. Note Williams holds an AFCON penalty-save record."
+        "backup": "Oswin Appollis",
+        "note": "Schick is Czechia's designated penalty taker. For South Africa, with Mofokeng and Foster on the bench, Appollis is the on-pitch option (Mokoena has taken none in his career). Note Williams is an elite penalty-saver — first keeper to save four in an AFCON shootout, 2024 best-GK — which lowers the value of any Czech spot-kick."
       },
       "lineups": {
-        "home": "3-4-2-1: Kovář; Chaloupek, Hranáč, Krejčí; Coufal, Souček, Sojka, Zelený; Provod, Šulc; Schick",
-        "away": "4-2-3-1: Williams; Mudau, Okon, Mbokazi, Modiba; Adams, Mbatha; Moremi, Mokoena, Appollis; Foster",
-        "status": "probable"
+        "home": "3-5-2: Kovář; Hranáč, Holeš, Krejčí; Coufal, Sadílek, Darida, Černý, Sojka; Hložek, Schick",
+        "away": "4-3-3: Williams; Mudau, Okon, Mbokazi, Modiba; Mokoena, Mbatha, Adams; Maseko, Rayners, Appollis",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Tomáš Souček",
+          "player": "Patrik Schick",
           "team": "Czechia",
-          "note": "West Ham midfield anchor; marshals the centre and a late-arriving aerial threat on set pieces."
-        },
-        {
-          "player": "Matěj Kovář",
-          "team": "Czechia",
-          "note": "Bayer Leverkusen keeper; first-choice in goal for the finals."
+          "note": "30 and fully fit (no aging-decline case), top of his game with 16 Bundesliga goals; Czech penalty taker and main goal threat, but kept measured given SA's deep block."
         },
         {
           "player": "Ladislav Krejčí",
           "team": "Czechia",
-          "note": "Captain from the back three; Czechia scored 11 of 22 goals from set pieces in qualifying, much of it through him."
+          "note": "Set-piece aerial threat from the back three; scored the opener vs South Korea and won the most defensive-third possessions of any UEFA qualifier — danger at both boxes."
         },
         {
           "player": "Ronwen Williams",
           "team": "South Africa",
-          "note": "Captain and heartbeat; calm distributor and elite penalty-saver, will be busy against Czech set pieces."
+          "note": "Captain and elite shot-stopper; first keeper to save four penalties in an AFCON shootout (2024), ranked a top-10 world GK — anchors a disciplined deep block."
         },
         {
-          "player": "Sphephelo Sithole",
+          "player": "Teboho Mokoena",
           "team": "South Africa",
-          "note": "Suspended one match after red vs Mexico; his absence forces Broos toward a 4-2-3-1 with Mbatha drafted in."
+          "note": "Deep-lying SA midfielder who strikes from distance and free kicks (scored a famous FK vs Morocco), but has never taken a penalty — set-piece delivery, not the pen man."
         },
         {
-          "player": "Themba Zwane",
+          "player": "Iqraam Rayners",
           "team": "South Africa",
-          "note": "Veteran creator hit with a three-game ban after Mexico, removing experience and guile from the attack."
+          "note": "Starts up front with Foster benched; in-form Sundowns striker (12 league goals) tasked with leading the line and finishing rare chances on the break."
+        },
+        {
+          "player": "Tomáš Souček",
+          "team": "Czechia",
+          "note": "Dropped from the confirmed XI to the bench alongside Provod and Šulc; a major aerial set-piece game-changer Czechia can introduce, as SA can bring Mofokeng and Foster."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.rotowire.com/soccer/article/czechia-vs-south-africa-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-a-118513",
-        "https://www.espn.com/soccer/story/_/id/49079982",
-        "https://www.sportsmole.co.uk/football/czech-republic/world-cup-2026/predicted-lineups/who-replaces-suspended-sithole-predicted-south-africa-xi-vs-czech_599407.html",
-        "https://www.aljazeera.com/sports/2026/6/17/south-africa-plays-czechia-seeks-first-world-cup-win-after-mexico-defeat",
-        "https://theanalyst.com/articles/czechia-vs-south-africa-prediction-world-cup-2026-match-preview",
-        "https://www.fourfourtwo.com/team/czech-republic-world-cup-2026-squad"
+        "https://www.espn.com/soccer/story/_/id/49079982/fifa-world-cup-2026-czechia-vs-south-africa-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups",
+        "https://www.squawka.com/en/news/world-cup/czech-republic-world-cup-fixtures-squad-analysis-12-06-2026/",
+        "https://www.bundesliga.com/en/bundesliga/news/patrik-schick-bayer-leverkusen-interview-czechia-world-cup-37393",
+        "https://en.wikipedia.org/wiki/Patrik_Schick",
+        "https://en.wikipedia.org/wiki/Iqraam_Rayners",
+        "https://www.espn.com/espn/story/_/id/49081088/thapelo-maseko-calls-more-intensity-bafana-bafana-czechia",
+        "https://en.wikipedia.org/wiki/Ronwen_Williams",
+        "https://en.wikipedia.org/wiki/Teboho_Mokoena_(soccer,_born_1997)",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
       ]
     },
     "swi-bos-2026-06-18": {
