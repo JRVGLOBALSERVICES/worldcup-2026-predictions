@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-18T00:56:39.658Z",
+    "generatedAt": "2026-06-18T04:26:03.815Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 2,
-    "live": 1
+    "finished": 4,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -36,6 +36,32 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Bernardo Silva",
+          "minute": 12,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Chancel Mbemba",
+          "minute": 32,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nélson Semedo",
+          "minute": 88,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Tomás Araújo",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-17T17:00:00.000Z"
@@ -104,15 +130,19 @@
           "ownGoal": false
         }
       ],
+      "cards": [],
       "updatedAt": "2026-06-17T20:00:00.000Z"
     },
     "gha-pan-2026-06-17": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 1,
+        "away": 0
+      },
       "score": {
         "home": 1,
         "away": 0
@@ -127,7 +157,91 @@
           "ownGoal": false
         }
       ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Caleb Yirenkyi",
+          "minute": 15,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "César Blackman",
+          "minute": 72,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Carlos Harvey",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-17T23:00:00.000Z"
+    },
+    "uzb-col-2026-06-17": {
+      "state": "finished",
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Daniel Muñoz",
+          "minute": 40,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Abbosbek Fayzullaev",
+          "minute": 60,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Luis Díaz",
+          "minute": 65,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jáminton Campaz",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Johan Mojica",
+          "minute": 7,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Abdukodir Khusanov",
+          "minute": 33,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-18T02:00:00.000Z"
     }
   }
 }

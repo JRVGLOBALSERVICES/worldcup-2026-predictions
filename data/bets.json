@@ -39,8 +39,14 @@
       }
     },
     "uzb-col-2026-06-17": {
-      "ht": null,
-      "ft": null
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 3
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -124,8 +130,55 @@
       "goals": []
     },
     "uzb-col-2026-06-17": {
-      "status": "scheduled",
-      "goals": []
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Daniel Muñoz",
+          "minute": 40,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Abbosbek Fayzullaev",
+          "minute": 60,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Luis Díaz",
+          "minute": 65,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jáminton Campaz",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Johan Mojica",
+          "minute": 7,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Abdukodir Khusanov",
+          "minute": 33,
+          "type": "yellow"
+        }
+      ]
     }
   },
   "bets": [
