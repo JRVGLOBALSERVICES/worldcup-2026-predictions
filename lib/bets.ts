@@ -48,6 +48,32 @@ export type MatchEvents = {
   cards?: Card[];
 };
 
+/** Per-side count, oriented to the fixture's listed home/away. */
+export type SideCount = { home: number; away: number };
+/** Per-side, per-half count: [firstHalf, secondHalf]. */
+export type SideHalfCount = { home: number[]; away: number[] };
+
+/**
+ * Verified match statistics pulled from ESPN's per-event `summary` endpoint —
+ * the data the lighter scoreboard feed (lib/live.ts) does NOT carry. Full-match
+ * team totals come from `boxscore.teams[].statistics` (wonCorners, shotsOnTarget,
+ * yellow/redCards); the per-half splits are tallied from `commentary[]` plays
+ * ("Corner Awarded" / "Shot On Target", each tagged with team + period). This is
+ * what lets corner / shots-on-target / card bet legs auto-settle against real
+ * numbers instead of a hand-graded guess. Written by scripts/build-results.mjs.
+ */
+export type MatchStats = {
+  corners: SideCount;
+  sot: SideCount;
+  shots: SideCount;
+  yellow: SideCount;
+  red: SideCount;
+  /** Total bookings per side (yellow + red) — the count card markets settle on. */
+  cards: SideCount;
+  cornersByHalf?: SideHalfCount;
+  sotByHalf?: SideHalfCount;
+};
+
 /** Machine-gradable rule attached to each special so the cron settles it without a human. */
 export type SpecialGrade =
   | { type: "scored"; player: string }
@@ -80,8 +106,38 @@ export type SpecialGrade =
   | { type: "carded"; player: string }
   | { type: "sentOff"; player: string }
   // Match TOTAL goals (both teams) strictly over `line` — "Total Over (2.5)".
-  // The only corner-free, fully-gradeable leg in the team-special slips.
-  | { type: "matchGoalsOver"; line: number };
+  | { type: "matchGoalsOver"; line: number }
+  // Multi-leg build-a-bet — ALL `conds` must hold (a 1xBet accumulator single).
+  // Each leg is graded off the final score (goals/result/btts) or the verified
+  // ESPN MatchStats (corners / shots-on-target / cards). Pending until every
+  // referenced datum is available — never a partial guess on an unseen leg.
+  | { type: "combo"; conds: StatCond[] };
+
+/**
+ * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
+ * fixture's listed home/away ("1" = home win, "2" = away win, "X" = draw).
+ * `eval*` returns true/false when decidable, or null when the needed datum
+ * (final score or MatchStats) isn't in yet — which floats the whole combo to
+ * "pending" rather than grading a leg blind.
+ */
+export type StatCond =
+  // Final-score legs (need the FT score only).
+  | { c: "result"; outcome: "1" | "X" | "2" }
+  | { c: "goalsOver"; line: number } // total match goals (both teams) > line
+  | { c: "btts" } // both teams scored (FT shows ≥1 each)
+  // Corner legs (need MatchStats.corners).
+  | { c: "cornersTotalOver"; line: number }
+  | { c: "cornersTotalBetween"; lo: number; hi: number } // inclusive range
+  | { c: "eachTeamCornersAtLeast"; n: number }
+  | { c: "mostCorners"; side: "home" | "away" } // strictly more (a tie loses)
+  // Card legs (need MatchStats.cards = yellow + red per side).
+  | { c: "cardsTotalOver"; line: number }
+  | { c: "cardsTotalUnder"; line: number }
+  | { c: "eachTeamCardsAtLeast"; n: number }
+  | { c: "mostCards"; side: "home" | "away" } // strictly more (a tie loses)
+  // Per-half legs (need the by-half splits from commentary).
+  | { c: "eachTeamCornersEachHalfAtLeast"; n: number }
+  | { c: "eachTeamSotEachHalfAtLeast"; n: number };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -111,6 +167,8 @@ export type BetSlipFile = {
   results: Record<string, MatchResult>;
   matchEventsNote?: string;
   matchEvents?: Record<string, MatchEvents>;
+  /** Verified ESPN summary stats per match — shared truth, fills the corner/SOT/card gap. */
+  matchStats?: Record<string, MatchStats>;
   bets: Bet[];
   specialsNote?: string;
   specials?: Special[];
@@ -131,6 +189,11 @@ export function getResult(matchId: string): MatchResult {
 
 export function getEvents(matchId: string): MatchEvents {
   return betSlip.matchEvents?.[matchId] ?? { status: "scheduled", goals: [] };
+}
+
+/** Verified ESPN stats for a match (corners/SOT/cards), or null if not snapshotted yet. */
+export function getStats(matchId: string): MatchStats | null {
+  return betSlip.matchStats?.[matchId] ?? null;
 }
 
 /** Settle one correct-score bet against the relevant period's score. */
@@ -268,6 +331,91 @@ const isFinalScore = (ft: Score, home: number, away: number) =>
   !!ft && ft.home === home && ft.away === away;
 const isDraw = (ft: Score) => !!ft && ft.home === ft.away;
 
+// ── combo build-a-bet legs (final-score + verified-stats) ────────────────────
+/**
+ * Evaluate ONE combo leg. Returns:
+ *   true  — leg satisfied
+ *   false — leg failed
+ *   null  — undecidable yet (the score or the ESPN stat it needs isn't in)
+ * Shared by the final settle (bets.ts) and the live tracker (inplay.ts) so the
+ * two never disagree. `score` is the score to judge against (FT when settling,
+ * the live score in-play); stat legs read `stats`.
+ */
+export function evalStatCond(
+  cond: StatCond,
+  score: Score,
+  ht: Score,
+  stats: MatchStats | null,
+): boolean | null {
+  const c = cond;
+  switch (c.c) {
+    case "result": {
+      if (!score) return null;
+      const o = score.home > score.away ? "1" : score.home < score.away ? "2" : "X";
+      return o === c.outcome;
+    }
+    case "goalsOver":
+      return score ? score.home + score.away > c.line : null;
+    case "btts":
+      return score ? score.home >= 1 && score.away >= 1 : null;
+    case "cornersTotalOver":
+      return stats ? stats.corners.home + stats.corners.away > c.line : null;
+    case "cornersTotalBetween": {
+      if (!stats) return null;
+      const t = stats.corners.home + stats.corners.away;
+      return t >= c.lo && t <= c.hi;
+    }
+    case "eachTeamCornersAtLeast":
+      return stats ? stats.corners.home >= c.n && stats.corners.away >= c.n : null;
+    case "mostCorners":
+      if (!stats) return null;
+      return c.side === "home"
+        ? stats.corners.home > stats.corners.away
+        : stats.corners.away > stats.corners.home;
+    case "cardsTotalOver":
+      return stats ? stats.cards.home + stats.cards.away > c.line : null;
+    case "cardsTotalUnder":
+      return stats ? stats.cards.home + stats.cards.away < c.line : null;
+    case "eachTeamCardsAtLeast":
+      return stats ? stats.cards.home >= c.n && stats.cards.away >= c.n : null;
+    case "mostCards":
+      if (!stats) return null;
+      return c.side === "home"
+        ? stats.cards.home > stats.cards.away
+        : stats.cards.away > stats.cards.home;
+    case "eachTeamCornersEachHalfAtLeast": {
+      const h = stats?.cornersByHalf;
+      if (!h) return null;
+      return h.home[0] >= c.n && h.home[1] >= c.n && h.away[0] >= c.n && h.away[1] >= c.n;
+    }
+    case "eachTeamSotEachHalfAtLeast": {
+      const s = stats?.sotByHalf;
+      if (!s) return null;
+      return s.home[0] >= c.n && s.home[1] >= c.n && s.away[0] >= c.n && s.away[1] >= c.n;
+    }
+  }
+}
+
+/**
+ * AND every leg. A single failed leg sinks the combo (false) even if another leg
+ * is still pending. If no leg has failed but some are undecidable, the whole
+ * combo is pending (null) — we never settle a build-a-bet on a half-seen slip.
+ */
+export function evalCombo(
+  conds: StatCond[],
+  score: Score,
+  ht: Score,
+  stats: MatchStats | null,
+): boolean | null {
+  let pending = false;
+  for (const c of conds) {
+    const v = evalStatCond(c, score, ht, stats);
+    if (v === false) return false;
+    if (v === null) pending = true;
+  }
+  return pending ? null : true;
+}
+
 /**
  * Auto-grade a single special off scraped match events + the final score.
  * Returns "pending" until the match is finished (events.status === "finished").
@@ -396,6 +544,15 @@ export function gradeSpecial(special: Special): BetStatus {
       // Total match goals (both teams, incl. own goals) strictly over the line.
       hit = !!ft && ft.home + ft.away > g.line;
       break;
+    case "combo": {
+      // Build-a-bet: AND every leg off the FT score + verified ESPN stats. If a
+      // stat leg's data isn't snapshotted yet, the combo stays pending (never a
+      // blind loss on an unseen corner/SOT/card leg).
+      const verdict = evalCombo(g.conds, ft, getResult(special.matchId).ht, getStats(special.matchId));
+      if (verdict === null) return "pending";
+      hit = verdict;
+      break;
+    }
     case "carded":
       // Player shown any card during the match (yellow or red).
       hit = cardsBy(cards, g.player).length > 0;

@@ -25,6 +25,8 @@ const RESULTS_PATH = join(__dirname, "..", "data", "results.json");
 const BETS_PATH = join(__dirname, "..", "data", "bets.json");
 const ESPN_BASE =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
+const ESPN_SUMMARY =
+  "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 
 const CHECK_ONLY = process.argv.includes("--check");
 
@@ -72,6 +74,66 @@ const isFirstHalf = (displayValue) => {
   const base = displayValue ? parseInt(displayValue, 10) : NaN;
   return Number.isFinite(base) && base <= 45;
 };
+
+async function fetchSummary(eventId) {
+  const res = await fetch(`${ESPN_SUMMARY}?event=${eventId}`, {
+    headers: { "User-Agent": "matchday-edge/1.0" },
+    signal: AbortSignal.timeout(12000),
+  });
+  if (!res.ok) throw new Error(`ESPN summary ${res.status} for ${eventId}`);
+  return res.json();
+}
+
+/** Pull a named stat (e.g. "wonCorners") off one boxscore team, as a number. */
+function statVal(team, name) {
+  const s = (team?.statistics ?? []).find((x) => x.name === name);
+  const n = s ? Number(s.displayValue ?? s.value) : NaN;
+  return Number.isFinite(n) ? n : 0;
+}
+
+/**
+ * Verified team stats from a per-event ESPN summary, oriented to our fixture's
+ * home/away. Full-match totals come from boxscore.teams[].statistics; the
+ * per-half corner / shots-on-target splits are tallied from commentary[] plays
+ * (each carries team.displayName + period.number). Returns null if the summary
+ * has no usable boxscore yet (e.g. just kicked off).
+ */
+function statsFromSummary(summary, fixture) {
+  const teams = summary?.boxscore?.teams;
+  if (!Array.isArray(teams) || teams.length < 2) return null;
+  const homeName = norm(fixture.home.name);
+  const ours = (espnName) => (norm(espnName) === homeName ? "home" : "away");
+
+  const byName = {};
+  for (const t of teams) byName[ours(t.team?.displayName)] = t;
+  const home = byName.home;
+  const away = byName.away;
+  if (!home || !away) return null;
+
+  const corners = { home: statVal(home, "wonCorners"), away: statVal(away, "wonCorners") };
+  const sot = { home: statVal(home, "shotsOnTarget"), away: statVal(away, "shotsOnTarget") };
+  const shots = { home: statVal(home, "totalShots"), away: statVal(away, "totalShots") };
+  const yellow = { home: statVal(home, "yellowCards"), away: statVal(away, "yellowCards") };
+  const red = { home: statVal(home, "redCards"), away: statVal(away, "redCards") };
+  const cards = { home: yellow.home + red.home, away: yellow.away + red.away };
+
+  // Per-half splits from the play-by-play commentary. period.number 1 → first
+  // half (index 0), anything else → second half (index 1). Group stage has no ET.
+  const cornersByHalf = { home: [0, 0], away: [0, 0] };
+  const sotByHalf = { home: [0, 0], away: [0, 0] };
+  for (const c of summary.commentary ?? []) {
+    const p = c.play;
+    const text = p?.type?.text;
+    if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
+    const side = p.team?.displayName ? ours(p.team.displayName) : null;
+    if (!side) continue;
+    const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
+    if (text === "Corner Awarded") cornersByHalf[side][idx] += 1;
+    else sotByHalf[side][idx] += 1;
+  }
+
+  return { corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf };
+}
 
 /** Convert one ESPN event to our result shape, oriented to the fixture's home/away. */
 function resultFromEvent(ev, fixture) {
@@ -139,6 +201,7 @@ function resultFromEvent(ev, fixture) {
     score,
     goals,
     cards,
+    eventId: ev.id ?? null, // for the per-event summary (corner/SOT/card) fetch
     updatedAt: new Date(ev.date ?? Date.now()).toISOString(),
   };
 }
@@ -159,8 +222,20 @@ function settleBetsFromResults(bets, results) {
   let changed = false;
   bets.results ??= {};
   bets.matchEvents ??= {};
+  bets.matchStats ??= {};
 
   for (const [id, r] of Object.entries(results)) {
+    // Verified stats are shared truth (corner/SOT/card combos read them). Write
+    // them for live AND finished matches so an in-play page can show counts, and
+    // refresh while live since the numbers climb (final values lock at FT).
+    if (r.stats) {
+      const before = JSON.stringify(bets.matchStats[id]);
+      if (before !== JSON.stringify(r.stats)) {
+        bets.matchStats[id] = r.stats;
+        changed = true;
+      }
+    }
+
     if (r.state !== "finished") continue; // only settle final scores
 
     // Correct-score layer: fill ht/ft only where still null (a real score is a
@@ -252,6 +327,45 @@ async function main() {
     if (r.state === "finished") finished++;
     else if (r.state === "live") live++;
   }
+
+  // ── Verified stats pass (corners / shots-on-target / cards) ────────────────
+  // The scoreboard above carries goals + cards only; the corner/SOT/card COUNTS
+  // a build-a-bet needs live in each match's `summary` endpoint. Fetch it for
+  // every live or finished match — but reuse an already-final snapshot from the
+  // previous results.json so the hourly cron only hits summaries for the day's
+  // active games, not all 104 finished matches by tournament's end.
+  let prevStats = {};
+  try {
+    const prev = JSON.parse(readFileSync(RESULTS_PATH, "utf8"));
+    for (const [id, r] of Object.entries(prev.results ?? {})) {
+      if (r.state === "finished" && r.stats) prevStats[id] = r.stats;
+    }
+  } catch {
+    /* first run — no prior stats */
+  }
+  const fixById = Object.fromEntries(fixtures.map((f) => [f.id, f]));
+  const needStats = Object.entries(results).filter(
+    ([id, r]) => r.eventId && !(r.state === "finished" && prevStats[id]),
+  );
+  const fetchedStats = await Promise.allSettled(
+    needStats.map(([, r]) => fetchSummary(r.eventId)),
+  );
+  let statsCount = 0;
+  needStats.forEach(([id, r], i) => {
+    const b = fetchedStats[i];
+    if (b.status !== "fulfilled") return;
+    const s = statsFromSummary(b.value, fixById[id]);
+    if (s) {
+      r.stats = s;
+      statsCount++;
+    }
+  });
+  // Carry forward reused final snapshots for matches we deliberately didn't refetch.
+  for (const [id, r] of Object.entries(results)) {
+    if (!r.stats && prevStats[id]) r.stats = prevStats[id];
+  }
+  // eventId was only needed for the summary fetch — drop it from the persisted shape.
+  for (const r of Object.values(results)) delete r.eventId;
 
   const payload = {
     meta: {

@@ -1,5 +1,5 @@
 import { fixtures } from "./data";
-import type { Goal, Card } from "./bets";
+import type { Goal, Card, MatchStats } from "./bets";
 import resultsFile from "@/data/results.json";
 
 /** Persisted ESPN snapshots (written by scripts/build-results.mjs). */
@@ -22,9 +22,73 @@ type PersistedResult = {
     minute: number | null;
     type: "yellow" | "red";
   }[];
+  stats?: MatchStats;
   updatedAt: string;
 };
 const persistedResults = (resultsFile as { results: Record<string, PersistedResult> }).results;
+
+const ESPN_SUMMARY =
+  "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
+
+/** Verified corner/SOT/card counts from a per-event summary, oriented to our home/away. */
+async function fetchStats(eventId: string, matchId: string): Promise<MatchStats | null> {
+  const fx = fixtures.find((f) => f.id === matchId);
+  if (!fx) return null;
+  let data: EspnSummary;
+  try {
+    const res = await fetch(`${ESPN_SUMMARY}?event=${eventId}`, {
+      cache: "no-store",
+      headers: { "User-Agent": "matchday-edge/1.0" },
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) return null;
+    data = (await res.json()) as EspnSummary;
+  } catch {
+    return null;
+  }
+  const teams = data.boxscore?.teams;
+  if (!Array.isArray(teams) || teams.length < 2) return null;
+  const homeName = norm(fx.home.name);
+  const side = (espnName?: string) => (norm(espnName ?? "") === homeName ? "home" : "away");
+  const stat = (t: EspnStatTeam | undefined, name: string): number => {
+    const s = (t?.statistics ?? []).find((x) => x.name === name);
+    const n = s ? Number(s.displayValue ?? s.value) : NaN;
+    return Number.isFinite(n) ? n : 0;
+  };
+
+  const byName: Partial<Record<"home" | "away", EspnStatTeam>> = {};
+  for (const t of teams) byName[side(t.team?.displayName)] = t;
+  const h = byName.home;
+  const a = byName.away;
+  if (!h || !a) return null;
+
+  const yellow = { home: stat(h, "yellowCards"), away: stat(a, "yellowCards") };
+  const red = { home: stat(h, "redCards"), away: stat(a, "redCards") };
+
+  const cornersByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
+  const sotByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
+  for (const c of data.commentary ?? []) {
+    const p = c.play;
+    const text = p?.type?.text;
+    if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
+    if (!p?.team?.displayName) continue;
+    const s = side(p.team.displayName);
+    const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
+    if (text === "Corner Awarded") cornersByHalf[s][idx] += 1;
+    else sotByHalf[s][idx] += 1;
+  }
+
+  return {
+    corners: { home: stat(h, "wonCorners"), away: stat(a, "wonCorners") },
+    sot: { home: stat(h, "shotsOnTarget"), away: stat(a, "shotsOnTarget") },
+    shots: { home: stat(h, "totalShots"), away: stat(a, "totalShots") },
+    yellow,
+    red,
+    cards: { home: yellow.home + red.home, away: yellow.away + red.away },
+    cornersByHalf,
+    sotByHalf,
+  };
+}
 
 /** Map a durable persisted result into the LiveMatch shape the UI consumes. */
 function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
@@ -52,6 +116,7 @@ function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
       minute: c.minute ?? undefined,
       type: c.type,
     })),
+    stats: r.stats,
   };
 }
 
@@ -83,6 +148,8 @@ export type LiveMatch = {
   ftScore: { home: number; away: number } | null;
   goals: Goal[];
   cards: Card[];
+  /** Verified corner/SOT/card counts — present once the summary endpoint has data. */
+  stats?: MatchStats;
 };
 
 // ESPN occasionally spells a nation differently from our fixtures. Map the few
@@ -150,6 +217,7 @@ type EspnCompetitor = {
   team?: { id?: string; displayName?: string };
 };
 type EspnEvent = {
+  id?: string;
   status?: {
     period?: number;
     displayClock?: string;
@@ -158,6 +226,22 @@ type EspnEvent = {
   competitions?: {
     competitors?: EspnCompetitor[];
     details?: EspnDetail[];
+  }[];
+};
+
+// Per-event summary shapes (corners / shots-on-target / cards).
+type EspnStatTeam = {
+  team?: { displayName?: string };
+  statistics?: { name?: string; displayValue?: string; value?: number }[];
+};
+type EspnSummary = {
+  boxscore?: { teams?: EspnStatTeam[] };
+  commentary?: {
+    play?: {
+      type?: { text?: string };
+      period?: { number?: number };
+      team?: { displayName?: string };
+    };
   }[];
 };
 
@@ -330,12 +414,33 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
   const wantIds = new Set(relevant.map((f) => f.id));
 
   const batches = await Promise.allSettled(params.map(fetchDate));
+  const eventIdByMatch: Record<string, string> = {};
   for (const b of batches) {
     if (b.status !== "fulfilled") continue;
     for (const ev of b.value) {
       const m = normaliseEvent(ev);
-      if (m && wantIds.has(m.matchId)) out[m.matchId] = m;
+      if (m && wantIds.has(m.matchId)) {
+        out[m.matchId] = m;
+        if (ev.id) eventIdByMatch[m.matchId] = ev.id;
+      }
     }
+  }
+
+  // Verified stats (corners / shots-on-target / cards) ride a separate per-event
+  // summary call. Fetch them only for matches that have actually kicked off this
+  // poll — live, at the break, or just finished — so the counts climb in real
+  // time. Older finished matches keep the stats baked into results.json above.
+  const liveIds = Object.entries(out)
+    .filter(([id, m]) => m.state !== "scheduled" && eventIdByMatch[id])
+    .map(([id]) => id);
+  if (liveIds.length) {
+    const statBatches = await Promise.allSettled(
+      liveIds.map((id) => fetchStats(eventIdByMatch[id], id)),
+    );
+    liveIds.forEach((id, i) => {
+      const b = statBatches[i];
+      if (b.status === "fulfilled" && b.value) out[id].stats = b.value;
+    });
   }
   return out;
 }

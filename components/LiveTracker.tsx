@@ -257,6 +257,34 @@ function GoalLog({ live, m }: { live: LiveMatch; m: MatchRow }) {
   );
 }
 
+/** Verified ESPN counts (corners / on-target / shots / cards) for a match. */
+function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
+  const s = live.stats;
+  if (!s) return null;
+  const Cell = ({ label, h, a, sub }: { label: string; h: number; a: number; sub?: string }) => (
+    <span className="inline-flex items-baseline gap-1.5">
+      <span className="text-faint uppercase tracking-wider">{label}</span>
+      <span className="text-acid tnum">{h}</span>
+      <span className="text-faint">–</span>
+      <span className="text-mint tnum">{a}</span>
+      {sub && <span className="text-faint">{sub}</span>}
+    </span>
+  );
+  const yel = s.yellow.home + s.yellow.away;
+  const red = s.red.home + s.red.away;
+  return (
+    <div className="mt-2.5 flex flex-wrap items-center gap-x-5 gap-y-1.5 font-mono text-[0.66rem]">
+      <span className="text-faint uppercase tracking-[0.16em]">
+        {m.home.code} <span className="text-acid">▮</span> · <span className="text-mint">▮</span> {m.away.code}
+      </span>
+      <Cell label="Corners" h={s.corners.home} a={s.corners.away} />
+      <Cell label="On target" h={s.sot.home} a={s.sot.away} />
+      <Cell label="Shots" h={s.shots.home} a={s.shots.away} />
+      <Cell label="Cards" h={s.cards.home} a={s.cards.away} sub={`(${yel}Y ${red}R)`} />
+    </div>
+  );
+}
+
 function Performance({ rows }: { rows: InPlay[] }) {
   const won = rows.filter((r) => r.verdict === "won").length;
   const lost = rows.filter((r) => r.verdict === "lost" || r.verdict === "dead").length;
@@ -453,6 +481,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                             <div className="mt-2.5">
                               <GoalLog live={lm} m={m} />
                             </div>
+                            <StatLine live={lm} m={m} />
                           </div>
                         )}
 
@@ -466,6 +495,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                             <div className="mt-2.5">
                               <GoalLog live={lm} m={m} />
                             </div>
+                            <StatLine live={lm} m={m} />
                             <p className="mt-2.5 font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
                               Staked {money(matchStaked, cur)} ·{" "}
                               {matchReturned > 0 ? <span className="text-acid">returned {money(matchReturned, cur)}</span> : <span className="text-rose">returned {money(0, cur)}</span>}

@@ -1,4 +1,5 @@
 import type { Goal, Card, Score, SpecialGrade, BetStatus } from "./bets";
+import { evalCombo } from "./bets";
 import type { LiveMatch } from "./live";
 
 /** Minimal shapes the graders read — so both the full Bet/Special and the
@@ -364,6 +365,26 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       return done
         ? { verdict: "lost", note: `Ended ${cur.home}–${cur.away} · ${total} goals (need ${need})` }
         : { verdict: "alive", note: `${total}/${need} goals · ${cur.home}–${cur.away}` };
+    }
+
+    case "combo": {
+      // Build-a-bet: AND every leg off the live score + verified ESPN stats.
+      // Accruing legs (goals/corners/cards over) can only improve, but result /
+      // most-corners / most-cards legs can still flip, so a not-yet-true combo
+      // stays "alive" rather than dying before the whistle.
+      const r = evalCombo(g.conds, cur, live.htScore, live.stats ?? null);
+      const st = live.stats;
+      const note = st
+        ? `${cur.home}–${cur.away} · cnr ${st.corners.home}-${st.corners.away} · sot ${st.sot.home}-${st.sot.away} · crd ${st.cards.home}-${st.cards.away}`
+        : `${cur.home}–${cur.away} · stats pending`;
+      if (done) {
+        if (r === true) return { verdict: "won", note: `All legs ✓ · ${note}` };
+        if (r === false) return { verdict: "lost", note };
+        return { verdict: "alive", note: `Awaiting ESPN stats · ${note}` };
+      }
+      return r === true
+        ? { verdict: "winning", note: `All legs on track · ${note}` }
+        : { verdict: "alive", note };
     }
 
     default:
