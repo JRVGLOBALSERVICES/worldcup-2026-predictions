@@ -55,7 +55,7 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
-      <header className="flex items-center justify-between py-6">
+      <header className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2.5">
           <span className="grid size-8 place-items-center rounded-lg bg-acid font-display text-lg font-black text-pitch">
             ⚽
