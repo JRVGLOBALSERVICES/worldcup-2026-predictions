@@ -1,5 +1,5 @@
 import type { Goal, Card, Score, SpecialGrade, BetStatus } from "./bets";
-import { evalCombo } from "./bets";
+import { evalCombo, playerSotCount } from "./bets";
 import type { LiveMatch } from "./live";
 
 /** Minimal shapes the graders read — so both the full Bet/Special and the
@@ -395,6 +395,23 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       return r === true
         ? { verdict: "winning", note: `All legs on track · ${note}` }
         : { verdict: "alive", note };
+    }
+
+    case "playerSotOver": {
+      // Per-player shots on target Over `line`. Accrues monotonically — once the
+      // player clears the line it's locked won; otherwise it stays alive until FT
+      // (pending the ESPN per-shooter tally, which lands with the summary stats).
+      const need = Math.ceil(g.line + 0.5);
+      const st = live.stats;
+      if (!st?.playerSot)
+        return done
+          ? { verdict: "lost", note: `${player}: SOT stat unavailable` }
+          : { verdict: "alive", note: `${player}: awaiting SOT data (need ${need})` };
+      const sot = playerSotCount(st, player);
+      if (sot > g.line) return { verdict: "won", note: `${player}: ${sot} shots on target ✓` };
+      return done
+        ? { verdict: "lost", note: `${player}: ${sot} shots on target (need ${need})` }
+        : { verdict: "alive", note: `${player}: ${sot}/${need} shots on target` };
     }
 
     default:

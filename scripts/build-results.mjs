@@ -121,6 +121,8 @@ function statsFromSummary(summary, fixture) {
   // half (index 0), anything else → second half (index 1). Group stage has no ET.
   const cornersByHalf = { home: [0, 0], away: [0, 0] };
   const sotByHalf = { home: [0, 0], away: [0, 0] };
+  // Per-shooter shots-on-target — keyed by ESPN displayName, for player SOT props.
+  const playerSot = {};
   for (const c of summary.commentary ?? []) {
     const p = c.play;
     const text = p?.type?.text;
@@ -128,11 +130,16 @@ function statsFromSummary(summary, fixture) {
     const side = p.team?.displayName ? ours(p.team.displayName) : null;
     if (!side) continue;
     const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
-    if (text === "Corner Awarded") cornersByHalf[side][idx] += 1;
-    else sotByHalf[side][idx] += 1;
+    if (text === "Corner Awarded") {
+      cornersByHalf[side][idx] += 1;
+    } else {
+      sotByHalf[side][idx] += 1;
+      const shooter = p.participants?.[0]?.athlete?.displayName;
+      if (shooter) playerSot[shooter] = (playerSot[shooter] ?? 0) + 1;
+    }
   }
 
-  return { corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf };
+  return { corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot };
 }
 
 /** Convert one ESPN event to our result shape, oriented to the fixture's home/away. */

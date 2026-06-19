@@ -72,6 +72,14 @@ export type MatchStats = {
   cards: SideCount;
   cornersByHalf?: SideHalfCount;
   sotByHalf?: SideHalfCount;
+  /**
+   * Per-PLAYER shots-on-target, keyed by the player's ESPN displayName. Tallied
+   * from `commentary[]` "Shot On Target" plays, each of which names the shooter
+   * via `participants[0].athlete.displayName`. This is what lets per-player SOT
+   * props ("Player X Over 3.5 shots on target") auto-settle — the team-level
+   * `sot` totals can't be attributed to a single player on their own.
+   */
+  playerSot?: Record<string, number>;
 };
 
 /** Machine-gradable rule attached to each special so the cron settles it without a human. */
@@ -109,6 +117,10 @@ export type SpecialGrade =
   | { type: "sentOff"; player: string }
   // Match TOTAL goals (both teams) strictly over `line` — "Total Over (2.5)".
   | { type: "matchGoalsOver"; line: number }
+  // A named player's shots on target strictly over `line` ("Player X Over 3.5
+  // shots on target"). Settled off MatchStats.playerSot, tallied per-shooter
+  // from ESPN commentary "Shot On Target" plays.
+  | { type: "playerSotOver"; player: string; line: number }
   // Multi-leg build-a-bet — ALL `conds` must hold (a 1xBet accumulator single).
   // Each leg is graded off the final score (goals/result/btts) or the verified
   // ESPN MatchStats (corners / shots-on-target / cards). Pending until every
@@ -320,6 +332,16 @@ function nameMatch(a: string, b: string): boolean {
   const y = deburr(b);
   return x === y || x.includes(y) || y.includes(x);
 }
+
+/** Sum a player's shots-on-target from the per-shooter map, matching names accent-safe. */
+export const playerSotCount = (stats: MatchStats | null, player: string): number => {
+  const map = stats?.playerSot;
+  if (!map) return 0;
+  return Object.entries(map).reduce(
+    (n, [name, count]) => (nameMatch(name, player) ? n + count : n),
+    0,
+  );
+};
 
 const realGoals = (goals: Goal[]) => goals.filter((g) => !g.ownGoal);
 const goalsBy = (goals: Goal[], player: string) =>
@@ -549,6 +571,12 @@ export function gradeSpecial(special: Special): BetStatus {
     case "matchGoalsOver":
       // Total match goals (both teams, incl. own goals) strictly over the line.
       hit = !!ft && ft.home + ft.away > g.line;
+      break;
+    case "playerSotOver":
+      // Player's shots-on-target strictly over the line, from the per-shooter
+      // tally. Settles only at FT here (the live tracker locks an early "won"
+      // the moment the count clears the line).
+      hit = playerSotCount(getStats(special.matchId), g.player) > g.line;
       break;
     case "combo": {
       // Build-a-bet: AND every leg off the FT score + verified ESPN stats. If a

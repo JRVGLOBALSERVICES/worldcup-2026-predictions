@@ -67,6 +67,7 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
 
   const cornersByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
   const sotByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
+  const playerSot: Record<string, number> = {};
   for (const c of data.commentary ?? []) {
     const p = c.play;
     const text = p?.type?.text;
@@ -74,8 +75,14 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
     if (!p?.team?.displayName) continue;
     const s = side(p.team.displayName);
     const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
-    if (text === "Corner Awarded") cornersByHalf[s][idx] += 1;
-    else sotByHalf[s][idx] += 1;
+    if (text === "Corner Awarded") {
+      cornersByHalf[s][idx] += 1;
+    } else {
+      sotByHalf[s][idx] += 1;
+      // Attribute the shot to its taker (the first participant) for per-player props.
+      const shooter = p.participants?.[0]?.athlete?.displayName;
+      if (shooter) playerSot[shooter] = (playerSot[shooter] ?? 0) + 1;
+    }
   }
 
   return {
@@ -87,6 +94,7 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
     cards: { home: yellow.home + red.home, away: yellow.away + red.away },
     cornersByHalf,
     sotByHalf,
+    playerSot,
   };
 }
 
@@ -241,6 +249,7 @@ type EspnSummary = {
       type?: { text?: string };
       period?: { number?: number };
       team?: { displayName?: string };
+      participants?: { athlete?: { displayName?: string } }[];
     };
   }[];
 };
