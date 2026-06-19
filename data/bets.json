@@ -1065,6 +1065,97 @@
       "odds": 17,
       "stake": 10,
       "placedAt": "19/06 23:27"
+    },
+    {
+      "id": "sco-ht-1-2-s7327",
+      "slipNo": "83315837327",
+      "matchId": "sco-mor-2026-06-19",
+      "side": "Morocco",
+      "period": "HT",
+      "label": "Morocco to lead 1–2 at half-time",
+      "home": 1,
+      "away": 2,
+      "odds": 23,
+      "stake": 10,
+      "placedAt": "20/06 04:05"
+    },
+    {
+      "id": "sco-ht-1-1-s6243",
+      "slipNo": "83315826243",
+      "matchId": "sco-mor-2026-06-19",
+      "side": "Draw",
+      "period": "HT",
+      "label": "1–1 at half-time",
+      "home": 1,
+      "away": 1,
+      "odds": 9.5,
+      "stake": 10,
+      "placedAt": "20/06 04:04"
+    },
+    {
+      "id": "sco-ft-1-1-s6059",
+      "slipNo": "83315806059",
+      "matchId": "sco-mor-2026-06-19",
+      "side": "Draw",
+      "period": "FT",
+      "label": "1–1 draw",
+      "home": 1,
+      "away": 1,
+      "odds": 6.5,
+      "stake": 10,
+      "placedAt": "20/06 04:04"
+    },
+    {
+      "id": "sco-ft-1-2-s5365",
+      "slipNo": "83315795365",
+      "matchId": "sco-mor-2026-06-19",
+      "side": "Morocco",
+      "period": "FT",
+      "label": "Morocco to win 1–2",
+      "home": 1,
+      "away": 2,
+      "odds": 8,
+      "stake": 10,
+      "placedAt": "20/06 04:04"
+    },
+    {
+      "id": "sco-ft-0-2-s2671",
+      "slipNo": "83315792671",
+      "matchId": "sco-mor-2026-06-19",
+      "side": "Morocco",
+      "period": "FT",
+      "label": "Morocco to win 0–2",
+      "home": 0,
+      "away": 2,
+      "odds": 6.5,
+      "stake": 10,
+      "placedAt": "20/06 04:04"
+    },
+    {
+      "id": "sco-ft-0-1-s9845",
+      "slipNo": "83315789845",
+      "matchId": "sco-mor-2026-06-19",
+      "side": "Morocco",
+      "period": "FT",
+      "label": "Morocco to win 0–1",
+      "home": 0,
+      "away": 1,
+      "odds": 5,
+      "stake": 20,
+      "placedAt": "20/06 04:04"
+    },
+    {
+      "id": "usa-ft-4-0-s1093",
+      "slipNo": "83315521093",
+      "matchId": "usa-aus-2026-06-19",
+      "side": "USA",
+      "period": "FT",
+      "label": "USA to win 4–0",
+      "home": 4,
+      "away": 0,
+      "odds": 6.5,
+      "stake": 20,
+      "placedAt": "20/06 03:57"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -2508,6 +2599,451 @@
             "home": 3,
             "away": 3
           }
+        ]
+      }
+    },
+    {
+      "id": "sp-83316805435",
+      "slipNo": "83316805435",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "—",
+      "market": "W2 + Both Teams To Score",
+      "label": "Morocco to win and both teams to score",
+      "odds": 4,
+      "stake": 10,
+      "placedAt": "20/06 04:28",
+      "grade": {
+        "type": "resultAndBtts",
+        "outcome": "2"
+      }
+    },
+    {
+      "id": "sp-83316799791",
+      "slipNo": "83316799791",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "—",
+      "market": "X + Both Teams To Score",
+      "label": "Draw and both teams to score",
+      "odds": 5.5,
+      "stake": 10,
+      "placedAt": "20/06 04:28",
+      "grade": {
+        "type": "resultAndBtts",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83316498747",
+      "slipNo": "83316498747",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "Ismael Saibari",
+      "market": "Score + any other score",
+      "label": "Ismael Saibari scores and match ends any other score",
+      "odds": 16,
+      "stake": 10,
+      "placedAt": "20/06 04:20",
+      "grade": {
+        "type": "scoredAndScoreOther",
+        "player": "Ismael Saibari",
+        "excludeScores": [
+          {
+            "home": 0,
+            "away": 0
+          },
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 0,
+            "away": 2
+          },
+          {
+            "home": 0,
+            "away": 3
+          },
+          {
+            "home": 1,
+            "away": 0
+          },
+          {
+            "home": 1,
+            "away": 1
+          },
+          {
+            "home": 1,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 3
+          },
+          {
+            "home": 2,
+            "away": 0
+          },
+          {
+            "home": 2,
+            "away": 1
+          },
+          {
+            "home": 2,
+            "away": 2
+          },
+          {
+            "home": 2,
+            "away": 3
+          },
+          {
+            "home": 3,
+            "away": 0
+          },
+          {
+            "home": 3,
+            "away": 1
+          },
+          {
+            "home": 3,
+            "away": 2
+          },
+          {
+            "home": 3,
+            "away": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83316453187",
+      "slipNo": "83316453187",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "Che Adams",
+      "market": "Score + any other score",
+      "label": "Che Adams scores and match ends any other score",
+      "odds": 47,
+      "stake": 10,
+      "placedAt": "20/06 04:19",
+      "grade": {
+        "type": "scoredAndScoreOther",
+        "player": "Che Adams",
+        "excludeScores": [
+          {
+            "home": 0,
+            "away": 0
+          },
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 0,
+            "away": 2
+          },
+          {
+            "home": 0,
+            "away": 3
+          },
+          {
+            "home": 1,
+            "away": 0
+          },
+          {
+            "home": 1,
+            "away": 1
+          },
+          {
+            "home": 1,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 3
+          },
+          {
+            "home": 2,
+            "away": 0
+          },
+          {
+            "home": 2,
+            "away": 1
+          },
+          {
+            "home": 2,
+            "away": 2
+          },
+          {
+            "home": 2,
+            "away": 3
+          },
+          {
+            "home": 3,
+            "away": 0
+          },
+          {
+            "home": 3,
+            "away": 1
+          },
+          {
+            "home": 3,
+            "away": 2
+          },
+          {
+            "home": 3,
+            "away": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83316422243",
+      "slipNo": "83316422243",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "Scott McTominay",
+      "market": "Score + any other score",
+      "label": "Scott McTominay scores and match ends any other score",
+      "odds": 50,
+      "stake": 10,
+      "placedAt": "20/06 04:19",
+      "grade": {
+        "type": "scoredAndScoreOther",
+        "player": "Scott McTominay",
+        "excludeScores": [
+          {
+            "home": 0,
+            "away": 0
+          },
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 0,
+            "away": 2
+          },
+          {
+            "home": 0,
+            "away": 3
+          },
+          {
+            "home": 1,
+            "away": 0
+          },
+          {
+            "home": 1,
+            "away": 1
+          },
+          {
+            "home": 1,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 3
+          },
+          {
+            "home": 2,
+            "away": 0
+          },
+          {
+            "home": 2,
+            "away": 1
+          },
+          {
+            "home": 2,
+            "away": 2
+          },
+          {
+            "home": 2,
+            "away": 3
+          },
+          {
+            "home": 3,
+            "away": 0
+          },
+          {
+            "home": 3,
+            "away": 1
+          },
+          {
+            "home": 3,
+            "away": 2
+          },
+          {
+            "home": 3,
+            "away": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83316157775",
+      "slipNo": "83316157775",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "Scott McTominay",
+      "market": "First goal + any other score",
+      "label": "Scott McTominay scores first and match ends any other score",
+      "odds": 100,
+      "stake": 9.5,
+      "placedAt": "20/06 04:12",
+      "grade": {
+        "type": "firstScorerAndScoreOther",
+        "player": "Scott McTominay",
+        "excludeScores": [
+          {
+            "home": 0,
+            "away": 0
+          },
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 0,
+            "away": 2
+          },
+          {
+            "home": 0,
+            "away": 3
+          },
+          {
+            "home": 1,
+            "away": 0
+          },
+          {
+            "home": 1,
+            "away": 1
+          },
+          {
+            "home": 1,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 3
+          },
+          {
+            "home": 2,
+            "away": 0
+          },
+          {
+            "home": 2,
+            "away": 1
+          },
+          {
+            "home": 2,
+            "away": 2
+          },
+          {
+            "home": 2,
+            "away": 3
+          },
+          {
+            "home": 3,
+            "away": 0
+          },
+          {
+            "home": 3,
+            "away": 1
+          },
+          {
+            "home": 3,
+            "away": 2
+          },
+          {
+            "home": 3,
+            "away": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83315986513",
+      "slipNo": "83315986513",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "Scotland v Morocco",
+      "market": "Win + corners + cards",
+      "label": "Scotland to win + fewer than 10 corners + fewer than 4 cards",
+      "odds": 13,
+      "stake": 10,
+      "placedAt": "20/06 04:08",
+      "grade": {
+        "type": "combo",
+        "conds": [
+          {
+            "c": "result",
+            "outcome": "1"
+          },
+          {
+            "c": "cornersTotalBetween",
+            "lo": 0,
+            "hi": 9
+          },
+          {
+            "c": "cardsTotalUnder",
+            "line": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83315770923",
+      "slipNo": "83315770923",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "—",
+      "market": "W2 + Both Teams To Score",
+      "label": "Morocco to win and both teams to score",
+      "odds": 4,
+      "stake": 20,
+      "placedAt": "20/06 04:03",
+      "grade": {
+        "type": "resultAndBtts",
+        "outcome": "2"
+      }
+    },
+    {
+      "id": "sp-83315662381",
+      "slipNo": "83315662381",
+      "matchId": "usa-aus-2026-06-19",
+      "player": "Nishan Velupillay",
+      "market": "Shots on target Over 3.5",
+      "label": "Nishan Velupillay 4+ shots on target",
+      "odds": 21,
+      "stake": 10,
+      "placedAt": "20/06 04:01"
+    },
+    {
+      "id": "sp-83315630279",
+      "slipNo": "83315630279",
+      "matchId": "usa-aus-2026-06-19",
+      "player": "Folarin Balogun / Weston McKennie",
+      "market": "Assist — at least one",
+      "label": "Balogun or McKennie to make an assist",
+      "odds": 4.33,
+      "stake": 20,
+      "placedAt": "20/06 04:00",
+      "grade": {
+        "type": "eitherAssists",
+        "players": [
+          "Folarin Balogun",
+          "Weston McKennie"
+        ]
+      }
+    },
+    {
+      "id": "sp-83315624545",
+      "slipNo": "83315624545",
+      "matchId": "usa-aus-2026-06-19",
+      "player": "Folarin Balogun / Sergino Dest",
+      "market": "Assist — at least one",
+      "label": "Balogun or Dest to make an assist",
+      "odds": 4,
+      "stake": 20,
+      "placedAt": "20/06 04:00",
+      "grade": {
+        "type": "eitherAssists",
+        "players": [
+          "Folarin Balogun",
+          "Sergino Dest"
         ]
       }
     }

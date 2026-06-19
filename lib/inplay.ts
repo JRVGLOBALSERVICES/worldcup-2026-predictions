@@ -226,6 +226,16 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         : { verdict: "alive", note: tally.map((t) => `${t.p} ${t.n > 0 ? "✓" : "—"}`).join(" · ") };
     }
 
+    case "eitherAssists": {
+      // At least one of the named players assists. Assists only accrue, so once
+      // any lands it's a locked win; settles lost if FT arrives with none.
+      const tally = g.players.map((p) => ({ p, n: assistsBy(goals, p).length }));
+      if (tally.some((t) => t.n > 0)) return { verdict: "won", note: `Assist ✓` };
+      return done
+        ? { verdict: "lost", note: `No assist (${g.players.join(" / ")})` }
+        : { verdict: "alive", note: tally.map((t) => `${t.p} ${t.n > 0 ? "✓" : "—"}`).join(" · ") };
+    }
+
     case "scoredBothHalves": {
       // Player must score in each half — a goal ≤45' AND one >45'. Goals only
       // accrue, so once both land it's a locked win.

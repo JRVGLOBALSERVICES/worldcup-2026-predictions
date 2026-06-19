@@ -97,6 +97,8 @@ export type SpecialGrade =
   | { type: "secondHalfScore"; home: number; away: number }
   // Both named players each score at any time ("Both Players To Score - Yes").
   | { type: "bothScored"; players: string[] }
+  // At least ONE of the named players records an assist ("… At Least One To Make An Assist").
+  | { type: "eitherAssists"; players: string[] }
   // Player scores in BOTH halves — ≥1 goal at minute ≤45 AND ≥1 at minute >45.
   | { type: "scoredBothHalves"; player: string }
   // A 1X2 outcome AND both teams score ("W1/W2/Draw + Both Teams To Score - Yes").
@@ -491,6 +493,10 @@ export function gradeSpecial(special: Special): BetStatus {
     case "bothScored":
       // Every listed player scores at least one (non-own) goal.
       hit = g.players.every((p) => goalsBy(goals, p).length > 0);
+      break;
+    case "eitherAssists":
+      // At least one of the named players records an assist.
+      hit = g.players.some((p) => assistsBy(goals, p).length > 0);
       break;
     case "scoredBothHalves": {
       // Player scores in each half — a goal at minute ≤45 AND one at minute >45.
