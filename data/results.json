@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-19T20:20:20.426Z",
+    "generatedAt": "2026-06-19T21:20:31.250Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 8,
-    "live": 1
+    "finished": 9,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -882,12 +882,15 @@
       }
     },
     "usa-aus-2026-06-19": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 2,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 2,
+        "away": 0
+      },
       "score": {
         "home": 2,
         "away": 0
@@ -922,42 +925,72 @@
           "player": "Alessandro Circati",
           "minute": 32,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Antonee Robinson",
+          "minute": 55,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Harry Souttar",
+          "minute": 88,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Folarin Balogun",
+          "minute": 88,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Jacob Italiano",
+          "minute": 88,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Chris Richards",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-19T19:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 6,
-          "away": 2
+          "home": 7,
+          "away": 4
         },
         "sot": {
           "home": 2,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 11,
-          "away": 2
+          "home": 10,
+          "away": 5
         },
         "yellow": {
-          "home": 0,
-          "away": 2
+          "home": 3,
+          "away": 4
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 0,
-          "away": 2
+          "home": 3,
+          "away": 4
         },
         "cornersByHalf": {
           "home": [
             3,
-            3
+            4
           ],
           "away": [
             2,
-            0
+            2
           ]
         },
         "sotByHalf": {
@@ -967,8 +1000,13 @@
           ],
           "away": [
             1,
-            0
+            1
           ]
+        },
+        "playerSot": {
+          "Mohamed Toure": 1,
+          "Sergiño Dest": 1,
+          "Connor Metcalfe": 1
         }
       }
     }
