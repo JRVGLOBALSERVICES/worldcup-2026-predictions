@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { fixtures, getFixture, getPrediction, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
+import { fixtures, getFixture, getPrediction, getResearch, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
+import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
 import { LiveProvider } from "@/components/LiveProvider";
 import { MatchHeaderScore, LiveStatusLine, LiveGoalLog } from "@/components/LiveScore";
@@ -33,6 +34,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   const fixture = getFixture(id);
   if (!fixture) notFound();
   const pred = getPrediction(id);
+  const research = getResearch(id);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -111,6 +113,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
           </div>
         )}
       </div>
+
+      {research && (
+        <div className="mt-10 border-t border-line pt-8">
+          <ResearchPanel fixture={fixture} research={research} />
+        </div>
+      )}
 
       <footer className="mt-12 border-t border-line pt-6 text-sm text-faint">
         <p className="leading-relaxed text-muted">⚠️ {predictionFile.meta.disclaimer}</p>

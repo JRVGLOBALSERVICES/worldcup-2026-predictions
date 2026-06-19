@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Fixture } from "@/lib/types";
-import { mytTime, etTime, getPrediction } from "@/lib/data";
+import { mytTime, etTime, getPrediction, overallStrength } from "@/lib/data";
 import { LiveScore, LiveStatusLine } from "./LiveScore";
-import { OddsPill, StatusBadge } from "./atoms";
+import { StrengthMeter, StatusBadge } from "./atoms";
 
 export function MatchCard({ fixture }: { fixture: Fixture }) {
   const pred = getPrediction(fixture.id);
@@ -29,10 +29,10 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
 
         <div className="shrink-0 text-right">
           {pred ? (
-            <div className="space-y-1">
+            <div className="flex flex-col items-end space-y-1">
               <div className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">Pick</div>
               <div className="text-sm font-semibold text-acid">{pred.win.pick}</div>
-              <OddsPill odds={pred.win.fairOdds} tone="acid" />
+              <StrengthMeter value={overallStrength(pred)} size="sm" />
             </div>
           ) : (
             <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">

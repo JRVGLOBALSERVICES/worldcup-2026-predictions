@@ -1,23 +1,54 @@
 import type { Fixture, Prediction, Pick } from "@/lib/types";
-import { OddsPill, SectionLabel, Banker, Confidence, StatusBadge } from "./atoms";
+import { strengthFromOdds, strengthLabel, overallStrength } from "@/lib/data";
+import { SectionLabel, Banker, Confidence, StatusBadge, StrengthMeter } from "./atoms";
 
 export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Prediction }) {
+  const overall = overallStrength(pred);
   return (
     <div className="space-y-8">
+      {/* overall conviction — the 1–5 call strength, front and centre */}
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-card/40 px-5 py-4">
+        <div>
+          <SectionLabel>Call strength</SectionLabel>
+          <p className="text-sm text-muted">
+            How strong this prediction is — 1 (coin-flip) to 5 (banker).
+          </p>
+        </div>
+        <div className="flex items-center gap-3">
+          <StrengthMeter value={overall} label={strengthLabel(overall)} />
+        </div>
+      </div>
+
       {/* headline markets */}
       <div className="grid gap-3 sm:grid-cols-2">
-        <MarketTile label="Match result" big={pred.win.pick} odds={pred.win.fairOdds} tone="acid">
+        <MarketTile
+          label="Match result"
+          big={pred.win.pick}
+          strength={strengthFromOdds(pred.win.fairOdds, pred.win.strength)}
+          tone="acid"
+        >
           {pred.win.reason}
         </MarketTile>
-        <MarketTile label="Full-time score" big={pred.fullTime.score} odds={pred.fullTime.fairOdds} />
+        <MarketTile
+          label="Full-time score"
+          big={pred.fullTime.score}
+          strength={strengthFromOdds(pred.fullTime.fairOdds, pred.fullTime.strength)}
+        />
         <MarketTile
           label="Half-time score"
           big={pred.halfTime.score}
-          odds={pred.halfTime.fairOdds}
+          strength={strengthFromOdds(pred.halfTime.fairOdds, pred.halfTime.strength)}
         >
-          Alt: {pred.halfTime.alt} <span className="text-faint">({pred.halfTime.altOdds})</span>
+          <span className="inline-flex items-center gap-2">
+            Alt: {pred.halfTime.alt}
+            <StrengthMeter value={strengthFromOdds(pred.halfTime.altOdds)} size="sm" />
+          </span>
         </MarketTile>
-        <MarketTile label="Half-time / full-time" big={pred.htft.pick} odds={pred.htft.fairOdds} />
+        <MarketTile
+          label="Half-time / full-time"
+          big={pred.htft.pick}
+          strength={strengthFromOdds(pred.htft.fairOdds, pred.htft.strength)}
+        />
       </div>
 
       {/* scorers + assists */}
@@ -36,7 +67,9 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
       <div className="rounded-2xl border border-amber/40 bg-amber/[0.06] p-5">
         <div className="mb-2 flex items-center justify-between">
           <SectionLabel>Penalty</SectionLabel>
-          <OddsPill odds={pred.penalty.likelihood} tone="amber" />
+          <span className="tnum inline-flex shrink-0 items-center rounded-full border border-amber/50 px-2 py-0.5 font-mono text-[0.72rem] leading-none text-amber">
+            {pred.penalty.likelihood}
+          </span>
         </div>
         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
           <span className="text-sm text-muted">Taker</span>
@@ -98,13 +131,13 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
 function MarketTile({
   label,
   big,
-  odds,
+  strength,
   tone = "default",
   children,
 }: {
   label: string;
   big: string;
-  odds: string;
+  strength: number;
   tone?: "default" | "acid";
   children?: React.ReactNode;
 }) {
@@ -112,7 +145,7 @@ function MarketTile({
     <div className="rounded-2xl border border-line bg-card/50 p-5">
       <div className="mb-2 flex items-start justify-between gap-3">
         <SectionLabel>{label}</SectionLabel>
-        <OddsPill odds={odds} tone={tone === "acid" ? "acid" : "default"} />
+        <StrengthMeter value={strength} size="sm" />
       </div>
       <div
         className={`font-display text-2xl font-extrabold uppercase leading-none tracking-tight ${
@@ -143,7 +176,7 @@ function PickList({ picks }: { picks: Pick[] }) {
               </span>
               {p.banker && <Banker />}
             </div>
-            <OddsPill odds={p.fairOdds} tone={p.banker ? "acid" : "default"} />
+            <StrengthMeter value={strengthFromOdds(p.fairOdds, p.strength)} size="sm" />
           </div>
           <p className="mt-1 text-[0.82rem] leading-snug text-muted">{p.note}</p>
         </li>

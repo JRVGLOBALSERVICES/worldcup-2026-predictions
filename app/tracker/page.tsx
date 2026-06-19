@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { mytTime, etTime, mytDayKey, mytDayLabel, getFixture } from "@/lib/data";
+import { mytTime, etTime, mytDayKey, mytDayLabel, getFixture, getResearch } from "@/lib/data";
 import {
   betSlip,
   settleAll,
@@ -62,6 +62,13 @@ export default function TrackerPage() {
   const matchRows: MatchRow[] = allGroups.map((g) => {
     const f = g.fixture;
     const sp = specialsByMatch.get(g.matchId) ?? [];
+    const research = getResearch(g.matchId);
+    const form = research?.form
+      ? {
+          home: { line: research.form.home.line, record: research.form.home.record },
+          away: { line: research.form.away.line, record: research.form.away.record },
+        }
+      : undefined;
     return {
       matchId: g.matchId,
       home: { name: f?.home.name ?? "?", flag: f?.home.flag ?? "", code: f ? code(f.home.name) : "?" },
@@ -70,6 +77,7 @@ export default function TrackerPage() {
       kickoffUTC: f?.kickoffUTC ?? "",
       kickoffLabel: f ? `${mytTime(f.kickoffUTC)} MYT (${etTime(f.kickoffUTC)} ET)` : "Time TBC",
       staticResult: g.result,
+      form,
       bets: g.bets.map((b) => ({
         id: b.id,
         period: b.period,

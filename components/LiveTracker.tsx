@@ -40,6 +40,10 @@ export type MatchRow = {
   kickoffUTC: string;
   kickoffLabel: string; // "21:00 MYT (9:00 PM ET)"
   staticResult: { ht: { home: number; away: number } | null; ft: { home: number; away: number } | null };
+  form?: {
+    home: { line: string; record: { w: number; d: number; l: number } };
+    away: { line: string; record: { w: number; d: number; l: number } };
+  };
   bets: BetRow[];
   specials: SpecialRow[];
 };
@@ -177,6 +181,25 @@ function LiveBadge({ live }: { live: LiveMatch | undefined }) {
   return (
     <span className="rounded-full border border-acid-dim px-2 py-0.5 font-mono text-[0.6rem] uppercase tracking-wider text-acid">
       Upcoming
+    </span>
+  );
+}
+
+/** Compact last-10 form: team code, W/D/L dots (newest-first), W-D-L record. */
+function FormStrip({ code, f }: { code: string; f: { line: string; record: { w: number; d: number; l: number } } }) {
+  const dots = f.line.replace(/[^WDL]/gi, "").toUpperCase().slice(0, 10).split("");
+  const cls: Record<string, string> = { W: "bg-acid", D: "bg-faint", L: "bg-rose" };
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <span className="font-mono text-[0.62rem] font-semibold uppercase tracking-wider text-muted">{code}</span>
+      <span className="inline-flex items-center gap-[2px]" title={`${f.line} · ${f.record.w}W ${f.record.d}D ${f.record.l}L`}>
+        {dots.map((c, i) => (
+          <span key={i} className={`size-1.5 rounded-full ${cls[c] ?? "bg-line"}`} />
+        ))}
+      </span>
+      <span className="tnum font-mono text-[0.6rem] text-faint">
+        {f.record.w}-{f.record.d}-{f.record.l}
+      </span>
     </span>
   );
 }
@@ -378,6 +401,12 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
                           <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
                             Group {m.group} · {m.kickoffLabel}
                           </p>
+                          {m.form && (
+                            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+                              <FormStrip code={m.home.code} f={m.form.home} />
+                              <FormStrip code={m.away.code} f={m.form.away} />
+                            </div>
+                          )}
                         </div>
                         <div className="flex items-center gap-3">
                           <LiveBadge live={lm} />

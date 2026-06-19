@@ -1,11 +1,13 @@
 import fixturesJson from "@/data/fixtures.json";
 import predictionsJson from "@/data/predictions.json";
-import type { Fixture, Prediction, PredictionFile } from "./types";
+import researchJson from "@/data/research.json";
+import type { Fixture, Prediction, PredictionFile, Research, ResearchFile } from "./types";
 
 const MYT = "Asia/Kuala_Lumpur";
 
 export const fixtures = fixturesJson as Fixture[];
 export const predictionFile = predictionsJson as PredictionFile;
+export const researchFile = researchJson as ResearchFile;
 
 export function getFixture(id: string): Fixture | undefined {
   return fixtures.find((f) => f.id === id);
@@ -17,6 +19,38 @@ export function getPrediction(id: string): Prediction | undefined {
 
 export function hasPrediction(id: string): boolean {
   return Boolean(predictionFile.predictions[id]);
+}
+
+/** Real match research (form, record, leaders, discipline, H2H) for a fixture. */
+export function getResearch(id: string): Research | undefined {
+  const r = (researchFile.research as Record<string, Research>)[id];
+  return r && !r.error ? r : undefined;
+}
+
+/**
+ * 1–5 conviction rating — what Rj reads instead of decimal odds. Lower fair
+ * odds = a more likely call = a stronger rating. Deterministic so the meter is
+ * stable across renders; an explicit `strength` on the data always wins.
+ */
+export function strengthFromOdds(odds: string | number | undefined, explicit?: number): number {
+  if (explicit && explicit >= 1 && explicit <= 5) return Math.round(explicit);
+  const o = typeof odds === "string" ? parseFloat(odds.replace(/[^\d.]/g, "")) : odds;
+  if (!o || !Number.isFinite(o) || o <= 0) return 3;
+  if (o <= 1.5) return 5;
+  if (o <= 2.0) return 4;
+  if (o <= 3.0) return 3;
+  if (o <= 5.0) return 2;
+  return 1;
+}
+
+const STRENGTH_LABEL = ["", "Long shot", "Outside call", "Solid call", "Strong call", "Banker"];
+export function strengthLabel(n: number): string {
+  return STRENGTH_LABEL[Math.max(1, Math.min(5, Math.round(n)))] ?? "";
+}
+
+/** Overall headline conviction: explicit pred.strength, else derived from the win pick. */
+export function overallStrength(pred: Prediction): number {
+  return strengthFromOdds(pred.win.fairOdds, pred.strength);
 }
 
 /** Day key in MYT, e.g. "2026-06-18" — used to group the schedule the way Rj sees it. */

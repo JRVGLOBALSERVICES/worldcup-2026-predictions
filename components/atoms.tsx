@@ -15,6 +15,43 @@ export function OddsPill({ odds, tone = "default" }: { odds: string; tone?: "def
   );
 }
 
+/**
+ * 1–5 conviction meter — the rating Rj reads instead of odds. Five segments
+ * fill to `value`; tone shifts acid (strong) → amber (mid) → faint (weak).
+ * `size="sm"` is the inline variant used in lists; default carries a label.
+ */
+export function StrengthMeter({
+  value,
+  label,
+  size = "md",
+}: {
+  value: number;
+  label?: string;
+  size?: "sm" | "md";
+}) {
+  const v = Math.max(1, Math.min(5, Math.round(value)));
+  const tone = v >= 4 ? "acid" : v === 3 ? "amber" : "faint";
+  const fill = { acid: "bg-acid", amber: "bg-amber", faint: "bg-faint" } as const;
+  const text = { acid: "text-acid", amber: "text-amber", faint: "text-faint" } as const;
+  const seg = size === "sm" ? "h-2 w-1" : "h-3 w-1.5";
+  return (
+    <span className="inline-flex shrink-0 items-center gap-2" title={`Strength ${v}/5${label ? ` — ${label}` : ""}`}>
+      <span className="inline-flex items-end gap-[3px]" aria-hidden>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <span
+            key={i}
+            className={`${seg} rounded-[1px] ${i <= v ? fill[tone] : "bg-line"}`}
+          />
+        ))}
+      </span>
+      <span className={`tnum font-mono text-[0.72rem] leading-none ${text[tone]}`}>
+        {v}<span className="text-faint">/5</span>
+        {label && size === "md" && <span className="ml-1.5 uppercase tracking-wider">{label}</span>}
+      </span>
+    </span>
+  );
+}
+
 export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <h3 className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
