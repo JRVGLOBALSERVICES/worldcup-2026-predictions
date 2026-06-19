@@ -225,6 +225,18 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         : { verdict: "alive", note: tally.map((t) => `${t.p} ${t.n > 0 ? "✓" : "—"}`).join(" · ") };
     }
 
+    case "scoredBothHalves": {
+      // Player must score in each half — a goal ≤45' AND one >45'. Goals only
+      // accrue, so once both land it's a locked win.
+      const mine = goalsBy(goals, player);
+      const firstHalf = mine.some((gl) => gl.minute != null && gl.minute <= 45);
+      const secondHalf = mine.some((gl) => gl.minute != null && gl.minute > 45);
+      if (firstHalf && secondHalf) return { verdict: "won", note: `${player}: scored both halves ✓` };
+      return done
+        ? { verdict: "lost", note: `${player}: ${firstHalf ? "1st ✓" : "1st —"} ${secondHalf ? "2nd ✓" : "2nd —"}` }
+        : { verdict: "alive", note: `${player}: ${firstHalf ? "1st ✓" : "1st —"} · ${secondHalf ? "2nd ✓" : "2nd —"}` };
+    }
+
     case "resultAndBtts": {
       // 1X2 outcome AND both teams score. Like matchResult, the winner isn't
       // locked until FT, so before the whistle it only swings winning/alive.

@@ -70,6 +70,8 @@ export type SpecialGrade =
   | { type: "secondHalfScore"; home: number; away: number }
   // Both named players each score at any time ("Both Players To Score - Yes").
   | { type: "bothScored"; players: string[] }
+  // Player scores in BOTH halves — ≥1 goal at minute ≤45 AND ≥1 at minute >45.
+  | { type: "scoredBothHalves"; player: string }
   // A 1X2 outcome AND both teams score ("W1/W2/Draw + Both Teams To Score - Yes").
   | { type: "resultAndBtts"; outcome: "1" | "X" | "2" }
   // Card markets — graded off the same accent-safe nameMatch as scorers/assists.
@@ -331,6 +333,14 @@ export function gradeSpecial(special: Special): BetStatus {
       // Every listed player scores at least one (non-own) goal.
       hit = g.players.every((p) => goalsBy(goals, p).length > 0);
       break;
+    case "scoredBothHalves": {
+      // Player scores in each half — a goal at minute ≤45 AND one at minute >45.
+      const mine = goalsBy(goals, g.player);
+      const firstHalf = mine.some((gl) => gl.minute != null && gl.minute <= 45);
+      const secondHalf = mine.some((gl) => gl.minute != null && gl.minute > 45);
+      hit = firstHalf && secondHalf;
+      break;
+    }
     case "resultAndBtts": {
       // 1X2 outcome AND both teams scored (final score shows ≥1 each).
       if (!ft) break;
