@@ -6,6 +6,7 @@ import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
 import { inPlayBet, inPlaySpecial, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown } from "./RefreshCountdown";
+import { SiteNav, type NavKey } from "./SiteNav";
 
 // ── serialisable payload the server page hands down (no functions/classes) ────
 export type BetRow = {
@@ -267,9 +268,12 @@ function Performance({ rows }: { rows: InPlay[] }) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-export default function LiveTracker({ base }: { base: TrackerBase }) {
+export default function LiveTracker({ base, activeNav }: { base: TrackerBase; activeNav: NavKey }) {
   const { live, updatedAt, pollFast, nextRefreshAt } = useLive(base);
   const cur = base.meta.currency;
+  const totalToday = base.counts.score + base.counts.props;
+  const totalSeason = base.season.counts.score + base.season.counts.props;
+  const empty = totalSeason === 0;
 
   // Live "if it ended now" P&L — scoped to today's featured slate, matching the
   // staked / max-return figures in the hero (season roll-up lives below).
@@ -308,10 +312,7 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
           <span className="grid size-8 place-items-center rounded-lg bg-acid font-display text-lg font-black text-pitch">⚽</span>
           <span className="font-display text-base font-extrabold uppercase tracking-tight">Matchday Edge</span>
         </Link>
-        <nav className="flex items-center gap-4 font-mono text-[0.66rem] uppercase tracking-[0.18em]">
-          <Link href="/" className="text-faint transition-colors hover:text-ink">Predictions</Link>
-          <span className="text-acid">Tracker</span>
-        </nav>
+        <SiteNav active={activeNav} />
       </header>
 
       <section className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-10">
@@ -326,12 +327,23 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
           )}
         </div>
         <h1 className="max-w-3xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl">
-          {base.counts.score + base.counts.props} bets today. Settled live.
+          {empty
+            ? `${base.meta.owner}’s live bet tracker.`
+            : `${totalToday} bets today. Settled live.`}
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-          Today&rsquo;s slate, tracked in Malaysia time. While a match is on, each line updates second-by-second —
-          green when it&rsquo;s winning, amber while it&rsquo;s still alive, red once it can&rsquo;t land. Previous
-          days sit below.
+          {empty ? (
+            <>
+              No bets on the slip yet. Once they&rsquo;re added, every line tracks in Malaysia time —
+              green when it&rsquo;s winning, amber while it&rsquo;s still alive, red once it can&rsquo;t land.
+            </>
+          ) : (
+            <>
+              Today&rsquo;s slate, tracked in Malaysia time. While a match is on, each line updates second-by-second —
+              green when it&rsquo;s winning, amber while it&rsquo;s still alive, red once it can&rsquo;t land. Previous
+              days sit below.
+            </>
+          )}
         </p>
 
         <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -358,6 +370,19 @@ export default function LiveTracker({ base }: { base: TrackerBase }) {
           )}
         </div>
       </section>
+
+      {empty && (
+        <section className="mt-10 rounded-3xl border border-dashed border-line bg-card/30 px-6 py-16 text-center">
+          <p className="font-mono text-[0.66rem] uppercase tracking-[0.24em] text-acid">No bets tracked yet</p>
+          <h2 className="mx-auto mt-4 max-w-xl font-display text-2xl font-black uppercase tracking-tight">
+            {base.meta.owner}&rsquo;s slip is empty — for now.
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted">
+            Send your bets to Friday on WhatsApp and they&rsquo;ll show up here, settling live off the
+            real scores the moment each match kicks off.
+          </p>
+        </section>
+      )}
 
       <div className="mt-10 space-y-12">
         {base.days.map((day) => {

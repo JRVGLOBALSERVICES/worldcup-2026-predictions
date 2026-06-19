@@ -1,4 +1,5 @@
 import betsJson from "@/data/bets.json";
+import ruhanJson from "@/data/bets-ruhan.json";
 import { getFixture } from "./data";
 import type { Fixture } from "./types";
 
@@ -112,7 +113,14 @@ export type BetSlipFile = {
   specials?: Special[];
 };
 
+// Rj's slip. This file ALSO doubles as the canonical store of shared scraped
+// truth (`results` + `matchEvents`) — the build-results cron fills it for EVERY
+// finished match, not just Rj's bets — so any other owner's slip can borrow that
+// truth at runtime and only carry its own `bets`/`specials`.
 export const betSlip = betsJson as BetSlipFile;
+
+// Ruhan's slip — own meta/bets/specials, reads the shared truth above.
+export const ruhanSlip = ruhanJson as BetSlipFile;
 
 export function getResult(matchId: string): MatchResult {
   return betSlip.results[matchId] ?? { ht: null, ft: null };
@@ -147,8 +155,8 @@ export type SettledBet = Bet & {
   pnl: number;
 };
 
-export function settleAll(): SettledBet[] {
-  return betSlip.bets.map((bet) => {
+export function settleAll(slip: BetSlipFile = betSlip): SettledBet[] {
+  return slip.bets.map((bet) => {
     const status = settleBet(bet);
     const pnl = status === "won" ? profit(bet) : status === "lost" ? -bet.stake : 0;
     return {
@@ -393,8 +401,8 @@ export function gradeSpecial(special: Special): BetStatus {
   return hit ? "won" : "lost";
 }
 
-export function settleSpecials(): SettledSpecial[] {
-  return (betSlip.specials ?? []).map((s) => {
+export function settleSpecials(slip: BetSlipFile = betSlip): SettledSpecial[] {
+  return (slip.specials ?? []).map((s) => {
     const status = gradeSpecial(s);
     return {
       ...s,
