@@ -6,9 +6,22 @@ const LEADER_LABEL: Record<string, string> = {
   accuratePasses: "Passes",
   defensiveInterventions: "Defensive",
   saves: "Saves",
-  goals: "Goals",
-  assists: "Assists",
+  goals: "Top scorer",
+  assists: "Top assists",
+  goalsLeaders: "Top scorer",
+  assistsLeaders: "Top assists",
 };
+
+/** Human-readable label for any leader key — splits camelCase and drops a
+ * redundant trailing "Leaders" so a raw key never renders mashed (GOALSLEADERS). */
+function leaderLabel(key: string): string {
+  if (LEADER_LABEL[key]) return LEADER_LABEL[key];
+  return key
+    .replace(/Leaders$/i, "")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/^./, (c) => c.toUpperCase())
+    .trim();
+}
 
 /**
  * The evidence behind the call — last-10 form + W/D/L record for both sides,
@@ -150,7 +163,7 @@ function LeaderCard({ team, leaders }: { team: { name: string; flag: string }; l
           {entries.map(([k, v]) => (
             <div key={k} className="flex items-baseline justify-between gap-3 text-sm">
               <dt className="shrink-0 font-mono text-[0.62rem] uppercase tracking-wider text-faint">
-                {LEADER_LABEL[k] ?? k}
+                {leaderLabel(k)}
               </dt>
               <dd className="truncate text-right text-muted">{v}</dd>
             </div>
