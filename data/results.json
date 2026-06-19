@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-19T22:20:25.807Z",
+    "generatedAt": "2026-06-19T23:20:21.435Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 9,
     "live": 1
@@ -1012,7 +1012,10 @@
     },
     "sco-mor-2026-06-19": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "score": {
         "home": 0,
@@ -1028,24 +1031,31 @@
           "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Issa Diop",
+          "minute": 22,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-19T22:00:00.000Z",
       "stats": {
         "corners": {
           "home": 0,
-          "away": 1
+          "away": 5
         },
         "sot": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 0,
-          "away": 1
+          "home": 2,
+          "away": 7
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -1053,7 +1063,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -1061,8 +1071,8 @@
             0
           ],
           "away": [
-            2,
-            0
+            3,
+            2
           ]
         },
         "sotByHalf": {
@@ -1072,10 +1082,12 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
-        "playerSot": {}
+        "playerSot": {
+          "Bilal El Khannouss": 1
+        }
       }
     }
   }
