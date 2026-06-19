@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-19T09:03:46.082Z",
+    "generatedAt": "2026-06-19T17:43:45.963Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -965,119 +965,120 @@
     "usa-aus-2026-06-19": {
       "win": {
         "pick": "USA",
-        "fairOdds": "1.95",
-        "reason": "USA opened with a dazzling 4-1 win over Paraguay (Balogun brace) and play at home in front of a Seattle crowd; deeper, more talented squad. But Australia arrive on a 2-0 win over Türkiye, sit deep, and defend in a back three — USA dominating possession vs a compact block makes a draw or low-scoring grind a real ~30% outcome, so this is a probable not a lock."
+        "fairOdds": "1.9",
+        "reason": "USA dominate possession at home in Seattle and beat Paraguay 4-1, but Pulisic OUT (calf) removes their top creator/scorer, and Australia's youngest-ever XI sits in a compact back-five low block built to counter. ~52-55% USA, with a real draw/upset tail (~45%); not a certainty."
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "2.9",
-        "alt": "0-0",
-        "altOdds": "2.6"
+        "score": "0-0",
+        "fairOdds": "2.4",
+        "alt": "1-0",
+        "altOdds": "3.0"
       },
       "htft": {
-        "pick": "USA/USA",
-        "fairOdds": "2.7"
+        "pick": "Draw/USA",
+        "fairOdds": "4.2"
       },
       "fullTime": {
-        "score": "2-0",
+        "score": "1-0",
         "fairOdds": "6.5"
       },
       "scorers": [
         {
-          "player": "Christian Pulisic",
-          "fairOdds": "2.5",
-          "banker": false,
-          "note": "Primary attacking outlet and creator; also penalty/free-kick taker (13/15 from the spot). Top scoring threat but Australia's deep block limits clear chances."
-        },
-        {
           "player": "Folarin Balogun",
           "fairOdds": "2.6",
           "banker": false,
-          "note": "Scored twice vs Paraguay and leads the line; in form, but faces a packed three-man Australian central defence."
+          "note": "Led the line and scored a brace vs Paraguay; now USA's focal striker and a co-penalty option with Pulisic out. Faces a packed Souttar/Burgess box, so far from a lock."
         },
         {
-          "player": "Timothy Weah",
+          "player": "Ricardo Pepi",
+          "fairOdds": "3.4",
+          "banker": false,
+          "note": "Promoted to start in Pulisic's place; sharp box-poacher and interchangeable with Balogun on pens. Good value as a fresh starter against a deep block."
+        },
+        {
+          "player": "Malik Tillman",
           "fairOdds": "4.5",
           "banker": false,
-          "note": "Right-wing pace and direct running to exploit space behind Australia's wing-backs; secondary goal threat."
+          "note": "Operates as the advanced No.10/inside-forward inheriting much of Pulisic's creative+shooting load; arrives late into the box."
         },
         {
-          "player": "Giovanni Reyna",
-          "fairOdds": "5.0",
+          "player": "Nestory Irankunda",
+          "fairOdds": "7.0",
           "banker": false,
-          "note": "Scored late vs Paraguay; creative No.10 who can arrive in the box, though may rotate or come off the bench."
+          "note": "Australia's counter outlet and Türkiye scorer; pace in transition makes him the away side's most likely scorer if USA over-commit."
         }
       ],
       "assists": [
         {
-          "player": "Christian Pulisic",
-          "fairOdds": "3.5",
-          "banker": false,
-          "note": "Chief creator and set-piece deliverer; most USA chances run through him."
-        },
-        {
           "player": "Antonee Robinson",
-          "fairOdds": "6.0",
+          "fairOdds": "5.0",
           "banker": false,
-          "note": "Overlapping left-back whose crossing feeds Balogun — if fully fit after May knee surgery."
+          "note": "Overlapping left-back is USA's main width and cut-back source against a low block now that Pulisic isn't hugging that flank."
         },
         {
           "player": "Weston McKennie",
-          "fairOdds": "7.0",
+          "fairOdds": "6.0",
           "banker": false,
-          "note": "Late central-midfield runs and link play into the final third."
+          "note": "Box-crashing central midfielder; deliveries and second-phase set-piece knockdowns feed Balogun/Pepi."
+        },
+        {
+          "player": "Malik Tillman",
+          "fairOdds": "5.5",
+          "banker": false,
+          "note": "Primary line-breaking passer between the lines feeding the front line; through-balls to Balogun were a feature vs Paraguay."
         }
       ],
       "penalty": {
         "likelihood": "Medium",
-        "taker": "Christian Pulisic",
-        "backup": "Folarin Balogun",
-        "note": "USA likely to draw fouls/handballs vs a deep block defending its own box; Pulisic is the designated taker (13/15), Balogun/Pepi if Pulisic is off."
+        "taker": "Folarin Balogun",
+        "backup": "Ricardo Pepi",
+        "note": "Pulisic (13/15, USA's designated taker) is OUT, so duty shifts to Balogun, with Pepi interchangeable per RotoWire/Yahoo. Australia defending deep with a back-five raises box-contact/handball risk, keeping pen odds live but not high."
       },
       "lineups": {
-        "home": "Matt Turner; Sergiño Dest, Chris Richards, Tim Ream, Antonee Robinson; Tyler Adams, Weston McKennie; Timothy Weah, Giovanni Reyna, Christian Pulisic; Folarin Balogun (4-2-3-1)",
-        "away": "Patrick Beach; Alessandro Circati, Harry Souttar, Cameron Burgess; Jacob Italiano, Aiden O'Neill, Paul Okon-Engstler, Jordan Bos; Nestory Irankunda, Connor Metcalfe; Mohamed Toure (3-4-2-1)",
-        "status": "probable"
+        "home": "Freese; Dest, Richards, Ream (C), Robinson; Adams, McKennie, Freeman; Tillman, Pepi, Balogun (4-3-3)",
+        "away": "Beach; Italiano, Circati, Souttar (C), Burgess, Bos; O'Neill, Metcalfe, Okon-Engstler; Irankunda, Toure (5-4-1 / 3-4-3 hybrid)",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
           "player": "Christian Pulisic",
           "team": "USA",
-          "note": "Talisman, primary creator and penalty/FK taker; minor fitness question reported pre-match but expected to start."
+          "note": "RULED OUT with a calf injury kicked in the Paraguay win; he is USA's primary scorer and designated penalty taker (13/15) — his absence reshapes the scorer, assist and penalty markets."
+        },
+        {
+          "player": "Ricardo Pepi",
+          "team": "USA",
+          "note": "Direct replacement in the starting XI; box-finisher and co-penalty option, adds a second genuine striker threat alongside Balogun."
         },
         {
           "player": "Folarin Balogun",
           "team": "USA",
-          "note": "Bagged a brace vs Paraguay; spearheads the 4-2-3-1 and is USA's main central threat."
+          "note": "In red-hot form after a brace vs Paraguay; now the focal striker and likely first-choice penalty taker, but no banker against a 5-man block."
         },
         {
-          "player": "Antonee Robinson",
-          "team": "USA",
-          "note": "Returning from May knee surgery and limited 2025-26 minutes; fitness/overlap output worth monitoring."
-        },
-        {
-          "player": "Tyler Adams",
-          "team": "USA",
-          "note": "Holding-midfield engine; key to breaking Australia's transitions and screening the back line."
-        },
-        {
-          "player": "Nestory Irankunda",
+          "player": "Patrick Beach",
           "team": "Australia",
-          "note": "Scored vs Türkiye; Australia's spark in the front two and a live counter-attack and penalty option."
+          "note": "22-year-old keeper kept a clean sheet with 8 saves vs Türkiye on debut; in form and the key to any Australia clean-sheet/under-2.5 outcome."
         },
         {
           "player": "Harry Souttar",
           "team": "Australia",
-          "note": "Towering centre-back anchoring the back three; aerial dominance makes USA's clean sheet vs them harder than it looks."
+          "note": "Captain and aerial anchor of the deep back-five; a set-piece threat at the other end and the reason USA's correct-score/win-to-nil lines are downgraded."
+        },
+        {
+          "player": "Nestory Irankunda",
+          "team": "Australia",
+          "note": "Scored vs Türkiye; Australia's main counter-attacking outlet whose pace can out-xG a dominant USA if they leave space in transition."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.rotowire.com/soccer/article/usa-vs-australia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118651",
-        "https://www.sportsmole.co.uk/football/usa/world-cup-2026/predicted-lineups/will-pulisic-be-fit-to-start-predicted-usa-lineup-vs-australia_599438.html",
-        "https://www.si.com/soccer/usmnt-predicted-lineup-vs-australia-world-cup-group-d-6-19-26",
-        "https://www.espn.com/soccer/report/_/gameId/760421",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://sports.yahoo.com/soccer/live/usmnt-vs-australia-score-live-updates-where-to-watch-world-cup-2026-christian-pulisic-injury-news-lineups-170000908.html",
+        "https://www.cbssports.com/soccer/news/usmnt-projected-world-cup-lineup-australia-christian-pulisic-injury-usa-soccer/",
+        "https://www.fanduel.com/research/us-vs-australia-confirmed-lineups-predictions-projections-availability-world-cup-2026-pulisic-out",
+        "https://www.espn.com/soccer/story/_/id/49093966/fifa-world-cup-2026-usmnt-vs-australia-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.si.com/soccer/usmnt-predicted-lineup-vs-australia-world-cup-group-d-6-19-26"
       ]
     },
     "sco-mor-2026-06-19": {
