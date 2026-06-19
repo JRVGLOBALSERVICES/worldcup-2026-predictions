@@ -33,7 +33,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
                 g.hitCount >= 2 ? "bg-acid/15 text-acid" : "bg-card text-muted"
               }`}
             >
-              {g.hitCount}/{g.gradedCount} markets hit
+              {g.hitCount} of {g.gradedCount} markets hit
             </span>
           )}
         </div>
@@ -55,7 +55,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
             </span>
             <span
               className={`font-semibold ${
-                m.verdict === "hit" ? "text-acid" : m.verdict === "miss" ? "text-muted line-through decoration-rose/60" : "text-ink"
+                m.verdict === "hit" ? "text-acid" : m.verdict === "miss" ? "text-muted line-through decoration-rose" : "text-ink"
               }`}
             >
               {m.predicted}
@@ -75,7 +75,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
         <div className="mb-2.5 flex items-baseline justify-between">
           <SectionLabel>Anytime scorers</SectionLabel>
           <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
-            {scored}/{g.scorers.length} {live ? "scored so far" : "landed"}
+            {scored} of {g.scorers.length} {live ? "scored so far" : "landed"}
           </span>
         </div>
         <div className="flex flex-wrap gap-2">

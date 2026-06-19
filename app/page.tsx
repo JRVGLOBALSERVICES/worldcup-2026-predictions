@@ -135,7 +135,7 @@ export default function Home() {
                 </span>
                 <span className="flex items-center gap-3">
                   <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                    {d.fixtures.filter((f) => hasPrediction(f.id)).length}/{d.fixtures.length} called
+                    {d.fixtures.filter((f) => hasPrediction(f.id)).length} of {d.fixtures.length} called
                   </span>
                   <Chevron />
                 </span>

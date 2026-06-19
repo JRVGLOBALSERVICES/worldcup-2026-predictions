@@ -30,12 +30,12 @@ export function StrengthMeter({
   size?: "sm" | "md";
 }) {
   const v = Math.max(1, Math.min(5, Math.round(value)));
-  const tone = v >= 4 ? "acid" : v === 3 ? "amber" : "faint";
-  const fill = { acid: "bg-acid", amber: "bg-amber", faint: "bg-faint" } as const;
-  const text = { acid: "text-acid", amber: "text-amber", faint: "text-faint" } as const;
+  const tone = v >= 4 ? "acid" : v === 3 ? "amber" : "plain";
+  const fill = { acid: "bg-acid", amber: "bg-amber", plain: "bg-ink" } as const;
+  const text = { acid: "text-acid", amber: "text-amber", plain: "text-ink" } as const;
   const seg = size === "sm" ? "h-2 w-1" : "h-3 w-1.5";
   return (
-    <span className="inline-flex shrink-0 items-center gap-2" title={`Strength ${v}/5${label ? ` — ${label}` : ""}`}>
+    <span className="inline-flex shrink-0 items-center gap-2" title={`Strength ${v} of 5${label ? ` — ${label}` : ""}`}>
       <span className="inline-flex items-end gap-[3px]" aria-hidden>
         {[1, 2, 3, 4, 5].map((i) => (
           <span
@@ -44,8 +44,8 @@ export function StrengthMeter({
           />
         ))}
       </span>
-      <span className={`tnum font-mono text-[0.72rem] leading-none ${text[tone]}`}>
-        {v}<span className="text-faint">/5</span>
+      <span className={`tnum font-mono text-[0.78rem] font-semibold leading-none ${text[tone]}`}>
+        {v}
         {label && size === "md" && <span className="ml-1.5 uppercase tracking-wider">{label}</span>}
       </span>
     </span>

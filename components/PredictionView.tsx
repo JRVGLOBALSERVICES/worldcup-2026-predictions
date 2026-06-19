@@ -46,7 +46,7 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
         </MarketTile>
         <MarketTile
           label="Half-time / full-time"
-          big={pred.htft.pick}
+          big={pred.htft.pick.replace(/\s*\/\s*/g, " → ")}
           strength={strengthFromOdds(pred.htft.fairOdds, pred.htft.strength)}
         />
       </div>
