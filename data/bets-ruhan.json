@@ -1,14 +1,104 @@
 {
   "meta": {
     "owner": "Ruhan",
-    "placedAt": "2026-06-19T16:00:00.000Z",
+    "placedAt": "2026-06-19T15:01:00.000Z",
     "currency": "RM",
     "unitStake": 10,
-    "note": "",
-    "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
+    "note": "8 single bets (288 RM) on the 19/06 night slate. Bet #5 (Brazil/Haiti Over 2.5 total goals) auto-settles live off the score. The other seven stack corner / shots-on-target conditions the live feed doesn't carry — those are confirmed by hand at full-time.",
+    "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Several legs depend on corners/cards the live feed can't see — they settle manually at full-time."
   },
   "results": {},
   "matchEvents": {},
   "bets": [],
-  "specials": []
+  "specials": [
+    {
+      "id": "sp-83302159249",
+      "slipNo": "83302159249",
+      "matchId": "bra-hai-2026-06-19",
+      "player": "Brazil v Haiti",
+      "market": "Total Over 2.5",
+      "label": "Brazil/Haiti: Over 2.5 total goals",
+      "odds": 1.3,
+      "stake": 40,
+      "placedAt": "19/06 22:58",
+      "grade": { "type": "matchGoalsOver", "line": 2.5 }
+    },
+    {
+      "id": "sp-83302245427",
+      "slipNo": "83302245427",
+      "matchId": "tur-par-2026-06-19",
+      "player": "Turkiye v Paraguay",
+      "market": "Goals + corners + cards",
+      "label": "Turkiye/Paraguay: Over 2.5 goals + Over 5.5 corners + Over 2.5 cards",
+      "odds": 2.75,
+      "stake": 40,
+      "placedAt": "19/06 23:01"
+    },
+    {
+      "id": "sp-83302263409",
+      "slipNo": "83302263409",
+      "matchId": "tur-par-2026-06-19",
+      "player": "Turkiye v Paraguay",
+      "market": "Win + cards + corners",
+      "label": "Paraguay to win + Turkiye most cards + Paraguay most corners",
+      "odds": 34,
+      "stake": 28,
+      "placedAt": "19/06 23:01"
+    },
+    {
+      "id": "sp-83302217877",
+      "slipNo": "83302217877",
+      "matchId": "bra-hai-2026-06-19",
+      "player": "Brazil v Haiti",
+      "market": "Win + BTTS + corners + cards",
+      "label": "Brazil to win + both teams to score + each team 2+ corners + each team 1+ cards",
+      "odds": 29,
+      "stake": 20,
+      "placedAt": "19/06 23:00"
+    },
+    {
+      "id": "sp-83302184773",
+      "slipNo": "83302184773",
+      "matchId": "bra-hai-2026-06-19",
+      "player": "Brazil v Haiti",
+      "market": "Goals + corners + cards",
+      "label": "Brazil/Haiti: Over 2.5 goals + Over 8.5 corners + Over 3.5 cards",
+      "odds": 5,
+      "stake": 40,
+      "placedAt": "19/06 22:59"
+    },
+    {
+      "id": "sp-83302121279",
+      "slipNo": "83302121279",
+      "matchId": "sco-mor-2026-06-19",
+      "player": "Scotland v Morocco",
+      "market": "Win + corners + cards",
+      "label": "Morocco to win + 10–12 corners + fewer than 4 cards",
+      "odds": 8.5,
+      "stake": 40,
+      "placedAt": "19/06 22:58"
+    },
+    {
+      "id": "sp-83302094539",
+      "slipNo": "83302094539",
+      "matchId": "usa-aus-2026-06-19",
+      "player": "USA v Australia",
+      "market": "Corners + SOT each half",
+      "label": "USA/Australia: each team 1+ corners and 1+ shots on target in each half",
+      "odds": 2.88,
+      "stake": 40,
+      "placedAt": "19/06 22:57"
+    },
+    {
+      "id": "sp-83302065805",
+      "slipNo": "83302065805",
+      "matchId": "usa-aus-2026-06-19",
+      "player": "USA v Australia",
+      "market": "BTTS + corners + cards",
+      "label": "USA/Australia: both teams to score + each team 2+ corners + each team 1+ cards",
+      "odds": 8.5,
+      "stake": 40,
+      "placedAt": "19/06 22:56"
+    }
+  ]
 }

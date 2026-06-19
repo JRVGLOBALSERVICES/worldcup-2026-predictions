@@ -355,6 +355,17 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         : { verdict: "alive", note: `${player} on the pitch` };
     }
 
+    case "matchGoalsOver": {
+      // Total goals (both teams) over the line. Goals only accrue, so once the
+      // line is cleared it's a locked win; until then it climbs winning/alive.
+      const total = cur.home + cur.away;
+      const need = Math.ceil(g.line + 0.5);
+      if (total > g.line) return { verdict: "won", note: `${total} goals ✓ (${cur.home}–${cur.away})` };
+      return done
+        ? { verdict: "lost", note: `Ended ${cur.home}–${cur.away} · ${total} goals (need ${need})` }
+        : { verdict: "alive", note: `${total}/${need} goals · ${cur.home}–${cur.away}` };
+    }
+
     default:
       return { verdict: "scheduled", note: "Not started" };
   }

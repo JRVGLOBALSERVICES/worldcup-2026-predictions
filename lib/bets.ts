@@ -78,7 +78,10 @@ export type SpecialGrade =
   // Card markets — graded off the same accent-safe nameMatch as scorers/assists.
   // "carded" = player shown any card (yellow or red); "sentOff" = player dismissed (red).
   | { type: "carded"; player: string }
-  | { type: "sentOff"; player: string };
+  | { type: "sentOff"; player: string }
+  // Match TOTAL goals (both teams) strictly over `line` — "Total Over (2.5)".
+  // The only corner-free, fully-gradeable leg in the team-special slips.
+  | { type: "matchGoalsOver"; line: number };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -389,6 +392,10 @@ export function gradeSpecial(special: Special): BetStatus {
       hit = outcome === g.outcome;
       break;
     }
+    case "matchGoalsOver":
+      // Total match goals (both teams, incl. own goals) strictly over the line.
+      hit = !!ft && ft.home + ft.away > g.line;
+      break;
     case "carded":
       // Player shown any card during the match (yellow or red).
       hit = cardsBy(cards, g.player).length > 0;
