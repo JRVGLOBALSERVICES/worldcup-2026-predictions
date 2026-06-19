@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-19T18:49:34.832Z",
+    "generatedAt": "2026-06-19T19:20:21.193Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 8,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -877,6 +877,80 @@
           "away": [
             0,
             2
+          ]
+        }
+      }
+    },
+    "usa-aus-2026-06-19": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Cameron Burgess",
+          "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Jordan Bos",
+          "minute": 16,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-19T19:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "sot": {
+          "home": 0,
+          "away": 1
+        },
+        "shots": {
+          "home": 4,
+          "away": 2
+        },
+        "yellow": {
+          "home": 0,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 1
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            1,
+            0
           ]
         }
       }
