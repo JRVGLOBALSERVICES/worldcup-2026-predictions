@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-18T21:44:42.476Z",
+    "generatedAt": "2026-06-19T00:23:17.533Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -847,120 +847,119 @@
     "mex-sou-2026-06-18": {
       "win": {
         "pick": "Mexico",
-        "fairOdds": "2.10",
-        "reason": "Hosts in Guadalajara with home support, superior depth and a 2-0 opener over South Africa; Korea travel well and can hit on the break but Mexico's tournament experience and home edge make them favourites in a tight top-of-table clash."
+        "fairOdds": "1.95",
+        "reason": "Mexico are home in Guadalajara with a settled 4-3-3 and Edson Alvarez restoring midfield steel alongside Lira and Romo, plus Alvarado, Gutierrez and Quiñones giving width and creation around Jimenez. South Korea defend in a compact block off Kim Min-jae and counter through Son and Lee Kang-in, which makes this a genuine draw risk rather than a formality — Mexico are ~55% favourites, so the win is far from a certainty."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.40",
+        "fairOdds": "2.10",
         "alt": "1-0 Mexico",
-        "altOdds": "4.20"
+        "altOdds": "3.40"
       },
       "htft": {
         "pick": "Draw/Mexico",
-        "fairOdds": "5.50"
+        "fairOdds": "4.20"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.50"
+        "score": "1-0",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Raul Jimenez",
-          "fairOdds": "3.40",
-          "banker": true,
-          "note": "Scored in the opener vs South Africa; leads the line and is Mexico's primary penalty-box threat at home."
+          "fairOdds": "3.20",
+          "banker": false,
+          "note": "Leads the line and scored vs South Africa, but at 34 he is a finisher of chances, not a banker against a deep Korean block marshalled by Kim Min-jae."
+        },
+        {
+          "player": "Julian Quiñones",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Wide runner who gets in behind the Korean full-backs (Seol Young-woo, Kim Moon-hwan); a real cut-inside threat from the right channel."
         },
         {
           "player": "Son Heung-min",
-          "fairOdds": "3.80",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "Captain and Korea's talisman; main goal threat from the left and central runs, set-piece and penalty taker."
+          "note": "Korea's primary goal threat and penalty taker, dangerous on the counter, but at 33 leading the line against Vasquez/Alvarez he is not a banker."
         },
         {
           "player": "Santiago Gimenez",
-          "fairOdds": "4.20",
-          "banker": false,
-          "note": "Returning from an ankle knock; likely impact sub or starter, genuine penalty-box striker after his Milan move."
-        },
-        {
-          "player": "Hwang Hee-chan",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Premier League pace from Wolves; dangerous on the counter against Mexico's high line."
+          "note": "On the bench but Mexico's clearest impact sub — a genuine penalty-box striker who could be sent on to chase a goal against a tiring low block."
         }
       ],
       "assists": [
         {
-          "player": "Lee Kang-in",
-          "fairOdds": "4.50",
-          "banker": true,
-          "note": "PSG creator and Korea's chief playmaker; assisted/created in the Czechia win and takes set pieces."
-        },
-        {
-          "player": "Orbelin Pineda",
+          "player": "Roberto Alvarado",
           "fairOdds": "5.00",
           "banker": false,
-          "note": "Mexico's creative midfield hub, set-piece deliveries and through balls."
+          "note": "Confirmed starter and a chief creator from the right/half-spaces feeding Jimenez and the runners."
         },
         {
-          "player": "Hwang In-beom",
-          "fairOdds": "6.00",
+          "player": "Brian Gutierrez",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Scored and provided the assist for the winner vs Czechia; deep-lying chance creator."
+          "note": "Starting creator with line-breaking passing; key supply line into the box for Mexico."
+        },
+        {
+          "player": "Lee Kang-in",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Korea's chief creator and set-piece taker; his vision and delivery is the main route to feed Son on the break and from dead balls."
         }
       ],
       "penalty": {
         "likelihood": "medium",
         "taker": "Son Heung-min",
         "backup": "Lee Kang-in",
-        "note": "If Korea win a spot-kick Son is first choice with Lee Kang-in backup; for Mexico, Raul Jimenez/Orbelin Pineda would step up."
+        "note": "For Korea, Son is the established penalty taker with Lee Kang-in on free-kicks/backup. For Mexico, Raul Jimenez is the likely spot-kick taker, with Alvarado as an alternative; medium likelihood given Mexico's pressure into a packed box."
       },
       "lineups": {
-        "home": "Ochoa; Sanchez, Montes, Vasquez, Gallardo; Alvarez, Pineda; Reyes, Mora, Vega; Jimenez",
-        "away": "Kim Seung-gyu; Seol Young-woo, Kim Min-jae, Lee Han-beom, Lee Gi-hyuk; Hwang In-beom, Paik Seung-ho; Lee Kang-in, Lee Jae-sung, Son Heung-min; Hwang Hee-chan",
-        "status": "probable"
+        "home": "Rangel; Sanchez, Vasquez, Alvarez, Gallardo; Lira, Romo, Gutierrez; Alvarado, Quiñones, Jimenez",
+        "away": "Kim Seung-gyu; Seol Young-woo, Kim Min-jae, Lee Han-beom, Kim Moon-hwan; Lee Gi-hyuk, Hwang In-beom, Paik Seung-ho; Lee Kang-in, Lee Jae-sung, Son Heung-min",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Raul Jimenez",
-          "team": "Mexico",
-          "note": "On the scoresheet in the opener; carries the line and the emotional weight of a home World Cup."
-        },
-        {
-          "player": "Santiago Gimenez",
-          "team": "Mexico",
-          "note": "Ankle injury kept him out vs South Africa; available, Aguirre may unleash him in a tight game."
-        },
-        {
           "player": "Edson Alvarez",
           "team": "Mexico",
-          "note": "Captain and midfield anchor; key to screening against Korea's counters and Lee Kang-in."
+          "note": "Steps in for suspended Cesar Montes (red vs South Africa); his ball-winning and aerial presence shore up the back line and let Lira/Romo push."
+        },
+        {
+          "player": "Luis Romo",
+          "team": "Mexico",
+          "note": "Comes in for Alvaro Fidalgo to add legs and progression in the engine room of the 4-3-3."
+        },
+        {
+          "player": "Raul Jimenez",
+          "team": "Mexico",
+          "note": "Lone striker who scored in the 2-0 opener; focal point but reliant on service against a deep block."
         },
         {
           "player": "Son Heung-min",
           "team": "South Korea",
-          "note": "Captain at his fourth World Cup, now at LAFC; Korea's main goal and set-piece threat."
+          "note": "Captain and talisman leading the line with Hwang Hee-chan benched; Korea's main outlet on the counter and penalty/free-kick threat."
+        },
+        {
+          "player": "Hwang In-beom",
+          "team": "South Korea",
+          "note": "Scored and assisted in the 2-1 comeback over Czechia; the deep-lying metronome who springs Korean counters to Son and Lee Kang-in."
         },
         {
           "player": "Kim Min-jae",
           "team": "South Korea",
-          "note": "Bayern Munich centre-back anchoring a back three; key to containing Jimenez."
-        },
-        {
-          "player": "Lee Kang-in",
-          "team": "South Korea",
-          "note": "PSG playmaker and set-piece taker; Korea's primary creative outlet."
+          "note": "Bayern anchor of the Korean back line; his organisation and aerial dominance are the wall Mexico must break to avoid a draw."
         }
       ],
       "confidence": "medium",
       "sources": [
+        "https://bolavip.com/en/world-cup/predicted-lineups-for-mexico-vs-south-korea-today-in-2026-world-cup-matchday-2",
         "https://www.espn.com/soccer/story/_/id/49079638/mexico-vs-south-korea-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://www.sportsmole.co.uk/football/mexico/world-cup-2026/preview/mexico-vs-south-korea-prediction-team-news-lineups_599397.html",
-        "https://theanalyst.com/articles/mexico-vs-south-korea-prediction-world-cup-2026-match-preview",
-        "https://www.fourfourtwo.com/team/mexico-world-cup-2026-squad",
-        "https://www.fourfourtwo.com/team/south-korea-world-cup-2026-squad",
-        "https://www.espn.com/soccer/report/_/gameId/760414"
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.si.com/soccer/mexico-vs-south-korea-world-cup-preview-predictions-lineups-6-18-26",
+        "https://worldsoccertalk.com/world-cup/south-korea-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/"
       ]
     }
   }
