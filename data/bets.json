@@ -47,6 +47,46 @@
         "home": 1,
         "away": 3
       }
+    },
+    "cze-sou-2026-06-18": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    "swi-bos-2026-06-18": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 4,
+        "away": 1
+      }
+    },
+    "can-qat-2026-06-18": {
+      "ht": {
+        "home": 3,
+        "away": 0
+      },
+      "ft": {
+        "home": 6,
+        "away": 0
+      }
+    },
+    "mex-sou-2026-06-18": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 0
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -181,8 +221,222 @@
       ]
     },
     "cze-sou-2026-06-18": {
-      "status": "scheduled",
-      "goals": []
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Michal Sadílek",
+          "minute": 5,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Teboho Mokoena",
+          "minute": 83,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Teboho Mokoena",
+          "minute": 33,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Thalente Mbatha",
+          "minute": 40,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Ladislav Krejcí",
+          "minute": 75,
+          "type": "yellow"
+        }
+      ]
+    },
+    "swi-bos-2026-06-18": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Johan Manzambi",
+          "minute": 74,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Rubén Vargas",
+          "minute": 84,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Johan Manzambi",
+          "minute": 89,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ermin Mahmic",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Granit Xhaka",
+          "minute": 90,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Amar Dedic",
+          "minute": 59,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Edin Dzeko",
+          "minute": 60,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nico Elvedi",
+          "minute": 65,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Tarik Muharemovic",
+          "minute": 79,
+          "type": "red"
+        }
+      ]
+    },
+    "can-qat-2026-06-18": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Cyle Larin",
+          "minute": 16,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Jonathan David",
+          "minute": 28,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Jonathan David",
+          "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Nathan Saliba",
+          "minute": 63,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mohamed Manai",
+          "minute": 74,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
+        },
+        {
+          "team": "home",
+          "scorer": "Jonathan David",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Derek Cornelius",
+          "minute": 8,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Homam Ahmed",
+          "minute": 33,
+          "type": "red"
+        },
+        {
+          "team": "away",
+          "player": "Assim Madibo",
+          "minute": 53,
+          "type": "red"
+        },
+        {
+          "team": "away",
+          "player": "Ahmed Fathy",
+          "minute": 62,
+          "type": "yellow"
+        }
+      ]
+    },
+    "mex-sou-2026-06-18": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Luis Romo",
+          "minute": 50,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Lee Kang-In",
+          "minute": 4,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Paik Seung-Ho",
+          "minute": 58,
+          "type": "yellow"
+        }
+      ]
     }
   },
   "bets": [
