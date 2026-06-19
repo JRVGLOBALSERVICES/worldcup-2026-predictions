@@ -58,6 +58,61 @@ export function LiveScore({ matchId }: { matchId: string }) {
           ))}
         </ul>
       )}
+      {lm.stats && (
+        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 border-t border-line/50 pt-2 font-mono text-[0.58rem] uppercase leading-none tracking-wider">
+          <StatPair label="Cor" h={lm.stats.corners.home} a={lm.stats.corners.away} />
+          <StatPair label="SOT" h={lm.stats.sot.home} a={lm.stats.sot.away} />
+          <StatPair label="Sh" h={lm.stats.shots.home} a={lm.stats.shots.away} />
+          <StatPair
+            label="Crd"
+            h={lm.stats.cards.home}
+            a={lm.stats.cards.away}
+            sub={`${lm.stats.yellow.home + lm.stats.yellow.away}Y ${lm.stats.red.home + lm.stats.red.away}R`}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** One home–away stat token shared by the card row and the detail block. */
+function StatPair({ label, h, a, sub }: { label: string; h: number; a: number; sub?: string }) {
+  return (
+    <span className="inline-flex items-baseline gap-1">
+      <span className="text-faint">{label}</span>
+      <span className="tnum text-acid">{h}</span>
+      <span className="text-faint">–</span>
+      <span className="tnum text-mint">{a}</span>
+      {sub && <span className="text-faint">({sub})</span>}
+    </span>
+  );
+}
+
+/**
+ * Verified ESPN match stats (corners / shots on target / shots / cards) for the
+ * match-detail page. Renders once a match is live or finished and the per-event
+ * summary has landed — the same counts the bet tracker settles combos against.
+ */
+export function LiveStats({ matchId }: { matchId: string }) {
+  const lm = useLiveMatch(matchId);
+  if (!lm || lm.state === "scheduled" || !lm.stats) return null;
+  const s = lm.stats;
+  return (
+    <div className="mt-6 rounded-2xl border border-line bg-card/50 p-5">
+      <h3 className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
+        Match stats {lm.state === "finished" ? "(full time)" : "(live)"} · verified vs ESPN
+      </h3>
+      <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-[0.78rem] uppercase tracking-wider">
+        <StatPair label="Corners" h={s.corners.home} a={s.corners.away} />
+        <StatPair label="On target" h={s.sot.home} a={s.sot.away} />
+        <StatPair label="Shots" h={s.shots.home} a={s.shots.away} />
+        <StatPair
+          label="Cards"
+          h={s.cards.home}
+          a={s.cards.away}
+          sub={`${s.yellow.home + s.yellow.away}Y ${s.red.home + s.red.away}R`}
+        />
+      </div>
     </div>
   );
 }

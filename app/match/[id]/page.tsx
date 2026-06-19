@@ -6,7 +6,7 @@ import { PredictionView } from "@/components/PredictionView";
 import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
 import { LiveProvider } from "@/components/LiveProvider";
-import { MatchHeaderScore, LiveStatusLine, LiveGoalLog } from "@/components/LiveScore";
+import { MatchHeaderScore, LiveStatusLine, LiveGoalLog, LiveStats } from "@/components/LiveScore";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 
 export function generateStaticParams() {
@@ -91,6 +91,8 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       </header>
 
       <LiveGoalLog matchId={fixture.id} />
+
+      <LiveStats matchId={fixture.id} />
 
       {pred && (
         <div className="mt-8">
