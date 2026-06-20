@@ -117,6 +117,16 @@
         "home": 3,
         "away": 0
       }
+    },
+    "tur-par-2026-06-19": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -611,6 +621,45 @@
           "team": "away",
           "player": "Danley Jean Jacques",
           "minute": 72,
+          "type": "yellow"
+        }
+      ]
+    },
+    "tur-par-2026-06-19": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Matías Galarza",
+          "minute": 1,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Matías Galarza",
+          "minute": 3,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Miguel Almirón",
+          "minute": 45,
+          "type": "red"
+        },
+        {
+          "team": "home",
+          "player": "Unknown",
+          "minute": 63,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Eren Elmali",
+          "minute": 71,
           "type": "yellow"
         }
       ]
@@ -3754,19 +3803,19 @@
     },
     "tur-par-2026-06-19": {
       "corners": {
-        "home": 6,
+        "home": 12,
         "away": 0
       },
       "sot": {
-        "home": 2,
+        "home": 5,
         "away": 2
       },
       "shots": {
-        "home": 14,
-        "away": 4
+        "home": 32,
+        "away": 7
       },
       "yellow": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "red": {
@@ -3774,13 +3823,13 @@
         "away": 1
       },
       "cards": {
-        "home": 0,
+        "home": 1,
         "away": 2
       },
       "cornersByHalf": {
         "home": [
           5,
-          1
+          7
         ],
         "away": [
           0,
@@ -3790,7 +3839,7 @@
       "sotByHalf": {
         "home": [
           1,
-          1
+          4
         ],
         "away": [
           1,
@@ -3800,7 +3849,9 @@
       "playerSot": {
         "Kenan Yildiz": 1,
         "Juan Jose Cáceres": 1,
-        "Merih Demiral": 1
+        "Merih Demiral": 2,
+        "Deniz Gül": 1,
+        "Can Uzun": 1
       }
     }
   }

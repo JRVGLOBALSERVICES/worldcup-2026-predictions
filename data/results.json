@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T04:20:24.760Z",
+    "generatedAt": "2026-06-20T05:20:28.583Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 11,
-    "live": 1
+    "finished": 12,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1221,12 +1221,15 @@
       }
     },
     "tur-par-2026-06-19": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
       "score": {
         "home": 0,
         "away": 1
@@ -1253,24 +1256,36 @@
           "player": "Miguel Almirón",
           "minute": 45,
           "type": "red"
+        },
+        {
+          "team": "home",
+          "player": "Unknown",
+          "minute": 63,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Eren Elmali",
+          "minute": 71,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-20T03:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 6,
+          "home": 12,
           "away": 0
         },
         "sot": {
-          "home": 2,
+          "home": 5,
           "away": 2
         },
         "shots": {
-          "home": 14,
-          "away": 4
+          "home": 32,
+          "away": 7
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "red": {
@@ -1278,13 +1293,13 @@
           "away": 1
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 2
         },
         "cornersByHalf": {
           "home": [
             5,
-            1
+            7
           ],
           "away": [
             0,
@@ -1294,7 +1309,7 @@
         "sotByHalf": {
           "home": [
             1,
-            1
+            4
           ],
           "away": [
             1,
@@ -1304,7 +1319,9 @@
         "playerSot": {
           "Kenan Yildiz": 1,
           "Juan Jose Cáceres": 1,
-          "Merih Demiral": 1
+          "Merih Demiral": 2,
+          "Deniz Gül": 1,
+          "Can Uzun": 1
         }
       }
     }
