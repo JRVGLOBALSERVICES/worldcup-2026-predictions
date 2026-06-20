@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T21:20:30.142Z",
+    "generatedAt": "2026-06-20T22:20:20.457Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 13,
-    "live": 1
+    "finished": 14,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1467,14 +1467,17 @@
       }
     },
     "ger-ivo-2026-06-20": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 1
       },
       "goals": [
@@ -1485,22 +1488,38 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Deniz Undav",
+          "minute": 68,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Deniz Undav",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [],
       "updatedAt": "2026-06-20T20:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 4,
-          "away": 2
+          "home": 8,
+          "away": 3
         },
         "sot": {
-          "home": 2,
+          "home": 7,
           "away": 2
         },
         "shots": {
-          "home": 8,
-          "away": 8
+          "home": 16,
+          "away": 9
         },
         "yellow": {
           "home": 0,
@@ -1517,17 +1536,17 @@
         "cornersByHalf": {
           "home": [
             3,
-            1
+            5
           ],
           "away": [
             1,
-            1
+            2
           ]
         },
         "sotByHalf": {
           "home": [
             2,
-            0
+            3
           ],
           "away": [
             1,
@@ -1537,7 +1556,10 @@
         "playerSot": {
           "Kai Havertz": 1,
           "Ange-Yoan Bonny": 1,
-          "Florian Wirtz": 1
+          "Florian Wirtz": 1,
+          "Deniz Undav": 1,
+          "Nathaniel Brown": 1,
+          "Nadiem Amiri": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -1548,6 +1570,16 @@
             "breakEndMinute": 27,
             "firstActionType": "Shot Blocked",
             "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 74,
+            "firstActionType": "Foul",
+            "firstActionMinute": 79,
             "isCorner": false,
             "reliable": true
           }

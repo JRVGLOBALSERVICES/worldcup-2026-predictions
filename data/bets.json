@@ -137,6 +137,16 @@
         "home": 5,
         "away": 1
       }
+    },
+    "ger-ivo-2026-06-20": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 2,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -746,6 +756,36 @@
           "type": "yellow"
         }
       ]
+    },
+    "ger-ivo-2026-06-20": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Franck Kessié",
+          "minute": 29,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Deniz Undav",
+          "minute": 68,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Deniz Undav",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": []
     }
   },
   "bets": [
@@ -4754,16 +4794,16 @@
     },
     "ger-ivo-2026-06-20": {
       "corners": {
-        "home": 4,
-        "away": 2
+        "home": 8,
+        "away": 3
       },
       "sot": {
-        "home": 2,
+        "home": 7,
         "away": 2
       },
       "shots": {
-        "home": 8,
-        "away": 8
+        "home": 16,
+        "away": 9
       },
       "yellow": {
         "home": 0,
@@ -4780,17 +4820,17 @@
       "cornersByHalf": {
         "home": [
           3,
-          1
+          5
         ],
         "away": [
           1,
-          1
+          2
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          0
+          3
         ],
         "away": [
           1,
@@ -4800,7 +4840,10 @@
       "playerSot": {
         "Kai Havertz": 1,
         "Ange-Yoan Bonny": 1,
-        "Florian Wirtz": 1
+        "Florian Wirtz": 1,
+        "Deniz Undav": 1,
+        "Nathaniel Brown": 1,
+        "Nadiem Amiri": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -4811,6 +4854,16 @@
           "breakEndMinute": 27,
           "firstActionType": "Shot Blocked",
           "firstActionMinute": 29,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 74,
+          "firstActionType": "Foul",
+          "firstActionMinute": 79,
           "isCorner": false,
           "reliable": true
         }
