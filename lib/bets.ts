@@ -145,7 +145,12 @@ export type SpecialGrade =
   // Each leg is graded off the final score (goals/result/btts) or the verified
   // ESPN MatchStats (corners / shots-on-target / cards). Pending until every
   // referenced datum is available — never a partial guess on an unseen leg.
-  | { type: "combo"; conds: StatCond[] };
+  | { type: "combo"; conds: StatCond[] }
+  // Like `combo`, but with an extra "named player scores anytime" leg the
+  // stat-only StatConds can't express (evalStatCond has no events access).
+  // ANDs the player goal with evalCombo(conds). Used for 1xBet accumulators
+  // like "Team win each half + Player scores + Team most corners each half".
+  | { type: "comboWithScorer"; player: string; conds: StatCond[] };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -161,6 +166,7 @@ export type StatCond =
   | { c: "btts" } // both teams scored (FT shows ≥1 each)
   // Corner legs (need MatchStats.corners).
   | { c: "cornersTotalOver"; line: number }
+  | { c: "cornersTotalUnder"; line: number }
   | { c: "cornersTotalBetween"; lo: number; hi: number } // inclusive range
   | { c: "eachTeamCornersAtLeast"; n: number }
   | { c: "mostCorners"; side: "home" | "away" } // strictly more (a tie loses)
@@ -171,7 +177,11 @@ export type StatCond =
   | { c: "mostCards"; side: "home" | "away" } // strictly more (a tie loses)
   // Per-half legs (need the by-half splits from commentary).
   | { c: "eachTeamCornersEachHalfAtLeast"; n: number }
-  | { c: "eachTeamSotEachHalfAtLeast"; n: number };
+  | { c: "eachTeamSotEachHalfAtLeast"; n: number }
+  // Side wins BOTH halves (1st half off the HT score; 2nd half off FT − HT).
+  | { c: "winEachHalf"; side: "home" | "away" }
+  // Side takes MORE corners than the opponent in BOTH halves (strict; tie loses).
+  | { c: "mostCornersEachHalf"; side: "home" | "away" };
 
 /** A real 1xBet single-bet player prop — auto-graded off matchEvents + final score. */
 export type Special = {
@@ -404,6 +414,8 @@ export function evalStatCond(
       return score ? score.home >= 1 && score.away >= 1 : null;
     case "cornersTotalOver":
       return stats ? stats.corners.home + stats.corners.away > c.line : null;
+    case "cornersTotalUnder":
+      return stats ? stats.corners.home + stats.corners.away < c.line : null;
     case "cornersTotalBetween": {
       if (!stats) return null;
       const t = stats.corners.home + stats.corners.away;
@@ -436,6 +448,21 @@ export function evalStatCond(
       const s = stats?.sotByHalf;
       if (!s) return null;
       return s.home[0] >= c.n && s.home[1] >= c.n && s.away[0] >= c.n && s.away[1] >= c.n;
+    }
+    case "winEachHalf": {
+      if (!score || !ht) return null;
+      const h1 = c.side === "home" ? ht.home > ht.away : ht.away > ht.home;
+      const sh = score.home - ht.home;
+      const sa = score.away - ht.away;
+      const h2 = c.side === "home" ? sh > sa : sa > sh;
+      return h1 && h2;
+    }
+    case "mostCornersEachHalf": {
+      const h = stats?.cornersByHalf;
+      if (!h) return null;
+      return c.side === "home"
+        ? h.home[0] > h.away[0] && h.home[1] > h.away[1]
+        : h.away[0] > h.home[0] && h.away[1] > h.home[1];
     }
   }
 }
@@ -624,6 +651,14 @@ export function gradeSpecial(special: Special): BetStatus {
       const verdict = evalCombo(g.conds, ft, getResult(special.matchId).ht, getStats(special.matchId));
       if (verdict === null) return "pending";
       hit = verdict;
+      break;
+    }
+    case "comboWithScorer": {
+      // Stat legs AND a "named player scores anytime" leg the StatConds can't
+      // hold on their own. Stats pending → whole bet pending (never a blind loss).
+      const verdict = evalCombo(g.conds, ft, getResult(special.matchId).ht, getStats(special.matchId));
+      if (verdict === null) return "pending";
+      hit = verdict && goalsBy(goals, g.player).length > 0;
       break;
     }
     case "carded":

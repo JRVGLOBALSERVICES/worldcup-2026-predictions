@@ -440,6 +440,26 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         : { verdict: "alive", note };
     }
 
+    case "comboWithScorer": {
+      // Build-a-bet with an extra "named player scores anytime" leg. Stat legs
+      // can still flip and stats lag, so a not-yet-complete bet stays alive.
+      const r = evalCombo(g.conds, cur, live.htScore, live.stats ?? null);
+      const sc = scored > 0;
+      const st = live.stats;
+      const legNote = st
+        ? `${cur.home}–${cur.away} · cnr ${st.corners.home}-${st.corners.away}`
+        : `${cur.home}–${cur.away} · stats pending`;
+      const note = `${player} ${sc ? "scored ✓" : "yet to score"} · ${legNote}`;
+      if (done) {
+        if (r === true && sc) return { verdict: "won", note: `All legs ✓ · ${note}` };
+        if (r === false || (r === true && !sc)) return { verdict: "lost", note };
+        return { verdict: "alive", note: `Awaiting ESPN stats · ${note}` };
+      }
+      return r === true && sc
+        ? { verdict: "winning", note: `On track · ${note}` }
+        : { verdict: "alive", note };
+    }
+
     case "playerSotOver": {
       // Per-player shots on target Over `line`. Accrues monotonically — once the
       // player clears the line it's locked won; otherwise it stays alive until FT
