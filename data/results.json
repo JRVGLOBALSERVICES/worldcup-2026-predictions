@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T02:20:28.882Z",
+    "generatedAt": "2026-06-20T03:20:26.188Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 10,
+    "finished": 11,
     "live": 1
   },
   "results": {
@@ -1100,12 +1100,15 @@
       }
     },
     "bra-hai-2026-06-19": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 3,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 3,
+        "away": 0
+      },
       "score": {
         "home": 3,
         "away": 0
@@ -1166,15 +1169,15 @@
       "stats": {
         "corners": {
           "home": 4,
-          "away": 2
+          "away": 4
         },
         "sot": {
           "home": 5,
-          "away": 1
+          "away": 3
         },
         "shots": {
-          "home": 7,
-          "away": 4
+          "home": 8,
+          "away": 7
         },
         "yellow": {
           "home": 1,
@@ -1195,7 +1198,7 @@
           ],
           "away": [
             1,
-            1
+            3
           ]
         },
         "sotByHalf": {
@@ -1205,14 +1208,91 @@
           ],
           "away": [
             0,
-            1
+            3
           ]
         },
         "playerSot": {
           "Vinícius Júnior": 1,
           "Raphinha ": 1,
-          "Ricardo Adé": 1
+          "Ricardo Adé": 1,
+          "Wilson Isidor": 1,
+          "Dominique Simon": 1
         }
+      }
+    },
+    "tur-par-2026-06-19": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Matías Galarza",
+          "minute": 1,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Matías Galarza",
+          "minute": 3,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-20T03:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "sot": {
+          "home": 0,
+          "away": 1
+        },
+        "shots": {
+          "home": 2,
+          "away": 3
+        },
+        "yellow": {
+          "home": 0,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 1
+        },
+        "cornersByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {}
       }
     }
   }
