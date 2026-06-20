@@ -4090,10 +4090,14 @@
       "matchId": "ger-ivo-2026-06-20",
       "player": "Germany v Ivory Coast",
       "market": "Special — first action after water break",
-      "label": "First action after the 1st-half water break to be a corner — Yes (manual settle: no ESPN datum)",
+      "label": "First action after the 1st-half water break (≈22') to be a corner — Yes (auto-settled off first ESPN commentary action after the anchor)",
       "odds": 15,
       "stake": 10,
-      "placedAt": "21/06 03:09"
+      "placedAt": "21/06 03:09",
+      "grade": {
+        "type": "waterBreakCorner",
+        "half": 1
+      }
     }
   ],
   "matchStats": {

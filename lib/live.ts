@@ -1,5 +1,5 @@
 import { fixtures } from "./data";
-import type { Goal, Card, MatchStats, GoalMethod } from "./bets";
+import type { Goal, Card, MatchStats, GoalMethod, WaterBreakAction } from "./bets";
 import resultsFile from "@/data/results.json";
 
 /** Persisted ESPN snapshots (written by scripts/build-results.mjs). */
@@ -56,6 +56,9 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
     return Number.isFinite(n) ? n : 0;
   };
 
+  const wbH1 = waterBreakAction(data.commentary, 1);
+  const wbH2 = waterBreakAction(data.commentary, 2);
+
   const byName: Partial<Record<"home" | "away", EspnStatTeam>> = {};
   for (const t of teams) byName[side(t.team?.displayName)] = t;
   const h = byName.home;
@@ -96,6 +99,7 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
     sotByHalf,
     playerSot,
     firstGoalMethod: firstGoalMethod(data.keyEvents),
+    waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
   };
 }
 
@@ -257,6 +261,10 @@ type EspnSummary = {
     play?: {
       type?: { text?: string };
       period?: { number?: number };
+      // Match clock of the play. `value` is seconds from kickoff and keeps
+      // counting across half-time (45' = 2700s, 67' = 4020s), so it doubles as
+      // an absolute match-minute and a stable chronological sort key.
+      clock?: { value?: number; displayValue?: string };
       team?: { displayName?: string };
       participants?: { athlete?: { displayName?: string } }[];
     };
@@ -290,6 +298,120 @@ export function firstGoalMethod(keyEvents: EspnKeyEvent[] | undefined): GoalMeth
   if (/direct free kick/.test(text) || (/free kick/.test(text) && !/assisted by/.test(text)))
     return "freekick";
   return "shot";
+}
+
+/** Break anchor in match-minutes under FIFA's 2026 rule: 22' into each half. */
+const WATER_BREAK_ANCHOR: Record<1 | 2, number> = { 1: 22, 2: 67 };
+
+/**
+ * Commentary play-types that are NOT an on-pitch "action" — structural markers
+ * (kickoff, half boundaries, VAR/clock delays) and substitutions. Everything
+ * else (Foul, Corner Awarded, Offside, Shot *, cards, Handball, Goal, …) counts
+ * as the kind of restart/event a "first action after the break" market settles on.
+ */
+const NON_ACTION_TYPES = new Set([
+  "Kickoff",
+  "Start 1st Half",
+  "Start 2nd Half",
+  "End 1st Half",
+  "End 2nd Half",
+  "Half Time",
+  "End Regular Time",
+  "Full Time",
+  "Start Delay",
+  "End Delay",
+  "Substitution",
+  "VAR Decision",
+]);
+
+/**
+ * Resolve the second a half's hydration break ENDED. FIFA's 2026 rule fixes the
+ * break near a known minute (22' / 67'), and ESPN logs it — empirically every
+ * match — as a Start Delay→End Delay pair lasting ~2-3 min in that window. We
+ * take the End Delay nearest the expected break-end (anchor + ~3.5') within a
+ * tolerant window, ignoring stray injury/VAR delays elsewhere in the half.
+ * Returns the break-end clock (seconds) or null when no delay pair was logged.
+ */
+function resolveBreakEndSec(
+  commentary: EspnSummary["commentary"],
+  half: 1 | 2,
+  anchorMinute: number,
+): number | null {
+  const winLo = (anchorMinute - 1) * 60;
+  const winHi = (anchorMinute + 9) * 60;
+  const expectedEnd = (anchorMinute + 3.5) * 60;
+  const ends = (commentary ?? [])
+    .map((c) => c.play)
+    .filter(
+      (p): p is NonNullable<typeof p> =>
+        !!p &&
+        (p.period?.number ?? 1) === half &&
+        p.type?.text === "End Delay" &&
+        typeof p.clock?.value === "number" &&
+        p.clock.value >= winLo &&
+        p.clock.value <= winHi,
+    );
+  if (!ends.length) return null;
+  ends.sort(
+    (a, b) =>
+      Math.abs((a.clock!.value ?? 0) - expectedEnd) - Math.abs((b.clock!.value ?? 0) - expectedEnd),
+  );
+  return ends[0].clock!.value ?? null;
+}
+
+/**
+ * First commentary ACTION strictly after a half's hydration break — the datum
+ * that settles the "first action after the water break = corner" market.
+ *
+ * Anchor resolution is two-tier: prefer the ACTUAL break end ESPN logs as a
+ * Start/End Delay pair near the nominal minute (accurate — happens ~every
+ * match); fall back to the FIFA-2026 fixed minute (22' / 67') only when no delay
+ * pair is present. We then scan the play-by-play (sorted by clock, which counts
+ * through half-time) for the earliest action of that half strictly after the
+ * resolved anchor. `reliable` is true for a "No" (a corner would have been
+ * logged) and drops to false only on a "Yes", because ESPN doesn't log throw-ins
+ * / goal kicks and one could have been the true first action — that case wants a
+ * human eye (statusOverride).
+ *
+ * Returns null when no action past the anchor has been logged yet (→ pending).
+ */
+export function waterBreakAction(
+  commentary: EspnSummary["commentary"],
+  half: 1 | 2,
+  anchorMinute: number = WATER_BREAK_ANCHOR[half],
+): WaterBreakAction | null {
+  const breakEndSec = resolveBreakEndSec(commentary, half, anchorMinute);
+  const cutoffSec = breakEndSec ?? anchorMinute * 60;
+
+  const candidates = (commentary ?? [])
+    .map((c) => c.play)
+    .filter(
+      (p): p is NonNullable<typeof p> =>
+        !!p &&
+        (p.period?.number ?? 1) === half &&
+        typeof p.clock?.value === "number" &&
+        p.clock.value > cutoffSec &&
+        !!p.type?.text &&
+        !NON_ACTION_TYPES.has(p.type.text),
+    )
+    .sort((a, b) => (a.clock!.value ?? 0) - (b.clock!.value ?? 0));
+
+  const first = candidates[0];
+  if (!first) return null;
+
+  const isCorner = first.type!.text === "Corner Awarded";
+  return {
+    half,
+    anchorMinute,
+    source: breakEndSec !== null ? "delay" : "anchor",
+    breakEndMinute: breakEndSec !== null ? Math.round(breakEndSec / 60) : null,
+    firstActionType: first.type!.text ?? null,
+    firstActionMinute: Math.round((first.clock!.value ?? 0) / 60),
+    isCorner,
+    // A logged corner could still be preceded by an unlogged throw-in/goal kick;
+    // anything else is reliable (corners are always logged, so none means "No").
+    reliable: !isCorner,
+  };
 }
 
 function parseMinute(displayClock?: string): number | null {
