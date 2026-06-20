@@ -178,6 +178,25 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       };
     }
 
+    case "scoredAndScoreOneOf": {
+      // Player scores anytime AND the final score is ONE OF the listed scorelines.
+      const onGrid = g.scores.some((s) => eq(cur, s.home, s.away));
+      const anyReach = g.scores.some((s) => reachable(cur, s.home, s.away));
+      if (done) {
+        return scored > 0 && onGrid
+          ? { verdict: "won", note: `${player} scored · ${cur.home}–${cur.away} ✓` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      }
+      if (scored > 0 && onGrid)
+        return { verdict: "winning", note: `${player} scored · ${cur.home}–${cur.away}` };
+      if (anyReach)
+        return {
+          verdict: "alive",
+          note: scored > 0 ? `${player} scored · need a listed score` : `Live ${cur.home}–${cur.away}`,
+        };
+      return { verdict: "dead", note: "Score out of reach" };
+    }
+
     case "firstScorerAndResult": {
       // Player scores first AND the full-time 1X2 result matches. The first-goal
       // leg locks lost the moment someone else scores; the result swings between

@@ -90,6 +90,9 @@ export type SpecialGrade =
   | { type: "firstScorer"; player: string }
   | { type: "firstScorerAndScore"; player: string; home: number; away: number }
   | { type: "scoredAndScore"; player: string; home: number; away: number }
+  // Player scores at any time AND the final score is ONE OF the listed scorelines
+  // (bookmaker "score AND match score 0-2, 1-2 or 1-3" OR-of-grids markets).
+  | { type: "scoredAndScoreOneOf"; player: string; scores: { home: number; away: number }[] }
   | { type: "drawAndFirstScorer"; player: string }
   | { type: "freeKickGoal"; player: string }
   | { type: "bttsEachOver"; line: number }
@@ -494,6 +497,12 @@ export function gradeSpecial(special: Special): BetStatus {
         !!ft &&
         goalsBy(goals, g.player).length > 0 &&
         !g.excludeScores.some((s) => s.home === ft.home && s.away === ft.away);
+      break;
+    case "scoredAndScoreOneOf":
+      // Player scores anytime AND the final score is ONE OF the listed scorelines.
+      hit =
+        goalsBy(goals, g.player).length > 0 &&
+        g.scores.some((s) => isFinalScore(ft, s.home, s.away));
       break;
     case "firstScorerAndResult": {
       // Player scores first AND the full-time 1X2 outcome matches.
