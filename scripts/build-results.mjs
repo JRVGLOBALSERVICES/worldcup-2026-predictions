@@ -139,9 +139,80 @@ function statsFromSummary(summary, fixture) {
     }
   }
 
+  const wbH1 = waterBreakAction(summary.commentary, 1);
+  const wbH2 = waterBreakAction(summary.commentary, 2);
+
   return {
     corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot,
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
+    waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
+  };
+}
+
+/** Break anchor in match-minutes under FIFA's 2026 rule: 22' into each half. */
+const WATER_BREAK_ANCHOR = { 1: 22, 2: 67 };
+const NON_ACTION_TYPES = new Set([
+  "Kickoff", "Start 1st Half", "Start 2nd Half", "End 1st Half", "End 2nd Half",
+  "Half Time", "End Regular Time", "Full Time", "Start Delay", "End Delay",
+  "Substitution", "VAR Decision",
+]);
+
+/** Break-end second from the Start/End Delay pair near the anchor. See lib/live.ts. */
+function resolveBreakEndSec(commentary, half, anchorMinute) {
+  const winLo = (anchorMinute - 1) * 60;
+  const winHi = (anchorMinute + 9) * 60;
+  const expectedEnd = (anchorMinute + 3.5) * 60;
+  const ends = (commentary ?? [])
+    .map((c) => c.play)
+    .filter(
+      (p) =>
+        !!p &&
+        (p.period?.number ?? 1) === half &&
+        p.type?.text === "End Delay" &&
+        typeof p.clock?.value === "number" &&
+        p.clock.value >= winLo &&
+        p.clock.value <= winHi,
+    );
+  if (!ends.length) return null;
+  ends.sort(
+    (a, b) => Math.abs(a.clock.value - expectedEnd) - Math.abs(b.clock.value - expectedEnd),
+  );
+  return ends[0].clock.value ?? null;
+}
+
+/**
+ * First commentary ACTION strictly after a half's hydration break.
+ * Mirrors lib/live.ts waterBreakAction — keep in sync. Anchors on the actual
+ * logged break end (Start/End Delay pair) when present, else the fixed 2026
+ * minute. Returns null until a qualifying action past the break is logged.
+ */
+function waterBreakAction(commentary, half, anchorMinute = WATER_BREAK_ANCHOR[half]) {
+  const breakEndSec = resolveBreakEndSec(commentary, half, anchorMinute);
+  const cutoffSec = breakEndSec ?? anchorMinute * 60;
+  const candidates = (commentary ?? [])
+    .map((c) => c.play)
+    .filter(
+      (p) =>
+        !!p &&
+        (p.period?.number ?? 1) === half &&
+        typeof p.clock?.value === "number" &&
+        p.clock.value > cutoffSec &&
+        !!p.type?.text &&
+        !NON_ACTION_TYPES.has(p.type.text),
+    )
+    .sort((a, b) => (a.clock?.value ?? 0) - (b.clock?.value ?? 0));
+  const first = candidates[0];
+  if (!first) return null;
+  const isCorner = first.type.text === "Corner Awarded";
+  return {
+    half,
+    anchorMinute,
+    source: breakEndSec !== null ? "delay" : "anchor",
+    breakEndMinute: breakEndSec !== null ? Math.round(breakEndSec / 60) : null,
+    firstActionType: first.type.text ?? null,
+    firstActionMinute: Math.round((first.clock.value ?? 0) / 60),
+    isCorner,
+    reliable: !isCorner,
   };
 }
 

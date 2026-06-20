@@ -90,10 +90,57 @@ export type MatchStats = {
    * scripts/build-results.mjs (final) and lib/live.ts fetchStats (in-play).
    */
   firstGoalMethod?: GoalMethod | null;
+  /**
+   * First logged on-pitch action AFTER each half's mandatory hydration break.
+   * FIFA's 2026 rule fixes the break at a set point in every match — 22' into
+   * the first half, 22' into the second (≈67'), regardless of weather — so the
+   * anchor is a known constant, not a guess. ESPN never logs the break itself,
+   * but every corner/foul/shot/offside in the play-by-play carries a clock, so
+   * we take the earliest ACTION strictly after the anchor minute. This is what
+   * lets "first action after the water break to be a corner" auto-settle.
+   * Keyed h1/h2; absent until commentary has a play past that half's anchor.
+   * Written by lib/live.ts fetchStats (in-play) and scripts/build-results.mjs.
+   */
+  waterBreak?: Partial<Record<"h1" | "h2", WaterBreakAction>>;
 };
 
 /** How a goal was scored, derived from ESPN's per-event summary commentary. */
 export type GoalMethod = "header" | "freekick" | "penalty" | "owngoal" | "shot";
+
+/**
+ * The first commentary ACTION after a half's hydration break, used to settle the
+ * "first action after the water break = corner" market off real ESPN data.
+ *
+ * Honesty caveat baked into `reliable`: ESPN's commentary logs corners, fouls,
+ * shots, offsides and cards — but NOT throw-ins or goal kicks, the two commonest
+ * restarts. So a non-corner first logged action ("No") is solid (a corner would
+ * have been logged). A corner first logged action ("Yes") is strong but not
+ * airtight — an unlogged throw-in could have been the true first action — so it
+ * is flagged `reliable:false` for a human eye, with `statusOverride` as the
+ * final say.
+ */
+export type WaterBreakAction = {
+  half: 1 | 2;
+  /** Nominal break anchor in minutes (22 for H1, 67 for H2 under the 2026 rule). */
+  anchorMinute: number;
+  /**
+   * How the anchor was resolved. "delay" = ESPN logged the break as a
+   * Start Delay→End Delay pair near the nominal minute and we anchored on its
+   * actual end (the accurate path — ESPN logs the break ~every match). "anchor"
+   * = no delay pair found, fell back to the fixed nominal minute.
+   */
+  source: "delay" | "anchor";
+  /** Match minute the break ended (the resolved anchor), when source = "delay". */
+  breakEndMinute: number | null;
+  /** ESPN play-type text of the first action after the break, e.g. "Corner Awarded". */
+  firstActionType: string | null;
+  /** Match minute of that first action. */
+  firstActionMinute: number | null;
+  /** True when the first logged action is a corner. */
+  isCorner: boolean;
+  /** False when the verdict could be wrong due to an unlogged restart — see type doc. */
+  reliable: boolean;
+};
 
 /** Machine-gradable rule attached to each special so the cron settles it without a human. */
 export type SpecialGrade =
@@ -112,6 +159,10 @@ export type SpecialGrade =
   // Direct Free Kick / Own Goal"). Settled off MatchStats.firstGoalMethod,
   // parsed from the summary keyEvents of the earliest scoring play.
   | { type: "firstGoalMethod"; method: GoalMethod }
+  // "First action after the (1st/2nd-half) water break to be a corner — Yes".
+  // Settled off MatchStats.waterBreak[hN], the first commentary action strictly
+  // after the FIFA-2026 break anchor (22' / 67'). half = which break.
+  | { type: "waterBreakCorner"; half: 1 | 2 }
   | { type: "bttsEachOver"; line: number }
   | { type: "goalsOver"; player: string; line: number }
   | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
@@ -605,6 +656,17 @@ export function gradeSpecial(special: Special): BetStatus {
         return ft && ft.home + ft.away > 0 ? "pending" : "lost";
       }
       hit = method === g.method;
+      break;
+    }
+    case "waterBreakCorner": {
+      // "First action after the water break = corner — Yes". Read the first
+      // commentary action after the fixed 2026 anchor (22' H1 / 67' H2). Stays
+      // pending until that half's commentary has a play past the anchor; then
+      // wins iff that action is a corner. statusOverride is the human safety
+      // valve for the unlogged-restart edge case (see WaterBreakAction doc).
+      const wb = getStats(special.matchId)?.waterBreak?.[g.half === 1 ? "h1" : "h2"];
+      if (!wb || wb.firstActionType === null) return "pending";
+      hit = wb.isCorner;
       break;
     }
     case "bttsEachOver": {

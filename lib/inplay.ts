@@ -327,6 +327,23 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         : { verdict: "alive", note: `${want} — confirmed when 1st goal lands` };
     }
 
+    case "waterBreakCorner": {
+      // "First action after the (1st/2nd-half) water break = corner — Yes".
+      // Resolves the moment the verified stats pass logs an action past the
+      // fixed 2026 break anchor (22' H1 / 67' H2). Until then it's alive — the
+      // half may not have reached the break yet, or no action is logged past it.
+      const half = g.half === 1 ? "1st" : "2nd";
+      const wb = live.stats?.waterBreak?.[g.half === 1 ? "h1" : "h2"];
+      if (wb && wb.firstActionType) {
+        const flag = wb.isCorner && !wb.reliable ? " (verify no throw-in first)" : "";
+        return wb.isCorner
+          ? { verdict: "won", note: `${half} post-break: corner at ${wb.firstActionMinute}' ✓${flag}` }
+          : { verdict: "lost", note: `${half} post-break: ${wb.firstActionType} at ${wb.firstActionMinute}'` };
+      }
+      if (done) return { verdict: "lost", note: `No post-break action logged (${half})` };
+      return { verdict: "alive", note: `${half}-half break ≈${g.half === 1 ? 22 : 67}' — settles on first action after` };
+    }
+
     case "goalsOver":
       // Player scores strictly more than `line` (line 1.5 → 2+). Goals only
       // accrue, so once over the line it's a locked win.
