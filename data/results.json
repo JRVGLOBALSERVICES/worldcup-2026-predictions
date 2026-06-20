@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T19:20:34.727Z",
+    "generatedAt": "2026-06-20T20:20:31.147Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 13,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1464,6 +1464,69 @@
           "Gustaf Lagerbielke": 1
         },
         "firstGoalMethod": "shot"
+      }
+    },
+    "ger-ivo-2026-06-20": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "goals": [],
+      "cards": [],
+      "updatedAt": "2026-06-20T20:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 0,
+          "away": 1
+        },
+        "sot": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 3,
+          "away": 1
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Kai Havertz": 1
+        },
+        "firstGoalMethod": null,
+        "waterBreak": {}
       }
     }
   }
