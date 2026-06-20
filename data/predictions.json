@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T09:04:57.204Z",
+    "generatedAt": "2026-06-20T15:43:43.612Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -1440,121 +1440,121 @@
     },
     "net-swe-2026-06-20": {
       "win": {
-        "pick": "Netherlands",
-        "fairOdds": "1.85",
-        "reason": "The Netherlands are clearly the more talented and deeper side and will dominate possession, but they were unconvincing in a 2-2 draw with Japan, conceding late and looking shaky at the back without the injured Jurrien Timber. Sweden top the group after thrashing Tunisia 5-1 and carry a genuinely elite Isak-Gyokeres front two that can punish the Dutch on the counter if they sit deep. A roughly 55% Netherlands win probability reflects real edge but not certainty, with the draw very live."
+        "pick": "Draw No Bet — Netherlands",
+        "fairOdds": "1.62",
+        "reason": "Netherlands edge possession (~55% win prob) and have the deeper squad, but they were held 2-2 by Japan and look exposed at the back without Jurrien Timber (groin, out). Sweden's back-three with the elite Isak–Gyökeres front two is a genuine counter threat, so DNB hedges the live draw/upset risk rather than backing a straight Dutch win at short odds."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.50",
-        "alt": "1-0",
-        "altOdds": "3.20"
+        "fairOdds": "2.30",
+        "alt": "Netherlands 1-0",
+        "altOdds": "3.10"
       },
       "htft": {
-        "pick": "Draw/Netherlands",
+        "pick": "Draw / Netherlands",
         "fairOdds": "4.50"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.50"
+        "score": "1-1",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Cody Gakpo",
+          "fairOdds": "2.80",
+          "banker": false,
+          "note": "Netherlands' on-the-pitch penalty taker with Depay benched; cuts in from the left and is the most reliable Dutch goal route, but no anytime-scorer is a banker in a tight counter game."
+        },
+        {
+          "player": "Viktor Gyökeres",
           "fairOdds": "3.10",
-          "banker": true,
-          "note": "In-form Liverpool forward, central to the Dutch attack, on penalties/set-piece duty behind Depay and a constant goal threat from the left."
+          "banker": false,
+          "note": "Sweden's primary penalty taker and focal point; thrives on transition against a high Dutch line missing Timber — but service may be limited if Sweden sit deep, so not a banker."
         },
         {
           "player": "Alexander Isak",
-          "fairOdds": "3.60",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "Newcastle/Liverpool striker scored vs Tunisia and is a penalty option; lethal on the counter against a Dutch backline missing Timber."
-        },
-        {
-          "player": "Viktor Gyokeres",
-          "fairOdds": "3.80",
-          "banker": false,
-          "note": "Arsenal striker and Sweden's primary penalty taker, scored in the 5-1 opener and thrives running in behind high lines."
+          "note": "Pace to exploit van Hecke/van de Ven on the counter; the Japan game showed the Dutch back line is vulnerable in behind. Genuine threat, not nailed-on."
         },
         {
           "player": "Donyell Malen",
-          "fairOdds": "4.50",
+          "fairOdds": "4.00",
           "banker": false,
-          "note": "Pace and directness off the right; gets into scoring positions and benefits from Dutch territorial dominance."
+          "note": "In-form Roma winger starting on the right; gets into the box but shares the load with Gakpo and Summerville — speculative."
         }
       ],
       "assists": [
         {
+          "player": "Frenkie de Jong",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Dutch deep-lying creator who progresses play through the lines; most likely to thread the final ball if Netherlands break Sweden down."
+        },
+        {
           "player": "Denzel Dumfries",
           "fairOdds": "5.00",
           "banker": false,
-          "note": "Attacking wing-back/full-back and listed corner taker; a major crossing and overlap threat down the right."
+          "note": "Overlapping right wing-back delivering crosses for Gakpo/Malen; Netherlands' main wide supply down that flank."
         },
         {
-          "player": "Frenkie de Jong",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "Controls Dutch tempo and a free-kick taker; his progressive passing is the source of most chance creation."
-        },
-        {
-          "player": "Anthony Elanga",
+          "player": "Gabriel Gudmundsson",
           "fairOdds": "6.50",
           "banker": false,
-          "note": "Newcastle winger handles Sweden's set pieces (corners/free kicks) and supplies the strike pair on the break."
+          "note": "Left wing-back on Sweden corner/free-kick duty with Elanga benched; set-piece and counter delivery to Gyökeres/Isak."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Memphis Depay",
-        "backup": "Cody Gakpo",
-        "note": "Netherlands dominate the ball and draw fouls in the box; Depay is the established primary penalty taker with Gakpo as backup. For Sweden, Gyokeres takes penalties."
+        "taker": "Cody Gakpo (NED) / Viktor Gyökeres (SWE)",
+        "backup": "Tijjani Reijnders (NED) / Alexander Isak (SWE)",
+        "note": "With Memphis Depay on the bench, Gakpo is Netherlands' penalty taker from the start (scored two vs Uzbekistan, multiple recent pens); Reijnders/free-kick backup. Gyökeres is Sweden's confirmed primary, having won and converted in qualifying. Two high-press/counter teams means a spot-kick is plausible but not likely."
       },
       "lineups": {
-        "home": "Bart Verbruggen, Denzel Dumfries, Jan Paul van Hecke, Virgil van Dijk, Micky van de Ven, Frenkie de Jong, Ryan Gravenberch, Tijjani Reijnders, Donyell Malen, Cody Gakpo, Crysencio Summerville",
-        "away": "Kristoffer Nordfeldt, Gustaf Lagerbielke, Isak Hien, Victor Lindelof, Gabriel Gudmundsson, Yasin Ayari, Jesper Karlstrom, Mattias Svanberg, Anthony Elanga, Alexander Isak, Viktor Gyokeres",
-        "status": "probable"
+        "home": "Bart Verbruggen, Denzel Dumfries, Virgil van Dijk, Micky van de Ven, Jan Paul van Hecke, Frenkie de Jong, Tijjani Reijnders, Ryan Gravenberch, Donyell Malen, Cody Gakpo, Crysencio Summerville",
+        "away": "Kristoffer Nordfeldt, Gustaf Lagerbielke, Victor Lindelöf, Isak Hien, Yasin Ayari, Jesper Karlström, Anton Bernhardsson, Gabriel Gudmundsson, Benjamin Nygren, Viktor Gyökeres, Alexander Isak",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Jurrien Timber",
+          "player": "Jan Paul van Hecke",
           "team": "Netherlands",
-          "note": "Ruled OUT of the World Cup with a groin injury; Geertruida/van Hecke cover, weakening the Dutch right side and defensive balance."
-        },
-        {
-          "player": "Virgil van Dijk",
-          "team": "Netherlands",
-          "note": "Captain and aerial set-piece threat; scored vs Japan but the backline looked vulnerable late in that 2-2 draw."
+          "note": "Started the Japan opener and was involved in a ricochet for Nakamura's goal; with Timber out (groin) the Dutch back four looks shaky and van Hecke is the weak link Isak/Gyökeres will target in behind."
         },
         {
           "player": "Cody Gakpo",
           "team": "Netherlands",
-          "note": "Primary creative and goal outlet from the left, scorer of Dutch goals and a free-kick/penalty backup option."
+          "note": "Now Netherlands' penalty taker with Depay benched for fitness; also on corners. Cutting in from the left he is the Dutch side's most consistent goal threat and a key creative outlet."
+        },
+        {
+          "player": "Frenkie de Jong",
+          "team": "Netherlands",
+          "note": "Sits in the Dutch three-man midfield as the chief progressor; must control tempo to break a deep Swedish block, and is the most likely assist source."
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "team": "Sweden",
+          "note": "Sweden's confirmed primary penalty taker and counter spearhead; fired Sweden to the finals (3-2 vs Poland) and converted in qualifying. Lethal on transition against a high Dutch line."
         },
         {
           "player": "Alexander Isak",
           "team": "Sweden",
-          "note": "Half of an elite strike pairing, scored in the 5-1 win over Tunisia; deadly in transition if the Dutch overcommit."
+          "note": "Pairs with Gyökeres in Sweden's 3-5-2; pace and finishing to punish Dutch lapses in behind — exactly the vulnerability Japan exposed. Sweden's draw/upset hopes ride on this front two."
         },
         {
-          "player": "Viktor Gyokeres",
+          "player": "Gabriel Gudmundsson",
           "team": "Sweden",
-          "note": "Sweden's penalty taker and a relentless runner in behind; scored vs Tunisia and won/scored the playoff penalty vs Ukraine."
-        },
-        {
-          "player": "Yasin Ayari",
-          "team": "Sweden",
-          "note": "Standout in the opener with a brace vs Tunisia; energetic ball-carrying midfielder who adds a third scoring threat."
+          "note": "Left wing-back back in the XI after cramp in the opener; with Elanga dropped to the bench he takes on more of Sweden's corner/free-kick delivery alongside Karlström and provides counter-attacking width."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/preview/netherlands-vs-sweden-prediction-team-news-lineups_599530.html",
-        "https://www.sportsmole.co.uk/football/sweden/world-cup-2026/predicted-lineups/isak-gyokeres-to-continue-partnership-how-sweden-could-line-up-vs-netherlands_599533.html",
-        "https://www.espn.com/soccer/story/_/id/48572979/2026-fifa-world-cup-injuries-tracker-which-stars-miss-latest-info",
-        "https://www.skysports.com/football/netherlands-vs-japan/549776",
+        "https://www.rotowire.com/soccer/article/netherlands-vs-sweden-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-f-118797",
+        "https://www.si.com/soccer/netherlands-vs-sweden-world-cup-preview-predictions-lineups-6-20-26",
+        "https://www.skysports.com/football/news/12098/13552697/world-cup-2026-netherlands-2-2-japan",
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://www.squawka.com/en/news/world-cup/world-cup-2026-every-teams-set-piece-takers/"
+        "https://www.football-oranje.com/gakpos-penalties-help-netherlands-edge-out-uzbekistan/",
+        "https://www.fourfourtwo.com/team/sweden-world-cup-2026-squad"
       ]
     },
     "ger-ivo-2026-06-20": {
