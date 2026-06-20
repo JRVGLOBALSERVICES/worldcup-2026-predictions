@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T17:20:33.380Z",
+    "generatedAt": "2026-06-20T18:20:26.884Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 12,
     "live": 1
@@ -1327,10 +1327,13 @@
     },
     "net-swe-2026-06-20": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 2,
+        "away": 0
+      },
       "ft": null,
       "score": {
-        "home": 2,
+        "home": 4,
         "away": 0
       },
       "goals": [
@@ -1349,26 +1352,57 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cody Gakpo",
+          "minute": 47,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cody Gakpo",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Anthony Elanga",
+          "minute": 58,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Gabriel Gudmundsson",
+          "minute": 52,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-20T17:00:00.000Z",
       "stats": {
         "corners": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "sot": {
-          "home": 3,
-          "away": 1
+          "home": 6,
+          "away": 4
         },
         "shots": {
-          "home": 4,
-          "away": 1
+          "home": 9,
+          "away": 11
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -1376,7 +1410,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -1384,23 +1418,24 @@
             0
           ],
           "away": [
-            1,
+            2,
             0
           ]
         },
         "sotByHalf": {
           "home": [
-            1,
+            2,
             0
           ],
           "away": [
-            1,
+            4,
             0
           ]
         },
         "playerSot": {
-          "Viktor Gyökeres": 1,
-          "Cody Gakpo": 1
+          "Viktor Gyökeres": 3,
+          "Cody Gakpo": 2,
+          "Yasin Ayari": 1
         },
         "firstGoalMethod": "shot"
       }
