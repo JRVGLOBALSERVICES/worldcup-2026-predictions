@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T00:20:27.061Z",
+    "generatedAt": "2026-06-20T01:20:24.220Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 10,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1096,6 +1096,92 @@
         },
         "playerSot": {
           "Bilal El Khannouss": 1
+        }
+      }
+    },
+    "bra-hai-2026-06-19": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Matheus Cunha",
+          "minute": 23,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Matheus Cunha",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Carlens Arcus",
+          "minute": 3,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-20T00:30:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 4,
+          "away": 1
+        },
+        "sot": {
+          "home": 4,
+          "away": 0
+        },
+        "shots": {
+          "home": 6,
+          "away": 0
+        },
+        "yellow": {
+          "home": 0,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 1
+        },
+        "cornersByHalf": {
+          "home": [
+            4,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Vinícius Júnior": 1,
+          "Raphinha ": 1
         }
       }
     }
