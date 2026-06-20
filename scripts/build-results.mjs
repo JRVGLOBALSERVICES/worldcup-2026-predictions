@@ -139,7 +139,33 @@ function statsFromSummary(summary, fixture) {
     }
   }
 
-  return { corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot };
+  return {
+    corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot,
+    firstGoalMethod: firstGoalMethod(summary.keyEvents),
+  };
+}
+
+/**
+ * How the FIRST goal was scored, from the summary keyEvents (earliest scoring
+ * play by period→clock). Mirrors lib/live.ts firstGoalMethod — keep in sync.
+ * Returns null when no goal has been scored yet.
+ */
+function firstGoalMethod(keyEvents) {
+  const scoring = (keyEvents ?? []).filter((e) => e.scoringPlay);
+  if (!scoring.length) return null;
+  const first = scoring.slice().sort((a, b) => {
+    const pa = a.period?.number ?? 1;
+    const pb = b.period?.number ?? 1;
+    if (pa !== pb) return pa - pb;
+    return (a.clock?.value ?? 0) - (b.clock?.value ?? 0);
+  })[0];
+  const text = (first.text ?? "").toLowerCase();
+  if (first.ownGoal === true || text.includes("own goal")) return "owngoal";
+  if (first.penaltyKick === true || /\bpenalty\b/.test(text)) return "penalty";
+  if (/\bheader\b|\bheaded\b|with the head/.test(text)) return "header";
+  if (/direct free kick/.test(text) || (/free kick/.test(text) && !/assisted by/.test(text)))
+    return "freekick";
+  return "shot";
 }
 
 /** Convert one ESPN event to our result shape, oriented to the fixture's home/away. */

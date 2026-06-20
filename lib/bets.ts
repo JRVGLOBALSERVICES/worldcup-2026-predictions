@@ -80,7 +80,20 @@ export type MatchStats = {
    * `sot` totals can't be attributed to a single player on their own.
    */
   playerSot?: Record<string, number>;
+  /**
+   * How the FIRST goal of the match was scored — parsed from the summary
+   * `keyEvents[]` of the earliest scoring play (Opta commentary text + the
+   * structured `penaltyKick`/`ownGoal` flags). This is what lets the
+   * "Goal Number (1) — header / direct free kick / own goal" markets auto-settle;
+   * the lighter scoreboard feed carries the penalty/own-goal flags but NOT the
+   * header / free-kick prose. `null` until the first goal is in. Written by
+   * scripts/build-results.mjs (final) and lib/live.ts fetchStats (in-play).
+   */
+  firstGoalMethod?: GoalMethod | null;
 };
+
+/** How a goal was scored, derived from ESPN's per-event summary commentary. */
+export type GoalMethod = "header" | "freekick" | "penalty" | "owngoal" | "shot";
 
 /** Machine-gradable rule attached to each special so the cron settles it without a human. */
 export type SpecialGrade =
@@ -95,6 +108,10 @@ export type SpecialGrade =
   | { type: "scoredAndScoreOneOf"; player: string; scores: { home: number; away: number }[] }
   | { type: "drawAndFirstScorer"; player: string }
   | { type: "freeKickGoal"; player: string }
+  // How the FIRST goal of the match was scored ("Goal Number (1) — Header /
+  // Direct Free Kick / Own Goal"). Settled off MatchStats.firstGoalMethod,
+  // parsed from the summary keyEvents of the earliest scoring play.
+  | { type: "firstGoalMethod"; method: GoalMethod }
   | { type: "bttsEachOver"; line: number }
   | { type: "goalsOver"; player: string; line: number }
   | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
@@ -550,6 +567,19 @@ export function gradeSpecial(special: Special): BetStatus {
     case "freeKickGoal":
       hit = goalsBy(goals, g.player).some((gl) => gl.freeKick === true);
       break;
+    case "firstGoalMethod": {
+      // "Goal Number (1) — header / free kick / own goal". Needs the verified
+      // first-goal method from the summary. If no goal was scored (0-0), the
+      // market loses. Stays pending until the method is parsed.
+      const method = getStats(special.matchId)?.firstGoalMethod;
+      if (method === undefined || method === null) {
+        // FT with a goal but no parsed method shouldn't happen, but never
+        // grade blind — leave pending for a manual look.
+        return ft && ft.home + ft.away > 0 ? "pending" : "lost";
+      }
+      hit = method === g.method;
+      break;
+    }
     case "bttsEachOver": {
       // Both teams score strictly more than `line` goals (line=1 → 2+ each).
       const home = goals.filter((gl) => gl.team === "home" && !gl.ownGoal).length;

@@ -1,5 +1,5 @@
 import { fixtures } from "./data";
-import type { Goal, Card, MatchStats } from "./bets";
+import type { Goal, Card, MatchStats, GoalMethod } from "./bets";
 import resultsFile from "@/data/results.json";
 
 /** Persisted ESPN snapshots (written by scripts/build-results.mjs). */
@@ -95,6 +95,7 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
     cornersByHalf,
     sotByHalf,
     playerSot,
+    firstGoalMethod: firstGoalMethod(data.keyEvents),
   };
 }
 
@@ -242,6 +243,14 @@ type EspnStatTeam = {
   team?: { displayName?: string };
   statistics?: { name?: string; displayValue?: string; value?: number }[];
 };
+type EspnKeyEvent = {
+  scoringPlay?: boolean;
+  ownGoal?: boolean;
+  penaltyKick?: boolean;
+  text?: string;
+  period?: { number?: number };
+  clock?: { value?: number };
+};
 type EspnSummary = {
   boxscore?: { teams?: EspnStatTeam[] };
   commentary?: {
@@ -252,7 +261,36 @@ type EspnSummary = {
       participants?: { athlete?: { displayName?: string } }[];
     };
   }[];
+  keyEvents?: EspnKeyEvent[];
 };
+
+/**
+ * How the FIRST goal of the match was scored, from the summary `keyEvents`.
+ * Picks the earliest scoring play (by period then clock — defensive against
+ * feed ordering) and classifies it off the structured flags + Opta prose.
+ * Order matters: own-goal and penalty take precedence over header/free-kick.
+ * Returns null when no goal has been scored yet.
+ */
+export function firstGoalMethod(keyEvents: EspnKeyEvent[] | undefined): GoalMethod | null {
+  const scoring = (keyEvents ?? []).filter((e) => e.scoringPlay);
+  if (!scoring.length) return null;
+  const first = scoring.slice().sort((a, b) => {
+    const pa = a.period?.number ?? 1;
+    const pb = b.period?.number ?? 1;
+    if (pa !== pb) return pa - pb;
+    return (a.clock?.value ?? 0) - (b.clock?.value ?? 0);
+  })[0];
+  const text = (first.text ?? "").toLowerCase();
+  if (first.ownGoal === true || text.includes("own goal")) return "owngoal";
+  if (first.penaltyKick === true || /\bpenalty\b/.test(text)) return "penalty";
+  if (/\bheader\b|\bheaded\b|with the head/.test(text)) return "header";
+  // Direct free kick: Opta phrases it "from a free kick" / "direct free kick"
+  // with NO assist (an assisted goal off a free-kick cross is a normal shot or
+  // header, already handled above).
+  if (/direct free kick/.test(text) || (/free kick/.test(text) && !/assisted by/.test(text)))
+    return "freekick";
+  return "shot";
+}
 
 function parseMinute(displayClock?: string): number | null {
   if (!displayClock) return null;

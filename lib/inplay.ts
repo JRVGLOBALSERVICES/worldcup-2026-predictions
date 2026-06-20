@@ -303,6 +303,30 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         ? { verdict: "lost", note: "No free-kick goal" }
         : { verdict: "alive", note: `${player} free-kick — confirmed at FT` };
 
+    case "firstGoalMethod": {
+      // "Goal Number (1) — header / free kick / own goal". The method is parsed
+      // from the summary keyEvents; it lands with the verified stats pass, so it
+      // can resolve mid-match the moment the first goal is recorded.
+      const labels: Record<string, string> = {
+        header: "header",
+        freekick: "direct free kick",
+        penalty: "penalty",
+        owngoal: "own goal",
+        shot: "shot",
+      };
+      const want = labels[g.method] ?? g.method;
+      const method = live.stats?.firstGoalMethod;
+      if (method) {
+        return method === g.method
+          ? { verdict: "won", note: `1st goal: ${want} ✓` }
+          : { verdict: "lost", note: `1st goal was a ${labels[method] ?? method}` };
+      }
+      if (done) return { verdict: "lost", note: cur.home + cur.away === 0 ? "0–0, no goal" : "No 1st-goal data" };
+      return cur.home + cur.away > 0
+        ? { verdict: "alive", note: `1st goal in — ${want}? confirmed with stats` }
+        : { verdict: "alive", note: `${want} — confirmed when 1st goal lands` };
+    }
+
     case "goalsOver":
       // Player scores strictly more than `line` (line 1.5 → 2+). Goals only
       // accrue, so once over the line it's a locked win.

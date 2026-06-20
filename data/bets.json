@@ -3331,7 +3331,11 @@
       "label": "1st goal a header",
       "odds": 5.2,
       "stake": 10,
-      "placedAt": "20/06 15:45"
+      "placedAt": "20/06 15:45",
+      "grade": {
+        "type": "firstGoalMethod",
+        "method": "header"
+      }
     },
     {
       "id": "sp-83333606047",
@@ -3342,7 +3346,11 @@
       "label": "1st goal a direct free kick",
       "odds": 35,
       "stake": 10,
-      "placedAt": "20/06 15:45"
+      "placedAt": "20/06 15:45",
+      "grade": {
+        "type": "firstGoalMethod",
+        "method": "freekick"
+      }
     },
     {
       "id": "sp-83333598977",
@@ -3353,7 +3361,11 @@
       "label": "1st goal an own goal",
       "odds": 22,
       "stake": 10,
-      "placedAt": "20/06 15:45"
+      "placedAt": "20/06 15:45",
+      "grade": {
+        "type": "firstGoalMethod",
+        "method": "owngoal"
+      }
     },
     {
       "id": "sp-83333523395",
