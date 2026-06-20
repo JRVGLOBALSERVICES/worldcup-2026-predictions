@@ -1426,6 +1426,39 @@
       "away": 0,
       "odds": 8.5,
       "stake": 20
+    },
+    {
+      "id": "b-83356549661",
+      "matchId": "net-swe-2026-06-20",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 3-2",
+      "home": 3,
+      "away": 2,
+      "odds": 14,
+      "stake": 10
+    },
+    {
+      "id": "b-83356542445",
+      "matchId": "net-swe-2026-06-20",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 3-0",
+      "home": 3,
+      "away": 0,
+      "odds": 5.24,
+      "stake": 50
+    },
+    {
+      "id": "b-83356525025",
+      "matchId": "net-swe-2026-06-20",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 3-1",
+      "home": 3,
+      "away": 1,
+      "odds": 6.02,
+      "stake": 50
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
