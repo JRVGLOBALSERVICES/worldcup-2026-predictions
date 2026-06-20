@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-19T23:43:22.324Z",
+    "generatedAt": "2026-06-20T03:03:25.092Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -1323,7 +1323,7 @@
       "win": {
         "pick": "Turkiye",
         "fairOdds": "2.15",
-        "reason": "Turkiye dominated their opener with 30 shots and 72% possession but lost 0-2 to Australia on profligacy and a goalkeeper masterclass; the underlying quality (Guler, Calhanoglu, Yildiz, Akturkoglu) is a clear tier above Paraguay, who were thumped 1-4 by USA. Both are desperate after opening defeats, but Turkiye's creation volume gives a slight edge. Far from certain - Paraguay are physical and organised at the back, so ~48-52% only."
+        "reason": "Confirmed XIs sharpen the picture: Yildiz starts and Muldur & Akgun come in for Turkiye, who out-create everyone (30 shots, 72% vs Australia) but lost their opener 0-2. Paraguay set up as a deep-block counter side - Cubas screening Alderete & G.Gomez, Almiron/Enciso breaking, Pitta alone up top after the 1-4 USA loss. Turkiye are favourites on possession and quality, but a possession-favourite vs a compact counter side is a REAL draw risk: ~48-52% only, and a low-scoring stalemate is very live."
       },
       "halfTime": {
         "score": "0-0",
@@ -1344,97 +1344,98 @@
           "player": "Kenan Yildiz",
           "fairOdds": "3.2",
           "banker": false,
-          "note": "Juventus forward pushing for first start; Turkiye's most direct goal threat from the left, takes shots on early"
+          "note": "Confirmed to START after a calf scare kept him out the opener; Turkiye's most direct ball-carrier from the left, takes shots on early - prime tool to unlock a low block."
         },
         {
           "player": "Kerem Akturkoglu",
           "fairOdds": "3.4",
           "banker": false,
-          "note": "On penalties and a constant cutting-in threat from the right; led Turkiye's shot volume vs Australia"
+          "note": "Leads the line / cuts in off the flank; led Turkiye's shot volume vs Australia and a constant left-footed threat against a deep defence."
         },
         {
-          "player": "Arda Guler",
+          "player": "Hakan Calhanoglu",
           "fairOdds": "4.0",
           "banker": false,
-          "note": "Real Madrid playmaker and free-kick option; arrives in the box and strikes well from range"
+          "note": "Captain, penalty + free-kick taker; arrives in the box and strikes from range - if Paraguay concede a dead ball or spot-kick he is the man."
         },
         {
-          "player": "Julio Enciso",
-          "fairOdds": "4.8",
+          "player": "Isidro Pitta",
+          "fairOdds": "5.5",
           "banker": false,
-          "note": "Paraguay's main spark; returned from a thigh scare, capable of a moment of individual quality on the counter"
+          "note": "Paraguay's confirmed lone striker (in for Sanabria); a physical hold-up focal point and their best chance to convert a rare counter or set-piece."
         }
       ],
       "assists": [
         {
-          "player": "Hakan Calhanoglu",
-          "fairOdds": "4.5",
+          "player": "Arda Guler",
+          "fairOdds": "4.2",
           "banker": false,
-          "note": "Captain and chief creator; all corners, most free-kicks and deep playmaking run through him"
+          "note": "Chief creator and set-piece deliverer; corners and the final ball are Turkiye's main supply line to break a packed Paraguay box."
         },
         {
-          "player": "Arda Guler",
-          "fairOdds": "5.0",
+          "player": "Ferdi Kadioglu",
+          "fairOdds": "5.5",
           "banker": false,
-          "note": "Through-balls and set-piece deliveries; Turkiye's other free-kick taker"
+          "note": "Overlapping left-back pushing high for cutbacks as Turkiye stretch the deep block; width matters against a compact four."
         },
         {
           "player": "Miguel Almiron",
           "fairOdds": "6.5",
           "banker": false,
-          "note": "Paraguay's outlet in transition; carries and crosses for Sanabria on the break"
+          "note": "Paraguay's transition outlet; pace and directness make him the likeliest to spring a counter and feed Pitta or Enciso."
         }
       ],
       "penalty": {
         "likelihood": "Medium",
         "taker": "Hakan Calhanoglu",
         "backup": "Kerem Akturkoglu",
-        "note": "Calhanoglu is Turkiye's designated penalty taker and is ice-cold from the spot; Paraguay defend deep and concede fouls under pressure, so a spot-kick is a live possibility but not a strong one."
+        "note": "Turkiye's sustained pressure on Paraguay's deep, foul-prone block keeps a spot-kick live; Calhanoglu is the ice-cold designated taker, Akturkoglu the backup. Live but not strong."
       },
       "lineups": {
-        "home": "Cakir; Celik, Demiral, Bardakci, Kadioglu; Calhanoglu, Yuksek; Guler, Kokcu, Yildiz; Akturkoglu (4-2-3-1)",
-        "away": "Gill; Caceres, Gomez, Alderete, Alonso; Almiron, Cubas, Bobadilla, D. Gomez; Sanabria, Enciso (4-4-2)",
-        "status": "probable"
+        "home": "Cakir; Muldur, Demiral, Bardakci, Kadioglu; Calhanoglu, Yuksek; Akgun, Guler, Yildiz; Akturkoglu (4-2-3-1)",
+        "away": "Gill; Caceres, G.Gomez, Alderete, Alonso; Cubas, D.Gomez; Almiron, Galarza, Enciso; Pitta (4-2-3-1)",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Hakan Calhanoglu",
-          "team": "Turkiye",
-          "note": "Captain and metronome; penalties, corners and most free-kicks. Turkiye go as he goes."
-        },
-        {
           "player": "Kenan Yildiz",
           "team": "Turkiye",
-          "note": "Vying for a first start after impressing off the bench; direct, two-footed threat down the left."
+          "note": "CONFIRMED START - returns after a calf problem; his ball-carrying from the left is Turkiye's best tool to unlock a packed defence."
         },
         {
-          "player": "Arda Guler",
+          "player": "Mert Muldur",
           "team": "Turkiye",
-          "note": "Real Madrid's breakout star and the creative hub alongside Calhanoglu; free-kick taker."
+          "note": "Comes in at right-back for Zeki Celik; provides overlapping width down the right alongside Akgun."
+        },
+        {
+          "player": "Yunus Akgun",
+          "team": "Turkiye",
+          "note": "Drafted in (Kokcu/Baris Alper Yilmaz drop to the bench); direct wide runner to stretch Paraguay's block."
+        },
+        {
+          "player": "Hakan Calhanoglu",
+          "team": "Turkiye",
+          "note": "Captain and metronome; primary penalty, corner and free-kick taker - Turkiye go as he goes."
         },
         {
           "player": "Gustavo Gomez",
           "team": "Paraguay",
-          "note": "Captain, central defensive anchor and an aerial set-piece threat; key to keeping Paraguay compact."
+          "note": "Captain and aerial menace from set-pieces; anchors the deep block and is Paraguay's likeliest scorer from a dead ball."
         },
         {
-          "player": "Julio Enciso",
+          "player": "Isidro Pitta",
           "team": "Paraguay",
-          "note": "Returned from a thigh injury; Paraguay's main attacking spark and counter-attacking outlet."
-        },
-        {
-          "player": "Miguel Almiron",
-          "team": "Paraguay",
-          "note": "Tireless runner and transition outlet; Paraguay's chance creation leans on his carries."
+          "note": "Confirmed lone striker ahead of Sanabria; physical focal point with Almiron, Galarza & Enciso feeding off the counter."
         }
       ],
       "confidence": "medium",
       "sources": [
+        "https://www.101greatgoals.com/football/world-cup-news/live-turkey-vs-paraguay-teams-line-ups-tv-channel-live-online-stream-stats/",
         "https://www.rotowire.com/soccer/article/turkey-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118661",
-        "https://www.sportsmole.co.uk/football/turkey/world-cup-2026/predicted-lineups/yildiz-doubt-persists-for-montella-predicted-turkey-lineup-vs-paraguay_599445.html",
-        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/t%C3%BCrkiye-s-possible-lineup-to-face-paraguay-in-the-fifa-world-cup-2026-2026-06-18",
-        "https://www.skysports.com/football/news/12098/13552630/world-cup-2026-australia-2-0-turkey-socceroos-make-winning-start-to-group-d-campaign-in-vancouver",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://www.sportsmole.co.uk/football/turkey/world-cup-2026/preview/turkey-vs-paraguay-prediction-team-news-lineups_599370.html",
+        "https://www.si.com/soccer/turkiye-vs-paraguay-world-cup-preview-predictions-lineups-6-19-26",
+        "https://us.soccerway.com/game/paraguay-YaNlqp6j/turkey-QeijuHo5/summary/lineups/",
+        "https://www.fotmob.com/matches/turkiye-vs-paraguay/1gte1s"
       ]
     }
   }
