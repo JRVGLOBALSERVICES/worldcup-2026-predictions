@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T03:20:26.188Z",
+    "generatedAt": "2026-06-20T04:20:24.760Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 11,
     "live": 1
@@ -1222,7 +1222,10 @@
     },
     "tur-par-2026-06-19": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "score": {
         "home": 0,
@@ -1244,21 +1247,27 @@
           "player": "Matías Galarza",
           "minute": 3,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Miguel Almirón",
+          "minute": 45,
+          "type": "red"
         }
       ],
       "updatedAt": "2026-06-20T03:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
+          "home": 6,
           "away": 0
         },
         "sot": {
-          "home": 0,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "shots": {
-          "home": 2,
-          "away": 3
+          "home": 14,
+          "away": 4
         },
         "yellow": {
           "home": 0,
@@ -1266,16 +1275,16 @@
         },
         "red": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cards": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
-            2,
-            0
+            5,
+            1
           ],
           "away": [
             0,
@@ -1284,15 +1293,19 @@
         },
         "sotByHalf": {
           "home": [
-            0,
-            0
+            1,
+            1
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
-        "playerSot": {}
+        "playerSot": {
+          "Kenan Yildiz": 1,
+          "Juan Jose Cáceres": 1,
+          "Merih Demiral": 1
+        }
       }
     }
   }
