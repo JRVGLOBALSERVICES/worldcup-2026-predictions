@@ -127,6 +127,16 @@
         "home": 0,
         "away": 1
       }
+    },
+    "net-swe-2026-06-20": {
+      "ht": {
+        "home": 2,
+        "away": 0
+      },
+      "ft": {
+        "home": 5,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -660,6 +670,79 @@
           "team": "home",
           "player": "Eren Elmali",
           "minute": 71,
+          "type": "yellow"
+        }
+      ]
+    },
+    "net-swe-2026-06-20": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Brian Brobbey",
+          "minute": 5,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Brian Brobbey",
+          "minute": 16,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cody Gakpo",
+          "minute": 47,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cody Gakpo",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Anthony Elanga",
+          "minute": 58,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Crysencio Summerville",
+          "minute": 89,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Gabriel Gudmundsson",
+          "minute": 52,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Yasin Ayari",
+          "minute": 74,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Lucas Bergvall",
+          "minute": 80,
           "type": "yellow"
         }
       ]
@@ -4271,20 +4354,20 @@
     },
     "net-swe-2026-06-20": {
       "corners": {
-        "home": 1,
-        "away": 2
+        "home": 2,
+        "away": 5
       },
       "sot": {
-        "home": 6,
-        "away": 4
+        "home": 7,
+        "away": 8
       },
       "shots": {
-        "home": 9,
-        "away": 11
+        "home": 10,
+        "away": 16
       },
       "yellow": {
         "home": 0,
-        "away": 1
+        "away": 3
       },
       "red": {
         "home": 0,
@@ -4292,16 +4375,16 @@
       },
       "cards": {
         "home": 0,
-        "away": 1
+        "away": 3
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
           2,
-          0
+          3
         ]
       },
       "sotByHalf": {
@@ -4311,13 +4394,16 @@
         ],
         "away": [
           4,
-          0
+          3
         ]
       },
       "playerSot": {
         "Viktor Gyökeres": 3,
         "Cody Gakpo": 2,
-        "Yasin Ayari": 1
+        "Yasin Ayari": 1,
+        "Alexander Isak": 1,
+        "Besfort Zeneli": 1,
+        "Gustaf Lagerbielke": 1
       },
       "firstGoalMethod": "shot"
     }
