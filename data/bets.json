@@ -147,6 +147,16 @@
         "home": 2,
         "away": 1
       }
+    },
+    "ecu-cur-2026-06-20": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 0
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -786,6 +796,48 @@
         }
       ],
       "cards": []
+    },
+    "ecu-cur-2026-06-20": {
+      "status": "finished",
+      "goals": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Jordy Alcívar",
+          "minute": 37,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Leandro Bacuna",
+          "minute": 38,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Juninho Bacuna",
+          "minute": 53,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Livano Comenencia",
+          "minute": 55,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Juriën Gaari",
+          "minute": 74,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Gervane Kastaneer",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ]
     }
   },
   "bets": [
@@ -4871,20 +4923,20 @@
     },
     "ecu-cur-2026-06-20": {
       "corners": {
-        "home": 2,
+        "home": 9,
         "away": 0
       },
       "sot": {
-        "home": 8,
-        "away": 2
+        "home": 15,
+        "away": 3
       },
       "shots": {
-        "home": 13,
-        "away": 9
+        "home": 27,
+        "away": 10
       },
       "yellow": {
         "home": 1,
-        "away": 3
+        "away": 5
       },
       "red": {
         "home": 0,
@@ -4892,12 +4944,12 @@
       },
       "cards": {
         "home": 1,
-        "away": 3
+        "away": 5
       },
       "cornersByHalf": {
         "home": [
           1,
-          1
+          8
         ],
         "away": [
           0,
@@ -4907,18 +4959,25 @@
       "sotByHalf": {
         "home": [
           6,
-          1
+          9
         ],
         "away": [
           0,
-          0
+          3
         ]
       },
       "playerSot": {
-        "Enner Valencia": 2,
+        "Enner Valencia": 5,
         "John Yeboah": 2,
-        "Gonzalo Plata": 2,
-        "Moisés Caicedo": 1
+        "Gonzalo Plata": 3,
+        "Moisés Caicedo": 1,
+        "Leandro Bacuna": 1,
+        "Livano Comenencia": 1,
+        "Kevin Rodríguez": 1,
+        "Willian Pacho": 1,
+        "Nilson Angulo": 1,
+        "Juninho Bacuna": 1,
+        "Pedro Vite": 1
       },
       "firstGoalMethod": null,
       "waterBreak": {
@@ -4929,6 +4988,16 @@
           "breakEndMinute": 27,
           "firstActionType": "Shot On Target",
           "firstActionMinute": 28,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Shot On Target",
+          "firstActionMinute": 72,
           "isCorner": false,
           "reliable": true
         }

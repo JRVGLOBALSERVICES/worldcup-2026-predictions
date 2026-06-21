@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T01:20:26.746Z",
+    "generatedAt": "2026-06-21T02:20:28.307Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 14,
-    "live": 1
+    "finished": 15,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1587,12 +1587,15 @@
       }
     },
     "ecu-cur-2026-06-20": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 0
+      },
       "score": {
         "home": 0,
         "away": 0
@@ -1622,25 +1625,37 @@
           "player": "Livano Comenencia",
           "minute": 55,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Juriën Gaari",
+          "minute": 74,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Gervane Kastaneer",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-21T00:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 9,
           "away": 0
         },
         "sot": {
-          "home": 8,
-          "away": 2
+          "home": 15,
+          "away": 3
         },
         "shots": {
-          "home": 13,
-          "away": 9
+          "home": 27,
+          "away": 10
         },
         "yellow": {
           "home": 1,
-          "away": 3
+          "away": 5
         },
         "red": {
           "home": 0,
@@ -1648,12 +1663,12 @@
         },
         "cards": {
           "home": 1,
-          "away": 3
+          "away": 5
         },
         "cornersByHalf": {
           "home": [
             1,
-            1
+            8
           ],
           "away": [
             0,
@@ -1663,18 +1678,25 @@
         "sotByHalf": {
           "home": [
             6,
-            1
+            9
           ],
           "away": [
             0,
-            0
+            3
           ]
         },
         "playerSot": {
-          "Enner Valencia": 2,
+          "Enner Valencia": 5,
           "John Yeboah": 2,
-          "Gonzalo Plata": 2,
-          "Moisés Caicedo": 1
+          "Gonzalo Plata": 3,
+          "Moisés Caicedo": 1,
+          "Leandro Bacuna": 1,
+          "Livano Comenencia": 1,
+          "Kevin Rodríguez": 1,
+          "Willian Pacho": 1,
+          "Nilson Angulo": 1,
+          "Juninho Bacuna": 1,
+          "Pedro Vite": 1
         },
         "firstGoalMethod": null,
         "waterBreak": {
@@ -1685,6 +1707,16 @@
             "breakEndMinute": 27,
             "firstActionType": "Shot On Target",
             "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Shot On Target",
+            "firstActionMinute": 72,
             "isCorner": false,
             "reliable": true
           }
