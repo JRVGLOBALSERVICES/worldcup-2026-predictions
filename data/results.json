@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T02:20:28.307Z",
+    "generatedAt": "2026-06-21T04:20:31.322Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 15,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1721,6 +1721,78 @@
             "reliable": true
           }
         }
+      }
+    },
+    "tun-jap-2026-06-20": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Daichi Kamada",
+          "minute": 3,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [],
+      "updatedAt": "2026-06-21T04:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 2
+        },
+        "sot": {
+          "home": 0,
+          "away": 2
+        },
+        "shots": {
+          "home": 1,
+          "away": 4
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            2,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "playerSot": {
+          "Takehiro Tomiyasu": 1
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
       }
     }
   }
