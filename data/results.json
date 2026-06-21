@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T06:20:24.831Z",
+    "generatedAt": "2026-06-21T16:20:26.450Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 16,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1842,6 +1842,78 @@
             "reliable": false
           }
         }
+      }
+    },
+    "spa-sau-2026-06-21": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Lamine Yamal",
+          "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [],
+      "updatedAt": "2026-06-21T16:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 2,
+          "away": 0
+        },
+        "sot": {
+          "home": 2,
+          "away": 0
+        },
+        "shots": {
+          "home": 8,
+          "away": 0
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Mikel Oyarzabal": 1
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
       }
     }
   }
