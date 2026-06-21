@@ -1930,6 +1930,105 @@
       "away": 2,
       "odds": 41,
       "stake": 10
+    },
+    {
+      "id": "b-83406245825",
+      "matchId": "uru-cap-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 2-1",
+      "home": 2,
+      "away": 1,
+      "odds": 8.5,
+      "stake": 50
+    },
+    {
+      "id": "b-83406235505",
+      "matchId": "uru-cap-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-1",
+      "home": 1,
+      "away": 1,
+      "odds": 8,
+      "stake": 50
+    },
+    {
+      "id": "b-83406177673",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 7-0",
+      "home": 7,
+      "away": 0,
+      "odds": 100,
+      "stake": 10
+    },
+    {
+      "id": "b-83406174349",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 6-0",
+      "home": 6,
+      "away": 0,
+      "odds": 80,
+      "stake": 10
+    },
+    {
+      "id": "b-83405749397",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 4-0 (1st half)",
+      "home": 4,
+      "away": 0,
+      "odds": 50,
+      "stake": 50
+    },
+    {
+      "id": "b-83405737025",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 3-0 (1st half)",
+      "home": 3,
+      "away": 0,
+      "odds": 19,
+      "stake": 50
+    },
+    {
+      "id": "b-83405721361",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 4-0",
+      "home": 4,
+      "away": 0,
+      "odds": 14,
+      "stake": 30
+    },
+    {
+      "id": "b-83405708063",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 5-0",
+      "home": 5,
+      "away": 0,
+      "odds": 31,
+      "stake": 40
+    },
+    {
+      "id": "b-83405700599",
+      "matchId": "bel-ira-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 5-1",
+      "home": 5,
+      "away": 1,
+      "odds": 41,
+      "stake": 30
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -4487,6 +4586,78 @@
       "grade": {
         "type": "scored",
         "player": "Salem Al-Dawsari"
+      }
+    },
+    {
+      "id": "sp-83406207987",
+      "slipNo": "83406207987",
+      "matchId": "uru-cap-2026-06-21",
+      "player": "—",
+      "market": "Match winner — W2",
+      "label": "Cape Verde to win (1X2 W2)",
+      "odds": 9.45,
+      "stake": 100,
+      "placedAt": "22/06 02:26",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "2"
+      }
+    },
+    {
+      "id": "sp-83406198857",
+      "slipNo": "83406198857",
+      "matchId": "uru-cap-2026-06-21",
+      "player": "—",
+      "market": "Match winner — X",
+      "label": "Match to be a draw (1X2 X)",
+      "odds": 4.495,
+      "stake": 100,
+      "placedAt": "22/06 02:26",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83405996319",
+      "slipNo": "83405996319",
+      "matchId": "bel-ira-2026-06-21",
+      "player": "Leandro Trossard",
+      "market": "Player over 1.5 goals",
+      "label": "Leandro Trossard to score 2+ goals (Over 1.5)",
+      "odds": 16,
+      "stake": 20,
+      "placedAt": "22/06 02:22",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Leandro Trossard",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83405835029",
+      "slipNo": "83405835029",
+      "matchId": "bel-ira-2026-06-21",
+      "player": "Belgium v Iran",
+      "market": "First 10 min — goal + corner + card",
+      "label": "Over 0 goals, over 0 corners AND over 0 cards all before 9:59 (accumulator) — manual settle, no time-window auto-grade",
+      "odds": 41,
+      "stake": 10,
+      "placedAt": "22/06 02:18"
+    },
+    {
+      "id": "sp-83405661815",
+      "slipNo": "83405661815",
+      "matchId": "bel-ira-2026-06-21",
+      "player": "—",
+      "market": "How 1st goal scored — own goal",
+      "label": "1st goal of the match to be an own goal",
+      "odds": 22,
+      "stake": 50,
+      "placedAt": "22/06 02:15",
+      "grade": {
+        "type": "firstGoalMethod",
+        "method": "owngoal"
       }
     }
   ],
