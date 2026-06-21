@@ -1792,6 +1792,61 @@
       "away": 0,
       "odds": 31,
       "stake": 20
+    },
+    {
+      "id": "b-83396749979",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 2-1",
+      "home": 2,
+      "away": 1,
+      "odds": 13,
+      "stake": 30
+    },
+    {
+      "id": "b-83396736811",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-1",
+      "home": 1,
+      "away": 1,
+      "odds": 17,
+      "stake": 30
+    },
+    {
+      "id": "b-83396730719",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 2-2",
+      "home": 2,
+      "away": 2,
+      "odds": 41,
+      "stake": 20
+    },
+    {
+      "id": "b-83396725715",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-2",
+      "home": 1,
+      "away": 2,
+      "odds": 55,
+      "stake": 20
+    },
+    {
+      "id": "b-83396719559",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-1",
+      "home": 0,
+      "away": 1,
+      "odds": 41,
+      "stake": 20
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -4259,6 +4314,96 @@
       "grade": {
         "type": "waterBreakCorner",
         "half": 1
+      }
+    },
+    {
+      "id": "sp-83396676365",
+      "slipNo": "83396676365",
+      "matchId": "spa-sau-2026-06-21",
+      "player": "—",
+      "market": "1X2 X (Draw)",
+      "label": "Match to be a draw (1X2 X)",
+      "odds": 11.2,
+      "stake": 50,
+      "placedAt": "21/06 23:19",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83396678901",
+      "slipNo": "83396678901",
+      "matchId": "spa-sau-2026-06-21",
+      "player": "—",
+      "market": "1X2 W2 (Saudi Arabia)",
+      "label": "Saudi Arabia to win (1X2 W2)",
+      "odds": 34,
+      "stake": 50,
+      "placedAt": "21/06 23:19",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "2"
+      }
+    },
+    {
+      "id": "sp-83396907503",
+      "slipNo": "83396907503",
+      "matchId": "spa-sau-2026-06-21",
+      "player": "Sultan Mandash",
+      "market": "Anytime goal (incl. subs)",
+      "label": "Sultan Mandash to score at any time (incl. substitutions) — Yes",
+      "odds": 14,
+      "stake": 20,
+      "placedAt": "21/06 23:23",
+      "grade": {
+        "type": "scored",
+        "player": "Sultan Mandash"
+      }
+    },
+    {
+      "id": "sp-83396897477",
+      "slipNo": "83396897477",
+      "matchId": "spa-sau-2026-06-21",
+      "player": "Musab Fahd Al-Juwayr",
+      "market": "Anytime goal (incl. subs)",
+      "label": "Musab Fahd Al-Juwayr to score at any time (incl. substitutions) — Yes",
+      "odds": 11.2,
+      "stake": 20,
+      "placedAt": "21/06 23:23",
+      "grade": {
+        "type": "scored",
+        "player": "Musab Fahd Al-Juwayr"
+      }
+    },
+    {
+      "id": "sp-83396894515",
+      "slipNo": "83396894515",
+      "matchId": "spa-sau-2026-06-21",
+      "player": "Khalid Al Ghannam",
+      "market": "Anytime goal (incl. subs)",
+      "label": "Khalid Al Ghannam to score at any time (incl. substitutions) — Yes",
+      "odds": 14,
+      "stake": 20,
+      "placedAt": "21/06 23:23",
+      "grade": {
+        "type": "scored",
+        "player": "Khalid Al Ghannam"
+      }
+    },
+    {
+      "id": "sp-83396884205",
+      "slipNo": "83396884205",
+      "matchId": "spa-sau-2026-06-21",
+      "player": "Salem Al-Dawsari",
+      "market": "Anytime goal (incl. subs)",
+      "label": "Salem Al-Dawsari to score at any time (incl. substitutions) — Yes",
+      "odds": 11.2,
+      "stake": 20,
+      "placedAt": "21/06 23:22",
+      "grade": {
+        "type": "scored",
+        "player": "Salem Al-Dawsari"
       }
     }
   ],
