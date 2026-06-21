@@ -1847,6 +1847,28 @@
       "away": 1,
       "odds": 41,
       "stake": 20
+    },
+    {
+      "id": "b-83399117375",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 3-1",
+      "home": 3,
+      "away": 1,
+      "odds": 12,
+      "stake": 10
+    },
+    {
+      "id": "b-83399160265",
+      "matchId": "spa-sau-2026-06-21",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 4-2",
+      "home": 4,
+      "away": 2,
+      "odds": 41,
+      "stake": 10
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
