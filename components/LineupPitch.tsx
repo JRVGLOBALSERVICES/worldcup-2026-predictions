@@ -34,10 +34,58 @@ function surnameOf(full: string): string {
   return parts[parts.length - 1] || full;
 }
 
+// Parse a line-up string into a keeper + ordered outfield lines.
+// The data is semi-structured: lines may be ";"-separated (GK first), the
+// formation may sit as a "3-5-2:" prefix or a "(4-2-3-1)" suffix, and trailing
+// bench/injury notes hang off a " - ". We honour the explicit line structure
+// when it's there and fall back to count-based inference for plain CSV XIs.
+function parseLineup(raw: string): { gk: string; lines: string[][]; formation: string } {
+  let s = (raw || "").trim();
+  if (!s) return { gk: "", lines: [], formation: "" };
+
+  // 1. drop trailing narrative notes ("… - Doak benched; McKenna out")
+  s = s.split(/\s[-–—]\s/)[0].trim();
+
+  // 2. lift an explicit formation (prefix "3-5-2:" or parenthetical "(4-2-3-1)")
+  let formation = "";
+  const prefix = s.match(/^\s*(\d(?:-\d){1,3})\s*:\s*/);
+  if (prefix) {
+    formation = prefix[1];
+    s = s.slice(prefix[0].length);
+  }
+  const paren = s.match(/\((\d(?:-\d){1,3})[^)]*\)/);
+  if (paren && !formation) formation = paren[1];
+  s = s.replace(/\([^)]*\)/g, " ").trim(); // strip all parentheticals from names
+
+  // 3. split into GK + outfield lines
+  let gk = "";
+  let lines: string[][];
+  if (s.includes(";")) {
+    const groups = s
+      .split(";")
+      .map((g) => g.split(",").map((x) => x.trim()).filter(Boolean))
+      .filter((g) => g.length);
+    gk = groups.shift()?.[0] ?? "";
+    lines = groups;
+  } else {
+    const names = s.split(",").map((x) => x.trim()).filter(Boolean);
+    gk = names.shift() ?? "";
+    lines = [];
+    let cursor = 0;
+    for (const count of lineSplit(names.length)) {
+      lines.push(names.slice(cursor, cursor + count));
+      cursor += count;
+    }
+  }
+
+  if (!formation) formation = lines.map((l) => l.length).join("-");
+  return { gk, lines, formation };
+}
+
 // Classic role numbers per line, de-duped within a team.
 function buildShape(xi: string): Shape {
-  const names = xi.split(",").map((s) => s.trim()).filter(Boolean);
-  if (names.length === 0) return { gk: null, lines: [], formation: "" };
+  const { gk: keeper, lines: rawLines, formation } = parseLineup(xi);
+  if (!keeper && rawLines.length === 0) return { gk: null, lines: [], formation: "" };
 
   const used = new Set<number>();
   const take = (pool: number[], i: number) => {
@@ -52,24 +100,20 @@ function buildShape(xi: string): Shape {
     number: take(pool, i),
   });
 
-  const [keeper, ...outfield] = names;
-  const gk = mk(keeper, [1], 0);
-
-  const counts = lineSplit(outfield.length);
   const pools = [
-    [2, 5, 4, 3, 6],   // defence: RB, CB, CB, LB, extra
+    [2, 5, 4, 3, 6],    // defence: RB, CB, CB, LB, extra
     [6, 8, 10, 14, 16], // midfield spine
     [7, 9, 11, 17, 19], // attack
   ];
-  const lines: Slot[][] = [];
-  let cursor = 0;
-  counts.forEach((count, li) => {
-    const row: Slot[] = [];
-    for (let i = 0; i < count; i++) row.push(mk(outfield[cursor++], pools[Math.min(li, 2)], i));
-    lines.push(row);
-  });
+  // first line = defence (pool 0), last line = attack (pool 2), rest = midfield
+  const poolFor = (li: number, total: number) => (li === 0 ? 0 : li === total - 1 ? 2 : 1);
 
-  return { gk, lines, formation: counts.join("-") };
+  const gk = keeper ? mk(keeper, [1], 0) : null;
+  const lines: Slot[][] = rawLines.map((row, li) =>
+    row.map((name, i) => mk(name, pools[poolFor(li, rawLines.length)], i)),
+  );
+
+  return { gk, lines, formation };
 }
 
 function Disc({ slot, tone }: { slot: Slot; tone: "home" | "away" | "gk" }) {
@@ -150,6 +194,7 @@ export function LineupPitch({ fixture, lineups }: { fixture: Fixture; lineups: P
         <StatusBadge status={lineups.status} />
       </div>
 
+      <div className="mx-auto max-w-[360px]">
       <TeamTag flag={fixture.away.flag} name={fixture.away.name} formation={away.formation} align="start" />
 
       {/* The pitch */}
@@ -189,9 +234,10 @@ export function LineupPitch({ fixture, lineups }: { fixture: Fixture; lineups: P
       </div>
 
       <TeamTag flag={fixture.home.flag} name={fixture.home.name} formation={home.formation} align="end" />
+      </div>
 
       <p className="mt-3 text-[0.62rem] leading-snug text-faint">
-        Positional numbers (GK 1 · 2/3 full-backs · 4/5 centre-backs · 6/8/10 spine · 7/9/11 front). Formation inferred from the line-up order.
+        Numbers are positional, not squad numbers (GK 1 · 2/3 full-backs · 4/5 centre-backs · 6/8/10 spine · 7/9/11 front).
       </p>
     </div>
   );
