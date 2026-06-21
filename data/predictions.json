@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T15:44:48.000Z",
+    "generatedAt": "2026-06-21T18:24:24.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -2037,118 +2037,121 @@
       "win": {
         "pick": "Belgium",
         "fairOdds": "1.72",
-        "reason": "Belgium dominate possession and quality with De Bruyne, Tielemans and Trossard, but Doku is out through illness, removing their best one-v-one threat against a packed box, and Lukaku is short of fitness so De Ketelaere likely leads a less penetrative front line. Iran under Ghalenoei sit in a disciplined deep 4-5-1/4-4-2 low block around Beiranvand and counter through Taremi, which is exactly the profile that frustrates a possession-favourite. A genuine draw/under-2.5 risk exists; ~58-60% model win-prob is far from certainty, so this is no banker and the clean-sheet/correct-score lines are downgraded accordingly."
+        "reason": "Confirmed XI gives Belgium a clear quality edge with De Bruyne pulling strings behind Lukaku, plus Trossard and Saelemaekers stretching a five-man Iran block. But Belgium were sluggish in their 1-1 opener vs Egypt and only equalised via a Lukaku-forced own goal, while Iran sit in a disciplined 5-4-1 low block built to frustrate possession sides. This is a genuine draw / under-2.5 risk against a side that defends deep and counters through Taremi, so ~55-60% win probability is the honest read, not a certainty."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.40",
+        "fairOdds": "2.30",
         "alt": "1-0",
-        "altOdds": "2.90"
+        "altOdds": "3.10"
       },
       "htft": {
         "pick": "Draw/Belgium",
-        "fairOdds": "3.60"
+        "fairOdds": "4.50"
       },
       "fullTime": {
         "score": "1-0",
-        "fairOdds": "6.50"
+        "fairOdds": "6.00"
       },
       "scorers": [
         {
-          "player": "Charles De Ketelaere",
-          "fairOdds": "3.40",
+          "player": "Romelu Lukaku",
+          "fairOdds": "2.90",
           "banker": false,
-          "note": "Likely starts with Lukaku unfit; mobile focal point but Iran's deep block limits clear chances — non-banker"
+          "note": "Starts as the focal point but short of match fitness (7 sub apps / ~69 mins at Napoli, recent hamstring) and 7 WC games without a goal historically - a veteran star, explicitly NOT a banker."
         },
         {
           "player": "Kevin De Bruyne",
-          "fairOdds": "5.00",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "Operates between lines, set-piece + long-range threat; 37 intl goals but reliant on space Iran won't concede — non-banker"
+          "note": "Belgium's penalty, free-kick and corner taker; hit the post from a free kick vs Egypt. Likeliest set-piece/distance threat and the assist hub, but more creator than finisher now."
         },
         {
           "player": "Leandro Trossard",
-          "fairOdds": "4.20",
+          "fairOdds": "4.75",
           "banker": false,
-          "note": "Inside-forward arriving in the box; takes on more creative load with Doku out — non-banker"
+          "note": "Technically complete wide forward who scores from tight angles; arrives off the back line into the box against a deep block."
         },
         {
-          "player": "Romelu Lukaku",
-          "fairOdds": "3.80",
+          "player": "Alexis Saelemaekers",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Veteran marquee striker but barely played at Napoli; likely super-sub, seven World Cup games without a goal — explicitly non-banker"
+          "note": "In for the ill Doku; carries goalscoring instinct from wide. Decent value but a rotation-dependent starter, so far from banked."
         }
       ],
       "assists": [
         {
           "player": "Kevin De Bruyne",
-          "fairOdds": "3.80",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "Chief creator and dead-ball deliverer; most likely Belgian assist source but against a low block — non-banker"
+          "note": "Controls all dead balls plus open play; Belgium's most attractive assist source even against a packed box."
         },
         {
-          "player": "Leandro Trossard",
+          "player": "Maxim De Cuyper",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Left-back overlap and crossing into Lukaku; shares wide delivery against Iran's right side."
+        },
+        {
+          "player": "Thomas Meunier",
           "fairOdds": "6.50",
           "banker": false,
-          "note": "Cut-backs from the left with Doku absent — non-banker"
-        },
-        {
-          "player": "Timothy Castagne",
-          "fairOdds": "8.00",
-          "banker": false,
-          "note": "Overlapping full-back crosses if Belgium go wide — non-banker"
+          "note": "Provided the cross that forced the equaliser vs Egypt; right-back service is a real route to a goal here."
         }
       ],
       "penalty": {
         "likelihood": "medium",
         "taker": "Kevin De Bruyne",
         "backup": "Youri Tielemans",
-        "note": "De Bruyne is Belgium's primary penalty taker with Tielemans as backup; for Iran, Mehdi Taremi takes spot-kicks. With Iran defending deep in their own box, a Belgium penalty shout is a realistic medium-likelihood route to opening the scoring."
+        "note": "De Bruyne is Belgium's confirmed primary penalty taker, Tielemans the backup; both also take free kicks. If Iran win a spot-kick, Mehdi Taremi is their designated taker and focal point."
       },
       "lineups": {
-        "home": "Thibaut Courtois, Thomas Meunier, Brandon Mechele, Nathan Ngoy, Timothy Castagne, Amadou Onana, Youri Tielemans, Leandro Trossard, Kevin De Bruyne, Matias Fernandez-Pardo, Charles De Ketelaere",
-        "away": "Alireza Beiranvand, Ramin Rezaeian, Shojae Khalilzadeh, Aref Gholami, Milad Mohammadi, Alireza Jahanbakhsh, Saeid Ezatolahi, Saman Ghoddos, Mehdi Mohebi, Mehdi Ghayedi, Mehdi Taremi",
-        "status": "probable"
+        "home": "Thibaut Courtois, Thomas Meunier, Nathan Ngoy, Brandon Mechele, Maxim De Cuyper, Nicolas Raskin, Youri Tielemans, Alexis Saelemaekers, Kevin De Bruyne, Leandro Trossard, Romelu Lukaku",
+        "away": "Alireza Beiranvand, Hossein Hardani, Ramin Rezaeian, Shojae Khalilzadeh, Aref Kanaani, Ehsan Hajsafi, Saeid Ezatolahi, Mehdi Mohebi, Saeid Yousefi, Ali Nemati, Mehdi Taremi",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Jeremy Doku",
-          "team": "Belgium",
-          "note": "RULED OUT vs Iran — respiratory illness for ~2 weeks; removes Belgium's top dribbler, blunting their box-breaking threat"
-        },
-        {
           "player": "Romelu Lukaku",
           "team": "Belgium",
-          "note": "Major fitness doubt; barely featured for Napoli, one goal all season — likely benched/super-sub, De Ketelaere starts"
+          "note": "Promoted to a start over De Ketelaere despite being out of shape; coach admitted fitness is a gamble. Penalty-box presence but low minutes, so manage expectations on 90-minute output."
         },
         {
           "player": "Kevin De Bruyne",
           "team": "Belgium",
-          "note": "Talisman, primary penalty + set-piece taker; needs space Iran's low block denies"
+          "note": "The match's single biggest difference-maker - all set pieces, the tempo, and Belgium's clearest path to unlocking a deep five-man block run through him."
+        },
+        {
+          "player": "Nicolas Raskin",
+          "team": "Belgium",
+          "note": "Comes into midfield alongside Tielemans (Onana from probable XI dropped); his ball-winning and progression are key to sustaining pressure on Iran's low block."
+        },
+        {
+          "player": "Maxim De Cuyper",
+          "team": "Belgium",
+          "note": "Starts at left-back over Castagne; his overlapping width and delivery are a primary chance-creation route against Iran's packed box."
         },
         {
           "player": "Mehdi Taremi",
           "team": "Iran",
-          "note": "Lone-striker focal point and Iran's penalty taker; third World Cup, 100+ caps, the entire counter runs through him"
+          "note": "Lone striker, focal point and penalty taker; in form with 10 goals at Olympiacos and Iran's clear counter-attack outlet - the man Belgium's Ngoy/Mechele must contain."
         },
         {
-          "player": "Alireza Jahanbakhsh",
+          "player": "Alireza Beiranvand",
           "team": "Iran",
-          "note": "Captain battling fitness; if fit provides wide outlet on the break, key to Iran's transition threat"
-        },
-        {
-          "player": "Sardar Azmoun",
-          "team": "Iran",
-          "note": "OMITTED from the 26-man squad — Iran lack a second elite striker, deepening reliance on Taremi and the low-block plan"
+          "note": "Veteran keeper behind a five-man back line in a 5-4-1; with Jahanbakhsh (captain) benched and the side set up to defend deep, Iran's clean-sheet resistance is the live under-2.5 angle."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.espn.com/soccer/story/_/id/49128265/jeremy-doku-belgium-world-cup-game-iran",
-        "https://www.cbssports.com/soccer/news/belgium-vs-iran-world-cup-2026-preview-predictions-watch/",
-        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/team-news/belgium-vs-iran-injury-suspension-list-predicted-xis--world-cup-2026_599612.html",
-        "https://www.si.com/soccer/belgium-vs-iran-world-cup-preview-predictions-lineups-6-21-26",
-        "https://www.fourfourtwo.com/team/belgium-world-cup-2026-squad"
+        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/belgium-vs-iran-prediction-team-news-lineups_599586.html",
+        "https://sports.yahoo.com/articles/belgium-projected-lineup-vs-iran-162657949.html",
+        "https://www.skysports.com/football/news/11095/13552709/world-cup-2026-belgium-1-1-egypt-pharaohs-denied-first-world-cup-win-after-romelu-lukakus-instant-impact",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.aljazeera.com/sports/2026/5/15/lukaku-included-in-belgiums-world-cup-squad-despite-injury-plagued-season",
+        "https://en.wikipedia.org/wiki/Mehdi_Taremi",
+        "https://worldcuppass.com/iran-world-cup-squad-2026/",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021477"
       ]
     },
     "uru-cap-2026-06-21": {

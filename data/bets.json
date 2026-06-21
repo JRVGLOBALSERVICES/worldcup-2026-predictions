@@ -167,6 +167,16 @@
         "home": 0,
         "away": 4
       }
+    },
+    "spa-sau-2026-06-21": {
+      "ht": {
+        "home": 3,
+        "away": 0
+      },
+      "ft": {
+        "home": 4,
+        "away": 0
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -886,6 +896,57 @@
         }
       ],
       "cards": []
+    },
+    "spa-sau-2026-06-21": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Lamine Yamal",
+          "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 21,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 23,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Hassan Al-Tambakti",
+          "minute": 48,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Salem Al-Dawsari",
+          "minute": 30,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Mohamed Kanno",
+          "minute": 59,
+          "type": "yellow"
+        }
+      ]
     }
   },
   "bets": [
@@ -5290,20 +5351,20 @@
     },
     "spa-sau-2026-06-21": {
       "corners": {
-        "home": 5,
+        "home": 6,
         "away": 1
       },
       "sot": {
         "home": 8,
-        "away": 0
+        "away": 1
       },
       "shots": {
-        "home": 20,
-        "away": 2
+        "home": 22,
+        "away": 3
       },
       "yellow": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "red": {
         "home": 0,
@@ -5311,12 +5372,12 @@
       },
       "cards": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
           4,
-          1
+          2
         ],
         "away": [
           1,
@@ -5330,7 +5391,7 @@
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
       "playerSot": {
@@ -5338,7 +5399,8 @@
         "Lamine Yamal": 1,
         "Marc Cucurella": 1,
         "Pedro Porro": 1,
-        "Ferran Torres": 1
+        "Ferran Torres": 1,
+        "Abdullah Al-Hamdan": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -5349,6 +5411,16 @@
           "breakEndMinute": 27,
           "firstActionType": "Shot Off Target",
           "firstActionMinute": 29,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Shot On Target",
+          "firstActionMinute": 80,
           "isCorner": false,
           "reliable": true
         }
