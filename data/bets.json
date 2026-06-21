@@ -5600,20 +5600,20 @@
     },
     "bel-ira-2026-06-21": {
       "corners": {
-        "home": 1,
+        "home": 4,
         "away": 1
       },
       "sot": {
-        "home": 1,
-        "away": 1
+        "home": 4,
+        "away": 2
       },
       "shots": {
-        "home": 5,
-        "away": 2
+        "home": 14,
+        "away": 4
       },
       "yellow": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -5621,12 +5621,12 @@
       },
       "cards": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
-          1,
-          0
+          2,
+          2
         ],
         "away": [
           1,
@@ -5635,20 +5635,34 @@
       },
       "sotByHalf": {
         "home": [
-          1,
+          4,
           0
         ],
         "away": [
           1,
-          0
+          1
         ]
       },
       "playerSot": {
-        "Maxim De Cuyper": 1,
-        "Hossein Kanani": 1
+        "Maxim De Cuyper": 2,
+        "Hossein Kanani": 1,
+        "Youri Tielemans": 1,
+        "Kevin De Bruyne": 1,
+        "Mehdi Taremi": 1
       },
       "firstGoalMethod": null,
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "anchor",
+          "breakEndMinute": null,
+          "firstActionType": "Shot Off Target",
+          "firstActionMinute": 22,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
