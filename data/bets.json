@@ -177,6 +177,16 @@
         "home": 4,
         "away": 0
       }
+    },
+    "bel-ira-2026-06-21": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 0
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -945,6 +955,30 @@
           "player": "Mohamed Kanno",
           "minute": 59,
           "type": "yellow"
+        }
+      ]
+    },
+    "bel-ira-2026-06-21": {
+      "status": "finished",
+      "goals": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Romelu Lukaku",
+          "minute": 3,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Saeid Ezatolahi",
+          "minute": 33,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nathan Ngoy",
+          "minute": 66,
+          "type": "red"
         }
       ]
     }
@@ -5601,26 +5635,26 @@
     "bel-ira-2026-06-21": {
       "corners": {
         "home": 4,
-        "away": 1
-      },
-      "sot": {
-        "home": 4,
         "away": 2
       },
+      "sot": {
+        "home": 7,
+        "away": 3
+      },
       "shots": {
-        "home": 14,
-        "away": 4
+        "home": 23,
+        "away": 7
       },
       "yellow": {
         "home": 1,
         "away": 1
       },
       "red": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "cards": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "cornersByHalf": {
@@ -5630,25 +5664,27 @@
         ],
         "away": [
           1,
-          0
+          1
         ]
       },
       "sotByHalf": {
         "home": [
           4,
-          0
+          3
         ],
         "away": [
           1,
-          1
+          2
         ]
       },
       "playerSot": {
-        "Maxim De Cuyper": 2,
+        "Maxim De Cuyper": 4,
         "Hossein Kanani": 1,
         "Youri Tielemans": 1,
         "Kevin De Bruyne": 1,
-        "Mehdi Taremi": 1
+        "Mehdi Taremi": 1,
+        "Dodi Lukébakio": 1,
+        "Saeid Ezatolahi": 1
       },
       "firstGoalMethod": null,
       "waterBreak": {
@@ -5659,6 +5695,16 @@
           "breakEndMinute": null,
           "firstActionType": "Shot Off Target",
           "firstActionMinute": 22,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 72,
+          "firstActionType": "Foul",
+          "firstActionMinute": 79,
           "isCorner": false,
           "reliable": true
         }

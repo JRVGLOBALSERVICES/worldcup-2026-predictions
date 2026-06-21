@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T20:20:27.040Z",
+    "generatedAt": "2026-06-21T21:20:34.999Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 17,
-    "live": 1
+    "finished": 18,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1986,12 +1986,15 @@
       }
     },
     "bel-ira-2026-06-21": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 0
+      },
       "score": {
         "home": 0,
         "away": 0
@@ -2009,32 +2012,38 @@
           "player": "Saeid Ezatolahi",
           "minute": 33,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nathan Ngoy",
+          "minute": 66,
+          "type": "red"
         }
       ],
       "updatedAt": "2026-06-21T19:00:00.000Z",
       "stats": {
         "corners": {
           "home": 4,
-          "away": 1
-        },
-        "sot": {
-          "home": 4,
           "away": 2
         },
+        "sot": {
+          "home": 7,
+          "away": 3
+        },
         "shots": {
-          "home": 14,
-          "away": 4
+          "home": 23,
+          "away": 7
         },
         "yellow": {
           "home": 1,
           "away": 1
         },
         "red": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cards": {
-          "home": 1,
+          "home": 2,
           "away": 1
         },
         "cornersByHalf": {
@@ -2044,25 +2053,27 @@
           ],
           "away": [
             1,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             4,
-            0
+            3
           ],
           "away": [
             1,
-            1
+            2
           ]
         },
         "playerSot": {
-          "Maxim De Cuyper": 2,
+          "Maxim De Cuyper": 4,
           "Hossein Kanani": 1,
           "Youri Tielemans": 1,
           "Kevin De Bruyne": 1,
-          "Mehdi Taremi": 1
+          "Mehdi Taremi": 1,
+          "Dodi Lukébakio": 1,
+          "Saeid Ezatolahi": 1
         },
         "firstGoalMethod": null,
         "waterBreak": {
@@ -2073,6 +2084,16 @@
             "breakEndMinute": null,
             "firstActionType": "Shot Off Target",
             "firstActionMinute": 22,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 72,
+            "firstActionType": "Foul",
+            "firstActionMinute": 79,
             "isCorner": false,
             "reliable": true
           }
