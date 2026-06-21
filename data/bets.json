@@ -5006,15 +5006,15 @@
     "tun-jap-2026-06-20": {
       "corners": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "sot": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "shots": {
-        "home": 1,
-        "away": 4
+        "home": 2,
+        "away": 6
       },
       "yellow": {
         "home": 0,
@@ -5035,7 +5035,7 @@
         ],
         "away": [
           2,
-          0
+          1
         ]
       },
       "sotByHalf": {
@@ -5044,15 +5044,24 @@
           0
         ],
         "away": [
-          1,
+          0,
           0
         ]
       },
-      "playerSot": {
-        "Takehiro Tomiyasu": 1
-      },
+      "playerSot": {},
       "firstGoalMethod": "shot",
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 27,
+          "firstActionType": "Goal",
+          "firstActionMinute": 30,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
