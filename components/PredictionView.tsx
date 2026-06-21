@@ -1,6 +1,7 @@
 import type { Fixture, Prediction, Pick } from "@/lib/types";
 import { strengthFromOdds, strengthLabel, overallStrength } from "@/lib/data";
-import { SectionLabel, Banker, Confidence, StatusBadge, StrengthMeter } from "./atoms";
+import { SectionLabel, Banker, Confidence, StrengthMeter } from "./atoms";
+import { LineupPitch } from "./LineupPitch";
 
 export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Prediction }) {
   const overall = overallStrength(pred);
@@ -81,23 +82,8 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
         <p className="mt-2 text-sm leading-relaxed text-muted">{pred.penalty.note}</p>
       </div>
 
-      {/* lineups */}
-      <div>
-        <div className="mb-3 flex items-center gap-3">
-          <SectionLabel>
-            {pred.lineups.status === "confirmed"
-              ? "Confirmed line-ups"
-              : pred.lineups.status === "unconfirmed"
-                ? "Line-ups (TBC)"
-                : "Probable line-ups"}
-          </SectionLabel>
-          <StatusBadge status={pred.lineups.status} />
-        </div>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <Lineup team={fixture.home.name} flag={fixture.home.flag} xi={pred.lineups.home} />
-          <Lineup team={fixture.away.name} flag={fixture.away.flag} xi={pred.lineups.away} />
-        </div>
-      </div>
+      {/* lineups — formation board */}
+      <LineupPitch fixture={fixture} lineups={pred.lineups} />
 
       {/* deep player research */}
       <div>
@@ -182,17 +168,5 @@ function PickList({ picks }: { picks: Pick[] }) {
         </li>
       ))}
     </ul>
-  );
-}
-
-function Lineup({ team, flag, xi }: { team: string; flag: string; xi: string }) {
-  return (
-    <div className="rounded-xl border border-line bg-card/40 p-4">
-      <div className="mb-2 flex items-center gap-2">
-        <span className="text-lg">{flag}</span>
-        <span className="font-display text-sm font-bold uppercase tracking-wide text-ink">{team}</span>
-      </div>
-      <p className="text-sm leading-relaxed text-muted">{xi}</p>
-    </div>
   );
 }
