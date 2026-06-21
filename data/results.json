@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-20T22:20:20.457Z",
+    "generatedAt": "2026-06-21T00:20:33.308Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 14,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1584,6 +1584,71 @@
             "reliable": true
           }
         }
+      }
+    },
+    "ecu-cur-2026-06-20": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "goals": [],
+      "cards": [],
+      "updatedAt": "2026-06-21T00:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "sot": {
+          "home": 4,
+          "away": 0
+        },
+        "shots": {
+          "home": 5,
+          "away": 2
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            4,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Enner Valencia": 2,
+          "John Yeboah": 1,
+          "Gonzalo Plata": 1
+        },
+        "firstGoalMethod": null,
+        "waterBreak": {}
       }
     }
   }
