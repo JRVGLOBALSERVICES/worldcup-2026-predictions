@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T18:20:26.349Z",
+    "generatedAt": "2026-06-21T19:20:19.488Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 17,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -1983,6 +1983,77 @@
             "reliable": true
           }
         }
+      }
+    },
+    "bel-ira-2026-06-21": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "goals": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Romelu Lukaku",
+          "minute": 3,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-21T19:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 1
+        },
+        "sot": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 5,
+          "away": 2
+        },
+        "yellow": {
+          "home": 1,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "playerSot": {
+          "Maxim De Cuyper": 1,
+          "Hossein Kanani": 1
+        },
+        "firstGoalMethod": null,
+        "waterBreak": {}
       }
     }
   }
