@@ -1,19 +1,106 @@
-import type { Fixture, Prediction } from "@/lib/types";
+import type { Fixture, LineupXI, Prediction } from "@/lib/types";
 import { StatusBadge } from "./atoms";
 
 /* ─────────────────────────────────────────────────────────────────────────
  * LineupPitch — a real formation board (FotMob/ESPN style), not a name list.
  *
- * The source data (`lineups.home/away`) is a comma-separated XI string with the
- * keeper listed first. We infer the formation from the count, drop each player
- * onto a vertical pitch, and badge them with classic POSITIONAL numbers
- * (GK 1, full-backs 2/3, centre-backs 4/5, 6/8/10 spine, 7/9/11 front) — these
- * are the conventional role numbers, NOT scraped real shirt numbers. If the
- * data ever carries real numbers we render those instead.
+ * Two data paths:
+ *   1. CONFIRMED XI (lineups.homeXI/awayXI) — lifted from ESPN's published team
+ *      sheet by scripts/build-lineups.mjs. Carries the REAL formation, REAL shirt
+ *      numbers and per-player position codes (CD-L, LB, AM-R, F …). We band each
+ *      player by position to order them back-to-front / left-to-right, then chunk
+ *      by the formation's row sizes so the board reads true.
+ *   2. PROBABLE XI (lineups.home/away strings) — the pre-match research guess, no
+ *      real numbers. We infer a shape from the name order and badge players with
+ *      conventional POSITIONAL numbers, clearly labelled as such.
  * ──────────────────────────────────────────────────────────────────────── */
 
-type Slot = { name: string; surname: string; number: number };
+type Slot = { name: string; surname: string; number: number | null };
 type Shape = { gk: Slot | null; lines: Slot[][]; formation: string };
+
+// Nobiliary particles that belong WITH the surname ("De Bruyne", "van Dijk",
+// "Van der Berg"). Without this, last-word-only clips them to "Bruyne"/"Dijk".
+const PARTICLES = new Set([
+  "de", "del", "della", "di", "da", "das", "dos", "van", "von", "der", "den",
+  "ten", "ter", "la", "le", "du", "bin", "al", "af", "y", "e", "el", "abu",
+]);
+
+function surnameOf(full: string): string {
+  const parts = full.trim().split(/\s+/);
+  if (parts.length <= 1) return full;
+  let i = parts.length - 1;
+  // Walk left over particles, but never consume the first-name token.
+  while (i - 1 >= 1 && PARTICLES.has(parts[i - 1].toLowerCase())) i--;
+  return parts.slice(i).join(" ") || full;
+}
+
+/* ── Path 1: real confirmed XI ─────────────────────────────────────────── */
+
+// Vertical band of a position code, back (0) → front (4). Used only to ORDER
+// players; the formation string sets the actual row boundaries.
+function bandRank(pos: string): number {
+  const base = pos.toUpperCase().replace(/[-\s]?[LRC]$/, "");
+  if (base === "G" || base === "GK") return 0;
+  if (/^(D|CD|CB|LB|RB|LWB|RWB|WB|SW|RCB|LCB|FB)$/.test(base)) return 1;
+  if (/^(DM|CDM|DMF|M|CM|LM|RM|MF|RDM|LDM|RCM|LCM)$/.test(base)) return 2;
+  if (/^(AM|CAM|AMF|SS)$/.test(base)) return 3;
+  return 4; // F, CF, ST, FW, LW, RW, W, LF, RF, …
+}
+
+// Left (0) → right (4) ordering within a band, from the position code.
+function sideScore(pos: string): number {
+  const m = pos.toUpperCase().match(/-?([LRC])$/);
+  const suffix = m ? m[1] : "";
+  const base = pos.toUpperCase().replace(/[-\s]?[LRC]$/, "");
+  if (/^L/.test(base)) return 0; // LB, LM, LW, LWB…
+  if (/^R/.test(base)) return 4; // RB, RM, RW, RWB…
+  if (suffix === "L") return 1;
+  if (suffix === "R") return 3;
+  return 2; // central / unmarked
+}
+
+function shapeFromXI(xi: LineupXI): Shape {
+  const slots: (Slot & { pos: string })[] = xi.players.map((p) => ({
+    name: p.name,
+    surname: surnameOf(p.name),
+    number: p.num,
+    pos: p.pos,
+  }));
+
+  const gk = slots.find((s) => bandRank(s.pos) === 0) ?? slots[0] ?? null;
+  const outfield = slots.filter((s) => s !== gk);
+
+  const sorted = outfield
+    .map((s, i) => ({ s, i }))
+    .sort(
+      (a, b) =>
+        bandRank(a.s.pos) - bandRank(b.s.pos) ||
+        sideScore(a.s.pos) - sideScore(b.s.pos) ||
+        a.i - b.i,
+    )
+    .map((x) => x.s);
+
+  // Row sizes come from the real formation; only if they don't add up (odd data)
+  // do we fall back to grouping by the position bands themselves.
+  let rows = (xi.formation || "").split("-").map(Number).filter((n) => n > 0);
+  if (rows.reduce((a, b) => a + b, 0) !== sorted.length) {
+    const byBand: Record<number, number> = {};
+    for (const s of sorted) byBand[bandRank(s.pos)] = (byBand[bandRank(s.pos)] ?? 0) + 1;
+    rows = Object.keys(byBand)
+      .sort()
+      .map((k) => byBand[Number(k)]);
+  }
+
+  const lines: Slot[][] = [];
+  let c = 0;
+  for (const n of rows) {
+    lines.push(sorted.slice(c, c + n).map(({ name, surname, number }) => ({ name, surname, number })));
+    c += n;
+  }
+  return { gk: gk ? { name: gk.name, surname: gk.surname, number: gk.number } : null, lines, formation: xi.formation };
+}
+
+/* ── Path 2: probable XI from a name string (fallback) ──────────────────── */
 
 // Real formations for full/partial XIs; defence-heavy even split otherwise.
 function lineSplit(outfield: number): number[] {
@@ -29,24 +116,15 @@ function lineSplit(outfield: number): number[] {
   return lines.filter((n) => n > 0);
 }
 
-function surnameOf(full: string): string {
-  const parts = full.trim().split(/\s+/);
-  return parts[parts.length - 1] || full;
-}
-
-// Parse a line-up string into a keeper + ordered outfield lines.
-// The data is semi-structured: lines may be ";"-separated (GK first), the
-// formation may sit as a "3-5-2:" prefix or a "(4-2-3-1)" suffix, and trailing
-// bench/injury notes hang off a " - ". We honour the explicit line structure
-// when it's there and fall back to count-based inference for plain CSV XIs.
+// Parse a line-up string into a keeper + ordered outfield lines. Semi-structured:
+// lines may be ";"-separated (GK first), the formation may sit as a "3-5-2:" prefix
+// or "(4-2-3-1)" suffix, and trailing bench/injury notes hang off a " - ".
 function parseLineup(raw: string): { gk: string; lines: string[][]; formation: string } {
   let s = (raw || "").trim();
   if (!s) return { gk: "", lines: [], formation: "" };
 
-  // 1. drop trailing narrative notes ("… - Doak benched; McKenna out")
   s = s.split(/\s[-–—]\s/)[0].trim();
 
-  // 2. lift an explicit formation (prefix "3-5-2:" or parenthetical "(4-2-3-1)")
   let formation = "";
   const prefix = s.match(/^\s*(\d(?:-\d){1,3})\s*:\s*/);
   if (prefix) {
@@ -55,9 +133,8 @@ function parseLineup(raw: string): { gk: string; lines: string[][]; formation: s
   }
   const paren = s.match(/\((\d(?:-\d){1,3})[^)]*\)/);
   if (paren && !formation) formation = paren[1];
-  s = s.replace(/\([^)]*\)/g, " ").trim(); // strip all parentheticals from names
+  s = s.replace(/\([^)]*\)/g, " ").trim();
 
-  // 3. split into GK + outfield lines
   let gk = "";
   let lines: string[][];
   if (s.includes(";")) {
@@ -82,7 +159,7 @@ function parseLineup(raw: string): { gk: string; lines: string[][]; formation: s
   return { gk, lines, formation };
 }
 
-// Classic role numbers per line, de-duped within a team.
+// Conventional role numbers per line, de-duped within a team.
 function buildShape(xi: string): Shape {
   const { gk: keeper, lines: rawLines, formation } = parseLineup(xi);
   if (!keeper && rawLines.length === 0) return { gk: null, lines: [], formation: "" };
@@ -101,11 +178,10 @@ function buildShape(xi: string): Shape {
   });
 
   const pools = [
-    [2, 5, 4, 3, 6],    // defence: RB, CB, CB, LB, extra
-    [6, 8, 10, 14, 16], // midfield spine
-    [7, 9, 11, 17, 19], // attack
+    [2, 5, 4, 3, 6],
+    [6, 8, 10, 14, 16],
+    [7, 9, 11, 17, 19],
   ];
-  // first line = defence (pool 0), last line = attack (pool 2), rest = midfield
   const poolFor = (li: number, total: number) => (li === 0 ? 0 : li === total - 1 ? 2 : 1);
 
   const gk = keeper ? mk(keeper, [1], 0) : null;
@@ -115,6 +191,8 @@ function buildShape(xi: string): Shape {
 
   return { gk, lines, formation };
 }
+
+/* ── Render ─────────────────────────────────────────────────────────────── */
 
 function Disc({ slot, tone }: { slot: Slot; tone: "home" | "away" | "gk" }) {
   const skin =
@@ -129,9 +207,9 @@ function Disc({ slot, tone }: { slot: Slot; tone: "home" | "away" | "gk" }) {
         className={`tnum grid size-8 place-items-center rounded-full font-mono text-[0.72rem] font-bold shadow-[0_1px_4px_rgba(0,0,0,0.45)] sm:size-9 ${skin}`}
         aria-hidden
       >
-        {slot.number}
+        {slot.number ?? ""}
       </span>
-      <span className="max-w-full truncate rounded bg-pitch/65 px-1 text-[0.58rem] font-medium leading-tight text-ink">
+      <span className="line-clamp-2 max-w-full rounded bg-pitch/65 px-1 text-center text-[0.56rem] font-medium leading-[1.05] text-ink">
         {slot.surname}
       </span>
     </div>
@@ -139,7 +217,6 @@ function Disc({ slot, tone }: { slot: Slot; tone: "home" | "away" | "gk" }) {
 }
 
 function Half({ shape, tone, attackUp }: { shape: Shape; tone: "home" | "away"; attackUp: boolean }) {
-  // attackUp (home, bottom half): GK at the outer edge, forwards toward the halfway line.
   const rows = attackUp ? [...shape.lines].reverse() : shape.lines;
   const gkRow = shape.gk ? (
     <div className="flex justify-center">
@@ -152,8 +229,8 @@ function Half({ shape, tone, attackUp }: { shape: Shape; tone: "home" | "away"; 
       {attackUp ? null : gkRow}
       {rows.map((row, i) => (
         <div key={i} className="flex justify-around px-1">
-          {row.map((slot) => (
-            <Disc key={slot.number} slot={slot} tone={tone} />
+          {row.map((slot, j) => (
+            <Disc key={`${slot.surname}-${slot.number ?? j}`} slot={slot} tone={tone} />
           ))}
         </div>
       ))}
@@ -177,8 +254,11 @@ function TeamTag({ flag, name, formation, align }: { flag: string; name: string;
 }
 
 export function LineupPitch({ fixture, lineups }: { fixture: Fixture; lineups: Prediction["lineups"] }) {
-  const home = buildShape(lineups.home);
-  const away = buildShape(lineups.away);
+  // Prefer the confirmed XI (real numbers + formation); fall back to the probable
+  // name-string shape (conventional positional numbers) when ESPN hasn't published.
+  const home = lineups.homeXI ? shapeFromXI(lineups.homeXI) : buildShape(lineups.home);
+  const away = lineups.awayXI ? shapeFromXI(lineups.awayXI) : buildShape(lineups.away);
+  const realNumbers = Boolean(lineups.homeXI && lineups.awayXI);
 
   const label =
     lineups.status === "confirmed" ? "Confirmed line-ups" : lineups.status === "unconfirmed" ? "Line-ups (TBC)" : "Probable line-ups";
@@ -237,7 +317,9 @@ export function LineupPitch({ fixture, lineups }: { fixture: Fixture; lineups: P
       </div>
 
       <p className="mt-3 text-[0.62rem] leading-snug text-faint">
-        Numbers are positional, not squad numbers (GK 1 · 2/3 full-backs · 4/5 centre-backs · 6/8/10 spine · 7/9/11 front).
+        {realNumbers
+          ? "Confirmed XI — real shirt numbers, formation and positions from the official team sheet (ESPN)."
+          : "Probable XI — numbers are positional, not squad numbers (GK 1 · 2/3 full-backs · 4/5 centre-backs · 6/8/10 spine · 7/9/11 front)."}
       </p>
     </div>
   );

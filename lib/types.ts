@@ -17,6 +17,12 @@ export type Fixture = {
 // the internal signal and the UI only ever shows 1–5.
 export type Pick = { player: string; fairOdds: string; banker: boolean; note: string; strength?: number };
 
+// A confirmed XI lifted from ESPN's published team sheet. `players` are
+// position-ordered (GK first, then D → M → F) so the pitch can chunk them by the
+// formation's row sizes; `num` is the real shirt number (null only if ESPN omits it).
+export type LineupPlayer = { num: number | null; name: string; pos: string };
+export type LineupXI = { formation: string; players: LineupPlayer[] };
+
 export type Prediction = {
   win: { pick: string; fairOdds: string; reason: string; strength?: number };
   halfTime: { score: string; fairOdds: string; alt: string; altOdds: string; strength?: number };
@@ -25,7 +31,13 @@ export type Prediction = {
   scorers: Pick[];
   assists: Pick[];
   penalty: { likelihood: string; taker: string; backup: string; note: string };
-  lineups: { home: string; away: string; status: "confirmed" | "probable" | "unconfirmed" };
+  lineups: {
+    home: string;
+    away: string;
+    status: "confirmed" | "probable" | "unconfirmed";
+    homeXI?: LineupXI;
+    awayXI?: LineupXI;
+  };
   playerNotes: { player: string; team: string; note: string }[];
   confidence: "high" | "medium" | "low";
   /** Overall 1–5 conviction in the headline call. Optional; derived from the win pick when absent. */
