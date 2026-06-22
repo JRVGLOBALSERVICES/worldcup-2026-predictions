@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T20:05:05Z",
+    "generatedAt": "2026-06-22T23:23:28Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -5057,129 +5057,251 @@
     "nor-sen-2026-06-22": {
       "win": {
         "pick": "Norway",
-        "fairOdds": "2.15",
-        "reason": "Norway carry momentum from a 4-1 demolition of Iraq with Haaland scoring twice, while Senegal arrive on zero points after a 1-3 loss to France and must chase the game. But Senegal are a genuine African power with quality across the spine; a must-win posture cuts both ways and opens real draw/counter risk. Norway favoured but far from certain (~50-55%).",
+        "fairOdds": "1.95",
+        "reason": "Norway lead Group I after a 4-1 win over Iraq (Haaland brace) and have the cleaner platform with Berge-Aursnes screening Odegaard, plus the Haaland-Sorloth front two against a Senegal back line that conceded three to France. But this is ~50-55%, not certainty: Senegal MUST win or they're out, so they'll push numbers forward and leave space for Norway's counter — which raises both Norway's transition edge AND a real draw/Senegal-smash-and-grab risk (~45% combined). Mane, Sarr and Jackson carry enough quality to punish Norway's relatively raw centre-back pairing (Heggem/Ajer) if Norway sit on a lead.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.40",
-        "alt": "1-0",
-        "altOdds": "4.00",
-        "strength": 2
+        "fairOdds": "2.30",
+        "alt": "1-0 Norway",
+        "altOdds": "3.40",
+        "strength": 3
       },
       "htft": {
-        "pick": "Draw/Norway",
-        "fairOdds": "5.00",
+        "pick": "Draw / Norway",
+        "fairOdds": "4.50",
         "strength": 2
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.50",
+        "score": "2-1 Norway",
+        "fairOdds": "7.50",
         "strength": 2
       },
       "scorers": [
         {
           "player": "Erling Haaland",
-          "fairOdds": "1.75",
+          "fairOdds": "1.80",
           "banker": true,
-          "note": "Norway's all-time top scorer (55 intl goals); netted twice vs Iraq in the opener and is the clear penalty/primary goal threat.",
+          "note": "Norway's primary penalty taker and set-piece target at 6ft4; opened with a brace v Iraq and is in elite scoring form. Banker is warranted on role + form, but Senegal's deep early block and Koulibaly marshalling can quiet him in phases — not a guaranteed multi-goal night.",
           "strength": 4
         },
         {
           "player": "Alexander Sorloth",
-          "fairOdds": "3.00",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "Starts alongside Haaland up top; reliable secondary striker who feeds off the same supply line.",
+          "note": "Starts as the second striker in Norway's front two; thrives on the space a chasing, high-line Senegal will concede on the counter.",
+          "strength": 3
+        },
+        {
+          "player": "Ismaila Sarr",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Starts wide (replacing Ndiaye in the XI); Conference League top scorer and best player for Crystal Palace in 2026, his pace down Senegal's right targets the Wolfe/Ryerson flank in transition.",
           "strength": 3
         },
         {
           "player": "Nicolas Jackson",
-          "fairOdds": "3.50",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "Senegal's central striker; pace to exploit a high Norwegian line on the counter.",
+          "note": "Senegal's central focal point; got in behind France (goal disallowed for offside) and has a point to prove. Against Norway's raw CB pairing his runs in behind are Senegal's clearest route back into the game.",
           "strength": 3
-        },
-        {
-          "player": "Iliman Ndiaye",
-          "fairOdds": "4.00",
-          "banker": false,
-          "note": "Wide forward creating ~0.96 chances/90 in the PL; dangerous cutting inside, can both score and assist.",
-          "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Martin Odegaard",
-          "fairOdds": "3.20",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "Captain and chief creator; supplied the corner for Norway's third vs Iraq. Veteran star, non-banker after an injury-disrupted season.",
+          "note": "Norway captain and set-piece monopoly (corners + free kicks); the chief creator feeding Haaland and Sorloth.",
           "strength": 3
         },
         {
           "player": "Antonio Nusa",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Direct wide threat in the front three; carries and crosses into Haaland/Sorloth.",
+          "note": "Wide unpredictability for Norway; his dribbling vs Diatta's flank can create cutbacks for the front two.",
           "strength": 2
         },
         {
           "player": "Sadio Mane",
-          "fairOdds": "4.50",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Senegal captain and AFCON player of the tournament; pace eroded at 34 but retains vision to create on the counter.",
+          "note": "Senegal's all-time top scorer operating in the front three with freedom off Jackson's hold-up; a creator as much as a finisher in a must-win chase.",
           "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "Medium",
-        "taker": "Erling Haaland",
-        "backup": "Martin Odegaard",
-        "note": "Haaland is Norway's primary penalty taker; Odegaard a credible backup. Senegal's likely taker would be Sadio Mane."
+        "likelihood": "Medium — Senegal's must-win press and Norway's counters into a stretched defence raise box-contact odds for both sides",
+        "taker": "Erling Haaland (Norway) / Sadio Mane (Senegal)",
+        "backup": "Martin Odegaard (Norway) / Nicolas Jackson (Senegal)",
+        "note": "Haaland is Norway's confirmed primary spot-kick taker; Mane is Senegal's primary with Jackson the backup."
       },
       "lineups": {
-        "home": "4-3-3",
+        "home": "4-2-3-1",
         "away": "4-3-3",
-        "status": "probable"
+        "status": "confirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": null,
+              "name": "Orjan Nyland",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Kristoffer Ajer",
+              "pos": "CD-R"
+            },
+            {
+              "num": null,
+              "name": "Torbjorn Heggem",
+              "pos": "CD-L"
+            },
+            {
+              "num": null,
+              "name": "Julian Ryerson",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "David Moller Wolfe",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Sander Berge",
+              "pos": "DM-R"
+            },
+            {
+              "num": null,
+              "name": "Fredrik Aursnes",
+              "pos": "DM-L"
+            },
+            {
+              "num": null,
+              "name": "Martin Odegaard",
+              "pos": "AM"
+            },
+            {
+              "num": null,
+              "name": "Antonio Nusa",
+              "pos": "LW"
+            },
+            {
+              "num": null,
+              "name": "Alexander Sorloth",
+              "pos": "RW"
+            },
+            {
+              "num": null,
+              "name": "Erling Haaland",
+              "pos": "ST"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": null,
+              "name": "Edouard Mendy",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Krepin Diatta",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Kalidou Koulibaly",
+              "pos": "CD-R"
+            },
+            {
+              "num": null,
+              "name": "Moussa Niakhate",
+              "pos": "CD-L"
+            },
+            {
+              "num": null,
+              "name": "El Hadji Malick Diouf",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Idrissa Gueye",
+              "pos": "CM-C"
+            },
+            {
+              "num": null,
+              "name": "Lamine Camara",
+              "pos": "CM-R"
+            },
+            {
+              "num": null,
+              "name": "Pape Gueye",
+              "pos": "CM-L"
+            },
+            {
+              "num": null,
+              "name": "Ismaila Sarr",
+              "pos": "RW"
+            },
+            {
+              "num": null,
+              "name": "Sadio Mane",
+              "pos": "LW"
+            },
+            {
+              "num": null,
+              "name": "Nicolas Jackson",
+              "pos": "ST"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
+          "player": "Sander Berge",
+          "team": "Norway",
+          "note": "Anchors the double pivot alongside Aursnes — physically dominant, wins duels and screens the back four so Odegaard can push on; key to absorbing Senegal's chasing waves."
+        },
+        {
           "player": "Erling Haaland",
           "team": "Norway",
-          "note": "Scored twice vs Iraq in the opener; 16 goals in qualifying. The match's dominant goal threat and penalty taker."
+          "note": "Front-two spearhead, penalty taker and aerial set-piece target; opened the campaign with a brace v Iraq."
         },
         {
-          "player": "Martin Odegaard",
+          "player": "Antonio Nusa",
           "team": "Norway",
-          "note": "Captain and creative hub; injury-disrupted club season but returned to score vs Morocco and assisted via corner vs Iraq."
+          "note": "Starts wide off the front line; direct dribbling at Diatta is Norway's release valve in transition against a high Senegal line."
         },
         {
-          "player": "Kalidou Koulibaly",
+          "player": "Ismaila Sarr",
           "team": "Senegal",
-          "note": "Defensive leader at 34; part of a back line exposed 3-1 by France on Matchday 1. Key to containing Haaland."
+          "note": "STARTS wide in place of Iliman Ndiaye — arrives as Palace's 2026 Conference League top scorer and best player; pace to exploit space behind Norway's full-backs."
         },
         {
           "player": "Sadio Mane",
           "team": "Senegal",
-          "note": "Captain, AFCON player of the tournament, final World Cup; pace reduced but world-class touch and leadership in a must-win game."
+          "note": "In the front three and Senegal's primary penalty taker; all-time top scorer (51 goals), given freedom off Jackson's hold-up play in a must-win chase."
         },
         {
           "player": "Nicolas Jackson",
           "team": "Senegal",
-          "note": "Central striker; Senegal's best route back into the game is his pace on transitions against Norway's aggressive line."
-        },
-        {
-          "player": "Edouard Mendy",
-          "team": "Senegal",
-          "note": "Experienced keeper who will be busy; must marshal a defence that conceded three to France and now faces Haaland."
+          "note": "Central striker and physical focal point; ran in behind France (goal chalked off for offside) and is Senegal's best route in behind Norway's inexperienced centre-backs."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.si.com/soccer/norway-vs-senegal-world-cup-preview-predictions-lineups-6-22-26",
         "https://www.rotowire.com/soccer/article/norway-vs-senegal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119063",
-        "https://worldsoccertalk.com/world-cup/senegal-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/"
+        "https://khelnow.com/football/world-football-senegal-starting-lineup-vs-norway-fifa-world-cup-202606",
+        "https://worldsoccertalk.com/world-cup/is-erling-haaland-playing-norway-vs-senegal-projected-lineups-for-the-2026-world-cup-group-i-game/",
+        "https://www.cpfc.co.uk/news/first-team/world-cup-2026-spotlight-on-sarr-and-senegal/",
+        "https://www.espn.com/soccer/story/_/id/49127342/norway-senegal-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
       ]
     },
     "jor-alg-2026-06-22": {
