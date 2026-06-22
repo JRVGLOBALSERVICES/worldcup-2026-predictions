@@ -45,6 +45,8 @@ Floodlit-pitch editorial — dark, broadcast-graphic feel, one accent doing the 
 data/fixtures.json     — all 52 group-stage matches (kickoffs stored as UTC ISO;
                          the client renders MYT via Intl + Asia/Kuala_Lumpur)
 data/predictions.json  — { meta, predictions: { <matchId>: Prediction } }
+data/results.json      — { meta, results: { <matchId>: snapshotted final/live } }
+data/stats.json        — { meta, categories } tournament leaderboards (see /stats)
 ```
 
 A `Prediction` carries: `win`, `halfTime`, `fullTime`, `htft`, `scorers[]`,
@@ -72,6 +74,18 @@ Prediction refresh is driven by Friday (the WhatsApp bridge) on a schedule:
   `lineups.status` to `confirmed`, push.
 
 See `scripts/REFRESH.md` for the operator runbook.
+
+### Tournament stats (`/stats`)
+
+Seven top-10 leaderboards — **top scorers, assists, clean sheets, yellow cards,
+red cards, penalties scored, penalties missed** — built by
+`scripts/build-stats.mjs` straight from ESPN's keyless FIFA World Cup feeds
+(season `statistics` leaders for scorers/assists; per-date scoreboard `details`
+for cards/penalties-scored/clean-sheets; per-match summary `keyEvents` for
+penalties missed). It writes `data/stats.json`; the page is static + revalidates
+every 30 min. The hourly result-settlement cron runs it alongside
+`build-results.mjs`, so the boards stay live as matches finish. Clean sheets are
+credited to the team that kept the opponent scoreless.
 
 ## Local dev
 

@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(predictionFile.meta.generatedAt);
   return [
     { url: SITE, lastModified, changeFrequency: "daily", priority: 1 },
+    { url: `${SITE}/stats`, lastModified, changeFrequency: "daily", priority: 0.8 },
     ...fixtures.map((f) => ({
       url: `${SITE}/match/${f.id}`,
       lastModified,

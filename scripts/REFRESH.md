@@ -130,6 +130,25 @@ actually changed (or a fixture can't be matched to ESPN — that needs a new
 ALIAS entry). Clean days are silent. Do NOT hand-edit kickoff times; let the
 script own them.
 
+## Tournament stat leaderboards (`data/stats.json`, the `/stats` page)
+
+The `/stats` page renders seven top-10 boards (scorers, assists, clean sheets,
+yellow cards, red cards, penalties scored, penalties missed). A deterministic
+script pulls them from ESPN — never hand-edit `data/stats.json`:
+
+    node scripts/build-stats.mjs            # write data/stats.json
+    node scripts/build-stats.mjs --check     # report only (exit 2 on change)
+
+Sources: season `/statistics` leaders (scorers + assists, with appearances);
+per-date scoreboard `competitions[].details` (yellow/red cards, penalties scored,
+clean sheets from final scores); per-match `/summary` `keyEvents` for penalties
+missed (cached per event so the cron only fetches each match's summary once).
+Same ALIAS/normalise rules as `lib/live.ts` — keep the ALIAS maps in sync.
+
+The hourly **WC2026 result settlement** cron runs this right after
+`build-results.mjs`, so the boards refresh in the same commit. Change-detection
+ignores the timestamp + the penalty-miss cache, so a no-op run is silent.
+
 ## Notes
 
 - Predictions are reasoned estimates, not live odds — keep the disclaimer intact.
