@@ -5857,19 +5857,19 @@
     },
     "new-egy-2026-06-21": {
       "corners": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 2
       },
       "sot": {
-        "home": 3,
-        "away": 0
+        "home": 4,
+        "away": 3
       },
       "shots": {
-        "home": 5,
-        "away": 1
+        "home": 8,
+        "away": 14
       },
       "yellow": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "red": {
@@ -5877,35 +5877,48 @@
         "away": 0
       },
       "cards": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
-          0,
-          0
+          1,
+          1
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          0
+          1
         ],
         "away": [
-          0,
-          0
+          1,
+          1
         ]
       },
       "playerSot": {
         "Elijah Just": 1,
-        "Callum McCowatt": 1
+        "Callum McCowatt": 2,
+        "Omar Marmoush": 1,
+        "Mohamed Salah": 1
       },
       "firstGoalMethod": "header",
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 24,
+          "firstActionType": "Shot Blocked",
+          "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
