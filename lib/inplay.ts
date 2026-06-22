@@ -1,5 +1,5 @@
 import type { Goal, Card, Score, SpecialGrade, BetStatus } from "./bets";
-import { evalCombo, playerSotCount } from "./bets";
+import { comboDead, evalCombo, playerSotCount } from "./bets";
 import type { LiveMatch } from "./live";
 
 /** Minimal shapes the graders read — so both the full Bet/Special and the
@@ -452,6 +452,10 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         if (r === false) return { verdict: "lost", note };
         return { verdict: "alive", note: `Awaiting ESPN stats · ${note}` };
       }
+      // A per-half leg locks the moment its half ends — if one is already
+      // impossible, the combo is dead now (won't flip back), don't show "still on".
+      if (comboDead(g.conds, live.htScore, live.stats ?? null))
+        return { verdict: "dead", note: `Out of reach — ${note}` };
       return r === true
         ? { verdict: "winning", note: `All legs on track · ${note}` }
         : { verdict: "alive", note };
@@ -472,6 +476,10 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         if (r === false || (r === true && !sc)) return { verdict: "lost", note };
         return { verdict: "alive", note: `Awaiting ESPN stats · ${note}` };
       }
+      // A per-half leg locks at its half's whistle — if one's already gone, the
+      // whole acca is dead now even with the scorer leg still live.
+      if (comboDead(g.conds, live.htScore, live.stats ?? null))
+        return { verdict: "dead", note: `Out of reach — ${note}` };
       return r === true && sc
         ? { verdict: "winning", note: `On track · ${note}` }
         : { verdict: "alive", note };

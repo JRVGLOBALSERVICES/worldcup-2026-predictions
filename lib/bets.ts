@@ -539,6 +539,50 @@ export function evalCombo(
 }
 
 /**
+ * True when at least one combo leg is now PERMANENTLY impossible, so the whole
+ * AND can never come good — settle/show it as a loss before the whistle.
+ *
+ * This is narrower than `evalCombo` returning false: a full-match leg (result,
+ * mostCorners, goalsOver…) reads false mid-match but can still flip, so it is
+ * NOT dead until FT. Only PER-HALF legs lock early — the first half's portion is
+ * fixed the instant the half ends (HT score + H1 by-half splits are final). So
+ * the moment H1 is complete (`ht` non-null), a per-half leg whose H1 requirement
+ * already failed can never recover, regardless of what happens after the break.
+ *
+ * Pass the HALF-TIME score as `ht` (null while H1 is still in play → nothing is
+ * locked yet, returns false). Only checks the H1 component; the H2 component
+ * stays live until FT, where `evalCombo` settles it.
+ */
+export function comboDead(conds: StatCond[], ht: Score, stats: MatchStats | null): boolean {
+  if (!ht) return false; // first half not complete — nothing is locked
+  const h = stats?.cornersByHalf;
+  const s = stats?.sotByHalf;
+  for (const c of conds) {
+    switch (c.c) {
+      case "winEachHalf": {
+        // H1 is final at the HT score; if the side didn't win it, "each half" is dead.
+        const wonH1 = c.side === "home" ? ht.home > ht.away : ht.away > ht.home;
+        if (!wonH1) return true;
+        break;
+      }
+      case "mostCornersEachHalf": {
+        if (!h) break; // H1 corner split not in yet — can't lock it dead
+        const wonH1 = c.side === "home" ? h.home[0] > h.away[0] : h.away[0] > h.home[0];
+        if (!wonH1) return true;
+        break;
+      }
+      case "eachTeamCornersEachHalfAtLeast":
+        if (h && (h.home[0] < c.n || h.away[0] < c.n)) return true;
+        break;
+      case "eachTeamSotEachHalfAtLeast":
+        if (s && (s.home[0] < c.n || s.away[0] < c.n)) return true;
+        break;
+    }
+  }
+  return false;
+}
+
+/**
  * Auto-grade a single special off scraped match events + the final score.
  * Returns "pending" until the match is finished (events.status === "finished").
  * A manual `statusOverride` always wins (bad-scrape safety valve).
