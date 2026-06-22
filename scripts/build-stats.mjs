@@ -163,11 +163,15 @@ async function main() {
   const eventById = new Map();
   for (const ev of events) if (ev.id) eventById.set(ev.id, ev);
 
-  // ── Pass 1: scoreboard details → cards, penalties scored, clean sheets ──────
+  // ── Pass 1: scoreboard details → goals, cards, penalties scored, clean sheets ─
   const yellow = {};
   const red = {};
   const penScored = {};
   const cleanSheets = {}; // team(norm) → { team, value }
+  // Goals straight from the per-match scoring events (authoritative + current).
+  // ESPN's /statistics goalsLeaders aggregate lags a match or two behind these,
+  // so we tally goals here and only use /statistics to backfill appearances.
+  const goalsByPlayer = {}; // "name|team" → { name, team, value, matchIds:Set }
   const finishedEventIds = [];
 
   for (const ev of eventById.values()) {
@@ -190,6 +194,14 @@ async function main() {
       if (d.yellowCard && !d.redCard) tallyAdd(yellow, who, team);
       if (d.redCard) tallyAdd(red, who, team);
       if (d.scoringPlay && d.penaltyKick && !d.ownGoal) tallyAdd(penScored, who, team);
+      // Every non-own-goal scoring play (open play + converted penalties) is a goal
+      // for the scorer — the Golden Boot count.
+      if (d.scoringPlay && !d.ownGoal && who && who !== "Unknown" && team) {
+        const k = `${who}|${team}`;
+        const g = (goalsByPlayer[k] ??= { name: who, team, value: 0, matchIds: new Set() });
+        g.value += 1;
+        if (ev.id) g.matchIds.add(ev.id);
+      }
     }
 
     if (state === "post") {
@@ -232,6 +244,23 @@ async function main() {
     }
   } catch (e) {
     console.error(`statistics endpoint failed (${e.message}) — scorers/assists may be empty.`);
+  }
+
+  // Merge live per-match goals (authoritative, current) with ESPN's leaders
+  // aggregate (lags behind, but carries the official appearances stat). Take the
+  // higher goal AND appearance count so the board never under-reports the pitch.
+  const mergedScorers = {};
+  for (const g of Object.values(goalsByPlayer)) {
+    mergedScorers[`${g.name}|${g.team}`] = { name: g.name, team: g.team, value: g.value, matches: g.matchIds.size };
+  }
+  for (const [key, r] of Object.entries(scorers)) {
+    const m = mergedScorers[key];
+    if (m) {
+      m.value = Math.max(m.value, r.value);
+      m.matches = Math.max(m.matches ?? 0, r.matches ?? 0) || null;
+    } else {
+      mergedScorers[key] = r;
+    }
   }
 
   // ── Pass 3: penalty MISSED from summary keyEvents (cached per event) ─────────
@@ -282,7 +311,7 @@ async function main() {
 
   // ── Assemble payload ────────────────────────────────────────────────────────
   const categories = {
-    scorers: topN(Object.values(scorers), flagFor),
+    scorers: topN(Object.values(mergedScorers), flagFor),
     assists: topN(Object.values(assists), flagFor),
     cleanSheets: topTeams(Object.values(cleanSheets), flagFor),
     yellowCards: topN(Object.values(yellow), flagFor),

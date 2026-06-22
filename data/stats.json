@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T19:20:28.919Z",
+    "generatedAt": "2026-06-22T21:20:26.478Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 25
   },
@@ -8,6 +8,14 @@
     "scorers": [
       {
         "rank": 1,
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 5,
+        "matches": 2
+      },
+      {
+        "rank": 2,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -15,7 +23,7 @@
         "matches": 2
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Jonathan David",
         "team": "Canada",
         "flag": "🇨🇦",
@@ -23,15 +31,15 @@
         "matches": 2
       },
       {
-        "rank": 1,
-        "name": "Lionel Messi",
-        "team": "Argentina",
-        "flag": "🇦🇷",
+        "rank": 2,
+        "name": "Kylian Mbappé",
+        "team": "France",
+        "flag": "🇫🇷",
         "value": 3,
-        "matches": 1
+        "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Ayase Ueda",
         "team": "Japan",
         "flag": "🇯🇵",
@@ -39,7 +47,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -47,7 +55,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -55,7 +63,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Crysencio Summerville",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -63,7 +71,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Cyle Larin",
         "team": "Canada",
         "flag": "🇨🇦",
@@ -71,18 +79,10 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Daichi Kamada",
         "team": "Japan",
         "flag": "🇯🇵",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 4,
-        "name": "Elijah Just",
-        "team": "New Zealand",
-        "flag": "🇳🇿",
         "value": 2,
         "matches": 2
       }
@@ -262,6 +262,13 @@
       },
       {
         "rank": 1,
+        "name": "Amir Al-Ammari",
+        "team": "Iraq",
+        "flag": "🇮🇶",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Andy Robertson",
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
@@ -293,13 +300,6 @@
         "name": "Callum McCowatt",
         "team": "New Zealand",
         "flag": "🇳🇿",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "Carlens Arcus",
-        "team": "Haiti",
-        "flag": "🇭🇹",
         "value": 1
       }
     ],
@@ -411,7 +411,8 @@
           "name": "Lionel Messi",
           "team": "Argentina"
         }
-      ]
+      ],
+      "760457": []
     }
   }
 }

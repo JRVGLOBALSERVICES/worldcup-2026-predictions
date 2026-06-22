@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T19:20:21.908Z",
+    "generatedAt": "2026-06-22T21:20:21.463Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 21,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -2527,6 +2527,83 @@
             "reliable": false
           }
         }
+      }
+    },
+    "fra-ira-2026-06-22": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 14,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Amir Al-Ammari",
+          "minute": 6,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-22T21:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "sot": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 5,
+          "away": 0
+        },
+        "yellow": {
+          "home": 0,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 1
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {},
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
       }
     }
   }
