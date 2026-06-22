@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T21:20:26.478Z",
+    "generatedAt": "2026-06-22T21:28:01.807Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 25
   },
@@ -146,6 +146,14 @@
       },
       {
         "rank": 2,
+        "name": "Michael Olise",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 2,
         "name": "Mohamed Salah",
         "team": "Egypt",
         "flag": "🇪🇬",
@@ -158,14 +166,6 @@
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 10,
-        "name": "Alex Freeman",
-        "team": "USA",
-        "flag": "🇺🇸",
-        "value": 1,
         "matches": 2
       }
     ],
@@ -381,38 +381,342 @@
     ]
   },
   "cache": {
-    "penMissByEvent": {
-      "760430": [],
-      "760431": [],
-      "760432": [],
-      "760433": [],
-      "760434": [],
-      "760435": [],
-      "760436": [],
-      "760437": [],
-      "760438": [],
-      "760439": [],
-      "760440": [],
-      "760441": [],
-      "760442": [],
-      "760443": [],
-      "760444": [],
-      "760445": [],
-      "760446": [],
-      "760447": [],
-      "760448": [],
-      "760449": [],
-      "760450": [],
-      "760451": [],
-      "760452": [],
-      "760453": [],
-      "760456": [
-        {
-          "name": "Lionel Messi",
-          "team": "Argentina"
-        }
-      ],
-      "760457": []
+    "byEvent": {
+      "760430": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "David Møller Wolfe",
+            "team": "Norway"
+          },
+          {
+            "name": "Amir Al-Ammari",
+            "team": "Iraq"
+          },
+          {
+            "name": "Martin Ødegaard",
+            "team": "Norway"
+          }
+        ]
+      },
+      "760431": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Xaver Schlager",
+            "team": "Austria"
+          },
+          {
+            "name": "Noor Al-Rawabdeh",
+            "team": "Jordan"
+          }
+        ]
+      },
+      "760432": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Michael Olise",
+            "team": "France"
+          },
+          {
+            "name": "Adrien Rabiot",
+            "team": "France"
+          },
+          {
+            "name": "Iliman Ndiaye",
+            "team": "Senegal"
+          }
+        ]
+      },
+      "760433": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Rodrigo De Paul",
+            "team": "Argentina"
+          },
+          {
+            "name": "Nico González",
+            "team": "Argentina"
+          }
+        ]
+      },
+      "760434": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Brandon Thomas-Asante",
+            "team": "Ghana"
+          }
+        ]
+      },
+      "760435": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Pedro Neto",
+            "team": "Portugal"
+          },
+          {
+            "name": "Arthur Masuaku",
+            "team": "DR Congo"
+          }
+        ]
+      },
+      "760436": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Luis Díaz",
+            "team": "Colombia"
+          },
+          {
+            "name": "Gustavo Puerta",
+            "team": "Colombia"
+          },
+          {
+            "name": "Cucho Hernández",
+            "team": "Colombia"
+          }
+        ]
+      },
+      "760437": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Petar Sucic",
+            "team": "Croatia"
+          },
+          {
+            "name": "Declan Rice",
+            "team": "England"
+          },
+          {
+            "name": "Ivan Perisic",
+            "team": "Croatia"
+          },
+          {
+            "name": "Elliot Anderson",
+            "team": "England"
+          },
+          {
+            "name": "Bukayo Saka",
+            "team": "England"
+          }
+        ]
+      },
+      "760438": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Alexandr Sojka",
+            "team": "Czechia"
+          }
+        ]
+      },
+      "760439": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Breel Embolo",
+            "team": "Switzerland"
+          },
+          {
+            "name": "Rubén Vargas",
+            "team": "Switzerland"
+          }
+        ]
+      },
+      "760440": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Nathan Saliba",
+            "team": "Canada"
+          }
+        ]
+      },
+      "760441": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760442": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760443": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Julio Enciso",
+            "team": "Paraguay"
+          }
+        ]
+      },
+      "760444": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Vinícius Júnior",
+            "team": "Brazil"
+          },
+          {
+            "name": "Lucas Paquetá",
+            "team": "Brazil"
+          }
+        ]
+      },
+      "760445": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Brahim Díaz",
+            "team": "Morocco"
+          }
+        ]
+      },
+      "760446": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760447": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Cody Gakpo",
+            "team": "Netherlands"
+          },
+          {
+            "name": "Denzel Dumfries",
+            "team": "Netherlands"
+          },
+          {
+            "name": "Denzel Dumfries",
+            "team": "Netherlands"
+          },
+          {
+            "name": "Crysencio Summerville",
+            "team": "Netherlands"
+          },
+          {
+            "name": "Alexander Isak",
+            "team": "Sweden"
+          },
+          {
+            "name": "Memphis Depay",
+            "team": "Netherlands"
+          }
+        ]
+      },
+      "760448": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Nadiem Amiri",
+            "team": "Germany"
+          },
+          {
+            "name": "Felix Nmecha",
+            "team": "Germany"
+          }
+        ]
+      },
+      "760449": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Keito Nakamura",
+            "team": "Japan"
+          },
+          {
+            "name": "Kou Itakura",
+            "team": "Japan"
+          },
+          {
+            "name": "Ayase Ueda",
+            "team": "Japan"
+          },
+          {
+            "name": "Kaishu Sano",
+            "team": "Japan"
+          }
+        ]
+      },
+      "760450": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Maxi Araújo",
+            "team": "Uruguay"
+          }
+        ]
+      },
+      "760451": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760452": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Tim Payne",
+            "team": "New Zealand"
+          },
+          {
+            "name": "Mohamed Hany",
+            "team": "Egypt"
+          },
+          {
+            "name": "Mostafa Zico",
+            "team": "Egypt"
+          },
+          {
+            "name": "Mohamed Salah",
+            "team": "Egypt"
+          }
+        ]
+      },
+      "760453": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Mikel Oyarzabal",
+            "team": "Spain"
+          },
+          {
+            "name": "Aymeric Laporte",
+            "team": "Spain"
+          },
+          {
+            "name": "Dani Olmo",
+            "team": "Spain"
+          }
+        ]
+      },
+      "760456": {
+        "penMiss": [
+          {
+            "name": "Lionel Messi",
+            "team": "Argentina"
+          }
+        ],
+        "assists": [
+          {
+            "name": "Facundo Medina",
+            "team": "Argentina"
+          }
+        ]
+      },
+      "760457": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Michael Olise",
+            "team": "France"
+          }
+        ]
+      }
     }
   }
 }

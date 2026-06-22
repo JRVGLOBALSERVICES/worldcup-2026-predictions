@@ -7,17 +7,21 @@
  *   node scripts/build-stats.mjs            # write data/stats.json
  *   node scripts/build-stats.mjs --check     # report only, no write (exit 2 on change)
  *
- * Seven categories, two sources:
- *   • scorers, assists      → ESPN season `/statistics` leaders (resolved names,
- *                             tournament-wide aggregation, with appearances).
+ * Seven categories, three sources (each merged toward "never under-report"):
+ *   • scorers                → per-match scoreboard `details` scoring plays
+ *                             (authoritative + current), merged-max with ESPN's
+ *                             season `/statistics` goalsLeaders for appearances.
+ *   • assists                → per-match summary `keyEvents` (participant[1] of a
+ *                             non-own Goal), merged-max with ESPN's assistsLeaders
+ *                             aggregate (covers out-of-window games + appearances).
  *   • cleanSheets, yellow,
  *     red, penaltyScored     → aggregated from the per-date scoreboard events'
  *                             `competitions[].details` (goals + cards), the same
  *                             array build-results.mjs reads — no extra fetch.
  *   • penaltyMissed          → per-match summary `keyEvents` (a "Penalty - Saved"
  *                             / "Penalty - Missed" play is never in `details`).
- *                             Cached per finished event so the cron only hits a
- *                             summary once per match, not all of them hourly.
+ *                             Assists + penalty-misses share one per-event summary
+ *                             cache so the cron only hits a summary once per match.
  *
  * Reuses the exact ALIAS/normalise rules as lib/live.ts & build-results.mjs —
  * keep the ALIAS maps in sync.
@@ -263,20 +267,31 @@ async function main() {
     }
   }
 
-  // ── Pass 3: penalty MISSED from summary keyEvents (cached per event) ─────────
-  // Reuse cached per-event misses for events already final in the prior run; only
-  // hit summaries for events not yet cached (newly finished / still live today).
-  let cache = {};
+  // ── Pass 3: penalty MISSED + ASSISTS from summary keyEvents (cached per event) ─
+  // The assister isn't in the cheap scoreboard `details` (only the scorer is) and
+  // ESPN's season /statistics assistsLeaders lags a match behind for in-window
+  // games — so we read assists straight from each match's keyEvents (participant
+  // [1] of a non-own Goal) here, alongside the penalty-miss plays. Both are cached
+  // per event so the cron only hits a summary once per finished match.
+  //
+  // Cache shape: cache.byEvent[id] = { penMiss:[{name,team}], assists:[{name,team}] }.
+  // Migrate the older penMissByEvent-only shape (assists then backfill on first run).
+  let byEvent = {};
   try {
-    cache = JSON.parse(readFileSync(STATS_PATH, "utf8")).cache?.penMissByEvent ?? {};
+    const prev = JSON.parse(readFileSync(STATS_PATH, "utf8")).cache ?? {};
+    if (prev.byEvent) byEvent = prev.byEvent;
+    else if (prev.penMissByEvent)
+      for (const [id, penMiss] of Object.entries(prev.penMissByEvent)) byEvent[id] = { penMiss };
   } catch {
     /* first run */
   }
   const liveEventIds = [...eventById.values()]
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id);
+  // Refetch a summary when the match is live, never cached, or cached before assists
+  // existed (migrated penMiss-only entry) — so assists backfill exactly once.
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
-    (id) => liveEventIds.includes(id) || cache[id] == null,
+    (id) => liveEventIds.includes(id) || byEvent[id]?.assists == null,
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -292,27 +307,59 @@ async function main() {
       teamName[c.team?.displayName] = nameByTeam[norm(disp)] ?? disp;
     }
     const misses = [];
+    const assistsArr = [];
     for (const e of b.value?.keyEvents ?? []) {
-      if (!PEN_MISS.test(e.type?.text ?? "")) continue;
-      const p = (e.participants ?? [])[0]?.athlete?.displayName;
+      const t = e.type?.text ?? "";
       const team = teamName[e.team?.id] ?? teamName[e.team?.displayName] ?? "";
-      if (p) misses.push({ name: p, team });
+      if (PEN_MISS.test(t)) {
+        const p = (e.participants ?? [])[0]?.athlete?.displayName;
+        if (p) misses.push({ name: p, team });
+      } else if (/goal/i.test(t) && !/own/i.test(t)) {
+        // participant[0] = scorer, [1] = assister (absent on solo / penalty goals).
+        const a = (e.participants ?? [])[1]?.athlete?.displayName;
+        if (a) assistsArr.push({ name: a, team });
+      }
     }
-    cache[id] = misses; // [] is a valid "checked, none" answer
+    byEvent[id] = { penMiss: misses, assists: assistsArr }; // [] is a valid "checked, none"
   });
   // Drop cache entries for events no longer in our window (keeps the file tight).
   const validIds = new Set([...eventById.keys()]);
-  for (const id of Object.keys(cache)) if (!validIds.has(id)) delete cache[id];
+  for (const id of Object.keys(byEvent)) if (!validIds.has(id)) delete byEvent[id];
 
   const penMissed = {};
-  for (const misses of Object.values(cache)) {
-    for (const m of misses) tallyAdd(penMissed, m.name, m.team);
+  const assistsByPlayer = {}; // "name|team" → { name, team, value, matchIds:Set }
+  for (const [id, rec] of Object.entries(byEvent)) {
+    for (const m of rec.penMiss ?? []) tallyAdd(penMissed, m.name, m.team);
+    for (const a of rec.assists ?? []) {
+      if (!a.name || a.name === "Unknown") continue;
+      const k = `${a.name}|${a.team ?? ""}`;
+      const row = (assistsByPlayer[k] ??= { name: a.name, team: a.team ?? "", value: 0, matchIds: new Set() });
+      row.value += 1;
+      row.matchIds.add(id);
+    }
+  }
+
+  // Merge live per-match assists (authoritative for in-window games, current) with
+  // ESPN's assistsLeaders aggregate (carries out-of-window games + appearances).
+  // Max of both so the board never under-reports — mirrors the scorers merge above.
+  const mergedAssists = {};
+  for (const a of Object.values(assistsByPlayer)) {
+    mergedAssists[`${a.name}|${a.team}`] = { name: a.name, team: a.team, value: a.value, matches: a.matchIds.size };
+  }
+  for (const [key, r] of Object.entries(assists)) {
+    const m = mergedAssists[key];
+    if (m) {
+      m.value = Math.max(m.value, r.value);
+      m.matches = Math.max(m.matches ?? 0, r.matches ?? 0) || null;
+    } else {
+      mergedAssists[key] = r;
+    }
   }
 
   // ── Assemble payload ────────────────────────────────────────────────────────
   const categories = {
     scorers: topN(Object.values(mergedScorers), flagFor),
-    assists: topN(Object.values(assists), flagFor),
+    assists: topN(Object.values(mergedAssists), flagFor),
     cleanSheets: topTeams(Object.values(cleanSheets), flagFor),
     yellowCards: topN(Object.values(yellow), flagFor),
     redCards: topN(Object.values(red), flagFor),
@@ -327,7 +374,7 @@ async function main() {
       finished: finishedEventIds.length,
     },
     categories,
-    cache: { penMissByEvent: cache },
+    cache: { byEvent },
   };
 
   // Change-detection ignores the timestamp + cache (cache is plumbing, not output).

@@ -277,17 +277,26 @@ export async function computeStats(now: number): Promise<StatsFile> {
     }
   }
 
-  // ── Pass 3: penalty MISSED from summary keyEvents (cached per event) ─────────
-  const cache: Record<string, { name: string; team: string }[]> = {
-    ...((statsJson as { cache?: { penMissByEvent?: Record<string, { name: string; team: string }[]> } }).cache
-      ?.penMissByEvent ?? {}),
-  };
+  // ── Pass 3: penalty MISSED + ASSISTS from summary keyEvents (cached per event) ─
+  // The assister isn't in the cheap scoreboard `details` (only the scorer is), so
+  // assists are read from each match's keyEvents (participant[1] of a non-own
+  // Goal) alongside penalty-miss plays. Both ride one per-event summary cache.
+  type EventCache = { penMiss?: { name: string; team: string }[]; assists?: { name: string; team: string }[] };
+  const rawCache =
+    (statsJson as {
+      cache?: { byEvent?: Record<string, EventCache>; penMissByEvent?: Record<string, { name: string; team: string }[]> };
+    }).cache ?? {};
+  const byEvent: Record<string, EventCache> = {};
+  if (rawCache.byEvent) Object.assign(byEvent, rawCache.byEvent);
+  else if (rawCache.penMissByEvent)
+    for (const [id, penMiss] of Object.entries(rawCache.penMissByEvent)) byEvent[id] = { penMiss };
   const liveEventIds = [...eventById.values()]
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id!)
     .filter(Boolean);
+  // Refetch when live, never cached, or cached before assists existed (migrated entry).
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
-    (id) => liveEventIds.includes(id) || cache[id] == null,
+    (id) => liveEventIds.includes(id) || byEvent[id]?.assists == null,
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -302,25 +311,57 @@ export async function computeStats(now: number): Promise<StatsFile> {
       if (c.team?.id) teamName[c.team.id] = nameByTeam[norm(disp)] ?? disp;
     }
     const misses: { name: string; team: string }[] = [];
+    const assistsArr: { name: string; team: string }[] = [];
     for (const e of b.value?.keyEvents ?? []) {
-      if (!PEN_MISS.test(e.type?.text ?? "")) continue;
-      const p = (e.participants ?? [])[0]?.athlete?.displayName;
+      const t = e.type?.text ?? "";
       const team = (e.team?.id && teamName[e.team.id]) || "";
-      if (p) misses.push({ name: p, team });
+      if (PEN_MISS.test(t)) {
+        const p = (e.participants ?? [])[0]?.athlete?.displayName;
+        if (p) misses.push({ name: p, team });
+      } else if (/goal/i.test(t) && !/own/i.test(t)) {
+        // participant[0] = scorer, [1] = assister (absent on solo / penalty goals).
+        const a = (e.participants ?? [])[1]?.athlete?.displayName;
+        if (a) assistsArr.push({ name: a, team });
+      }
     }
-    cache[id] = misses;
+    byEvent[id] = { penMiss: misses, assists: assistsArr };
   });
   const validIds = new Set([...eventById.keys()]);
-  for (const id of Object.keys(cache)) if (!validIds.has(id)) delete cache[id];
+  for (const id of Object.keys(byEvent)) if (!validIds.has(id)) delete byEvent[id];
 
   const penMissed: Record<string, Tally> = {};
-  for (const misses of Object.values(cache)) {
-    for (const m of misses) tallyAdd(penMissed, m.name, m.team);
+  const assistsByPlayer: Record<string, { name: string; team: string; value: number; matchIds: Set<string> }> = {};
+  for (const [id, rec] of Object.entries(byEvent)) {
+    for (const m of rec.penMiss ?? []) tallyAdd(penMissed, m.name, m.team);
+    for (const a of rec.assists ?? []) {
+      if (!a.name || a.name === "Unknown") continue;
+      const k = `${a.name}|${a.team ?? ""}`;
+      const row = (assistsByPlayer[k] ??= { name: a.name, team: a.team ?? "", value: 0, matchIds: new Set<string>() });
+      row.value += 1;
+      row.matchIds.add(id);
+    }
+  }
+
+  // Merge live per-match assists (authoritative for in-window games) with ESPN's
+  // assistsLeaders aggregate (out-of-window games + appearances). Max of both so
+  // the board never under-reports — mirrors the scorers merge above.
+  const mergedAssists: Record<string, Tally> = {};
+  for (const a of Object.values(assistsByPlayer)) {
+    mergedAssists[`${a.name}|${a.team}`] = { name: a.name, team: a.team, value: a.value, matches: a.matchIds.size };
+  }
+  for (const [key, r] of Object.entries(assists)) {
+    const m = mergedAssists[key];
+    if (m) {
+      m.value = Math.max(m.value, r.value);
+      m.matches = Math.max(m.matches ?? 0, r.matches ?? 0) || null;
+    } else {
+      mergedAssists[key] = r;
+    }
   }
 
   const categories: Record<StatCategoryKey, StatRow[]> = {
     scorers: topN(Object.values(mergedScorers), flagFor),
-    assists: topN(Object.values(assists), flagFor),
+    assists: topN(Object.values(mergedAssists), flagFor),
     cleanSheets: topTeams(Object.values(cleanSheets), flagFor),
     yellowCards: topN(Object.values(yellow), flagFor),
     redCards: topN(Object.values(red), flagFor),
