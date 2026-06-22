@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T00:20:27.976Z",
+    "generatedAt": "2026-06-22T01:20:24.063Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 19,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -2098,6 +2098,92 @@
             "reliable": true
           }
         }
+      }
+    },
+    "new-egy-2026-06-21": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Finn Surman",
+          "minute": 15,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Mohanad Lashin",
+          "minute": 17,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Sarpreet Singh",
+          "minute": 19,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-22T01:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 0
+        },
+        "sot": {
+          "home": 3,
+          "away": 0
+        },
+        "shots": {
+          "home": 5,
+          "away": 1
+        },
+        "yellow": {
+          "home": 1,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 1
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Elijah Just": 1,
+          "Callum McCowatt": 1
+        },
+        "firstGoalMethod": "header",
+        "waterBreak": {}
       }
     },
     "uru-cap-2026-06-21": {
