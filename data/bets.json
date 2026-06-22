@@ -197,6 +197,16 @@
         "home": 2,
         "away": 2
       }
+    },
+    "new-egy-2026-06-21": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 3
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -1051,6 +1061,63 @@
           "team": "away",
           "player": "Diney Borges",
           "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "new-egy-2026-06-21": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Finn Surman",
+          "minute": 15,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Mostafa Zico",
+          "minute": 58,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Mohamed Salah",
+          "minute": 67,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Trézéguet",
+          "minute": 81,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Mohanad Lashin",
+          "minute": 17,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Sarpreet Singh",
+          "minute": 19,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Callum McCowatt",
+          "minute": 34,
           "type": "yellow"
         }
       ]
@@ -5857,16 +5924,16 @@
     },
     "new-egy-2026-06-21": {
       "corners": {
-        "home": 2,
-        "away": 2
+        "home": 4,
+        "away": 4
       },
       "sot": {
-        "home": 4,
-        "away": 3
+        "home": 5,
+        "away": 7
       },
       "shots": {
-        "home": 8,
-        "away": 14
+        "home": 11,
+        "away": 19
       },
       "yellow": {
         "home": 2,
@@ -5883,28 +5950,31 @@
       "cornersByHalf": {
         "home": [
           1,
-          1
+          3
         ],
         "away": [
           1,
-          1
+          3
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          1
+          2
         ],
         "away": [
           1,
-          1
+          3
         ]
       },
       "playerSot": {
         "Elijah Just": 1,
         "Callum McCowatt": 2,
         "Omar Marmoush": 1,
-        "Mohamed Salah": 1
+        "Mohamed Salah": 1,
+        "Ahmed Fatouh": 1,
+        "Zizo": 1,
+        "Tyler Bindon": 1
       },
       "firstGoalMethod": "header",
       "waterBreak": {
@@ -5915,6 +5985,16 @@
           "breakEndMinute": 24,
           "firstActionType": "Shot Blocked",
           "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 75,
+          "firstActionType": "Foul",
+          "firstActionMinute": 77,
           "isCorner": false,
           "reliable": true
         }
