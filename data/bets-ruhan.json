@@ -235,6 +235,80 @@
         "type": "matchResult",
         "outcome": "1"
       }
+    },
+    {
+      "id": "rb-83429036539",
+      "slipNo": "83429036539",
+      "matchId": "arg-aus-2026-06-22",
+      "player": "—",
+      "market": "Match result (1X2)",
+      "label": "Argentina to win (vs Austria)",
+      "odds": 1.515,
+      "stake": 1000,
+      "placedAt": "22/06 18:41",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "1"
+      }
+    },
+    {
+      "id": "rb-83430355325",
+      "slipNo": "83430355325",
+      "matchId": "arg-aus-2026-06-22",
+      "player": "Lionel Messi",
+      "market": "Win each half + scorer + corners each half",
+      "label": "Argentina to win each half + Messi to score + Argentina most corners each half",
+      "odds": 17,
+      "stake": 32,
+      "placedAt": "22/06 19:32",
+      "grade": {
+        "type": "comboWithScorer",
+        "player": "Lionel Messi",
+        "conds": [
+          {
+            "c": "winEachHalf",
+            "side": "home"
+          },
+          {
+            "c": "mostCornersEachHalf",
+            "side": "home"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rb-83430245057",
+      "slipNo": "83430245057",
+      "matchId": "arg-aus-2026-06-22",
+      "player": "Lionel Messi",
+      "market": "First scorer + correct score",
+      "label": "Messi to score first + match score 3-1 (Argentina)",
+      "odds": 50,
+      "stake": 19,
+      "placedAt": "22/06 19:28",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Lionel Messi",
+        "home": 3,
+        "away": 1
+      }
+    },
+    {
+      "id": "rb-83422120581",
+      "slipNo": "83422120581",
+      "matchId": "arg-aus-2026-06-22",
+      "player": "Lionel Messi",
+      "market": "First scorer + correct score",
+      "label": "Messi to score first + match score 3-0 (Argentina)",
+      "odds": 38,
+      "stake": 20,
+      "placedAt": "22/06 11:52",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Lionel Messi",
+        "home": 3,
+        "away": 0
+      }
     }
   ]
 }
