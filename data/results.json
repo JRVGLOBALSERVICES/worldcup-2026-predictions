@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-21T23:20:24.694Z",
+    "generatedAt": "2026-06-22T00:20:27.976Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 18,
-    "live": 1
+    "finished": 19,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -2101,15 +2101,18 @@
       }
     },
     "uru-cap-2026-06-21": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 2,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 2,
+        "away": 2
+      },
       "score": {
         "home": 2,
-        "away": 1
+        "away": 2
       },
       "goals": [
         {
@@ -2130,8 +2133,16 @@
         },
         {
           "team": "home",
-          "scorer": "Agustín Cano",
+          "scorer": "Agustín Canobbio",
           "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Hélio Varela",
+          "minute": 60,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -2149,42 +2160,54 @@
           "player": "Rodrigo Bentancur",
           "minute": 19,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mathías Olivera",
+          "minute": 57,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Diney Borges",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-21T22:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 5,
-          "away": 1
+          "home": 11,
+          "away": 4
         },
         "sot": {
           "home": 2,
-          "away": 1
+          "away": 4
         },
         "shots": {
-          "home": 11,
-          "away": 3
+          "home": 17,
+          "away": 12
         },
         "yellow": {
-          "home": 1,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 1,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
             4,
-            1
+            7
           ],
           "away": [
             1,
-            0
+            3
           ]
         },
         "sotByHalf": {
@@ -2194,10 +2217,12 @@
           ],
           "away": [
             0,
-            0
+            2
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Laros Duarte": 2
+        },
         "firstGoalMethod": "freekick",
         "waterBreak": {
           "h1": {
@@ -2209,6 +2234,16 @@
             "firstActionMinute": 27,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 73,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 75,
+            "isCorner": true,
+            "reliable": false
           }
         }
       }

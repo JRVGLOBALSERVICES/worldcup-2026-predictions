@@ -187,6 +187,16 @@
         "home": 0,
         "away": 0
       }
+    },
+    "uru-cap-2026-06-21": {
+      "ht": {
+        "home": 2,
+        "away": 1
+      },
+      "ft": {
+        "home": 2,
+        "away": 2
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -979,6 +989,69 @@
           "player": "Nathan Ngoy",
           "minute": 66,
           "type": "red"
+        }
+      ]
+    },
+    "uru-cap-2026-06-21": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Kevin Pina",
+          "minute": 20,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Maxi Araújo",
+          "minute": 43,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Agustín Canobbio",
+          "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Hélio Varela",
+          "minute": 60,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Sidny Lopes Cabral",
+          "minute": 5,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Rodrigo Bentancur",
+          "minute": 19,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mathías Olivera",
+          "minute": 57,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Diney Borges",
+          "minute": 90,
+          "type": "yellow"
         }
       ]
     }
@@ -5712,37 +5785,37 @@
     },
     "uru-cap-2026-06-21": {
       "corners": {
-        "home": 5,
-        "away": 1
+        "home": 11,
+        "away": 4
       },
       "sot": {
         "home": 2,
-        "away": 1
+        "away": 4
       },
       "shots": {
-        "home": 11,
-        "away": 3
+        "home": 17,
+        "away": 12
       },
       "yellow": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 2
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
           4,
-          1
+          7
         ],
         "away": [
           1,
-          0
+          3
         ]
       },
       "sotByHalf": {
@@ -5752,10 +5825,12 @@
         ],
         "away": [
           0,
-          0
+          2
         ]
       },
-      "playerSot": {},
+      "playerSot": {
+        "Laros Duarte": 2
+      },
       "firstGoalMethod": "freekick",
       "waterBreak": {
         "h1": {
@@ -5767,6 +5842,16 @@
           "firstActionMinute": 27,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 73,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 75,
+          "isCorner": true,
+          "reliable": false
         }
       }
     }
