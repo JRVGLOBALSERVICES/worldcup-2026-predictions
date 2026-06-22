@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T09:03:33.897Z",
+    "generatedAt": "2026-06-22T16:07:46Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -4675,129 +4675,251 @@
     "arg-aus-2026-06-22": {
       "win": {
         "pick": "Argentina",
-        "fairOdds": "1.55",
-        "reason": "Argentina are a clear class above and arrive off a Messi hat-trick in a 3-0 opener, but Austria are well-organized, in a 5-match unbeaten run, and will press, so a comfortable-but-not-routine win is most likely rather than a blowout.",
+        "fairOdds": "1.50",
+        "reason": "Confirmed XIs change the picture: Lautaro Martinez starts up top with Julian Alvarez BENCHED, Thiago Almada on the left, Facundo Medina in at LB. Austria bench Marko Arnautovic (their focal point AND usual penalty taker), pushing Michael Gregoritsch to lead the line, which blunts their goal threat. Argentina are a clear class above and arrive off a Messi hat-trick, but Austria own the tournament's best defensive record (conceded >1 in only one of their last 18) and will sit deep and counter under Rangnick, so a modest 1-2 goal win is likelier than a rout and an upset draw is a live tail.",
         "strength": 4
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "2.40",
+        "fairOdds": "2.50",
         "alt": "0-0",
-        "altOdds": "3.10",
+        "altOdds": "2.50",
         "strength": 3
       },
       "htft": {
         "pick": "Argentina/Argentina",
-        "fairOdds": "2.30",
+        "fairOdds": "2.40",
         "strength": 3
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "6.50",
+        "score": "2-0",
+        "fairOdds": "6.00",
         "strength": 2
       },
       "scorers": [
         {
-          "player": "Julian Alvarez",
-          "fairOdds": "2.10",
-          "banker": true,
-          "note": "Central striker getting the bulk of Argentina's chances; sharp this season and Austria's high line invites runs in behind.",
+          "player": "Lautaro Martinez",
+          "fairOdds": "2.30",
+          "banker": false,
+          "note": "Confirmed starting striker, having overtaken Alvarez; 2025-26 Serie A top scorer (17) as Inter captain. Argentina's No.2 penalty now Alvarez is benched. Top central threat — but Austria's elite block keeps even him non-banker.",
           "strength": 4
         },
         {
-          "player": "Lautaro Martinez",
-          "fairOdds": "2.40",
-          "banker": false,
-          "note": "Serie A top scorer (17); strong anytime option whether starting or off the bench against a pressing Austria side.",
-          "strength": 3
-        },
-        {
           "player": "Lionel Messi",
-          "fairOdds": "2.20",
+          "fairOdds": "2.10",
           "banker": false,
-          "note": "Hat-trick vs Algeria but a 38-going-39 marquee managing hamstring fatigue — explicitly not a banker.",
-          "strength": 3
+          "note": "Hat-trick vs Algeria, free playmaker role and first-choice penalties, but at ~39 and managing minutes he is explicitly NOT a banker.",
+          "strength": 4
         },
         {
-          "player": "Marko Arnautovic",
+          "player": "Thiago Almada",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Austria's focal point and penalty taker; their best route to a goal if they get a set-piece or spot-kick.",
+          "note": "Starts on the left; direct runner who stretches the block, but modest club minutes/output at Atletico (3-4 goals) make him a longer-shot scorer.",
+          "strength": 2
+        },
+        {
+          "player": "Michael Gregoritsch",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Austria's confirmed lone striker with Arnautovic benched; honest target-man who scored Austria's qualifying-sealer vs Bosnia. Their slim route to a goal vs Argentina.",
           "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Lionel Messi",
-          "fairOdds": "2.80",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "Primary creator pulling the strings; even managing minutes he's Argentina's likeliest assist source.",
+          "note": "Primary creator dropping between the lines; even with managed minutes he is Argentina's likeliest assist source.",
           "strength": 3
         },
         {
-          "player": "Alexis Mac Allister",
-          "fairOdds": "4.00",
+          "player": "Rodrigo De Paul",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "Undroppable midfield controller feeding the front three.",
-          "strength": 2
+          "note": "Assisted Messi's opener vs Algeria; the chief link man feeding Messi and Lautaro from midfield.",
+          "strength": 3
         },
         {
           "player": "Marcel Sabitzer",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Austria's chief creator and set-piece taker, scored in three straight friendlies pre-tournament.",
+          "note": "Austria's chief creator and now primary set-piece + penalty taker with Arnautovic benched; their main creative route if they threaten.",
           "strength": 2
         }
       ],
       "penalty": {
         "likelihood": "Medium",
         "taker": "Lionel Messi",
-        "backup": "Julian Alvarez",
-        "note": "Messi first choice; Lautaro/Alvarez backup. Austria's spot-kick taker is Arnautovic."
+        "backup": "Lautaro Martinez",
+        "note": "Messi first choice; Lautaro is backup now Alvarez starts on the bench. Austria's spot-kick duty falls to Sabitzer with Arnautovic benched (Alaba the alternative)."
       },
       "lineups": {
         "home": "4-3-3",
         "away": "4-2-3-1",
-        "status": "probable"
+        "status": "confirmed",
+        "homeXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": null,
+              "name": "Emiliano Martinez",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Nahuel Molina",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Cristian Romero",
+              "pos": "CD-R"
+            },
+            {
+              "num": null,
+              "name": "Lisandro Martinez",
+              "pos": "CD-L"
+            },
+            {
+              "num": null,
+              "name": "Facundo Medina",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Rodrigo De Paul",
+              "pos": "RM"
+            },
+            {
+              "num": null,
+              "name": "Enzo Fernandez",
+              "pos": "CM"
+            },
+            {
+              "num": null,
+              "name": "Alexis Mac Allister",
+              "pos": "LM"
+            },
+            {
+              "num": null,
+              "name": "Lionel Messi",
+              "pos": "F-R"
+            },
+            {
+              "num": null,
+              "name": "Lautaro Martinez",
+              "pos": "F"
+            },
+            {
+              "num": null,
+              "name": "Thiago Almada",
+              "pos": "F-L"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": null,
+              "name": "Alexander Schlager",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Konrad Laimer",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Kevin Danso",
+              "pos": "CD-R"
+            },
+            {
+              "num": null,
+              "name": "Stefan Posch",
+              "pos": "CD-L"
+            },
+            {
+              "num": null,
+              "name": "David Alaba",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Nicolas Seiwald",
+              "pos": "DM-R"
+            },
+            {
+              "num": null,
+              "name": "Xaver Schlager",
+              "pos": "DM-L"
+            },
+            {
+              "num": null,
+              "name": "Romano Schmid",
+              "pos": "AM-R"
+            },
+            {
+              "num": null,
+              "name": "Paul Wanner",
+              "pos": "AM"
+            },
+            {
+              "num": null,
+              "name": "Marcel Sabitzer",
+              "pos": "AM-L"
+            },
+            {
+              "num": null,
+              "name": "Michael Gregoritsch",
+              "pos": "F"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
+          "player": "Lautaro Martinez",
+          "team": "Argentina",
+          "note": "Confirmed to START over Julian Alvarez; 2025-26 Serie A top scorer (17) and Inter captain. Created Messi's opener vs Algeria; Argentina's central goal threat and No.2 penalty."
+        },
+        {
           "player": "Lionel Messi",
           "team": "Argentina",
-          "note": "Captain off a hat-trick vs Algeria; managing hamstring/muscle fatigue at 38 — minutes may be controlled."
+          "note": "Hat-trick vs Algeria equalling the all-time WC goal record; free playmaker and first-choice penalty taker. ~39 and managing minutes, so not a banker scorer."
         },
         {
-          "player": "Julian Alvarez",
+          "player": "Thiago Almada",
           "team": "Argentina",
-          "note": "Central striker; most consistent goal threat and the smarter anytime-scorer pick over Messi."
+          "note": "Starts on the left wing; direct width and penetration, but limited club minutes/output this season — a secondary threat."
         },
         {
-          "player": "Cristian Romero",
+          "player": "Facundo Medina",
           "team": "Argentina",
-          "note": "Returned from a sprained knee collateral ligament suffered in April; anchors the back line if fit."
+          "note": "Comes in at left-back in place of Nicolas Tagliafico; aggressive but a fresh face in the back line."
         },
         {
-          "player": "Emiliano Martinez",
-          "team": "Argentina",
-          "note": "Fractured ring finger pre-tournament but confirmed and starting in goal."
-        },
-        {
-          "player": "David Alaba",
+          "player": "Michael Gregoritsch",
           "team": "Austria",
-          "note": "Veteran leader marshalling the back four; key to Austria's organization against Argentina's front three."
+          "note": "Confirmed lone striker with Arnautovic benched; target-man (now at Brondby) who scored Austria's qualifying-sealing equaliser vs Bosnia. Honest link play, not prolific."
         },
         {
-          "player": "Marko Arnautovic",
+          "player": "Marcel Sabitzer",
           "team": "Austria",
-          "note": "Lone striker and penalty taker; converted the late spot-kick to seal 3-1 vs Jordan."
+          "note": "Austria's chief creator and engine; now their primary penalty + set-piece taker with Arnautovic on the bench. Main creative outlet vs Argentina."
         }
       ],
       "confidence": "medium",
       "strength": 4,
       "sources": [
-        "https://www.si.com/soccer/argentina-vs-austria-world-cup-preview-predictions-lineups-6-22-26",
+        "https://www.101greatgoals.com/football/world-cup-news/argentina-vs-austria-line-ups-confirmed-messi-world-cup/",
+        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/the-reason-why-lautaro-martinez-is-overtaking-julian-alvarez-for-a-starting-spot-with-argentina-ahead-of-the-2026-fifa-world-cup-2026-06-15",
         "https://www.rotowire.com/soccer/article/argentina-vs-austria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119066",
-        "https://www.espn.com/soccer/story/_/id/49120325/fifa-world-cup-2026-argentina-vs-austria-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups"
+        "https://en.wikipedia.org/wiki/Paul_Wanner",
+        "https://www.si.com/soccer/austria-2026-world-cup-preview"
       ]
     },
     "fra-ira-2026-06-22": {
