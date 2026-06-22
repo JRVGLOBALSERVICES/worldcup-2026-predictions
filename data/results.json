@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T17:20:25.743Z",
+    "generatedAt": "2026-06-22T18:20:26.076Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 20,
     "live": 1
@@ -2398,31 +2398,50 @@
     },
     "arg-aus-2026-06-22": {
       "state": "live",
-      "ht": null,
-      "ft": null,
-      "score": {
-        "home": 0,
+      "ht": {
+        "home": 1,
         "away": 0
       },
-      "goals": [],
-      "cards": [],
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Lionel Messi",
+          "minute": 38,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Stefan Posch",
+          "minute": 40,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-22T17:00:00.000Z",
       "stats": {
         "corners": {
           "home": 0,
-          "away": 0
+          "away": 2
         },
         "sot": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "shots": {
-          "home": 1,
-          "away": 0
+          "home": 3,
+          "away": 3
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -2430,7 +2449,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -2438,7 +2457,7 @@
             0
           ],
           "away": [
-            0,
+            2,
             0
           ]
         },
@@ -2453,8 +2472,19 @@
           ]
         },
         "playerSot": {},
-        "firstGoalMethod": null,
-        "waterBreak": {}
+        "firstGoalMethod": "shot",
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 28,
+            "isCorner": true,
+            "reliable": false
+          }
+        }
       }
     }
   }

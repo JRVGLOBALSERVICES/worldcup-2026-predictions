@@ -6111,19 +6111,19 @@
     "arg-aus-2026-06-22": {
       "corners": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "sot": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "shots": {
-        "home": 1,
-        "away": 0
+        "home": 3,
+        "away": 3
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -6131,7 +6131,7 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
@@ -6139,7 +6139,7 @@
           0
         ],
         "away": [
-          0,
+          2,
           0
         ]
       },
@@ -6154,8 +6154,19 @@
         ]
       },
       "playerSot": {},
-      "firstGoalMethod": null,
-      "waterBreak": {}
+      "firstGoalMethod": "shot",
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 26,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 28,
+          "isCorner": true,
+          "reliable": false
+        }
+      }
     }
   }
 }
