@@ -5059,6 +5059,144 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83449260763",
+      "slipNo": "83449260763",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "Erling Haaland",
+      "market": "To score 2+ (brace)",
+      "label": "Erling Haaland to score 2 or more goals",
+      "odds": 9.3,
+      "stake": 30,
+      "placedAt": "23/06 03:37",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Erling Haaland",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83449256511",
+      "slipNo": "83449256511",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "Sadio Mane",
+      "market": "To score 2+ (brace)",
+      "label": "Sadio Mane to score 2 or more goals",
+      "odds": 18,
+      "stake": 20,
+      "placedAt": "23/06 03:37",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Sadio Mane",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83449243777",
+      "slipNo": "83449243777",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "Sadio Mane",
+      "market": "1st goal + 2–1",
+      "label": "Sadio Mane scores first and Norway win 2–1",
+      "odds": 65,
+      "stake": 10,
+      "placedAt": "23/06 03:37",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Sadio Mane",
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "id": "sp-83449235257",
+      "slipNo": "83449235257",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "Erling Haaland",
+      "market": "1st goal + 2–0",
+      "label": "Erling Haaland scores first and Norway win 2–0",
+      "odds": 48,
+      "stake": 10,
+      "placedAt": "23/06 03:37",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Erling Haaland",
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "id": "sp-83449224199",
+      "slipNo": "83449224199",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "Erling Haaland",
+      "market": "1st goal + Any Other",
+      "label": "Erling Haaland scores first and the match ends in any other score",
+      "odds": 35,
+      "stake": 10,
+      "placedAt": "23/06 03:37",
+      "grade": {
+        "type": "firstScorerAndScoreOther",
+        "player": "Erling Haaland",
+        "excludeScores": [
+          {
+            "home": 2,
+            "away": 0
+          },
+          {
+            "home": 2,
+            "away": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83449218903",
+      "slipNo": "83449218903",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "Erling Haaland",
+      "market": "1st goal + 2–1",
+      "label": "Erling Haaland scores first and Norway win 2–1",
+      "odds": 38,
+      "stake": 10,
+      "placedAt": "23/06 03:37",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Erling Haaland",
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "id": "sp-83449143923",
+      "slipNo": "83449143923",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "—",
+      "market": "1X2",
+      "label": "Norway v Senegal — Norway to win (W1)",
+      "odds": 2.346,
+      "stake": 50,
+      "placedAt": "23/06 03:35",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "1"
+      }
+    },
+    {
+      "id": "sp-83449132507",
+      "slipNo": "83449132507",
+      "matchId": "nor-sen-2026-06-22",
+      "player": "—",
+      "market": "1X2",
+      "label": "Norway v Senegal — Draw (X)",
+      "odds": 3.475,
+      "stake": 50,
+      "placedAt": "23/06 03:35",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
     }
   ],
   "matchStats": {
