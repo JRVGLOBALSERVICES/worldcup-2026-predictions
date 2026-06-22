@@ -70,8 +70,52 @@ export function RefreshCountdown({
   );
 }
 
+/**
+ * Manual "pull fresh stats now" button. The auto-poller idles between matches,
+ * so this lets you force a fetch on demand — re-grading every line off the very
+ * latest ESPN feed without waiting for the next scheduled tick.
+ */
+export function ForceRefreshButton({
+  onRefresh,
+  refreshing,
+}: {
+  onRefresh: () => void;
+  refreshing: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onRefresh}
+      disabled={refreshing}
+      aria-label="Refresh live stats now"
+      title="Pull the latest scores & stats right now"
+      className="inline-flex items-center gap-1.5 rounded-full border border-acid-dim px-2.5 py-1 font-mono text-[0.62rem] uppercase tracking-wider text-acid transition-colors hover:bg-acid/10 active:scale-95 disabled:cursor-default disabled:opacity-60"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2.2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+        className={`size-3 ${refreshing ? "animate-spin motion-reduce:animate-none" : ""}`}
+      >
+        <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+        <path d="M21 3v6h-6" />
+      </svg>
+      {refreshing ? "Updating…" : "Force update"}
+    </button>
+  );
+}
+
 /** Context-connected variant for pages wrapped in <LiveProvider> (home, match). */
 export function LiveRefreshPill() {
-  const { nextRefreshAt, anyLive } = useLive();
-  return <RefreshCountdown nextAt={nextRefreshAt} active={anyLive} />;
+  const { nextRefreshAt, anyLive, refresh, refreshing } = useLive();
+  return (
+    <span className="inline-flex items-center gap-2">
+      <RefreshCountdown nextAt={nextRefreshAt} active={anyLive} />
+      <ForceRefreshButton onRefresh={refresh} refreshing={refreshing} />
+    </span>
+  );
 }

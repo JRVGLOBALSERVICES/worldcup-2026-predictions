@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
 import { inPlayBet, inPlaySpecial, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
-import { RefreshCountdown } from "./RefreshCountdown";
+import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { SiteNav, type NavKey } from "./SiteNav";
 
 // ── serialisable payload the server page hands down (no functions/classes) ────
@@ -95,18 +95,28 @@ function useLive(base: TrackerBase) {
   const [updatedAt, setUpdatedAt] = useState<number | null>(null);
   const [pollFast, setPollFast] = useState(false);
   const [nextRefreshAt, setNextRefreshAt] = useState<number | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelled = useRef(false);
+  const inFlight = useRef(false);
 
+  // One fetch + reschedule, shared by the auto-poller and the force-update
+  // button. Held in a ref and assigned in an effect (commit phase, never during
+  // render) so it always closes over the latest `base.days`. `manual` flips the
+  // spinner — it just runs the same tick now, which is what makes the button
+  // work after the poller has idled.
+  const tick = useRef<(manual?: boolean) => Promise<void>>(async () => {});
   useEffect(() => {
-    let cancelled = false;
-
-    async function tick() {
+    tick.current = async (manual = false) => {
+      if (inFlight.current) return; // never overlap fetches
+      inFlight.current = true;
+      if (manual) setRefreshing(true);
       let anyLive = false;
       try {
         const res = await fetch("/api/live", { cache: "no-store" });
         if (res.ok) {
           const data: LivePayload = await res.json();
-          if (!cancelled) {
+          if (!cancelled.current) {
             setLive(data.matches ?? {});
             setUpdatedAt(data.updatedAt ?? Date.now());
             anyLive = !!data.anyLive;
@@ -114,29 +124,42 @@ function useLive(base: TrackerBase) {
         }
       } catch {
         /* keep last known; try again next tick */
+      } finally {
+        inFlight.current = false;
+        if (manual) setRefreshing(false);
       }
-      if (cancelled) return;
+      if (cancelled.current) return;
       const near = nearLiveWindow(base.days, Date.now());
       const fast = anyLive || near;
       setPollFast(fast);
       // Stop entirely once nothing is live and nothing is near (saves the idle heartbeat).
       const delay = fast ? 5000 : near ? 30000 : 0;
+      if (timer.current) clearTimeout(timer.current);
       if (delay > 0) {
         setNextRefreshAt(Date.now() + delay);
-        timer.current = setTimeout(tick, delay);
+        timer.current = setTimeout(() => tick.current(), delay);
       } else {
         setNextRefreshAt(null);
       }
-    }
+    };
+  });
 
-    tick();
+  useEffect(() => {
+    cancelled.current = false;
+    tick.current();
     return () => {
-      cancelled = true;
+      cancelled.current = true;
       if (timer.current) clearTimeout(timer.current);
     };
   }, [base.days]);
 
-  return { live, updatedAt, pollFast, nextRefreshAt };
+  // Manual pull: cancel the pending tick and fetch right now.
+  const refresh = useCallback(() => {
+    if (timer.current) clearTimeout(timer.current);
+    tick.current(true);
+  }, []);
+
+  return { live, updatedAt, pollFast, nextRefreshAt, refreshing, refresh };
 }
 
 // ── pills ─────────────────────────────────────────────────────────────────────
@@ -297,7 +320,7 @@ function Performance({ rows }: { rows: InPlay[] }) {
 
 // ─────────────────────────────────────────────────────────────────────────────
 export default function LiveTracker({ base, activeNav }: { base: TrackerBase; activeNav: NavKey }) {
-  const { live, updatedAt, pollFast, nextRefreshAt } = useLive(base);
+  const { live, updatedAt, pollFast, nextRefreshAt, refreshing, refresh } = useLive(base);
   const cur = base.meta.currency;
   const totalToday = base.counts.score + base.counts.props;
   const totalSeason = base.season.counts.score + base.season.counts.props;
@@ -396,6 +419,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           ) : (
             pollFast && <span className="rounded-full border border-acid-dim px-2.5 py-1 text-acid">● auto-refresh on</span>
           )}
+          <ForceRefreshButton onRefresh={refresh} refreshing={refreshing} />
         </div>
       </section>
 
