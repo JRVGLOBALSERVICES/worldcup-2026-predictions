@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T18:20:26.076Z",
+    "generatedAt": "2026-06-22T19:20:21.908Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 20,
-    "live": 1
+    "finished": 21,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -2397,14 +2397,17 @@
       }
     },
     "arg-aus-2026-06-22": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 2,
+        "away": 0
+      },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "goals": [
@@ -2412,6 +2415,14 @@
           "team": "home",
           "scorer": "Lionel Messi",
           "minute": 38,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Lionel Messi",
+          "minute": 90,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -2423,55 +2434,76 @@
           "player": "Stefan Posch",
           "minute": 40,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Facundo Medina",
+          "minute": 75,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Konrad Laimer",
+          "minute": 75,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Leandro Paredes",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-22T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 2
-        },
-        "sot": {
-          "home": 2,
-          "away": 0
-        },
-        "shots": {
-          "home": 3,
+          "home": 1,
           "away": 3
         },
-        "yellow": {
-          "home": 0,
+        "sot": {
+          "home": 5,
           "away": 1
+        },
+        "shots": {
+          "home": 12,
+          "away": 6
+        },
+        "yellow": {
+          "home": 2,
+          "away": 2
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 0,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             2,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Marcel Sabitzer": 1,
+          "Julián Álvarez": 1
+        },
         "firstGoalMethod": "shot",
         "waterBreak": {
           "h1": {
@@ -2481,6 +2513,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Corner Awarded",
             "firstActionMinute": 28,
+            "isCorner": true,
+            "reliable": false
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 72,
             "isCorner": true,
             "reliable": false
           }
