@@ -2260,6 +2260,28 @@
       "away": 1,
       "odds": 41,
       "stake": 30
+    },
+    {
+      "id": "b-83448885571",
+      "matchId": "fra-ira-2026-06-22",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 5-1",
+      "home": 5,
+      "away": 1,
+      "odds": 17,
+      "stake": 20
+    },
+    {
+      "id": "b-83448882953",
+      "matchId": "fra-ira-2026-06-22",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 5-0",
+      "home": 5,
+      "away": 0,
+      "odds": 10,
+      "stake": 30
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -4998,6 +5020,44 @@
       "grade": {
         "type": "matchResult",
         "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83449007135",
+      "slipNo": "83449007135",
+      "matchId": "fra-ira-2026-06-22",
+      "player": "Kylian Mbappe",
+      "market": "1st goal + 3–0 win",
+      "label": "Kylian Mbappe scores first and the match ends 3–0",
+      "odds": 20,
+      "stake": 20,
+      "placedAt": "23/06 03:32",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Kylian Mbappe",
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "id": "sp-83449002047",
+      "slipNo": "83449002047",
+      "matchId": "fra-ira-2026-06-22",
+      "player": "Kylian Mbappe",
+      "market": "1st goal + match score Any Other",
+      "label": "Kylian Mbappe scores first goal and the match ends in any other score",
+      "odds": 8,
+      "stake": 30,
+      "placedAt": "23/06 03:32",
+      "grade": {
+        "type": "firstScorerAndScoreOther",
+        "player": "Kylian Mbappe",
+        "excludeScores": [
+          {
+            "home": 3,
+            "away": 0
+          }
+        ]
       }
     }
   ],
