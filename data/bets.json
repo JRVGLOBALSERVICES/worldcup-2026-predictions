@@ -2385,6 +2385,71 @@
       "away": 0,
       "odds": 10,
       "stake": 30
+    },
+    {
+      "id": "b-83460713737",
+      "slipNo": "83460713737",
+      "matchId": "jor-alg-2026-06-22",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-0",
+      "home": 1,
+      "away": 0,
+      "odds": 12,
+      "stake": 20,
+      "placedAt": "23/06 11:26"
+    },
+    {
+      "id": "b-83460711417",
+      "slipNo": "83460711417",
+      "matchId": "jor-alg-2026-06-22",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-0",
+      "home": 0,
+      "away": 0,
+      "odds": 6.5,
+      "stake": 20,
+      "placedAt": "23/06 11:26"
+    },
+    {
+      "id": "b-83460709037",
+      "slipNo": "83460709037",
+      "matchId": "jor-alg-2026-06-22",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-1",
+      "home": 1,
+      "away": 1,
+      "odds": 7.5,
+      "stake": 20,
+      "placedAt": "23/06 11:25"
+    },
+    {
+      "id": "b-83460706377",
+      "slipNo": "83460706377",
+      "matchId": "jor-alg-2026-06-22",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 2-0",
+      "home": 2,
+      "away": 0,
+      "odds": 34,
+      "stake": 10,
+      "placedAt": "23/06 11:25"
+    },
+    {
+      "id": "b-83460656889",
+      "slipNo": "83460656889",
+      "matchId": "jor-alg-2026-06-22",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 2-0 (1st half)",
+      "home": 2,
+      "away": 0,
+      "odds": 51,
+      "stake": 20,
+      "placedAt": "23/06 11:22"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -5299,6 +5364,51 @@
       "grade": {
         "type": "matchResult",
         "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83460659535",
+      "slipNo": "83460659535",
+      "matchId": "jor-alg-2026-06-22",
+      "player": "Amine Gouiri",
+      "market": "First goalscorer",
+      "label": "Amine Gouiri to score the first goal of the match",
+      "odds": 5.5,
+      "stake": 20,
+      "placedAt": "23/06 11:22",
+      "grade": {
+        "type": "firstScorer",
+        "player": "Amine Gouiri"
+      }
+    },
+    {
+      "id": "sp-83460639249",
+      "slipNo": "83460639249",
+      "matchId": "jor-alg-2026-06-22",
+      "player": "—",
+      "market": "Match draw (1X2 X)",
+      "label": "Jordan v Algeria to be a draw (1X2 X)",
+      "odds": 3.86,
+      "stake": 100,
+      "placedAt": "23/06 11:21",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83460636969",
+      "slipNo": "83460636969",
+      "matchId": "jor-alg-2026-06-22",
+      "player": "—",
+      "market": "Match winner — W1",
+      "label": "Jordan to win (1X2 W1)",
+      "odds": 7.21,
+      "stake": 100,
+      "placedAt": "23/06 11:21",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "1"
       }
     }
   ],
