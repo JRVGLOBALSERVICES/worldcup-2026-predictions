@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T19:04:53.270Z",
+    "generatedAt": "2026-06-23T22:23:43.682Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -5914,19 +5914,19 @@
     },
     "pan-cro-2026-06-23": {
       "win": {
-        "pick": "Croatia",
-        "fairOdds": "1.95",
-        "reason": "Croatia are favourites on midfield pedigree (Modric-Kovacic) and won the EPL-tier individual battles, but their defence shipped four to England and Panama are disciplined in a back-three, dangerous on the counter through Waterman and J.L. Rodriguez. With Croatia's ageing core slow to start and a genuine low-block draw on the table, this is closer than the gap in names suggests, so the win price stays honest rather than short."
+        "pick": "Croatia (DNB)",
+        "fairOdds": "1.90",
+        "reason": "On the pitch Croatia's Modric-Kovacic-Baturina midfield outclasses Panama's engine room and Musa is in elite scoring form, but Panama sit in a disciplined back-three and counter through Rodriguez and Fajardo, and Croatia's defence shipped four to England. With Pongracic in for Vuskovic an untested pairing, draw-no-bet is the honest value rather than backing Croatia to win outright; win prob sits around 52-55%, not certainty."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.60",
+        "fairOdds": "2.45",
         "alt": "0-1 Croatia",
-        "altOdds": "3.40"
+        "altOdds": "3.20"
       },
       "htft": {
         "pick": "Draw/Croatia",
-        "fairOdds": "4.20"
+        "fairOdds": "4.40"
       },
       "fullTime": {
         "score": "1-1",
@@ -5935,100 +5935,100 @@
       "scorers": [
         {
           "player": "Petar Musa",
-          "fairOdds": "3.20",
+          "fairOdds": "2.90",
           "banker": true,
-          "note": "Nailed-on starting striker, scored vs England in MD1; Croatia's clearest central goal route and in-form focal point."
+          "note": "Croatia's starting striker, 12 MLS goals in 2026 and scored against England last time out; the genuine in-form spearhead and only nailed-on scoring banker here."
         },
         {
-          "player": "Andrej Kramaric",
-          "fairOdds": "3.60",
+          "player": "Ivan Perisic",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "Likely in the front three; clinical in the box but rotation/role with Baturina makes him a value pick not a lock."
+          "note": "Wide-left starter who assisted Musa's England goal; chips in with goals and set-piece arrivals, dangerous against a tiring back-three."
         },
         {
-          "player": "Cecilio Waterman",
+          "player": "Jose Fajardo",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Now leads Panama's line with Waterman benched; joint-top WCQ scorer and clutch (winner vs USA at Copa America), Panama's main outlet on the counter."
+        },
+        {
+          "player": "Marco Pasalic",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "In-form Orlando City wide forward, MLS All-Star and late-surge pick; gets behind full-backs and arrives at the back post."
+        }
+      ],
+      "assists": [
+        {
+          "player": "Ivan Perisic",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Panama's lead striker and main transition threat; clean-sheet risk for Croatia means he is the underdog's best scoring shout."
+          "note": "Croatia's chief creator from the left, already set up Musa's England goal; deliveries and cutbacks feed Musa."
+        },
+        {
+          "player": "Martin Baturina",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Starting No.10 between the lines; Croatia's main through-ball threat to release Musa and the wide men."
         },
         {
           "player": "Jose Luis Rodriguez",
           "fairOdds": "6.00",
           "banker": false,
-          "note": "Pace attacking the space behind Croatia's full-backs; counter-goal upside if Panama win the ball high."
-        }
-      ],
-      "assists": [
-        {
-          "player": "Luka Modric",
-          "fairOdds": "4.50",
-          "banker": false,
-          "note": "Set-piece and deep playmaking source for his 200th cap, but at 40 with reduced mobility his end-product is a non-banker."
-        },
-        {
-          "player": "Ivan Perisic",
-          "fairOdds": "5.00",
-          "banker": false,
-          "note": "Left-side delivery and corners; reliable cross supply into Musa/Kramaric."
-        },
-        {
-          "player": "Josko Gvardiol",
-          "fairOdds": "6.50",
-          "banker": false,
-          "note": "Overlapping from left-back, can whip in service; assist value if Croatia camp in Panama's half."
+          "note": "Panama's quickest forward on the counter; most likely to feed or cross for Fajardo when Los Canaleros break."
         }
       ],
       "penalty": {
         "likelihood": "low-medium",
         "taker": "Luka Modric",
-        "backup": "Ivan Perisic",
-        "note": "Croatia's listed taker is Modric, then Perisic/Budimir off the bench; for Panama, Eric Davis or Waterman if they win one. Spot-kick is not a high-probability event in a likely low-tempo, low-foul game."
+        "backup": "Mateo Kovacic",
+        "note": "Modric is Croatia's primary penalty taker on his 200th cap; for Panama the regular takers (Davis, Carrasquilla, Waterman) are all benched, so a spot-kick would fall to on-pitch set-piece men Murillo or Barcenas."
       },
       "lineups": {
-        "home": "Orlando Mosquera, Cesar Blackman, Jiovany Ramos, Jose Cordoba, Michael Amir Murillo, Carlos Harvey, Cristian Martinez, Andres Andrade, Yoel Barcenas, Cecilio Waterman, Jose Luis Rodriguez",
-        "away": "Dominik Livakovic, Josip Stanisic, Josip Sutalo, Luka Vuskovic, Josko Gvardiol, Mateo Kovacic, Luka Modric, Petar Sucic, Martin Baturina, Petar Musa, Ivan Perisic",
-        "status": "probable"
+        "home": "Orlando Mosquera, Jose Cordoba, Cesar Blackman, Jiovany Ramos, Carlos Harvey, Cristian Martinez, Andres Andrade, Amir Murillo, Yoel Barcenas, Jose Luis Rodriguez, Jose Fajardo",
+        "away": "Dominik Livakovic, Josip Stanisic, Marin Pongracic, Josip Sutalo, Josko Gvardiol, Mateo Kovacic, Luka Modric, Marco Pasalic, Martin Baturina, Ivan Perisic, Petar Musa",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Carlos Harvey",
+          "player": "Jose Fajardo",
           "team": "Panama",
-          "note": "On a yellow-card warning; another booking rules him out of MD3, so expect him to manage his aggression in midfield."
-        },
-        {
-          "player": "Adalberto Carrasquilla",
-          "team": "Panama",
-          "note": "Groin setback leaves him doubtful/out, removing a first-choice penalty option and midfield controller for Panama."
-        },
-        {
-          "player": "Luka Modric",
-          "team": "Croatia",
-          "note": "Set to make his 200th cap at 40; still orchestrates but reduced mobility - playmaker, not a goal banker."
-        },
-        {
-          "player": "Petar Musa",
-          "team": "Croatia",
-          "note": "Scored vs England; the nailed-on central striker and Croatia's most reliable scoring outlet."
-        },
-        {
-          "player": "Luka Vuskovic",
-          "team": "Croatia",
-          "note": "Centre-back selection in doubt; likely partners Sutalo with Gvardiol shifted to left-back to shore up a leaky defence."
+          "note": "Confirmed to lead the line with Waterman BENCHED; Saprissa striker, joint-top WCQ scorer (3) and Panama's clutch big-game forward (winner vs USA at Copa America 2024)."
         },
         {
           "player": "Cecilio Waterman",
           "team": "Panama",
-          "note": "Panama's main striker and counter threat; his pace behind Croatia's full-backs is their clearest path to a goal."
+          "note": "Dropped to the bench despite featuring in the probable XI; Panama lose their penalty taker and a poacher, shifting the line-leading and finishing burden onto Fajardo."
+        },
+        {
+          "player": "Marin Pongracic",
+          "team": "Croatia",
+          "note": "Starts ahead of Vuskovic at centre-back; Fiorentina defender forms a re-jigged pairing with Sutalo after Croatia conceded four to England, a clear soft spot Panama can target on the break."
+        },
+        {
+          "player": "Marco Pasalic",
+          "team": "Croatia",
+          "note": "Starts on the wing with Kramaric benched; in-form Orlando City forward and 2025 MLS All-Star whose late surge earned the nod, fresh legs to stretch Panama's wing-backs."
+        },
+        {
+          "player": "Petar Musa",
+          "team": "Croatia",
+          "note": "Starting striker in superb form, 12 MLS goals in 2026 and scored against England; the match's standout scoring threat and only scorer banker."
+        },
+        {
+          "player": "Luka Modric",
+          "team": "Croatia",
+          "note": "Captains Croatia on his landmark 200th cap and is the primary penalty taker, but at 40 he is a creator/spot-kick man, NOT a goal banker from open play."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.rotowire.com/soccer/article/panama-vs-croatia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119188",
-        "https://www.sportsmole.co.uk/football/panama/world-cup-2026/team-news/panama-vs-croatia-injury-suspension-list-predicted-xis_599789.html",
-        "https://www.si.com/soccer/panama-vs-croatia-world-cup-preview-predictions-lineups-6-23-26",
-        "https://www.sportsmole.co.uk/football/croatia/world-cup-2026/predicted-lineups/will-vuskovic-start-predicted-croatia-xi-vs-panama_599760.html",
-        "https://www.espn.com/soccer/match/_/gameId/760437/croatia-england",
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/england-croatia-highlights-match-report"
+        "https://www.whoscored.com/news/W5s1wFNJ0UKlv6XeavIHgA/show/20260624-panama-vs-croatia-confirmed-lineup-1782251372",
+        "https://www.101greatgoals.com/football/world-cup-news/panama-v-croatia-confirmed-line-ups-as-luka-modric-makes-200th-international-appearance/",
+        "https://www.mlssoccer.com/news/petar-musa-stuns-england-with-clutch-goal-croatia-fc-dallas",
+        "https://allaboutfpl.com/2026/06/fifa-world-cup-2026-penalty-and-set-piece-takers-of-all-48-teams/",
+        "https://theanalyst.com/articles/panama-vs-croatia-prediction-world-cup-2026-match-preview",
+        "https://www.olympics.com/en/news/fifa-world-cup-2026-panama-all-players-full-squad-list-key-stats-and-schedule"
       ]
     },
     "col-drc-2026-06-23": {
