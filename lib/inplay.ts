@@ -303,6 +303,34 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         ? { verdict: "lost", note: "No free-kick goal" }
         : { verdict: "alive", note: `${player} free-kick — confirmed at FT` };
 
+    case "firstScorerEither": {
+      // First goal by ANY of the named players ("Ronaldo or Neto to score 1st").
+      if (first) {
+        return g.players.some((p) => nameMatch(first, p))
+          ? { verdict: "won", note: `${first} scored first ✓` }
+          : { verdict: "lost", note: `First goal: ${first}` };
+      }
+      return { verdict: "alive", note: "No goals yet" };
+    }
+
+    case "scoredPenaltyAndResult": {
+      // Player scores a penalty AND the 1X2 result lands. ESPN flags penaltyKick
+      // on the scoring play, so the pen leg can read live; the result swings until
+      // the whistle. Both must hold at FT.
+      const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      const sideLabel = g.outcome === "1" ? "home win" : g.outcome === "2" ? "away win" : "draw";
+      const pen = goalsBy(goals, player).some((gl) => gl.penalty === true);
+      const resultOk = out(cur.home, cur.away) === g.outcome;
+      if (done) {
+        return pen && resultOk
+          ? { verdict: "won", note: `${player} penalty + ${sideLabel} ✓` }
+          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}${pen ? " · pen ✓" : ""}` };
+      }
+      return pen && resultOk
+        ? { verdict: "winning", note: `${player} pen ✓ · ${sideLabel} on track ${cur.home}–${cur.away}` }
+        : { verdict: "alive", note: `${player} pen + ${sideLabel} · ${cur.home}–${cur.away}` };
+    }
+
     case "firstGoalMethod": {
       // "Goal Number (1) — header / free kick / own goal". The method is parsed
       // from the summary keyEvents; it lands with the verified stats pass, so it
@@ -505,6 +533,54 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
     default:
       return { verdict: "scheduled", note: "Not started" };
   }
+}
+
+/**
+ * Live grade for a cross-match accumulator ("multiScorers") — every named player
+ * must score anytime in their OWN match. Unlike inPlaySpecial this needs the WHOLE
+ * live map (one match per leg), so it's graded in the component, which holds it.
+ *   won      — all legs' players have scored
+ *   lost     — at least one leg's match finished with the player off the sheet
+ *   winning  — some have scored, none dead, the rest still in play
+ *   alive    — none scored yet but all still in play
+ *   scheduled— nothing kicked off yet
+ */
+export function inPlayMultiScorers(
+  legs: { matchId: string; player: string }[],
+  live: Record<string, LiveMatch | undefined>,
+  statusOverride?: BetStatus,
+): InPlay {
+  if (statusOverride) {
+    return statusOverride === "won"
+      ? { verdict: "won", note: "Won (confirmed)" }
+      : { verdict: "lost", note: "Lost (confirmed)" };
+  }
+  let scoredCount = 0;
+  let dead = false;
+  let anyLive = false;
+  const parts: string[] = [];
+  for (const leg of legs) {
+    const lm = live[leg.matchId];
+    if (!lm || lm.state === "scheduled") {
+      parts.push(`${leg.player} —`);
+      continue;
+    }
+    anyLive = true;
+    if (goalsBy(lm.goals, leg.player).length > 0) {
+      scoredCount++;
+      parts.push(`${leg.player} ✓`);
+    } else if (lm.state === "finished") {
+      dead = true;
+      parts.push(`${leg.player} ✗`);
+    } else {
+      parts.push(`${leg.player} —`);
+    }
+  }
+  const note = parts.join(" · ");
+  if (dead) return { verdict: "lost", note };
+  if (scoredCount === legs.length) return { verdict: "won", note };
+  if (!anyLive) return { verdict: "scheduled", note };
+  return { verdict: scoredCount > 0 ? "winning" : "alive", note };
 }
 
 // ── helpers for the live tally ────────────────────────────────────────────────

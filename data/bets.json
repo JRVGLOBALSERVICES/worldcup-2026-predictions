@@ -2541,6 +2541,32 @@
       "odds": 8,
       "stake": 20,
       "placedAt": "23/06 22:05"
+    },
+    {
+      "id": "b-83477200941",
+      "slipNo": "83477200941",
+      "matchId": "por-uzb-2026-06-23",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 2-0",
+      "home": 2,
+      "away": 0,
+      "odds": 5.5,
+      "stake": 20,
+      "placedAt": "23/06 22:04"
+    },
+    {
+      "id": "b-83477194603",
+      "slipNo": "83477194603",
+      "matchId": "por-uzb-2026-06-23",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 3-1",
+      "home": 3,
+      "away": 1,
+      "odds": 10,
+      "stake": 10,
+      "placedAt": "23/06 22:04"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -5500,6 +5526,134 @@
       "grade": {
         "type": "matchResult",
         "outcome": "1"
+      }
+    },
+    {
+      "id": "sp-83477327753",
+      "slipNo": "83477327753",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "Pedro Neto",
+      "market": "2+ assists",
+      "label": "Pedro Neto makes 2 or more assists",
+      "odds": 18,
+      "stake": 30,
+      "placedAt": "23/06 22:08",
+      "grade": {
+        "type": "assistsOver",
+        "player": "Pedro Neto",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83477324333",
+      "slipNo": "83477324333",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "Francisco Trincao",
+      "market": "2+ assists",
+      "label": "Francisco Trincao makes 2 or more assists",
+      "odds": 14,
+      "stake": 30,
+      "placedAt": "23/06 22:08",
+      "grade": {
+        "type": "assistsOver",
+        "player": "Francisco Trincao",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83477315355",
+      "slipNo": "83477315355",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "Bruno Fernandes",
+      "market": "2+ assists",
+      "label": "Bruno Fernandes makes 2 or more assists",
+      "odds": 13,
+      "stake": 30,
+      "placedAt": "23/06 22:07",
+      "grade": {
+        "type": "assistsOver",
+        "player": "Bruno Fernandes",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83477308383",
+      "slipNo": "83477308383",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "Cristiano Ronaldo",
+      "market": "To win & score a penalty",
+      "label": "Cristiano Ronaldo to win and score a penalty",
+      "odds": 6,
+      "stake": 20,
+      "placedAt": "23/06 22:07",
+      "grade": {
+        "type": "scoredPenaltyAndResult",
+        "player": "Cristiano Ronaldo",
+        "outcome": "1"
+      }
+    },
+    {
+      "id": "sp-83477293865",
+      "slipNo": "83477293865",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "—",
+      "market": "First goalscorer (either)",
+      "label": "Cristiano Ronaldo or Pedro Neto to score the first goal",
+      "odds": 2.625,
+      "stake": 40,
+      "placedAt": "23/06 22:07",
+      "grade": {
+        "type": "firstScorerEither",
+        "players": [
+          "Cristiano Ronaldo",
+          "Pedro Neto"
+        ]
+      }
+    },
+    {
+      "id": "sp-83477290859",
+      "slipNo": "83477290859",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "—",
+      "market": "First goalscorer (either)",
+      "label": "Bruno Fernandes or Cristiano Ronaldo to score the first goal",
+      "odds": 2.5,
+      "stake": 40,
+      "placedAt": "23/06 22:07",
+      "grade": {
+        "type": "firstScorerEither",
+        "players": [
+          "Bruno Fernandes",
+          "Cristiano Ronaldo"
+        ]
+      }
+    },
+    {
+      "id": "sp-83472489817",
+      "slipNo": "83472489817",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "—",
+      "market": "Acca · 3 to score",
+      "label": "Acca — Ronaldo, Kane & Budimir all to score anytime (3 legs)",
+      "odds": 5.456,
+      "stake": 50,
+      "placedAt": "23/06 19:47",
+      "grade": {
+        "type": "multiScorers",
+        "legs": [
+          {
+            "matchId": "por-uzb-2026-06-23",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "eng-gha-2026-06-23",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "pan-cro-2026-06-23",
+            "player": "Ante Budimir"
+          }
+        ]
       }
     }
   ],

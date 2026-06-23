@@ -170,6 +170,17 @@ export type SpecialGrade =
   | { type: "firstScorerAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
   // Player scores first AND a 1X2 outcome (1 = home win, X = draw, 2 = away win).
   | { type: "firstScorerAndResult"; player: string; outcome: "1" | "X" | "2" }
+  // First goal of the match is scored by ANY ONE of the named players ("Ronaldo
+  // OR Neto to score the first goal"). Wins iff the first scorer matches a leg.
+  | { type: "firstScorerEither"; players: string[] }
+  // Player scores a PENALTY goal AND the 1X2 result matches ("Ronaldo To Win And
+  // Score A Penalty - Yes"). Needs a goal flagged penalty AND the outcome.
+  | { type: "scoredPenaltyAndResult"; player: string; outcome: "1" | "X" | "2" }
+  // Cross-match accumulator: every named player scores anytime in their OWN match.
+  // Each leg carries its own matchId, so it's graded off that match's events — NOT
+  // the special's single matchId. Loses the instant any leg's match ends with the
+  // player off the scoresheet; pending until then; wins once all have scored.
+  | { type: "multiScorers"; legs: { matchId: string; player: string }[] }
   // Player scores at any time AND the final score is NOT any listed scoreline ("Any Other Score").
   | { type: "scoredAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
   // Correct score of the SECOND HALF alone (full-time minus half-time goals).
@@ -592,6 +603,19 @@ export function gradeSpecial(special: Special): BetStatus {
   const g = special.grade;
   if (!g) return "pending";
 
+  // Cross-match accumulator — graded off EACH leg's own match, so it can't use the
+  // single-match events/ft guard below. Resolve it up front.
+  if (g.type === "multiScorers") {
+    let pending = false;
+    for (const leg of g.legs) {
+      const ev = getEvents(leg.matchId);
+      if (goalsBy(ev.goals, leg.player).length > 0) continue; // leg already won
+      if (ev.status === "finished") return "lost"; // his match ended, no goal → dead
+      pending = true; // still in play
+    }
+    return pending ? "pending" : "won";
+  }
+
   const events = getEvents(special.matchId);
   const ft = getResult(special.matchId).ft;
   if (events.status !== "finished") return "pending";
@@ -689,6 +713,19 @@ export function gradeSpecial(special: Special): BetStatus {
     case "freeKickGoal":
       hit = goalsBy(goals, g.player).some((gl) => gl.freeKick === true);
       break;
+    case "firstScorerEither": {
+      const fs = firstScorer(goals);
+      hit = !!fs && g.players.some((p) => nameMatch(fs, p));
+      break;
+    }
+    case "scoredPenaltyAndResult": {
+      // Player scores a penalty AND the 1X2 result matches.
+      if (!ft) break;
+      const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+      hit =
+        goalsBy(goals, g.player).some((gl) => gl.penalty === true) && outcome === g.outcome;
+      break;
+    }
     case "firstGoalMethod": {
       // "Goal Number (1) — header / free kick / own goal". Needs the verified
       // first-goal method from the summary. If no goal was scored (0-0), the

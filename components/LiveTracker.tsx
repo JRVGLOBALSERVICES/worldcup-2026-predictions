@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
-import { inPlayBet, inPlaySpecial, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
+import { inPlayBet, inPlaySpecial, inPlayMultiScorers, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { SiteNav, type NavKey } from "./SiteNav";
 
@@ -74,7 +74,14 @@ function fromStatic(s: BetStatus): InPlay {
 function gradeBet(b: BetRow, lm: LiveMatch | undefined): InPlay {
   return lm ? inPlayBet(b, lm) : fromStatic(b.staticStatus);
 }
-function gradeSpecial(s: SpecialRow, lm: LiveMatch | undefined): InPlay {
+function gradeSpecial(
+  s: SpecialRow,
+  lm: LiveMatch | undefined,
+  live: Record<string, LiveMatch | undefined>,
+): InPlay {
+  // Cross-match accumulator needs the WHOLE live map (one match per leg), not the
+  // single match this special is bucketed under.
+  if (s.grade?.type === "multiScorers") return inPlayMultiScorers(s.grade.legs, live, s.statusOverride);
   return lm ? inPlaySpecial(s, lm) : fromStatic(s.staticStatus);
 }
 
@@ -344,7 +351,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         if (v === "won") securedReturns += b.potential;
       }
       for (const s of m.specials) {
-        const v = gradeSpecial(s, lm).verdict;
+        const v = gradeSpecial(s, lm, live).verdict;
         const lean = liveLeans(v);
         if (lean === "win") livePnl += s.potential - s.stake;
         else if (lean === "lose") livePnl -= s.stake;
@@ -458,7 +465,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   const lm = live[m.matchId];
                   const finished = lm?.state === "finished";
                   const betVerdicts = m.bets.map((b) => gradeBet(b, lm));
-                  const spVerdicts = m.specials.map((s) => gradeSpecial(s, lm));
+                  const spVerdicts = m.specials.map((s) => gradeSpecial(s, lm, live));
                   const allV = [...betVerdicts, ...spVerdicts];
                   // Float winning lines to the top, still-on next, losses last.
                   const orderedBets = orderByVerdict(m.bets, betVerdicts);
