@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T03:20:25.229Z",
+    "generatedAt": "2026-06-23T04:20:24.413Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 23,
     "live": 1
@@ -2789,31 +2789,50 @@
     },
     "jor-alg-2026-06-22": {
       "state": "live",
-      "ht": null,
-      "ft": null,
-      "score": {
-        "home": 0,
+      "ht": {
+        "home": 1,
         "away": 0
       },
-      "goals": [],
-      "cards": [],
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Nizar Al-Rashdan",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Ramiz Zerrouki",
+          "minute": 43,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-23T03:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 4
         },
         "sot": {
-          "home": 1,
-          "away": 0
+          "home": 3,
+          "away": 3
         },
         "shots": {
-          "home": 2,
-          "away": 1
+          "home": 6,
+          "away": 7
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -2821,33 +2840,48 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
-            1,
-            0
+            3,
+            1
           ]
         },
         "sotByHalf": {
           "home": [
-            1,
+            2,
             0
           ],
           "away": [
-            0,
-            0
+            2,
+            1
           ]
         },
         "playerSot": {
-          "Mousa Al-Tamari": 1
+          "Mousa Al-Tamari": 1,
+          "Ali Olwan": 1,
+          "Amine Gouiri": 1,
+          "Riyad Mahrez": 1,
+          "Ibrahim Maza": 1
         },
-        "firstGoalMethod": null,
-        "waterBreak": {}
+        "firstGoalMethod": "shot",
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 28,
+            "isCorner": true,
+            "reliable": false
+          }
+        }
       }
     }
   }
