@@ -237,6 +237,16 @@
         "home": 3,
         "away": 2
       }
+    },
+    "jor-alg-2026-06-22": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 2
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -1281,6 +1291,49 @@
         }
       ],
       "cards": []
+    },
+    "jor-alg-2026-06-22": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Nizar Al-Rashdan",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Nadhir Benbouali",
+          "minute": 68,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Amine Gouiri",
+          "minute": 82,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Ramiz Zerrouki",
+          "minute": 43,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Husam Abu Dahab",
+          "minute": 64,
+          "type": "yellow"
+        }
+      ]
     }
   },
   "bets": [
@@ -6801,18 +6854,18 @@
     "jor-alg-2026-06-22": {
       "corners": {
         "home": 1,
-        "away": 4
+        "away": 10
       },
       "sot": {
-        "home": 3,
-        "away": 3
+        "home": 4,
+        "away": 8
       },
       "shots": {
-        "home": 6,
-        "away": 7
+        "home": 8,
+        "away": 17
       },
       "yellow": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "red": {
@@ -6820,7 +6873,7 @@
         "away": 0
       },
       "cards": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "cornersByHalf": {
@@ -6830,17 +6883,17 @@
         ],
         "away": [
           3,
-          1
+          7
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          0
+          1
         ],
         "away": [
           2,
-          1
+          4
         ]
       },
       "playerSot": {
@@ -6848,7 +6901,10 @@
         "Ali Olwan": 1,
         "Amine Gouiri": 1,
         "Riyad Mahrez": 1,
-        "Ibrahim Maza": 1
+        "Ibrahim Maza": 2,
+        "Nadhir Benbouali": 1,
+        "Mahmoud Al-Mardi": 1,
+        "Farès Chaïbi": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -6859,6 +6915,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Corner Awarded",
           "firstActionMinute": 28,
+          "isCorner": true,
+          "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "anchor",
+          "breakEndMinute": null,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 68,
           "isCorner": true,
           "reliable": false
         }

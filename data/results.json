@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T04:20:24.413Z",
+    "generatedAt": "2026-06-23T05:20:24.647Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 23,
-    "live": 1
+    "finished": 24,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -2788,21 +2788,40 @@
       }
     },
     "jor-alg-2026-06-22": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 1,
+        "away": 2
+      },
       "score": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "goals": [
         {
           "team": "home",
           "scorer": "Nizar Al-Rashdan",
           "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Nadhir Benbouali",
+          "minute": 68,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Amine Gouiri",
+          "minute": 82,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -2814,24 +2833,30 @@
           "player": "Ramiz Zerrouki",
           "minute": 43,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Husam Abu Dahab",
+          "minute": 64,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-23T03:00:00.000Z",
       "stats": {
         "corners": {
           "home": 1,
-          "away": 4
+          "away": 10
         },
         "sot": {
-          "home": 3,
-          "away": 3
+          "home": 4,
+          "away": 8
         },
         "shots": {
-          "home": 6,
-          "away": 7
+          "home": 8,
+          "away": 17
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "red": {
@@ -2839,7 +2864,7 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "cornersByHalf": {
@@ -2849,17 +2874,17 @@
           ],
           "away": [
             3,
-            1
+            7
           ]
         },
         "sotByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             2,
-            1
+            4
           ]
         },
         "playerSot": {
@@ -2867,7 +2892,10 @@
           "Ali Olwan": 1,
           "Amine Gouiri": 1,
           "Riyad Mahrez": 1,
-          "Ibrahim Maza": 1
+          "Ibrahim Maza": 2,
+          "Nadhir Benbouali": 1,
+          "Mahmoud Al-Mardi": 1,
+          "Farès Chaïbi": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -2878,6 +2906,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Corner Awarded",
             "firstActionMinute": 28,
+            "isCorner": true,
+            "reliable": false
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 68,
             "isCorner": true,
             "reliable": false
           }
