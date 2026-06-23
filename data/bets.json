@@ -5820,6 +5820,99 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83490826487",
+      "slipNo": "83490826487",
+      "matchId": "eng-gha-2026-06-23",
+      "player": "Harry Kane",
+      "market": "To score a hat-trick",
+      "label": "Harry Kane to score a hat-trick (3+ goals)",
+      "odds": 15.5,
+      "stake": 20,
+      "placedAt": "24/06 03:11",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Harry Kane",
+        "line": 2.5
+      }
+    },
+    {
+      "id": "sp-83490815893",
+      "slipNo": "83490815893",
+      "matchId": "eng-gha-2026-06-23",
+      "player": "Harry Kane",
+      "market": "To score two goals (brace)",
+      "label": "Harry Kane to score 2+ goals (brace)",
+      "odds": 5.2,
+      "stake": 50,
+      "placedAt": "24/06 03:11",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Harry Kane",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83490720517",
+      "slipNo": "83490720517",
+      "matchId": "eng-gha-2026-06-23",
+      "player": "Harry Kane",
+      "market": "First goal + match score",
+      "label": "Harry Kane scores first goal and match ends 3-1",
+      "odds": 41,
+      "stake": 11,
+      "placedAt": "24/06 03:09",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Harry Kane",
+        "home": 3,
+        "away": 1
+      }
+    },
+    {
+      "id": "sp-83490516023",
+      "slipNo": "83490516023",
+      "matchId": "eng-gha-2026-06-23",
+      "player": "Antoine Semenyo",
+      "market": "To score + match score one of",
+      "label": "Antoine Semenyo scores and match ends 0-1, 0-2 or 1-2",
+      "odds": 29,
+      "stake": 20,
+      "placedAt": "24/06 03:04",
+      "grade": {
+        "type": "scoredAndScoreOneOf",
+        "player": "Antoine Semenyo",
+        "scores": [
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 0,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83490370839",
+      "slipNo": "83490370839",
+      "matchId": "eng-gha-2026-06-23",
+      "player": "Jude Bellingham",
+      "market": "First goalscorer",
+      "label": "Jude Bellingham to score the first goal",
+      "odds": 7.2,
+      "stake": 50,
+      "placedAt": "24/06 03:01",
+      "grade": {
+        "type": "firstScorer",
+        "player": "Jude Bellingham"
+      }
     }
   ],
   "matchStats": {
