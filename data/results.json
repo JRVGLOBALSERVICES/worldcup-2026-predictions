@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T01:20:22.843Z",
+    "generatedAt": "2026-06-23T02:20:26.906Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 22,
-    "live": 1
+    "finished": 23,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -2653,15 +2653,18 @@
       }
     },
     "nor-sen-2026-06-22": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 3,
+        "away": 2
+      },
       "score": {
         "home": 3,
-        "away": 1
+        "away": 2
       },
       "goals": [
         {
@@ -2695,22 +2698,30 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ismaïla Sarr",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [],
       "updatedAt": "2026-06-23T00:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 4,
-          "away": 1
+          "home": 5,
+          "away": 4
         },
         "sot": {
-          "home": 6,
-          "away": 3
+          "home": 7,
+          "away": 4
         },
         "shots": {
-          "home": 11,
-          "away": 9
+          "home": 13,
+          "away": 16
         },
         "yellow": {
           "home": 0,
@@ -2727,11 +2738,11 @@
         "cornersByHalf": {
           "home": [
             4,
-            0
+            1
           ],
           "away": [
             1,
-            0
+            3
           ]
         },
         "sotByHalf": {
@@ -2760,6 +2771,16 @@
             "breakEndMinute": 25,
             "firstActionType": "Foul",
             "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot Blocked",
+            "firstActionMinute": 74,
             "isCorner": false,
             "reliable": true
           }

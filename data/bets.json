@@ -227,6 +227,16 @@
         "home": 3,
         "away": 0
       }
+    },
+    "nor-sen-2026-06-22": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 3,
+        "away": 2
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -1225,6 +1235,52 @@
           "type": "yellow"
         }
       ]
+    },
+    "nor-sen-2026-06-22": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Marcus Holmgren Pedersen",
+          "minute": 43,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Erling Haaland",
+          "minute": 48,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ismaïla Sarr",
+          "minute": 53,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Erling Haaland",
+          "minute": 57,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ismaïla Sarr",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": []
     }
   },
   "bets": [
@@ -6558,16 +6614,16 @@
     },
     "nor-sen-2026-06-22": {
       "corners": {
-        "home": 4,
-        "away": 1
+        "home": 5,
+        "away": 4
       },
       "sot": {
-        "home": 6,
-        "away": 3
+        "home": 7,
+        "away": 4
       },
       "shots": {
-        "home": 11,
-        "away": 9
+        "home": 13,
+        "away": 16
       },
       "yellow": {
         "home": 0,
@@ -6584,11 +6640,11 @@
       "cornersByHalf": {
         "home": [
           4,
-          0
+          1
         ],
         "away": [
           1,
-          0
+          3
         ]
       },
       "sotByHalf": {
@@ -6617,6 +6673,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Foul",
           "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Shot Blocked",
+          "firstActionMinute": 74,
           "isCorner": false,
           "reliable": true
         }
