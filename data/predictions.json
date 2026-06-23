@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T16:04:19.000Z",
+    "generatedAt": "2026-06-23T19:04:53.270Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -5675,14 +5675,14 @@
     "eng-gha-2026-06-23": {
       "win": {
         "pick": "England",
-        "fairOdds": "1.42",
-        "reason": "England (5th in world, 4-2 win over Croatia, tournament-best set-piece xG) are clear favourites at home in Boston; Opta gives them 78.8%. But Ghana sit deep and counter — they took zero first-half shots vs Panama and ground out a 95th-minute 1-0 win — so a frustrating low-scoring game or even a draw (Opta 13.3%) is a genuine risk. Fair odds reflect that ~21% combined draw+Ghana mass, not a coin-flip certainty."
+        "fairOdds": "1.50",
+        "reason": "England won their opener 4-2 vs Croatia with Bellingham, Kane and Rashford on the scoresheet and are heavy favourites (around -600 / +600 the draw on FanDuel), with Ghana +1500. But Ghana sit deep in a compact block and counter through Semenyo and Sulemana's pace plus Partey's control, so a frustrating low-scoring afternoon or a smash-and-grab draw is a genuine risk against a possession side that can be out-xG'd."
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "2.90",
+        "fairOdds": "2.60",
         "alt": "0-0",
-        "altOdds": "2.80"
+        "altOdds": "2.90"
       },
       "htft": {
         "pick": "England/England",
@@ -5690,106 +5690,226 @@
       },
       "fullTime": {
         "score": "2-0",
-        "fairOdds": "5.50"
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Harry Kane",
-          "fairOdds": "2.10",
+          "fairOdds": "2.15",
           "banker": false,
-          "note": "Penalty taker and target man; on a hat-trick of motivation (one goal makes him England's all-time WC top scorer past Lineker). But he's 32 and against a packed deep block service can dry up — explicitly NON-banker per veteran rule."
+          "note": "Captain and lone striker; takes England's penalties (converted vs Croatia) and is the clear focal point, shortest anytime-scorer price near -185, but Ghana's deep block can starve service — not a banker."
         },
         {
           "player": "Jude Bellingham",
-          "fairOdds": "3.40",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "In form — scored vs Croatia, arrives late into the box from the 10 role; one of England's most likely non-penalty scorers against a low block."
+          "note": "No.10, 10/10 display vs Croatia where he scored the momentum-changing third; arriving late into the box from midfield is his main route to goal here."
         },
         {
           "player": "Anthony Gordon",
-          "fairOdds": "4.00",
+          "fairOdds": "4.40",
           "banker": false,
-          "note": "Pace in behind from the left; if Ghana push at all his runs in transition are dangerous. Nailed starter with Rashford likely spared."
+          "note": "Left winger with pace to attack Ghana's right-back Senaya; gets into shooting positions but finishing is streaky — a value but non-banker scorer."
         },
         {
           "player": "Antoine Semenyo",
-          "fairOdds": "7.50",
+          "fairOdds": "6.50",
           "banker": false,
-          "note": "Ghana's most dangerous attacker — pacey, direct on the counter. Their realistic route to a goal; keeps Ghana-clean-sheet markets honest the other way."
+          "note": "Ghana's main counter threat with Premier League goalscoring pedigree (17 in a season for club), though his national-team return is modest (3 in 34); danger on the break if England over-commit."
         }
       ],
       "assists": [
         {
-          "player": "Declan Rice",
-          "fairOdds": "4.00",
+          "player": "Reece James",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "England's primary corner/set-piece deliverer; his corner led to Kane's opener vs Croatia. Set pieces are England's likeliest goal source against a deep block — fitness permitting (hamstring tightness vs Croatia)."
+          "note": "Right-back with quality delivery; overlaps Madueke and is a set-piece/cross supplier into Kane against a packed box."
         },
         {
           "player": "Jude Bellingham",
-          "fairOdds": "5.50",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "Creative hub linking midfield to Kane; can both score and assist from the 10."
+          "note": "Creative hub between the lines; slides through balls for Kane and the wide men, a primary chance-creator from the No.10 role."
         },
         {
-          "player": "Reece James",
-          "fairOdds": "6.50",
+          "player": "Anthony Gordon",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Right-back/wing-back overlap and crossing; also a free-kick option. Width and delivery from the right against a compact Ghana."
+          "note": "Cuts in from the left to cross and cut-back; a likely supply line for Kane if England break Ghana's block down the flank."
         }
       ],
       "penalty": {
         "likelihood": "medium",
         "taker": "Harry Kane",
-        "backup": "Marcus Rashford",
-        "note": "England earn fouls/handballs breaking down deep blocks and Kane already converted a (retaken) penalty vs Croatia; medium chance of a spot-kick. Kane is nailed first taker; Rashford backup if on the pitch, otherwise Bellingham."
+        "backup": "Jude Bellingham",
+        "note": "England are likely to spend long spells attacking a deep, physical Ghana block, raising spot-kick odds; Kane is the confirmed penalty taker (scored vs Croatia), Bellingham the next in line. For Ghana, Jordan Ayew would take any penalty."
       },
       "lineups": {
-        "home": "Jordan Pickford, Reece James, Marc Guehi, Ezri Konsa, Nico O'Reilly, Elliot Anderson, Declan Rice, Jude Bellingham, Noni Madueke, Anthony Gordon, Harry Kane",
-        "away": "Benjamin Asare, Marvin Senaya, Jonas Adjetey, Jerome Opoku, Gideon Mensah, Thomas Partey, Caleb Yirenkyi, Kamaldeen Sulemana, Ernest Nuamah, Jordan Ayew, Antoine Semenyo",
-        "status": "probable"
+        "home": "Jordan Pickford, Reece James, Ezri Konsa, Marc Guéhi, Djed Spence, Elliot Anderson, Declan Rice, Noni Madueke, Jude Bellingham, Anthony Gordon, Harry Kane",
+        "away": "Benjamin Asare, Marvin Senaya, Jonas Adjetey, Jerome Opoku, Gideon Mensah, Caleb Yirenkyi, Thomas Partey, Abdul Fatawu Issahaku, Kamaldeen Sulemana, Antoine Semenyo, Jordan Ayew",
+        "status": "confirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Jordan Pickford",
+              "pos": "G"
+            },
+            {
+              "num": 2,
+              "name": "Reece James",
+              "pos": "D"
+            },
+            {
+              "num": 5,
+              "name": "Ezri Konsa",
+              "pos": "D"
+            },
+            {
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "D"
+            },
+            {
+              "num": 3,
+              "name": "Djed Spence",
+              "pos": "D"
+            },
+            {
+              "num": 4,
+              "name": "Elliot Anderson",
+              "pos": "M"
+            },
+            {
+              "num": 8,
+              "name": "Declan Rice",
+              "pos": "M"
+            },
+            {
+              "num": 20,
+              "name": "Noni Madueke",
+              "pos": "M"
+            },
+            {
+              "num": 10,
+              "name": "Jude Bellingham",
+              "pos": "M"
+            },
+            {
+              "num": 11,
+              "name": "Anthony Gordon",
+              "pos": "M"
+            },
+            {
+              "num": 9,
+              "name": "Harry Kane",
+              "pos": "F"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 12,
+              "name": "Benjamin Asare",
+              "pos": "G"
+            },
+            {
+              "num": 2,
+              "name": "Marvin Senaya",
+              "pos": "D"
+            },
+            {
+              "num": 4,
+              "name": "Jonas Adjetey",
+              "pos": "D"
+            },
+            {
+              "num": 5,
+              "name": "Jerome Opoku",
+              "pos": "D"
+            },
+            {
+              "num": 3,
+              "name": "Gideon Mensah",
+              "pos": "D"
+            },
+            {
+              "num": 15,
+              "name": "Caleb Yirenkyi",
+              "pos": "M"
+            },
+            {
+              "num": 6,
+              "name": "Thomas Partey",
+              "pos": "M"
+            },
+            {
+              "num": 7,
+              "name": "Abdul Fatawu Issahaku",
+              "pos": "M"
+            },
+            {
+              "num": 11,
+              "name": "Kamaldeen Sulemana",
+              "pos": "M"
+            },
+            {
+              "num": 10,
+              "name": "Antoine Semenyo",
+              "pos": "M"
+            },
+            {
+              "num": 9,
+              "name": "Jordan Ayew",
+              "pos": "F"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
-          "player": "Bukayo Saka",
+          "player": "Harry Kane",
           "team": "England",
-          "note": "Managing an Achilles issue; trained fully and pain-free June 22 but Tuchel indicated he will NOT start — likely impact sub. Madueke starts in his place."
+          "note": "Captain, lone striker and penalty taker; scored in the 4-2 win over Croatia and is the focal point of everything England create."
         },
         {
-          "player": "Declan Rice",
+          "player": "Jude Bellingham",
           "team": "England",
-          "note": "Came off vs Croatia with hamstring tightness after a back injury; expected to start but a fitness watch — key set-piece taker so his availability matters for assist markets."
+          "note": "Operating as the No.10 after a 10/10, goalscoring display vs Croatia; potential 50th cap and England's main creative-and-late-runner threat."
         },
         {
-          "player": "Marcus Rashford",
+          "player": "Elliot Anderson",
           "team": "England",
-          "note": "Nursing hamstring discomfort; trained fully but could be spared/benched. Scored vs Croatia; a sub threat if rested."
-        },
-        {
-          "player": "Lawrence Ati Zigi",
-          "team": "Ghana",
-          "note": "Ghana's No.1 GK; injured vs Panama (off at half-time) and reportedly ~3 weeks out — Benjamin Asare of Hearts of Oak deputises, a notable downgrade."
+          "note": "Deep-lying ball-winner alongside Rice — won possession more than any England player vs Croatia (8 times), key to snuffing out Ghana counters."
         },
         {
           "player": "Thomas Partey",
           "team": "Ghana",
-          "note": "Expected to be passed fit and return to the double pivot alongside Yirenkyi, replacing Elisha Owusu; crucial to Ghana's deep-block shield against Bellingham/Rice."
+          "note": "Controls Ghana's double pivot and is the metronome that lets the Black Stars defend deep then launch breaks; his discipline dictates how compact Ghana stay."
         },
         {
-          "player": "Caleb Yirenkyi",
+          "player": "Antoine Semenyo",
           "team": "Ghana",
-          "note": "20-year-old scored the 95th-minute winner vs Panama; sits in the pivot. Ghana's whole game plan is sit deep and counter — they had zero first-half shots last time out."
+          "note": "Premier League-proven forward and Ghana's prime counter-attacking outlet through pace; thin national-team scoring record but a constant transition threat."
+        },
+        {
+          "player": "Jordan Ayew",
+          "team": "Ghana",
+          "note": "Captain and the experienced focal point up top; scored 7 and assisted 7 in qualifying and would take any Ghana penalty."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://theanalyst.com/articles/england-vs-ghana-prediction-world-cup-2026-match-preview",
-        "https://www.sportsmole.co.uk/football/england/world-cup-2026/injuries-and-suspensions/rice-saka-rashford-latest-england-injury-suspension-list-vs-ghana_599679.html",
-        "https://www.sportsmole.co.uk/football/ghana/world-cup-2026/predicted-lineups/will-partey-be-available-predicted-ghana-xi-vs-england_599723.html",
-        "https://theanalyst.com/articles/ghana-vs-panama-stats-world-cup-2026",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://www.espn.com/soccer/story/_/id/49097138/england-croatia-live-world-cup-2026-latest-updates-commentary-score-result",
-        "https://www.espn.com/soccer/story/_/id/49142614/england-vs-ghana-predicted-line-ups-world-cup-2026"
+        "https://www.espn.com/soccer/story/_/id/49142614/england-vs-ghana-predicted-line-ups-world-cup-2026",
+        "https://www.skysports.com/football/news/12016/13555646/world-cup-2026-jude-bellinghams-brilliance-against-croatia-ends-no-10-discussion-for-england-ahead-of-ghana-game",
+        "https://www.cbssports.com/soccer/news/england-ghana-odds-prediction-line-time-2026-world-cup-picks-best-bets/",
+        "https://www.fanduel.com/research/england-vs-ghana-prediction-lineups-picks-and-best-bets-for-world-cup-2026-group-l",
+        "https://www.englandfootball.com/england/mens-senior-team/fixtures-results/2025-26/World-Cup/england-v-ghana-fifa-world-cup-tuesday-23-june-2026-match-centre",
+        "https://www.olympics.com/en/news/africa-fifa-world-cup-2026-ghana-jordan-ayew-lead-black-stars-quarter-finals-again",
+        "https://sports.yahoo.com/articles/ghana-xi-vs-england-predicted-061500464.html"
       ]
     },
     "pan-cro-2026-06-23": {
