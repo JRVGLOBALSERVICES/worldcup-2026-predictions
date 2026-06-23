@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T23:23:28Z",
+    "generatedAt": "2026-06-23T02:23:32.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -5307,129 +5307,250 @@
     "jor-alg-2026-06-22": {
       "win": {
         "pick": "Algeria",
-        "fairOdds": "1.75",
-        "reason": "Algeria far superior on paper — Amoura (10 WCQ goals), Mahrez, Gouiri, Bensebaini, Ait-Nouri vs a Jordan side that conceded 11 in their last 5 and shipped 3 to Austria. But both teams need a win and Jordan defend deep behind Al-Tamari counters, so a draw (~22%) is a live outcome — not a banker.",
+        "fairOdds": "1.95",
+        "reason": "Algeria far deeper squad with Mahrez, Aït-Nouri, Gouiri, both must win. But Jordan defend in a rigid 5-4-1 low block and spring Tamari/Olwan on the break; Algeria created little vs Argentina. ~52% win prob, not certainty.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.60",
+        "fairOdds": "2.40",
         "alt": "1-0",
-        "altOdds": "3.20",
+        "altOdds": "3.30",
         "strength": 3
       },
       "htft": {
         "pick": "Draw/Algeria",
-        "fairOdds": "4.50",
-        "strength": 2
+        "fairOdds": "4.20",
+        "strength": 3
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.00",
+        "score": "1-0",
+        "fairOdds": "6.50",
         "strength": 2
       },
       "scorers": [
         {
-          "player": "Mohamed Amoura",
-          "fairOdds": "2.30",
-          "banker": true,
-          "note": "Algeria's hottest striker — 10 goals in WCQ, leading the recent scoring run; main outlet vs a leaky Jordan defence.",
-          "strength": 4
-        },
-        {
           "player": "Amine Gouiri",
-          "fairOdds": "3.00",
+          "fairOdds": "2.90",
           "banker": false,
-          "note": "Marseille forward back from injury, in-form finisher; rotates with Amoura through the middle.",
+          "note": "Lead striker with Amoura benched; 8G/3A in Ligue 1 for Marseille this season; main central threat",
           "strength": 3
         },
         {
           "player": "Riyad Mahrez",
           "fairOdds": "3.60",
           "banker": false,
-          "note": "Captain, penalty + free-kick taker, 38 intl goals — but 35yo veteran, cut-in finisher, non-banker.",
-          "strength": 3
+          "note": "Captain, penalty + free-kick taker, but 35yo — NON-banker for anytime scorer; threat from set pieces and cut-ins",
+          "strength": 2
+        },
+        {
+          "player": "Ibrahim Maza",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Advanced No.10 linking attack; late runs into box from the central role",
+          "strength": 2
         },
         {
           "player": "Ali Olwan",
-          "fairOdds": "4.20",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Scored Jordan's opener vs Austria; 9 goals across AFC qualifying — Jordan's likeliest scorer on the counter.",
+          "note": "Scored Jordan's first-ever WC goal vs Austria; Jordan penalty taker; main counter outlet with Tamari",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Mousa Al-Tamari",
-          "fairOdds": "3.40",
-          "banker": true,
-          "note": "Rennes winger, 'Jordanian Messi' — 11 assists last club season; Jordan's entire creative threat runs through him.",
-          "strength": 3
-        },
-        {
           "player": "Riyad Mahrez",
-          "fairOdds": "3.80",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "Set-piece deliverer and chance-creator from the right; key supply for Amoura.",
+          "note": "Chief creator and set-piece deliverer; key supply line to Gouiri",
           "strength": 3
         },
         {
-          "player": "Rayan Ait-Nouri",
-          "fairOdds": "5.00",
+          "player": "Rayan Aït-Nouri",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "Man City left-back, overlapping crosses against Jordan's deep block.",
+          "note": "Attacking width and overlaps from left-back against Jordan's deep block",
+          "strength": 2
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "fairOdds": "7.00",
+          "banker": false,
+          "note": "Jordan's creative spark in transition; releases Olwan on the break",
           "strength": 2
         }
       ],
       "penalty": {
         "likelihood": "Medium",
         "taker": "Riyad Mahrez",
-        "backup": "Mohamed Amoura",
-        "note": "Algeria likely to dominate the box; if a spot-kick comes Mahrez takes it, Amoura backup. Jordan penalty unlikely given counter-only attack."
+        "backup": "Amine Gouiri",
+        "note": "Mahrez is captain and confirmed primary penalty + free-kick taker (Chaïbi backup FK). Jordan sit deep and could concede a spot-kick under pressure; Jordan's own taker is Olwan."
       },
       "lineups": {
-        "home": "4-2-3-1",
-        "away": "4-3-3",
-        "status": "probable"
+        "home": "4-1-4-1",
+        "away": "4-2-3-1",
+        "status": "confirmed",
+        "homeXI": {
+          "formation": "4-1-4-1",
+          "players": [
+            {
+              "num": null,
+              "name": "Yazeed Abu Laila",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Yazan Al-Arab",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Abdallah Nasib",
+              "pos": "CD-R"
+            },
+            {
+              "num": null,
+              "name": "Ehsan Haddad",
+              "pos": "CD-L"
+            },
+            {
+              "num": null,
+              "name": "Hassan Abudahab",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Noor Al-Rashdan",
+              "pos": "DM"
+            },
+            {
+              "num": null,
+              "name": "Nizar Al-Rawabdeh",
+              "pos": "RM"
+            },
+            {
+              "num": null,
+              "name": "Mohammad Abu Taha",
+              "pos": "CM-R"
+            },
+            {
+              "num": null,
+              "name": "Mahmoud Al-Mardi",
+              "pos": "CM-L"
+            },
+            {
+              "num": null,
+              "name": "Mousa Al-Tamari",
+              "pos": "LM"
+            },
+            {
+              "num": null,
+              "name": "Ali Olwan",
+              "pos": "ST"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": null,
+              "name": "Luca Zidane",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Reda Belghali",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Aïssa Mandi",
+              "pos": "CD-R"
+            },
+            {
+              "num": null,
+              "name": "Ramy Bensebaini",
+              "pos": "CD-L"
+            },
+            {
+              "num": null,
+              "name": "Rayan Aït-Nouri",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Ramiz Zerrouki",
+              "pos": "DM-R"
+            },
+            {
+              "num": null,
+              "name": "Hicham Boudaoui",
+              "pos": "DM-L"
+            },
+            {
+              "num": null,
+              "name": "Riyad Mahrez",
+              "pos": "RW"
+            },
+            {
+              "num": null,
+              "name": "Ibrahim Maza",
+              "pos": "AM"
+            },
+            {
+              "num": null,
+              "name": "Farès Chaïbi",
+              "pos": "LW"
+            },
+            {
+              "num": null,
+              "name": "Amine Gouiri",
+              "pos": "ST"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
-          "player": "Mohamed Amoura",
+          "player": "Amine Gouiri",
           "team": "Algeria",
-          "note": "Wolfsburg striker, 10 goals in WC qualifying; surprise omission vs Argentina expected to return — the focal point."
+          "note": "Leads the line with Amoura benched; 8 goals 3 assists for Marseille this season — Algeria's main central goal threat tonight"
         },
         {
           "player": "Riyad Mahrez",
           "team": "Algeria",
-          "note": "Captain, 35, Al-Ahli; penalty + free-kick taker, all-time top scorer (38) but a veteran star — non-banker for anytime."
+          "note": "Captain at 35, primary penalty/free-kick taker and chief creator from the right; non-banker as a scorer but a real assist threat"
         },
         {
-          "player": "Luca Zidane",
+          "player": "Mohamed Amoura",
           "team": "Algeria",
-          "note": "GK, made two errors in the loss to Argentina; shaky distribution Jordan may target on the counter."
+          "note": "10 WCQ goals but BENCHED (training-injury doubt); only a sub impact if introduced — not a starting-XI banker scorer"
         },
         {
           "player": "Mousa Al-Tamari",
           "team": "Jordan",
-          "note": "Rennes winger, Jordan's best player and sole high-level creator; everything good for Jordan comes through him."
+          "note": "Rennes inverted winger, 'Jordanian Messi', 24 international goals; Jordan's primary counter-attack outlet in transition"
         },
         {
           "player": "Ali Olwan",
           "team": "Jordan",
-          "note": "Scored Jordan's first-ever World Cup goal vs Austria; lone striker, 9 AFC-qualifying goals — their counter outlet."
+          "note": "Scored Jordan's first-ever World Cup goal vs Austria; Jordan's penalty taker and second break runner alongside Tamari"
         },
         {
-          "player": "Yazan Al-Naimat",
-          "team": "Jordan",
-          "note": "Influential striker RULED OUT (ACL at the Arab Cup) — a major attacking loss that weakens Jordan's frontline."
+          "player": "Rayan Aït-Nouri",
+          "team": "Algeria",
+          "note": "Man City left-back providing overlapping width; with Belghali on the right, key to breaking down Jordan's 5-4-1 block"
         }
       ],
       "confidence": "medium",
-      "strength": 3,
       "sources": [
-        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/amoura-status-zidane-decision-mahrez-to-return-predicted-algeria-xi-vs-jordan_599710.html",
-        "https://theanalyst.com/articles/jordan-vs-algeria-prediction-world-cup-2026-match-preview",
-        "https://www.espn.com/soccer/story/_/id/49124571/jordan-vs-algeria-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups"
+        "https://www.espn.com/soccer/story/_/id/49145580/jordan-algeria-live-world-cup-2026-latest-updates-commentary-score-result",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://www.fotmob.com/players/844437/amine-gouiri",
+        "https://www.sportsmole.co.uk/football/jordan/world-cup-2026/preview/jordan-vs-algeria-prediction-team-news-lineups_599697.html"
       ]
     }
   }
