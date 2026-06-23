@@ -28,10 +28,25 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
   const allTotals = mergeTotals(totals, specialsTotals(specials));
   const groups = groupByMatch(settled);
 
-  const specialsByMatch = new Map<string, typeof specials>();
+  // Mirror flag lets a single special show on more than one match card without
+  // its stake/return being counted twice (see the `.mirror` guards downstream).
+  type SpecialBucket = (typeof specials)[number] & { mirror?: boolean };
+  const specialsByMatch = new Map<string, SpecialBucket[]>();
+  const pushSpecial = (matchId: string, s: SpecialBucket) => {
+    if (!specialsByMatch.has(matchId)) specialsByMatch.set(matchId, []);
+    specialsByMatch.get(matchId)!.push(s);
+  };
   for (const s of specials) {
-    if (!specialsByMatch.has(s.matchId)) specialsByMatch.set(s.matchId, []);
-    specialsByMatch.get(s.matchId)!.push(s);
+    pushSpecial(s.matchId, s);
+    // A cross-match accumulator (e.g. Ronaldo + Kane + Budimir, one leg per game)
+    // is bucketed under its first leg's match only. Mirror it onto every OTHER
+    // leg's match card too, so it's visible from all 3 games — the mirror copies
+    // are display-only and excluded from all money sums.
+    if (s.grade?.type === "multiScorers") {
+      for (const leg of s.grade.legs) {
+        if (leg.matchId !== s.matchId) pushSpecial(leg.matchId, { ...s, mirror: true });
+      }
+    }
   }
 
   // A match with ONLY specials (e.g. first-goal+score combos and no regular
@@ -96,6 +111,7 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
         staticStatus: s.status,
         grade: s.grade,
         statusOverride: s.statusOverride,
+        mirror: s.mirror ?? false,
       })),
     };
   });
@@ -147,12 +163,14 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
   // Hero summary is scoped to the featured (today's) bets — staked / max return /
   // counts off today, not the whole season. Season-to-date is shown as a sub-line.
   const featuredDay = days.find((d) => d.isFeatured);
-  const featuredRows = (featuredDay?.matches ?? []).flatMap((m) => [...m.bets, ...m.specials]);
+  // Exclude mirror copies (same acca shown on multiple cards) so the hero
+  // staked/return/count figures don't multi-count it.
+  const featuredRows = (featuredDay?.matches ?? []).flatMap((m) => [...m.bets, ...m.specials.filter((s) => !s.mirror)]);
   const todayTotals = {
     staked: featuredRows.reduce((s, r) => s + r.stake, 0),
     potential: featuredRows.reduce((s, r) => s + r.potential, 0),
     score: (featuredDay?.matches ?? []).reduce((n, m) => n + m.bets.length, 0),
-    props: (featuredDay?.matches ?? []).reduce((n, m) => n + m.specials.length, 0),
+    props: (featuredDay?.matches ?? []).reduce((n, m) => n + m.specials.filter((s) => !s.mirror).length, 0),
   };
 
   const placedLabel = new Intl.DateTimeFormat("en-GB", {

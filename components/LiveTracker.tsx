@@ -32,6 +32,9 @@ export type SpecialRow = {
   staticStatus: BetStatus;
   grade?: SpecialGrade;
   statusOverride?: BetStatus;
+  // True when this row is a display mirror of a cross-match acca shown on another
+  // card. Renders for visibility but is excluded from all stake/return/count sums.
+  mirror?: boolean;
 };
 export type MatchRow = {
   matchId: string;
@@ -351,6 +354,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         if (v === "won") securedReturns += b.potential;
       }
       for (const s of m.specials) {
+        if (s.mirror) continue; // counted on its home card only
         const v = gradeSpecial(s, lm, live).verdict;
         const lean = liveLeans(v);
         if (lean === "win") livePnl += s.potential - s.stake;
@@ -456,7 +460,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   {day.label}
                 </h2>
                 <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
-                  {day.matches.reduce((n, m) => n + m.bets.length + m.specials.length, 0)} bets
+                  {day.matches.reduce((n, m) => n + m.bets.length + m.specials.filter((s) => !s.mirror).length, 0)} bets
                 </span>
               </div>
 
@@ -470,8 +474,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // Float winning lines to the top, still-on next, losses last.
                   const orderedBets = orderByVerdict(m.bets, betVerdicts);
                   const orderedSpecials = orderByVerdict(m.specials, spVerdicts);
-                  const matchStaked = [...m.bets, ...m.specials].reduce((x, r) => x + r.stake, 0);
-                  const matchReturned = [...m.bets, ...m.specials].filter((_, i) => allV[i]?.verdict === "won").reduce((x, r) => x + r.potential, 0);
+                  // Mirror rows (cross-match acca shown on another card) are excluded
+                  // from this card's money totals — their stake/return live on the home card.
+                  const moneyRows = [...m.bets, ...m.specials];
+                  const matchStaked = moneyRows.reduce((x, r) => ((r as SpecialRow).mirror ? x : x + r.stake), 0);
+                  const matchReturned = moneyRows.reduce((x, r, i) => ((r as SpecialRow).mirror || allV[i]?.verdict !== "won" ? x : x + r.potential), 0);
 
                   return (
                     <details key={m.matchId} open={!finished} className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden">
@@ -619,6 +626,7 @@ function RowList({
       {rows.map((r, i) => {
         const v = verdicts[i] ?? { verdict: "scheduled" as LiveVerdict, note: "" };
         const dim = v.verdict === "lost" || v.verdict === "dead";
+        const isMirror = (r as SpecialRow).mirror === true;
         return (
           <li key={r.id} className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto]">
             <div className="min-w-0">
@@ -626,6 +634,11 @@ function RowList({
                 <span className={`mt-0.5 shrink-0 rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${chipCls(r)}`}>{chip(r)}</span>
                 <span className="text-sm text-ink">{r.label}</span>
               </div>
+              {isMirror && (
+                <span className="mt-1 inline-block rounded-sm border border-mint/30 px-1.5 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-mint/80">
+                  ↗ cross-match acca · stake counted on its home card
+                </span>
+              )}
               {v.note && (
                 <span className="mt-1 block font-mono text-[0.62rem] text-faint">{v.note}</span>
               )}
