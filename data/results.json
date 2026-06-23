@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T17:20:33.074Z",
+    "generatedAt": "2026-06-23T18:20:29.693Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 24,
     "live": 1
@@ -2924,10 +2924,13 @@
     },
     "por-uzb-2026-06-23": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 3,
+        "away": 0
+      },
       "ft": null,
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 0
       },
       "goals": [
@@ -2943,6 +2946,14 @@
           "team": "home",
           "scorer": "Nuno Mendes",
           "minute": 16,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cristiano Ronaldo",
+          "minute": 38,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -2963,12 +2974,12 @@
           "away": 0
         },
         "sot": {
-          "home": 2,
-          "away": 1
+          "home": 4,
+          "away": 2
         },
         "shots": {
-          "home": 5,
-          "away": 1
+          "home": 10,
+          "away": 4
         },
         "yellow": {
           "home": 0,
@@ -2989,7 +3000,7 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "sotByHalf": {
@@ -2999,14 +3010,26 @@
           ],
           "away": [
             1,
-            0
+            1
           ]
         },
         "playerSot": {
-          "Sherzod Nasrullaev": 1
+          "Sherzod Nasrullaev": 1,
+          "Abbosbek Fayzullaev": 1
         },
         "firstGoalMethod": "shot",
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Foul",
+            "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

@@ -7293,12 +7293,12 @@
         "away": 0
       },
       "sot": {
-        "home": 2,
-        "away": 1
+        "home": 4,
+        "away": 2
       },
       "shots": {
-        "home": 5,
-        "away": 1
+        "home": 10,
+        "away": 4
       },
       "yellow": {
         "home": 0,
@@ -7319,7 +7319,7 @@
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
       "sotByHalf": {
@@ -7329,14 +7329,26 @@
         ],
         "away": [
           1,
-          0
+          1
         ]
       },
       "playerSot": {
-        "Sherzod Nasrullaev": 1
+        "Sherzod Nasrullaev": 1,
+        "Abbosbek Fayzullaev": 1
       },
       "firstGoalMethod": "shot",
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 25,
+          "firstActionType": "Foul",
+          "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
