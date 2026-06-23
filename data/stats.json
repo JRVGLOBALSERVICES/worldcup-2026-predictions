@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T00:20:31.325Z",
+    "generatedAt": "2026-06-23T01:20:27.442Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 25
+    "finished": 26
   },
   "categories": {
     "scorers": [
@@ -16,6 +16,14 @@
       },
       {
         "rank": 2,
+        "name": "Erling Haaland",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 4,
+        "matches": 2
+      },
+      {
+        "rank": 2,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
@@ -23,7 +31,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -31,7 +39,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Jonathan David",
         "team": "Canada",
         "flag": "🇨🇦",
@@ -39,7 +47,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Ayase Ueda",
         "team": "Japan",
         "flag": "🇯🇵",
@@ -47,7 +55,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -55,7 +63,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -63,7 +71,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Crysencio Summerville",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -71,18 +79,10 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Cyle Larin",
         "team": "Canada",
         "flag": "🇨🇦",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 5,
-        "name": "Daichi Kamada",
-        "team": "Japan",
-        "flag": "🇯🇵",
         "value": 2,
         "matches": 2
       }
@@ -146,6 +146,14 @@
       },
       {
         "rank": 2,
+        "name": "Martin Ødegaard",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 2,
         "name": "Michael Olise",
         "team": "France",
         "flag": "🇫🇷",
@@ -157,14 +165,6 @@
         "name": "Mohamed Salah",
         "team": "Egypt",
         "flag": "🇪🇬",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 2,
-        "name": "Ryan Gravenberch",
-        "team": "Netherlands",
-        "flag": "🇳🇱",
         "value": 2,
         "matches": 2
       }
@@ -208,6 +208,12 @@
       },
       {
         "rank": 2,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 1
+      },
+      {
+        "rank": 2,
         "team": "Ghana",
         "flag": "🇬🇭",
         "value": 1
@@ -222,12 +228,6 @@
         "rank": 2,
         "team": "Japan",
         "flag": "🇯🇵",
-        "value": 1
-      },
-      {
-        "rank": 2,
-        "team": "Mexico",
-        "flag": "🇲🇽",
         "value": 1
       }
     ],
@@ -696,7 +696,20 @@
       },
       "760454": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Martin Ødegaard",
+            "team": "Norway"
+          },
+          {
+            "name": "Sadio Mané",
+            "team": "Senegal"
+          },
+          {
+            "name": "Patrick Berg",
+            "team": "Norway"
+          }
+        ]
       },
       "760456": {
         "penMiss": [
