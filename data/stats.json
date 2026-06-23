@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-22T22:20:30.137Z",
+    "generatedAt": "2026-06-23T00:20:31.325Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 25
   },
@@ -16,6 +16,14 @@
       },
       {
         "rank": 2,
+        "name": "Kylian Mbappé",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 4,
+        "matches": 2
+      },
+      {
+        "rank": 3,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -23,18 +31,10 @@
         "matches": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Jonathan David",
         "team": "Canada",
         "flag": "🇨🇦",
-        "value": 3,
-        "matches": 2
-      },
-      {
-        "rank": 2,
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "flag": "🇫🇷",
         "value": 3,
         "matches": 2
       },
@@ -694,6 +694,10 @@
           }
         ]
       },
+      "760454": {
+        "penMiss": [],
+        "assists": []
+      },
       "760456": {
         "penMiss": [
           {
@@ -713,6 +717,10 @@
         "assists": [
           {
             "name": "Michael Olise",
+            "team": "France"
+          },
+          {
+            "name": "Ousmane Dembélé",
             "team": "France"
           }
         ]
