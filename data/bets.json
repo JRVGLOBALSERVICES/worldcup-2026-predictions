@@ -5735,6 +5735,56 @@
       "odds": 10,
       "stake": 10,
       "placedAt": "23/06 23:59"
+    },
+    {
+      "id": "sp-83484658215",
+      "slipNo": "83484658215",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "Abdukodir Khusanov",
+      "market": "Player red cards Over 0.5",
+      "label": "Abdukodir Khusanov to be sent off (red card)",
+      "odds": 34,
+      "stake": 7.1,
+      "placedAt": "24/06 00:55",
+      "grade": {
+        "type": "sentOff",
+        "player": "Abdukodir Khusanov"
+      }
+    },
+    {
+      "id": "sp-83484627953",
+      "slipNo": "83484627953",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "Pedro Neto",
+      "market": "Player red cards Over 0.5",
+      "label": "Pedro Neto to be sent off (red card)",
+      "odds": 80,
+      "stake": 2.9,
+      "placedAt": "24/06 00:54",
+      "grade": {
+        "type": "sentOff",
+        "player": "Pedro Neto"
+      }
+    },
+    {
+      "id": "sp-83484332225",
+      "slipNo": "83484332225",
+      "matchId": "por-uzb-2026-06-23",
+      "player": "—",
+      "market": "Cards · each team over 2",
+      "label": "Each team to have more than 2 cards (3+ each)",
+      "odds": 23,
+      "stake": 12,
+      "placedAt": "24/06 00:49",
+      "grade": {
+        "type": "combo",
+        "conds": [
+          {
+            "c": "eachTeamCardsAtLeast",
+            "n": 3
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
