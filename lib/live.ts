@@ -30,8 +30,17 @@ const persistedResults = (resultsFile as { results: Record<string, PersistedResu
 const ESPN_SUMMARY =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 
-/** Verified corner/SOT/card counts from a per-event summary, oriented to our home/away. */
-async function fetchStats(eventId: string, matchId: string): Promise<MatchStats | null> {
+/**
+ * Per-event summary feed. Returns both the verified stats (corners / SOT /
+ * cards) and the richer goal list — scorer + assister + minute — which the
+ * cheap scoreboard `details` feed omits during live play. `stats` is null when
+ * the boxscore hasn't populated yet; `goals` rides on the keyEvents and is
+ * available as soon as the first goal is logged. Both oriented to our home/away.
+ */
+async function fetchStats(
+  eventId: string,
+  matchId: string,
+): Promise<{ stats: MatchStats | null; goals: Goal[] } | null> {
   const fx = fixtures.find((f) => f.id === matchId);
   if (!fx) return null;
   let data: EspnSummary;
@@ -46,9 +55,11 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
   } catch {
     return null;
   }
-  const teams = data.boxscore?.teams;
-  if (!Array.isArray(teams) || teams.length < 2) return null;
   const homeName = norm(fx.home.name);
+  const goals = goalsFromKeyEvents(data.keyEvents, homeName);
+
+  const teams = data.boxscore?.teams;
+  if (!Array.isArray(teams) || teams.length < 2) return { stats: null, goals };
   const side = (espnName?: string) => (norm(espnName ?? "") === homeName ? "home" : "away");
   const stat = (t: EspnStatTeam | undefined, name: string): number => {
     const s = (t?.statistics ?? []).find((x) => x.name === name);
@@ -63,7 +74,7 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
   for (const t of teams) byName[side(t.team?.displayName)] = t;
   const h = byName.home;
   const a = byName.away;
-  if (!h || !a) return null;
+  if (!h || !a) return { stats: null, goals };
 
   const yellow = { home: stat(h, "yellowCards"), away: stat(a, "yellowCards") };
   const red = { home: stat(h, "redCards"), away: stat(a, "redCards") };
@@ -89,17 +100,20 @@ async function fetchStats(eventId: string, matchId: string): Promise<MatchStats 
   }
 
   return {
-    corners: { home: stat(h, "wonCorners"), away: stat(a, "wonCorners") },
-    sot: { home: stat(h, "shotsOnTarget"), away: stat(a, "shotsOnTarget") },
-    shots: { home: stat(h, "totalShots"), away: stat(a, "totalShots") },
-    yellow,
-    red,
-    cards: { home: yellow.home + red.home, away: yellow.away + red.away },
-    cornersByHalf,
-    sotByHalf,
-    playerSot,
-    firstGoalMethod: firstGoalMethod(data.keyEvents),
-    waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
+    stats: {
+      corners: { home: stat(h, "wonCorners"), away: stat(a, "wonCorners") },
+      sot: { home: stat(h, "shotsOnTarget"), away: stat(a, "shotsOnTarget") },
+      shots: { home: stat(h, "totalShots"), away: stat(a, "totalShots") },
+      yellow,
+      red,
+      cards: { home: yellow.home + red.home, away: yellow.away + red.away },
+      cornersByHalf,
+      sotByHalf,
+      playerSot,
+      firstGoalMethod: firstGoalMethod(data.keyEvents),
+      waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
+    },
+    goals,
   };
 }
 
@@ -254,6 +268,11 @@ type EspnKeyEvent = {
   text?: string;
   period?: { number?: number };
   clock?: { value?: number };
+  team?: { displayName?: string; id?: string };
+  // [0] = scorer, [1] = assister (absent on solo / penalty goals). The cheap
+  // scoreboard `details` feed omits this during live play — assists (and often
+  // even the scorer's name) only land here, in the summary keyEvents.
+  participants?: { athlete?: { displayName?: string } }[];
 };
 type EspnSummary = {
   boxscore?: { teams?: EspnStatTeam[] };
@@ -271,6 +290,64 @@ type EspnSummary = {
   }[];
   keyEvents?: EspnKeyEvent[];
 };
+
+/**
+ * Goals — with assister — from the summary `keyEvents`, oriented to our
+ * home/away. This is the only live feed that carries the assist (participant
+ * [1]); the cheap scoreboard `details` omits it, and frequently omits the
+ * scorer's name too. Solo / penalty goals have no assister → null.
+ */
+export function goalsFromKeyEvents(
+  keyEvents: EspnKeyEvent[] | undefined,
+  homeName: string,
+): Goal[] {
+  return (keyEvents ?? [])
+    .filter((e) => e.scoringPlay)
+    .map((e) => {
+      const p = e.participants ?? [];
+      return {
+        team: (norm(e.team?.displayName ?? "") === homeName ? "home" : "away") as
+          | "home"
+          | "away",
+        scorer: p[0]?.athlete?.displayName ?? "Unknown",
+        minute: e.clock?.value != null ? Math.round(e.clock.value / 60) : undefined,
+        assist: e.ownGoal ? null : p[1]?.athlete?.displayName ?? null,
+        penalty: e.penaltyKick === true,
+        ownGoal: e.ownGoal === true,
+      };
+    });
+}
+
+/**
+ * Fill assists (and repair "Unknown" scorers) on the scoreboard goal list from
+ * the richer summary goals, matched by team + nearest minute. Never adds or
+ * drops a goal — the scoreboard list stays the score-of-record; this only
+ * layers in the detail the scoreboard feed lacks.
+ */
+function enrichGoals(base: Goal[], rich: Goal[]): Goal[] {
+  if (!rich.length) return base;
+  const used = new Set<number>();
+  return base.map((g) => {
+    let best = -1;
+    let bestDiff = Infinity;
+    rich.forEach((r, i) => {
+      if (used.has(i) || r.team !== g.team) return;
+      const diff = Math.abs((r.minute ?? -99) - (g.minute ?? 999));
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        best = i;
+      }
+    });
+    if (best < 0 || bestDiff > 2) return g;
+    used.add(best);
+    const r = rich[best];
+    return {
+      ...g,
+      scorer: g.scorer && g.scorer !== "Unknown" ? g.scorer : r.scorer,
+      assist: g.assist ?? r.assist,
+    };
+  });
+}
 
 /**
  * How the FIRST goal of the match was scored, from the summary `keyEvents`.
@@ -608,7 +685,12 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
     );
     liveIds.forEach((id, i) => {
       const b = statBatches[i];
-      if (b.status === "fulfilled" && b.value) out[id].stats = b.value;
+      if (b.status === "fulfilled" && b.value) {
+        if (b.value.stats) out[id].stats = b.value.stats;
+        // Layer the summary's scorer/assist detail onto the scoreboard goals,
+        // which carry neither during live play.
+        out[id].goals = enrichGoals(out[id].goals, b.value.goals);
+      }
     });
   }
   return out;
