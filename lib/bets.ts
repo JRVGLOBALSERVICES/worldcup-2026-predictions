@@ -181,6 +181,12 @@ export type SpecialGrade =
   // the special's single matchId. Loses the instant any leg's match ends with the
   // player off the scoresheet; pending until then; wins once all have scored.
   | { type: "multiScorers"; legs: { matchId: string; player: string }[] }
+  // Generalised cross-match accumulator — like multiScorers, but each leg can be
+  // a plain "player scores anytime" (kind:"scored") OR "player scores anytime AND
+  // that match's final score is one of a listed set" (kind:"scoredAndScoreOneOf").
+  // Each leg is graded off its OWN match. Loses the instant any leg is permanently
+  // dead; pending until every leg is decidable; wins once all legs have landed.
+  | { type: "multiLeg"; legs: MultiLegCond[] }
   // Player scores at any time AND the final score is NOT any listed scoreline ("Any Other Score").
   | { type: "scoredAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
   // Correct score of the SECOND HALF alone (full-time minus half-time goals).
@@ -213,6 +219,23 @@ export type SpecialGrade =
   // ANDs the player goal with evalCombo(conds). Used for 1xBet accumulators
   // like "Team win each half + Player scores + Team most corners each half".
   | { type: "comboWithScorer"; player: string; conds: StatCond[] };
+
+/**
+ * One leg of a `multiLeg` cross-match accumulator. Each leg names its own match
+ * and the condition that match must satisfy:
+ *   - "scored": the player scores any (non-own) goal in that match.
+ *   - "scoredAndScoreOneOf": the player scores AND that match's final score is one
+ *     of the listed scorelines (the bookmaker "score a goal AND match score …"
+ *     OR-of-grids leg). `scores` is oriented to the leg match's listed home/away.
+ */
+export type MultiLegCond =
+  | { matchId: string; kind: "scored"; player: string }
+  | {
+      matchId: string;
+      kind: "scoredAndScoreOneOf";
+      player: string;
+      scores: { home: number; away: number }[];
+    };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -612,6 +635,32 @@ export function gradeSpecial(special: Special): BetStatus {
       if (goalsBy(ev.goals, leg.player).length > 0) continue; // leg already won
       if (ev.status === "finished") return "lost"; // his match ended, no goal → dead
       pending = true; // still in play
+    }
+    return pending ? "pending" : "won";
+  }
+
+  // Generalised cross-match accumulator — each leg graded off its OWN match's
+  // events + final score, so it can't use the single-match guard below either.
+  if (g.type === "multiLeg") {
+    let pending = false;
+    for (const leg of g.legs) {
+      const ev = getEvents(leg.matchId);
+      const finished = ev.status === "finished";
+      const scoredIt = goalsBy(ev.goals, leg.player).length > 0;
+      if (leg.kind === "scored") {
+        if (scoredIt) continue; // leg already won, even mid-match
+        if (finished) return "lost"; // his match ended, no goal → whole acca dead
+        pending = true;
+        continue;
+      }
+      // scoredAndScoreOneOf — the score part can't be final until FT.
+      if (!finished) {
+        pending = true;
+        continue;
+      }
+      const ft = getResult(leg.matchId).ft;
+      const onGrid = leg.scores.some((s) => isFinalScore(ft, s.home, s.away));
+      if (!(scoredIt && onGrid)) return "lost";
     }
     return pending ? "pending" : "won";
   }

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
-import { inPlayBet, inPlaySpecial, inPlayMultiScorers, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
+import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { SiteNav, type NavKey } from "./SiteNav";
 
@@ -85,6 +85,7 @@ function gradeSpecial(
   // Cross-match accumulator needs the WHOLE live map (one match per leg), not the
   // single match this special is bucketed under.
   if (s.grade?.type === "multiScorers") return inPlayMultiScorers(s.grade.legs, live, s.statusOverride);
+  if (s.grade?.type === "multiLeg") return inPlayMultiLeg(s.grade.legs, live, s.statusOverride);
   return lm ? inPlaySpecial(s, lm) : fromStatic(s.staticStatus);
 }
 

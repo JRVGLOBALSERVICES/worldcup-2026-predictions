@@ -42,7 +42,7 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
     // is bucketed under its first leg's match only. Mirror it onto every OTHER
     // leg's match card too, so it's visible from all 3 games — the mirror copies
     // are display-only and excluded from all money sums.
-    if (s.grade?.type === "multiScorers") {
+    if (s.grade?.type === "multiScorers" || s.grade?.type === "multiLeg") {
       for (const leg of s.grade.legs) {
         if (leg.matchId !== s.matchId) pushSpecial(leg.matchId, { ...s, mirror: true });
       }

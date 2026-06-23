@@ -583,6 +583,78 @@ export function inPlayMultiScorers(
   return { verdict: scoredCount > 0 ? "winning" : "alive", note };
 }
 
+/**
+ * Live grade for a generalised cross-match accumulator ("multiLeg") — each leg is
+ * either a plain "scores anytime" or "scores anytime AND that match's final score
+ * is one of a set". A leg can lock WON early only when it's a pure scorer (a score
+ * leg can't lock until FT, since the scoreline can still change). Mirrors the
+ * static settle in bets.ts so live and final never disagree.
+ */
+export function inPlayMultiLeg(
+  legs: import("./bets").MultiLegCond[],
+  live: Record<string, LiveMatch | undefined>,
+  statusOverride?: BetStatus,
+): InPlay {
+  if (statusOverride) {
+    return statusOverride === "won"
+      ? { verdict: "won", note: "Won (confirmed)" }
+      : { verdict: "lost", note: "Lost (confirmed)" };
+  }
+  let wonCount = 0; // legs LOCKED won (pure scorer who's scored, or score-leg at FT)
+  let onTrack = false; // a leg currently winning but not yet locked
+  let dead = false;
+  let anyLive = false;
+  const parts: string[] = [];
+  for (const leg of legs) {
+    const lm = live[leg.matchId];
+    if (!lm || lm.state === "scheduled") {
+      parts.push(`${leg.player} —`);
+      continue;
+    }
+    anyLive = true;
+    const done = lm.state === "finished";
+    const scored = goalsBy(lm.goals, leg.player).length > 0;
+    if (leg.kind === "scored") {
+      if (scored) {
+        wonCount++;
+        parts.push(`${leg.player} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${leg.player} ✗`);
+      } else {
+        parts.push(`${leg.player} —`);
+      }
+      continue;
+    }
+    // scoredAndScoreOneOf
+    const cur = lm.score;
+    const onGrid = leg.scores.some((s) => eq(cur, s.home, s.away));
+    const anyReach = leg.scores.some((s) => reachable(cur, s.home, s.away));
+    if (done) {
+      if (scored && onGrid) {
+        wonCount++;
+        parts.push(`${leg.player} ✓`);
+      } else {
+        dead = true;
+        parts.push(`${leg.player} ✗`);
+      }
+    } else if (scored && !anyReach) {
+      dead = true; // scored but the listed scorelines are now out of reach
+      parts.push(`${leg.player} ✗`);
+    } else if (scored && onGrid) {
+      onTrack = true;
+      parts.push(`${leg.player} ⋯`);
+    } else {
+      parts.push(`${leg.player} —`);
+    }
+  }
+  const note = parts.join(" · ");
+  if (dead) return { verdict: "lost", note };
+  if (wonCount === legs.length) return { verdict: "won", note };
+  if (!anyLive) return { verdict: "scheduled", note };
+  return { verdict: wonCount > 0 || onTrack ? "winning" : "alive", note };
+}
+
 // ── helpers for the live tally ────────────────────────────────────────────────
 /** "If it ended right now": winning/won pay out, everything else loses its stake. */
 export function liveLeans(v: LiveVerdict): "win" | "lose" | "neutral" {
