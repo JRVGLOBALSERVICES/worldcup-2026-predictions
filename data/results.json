@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T00:20:26.419Z",
+    "generatedAt": "2026-06-24T01:20:27.860Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 26,
-    "live": 1
+    "finished": 27,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -3176,12 +3176,15 @@
       }
     },
     "pan-cro-2026-06-23": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
       "score": {
         "home": 0,
         "away": 1
@@ -3202,25 +3205,31 @@
           "player": "Édgar Yoel Bárcenas",
           "minute": 60,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Petar Sucic",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-23T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
-          "away": 1
+          "home": 7,
+          "away": 2
         },
         "sot": {
           "home": 1,
           "away": 2
         },
         "shots": {
-          "home": 2,
-          "away": 5
+          "home": 8,
+          "away": 6
         },
         "yellow": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -3228,22 +3237,22 @@
         },
         "cards": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             0,
-            2
+            7
           ],
           "away": [
             1,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             0,
@@ -3251,7 +3260,8 @@
           ]
         },
         "playerSot": {
-          "Marco Pasalic": 1
+          "Marco Pasalic": 1,
+          "Amir Murillo": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -3262,6 +3272,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Foul",
             "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 72,
             "isCorner": false,
             "reliable": true
           }

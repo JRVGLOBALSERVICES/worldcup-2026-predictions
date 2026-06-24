@@ -267,6 +267,16 @@
         "home": 0,
         "away": 0
       }
+    },
+    "pan-cro-2026-06-23": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -1428,6 +1438,33 @@
           "team": "away",
           "player": "Iñaki Williams",
           "minute": 59,
+          "type": "yellow"
+        }
+      ]
+    },
+    "pan-cro-2026-06-23": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ante Budimir",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Édgar Yoel Bárcenas",
+          "minute": 60,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Petar Sucic",
+          "minute": 90,
           "type": "yellow"
         }
       ]
@@ -7749,20 +7786,20 @@
     },
     "pan-cro-2026-06-23": {
       "corners": {
-        "home": 2,
-        "away": 1
+        "home": 7,
+        "away": 2
       },
       "sot": {
         "home": 1,
         "away": 2
       },
       "shots": {
-        "home": 2,
-        "away": 5
+        "home": 8,
+        "away": 6
       },
       "yellow": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -7770,22 +7807,22 @@
       },
       "cards": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
           0,
-          2
+          7
         ],
         "away": [
           1,
-          0
+          1
         ]
       },
       "sotByHalf": {
         "home": [
           0,
-          0
+          1
         ],
         "away": [
           0,
@@ -7793,7 +7830,8 @@
         ]
       },
       "playerSot": {
-        "Marco Pasalic": 1
+        "Marco Pasalic": 1,
+        "Amir Murillo": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -7804,6 +7842,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Foul",
           "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 72,
           "isCorner": false,
           "reliable": true
         }
