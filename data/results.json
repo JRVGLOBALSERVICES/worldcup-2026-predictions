@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-23T23:20:28.403Z",
+    "generatedAt": "2026-06-24T00:20:26.419Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 26,
     "live": 1
@@ -3177,30 +3177,49 @@
     },
     "pan-cro-2026-06-23": {
       "state": "live",
-      "ht": null,
-      "ft": null,
-      "score": {
+      "ht": {
         "home": 0,
         "away": 0
       },
-      "goals": [],
-      "cards": [],
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ante Budimir",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Édgar Yoel Bárcenas",
+          "minute": 60,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-23T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 0
-        },
-        "sot": {
-          "home": 0,
-          "away": 0
-        },
-        "shots": {
-          "home": 1,
+          "home": 2,
           "away": 1
         },
+        "sot": {
+          "home": 1,
+          "away": 2
+        },
+        "shots": {
+          "home": 2,
+          "away": 5
+        },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -3208,16 +3227,16 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
           "home": [
             0,
-            0
+            2
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
@@ -3228,12 +3247,25 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
-        "playerSot": {},
-        "firstGoalMethod": null,
-        "waterBreak": {}
+        "playerSot": {
+          "Marco Pasalic": 1
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

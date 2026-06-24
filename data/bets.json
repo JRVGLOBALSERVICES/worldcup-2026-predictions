@@ -7749,19 +7749,19 @@
     },
     "pan-cro-2026-06-23": {
       "corners": {
-        "home": 0,
-        "away": 0
-      },
-      "sot": {
-        "home": 0,
-        "away": 0
-      },
-      "shots": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
+      "sot": {
+        "home": 1,
+        "away": 2
+      },
+      "shots": {
+        "home": 2,
+        "away": 5
+      },
       "yellow": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "red": {
@@ -7769,16 +7769,16 @@
         "away": 0
       },
       "cards": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "cornersByHalf": {
         "home": [
           0,
-          0
+          2
         ],
         "away": [
-          0,
+          1,
           0
         ]
       },
@@ -7789,12 +7789,25 @@
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
-      "playerSot": {},
-      "firstGoalMethod": null,
-      "waterBreak": {}
+      "playerSot": {
+        "Marco Pasalic": 1
+      },
+      "firstGoalMethod": "shot",
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 26,
+          "firstActionType": "Foul",
+          "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
