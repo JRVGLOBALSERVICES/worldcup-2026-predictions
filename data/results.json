@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T20:20:28.545Z",
+    "generatedAt": "2026-06-24T21:20:25.060Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 28,
-    "live": 2
+    "finished": 30,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -3413,15 +3413,18 @@
       }
     },
     "swi-can-2026-06-24": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
       "score": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "goals": [
         {
@@ -3439,6 +3442,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Promise David",
+          "minute": 75,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -3453,25 +3464,31 @@
           "player": "Granit Xhaka",
           "minute": 31,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Liam Millar",
+          "minute": 87,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-24T19:00:00.000Z",
       "stats": {
         "corners": {
           "home": 2,
-          "away": 1
+          "away": 7
         },
         "sot": {
           "home": 4,
-          "away": 3
+          "away": 7
         },
         "shots": {
           "home": 6,
-          "away": 5
+          "away": 13
         },
         "yellow": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "red": {
           "home": 0,
@@ -3479,7 +3496,7 @@
         },
         "cards": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
@@ -3488,7 +3505,7 @@
           ],
           "away": [
             1,
-            0
+            6
           ]
         },
         "sotByHalf": {
@@ -3498,14 +3515,16 @@
           ],
           "away": [
             3,
-            0
+            3
           ]
         },
         "playerSot": {
           "Breel Embolo": 2,
           "Luc de Fougerolles": 1,
           "Cyle Larin": 1,
-          "Ali Ahmed": 1
+          "Ali Ahmed": 1,
+          "Promise David": 2,
+          "Alistair Johnston": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -3518,19 +3537,32 @@
             "firstActionMinute": 30,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 73,
+            "firstActionType": "Goal - Volley",
+            "firstActionMinute": 75,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
     },
     "bos-qat-2026-06-24": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 2,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 3,
+        "away": 1
+      },
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 1
       },
       "goals": [
@@ -3544,7 +3576,7 @@
         },
         {
           "team": "home",
-          "scorer": "Sultan Al-Brake",
+          "scorer": "Mahmoud Abunada",
           "minute": 34,
           "assist": null,
           "penalty": false,
@@ -3557,58 +3589,82 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Ermin Mahmic",
+          "minute": 80,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Ahmed Fathy",
+          "minute": 78,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Ermin Mahmic",
+          "minute": 82,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-24T19:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 4,
-          "away": 1
+          "home": 5,
+          "away": 5
         },
         "sot": {
-          "home": 3,
-          "away": 1
+          "home": 5,
+          "away": 3
         },
         "shots": {
-          "home": 9,
-          "away": 4
+          "home": 14,
+          "away": 9
         },
         "yellow": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 1
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             4,
-            0
+            1
           ],
           "away": [
             1,
-            0
+            4
           ]
         },
         "sotByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             0,
-            0
+            2
           ]
         },
         "playerSot": {
           "Ermedin Demirovic": 1,
-          "Ivan Sunjic": 1
+          "Ivan Sunjic": 1,
+          "Esmir Bajraktarevic": 1,
+          "Pedro Miguel": 1,
+          "Almoez Ali": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -3619,6 +3675,16 @@
             "breakEndMinute": 25,
             "firstActionType": "Foul",
             "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot Off Target",
+            "firstActionMinute": 75,
             "isCorner": false,
             "reliable": true
           }
