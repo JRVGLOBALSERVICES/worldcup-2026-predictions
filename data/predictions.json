@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T09:04:40.476Z",
+    "generatedAt": "2026-06-24T18:24:51.321Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -6153,16 +6153,16 @@
     },
     "swi-can-2026-06-24": {
       "win": {
-        "pick": "Switzerland",
-        "fairOdds": "2.70",
-        "reason": "Two well-matched sides level on points with knockout spot already near-secured; Switzerland edges it on tournament pedigree and defensive solidity, but with both possibly managing legs and Canada in scoring form this is close to a coin-flip with real draw risk.",
-        "strength": 2
+        "pick": "Switzerland (Draw No Bet)",
+        "fairOdds": "1.95",
+        "reason": "Confirmed Swiss XI is the stronger, more cohesive side — Kobel behind an Akanji/Elvedi/Rodriguez spine, Xhaka-Freuler-Sow controlling midfield. Switzerland need a win to top Group B, so they will press; Canada (Crepeau in goal, Davies on the bench recovering from a hamstring) advance with a draw and may sit deeper and counter through David/Buchanan. Market has SUI ~+135, draw ~+200, CAN ~+230 — no certainty. Both already qualified and rotating, so a well-matched cagey game is a real outcome; DNB protects against the live draw risk rather than chasing the straight win.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
-        "alt": "1-0",
-        "altOdds": "3.40",
+        "fairOdds": "2.40",
+        "alt": "Switzerland 1-0",
+        "altOdds": "3.80",
         "strength": 3
       },
       "htft": {
@@ -6178,125 +6178,129 @@
       "scorers": [
         {
           "player": "Breel Embolo",
-          "fairOdds": "3.40",
+          "fairOdds": "2.90",
           "banker": false,
-          "note": "Swiss focal striker, scored vs Qatar",
+          "note": "Leads the line in the confirmed XI; 2 WC goals (one penalty vs Qatar, equaliser vs Bosnia), 25 international goals. In form but a 29-year-old target striker against an organised Cornelius/De Fougerolles pairing — a threat, NOT a banker.",
           "strength": 3
         },
         {
           "player": "Jonathan David",
-          "fairOdds": "2.90",
-          "banker": true,
-          "note": "In red-hot form off a hat-trick vs Qatar, nailed-on starter and penalty option",
-          "strength": 4
+          "fairOdds": "3.10",
+          "banker": false,
+          "note": "Canada's clear focal point and penalty taker; hat-trick vs Qatar after a quiet run. Highest-floor scorer on the pitch given he both takes and wins spot-kicks, but Akanji/Elvedi limit open-play chances.",
+          "strength": 3
         },
         {
-          "player": "Dan Ndoye",
-          "fairOdds": "4.50",
+          "player": "Ruben Vargas",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "Pacey Swiss wide threat, key attacker",
+          "note": "Confirmed starter (replaced Ndoye), scored vs Bosnia; direct wide threat with free-kick/corner duty. Real secondary goal route from out-to-in cuts against Laryea.",
           "strength": 2
         },
         {
-          "player": "Cyle Larin",
-          "fairOdds": "4.20",
+          "player": "Johan Manzambi",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Two goals in tournament, scores off rebounds",
+          "note": "20-year-old making his first WC start after a two-goal cameo off the bench vs Bosnia; flexible attacking-mid/wide role. Live wildcard scorer if Switzerland chase the win.",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Ruben Vargas",
-          "fairOdds": "4.80",
+          "player": "Granit Xhaka",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Switzerland's primary set-piece/corner deliverer",
+          "note": "Deep-lying creator and the side's primary penalty taker; dictates Swiss build-up and dead-ball delivery, prime assist source for Embolo/Vargas.",
           "strength": 2
         },
         {
-          "player": "Granit Xhaka",
+          "player": "Ruben Vargas",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Swiss captain dictates play, dead-ball involvement",
+          "note": "Corner and crossing duty plus 1v1 wide creation; chief open-play supply line for Embolo at the back post.",
           "strength": 2
         },
         {
           "player": "Tajon Buchanan",
-          "fairOdds": "5.50",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "Canada wide creator feeding David/Larin",
+          "note": "Canada's most direct wide creator, helped engineer Larin's opener vs Qatar; main assist outlet feeding David on the counter.",
           "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "Medium",
-        "taker": "Granit Xhaka",
-        "backup": "Breel Embolo",
-        "note": "Xhaka converted a stoppage-time pen vs Bosnia; for Canada, Jonathan David takes spot-kicks"
+        "likelihood": "medium",
+        "taker": "Granit Xhaka (Switzerland) / Jonathan David (Canada)",
+        "backup": "Breel Embolo (SUI) / Cyle Larin (CAN)",
+        "note": "Both sides carry strong spot-kick takers. Xhaka is Switzerland's confirmed first choice (converted vs Bosnia and vs Jordan), Embolo next. For Canada, Jonathan David is automatic — most club penalties in the squad and the player most often fouled in the box; Larin (six club pens) deputises if David is off."
       },
       "lineups": {
-        "home": "Kobel; Widmer, Jaquez, Akanji, Rodriguez; Aebischer, Xhaka, Freuler; Ndoye, Embolo, Vargas (4-3-3); Zakaria/Elvedi on yellows",
-        "away": "Crepeau; Johnston, Bombito, Sigur, Laryea; Buchanan, Eustaquio, Saliba, Ahmed; David, Larin; Davies a doubt (hamstring), Kone out (broken leg)",
-        "status": "probable"
+        "home": "4-3-3: Kobel; Jaquez, Elvedi, Akanji, Rodriguez; Sow, Xhaka, Freuler; Manzambi; Vargas, Embolo",
+        "away": "4-4-2: Crepeau; Johnston, De Fougerolles, Cornelius, Laryea; Buchanan, Choiniere, Saliba, Ahmed; David, Larin",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
           "player": "Alphonso Davies",
           "team": "Canada",
-          "note": "Recovering from hamstring strain, likely on bench rather than starting"
+          "note": "KEY BENCH — not starting, recovering from a hamstring injury; Marsch confirmed he will not start but is available as an impact substitute. A second-half introduction sharply raises Canada's threat down the left."
         },
         {
-          "player": "Ismael Kone",
-          "team": "Canada",
-          "note": "Out for rest of tournament with a broken leg"
-        },
-        {
-          "player": "Jonathan David",
-          "team": "Canada",
-          "note": "Hat-trick vs Qatar, Canada's all-time top scorer and attacking focal point"
-        },
-        {
-          "player": "Denis Zakaria",
+          "player": "Dan Ndoye",
           "team": "Switzerland",
-          "note": "On a yellow card, one booking from suspension"
-        },
-        {
-          "player": "Nico Elvedi",
-          "team": "Switzerland",
-          "note": "On a yellow card, suspension risk"
+          "note": "KEY BENCH — dropped from the XI (Vargas/Manzambi preferred). A live-game changer off the bench; do NOT treat as a starter for scorer markets, but a real late entrant if Switzerland chase a winner."
         },
         {
           "player": "Granit Xhaka",
           "team": "Switzerland",
-          "note": "Captain and primary penalty taker, scored vs Bosnia"
+          "note": "Captain, midfield metronome and first-choice penalty taker; controls tempo and dead-ball delivery — central to both creation and any spot-kick."
+        },
+        {
+          "player": "Manuel Akanji",
+          "team": "Switzerland",
+          "note": "Anchors the back four alongside Elvedi; pace and reading key to nullifying David/Buchanan in transition. Switzerland's clean-sheet hopes run through him."
+        },
+        {
+          "player": "Maxime Crepeau",
+          "team": "Canada",
+          "note": "Starts in goal for Canada; busy night likely if Switzerland dominate possession — his shot-stopping is central to any Canada under/draw outcome."
+        },
+        {
+          "player": "Cyle Larin",
+          "team": "Canada",
+          "note": "Canada's all-time top scorer, starts alongside David; scored in back-to-back games (Bosnia, Qatar). Secondary scorer and penalty backup, dangerous on crosses and second balls."
         }
       ],
       "confidence": "medium",
-      "strength": 2,
+      "strength": 3,
       "sources": [
-        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-canada-prediction-team-news-lineups_599751.html",
-        "https://www.goal.com/en/news/switzerland-canada-world-cup-preview/blt4b338f1933f5739a",
-        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://www.mlssoccer.com/competitions/fifa-world-cup/news/canada-starting-lineup-vs-switzerland-2026-fifa-world-cup-group-b-finale",
+        "https://worldsoccertalk.com/amp/world-cup/is-alphonso-davis-playing-switzerland-vs-canada-projected-lineups-for-the-2026-world-cup-group-b-game/",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021451",
+        "https://www.rotowire.com/soccer/article/switzerland-vs-canada-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-119339",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://en.wikipedia.org/wiki/Breel_Embolo",
+        "https://www.foxsports.com/stories/soccer/2026-world-cup-switzerland-canada-odds-prediction-picks",
+        "https://www.cbssports.com/soccer/news/canada-switzerland-odds-prediction-line-time-2026-world-cup-picks-best-bets/"
       ]
     },
     "bos-qat-2026-06-24": {
       "win": {
-        "pick": "Bosnia",
-        "fairOdds": "1.95",
-        "reason": "Bosnia are the stronger side and need a win to advance, but they were poor in a 4-1 loss to Switzerland and lost CB Muharemovic to suspension; Qatar's 6-0 collapse vs Canada makes a Bosnia edge clear though not certain.",
+        "pick": "Bosnia and Herzegovina",
+        "fairOdds": "1.85",
+        "reason": "Bosnia's deeper, more proven side (Dzeko, Demirovic, Kolasinac, Bundesliga-based core) faces a Qatar XI shattered 6-0 by Canada and missing Almoez Ali up top - Edmilson Junior starts but has 0 goals in 15 caps. Both must win to chase a best-third place, so Bosnia push, but they were poor in the 4-1 Switzerland loss and both defences leak, so this is a ~55% call, not a lock - a draw sends both home and Qatar are desperate.",
         "strength": 3
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "2.60",
+        "fairOdds": "3.30",
         "alt": "0-0",
-        "altOdds": "2.80",
-        "strength": 3
+        "altOdds": "3.10",
+        "strength": 2
       },
       "htft": {
         "pick": "Bosnia/Bosnia",
-        "fairOdds": "3.20",
+        "fairOdds": "3.10",
         "strength": 2
       },
       "fullTime": {
@@ -6307,30 +6311,30 @@
       "scorers": [
         {
           "player": "Ermedin Demirovic",
-          "fairOdds": "2.90",
+          "fairOdds": "2.50",
           "banker": false,
-          "note": "Stuttgart striker, designated penalty taker, leads the line for Bosnia",
+          "note": "Bosnia's primary striker and first-choice penalty taker (12 Bundesliga goals for Stuttgart 25/26); led the line and carries the goal burden, but missed a spot-kick vs Wales in the playoff and has just 1 goal in 7 WC-cycle games.",
           "strength": 3
         },
         {
           "player": "Edin Dzeko",
-          "fairOdds": "3.40",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "40-yo target man, still focal point but age makes him no banker",
+          "note": "Captain and all-time top scorer but 40 years old - a poacher's threat in the box, NOT a banker; minutes likely managed, started alongside Demirovic.",
           "strength": 2
         },
         {
-          "player": "Almoez Ali",
-          "fairOdds": "3.60",
+          "player": "Akram Afif",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "Qatar all-time top scorer, 12 goals in Asian qualifying",
+          "note": "Qatar's chief creator, penalty taker and standout (40 goals/127 caps, Asian Cup top scorer with a hat-trick of penalties in the 2023 final). Best route to a Qatar goal, especially from the spot against a leaky Bosnia back line.",
           "strength": 3
         },
         {
-          "player": "Akram Afif",
-          "fairOdds": "4.20",
+          "player": "Esmir Bajraktarevic",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Qatar's creator and penalty taker, scores and assists",
+          "note": "PSV winger who scored the winning shoot-out penalty vs Italy to send Bosnia through; pace and final ball from the flank, live for a goal or assist.",
           "strength": 2
         }
       ],
@@ -6339,74 +6343,78 @@
           "player": "Akram Afif",
           "fairOdds": "3.80",
           "banker": false,
-          "note": "Led AFC qualifying with 11 assists; Qatar's chief creator",
+          "note": "Qatar's chief creator - dribbling and final ball are their best supply line.",
           "strength": 3
         },
         {
           "player": "Esmir Bajraktarevic",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "PSV winger, key wide creator for Bosnia",
+          "note": "Bosnia's wing creativity; deliveries and cut-backs to Demirovic/Dzeko.",
           "strength": 2
         },
         {
           "player": "Sead Kolasinac",
-          "fairOdds": "5.50",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "Set-piece flick-ons; assisted opener vs Canada",
+          "note": "Attacking left-back, overlaps and crosses into the box for the strikers.",
           "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "Medium",
-        "taker": "Akram Afif",
-        "backup": "Ermedin Demirovic",
-        "note": "Afif is one of WC's cleanest penalty calls (Asian Cup final hat-trick); Demirovic/Tabakovic for Bosnia. Two leaky defences raise spot-kick chances."
+        "likelihood": "medium-high",
+        "taker": "Akram Afif (Qatar), Ermedin Demirovic (Bosnia)",
+        "backup": "Edin Dzeko (Bosnia); Edmilson Junior / Hassan Alhaydos (Qatar)",
+        "note": "Both defences are leaky and both sides are desperate for a win, raising box contact and spot-kick chances. Afif is a near-automatic, ice-cold penalty taker (penalty hat-trick in the 2023 Asian Cup final); Demirovic is Bosnia's No.1 taker but missed at the goalkeeper vs Wales in the playoff - reason to be cautious on a Bosnia pen converting."
       },
       "lineups": {
-        "home": "Vasilj; Dedic, Katic, Hadzikadunic, Kolasinac; Bajraktarevic, Tahirovic, Sunjic, Memic; Demirovic, Dzeko",
-        "away": "Abunada; Al Oui, Miguel, Khoukhi, Al Brake; Gaber, Fathy, Laye; Edmilson, Abdurisag, Afif",
-        "status": "probable"
+        "home": "Bosnia (4-4-2): Vasilj; Malic, Radeljic, Katic, Kolasinac; Bajraktarevic, Basic, Sunjic, Alajbegovic; Demirovic, Dzeko",
+        "away": "Qatar (4-3-3): Abunada; Laye, Gaber, Khouki, Albrake; Miguel, Boudiaf, Fathy; Alhaydos, Afif, Edmilson",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Tarik Muharemovic",
-          "team": "Bosnia",
-          "note": "CB sent off vs Switzerland, suspended for this match; Hadzikadunic deputises"
-        },
-        {
-          "player": "Edin Dzeko",
-          "team": "Bosnia",
-          "note": "Captain, 40yo Schalke striker, 6 goals in WC qualifying; intelligence over legs"
-        },
-        {
-          "player": "Ermedin Demirovic",
-          "team": "Bosnia",
-          "note": "Stuttgart forward and penalty taker; in-form attacking outlet"
-        },
-        {
-          "player": "Homam Ahmed",
+          "player": "Almoez Ali",
           "team": "Qatar",
-          "note": "Sent off in 6-0 loss to Canada, suspended; Sultan Al Brake replaces"
-        },
-        {
-          "player": "Assim Madibo",
-          "team": "Qatar",
-          "note": "Suspended after red vs Canada; Karim Boudiaf expected to come in midfield"
+          "note": "BENCHED - Qatar's all-time top scorer is NOT in the confirmed XI; attack is Edmilson, Afif, Alhaydos. He is the key bench option / likely game-changer if Qatar chase, so live as a substitute scorer, not a starter pick."
         },
         {
           "player": "Akram Afif",
           "team": "Qatar",
-          "note": "Talisman, 127 caps/40 goals, primary penalty taker and creator"
+          "note": "Penalty taker and chief creator (40 goals/127 caps). Qatar's single biggest threat - their best chance of a goal runs through him, especially from the spot."
+        },
+        {
+          "player": "Edmilson Junior",
+          "team": "Qatar",
+          "note": "Starts on the wing but has 0 goals in 15 international caps - creativity over end product; more an assist/chance-creation threat than a scorer."
+        },
+        {
+          "player": "Ermedin Demirovic",
+          "team": "Bosnia",
+          "note": "First-choice penalty taker and main striker (12 Bundesliga goals 25/26) but missed a spot-kick vs Wales in the playoff and has only 1 goal in 7 WC-cycle matches - quietly off-form internationally."
+        },
+        {
+          "player": "Edin Dzeko",
+          "team": "Bosnia",
+          "note": "Captain, 40 years old, all-time top scorer. A box presence and leader but NOT a banker scorer; minutes may be managed."
+        },
+        {
+          "player": "Qatar suspensions",
+          "team": "Qatar",
+          "note": "Homam Ahmed and Assim Madibo suspended; Qatar also picked up two red cards in the 6-0 loss to Canada - thin, disrupted spine adds to their fragility."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.sportsmole.co.uk/football/bosnia-herzegovina/world-cup-2026/preview/bosnia-hvina-vs-qatar-prediction-team-news-lineups_599838.html",
-        "https://www.si.com/soccer/bosnia-herzegovina-vs-qatar-world-cup-preview-predictions-lineups-6-24-26",
-        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://onefootball.com/en/news/world-cup-2026-official-line-ups-bosnia-vs-qatar-and-switzerland-vs-canada-43053046",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021448",
+        "https://www.rotowire.com/soccer/article/bosnia-and-herzegovina-vs-qatar-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-119338",
+        "https://en.wikipedia.org/wiki/Akram_Afif",
+        "https://www.bundesliga.com/en/player/ermedin-demirovic",
+        "https://en.wikipedia.org/wiki/Esmir_Bajraktarevi%C4%87",
+        "https://en.wikipedia.org/wiki/Edmilson_Junior",
+        "https://www.si.com/soccer/bosnia-herzegovina-vs-qatar-world-cup-preview-predictions-lineups-6-24-26"
       ]
     },
     "sco-bra-2026-06-24": {
