@@ -2887,6 +2887,71 @@
       "odds": 51,
       "stake": 20,
       "placedAt": "24/06 05:02"
+    },
+    {
+      "id": "b-83506839825",
+      "slipNo": "83506839825",
+      "matchId": "sco-bra-2026-06-24",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-4",
+      "home": 0,
+      "away": 4,
+      "odds": 13,
+      "stake": 20,
+      "placedAt": "24/06 14:24"
+    },
+    {
+      "id": "b-83506829875",
+      "slipNo": "83506829875",
+      "matchId": "sco-bra-2026-06-24",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-3",
+      "home": 0,
+      "away": 3,
+      "odds": 8,
+      "stake": 15,
+      "placedAt": "24/06 14:23"
+    },
+    {
+      "id": "b-83506804981",
+      "slipNo": "83506804981",
+      "matchId": "sco-bra-2026-06-24",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-2",
+      "home": 1,
+      "away": 2,
+      "odds": 8.5,
+      "stake": 80,
+      "placedAt": "24/06 14:22"
+    },
+    {
+      "id": "b-83506802693",
+      "slipNo": "83506802693",
+      "matchId": "sco-bra-2026-06-24",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-1",
+      "home": 1,
+      "away": 1,
+      "odds": 9.5,
+      "stake": 100,
+      "placedAt": "24/06 14:21"
+    },
+    {
+      "id": "b-83506800447",
+      "slipNo": "83506800447",
+      "matchId": "sco-bra-2026-06-24",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-0",
+      "home": 0,
+      "away": 0,
+      "odds": 12,
+      "stake": 50,
+      "placedAt": "24/06 14:21"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -6209,6 +6274,81 @@
       "grade": {
         "type": "firstScorer",
         "player": "Jude Bellingham"
+      }
+    },
+    {
+      "id": "sp-83506794549",
+      "slipNo": "83506794549",
+      "matchId": "sco-bra-2026-06-24",
+      "player": "—",
+      "market": "Match draw (1X2 X)",
+      "label": "Scotland v Brazil to be a draw (1X2 X)",
+      "odds": 5.66,
+      "stake": 100,
+      "placedAt": "24/06 14:21",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83506791741",
+      "slipNo": "83506791741",
+      "matchId": "mor-hai-2026-06-24",
+      "player": "—",
+      "market": "Match draw (1X2 X)",
+      "label": "Morocco v Haiti to be a draw (1X2 X)",
+      "odds": 7.47,
+      "stake": 50,
+      "placedAt": "24/06 14:21",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83506788381",
+      "slipNo": "83506788381",
+      "matchId": "swi-can-2026-06-24",
+      "player": "—",
+      "market": "Match draw (1X2 X)",
+      "label": "Switzerland v Canada to be a draw (1X2 X)",
+      "odds": 3.17,
+      "stake": 100,
+      "placedAt": "24/06 14:20",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
+      }
+    },
+    {
+      "id": "sp-83506785301",
+      "slipNo": "83506785301",
+      "matchId": "swi-can-2026-06-24",
+      "player": "—",
+      "market": "Match winner — W2",
+      "label": "Canada to win (1X2 W2)",
+      "odds": 3.435,
+      "stake": 100,
+      "placedAt": "24/06 14:20",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "2"
+      }
+    },
+    {
+      "id": "sp-83506773435",
+      "slipNo": "83506773435",
+      "matchId": "bos-qat-2026-06-24",
+      "player": "—",
+      "market": "Match draw (1X2 X)",
+      "label": "Bosnia v Qatar to be a draw (1X2 X)",
+      "odds": 5.25,
+      "stake": 100,
+      "placedAt": "24/06 14:19",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "X"
       }
     }
   ],
