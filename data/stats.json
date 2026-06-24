@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T21:20:29.370Z",
+    "generatedAt": "2026-06-24T22:20:21.243Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 34
   },
@@ -1251,6 +1251,11 @@
           "matches": 1
         },
         {
+          "name": "Rayan",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Vinícius Júnior",
           "value": 1,
           "matches": 2
@@ -1761,6 +1766,39 @@
         }
       ]
     },
+    "haiti": {
+      "team": "Haiti",
+      "flag": "🇭🇹",
+      "scorers": [
+        {
+          "name": "Lenny Joseph",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "assists": [
+        {
+          "name": "Jean-Kévin Duverne",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "yellowCards": [
+        {
+          "name": "Carlens Arcus",
+          "value": 1
+        },
+        {
+          "name": "Danley Jean Jacques",
+          "value": 1
+        },
+        {
+          "name": "Frantzdy Pierrot",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
     "tunisia": {
       "team": "Tunisia",
       "flag": "🇹🇳",
@@ -1941,27 +1979,6 @@
         },
         {
           "name": "Édgar Yoel Bárcenas",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "haiti": {
-      "team": "Haiti",
-      "flag": "🇭🇹",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Carlens Arcus",
-          "value": 1
-        },
-        {
-          "name": "Danley Jean Jacques",
-          "value": 1
-        },
-        {
-          "name": "Frantzdy Pierrot",
           "value": 1
         }
       ],
@@ -2449,6 +2466,24 @@
           {
             "name": "Breel Embolo",
             "team": "Switzerland"
+          }
+        ]
+      },
+      "760464": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Jean-Kévin Duverne",
+            "team": "Haiti"
+          }
+        ]
+      },
+      "760465": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Rayan",
+            "team": "Brazil"
           }
         ]
       }
