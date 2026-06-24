@@ -6390,6 +6390,89 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83523600667",
+      "slipNo": "83523600667",
+      "matchId": "bos-qat-2026-06-24",
+      "player": "—",
+      "market": "Acca · 4 legs",
+      "label": "Acca — Bosnia–Qatar draw + Switzerland–Canada draw + Morocco 2-0 Haiti + Brazil to beat Scotland (4 legs)",
+      "odds": 124.883,
+      "stake": 50,
+      "placedAt": "25/06 00:09",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "bos-qat-2026-06-24",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "swi-can-2026-06-24",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "mor-hai-2026-06-24",
+            "kind": "correctScore",
+            "home": 2,
+            "away": 0
+          },
+          {
+            "matchId": "sco-bra-2026-06-24",
+            "kind": "result",
+            "outcome": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83523536447",
+      "slipNo": "83523536447",
+      "matchId": "swi-can-2026-06-24",
+      "player": "—",
+      "market": "Acca · 6 legs",
+      "label": "Acca — Switzerland win + Bosnia–Qatar draw + Brazil win + Morocco win + Czechia–Mexico draw + South Korea win (6 legs)",
+      "odds": 144.032,
+      "stake": 50,
+      "placedAt": "25/06 00:08",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "swi-can-2026-06-24",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "bos-qat-2026-06-24",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "sco-bra-2026-06-24",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "mor-hai-2026-06-24",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "cze-mex-2026-06-24",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "sou-sou-2026-06-24",
+            "kind": "result",
+            "outcome": "2"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

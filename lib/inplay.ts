@@ -605,47 +605,106 @@ export function inPlayMultiLeg(
   let dead = false;
   let anyLive = false;
   const parts: string[] = [];
+  // Short fallback label for legs without a player (result / correctScore):
+  // "SWI v CAN" from the matchId prefix.
+  const matchCode = (id: string) => {
+    const [h, a] = id.split("-");
+    return `${(h ?? "").toUpperCase()} v ${(a ?? "").toUpperCase()}`;
+  };
   for (const leg of legs) {
+    // Per-leg display label: scorer legs show the player; result/CS legs show
+    // the match code + the pick.
+    const legLabel =
+      leg.kind === "result"
+        ? `${matchCode(leg.matchId)} ${leg.outcome === "X" ? "X" : leg.outcome === "1" ? "W1" : "W2"}`
+        : leg.kind === "correctScore"
+          ? `${matchCode(leg.matchId)} ${leg.home}-${leg.away}`
+          : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
-      parts.push(`${leg.player} —`);
+      parts.push(`${legLabel} —`);
       continue;
     }
     anyLive = true;
     const done = lm.state === "finished";
+    const cur = lm.score;
+
+    if (leg.kind === "result") {
+      // 1X2 oriented to our fixture home/away — only locks at FT, never "dead"
+      // mid-match (any current standing can still swing).
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const hitting = outcome === leg.outcome;
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "correctScore") {
+      const onScore = eq(cur, leg.home, leg.away);
+      if (done) {
+        if (onScore) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (!reachable(cur, leg.home, leg.away)) {
+        dead = true; // exact scoreline now out of reach
+        parts.push(`${legLabel} ✗`);
+      } else if (onScore) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
     const scored = goalsBy(lm.goals, leg.player).length > 0;
     if (leg.kind === "scored") {
       if (scored) {
         wonCount++;
-        parts.push(`${leg.player} ✓`);
+        parts.push(`${legLabel} ✓`);
       } else if (done) {
         dead = true;
-        parts.push(`${leg.player} ✗`);
+        parts.push(`${legLabel} ✗`);
       } else {
-        parts.push(`${leg.player} —`);
+        parts.push(`${legLabel} —`);
       }
       continue;
     }
     // scoredAndScoreOneOf
-    const cur = lm.score;
     const onGrid = leg.scores.some((s) => eq(cur, s.home, s.away));
     const anyReach = leg.scores.some((s) => reachable(cur, s.home, s.away));
     if (done) {
       if (scored && onGrid) {
         wonCount++;
-        parts.push(`${leg.player} ✓`);
+        parts.push(`${legLabel} ✓`);
       } else {
         dead = true;
-        parts.push(`${leg.player} ✗`);
+        parts.push(`${legLabel} ✗`);
       }
     } else if (scored && !anyReach) {
       dead = true; // scored but the listed scorelines are now out of reach
-      parts.push(`${leg.player} ✗`);
+      parts.push(`${legLabel} ✗`);
     } else if (scored && onGrid) {
       onTrack = true;
-      parts.push(`${leg.player} ⋯`);
+      parts.push(`${legLabel} ⋯`);
     } else {
-      parts.push(`${leg.player} —`);
+      parts.push(`${legLabel} —`);
     }
   }
   const note = parts.join(" · ");

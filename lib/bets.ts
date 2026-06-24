@@ -227,6 +227,10 @@ export type SpecialGrade =
  *   - "scoredAndScoreOneOf": the player scores AND that match's final score is one
  *     of the listed scorelines (the bookmaker "score a goal AND match score …"
  *     OR-of-grids leg). `scores` is oriented to the leg match's listed home/away.
+ *   - "result": that match's full-time 1X2 outcome ("1" home win / "X" draw /
+ *     "2" away win), oriented to the leg match's listed home/away.
+ *   - "correctScore": that match's exact full-time score, oriented to the leg
+ *     match's listed home/away.
  */
 export type MultiLegCond =
   | { matchId: string; kind: "scored"; player: string }
@@ -235,7 +239,9 @@ export type MultiLegCond =
       kind: "scoredAndScoreOneOf";
       player: string;
       scores: { home: number; away: number }[];
-    };
+    }
+  | { matchId: string; kind: "result"; outcome: "1" | "X" | "2" }
+  | { matchId: string; kind: "correctScore"; home: number; away: number };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -646,21 +652,41 @@ export function gradeSpecial(special: Special): BetStatus {
     for (const leg of g.legs) {
       const ev = getEvents(leg.matchId);
       const finished = ev.status === "finished";
-      const scoredIt = goalsBy(ev.goals, leg.player).length > 0;
+
       if (leg.kind === "scored") {
-        if (scoredIt) continue; // leg already won, even mid-match
+        if (goalsBy(ev.goals, leg.player).length > 0) continue; // leg won, even mid-match
         if (finished) return "lost"; // his match ended, no goal → whole acca dead
         pending = true;
         continue;
       }
-      // scoredAndScoreOneOf — the score part can't be final until FT.
+
+      // Every remaining leg kind needs the FINAL score, so it can't decide
+      // until the leg match is finished.
       if (!finished) {
         pending = true;
         continue;
       }
       const ft = getResult(leg.matchId).ft;
-      const onGrid = leg.scores.some((s) => isFinalScore(ft, s.home, s.away));
-      if (!(scoredIt && onGrid)) return "lost";
+
+      if (leg.kind === "scoredAndScoreOneOf") {
+        const scoredIt = goalsBy(ev.goals, leg.player).length > 0;
+        const onGrid = leg.scores.some((s) => isFinalScore(ft, s.home, s.away));
+        if (!(scoredIt && onGrid)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "result") {
+        // 1X2: full-time outcome oriented to the leg match's home/away.
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        if (outcome !== leg.outcome) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "correctScore") {
+        if (!isFinalScore(ft, leg.home, leg.away)) return "lost";
+        continue;
+      }
     }
     return pending ? "pending" : "won";
   }
