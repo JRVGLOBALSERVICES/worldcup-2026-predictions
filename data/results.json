@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T02:20:27.928Z",
+    "generatedAt": "2026-06-24T03:20:26.303Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 27,
     "live": 1
@@ -3290,30 +3290,40 @@
     },
     "col-drc-2026-06-23": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "score": {
         "home": 0,
         "away": 0
       },
       "goals": [],
-      "cards": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Jhon Lucumí",
+          "minute": 56,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-24T02:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
-          "away": 0
+          "home": 3,
+          "away": 2
         },
         "sot": {
-          "home": 4,
+          "home": 7,
           "away": 0
         },
         "shots": {
-          "home": 7,
-          "away": 1
+          "home": 16,
+          "away": 3
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -3321,23 +3331,23 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
-            0,
+            2,
             0
           ]
         },
         "sotByHalf": {
           "home": [
-            4,
-            0
+            6,
+            1
           ],
           "away": [
             0,
@@ -3348,10 +3358,23 @@
           "Jhon Arias": 1,
           "James Rodríguez": 1,
           "Johan Mojica": 1,
-          "Luis Díaz": 1
+          "Luis Díaz": 2,
+          "Gustavo Puerta": 1,
+          "Davinson Sánchez": 1
         },
         "firstGoalMethod": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 27,
+            "firstActionType": "Foul",
+            "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
