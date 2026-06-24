@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T03:20:26.303Z",
+    "generatedAt": "2026-06-24T04:21:54.930Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 27,
-    "live": 1
+    "finished": 28,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -3289,69 +3289,93 @@
       }
     },
     "col-drc-2026-06-23": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
-      "score": {
-        "home": 0,
+      "ft": {
+        "home": 1,
         "away": 0
       },
-      "goals": [],
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Daniel Muñoz",
+          "minute": 75,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [
         {
           "team": "home",
           "player": "Jhon Lucumí",
           "minute": 56,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Charles Pickel",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Jefferson Lerma",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-24T02:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
-          "away": 2
+          "home": 5,
+          "away": 4
         },
         "sot": {
-          "home": 7,
-          "away": 0
+          "home": 9,
+          "away": 1
         },
         "shots": {
-          "home": 16,
-          "away": 3
+          "home": 20,
+          "away": 8
         },
         "yellow": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             2,
-            1
+            3
           ],
           "away": [
             2,
-            0
+            2
           ]
         },
         "sotByHalf": {
           "home": [
             6,
-            1
+            2
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "playerSot": {
@@ -3359,10 +3383,11 @@
           "James Rodríguez": 1,
           "Johan Mojica": 1,
           "Luis Díaz": 2,
-          "Gustavo Puerta": 1,
-          "Davinson Sánchez": 1
+          "Gustavo Puerta": 2,
+          "Davinson Sánchez": 1,
+          "Nathanaël Mbuku": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "waterBreak": {
           "h1": {
             "half": 1,
@@ -3371,6 +3396,16 @@
             "breakEndMinute": 27,
             "firstActionType": "Foul",
             "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot Blocked",
+            "firstActionMinute": 73,
             "isCorner": false,
             "reliable": true
           }
