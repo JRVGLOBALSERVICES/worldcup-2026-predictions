@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T22:20:20.218Z",
+    "generatedAt": "2026-06-24T23:20:20.687Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 30,
     "live": 2
@@ -3693,11 +3693,14 @@
     },
     "sco-bra-2026-06-24": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 2
+      },
       "ft": null,
       "score": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "goals": [
         {
@@ -3707,21 +3710,141 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Vinícius Júnior",
+          "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [],
       "updatedAt": "2026-06-24T22:00:00.000Z",
       "stats": {
         "corners": {
+          "home": 3,
+          "away": 4
+        },
+        "sot": {
+          "home": 1,
+          "away": 6
+        },
+        "shots": {
+          "home": 5,
+          "away": 13
+        },
+        "yellow": {
           "home": 0,
           "away": 0
         },
-        "sot": {
+        "red": {
           "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            3,
+            0
+          ],
+          "away": [
+            4,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            1
+          ],
+          "away": [
+            1,
+            2
+          ]
+        },
+        "playerSot": {
+          "Rayan": 1,
+          "Scott McTominay": 1,
+          "Vinícius Júnior": 2
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 28,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 28,
+            "isCorner": true,
+            "reliable": false
+          }
+        }
+      }
+    },
+    "mor-hai-2026-06-24": {
+      "state": "live",
+      "ht": {
+        "home": 2,
+        "away": 2
+      },
+      "ft": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Yassine Bounou",
+          "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
+        },
+        {
+          "team": "home",
+          "scorer": "Achraf Hakimi",
+          "minute": 38,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Wilson Isidor",
+          "minute": 42,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Ismael Saibari",
+          "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [],
+      "updatedAt": "2026-06-24T22:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 5,
+          "away": 0
+        },
+        "sot": {
+          "home": 7,
           "away": 1
         },
         "shots": {
-          "home": 0,
+          "home": 13,
           "away": 4
         },
         "yellow": {
@@ -3738,8 +3861,8 @@
         },
         "cornersByHalf": {
           "home": [
-            0,
-            0
+            3,
+            2
           ],
           "away": [
             0,
@@ -3748,77 +3871,7 @@
         },
         "sotByHalf": {
           "home": [
-            0,
-            0
-          ],
-          "away": [
-            0,
-            0
-          ]
-        },
-        "playerSot": {},
-        "firstGoalMethod": "shot",
-        "waterBreak": {}
-      }
-    },
-    "mor-hai-2026-06-24": {
-      "state": "live",
-      "ht": null,
-      "ft": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "goals": [
-        {
-          "team": "away",
-          "scorer": "Lenny Joseph",
-          "minute": 10,
-          "assist": null,
-          "penalty": false,
-          "ownGoal": false
-        }
-      ],
-      "cards": [],
-      "updatedAt": "2026-06-24T22:00:00.000Z",
-      "stats": {
-        "corners": {
-          "home": 2,
-          "away": 0
-        },
-        "sot": {
-          "home": 1,
-          "away": 1
-        },
-        "shots": {
-          "home": 3,
-          "away": 2
-        },
-        "yellow": {
-          "home": 0,
-          "away": 0
-        },
-        "red": {
-          "home": 0,
-          "away": 0
-        },
-        "cards": {
-          "home": 0,
-          "away": 0
-        },
-        "cornersByHalf": {
-          "home": [
-            2,
-            0
-          ],
-          "away": [
-            0,
-            0
-          ]
-        },
-        "sotByHalf": {
-          "home": [
-            1,
+            5,
             0
           ],
           "away": [
@@ -3827,10 +3880,24 @@
           ]
         },
         "playerSot": {
-          "Ayoub El Kaabi": 1
+          "Ayoub El Kaabi": 2,
+          "Achraf Hakimi": 1,
+          "Bilal El Khannouss": 1,
+          "Neil El Aynaoui": 1
         },
-        "firstGoalMethod": "shot",
-        "waterBreak": {}
+        "firstGoalMethod": "owngoal",
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

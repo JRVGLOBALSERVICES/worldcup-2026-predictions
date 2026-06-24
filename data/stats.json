@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T22:20:21.243Z",
+    "generatedAt": "2026-06-24T23:20:24.992Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 34
   },
@@ -55,7 +55,15 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 4,
+        "name": "Vinícius Júnior",
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 3,
+        "matches": 2
+      },
+      {
+        "rank": 8,
         "name": "Ayase Ueda",
         "team": "Japan",
         "flag": "🇯🇵",
@@ -63,7 +71,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -71,18 +79,10 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 7,
-        "name": "Cristiano Ronaldo",
-        "team": "Portugal",
-        "flag": "🇵🇹",
         "value": 2,
         "matches": 2
       }
@@ -1212,6 +1212,11 @@
           "name": "Ismael Saibari",
           "value": 2,
           "matches": 2
+        },
+        {
+          "name": "Achraf Hakimi",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1219,6 +1224,11 @@
           "name": "Brahim Díaz",
           "value": 2,
           "matches": 2
+        },
+        {
+          "name": "Achraf Hakimi",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -1234,17 +1244,22 @@
       "flag": "🇧🇷",
       "scorers": [
         {
-          "name": "Matheus Cunha",
-          "value": 2,
+          "name": "Vinícius Júnior",
+          "value": 3,
           "matches": 2
         },
         {
-          "name": "Vinícius Júnior",
+          "name": "Matheus Cunha",
           "value": 2,
           "matches": 2
         }
       ],
       "assists": [
+        {
+          "name": "Bruno Guimarães",
+          "value": 1,
+          "matches": 1
+        },
         {
           "name": "Lucas Paquetá",
           "value": 1,
@@ -1771,7 +1786,7 @@
       "flag": "🇭🇹",
       "scorers": [
         {
-          "name": "Lenny Joseph",
+          "name": "Wilson Isidor",
           "value": 1,
           "matches": 1
         }
@@ -2475,6 +2490,10 @@
           {
             "name": "Jean-Kévin Duverne",
             "team": "Haiti"
+          },
+          {
+            "name": "Achraf Hakimi",
+            "team": "Morocco"
           }
         ]
       },
@@ -2483,6 +2502,10 @@
         "assists": [
           {
             "name": "Rayan",
+            "team": "Brazil"
+          },
+          {
+            "name": "Bruno Guimarães",
             "team": "Brazil"
           }
         ]
