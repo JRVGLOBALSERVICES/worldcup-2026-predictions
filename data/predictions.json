@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T18:24:51.321Z",
+    "generatedAt": "2026-06-24T21:04:48.528Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -6420,206 +6420,208 @@
     "sco-bra-2026-06-24": {
       "win": {
         "pick": "Brazil",
-        "fairOdds": "1.55",
-        "reason": "Brazil top the group, won 4 of last 5 and beat Haiti 3-0, while Scotland must chase the game; but Scotland defend deep and could nick a draw with progression on the line.",
-        "strength": 4
+        "fairOdds": "1.62",
+        "reason": "Brazil field a near-full-strength front line (Vinicius, Paqueta, Cunha, Rayan) and top the group, but with a knockout spot already secured Ancelotti has flagged a measured rather than statement performance, and Scotland defend deep with progression on the line. ~62% implied win prob, not certainty.",
+        "strength": 3
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "2.80",
+        "score": "0-1",
+        "fairOdds": "3.10",
         "alt": "0-0",
-        "altOdds": "2.60",
+        "altOdds": "2.50",
         "strength": 3
       },
       "htft": {
         "pick": "Brazil/Brazil",
-        "fairOdds": "2.40",
+        "fairOdds": "2.70",
         "strength": 3
       },
       "fullTime": {
         "score": "0-2",
-        "fairOdds": "6.50",
-        "strength": 3
+        "fairOdds": "7.00",
+        "strength": 2
       },
       "scorers": [
         {
           "player": "Matheus Cunha",
-          "fairOdds": "2.90",
-          "banker": true,
-          "note": "Central striker, scored twice vs Haiti and in great form",
-          "strength": 4
+          "fairOdds": "3.00",
+          "banker": false,
+          "note": "Leads the line after a record-equalling first-half brace vs Haiti; in form and assured of minutes with Raphinha out, but not a guaranteed banker against a deep-sitting Scotland block.",
+          "strength": 3
         },
         {
           "player": "Vinicius Junior",
-          "fairOdds": "3.10",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "Scored in each of last two WC games; left-flank threat vs Patterson",
-          "strength": 4
-        },
-        {
-          "player": "Lucas Paqueta",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "Advanced playmaker, penalty + set-piece taker with Raphinha out",
-          "strength": 2
-        },
-        {
-          "player": "Scott McTominay",
-          "fairOdds": "6.50",
-          "banker": false,
-          "note": "Scotland's main goal threat from midfield; arrives late in box",
-          "strength": 2
-        }
-      ],
-      "assists": [
-        {
-          "player": "Vinicius Junior",
-          "fairOdds": "4.50",
-          "banker": false,
-          "note": "Creator and finisher on the left",
+          "note": "Involved in 6 goals in 6 WC appearances (3G 3A); pace mismatch on Patterson on the left, sharpened by Miami heat. Brazil's likeliest scorer.",
           "strength": 3
         },
         {
           "player": "Lucas Paqueta",
           "fairOdds": "5.00",
           "banker": false,
-          "note": "Chief chance-creator and set-piece deliverer",
-          "strength": 3
+          "note": "Now Brazil's primary penalty and free-kick taker with Raphinha out; arrives in the box from the No.10 role, adding a penalty/set-piece scoring route.",
+          "strength": 2
         },
         {
-          "player": "Andy Robertson",
-          "fairOdds": "7.50",
+          "player": "Scott McTominay",
+          "fairOdds": "8.50",
           "banker": false,
-          "note": "Captain, Scotland's main width/delivery from left-back",
+          "note": "Scotland's chief goal threat via late runs into the box and set-pieces from Robertson delivery; their realistic route to the goal/nick they may need.",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Andrew Robertson",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Scotland's main creative outlet from left-back; dangerous set-piece and crossing delivery is their primary supply line to McTominay/Shankland.",
+          "strength": 2
+        },
+        {
+          "player": "Lucas Paqueta",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Central creator linking Vinicius and Cunha and on free-kicks/corners now Raphinha is absent.",
+          "strength": 2
+        },
+        {
+          "player": "Vinicius Junior",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Three assists already this tournament; his left-side carries set up chances for Cunha and Rayan arriving.",
           "strength": 2
         }
       ],
       "penalty": {
         "likelihood": "Medium",
         "taker": "Lucas Paqueta",
-        "backup": "Igor Thiago",
-        "note": "Raphinha (primary) ruled out injured; Paqueta/Igor Thiago next in line for Brazil"
+        "backup": "Neymar (if introduced off the bench)",
+        "note": "With Raphinha (first-choice) out, Paqueta is Brazil's primary penalty taker; Neymar, available off the bench per Ancelotti, would likely assume duties if brought on. Scotland defending deep makes a Brazil spot-kick plausible but not high-likelihood."
       },
       "lineups": {
-        "home": "Gunn; Patterson, Hendry, McKenna, Robertson; Ferguson, McGinn, Christie; Gannon-Doak, McTominay; Adams",
-        "away": "Alisson; Danilo, Marquinhos, Gabriel Magalhaes, Douglas Santos; Casemiro, Bruno Guimaraes; Rayan, Lucas Paqueta, Vinicius Junior; Matheus Cunha",
-        "status": "probable"
+        "home": "Gunn; Patterson, Hendry, McKenna, Robertson; McLean, Ferguson, McTominay; Gannon-Doak, Shankland, McGinn",
+        "away": "Alisson; Danilo, Marquinhos, Gabriel Magalhaes, Douglas Santos; Bruno Guimaraes, Casemiro; Rayan, Lucas Paqueta, Vinicius Junior; Matheus Cunha",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Raphinha",
-          "team": "Brazil",
-          "note": "Out injured - hamstring picked up vs Haiti; primary penalty/free-kick taker, replaced by Rayan"
+          "player": "Lawrence Shankland",
+          "team": "Scotland",
+          "note": "Starts up top over the projected Che Adams; a penalty-box finisher who started vs Haiti, sat out Morocco, and is recalled to give Scotland a recognised in-area threat against Brazil."
+        },
+        {
+          "player": "Kenny McLean",
+          "team": "Scotland",
+          "note": "Comes into midfield ahead of Christie, sitting alongside Ferguson and McTominay in a 4-3-3 built to defend deep and spring McTominay's late runs."
+        },
+        {
+          "player": "Scott McKenna",
+          "team": "Scotland",
+          "note": "Passed fit after a calf injury and partners Hendry at centre-back; key to Scotland's low block holding against Vinicius and Cunha."
         },
         {
           "player": "Rayan",
           "team": "Brazil",
-          "note": "19yo Bournemouth winger expected to start on the right in place of Raphinha"
-        },
-        {
-          "player": "Matheus Cunha",
-          "team": "Brazil",
-          "note": "In-form central striker, scored a brace vs Haiti; key goal threat"
+          "note": "19-year-old Bournemouth winger starts on the right in place of the hamstrung Raphinha after a solid cameo vs Haiti; raw but direct, a relative unknown for Patterson/Robertson's side."
         },
         {
           "player": "Vinicius Junior",
           "team": "Brazil",
-          "note": "Scored in both prior WC games; main attacking outlet on the left"
+          "note": "Brazil's player of the tournament (3G 3A in 6 WC apps); pace threat down the left directly against Patterson, exacerbated by Miami heat."
         },
         {
-          "player": "Billy Gilmour",
-          "team": "Scotland",
-          "note": "Out of the tournament - knee injury in pre-tournament friendly; replaced by Tyler Fletcher"
-        },
-        {
-          "player": "Scott McTominay",
-          "team": "Scotland",
-          "note": "Scotland's biggest goal threat from midfield; struck post vs Haiti, won penalty shout vs Morocco"
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "note": "Leads the line after a first-half brace vs Haiti, keeping Igor Thiago on the bench; Brazil's in-form No.9 but facing a packed Scottish box."
         }
       ],
       "confidence": "medium",
-      "strength": 4,
+      "strength": 3,
       "sources": [
-        "https://theanalyst.com/articles/scotland-vs-brazil-prediction-world-cup-2026-match-preview",
-        "https://www.espn.com/soccer/story/_/id/49152740/scotland-brazil-line-ups-world-cup-predicted-xis",
+        "https://www.aljazeera.com/sports/2026/6/24/brazil-vs-scotland-world-cup-2026-preview-prediction-team-news-lineups",
+        "https://www.espn.com/soccer/story/_/id/49123097/ancelotti-neymar-available-brazil-group-finale-vs-scotland",
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C"
+        "https://www.foxsports.com/stories/soccer/2026-world-cup-group-c-scenarios-what-brazil-scotland-morocco-need-advance",
+        "https://www.cbssports.com/soccer/news/brazil-scotland-odds-prediction-time-2026-world-cup-picks-best-bets/",
+        "https://worldsoccertalk.com/world-cup/is-vinicius-junior-playing-scotland-vs-brazil-projected-lineups-for-the-2026-world-cup-group-c-game/"
       ]
     },
     "mor-hai-2026-06-24": {
       "win": {
         "pick": "Morocco",
-        "fairOdds": "1.45",
-        "reason": "Morocco have 4 points and a settled, in-form attack while Haiti are already eliminated, goalless and shipping goals, but Haiti will sit deep and counter so a frustrating draw is a real outcome.",
+        "fairOdds": "1.55",
+        "reason": "Morocco field a full-strength XI (Ouahbi confirmed no rotation, targeting top spot on GD over Brazil) with El Kaabi now a true #9 against an eliminated Haiti sitting in a deep block. But Morocco have scored only once per game (1-1 Brazil, 1-0 Scotland) and Haiti conceded just one to Scotland, so a low-scoring Atlas Lions win is likeliest rather than a romp; the deep-block-vs-possession profile keeps a real draw/upset tail (~35-40%).",
         "strength": 4
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "2.50",
+        "fairOdds": "2.60",
         "alt": "0-0",
-        "altOdds": "2.80",
+        "altOdds": "2.50",
         "strength": 3
       },
       "htft": {
         "pick": "Morocco/Morocco",
-        "fairOdds": "2.30",
+        "fairOdds": "2.50",
         "strength": 3
       },
       "fullTime": {
         "score": "2-0",
-        "fairOdds": "6.00",
+        "fairOdds": "6.50",
         "strength": 2
       },
       "scorers": [
         {
-          "player": "Brahim Diaz",
-          "fairOdds": "2.90",
-          "banker": true,
-          "note": "AFCON top scorer in red-hot form, scored vs Norway; central creator and finisher",
-          "strength": 4
+          "player": "Ayoub El Kaabi",
+          "fairOdds": "2.70",
+          "banker": false,
+          "note": "Morocco's all-time-form striker (35 goals/71 caps; 18+ league goals this season) starts as the recognised #9 after Saibari's false-9 role; raises his scoring odds sharply, but a packed Haiti box and Morocco's one-goal-a-game output mean he is NOT a guaranteed banker.",
+          "strength": 3
         },
         {
           "player": "Ismael Saibari",
-          "fairOdds": "3.60",
+          "fairOdds": "2.90",
           "banker": false,
-          "note": "Scored 70 seconds in vs Scotland; advanced No.9/10 role",
+          "note": "Scored both Morocco goals so far (vs Brazil and the fastest goal of the tournament vs Scotland); now pushed to attacking mid behind El Kaabi, still arriving in the box and in red-hot form.",
+          "strength": 3
+        },
+        {
+          "player": "Brahim Diaz",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Assisted both Morocco goals and was AFCON top scorer (5 in 5); shares penalty duty with Hakimi, so a spot-kick lifts his scorer chance against a side that may concede a pen under sustained pressure.",
           "strength": 3
         },
         {
           "player": "Achraf Hakimi",
-          "fairOdds": "4.50",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Penalty taker and overlapping threat; 99th cap",
-          "strength": 3
-        },
-        {
-          "player": "Eliesse Ben Seghir",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "Likely impact/rotation attacker against a tiring deep block",
+          "note": "Captain on his 99th cap, Morocco's main outlet bombing from RB and a penalty/free-kick option; threat from range and from the spot against a deep block, though primarily a creator here.",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Achraf Hakimi",
-          "fairOdds": "4.00",
+          "player": "Brahim Diaz",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "Primary set-piece/corner taker and right-side supply",
+          "note": "Two assists in two games (both for Saibari); chief creator unpicking a low block, prime assist candidate again.",
           "strength": 3
         },
         {
-          "player": "Brahim Diaz",
+          "player": "Achraf Hakimi",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Chief creator from central areas and set pieces",
+          "note": "Primary corner/free-kick taker plus overlapping crosses from RB; set-piece delivery is a strong assist route versus a packed box.",
           "strength": 3
         },
         {
-          "player": "Hamza Igamane",
-          "fairOdds": "6.00",
+          "player": "Bilal El Khannouss",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Wide creativity and crossing into the box",
+          "note": "Creative left-side No.10 and set-piece specialist; already teed up chances (squared for Saibari's crossbar effort), live for an assist breaking a deep block.",
           "strength": 2
         }
       ],
@@ -6627,52 +6629,54 @@
         "likelihood": "Medium",
         "taker": "Achraf Hakimi",
         "backup": "Brahim Diaz",
-        "note": "Deep Haiti block invites box congestion and penalty-area fouls; Hakimi/Diaz share spot-kicks"
+        "note": "Morocco's sustained pressure on a deep, sometimes-naive Haiti back line (offside-trap holes vs Brazil) makes a penalty plausible; Hakimi (captain) and Brahim Diaz are the listed primary takers, with Soufiane Rahimi a further option off the bench."
       },
       "lineups": {
-        "home": "Bono; Hakimi, Diop, Riad, Mazraoui; Bouaddi, El Aynaoui; Diaz, Ounahi, El Khannouss; Saibari",
-        "away": "Placide; Arcus, Ade, Delcroix, Experience; Deedson, Jacques, Bellegarde, Providence; Isidor, Pierrot",
-        "status": "probable"
+        "home": "Bono; Hakimi, Halhal, Riad, Salah-Eddine; Amrabat, El Aynaoui; Diaz, Saibari, El Khannouss; El Kaabi",
+        "away": "Placide; Duverne, Ade, Delcroix, Experience; Casimir, Bellegarde, Jean Jacques, Providence; Isidor, Joseph",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Brahim Diaz",
+          "player": "Ayoub El Kaabi",
           "team": "Morocco",
-          "note": "In excellent form; recent AFCON top scorer and scored vs Norway, main creative hub"
+          "note": "Now starts as the recognised #9 (Saibari was the false-9 earlier); Morocco's leading scorer with 35 goals in 71 caps and 18+ club goals this season, giving the Atlas Lions a genuine target man against the box."
         },
         {
-          "player": "Nayef Aguerd",
+          "player": "Ismael Saibari",
           "team": "Morocco",
-          "note": "Out of the World Cup squad with groin/pubic bone issue; replaced by Saadane"
+          "note": "Shifts from false-9 to attacking midfield behind El Kaabi; has scored both of Morocco's goals at the tournament, including its fastest-ever World Cup goal vs Scotland."
         },
         {
-          "player": "Youssef En-Nesyri",
+          "player": "Sofyan Amrabat",
           "team": "Morocco",
-          "note": "Surprise omission from the 26-man squad, removing a recognised target striker"
+          "note": "Comes in to anchor the double pivot alongside El Aynaoui, screening for an expected Haiti counter through Isidor's pace."
         },
         {
           "player": "Achraf Hakimi",
           "team": "Morocco",
-          "note": "Captain on 99th cap; primary penalty, free-kick and corner taker"
+          "note": "Captain making his 99th cap; primary set-piece and joint-penalty taker and Morocco's chief attacking outlet from right-back; Anass Salah-Eddine starts at LB in place of Mazraoui."
         },
         {
           "player": "Frantzdy Pierrot",
           "team": "Haiti",
-          "note": "Aerial focal point who nearly equalised vs Scotland; Haiti's main goal threat"
+          "note": "BENCHED despite being Haiti's most prolific attacker (34 goals in 51 caps) and main 6ft4 aerial threat; available as an impact substitute, with Lenny Joseph preferred from the start."
         },
         {
           "player": "Wilson Isidor",
           "team": "Haiti",
-          "note": "Sunderland striker, pace on the counter; Haiti's most likely route to a goal"
+          "note": "Sunderland striker leading the line for an eliminated Haiti who will sit in Migne's deep block; their main counter-attacking outlet via pace, still searching for his first tournament goal."
         }
       ],
       "confidence": "medium",
       "strength": 4,
       "sources": [
-        "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/preview/morocco-vs-haiti-prediction-team-news-lineups_599775.html",
-        "https://www.espn.com/espn/story/_/id/48883710/achraf-hakimi-brahim-diaz-headline-morocco-squad-fifa-world-cup-youssef-en-nesyri-out",
+        "https://www.espn.com/soccer/story/_/id/49141508/fifa-world-cup-2026-morocco-vs-haiti-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups",
+        "https://worldsoccertalk.com/world-cup/is-achraf-hakimi-playing-morocco-vs-haiti-projected-lineups-for-the-2026-world-cup-group-c-game/",
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://www.si.com/soccer/morocco-vs-haiti-world-cup-preview-predictions-lineups-6-24-26"
+        "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/news/ouahbi-faces-rotation-dilemma-as-atlas-lions-eye-top-spot_599936.html",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C",
+        "https://bdnews24.com/sport/world-cup-2026/8302654956af"
       ]
     },
     "cze-mex-2026-06-24": {
