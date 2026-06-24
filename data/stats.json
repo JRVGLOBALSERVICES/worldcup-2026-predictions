@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T19:20:36.895Z",
+    "generatedAt": "2026-06-24T20:20:34.989Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 32
   },
@@ -40,6 +40,14 @@
       },
       {
         "rank": 4,
+        "name": "Johan Manzambi",
+        "team": "Switzerland",
+        "flag": "🇨🇭",
+        "value": 3,
+        "matches": 2
+      },
+      {
+        "rank": 4,
         "name": "Jonathan David",
         "team": "Canada",
         "flag": "🇨🇦",
@@ -47,7 +55,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Ayase Ueda",
         "team": "Japan",
         "flag": "🇯🇵",
@@ -55,7 +63,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -63,7 +71,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -71,18 +79,10 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Cristiano Ronaldo",
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 6,
-        "name": "Crysencio Summerville",
-        "team": "Netherlands",
-        "flag": "🇳🇱",
         "value": 2,
         "matches": 2
       }
@@ -109,6 +109,14 @@
         "name": "Brahim Díaz",
         "team": "Morocco",
         "flag": "🇲🇦",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 3,
+        "name": "Breel Embolo",
+        "team": "Switzerland",
+        "flag": "🇨🇭",
         "value": 2,
         "matches": 2
       },
@@ -157,14 +165,6 @@
         "name": "Martin Ødegaard",
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 3,
-        "name": "Mohamed Salah",
-        "team": "Egypt",
-        "flag": "🇪🇬",
         "value": 2,
         "matches": 2
       }
@@ -987,6 +987,11 @@
       "scorers": [
         {
           "name": "Johan Manzambi",
+          "value": 3,
+          "matches": 2
+        },
+        {
+          "name": "Rubén Vargas",
           "value": 2,
           "matches": 2
         },
@@ -999,18 +1004,18 @@
           "name": "Granit Xhaka",
           "value": 1,
           "matches": 2
-        },
-        {
-          "name": "Rubén Vargas",
-          "value": 1,
-          "matches": 1
         }
       ],
       "assists": [
         {
           "name": "Breel Embolo",
-          "value": 1,
+          "value": 2,
           "matches": 2
+        },
+        {
+          "name": "Johan Manzambi",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "Rubén Vargas",
@@ -1019,6 +1024,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Granit Xhaka",
+          "value": 1
+        },
         {
           "name": "Nico Elvedi",
           "value": 1
@@ -1034,9 +1043,19 @@
           "name": "Ermin Mahmic",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Kerim Alajbegovic",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
+        {
+          "name": "Ivan Basic",
+          "value": 1,
+          "matches": 1
+        },
         {
           "name": "Sead Kolasinac",
           "value": 1,
@@ -1088,6 +1107,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Cyle Larin",
+          "value": 1
+        },
         {
           "name": "Derek Cornelius",
           "value": 1
@@ -1691,6 +1714,40 @@
       ],
       "redCards": []
     },
+    "qatar": {
+      "team": "Qatar",
+      "flag": "🇶🇦",
+      "scorers": [
+        {
+          "name": "Hassan Al-Haydos",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "assists": [
+        {
+          "name": "Edmílson Junior",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "yellowCards": [
+        {
+          "name": "Ahmed Fathy",
+          "value": 1
+        }
+      ],
+      "redCards": [
+        {
+          "name": "Assim Madibo",
+          "value": 1
+        },
+        {
+          "name": "Homam Ahmed",
+          "value": 1
+        }
+      ]
+    },
     "tunisia": {
       "team": "Tunisia",
       "flag": "🇹🇳",
@@ -1875,28 +1932,6 @@
         }
       ],
       "redCards": []
-    },
-    "qatar": {
-      "team": "Qatar",
-      "flag": "🇶🇦",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Ahmed Fathy",
-          "value": 1
-        }
-      ],
-      "redCards": [
-        {
-          "name": "Assim Madibo",
-          "value": 1
-        },
-        {
-          "name": "Homam Ahmed",
-          "value": 1
-        }
-      ]
     },
     "haiti": {
       "team": "Haiti",
@@ -2380,11 +2415,29 @@
       },
       "760462": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Ivan Basic",
+            "team": "Bosnia"
+          },
+          {
+            "name": "Edmílson Junior",
+            "team": "Qatar"
+          }
+        ]
       },
       "760463": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Johan Manzambi",
+            "team": "Switzerland"
+          },
+          {
+            "name": "Breel Embolo",
+            "team": "Switzerland"
+          }
+        ]
       }
     }
   }
