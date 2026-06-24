@@ -367,6 +367,50 @@ async function main() {
     penaltyMissed: topN(Object.values(penMissed), flagFor),
   };
 
+  // ── Per-team top-5 boards (for the match prediction "team form" panels) ─────
+  // Same player tallies as the global boards above, but grouped by team and
+  // capped at 5 each — so a fixture page can show each side's current top
+  // scorers / assisters / bookings without a second ESPN pass. Keyed on the
+  // normalised team name so the site looks it up from fixtures.home.name.
+  const TEAM_TOP = 5;
+  const groupByTeam = (rows) => {
+    const g = {};
+    for (const r of rows) {
+      if (!r.name || !(r.value > 0) || !r.team) continue;
+      (g[norm(r.team)] ??= { team: r.team, list: [] }).list.push(r);
+    }
+    return g;
+  };
+  const top5 = (list) =>
+    list
+      .sort((a, b) => b.value - a.value || a.name.localeCompare(b.name))
+      .slice(0, TEAM_TOP)
+      .map((r) => ({ name: r.name, value: r.value, ...(r.matches != null ? { matches: r.matches } : {}) }));
+
+  const catByTeam = {
+    scorers: groupByTeam(Object.values(mergedScorers)),
+    assists: groupByTeam(Object.values(mergedAssists)),
+    yellowCards: groupByTeam(Object.values(yellow)),
+    redCards: groupByTeam(Object.values(red)),
+  };
+  const byTeam = {};
+  for (const key of new Set(Object.values(catByTeam).flatMap((c) => Object.keys(c)))) {
+    const display =
+      catByTeam.scorers[key]?.team ??
+      catByTeam.assists[key]?.team ??
+      catByTeam.yellowCards[key]?.team ??
+      catByTeam.redCards[key]?.team ??
+      key;
+    byTeam[key] = {
+      team: display,
+      flag: flagFor(display),
+      scorers: top5(catByTeam.scorers[key]?.list ?? []),
+      assists: top5(catByTeam.assists[key]?.list ?? []),
+      yellowCards: top5(catByTeam.yellowCards[key]?.list ?? []),
+      redCards: top5(catByTeam.redCards[key]?.list ?? []),
+    };
+  }
+
   const payload = {
     meta: {
       generatedAt: new Date().toISOString(),
@@ -374,11 +418,12 @@ async function main() {
       finished: finishedEventIds.length,
     },
     categories,
+    byTeam,
     cache: { byEvent },
   };
 
   // Change-detection ignores the timestamp + cache (cache is plumbing, not output).
-  const sig = (p) => JSON.stringify(p.categories);
+  const sig = (p) => JSON.stringify({ categories: p.categories, byTeam: p.byTeam });
   let prevSig = "";
   try {
     prevSig = sig(JSON.parse(readFileSync(STATS_PATH, "utf8")));

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { fixtures, getFixture, getPrediction, getResearch, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
+import { MatchTeamStats } from "@/components/MatchTeamStats";
 import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
 import { LiveProvider } from "@/components/LiveProvider";
@@ -115,6 +116,8 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
           </div>
         )}
       </div>
+
+      <MatchTeamStats fixture={fixture} />
 
       {research && (
         <div className="mt-10 border-t border-line pt-8">

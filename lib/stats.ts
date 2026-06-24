@@ -21,9 +21,25 @@ export type StatCategoryKey =
   | "penaltyScored"
   | "penaltyMissed";
 
+// One player line on a per-team mini-board (no rank/flag — the team owns those).
+export type TeamStatLeader = { name: string; value: number; matches?: number };
+
+// A single team's current top-5 boards, for the match prediction pages.
+export type TeamStatBoards = {
+  team: string;
+  flag: string;
+  scorers: TeamStatLeader[];
+  assists: TeamStatLeader[];
+  yellowCards: TeamStatLeader[];
+  redCards: TeamStatLeader[];
+};
+
 export type StatsFile = {
   meta: { generatedAt: string; source: string; finished: number };
   categories: Record<StatCategoryKey, StatRow[]>;
+  // Keyed on the normalised team name (see teamKey below). Optional so an older
+  // stats.json snapshot without the block still type-checks.
+  byTeam?: Record<string, TeamStatBoards>;
 };
 
 // `cache` (penalty-miss plumbing for the builder) is intentionally not typed —
@@ -50,4 +66,34 @@ export const STAT_CATEGORIES: {
 
 export function getStats(): StatsFile {
   return statsFile;
+}
+
+// Mirror of build-stats.mjs ALIAS/norm — turns a fixture team name into the
+// key build-stats.mjs used for the byTeam block. Keep in sync with that script
+// (and lib/live.ts). Without the alias map, ESPN-spelling teams like "Czechia"
+// or "Türkiye" wouldn't line up with our canonical fixtures spelling.
+const ALIAS: Record<string, string> = {
+  congodr: "drcongo",
+  drc: "drcongo",
+  korearepublic: "southkorea",
+  iranislamicrepublic: "iran",
+  iriran: "iran",
+  turkiye: "turkey",
+  trkiye: "turkey",
+  unitedstates: "usa",
+  unitedstatesofamerica: "usa",
+  czechia: "czechrepublic",
+  capeverde: "caboverde",
+  cotedivoire: "ivorycoast",
+  bosniaherzegovina: "bosnia",
+  curaao: "curacao",
+};
+const teamKey = (s: string): string => {
+  const a = s.toLowerCase().replace(/[^a-z]/g, "");
+  return ALIAS[a] ?? a;
+};
+
+/** Current top-5 scorers / assisters / yellows / reds for one team, or undefined. */
+export function getTeamStats(teamName: string): TeamStatBoards | undefined {
+  return statsFile.byTeam?.[teamKey(teamName)];
 }
