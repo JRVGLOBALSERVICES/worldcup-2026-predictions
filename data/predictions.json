@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T01:24:04.471Z",
+    "generatedAt": "2026-06-24T09:04:40.476Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -6149,6 +6149,780 @@
         "https://www.rotowire.com/soccer/article/colombia-vs-dr-congo-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-119191",
         "https://www.enforcethesport.com/blog/has-26-year-old-colombian-midfielder-lost-his-starting-spot-on-colombias-road-to-the-2026-world-cup",
         "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/portugal-congo-dr-highlights-match-report"
+      ]
+    },
+    "swi-can-2026-06-24": {
+      "win": {
+        "pick": "Switzerland",
+        "fairOdds": "2.70",
+        "reason": "Two well-matched sides level on points with knockout spot already near-secured; Switzerland edges it on tournament pedigree and defensive solidity, but with both possibly managing legs and Canada in scoring form this is close to a coin-flip with real draw risk.",
+        "strength": 2
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.30",
+        "alt": "1-0",
+        "altOdds": "3.40",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Draw/Switzerland",
+        "fairOdds": "5.50",
+        "strength": 2
+      },
+      "fullTime": {
+        "score": "1-1",
+        "fairOdds": "6.50",
+        "strength": 2
+      },
+      "scorers": [
+        {
+          "player": "Breel Embolo",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Swiss focal striker, scored vs Qatar",
+          "strength": 3
+        },
+        {
+          "player": "Jonathan David",
+          "fairOdds": "2.90",
+          "banker": true,
+          "note": "In red-hot form off a hat-trick vs Qatar, nailed-on starter and penalty option",
+          "strength": 4
+        },
+        {
+          "player": "Dan Ndoye",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Pacey Swiss wide threat, key attacker",
+          "strength": 2
+        },
+        {
+          "player": "Cyle Larin",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Two goals in tournament, scores off rebounds",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Ruben Vargas",
+          "fairOdds": "4.80",
+          "banker": false,
+          "note": "Switzerland's primary set-piece/corner deliverer",
+          "strength": 2
+        },
+        {
+          "player": "Granit Xhaka",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Swiss captain dictates play, dead-ball involvement",
+          "strength": 2
+        },
+        {
+          "player": "Tajon Buchanan",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Canada wide creator feeding David/Larin",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Granit Xhaka",
+        "backup": "Breel Embolo",
+        "note": "Xhaka converted a stoppage-time pen vs Bosnia; for Canada, Jonathan David takes spot-kicks"
+      },
+      "lineups": {
+        "home": "Kobel; Widmer, Jaquez, Akanji, Rodriguez; Aebischer, Xhaka, Freuler; Ndoye, Embolo, Vargas (4-3-3); Zakaria/Elvedi on yellows",
+        "away": "Crepeau; Johnston, Bombito, Sigur, Laryea; Buchanan, Eustaquio, Saliba, Ahmed; David, Larin; Davies a doubt (hamstring), Kone out (broken leg)",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Alphonso Davies",
+          "team": "Canada",
+          "note": "Recovering from hamstring strain, likely on bench rather than starting"
+        },
+        {
+          "player": "Ismael Kone",
+          "team": "Canada",
+          "note": "Out for rest of tournament with a broken leg"
+        },
+        {
+          "player": "Jonathan David",
+          "team": "Canada",
+          "note": "Hat-trick vs Qatar, Canada's all-time top scorer and attacking focal point"
+        },
+        {
+          "player": "Denis Zakaria",
+          "team": "Switzerland",
+          "note": "On a yellow card, one booking from suspension"
+        },
+        {
+          "player": "Nico Elvedi",
+          "team": "Switzerland",
+          "note": "On a yellow card, suspension risk"
+        },
+        {
+          "player": "Granit Xhaka",
+          "team": "Switzerland",
+          "note": "Captain and primary penalty taker, scored vs Bosnia"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 2,
+      "sources": [
+        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-canada-prediction-team-news-lineups_599751.html",
+        "https://www.goal.com/en/news/switzerland-canada-world-cup-preview/blt4b338f1933f5739a",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+      ]
+    },
+    "bos-qat-2026-06-24": {
+      "win": {
+        "pick": "Bosnia",
+        "fairOdds": "1.95",
+        "reason": "Bosnia are the stronger side and need a win to advance, but they were poor in a 4-1 loss to Switzerland and lost CB Muharemovic to suspension; Qatar's 6-0 collapse vs Canada makes a Bosnia edge clear though not certain.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "1-0",
+        "fairOdds": "2.60",
+        "alt": "0-0",
+        "altOdds": "2.80",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Bosnia/Bosnia",
+        "fairOdds": "3.20",
+        "strength": 2
+      },
+      "fullTime": {
+        "score": "2-1",
+        "fairOdds": "7.50",
+        "strength": 2
+      },
+      "scorers": [
+        {
+          "player": "Ermedin Demirovic",
+          "fairOdds": "2.90",
+          "banker": false,
+          "note": "Stuttgart striker, designated penalty taker, leads the line for Bosnia",
+          "strength": 3
+        },
+        {
+          "player": "Edin Dzeko",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "40-yo target man, still focal point but age makes him no banker",
+          "strength": 2
+        },
+        {
+          "player": "Almoez Ali",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Qatar all-time top scorer, 12 goals in Asian qualifying",
+          "strength": 3
+        },
+        {
+          "player": "Akram Afif",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Qatar's creator and penalty taker, scores and assists",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Akram Afif",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "Led AFC qualifying with 11 assists; Qatar's chief creator",
+          "strength": 3
+        },
+        {
+          "player": "Esmir Bajraktarevic",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "PSV winger, key wide creator for Bosnia",
+          "strength": 2
+        },
+        {
+          "player": "Sead Kolasinac",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Set-piece flick-ons; assisted opener vs Canada",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Akram Afif",
+        "backup": "Ermedin Demirovic",
+        "note": "Afif is one of WC's cleanest penalty calls (Asian Cup final hat-trick); Demirovic/Tabakovic for Bosnia. Two leaky defences raise spot-kick chances."
+      },
+      "lineups": {
+        "home": "Vasilj; Dedic, Katic, Hadzikadunic, Kolasinac; Bajraktarevic, Tahirovic, Sunjic, Memic; Demirovic, Dzeko",
+        "away": "Abunada; Al Oui, Miguel, Khoukhi, Al Brake; Gaber, Fathy, Laye; Edmilson, Abdurisag, Afif",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Tarik Muharemovic",
+          "team": "Bosnia",
+          "note": "CB sent off vs Switzerland, suspended for this match; Hadzikadunic deputises"
+        },
+        {
+          "player": "Edin Dzeko",
+          "team": "Bosnia",
+          "note": "Captain, 40yo Schalke striker, 6 goals in WC qualifying; intelligence over legs"
+        },
+        {
+          "player": "Ermedin Demirovic",
+          "team": "Bosnia",
+          "note": "Stuttgart forward and penalty taker; in-form attacking outlet"
+        },
+        {
+          "player": "Homam Ahmed",
+          "team": "Qatar",
+          "note": "Sent off in 6-0 loss to Canada, suspended; Sultan Al Brake replaces"
+        },
+        {
+          "player": "Assim Madibo",
+          "team": "Qatar",
+          "note": "Suspended after red vs Canada; Karim Boudiaf expected to come in midfield"
+        },
+        {
+          "player": "Akram Afif",
+          "team": "Qatar",
+          "note": "Talisman, 127 caps/40 goals, primary penalty taker and creator"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 3,
+      "sources": [
+        "https://www.sportsmole.co.uk/football/bosnia-herzegovina/world-cup-2026/preview/bosnia-hvina-vs-qatar-prediction-team-news-lineups_599838.html",
+        "https://www.si.com/soccer/bosnia-herzegovina-vs-qatar-world-cup-preview-predictions-lineups-6-24-26",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+      ]
+    },
+    "sco-bra-2026-06-24": {
+      "win": {
+        "pick": "Brazil",
+        "fairOdds": "1.55",
+        "reason": "Brazil top the group, won 4 of last 5 and beat Haiti 3-0, while Scotland must chase the game; but Scotland defend deep and could nick a draw with progression on the line.",
+        "strength": 4
+      },
+      "halfTime": {
+        "score": "1-0",
+        "fairOdds": "2.80",
+        "alt": "0-0",
+        "altOdds": "2.60",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Brazil/Brazil",
+        "fairOdds": "2.40",
+        "strength": 3
+      },
+      "fullTime": {
+        "score": "0-2",
+        "fairOdds": "6.50",
+        "strength": 3
+      },
+      "scorers": [
+        {
+          "player": "Matheus Cunha",
+          "fairOdds": "2.90",
+          "banker": true,
+          "note": "Central striker, scored twice vs Haiti and in great form",
+          "strength": 4
+        },
+        {
+          "player": "Vinicius Junior",
+          "fairOdds": "3.10",
+          "banker": false,
+          "note": "Scored in each of last two WC games; left-flank threat vs Patterson",
+          "strength": 4
+        },
+        {
+          "player": "Lucas Paqueta",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Advanced playmaker, penalty + set-piece taker with Raphinha out",
+          "strength": 2
+        },
+        {
+          "player": "Scott McTominay",
+          "fairOdds": "6.50",
+          "banker": false,
+          "note": "Scotland's main goal threat from midfield; arrives late in box",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Vinicius Junior",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Creator and finisher on the left",
+          "strength": 3
+        },
+        {
+          "player": "Lucas Paqueta",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Chief chance-creator and set-piece deliverer",
+          "strength": 3
+        },
+        {
+          "player": "Andy Robertson",
+          "fairOdds": "7.50",
+          "banker": false,
+          "note": "Captain, Scotland's main width/delivery from left-back",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Lucas Paqueta",
+        "backup": "Igor Thiago",
+        "note": "Raphinha (primary) ruled out injured; Paqueta/Igor Thiago next in line for Brazil"
+      },
+      "lineups": {
+        "home": "Gunn; Patterson, Hendry, McKenna, Robertson; Ferguson, McGinn, Christie; Gannon-Doak, McTominay; Adams",
+        "away": "Alisson; Danilo, Marquinhos, Gabriel Magalhaes, Douglas Santos; Casemiro, Bruno Guimaraes; Rayan, Lucas Paqueta, Vinicius Junior; Matheus Cunha",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Raphinha",
+          "team": "Brazil",
+          "note": "Out injured - hamstring picked up vs Haiti; primary penalty/free-kick taker, replaced by Rayan"
+        },
+        {
+          "player": "Rayan",
+          "team": "Brazil",
+          "note": "19yo Bournemouth winger expected to start on the right in place of Raphinha"
+        },
+        {
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "note": "In-form central striker, scored a brace vs Haiti; key goal threat"
+        },
+        {
+          "player": "Vinicius Junior",
+          "team": "Brazil",
+          "note": "Scored in both prior WC games; main attacking outlet on the left"
+        },
+        {
+          "player": "Billy Gilmour",
+          "team": "Scotland",
+          "note": "Out of the tournament - knee injury in pre-tournament friendly; replaced by Tyler Fletcher"
+        },
+        {
+          "player": "Scott McTominay",
+          "team": "Scotland",
+          "note": "Scotland's biggest goal threat from midfield; struck post vs Haiti, won penalty shout vs Morocco"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 4,
+      "sources": [
+        "https://theanalyst.com/articles/scotland-vs-brazil-prediction-world-cup-2026-match-preview",
+        "https://www.espn.com/soccer/story/_/id/49152740/scotland-brazil-line-ups-world-cup-predicted-xis",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C"
+      ]
+    },
+    "mor-hai-2026-06-24": {
+      "win": {
+        "pick": "Morocco",
+        "fairOdds": "1.45",
+        "reason": "Morocco have 4 points and a settled, in-form attack while Haiti are already eliminated, goalless and shipping goals, but Haiti will sit deep and counter so a frustrating draw is a real outcome.",
+        "strength": 4
+      },
+      "halfTime": {
+        "score": "1-0",
+        "fairOdds": "2.50",
+        "alt": "0-0",
+        "altOdds": "2.80",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Morocco/Morocco",
+        "fairOdds": "2.30",
+        "strength": 3
+      },
+      "fullTime": {
+        "score": "2-0",
+        "fairOdds": "6.00",
+        "strength": 2
+      },
+      "scorers": [
+        {
+          "player": "Brahim Diaz",
+          "fairOdds": "2.90",
+          "banker": true,
+          "note": "AFCON top scorer in red-hot form, scored vs Norway; central creator and finisher",
+          "strength": 4
+        },
+        {
+          "player": "Ismael Saibari",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Scored 70 seconds in vs Scotland; advanced No.9/10 role",
+          "strength": 3
+        },
+        {
+          "player": "Achraf Hakimi",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Penalty taker and overlapping threat; 99th cap",
+          "strength": 3
+        },
+        {
+          "player": "Eliesse Ben Seghir",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Likely impact/rotation attacker against a tiring deep block",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Achraf Hakimi",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Primary set-piece/corner taker and right-side supply",
+          "strength": 3
+        },
+        {
+          "player": "Brahim Diaz",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Chief creator from central areas and set pieces",
+          "strength": 3
+        },
+        {
+          "player": "Hamza Igamane",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Wide creativity and crossing into the box",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Achraf Hakimi",
+        "backup": "Brahim Diaz",
+        "note": "Deep Haiti block invites box congestion and penalty-area fouls; Hakimi/Diaz share spot-kicks"
+      },
+      "lineups": {
+        "home": "Bono; Hakimi, Diop, Riad, Mazraoui; Bouaddi, El Aynaoui; Diaz, Ounahi, El Khannouss; Saibari",
+        "away": "Placide; Arcus, Ade, Delcroix, Experience; Deedson, Jacques, Bellegarde, Providence; Isidor, Pierrot",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Brahim Diaz",
+          "team": "Morocco",
+          "note": "In excellent form; recent AFCON top scorer and scored vs Norway, main creative hub"
+        },
+        {
+          "player": "Nayef Aguerd",
+          "team": "Morocco",
+          "note": "Out of the World Cup squad with groin/pubic bone issue; replaced by Saadane"
+        },
+        {
+          "player": "Youssef En-Nesyri",
+          "team": "Morocco",
+          "note": "Surprise omission from the 26-man squad, removing a recognised target striker"
+        },
+        {
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "note": "Captain on 99th cap; primary penalty, free-kick and corner taker"
+        },
+        {
+          "player": "Frantzdy Pierrot",
+          "team": "Haiti",
+          "note": "Aerial focal point who nearly equalised vs Scotland; Haiti's main goal threat"
+        },
+        {
+          "player": "Wilson Isidor",
+          "team": "Haiti",
+          "note": "Sunderland striker, pace on the counter; Haiti's most likely route to a goal"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 4,
+      "sources": [
+        "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/preview/morocco-vs-haiti-prediction-team-news-lineups_599775.html",
+        "https://www.espn.com/espn/story/_/id/48883710/achraf-hakimi-brahim-diaz-headline-morocco-squad-fifa-world-cup-youssef-en-nesyri-out",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.si.com/soccer/morocco-vs-haiti-world-cup-preview-predictions-lineups-6-24-26"
+      ]
+    },
+    "cze-mex-2026-06-24": {
+      "win": {
+        "pick": "Mexico",
+        "fairOdds": "2.00",
+        "reason": "Mexico hold home advantage at the Azteca (unbeaten in 8 WC matches there) and superior quality, though likely rotation with qualification secured and a desperate Czechia chasing a win keeps it from a certainty.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.30",
+        "alt": "0-1",
+        "altOdds": "3.40",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Draw/Mexico",
+        "fairOdds": "4.50",
+        "strength": 2
+      },
+      "fullTime": {
+        "score": "1-2",
+        "fairOdds": "8.00",
+        "strength": 2
+      },
+      "scorers": [
+        {
+          "player": "Raul Jimenez",
+          "fairOdds": "3.10",
+          "banker": false,
+          "note": "Mexico's nailed-on striker and penalty taker, already scored vs South Africa; rotation risk caps banker status",
+          "strength": 3
+        },
+        {
+          "player": "Patrik Schick",
+          "fairOdds": "3.40",
+          "banker": true,
+          "note": "Czechia's in-form key striker and main goal threat in a must-win game",
+          "strength": 3
+        },
+        {
+          "player": "Santiago Gimenez",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Likely to feature if Aguirre rotates the attack",
+          "strength": 2
+        },
+        {
+          "player": "Roberto Alvarado",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Pacey winger and set-piece outlet, scoring + assisting threat",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Roberto Alvarado",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Set-piece delivery (assisted Jimenez vs South Africa) and wide creation",
+          "strength": 3
+        },
+        {
+          "player": "Alvaro Fidalgo",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Mexico's chief midfield creator",
+          "strength": 2
+        },
+        {
+          "player": "Lukas Provod",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Czechia's main attacking-midfield creator behind Schick",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Raul Jimenez",
+        "backup": "Alexis Vega",
+        "note": "Jimenez is Mexico's designated penalty taker (5 in qualifying); Vega/Chavez handle dead balls"
+      },
+      "lineups": {
+        "home": "Kovar; Holes, Hranac, L. Krejci; Coufal, Soucek, Darida, Sojka; Provod, Sulc; Schick",
+        "away": "Ochoa; J. Sanchez, Reyes, E. Alvarez, Gallardo; Fidalgo, Romo, Mora; Alvarado, Gimenez, Huerta",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Patrik Schick",
+          "team": "Czechia",
+          "note": "Key central striker and primary goal threat; must deliver in a do-or-die finale"
+        },
+        {
+          "player": "Tomas Soucek",
+          "team": "Czechia",
+          "note": "West Ham midfield anchor, pivotal box-to-box presence and aerial set-piece threat"
+        },
+        {
+          "player": "Lukas Provod",
+          "team": "Czechia",
+          "note": "Main creative outlet behind the striker; carried Czech attacking moments vs South Africa"
+        },
+        {
+          "player": "Raul Jimenez",
+          "team": "Mexico",
+          "note": "34yo lead striker and penalty taker, scored vs South Africa; possible rotation given qualification secured"
+        },
+        {
+          "player": "Edson Alvarez",
+          "team": "Mexico",
+          "note": "Captain and holding midfielder; Aguirre may rest him with knockout spot locked"
+        },
+        {
+          "player": "Santiago Gimenez",
+          "team": "Mexico",
+          "note": "Down the depth chart after a poor Milan season, but in line for minutes if Aguirre rotates"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 3,
+      "sources": [
+        "https://www.espn.com/soccer/story/_/id/49142462/czechia-vs-mexico-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+        "https://www.si.com/soccer/czechia-vs-mexico-world-cup-preview-predictions-lineups-6-24-26",
+        "https://theanalyst.com/articles/czechia-vs-mexico-prediction-world-cup-2026-match-preview",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+      ]
+    },
+    "sou-sou-2026-06-24": {
+      "win": {
+        "pick": "South Korea",
+        "fairOdds": "2.00",
+        "reason": "Korea need only a draw and carry far more attacking quality (Son, Lee Kang-in, Hwang Hee-chan); South Africa must chase, opening space for counters, but Bafana's must-win urgency and deep-block discipline give the draw real weight.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.30",
+        "alt": "0-1",
+        "altOdds": "3.30",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Draw/South Korea",
+        "fairOdds": "4.50",
+        "strength": 2
+      },
+      "fullTime": {
+        "score": "1-2",
+        "fairOdds": "8.00",
+        "strength": 2
+      },
+      "scorers": [
+        {
+          "player": "Hwang Hee-chan",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Pace in behind a chasing SA defence; effective off bench/starting",
+          "strength": 3
+        },
+        {
+          "player": "Lee Kang-in",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Korea's chief creator, takes shots and set pieces",
+          "strength": 3
+        },
+        {
+          "player": "Lyle Foster",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "SA captain and main striker, must-win means SA push forward",
+          "strength": 3
+        },
+        {
+          "player": "Son Heung-min",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Captain and key man at ~33 but goalless this WC and dry in MLS scoring",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Lee Kang-in",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Primary creator and set-piece deliverer for Korea",
+          "strength": 3
+        },
+        {
+          "player": "Son Heung-min",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Joint-most MLS assists this season (9); creator role over scorer",
+          "strength": 3
+        },
+        {
+          "player": "Oswin Appollis",
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "SA's main wide threat and crosser",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Teboho Mokoena",
+        "backup": "Lee Kang-in",
+        "note": "Mokoena converted SA's pen vs Czechia; Appollis/Foster also options. Lee Kang-in likely for Korea."
+      },
+      "lineups": {
+        "home": "Williams; Mudau, Sibisi, Okon, Modiba; Appollis, Mokoena, Mbatha, Mofokeng; Foster (c), Makgopa",
+        "away": "Jo Hyeon-woo; Seol Young-woo, Kim Min-jae, Lee Tae-seok, Kim Moon-hwan; Hwang In-beom, Lee Jae-sung, Lee Kang-in; Hwang Hee-chan, Son Heung-min (c), Oh Hyeon-gyu",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Son Heung-min",
+          "team": "South Korea",
+          "note": "Captain (~33), record caps; goalless this WC and no MLS goals in 13 (9 assists) — key man but not a scoring banker"
+        },
+        {
+          "player": "Lee Kang-in",
+          "team": "South Korea",
+          "note": "PSG playmaker, Korea's main creative and set-piece outlet"
+        },
+        {
+          "player": "Kim Min-jae",
+          "team": "South Korea",
+          "note": "Bayern centre-back anchoring the defence; only a draw needed to qualify"
+        },
+        {
+          "player": "Teboho Mokoena",
+          "team": "South Africa",
+          "note": "Most-capped outfield starter, midfield screen and SA's penalty taker (scored vs Czechia)"
+        },
+        {
+          "player": "Lyle Foster",
+          "team": "South Africa",
+          "note": "Burnley striker and SA captain; main goal threat with Bafana needing a win"
+        },
+        {
+          "player": "Aubrey Modiba",
+          "team": "South Africa",
+          "note": "Left-back returned from injury, completed full training and expected to start"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 3,
+      "sources": [
+        "https://www.mlssoccer.com/competitions/fifa-world-cup/news/south-africa-vs-south-korea-mbokazi-son-battle-for-world-cup-knockout-spot",
+        "https://www.espn.com/soccer/story/_/id/49144478/fifa-world-cup-2026-south-africa-vs-south-korea-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups",
+        "https://theanalyst.com/articles/south-africa-vs-south-korea-prediction-world-cup-2026-match-preview",
+        "https://www.sportsmole.co.uk/football/south-africa/world-cup-2026/predicted-lineups/son-lee-decisions-made-south-korea-predicted-xi-vs-south-africa_599818.html"
       ]
     }
   }
