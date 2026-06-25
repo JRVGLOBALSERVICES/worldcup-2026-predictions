@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T08:20:35.668Z",
+    "generatedAt": "2026-06-25T20:20:19.231Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 38
   },
@@ -1482,6 +1482,11 @@
           "name": "Franck Kessié",
           "value": 1,
           "matches": 2
+        },
+        {
+          "name": "Nicolas Pépé",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1489,6 +1494,11 @@
           "name": "Wilfried Singo",
           "value": 1,
           "matches": 2
+        },
+        {
+          "name": "Yan Diomande",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [],
@@ -1507,6 +1517,11 @@
           "name": "Kai Havertz",
           "value": 2,
           "matches": 2
+        },
+        {
+          "name": "Leroy Sané",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1864,6 +1879,31 @@
       ],
       "redCards": []
     },
+    "ecuador": {
+      "team": "Ecuador",
+      "flag": "🇪🇨",
+      "scorers": [
+        {
+          "name": "Nilson Angulo",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "assists": [
+        {
+          "name": "Pedro Vite",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "yellowCards": [
+        {
+          "name": "Jordy Alcívar",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
     "southkorea": {
       "team": "South Korea",
       "flag": "🇰🇷",
@@ -2029,19 +2069,6 @@
       "yellowCards": [
         {
           "name": "Eren Elmali",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "ecuador": {
-      "team": "Ecuador",
-      "flag": "🇪🇨",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Jordy Alcívar",
           "value": 1
         }
       ],
@@ -2571,6 +2598,28 @@
           {
             "name": "Luis Romo",
             "team": "Mexico"
+          }
+        ]
+      },
+      "760468": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Florian Wirtz",
+            "team": "Germany"
+          },
+          {
+            "name": "Pedro Vite",
+            "team": "Ecuador"
+          }
+        ]
+      },
+      "760473": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Yan Diomande",
+            "team": "Ivory Coast"
           }
         ]
       }

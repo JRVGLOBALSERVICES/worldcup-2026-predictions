@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T08:20:28.430Z",
+    "generatedAt": "2026-06-25T20:20:17.993Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 34,
-    "live": 0
+    "live": 2
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -4230,6 +4230,156 @@
             "reliable": true
           }
         }
+      }
+    },
+    "ecu-ger-2026-06-25": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Leroy Sané",
+          "minute": 2,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Nilson Angulo",
+          "minute": 8,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [],
+      "updatedAt": "2026-06-25T20:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "sot": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 1,
+          "away": 3
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {},
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
+      }
+    },
+    "cur-ivo-2026-06-25": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Nicolas Pépé",
+          "minute": 6,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [],
+      "updatedAt": "2026-06-25T20:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "sot": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 2,
+          "away": 2
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Tahith Chong": 1
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
       }
     }
   }
