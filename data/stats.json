@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T01:20:28.649Z",
+    "generatedAt": "2026-06-25T02:20:37.970Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 36
   },
@@ -1144,6 +1144,11 @@
           "name": "Luis Romo",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Mateo Chávez",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1151,6 +1156,11 @@
           "name": "Érik Lira",
           "value": 1,
           "matches": 2
+        },
+        {
+          "name": "Luis Romo",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "Roberto Alvarado",
@@ -2546,7 +2556,12 @@
       },
       "760467": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Luis Romo",
+            "team": "Mexico"
+          }
+        ]
       }
     }
   }
