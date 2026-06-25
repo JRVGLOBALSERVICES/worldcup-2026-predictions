@@ -3298,6 +3298,32 @@
       "odds": 12,
       "stake": 50,
       "placedAt": "24/06 14:21"
+    },
+    {
+      "id": "b-83579456667",
+      "slipNo": "83579456667",
+      "matchId": "ecu-ger-2026-06-25",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-2",
+      "home": 1,
+      "away": 2,
+      "odds": 6,
+      "stake": 6,
+      "placedAt": "26/06 04:19"
+    },
+    {
+      "id": "b-83579444249",
+      "slipNo": "83579444249",
+      "matchId": "ecu-ger-2026-06-25",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-3",
+      "home": 1,
+      "away": 3,
+      "odds": 8,
+      "stake": 50,
+      "placedAt": "26/06 04:19"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -7421,6 +7447,53 @@
             "kind": "correctScore",
             "home": 1,
             "away": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83579367607",
+      "slipNo": "83579367607",
+      "matchId": "ecu-ger-2026-06-25",
+      "player": "—",
+      "market": "Acca · 6 legs (1X2/BTTS+scorer)",
+      "label": "Acca — Ivory Coast W2 +BTTS-No, Ecuador–Germany Draw, Japan–Sweden Draw +BTTS, Brobbey to score, Australia W2, Türkiye–USA W1 +BTTS (6 legs)",
+      "odds": 1140.381,
+      "stake": 10,
+      "placedAt": "26/06 04:17",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cur-ivo-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "2",
+            "negate": true
+          },
+          {
+            "matchId": "ecu-ger-2026-06-25",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "jap-swe-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "X"
+          },
+          {
+            "matchId": "tun-net-2026-06-25",
+            "kind": "scored",
+            "player": "Brian Brobbey"
+          },
+          {
+            "matchId": "par-aus-2026-06-25",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "tur-usa-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "1"
           }
         ]
       }

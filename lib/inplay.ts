@@ -1,11 +1,11 @@
 import type { Goal, Card, Score, SpecialGrade, BetStatus } from "./bets";
-import { comboDead, evalCombo, playerSotCount } from "./bets";
+import { comboDead, evalCombo, playerSotCount, playerStarted } from "./bets";
 import type { LiveMatch } from "./live";
 
 /** Minimal shapes the graders read — so both the full Bet/Special and the
  *  serialisable client rows satisfy them without casts. */
 export type BetLike = { period: "HT" | "FT"; home: number; away: number };
-export type SpecialLike = { grade?: SpecialGrade; statusOverride?: BetStatus };
+export type SpecialLike = { matchId?: string; grade?: SpecialGrade; statusOverride?: BetStatus };
 
 /**
  * In-play (live) grading. Unlike the static settle in bets.ts — which only knows
@@ -18,9 +18,19 @@ export type SpecialLike = { grade?: SpecialGrade; statusOverride?: BetStatus };
  *  winning  — on track right now (would win if it ended this second)
  *  alive    — still mathematically possible, but not winning right now
  *  dead     — no longer possible (will settle as a loss)
+ *  void     — refunded (stake returned), e.g. first-scorer pick that didn't start
  *  scheduled— not kicked off yet
  */
-export type LiveVerdict = "won" | "lost" | "winning" | "alive" | "dead" | "scheduled";
+export type LiveVerdict = "won" | "lost" | "winning" | "alive" | "dead" | "void" | "scheduled";
+
+/** First-goalscorer grade types that refund when the named player doesn't start. */
+const FIRST_SCORER_VOID_TYPES = new Set<SpecialGrade["type"]>([
+  "firstScorer",
+  "firstScorerAndScore",
+  "firstScorerAndScoreOther",
+  "firstScorerAndResult",
+  "drawAndFirstScorer",
+]);
 
 export type InPlay = { verdict: LiveVerdict; note: string };
 
@@ -77,12 +87,26 @@ export function inPlayBet(bet: BetLike, live: LiveMatch | undefined): InPlay {
 // ── 1xBet player-prop specials ────────────────────────────────────────────────
 export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined): InPlay {
   if (special.statusOverride) {
-    return special.statusOverride === "won"
-      ? { verdict: "won", note: "Won (confirmed)" }
-      : { verdict: "lost", note: "Lost (confirmed)" };
+    if (special.statusOverride === "won") return { verdict: "won", note: "Won (confirmed)" };
+    if (special.statusOverride === "void") return { verdict: "void", note: "Refunded (confirmed)" };
+    return { verdict: "lost", note: "Lost (confirmed)" };
   }
   const g = special.grade;
   if (!g || !live || live.state === "scheduled") return { verdict: "scheduled", note: "Not started" };
+
+  // First-goalscorer refund: a named player who isn't in the confirmed XI can't
+  // be the first scorer, so the leg voids (stake returned) — mirror the settle.
+  if (special.matchId) {
+    if (FIRST_SCORER_VOID_TYPES.has(g.type) && "player" in g && playerStarted(special.matchId, g.player) === false) {
+      return { verdict: "void", note: `${g.player} didn't start — refunded` };
+    }
+    if (g.type === "firstScorerEither") {
+      const states = g.players.map((p) => playerStarted(special.matchId!, p));
+      if (states.length > 0 && states.every((s) => s === false)) {
+        return { verdict: "void", note: "None of the picks started — refunded" };
+      }
+    }
+  }
 
   const goals = live.goals;
   const cards = live.cards;
@@ -797,6 +821,6 @@ export function inPlayMultiLeg(
 /** "If it ended right now": winning/won pay out, everything else loses its stake. */
 export function liveLeans(v: LiveVerdict): "win" | "lose" | "neutral" {
   if (v === "won" || v === "winning") return "win";
-  if (v === "scheduled") return "neutral";
+  if (v === "scheduled" || v === "void") return "neutral"; // void = stake back, no P&L
   return "lose"; // lost, dead, alive all lose if the whistle goes now
 }

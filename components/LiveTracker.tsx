@@ -69,10 +69,10 @@ function money(n: number, currency: string) {
 
 /** Static fallback when no live feed exists — read the cron-filled JSON status. */
 function fromStatic(s: BetStatus): InPlay {
-  return {
-    verdict: s === "won" ? "won" : s === "lost" ? "lost" : "scheduled",
-    note: s === "won" ? "Won" : s === "lost" ? "Lost" : "Awaiting result",
-  };
+  if (s === "won") return { verdict: "won", note: "Won" };
+  if (s === "lost") return { verdict: "lost", note: "Lost" };
+  if (s === "void") return { verdict: "void", note: "Refunded — stake returned" };
+  return { verdict: "scheduled", note: "Awaiting result" };
 }
 function gradeBet(b: BetRow, lm: LiveMatch | undefined): InPlay {
   return lm ? inPlayBet(b, lm) : fromStatic(b.staticStatus);
@@ -181,6 +181,7 @@ function VerdictPill({ verdict }: { verdict: LiveVerdict }) {
     winning: { label: "Winning now", cls: "bg-acid/15 text-acid", dot: "bg-acid", pulse: true },
     alive: { label: "Still on", cls: "bg-amber/15 text-amber", dot: "bg-amber", pulse: true },
     dead: { label: "Can't win now", cls: "bg-rose/10 text-rose", dot: "bg-rose" },
+    void: { label: "Refunded", cls: "bg-amber/15 text-amber", dot: "bg-amber" },
     scheduled: { label: "Not started", cls: "border border-line text-faint", dot: "bg-faint" },
   };
   const s = map[verdict];
@@ -322,9 +323,11 @@ function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
 function Performance({ rows }: { rows: InPlay[] }) {
   const won = rows.filter((r) => r.verdict === "won").length;
   const lost = rows.filter((r) => r.verdict === "lost" || r.verdict === "dead").length;
+  const refunded = rows.filter((r) => r.verdict === "void").length;
   return (
     <span className="font-mono text-[0.66rem] uppercase tracking-wider">
       <span className="text-acid">{won}W</span> · <span className="text-rose">{lost}L</span>
+      {refunded > 0 && <> · <span className="text-amber">{refunded}R</span></>}
     </span>
   );
 }
@@ -353,6 +356,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         if (lean === "win") livePnl += b.potential - b.stake;
         else if (lean === "lose") livePnl -= b.stake;
         if (v === "won") securedReturns += b.potential;
+        else if (v === "void") securedReturns += b.stake; // refund — stake handed back
       }
       for (const s of m.specials) {
         if (s.mirror) continue; // counted on its home card only
@@ -361,6 +365,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         if (lean === "win") livePnl += s.potential - s.stake;
         else if (lean === "lose") livePnl -= s.stake;
         if (v === "won") securedReturns += s.potential;
+        else if (v === "void") securedReturns += s.stake; // refund — stake handed back
       }
     }
   }
@@ -479,7 +484,13 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // from this card's money totals — their stake/return live on the home card.
                   const moneyRows = [...m.bets, ...m.specials];
                   const matchStaked = moneyRows.reduce((x, r) => ((r as SpecialRow).mirror ? x : x + r.stake), 0);
-                  const matchReturned = moneyRows.reduce((x, r, i) => ((r as SpecialRow).mirror || allV[i]?.verdict !== "won" ? x : x + r.potential), 0);
+                  const matchReturned = moneyRows.reduce((x, r, i) => {
+                    if ((r as SpecialRow).mirror) return x;
+                    const v = allV[i]?.verdict;
+                    if (v === "won") return x + r.potential; // full payout
+                    if (v === "void") return x + r.stake; // refund — stake back
+                    return x;
+                  }, 0);
 
                   return (
                     <details key={m.matchId} open={!finished} className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden">
@@ -596,8 +607,9 @@ const VERDICT_ORDER: Record<LiveVerdict, number> = {
   won: 1,
   alive: 2,
   scheduled: 3,
-  dead: 4,
-  lost: 5,
+  void: 4,
+  dead: 5,
+  lost: 6,
 };
 
 /** Re-order rows and their verdicts together by status. Stable within a bucket,

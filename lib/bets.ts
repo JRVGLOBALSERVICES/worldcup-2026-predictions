@@ -1,10 +1,13 @@
 import betsJson from "@/data/bets.json";
 import ruhanJson from "@/data/bets-ruhan.json";
-import { getFixture } from "./data";
+import { getFixture, getPrediction } from "./data";
 import type { Fixture } from "./types";
 
 export type BetPeriod = "HT" | "FT";
-export type BetStatus = "pending" | "won" | "lost";
+// "void" = stake returned (refund). First-goalscorer markets void when the named
+// player doesn't start — universal bookmaker rule (a non-starter can't be first
+// scorer, so the leg is dead and the bet refunds rather than losing).
+export type BetStatus = "pending" | "won" | "lost" | "void";
 
 export type Bet = {
   id: string;
@@ -390,6 +393,8 @@ export type SlipTotals = {
   won: number;
   lost: number;
   pending: number;
+  /** Bets refunded (stake returned) — e.g. first-scorer pick that didn't start. */
+  voided: number;
   settledPnl: number;
   settledStake: number;
   returned: number;
@@ -403,9 +408,17 @@ export function slipTotals(settled: SettledBet[]): SlipTotals {
     won: settled.filter((b) => b.status === "won").length,
     lost: settled.filter((b) => b.status === "lost").length,
     pending: settled.filter((b) => b.status === "pending").length,
+    voided: settled.filter((b) => b.status === "void").length,
     settledPnl: settled.reduce((s, b) => s + b.pnl, 0),
-    settledStake: settled.filter((b) => b.status !== "pending").reduce((s, b) => s + b.stake, 0),
-    returned: settled.filter((b) => b.status === "won").reduce((s, b) => s + b.potential, 0),
+    // A void neither wins nor loses — its stake is no longer at risk, so it
+    // doesn't count as settled-and-staked (P&L on it is 0).
+    settledStake: settled
+      .filter((b) => b.status === "won" || b.status === "lost")
+      .reduce((s, b) => s + b.stake, 0),
+    // Returns = winners' full payout + voided stakes handed back.
+    returned:
+      settled.filter((b) => b.status === "won").reduce((s, b) => s + b.potential, 0) +
+      settled.filter((b) => b.status === "void").reduce((s, b) => s + b.stake, 0),
   };
   return t;
 }
@@ -483,6 +496,32 @@ const goalsBy = (goals: Goal[], player: string) =>
 const assistsBy = (goals: Goal[], player: string) =>
   goals.filter((g) => g.assist && nameMatch(g.assist, player));
 const firstScorer = (goals: Goal[]): string | null => realGoals(goals)[0]?.scorer ?? null;
+
+/**
+ * Did `player` start the match? Reads the confirmed XI from predictions.
+ *   true  — player is in a confirmed starting XI (home or away)
+ *   false — confirmed XIs exist and the player started for NEITHER side
+ *   null  — no confirmed lineup yet, so we can't tell (don't void on a guess)
+ * First-goalscorer markets VOID (stake returned) when a named player doesn't
+ * start; anytime-scorer markets are NOT affected (a sub can still score).
+ */
+export function playerStarted(matchId: string, player: string): boolean | null {
+  const lu = getPrediction(matchId)?.lineups;
+  if (!lu || lu.status !== "confirmed") return null;
+  const xi = [...(lu.homeXI?.players ?? []), ...(lu.awayXI?.players ?? [])];
+  if (xi.length === 0) return null;
+  return xi.some((p) => nameMatch(p.name, player));
+}
+
+/** First-goalscorer grade types that void when the named player doesn't start. */
+const FIRST_SCORER_VOID_TYPES = new Set<SpecialGrade["type"]>([
+  "firstScorer",
+  "firstScorerAndScore",
+  "firstScorerAndScoreOther",
+  "firstScorerAndResult",
+  "drawAndFirstScorer",
+]);
+
 /** Bookings for a player — accent-safe, same matcher as goals/assists. */
 const cardsBy = (cards: Card[], player: string) => cards.filter((c) => nameMatch(c.player, player));
 const isFinalScore = (ft: Score, home: number, away: number) =>
@@ -740,6 +779,18 @@ export function gradeSpecial(special: Special): BetStatus {
   const ft = getResult(special.matchId).ft;
   if (events.status !== "finished") return "pending";
 
+  // First-goalscorer void: if the named player wasn't in the confirmed starting
+  // XI, the leg can't be the first scorer → stake returned, not lost.
+  if (FIRST_SCORER_VOID_TYPES.has(g.type) && "player" in g) {
+    if (playerStarted(special.matchId, g.player) === false) return "void";
+  }
+  if (g.type === "firstScorerEither") {
+    // "A or B to score first" voids only if EVERY named player failed to start.
+    // If any started (or any is still unconfirmed), the bet stands.
+    const states = g.players.map((p) => playerStarted(special.matchId, p));
+    if (states.length > 0 && states.every((s) => s === false)) return "void";
+  }
+
   const { goals } = events;
   const cards = events.cards ?? [];
   let hit = false;
@@ -962,6 +1013,7 @@ export function mergeTotals(a: SlipTotals, b: SlipTotals): SlipTotals {
     won: a.won + b.won,
     lost: a.lost + b.lost,
     pending: a.pending + b.pending,
+    voided: a.voided + b.voided,
     settledPnl: a.settledPnl + b.settledPnl,
     settledStake: a.settledStake + b.settledStake,
     returned: a.returned + b.returned,
