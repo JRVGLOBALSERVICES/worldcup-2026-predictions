@@ -166,9 +166,24 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
   // Exclude mirror copies (same acca shown on multiple cards) so the hero
   // staked/return/count figures don't multi-count it.
   const featuredRows = (featuredDay?.matches ?? []).flatMap((m) => [...m.bets, ...m.specials.filter((s) => !s.mirror)]);
+  // An accumulator is a single combined slip carrying its full payout in one
+  // line (e.g. a 7290.0-odds 5-fold pays RM72,900 off a RM10 stake). Folding
+  // those lottery-ticket potentials into "Max return" balloons it into a
+  // meaningless number that dwarfs the realistic single-bet returns, so the
+  // hero Max-return figure counts SINGLES only — accas are still tracked and
+  // settled individually on their own cards. A bet is identified as an acca by
+  // its multi-leg grade (multiLeg / multiScorers carry a `legs` array).
+  const isAcca = (r: (typeof featuredRows)[number]): boolean =>
+    "grade" in r && Array.isArray((r as { grade?: { legs?: unknown[] } }).grade?.legs);
+  // Max return = best still-achievable payout: drop already-lost / refunded
+  // (void) lines, and drop accas per the rule above.
+  const winnable = (r: (typeof featuredRows)[number]): boolean =>
+    r.staticStatus !== "lost" && r.staticStatus !== "void";
   const todayTotals = {
     staked: featuredRows.reduce((s, r) => s + r.stake, 0),
-    potential: featuredRows.reduce((s, r) => s + r.potential, 0),
+    potential: featuredRows
+      .filter((r) => !isAcca(r) && winnable(r))
+      .reduce((s, r) => s + r.potential, 0),
     score: (featuredDay?.matches ?? []).reduce((n, m) => n + m.bets.length, 0),
     props: (featuredDay?.matches ?? []).reduce((n, m) => n + m.specials.filter((s) => !s.mirror).length, 0),
   };

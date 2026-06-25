@@ -414,8 +414,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           )}
         </p>
 
-        <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Stat label="Total staked" value={money(base.staked, cur)} />
+        <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
           <Stat label={anyMatchLive ? "If it ended now" : "Net P&L"} value={pnlValue} tone={pnlTone} />
           <Stat label="Secured returns" value={money(securedReturns, cur)} tone="acid" />
           <Stat label="Max return" value={money(base.potential, cur)} tone="acid" />
@@ -424,7 +423,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           <span className="rounded-full border border-line px-2.5 py-1">Placed {base.meta.placedLabel} MYT</span>
           <span className="rounded-full border border-line px-2.5 py-1">{base.counts.score} score · {base.counts.props} props today</span>
           <span className="rounded-full border border-line px-2.5 py-1 text-faint">
-            Season: {base.season.counts.score + base.season.counts.props} bets · staked {money(base.season.staked, cur)} · max {money(base.season.potential, cur)}
+            Season: {base.season.counts.score + base.season.counts.props} bets · staked {money(base.season.staked, cur)}
           </span>
           {updatedAt && (
             <span className="rounded-full border border-line px-2.5 py-1">
