@@ -123,34 +123,51 @@ function parseLineup(raw: string): { gk: string; lines: string[][]; formation: s
   let s = (raw || "").trim();
   if (!s) return { gk: "", lines: [], formation: "" };
 
+  // Drop trailing bench/injury notes (" - …").
   s = s.split(/\s[-–—]\s/)[0].trim();
 
+  // A formation can sit as a "3-5-2:" prefix, inside "(4-2-3-1)", or behind a
+  // team-name label like "Bosnia (4-4-2):". Grab the first formation token, then
+  // strip a leading "<label>:" prefix, any parentheticals, and a leftover bare
+  // formation token so only the player names remain.
   let formation = "";
-  const prefix = s.match(/^\s*(\d(?:-\d){1,3})\s*:\s*/);
-  if (prefix) {
-    formation = prefix[1];
-    s = s.slice(prefix[0].length);
-  }
-  const paren = s.match(/\((\d(?:-\d){1,3})[^)]*\)/);
-  if (paren && !formation) formation = paren[1];
+  const fm = s.match(/(\d(?:-\d){1,3})/);
+  if (fm) formation = fm[1];
+  s = s.replace(/^[^:]{0,40}:\s*/, "");
   s = s.replace(/\([^)]*\)/g, " ").trim();
+  s = s.replace(/^\s*\d(?:-\d){1,3}\s*/, "").trim();
+
+  // Build a semicolon grouping AND a fully-flat name list (split on ; or ,).
+  const semiGroups = s
+    .split(";")
+    .map((g) => g.split(",").map((x) => x.trim()).filter(Boolean))
+    .filter((g) => g.length);
+  const flat = s.split(/[;,]/).map((x) => x.trim()).filter(Boolean);
+
+  // Trust the semicolon grouping ONLY when it reads like real formation lines: a
+  // lone keeper, then 2–4 outfield rows of 1–5 each. Strings that put a ";"
+  // between EVERY player (→ 10 one-man rows / "1-1-1-1…") or only after the GK
+  // (→ one 10-man row) fail this and fall back to formation/lineSplit chunking.
+  const outGroups = semiGroups.slice(1);
+  const validGrouping =
+    semiGroups.length >= 3 &&
+    semiGroups[0].length === 1 &&
+    outGroups.length >= 2 &&
+    outGroups.length <= 4 &&
+    outGroups.every((g) => g.length >= 1 && g.length <= 5);
 
   let gk = "";
-  let lines: string[][];
-  if (s.includes(";")) {
-    const groups = s
-      .split(";")
-      .map((g) => g.split(",").map((x) => x.trim()).filter(Boolean))
-      .filter((g) => g.length);
-    gk = groups.shift()?.[0] ?? "";
-    lines = groups;
+  let lines: string[][] = [];
+  if (validGrouping) {
+    gk = semiGroups[0][0];
+    lines = outGroups;
   } else {
-    const names = s.split(",").map((x) => x.trim()).filter(Boolean);
-    gk = names.shift() ?? "";
-    lines = [];
+    gk = flat.shift() ?? "";
+    const fRows = formation.split("-").map(Number).filter((n) => n > 0);
+    const rows = fRows.reduce((a, b) => a + b, 0) === flat.length ? fRows : lineSplit(flat.length);
     let cursor = 0;
-    for (const count of lineSplit(names.length)) {
-      lines.push(names.slice(cursor, cursor + count));
+    for (const count of rows) {
+      lines.push(flat.slice(cursor, cursor + count));
       cursor += count;
     }
   }
