@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T20:20:19.231Z",
+    "generatedAt": "2026-06-25T21:20:31.345Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 38
   },
@@ -248,6 +248,20 @@
       },
       {
         "rank": 2,
+        "name": "Alan Franco",
+        "team": "Ecuador",
+        "flag": "🇪🇨",
+        "value": 1
+      },
+      {
+        "rank": 2,
+        "name": "Aleksandar Pavlovic",
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 1
+      },
+      {
+        "rank": 2,
         "name": "Alessandro Circati",
         "team": "Australia",
         "flag": "🇦🇺",
@@ -286,20 +300,6 @@
         "name": "Aubrey Modiba",
         "team": "South Africa",
         "flag": "🇿🇦",
-        "value": 1
-      },
-      {
-        "rank": 2,
-        "name": "Bernardo Silva",
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 1
-      },
-      {
-        "rank": 2,
-        "name": "Caleb Yirenkyi",
-        "team": "Ghana",
-        "flag": "🇬🇭",
         "value": 1
       }
     ],
@@ -1501,7 +1501,12 @@
           "matches": 1
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Nicolas Pépé",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "germany": {
@@ -1551,7 +1556,12 @@
           "matches": 1
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Aleksandar Pavlovic",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "japan": {
@@ -1898,7 +1908,15 @@
       ],
       "yellowCards": [
         {
+          "name": "Alan Franco",
+          "value": 1
+        },
+        {
           "name": "Jordy Alcívar",
+          "value": 1
+        },
+        {
+          "name": "Piero Hincapié",
           "value": 1
         }
       ],
