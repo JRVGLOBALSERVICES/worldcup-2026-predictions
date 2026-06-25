@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T19:23:47.413Z",
+    "generatedAt": "2026-06-25T22:25:05.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -9025,20 +9025,20 @@
     },
     "jap-swe-2026-06-25": {
       "win": {
-        "pick": "Japan",
-        "fairOdds": "2.45",
-        "reason": "Japan need only a draw to advance and are in excellent form (4-0 v Tunisia, 2-2 v Netherlands), with a disciplined, well-organised Moriyasu setup that suits a controlled game. Sweden must win to leapfrog them and will be forced to commit numbers, but their defence was shredded 5-1 by the Dutch and the Isak-Gyokeres pair can punish any open phase. Draw carries real weight here: it sends Japan through and a cagey, low-event game is plausible if Japan sit deep, so ~45-50% Japan is far from certain.",
+        "pick": "Draw (Japan advance) — lean Japan or Draw double chance",
+        "fairOdds": "3.30",
+        "reason": "Japan need only a draw to reach the Round of 32 while Sweden must win, a real draw-pull dynamic with the confirmed XI: Tomiyasu-Itakura-Ito back three plus Sano and Ao Tanaka screening gives Japan a disciplined block built to absorb and counter through Junya Ito, Doan and Kamada. Sweden's confirmed back three (Lagerbielke-Hien-Lindelof) was carved open 5-1 by the Netherlands and now has to chase the game, exposing space behind for Ueda and the wide runners. Sweden's Gyokeres-Isak duo carries genuine match-winning firepower, so a Sweden win is live, but the most probable single outcome is a tight draw or a narrow Japan win on the break.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
+        "fairOdds": "2.40",
         "alt": "1-0",
-        "altOdds": "4.20",
+        "altOdds": "5.50",
         "strength": 3
       },
       "htft": {
-        "pick": "Draw/Japan",
+        "pick": "Draw/Draw",
         "fairOdds": "5.50",
         "strength": 2
       },
@@ -9050,237 +9050,234 @@
       "scorers": [
         {
           "player": "Ayase Ueda",
-          "fairOdds": "3.40",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "In-form Japan striker and designated penalty taker; brace v Tunisia",
-          "strength": 3
-        },
-        {
-          "player": "Alexander Isak",
-          "fairOdds": "3.30",
-          "banker": false,
-          "note": "Sweden must chase the game; clinical finisher, scored v Tunisia",
+          "note": "Japan's confirmed lone striker and designated penalty taker; thrives running into space behind a high line, exactly what a chasing Sweden back three will offer.",
           "strength": 3
         },
         {
           "player": "Viktor Gyokeres",
-          "fairOdds": "3.20",
+          "fairOdds": "2.80",
           "banker": false,
-          "note": "Leads the line, Sweden penalty taker, 20 intl goals",
+          "note": "Sweden's primary penalty taker and in elite club form (PL top scorer with Arsenal), but kept non-banker against a compact, organised Japan block that limits clean looks.",
           "strength": 3
         },
         {
-          "player": "Daizen Maeda",
+          "player": "Alexander Isak",
+          "fairOdds": "3.20",
+          "banker": false,
+          "note": "Second half of Sweden's elite front pairing and a backup penalty option; drops to link play and can punish transitions if Japan over-commit.",
+          "strength": 3
+        },
+        {
+          "player": "Daichi Kamada",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "High-pressing forward/wing-back threat in transition",
+          "note": "Advanced central role behind Ueda, on free-kick duty; arrives late into the box and is a transition outlet if Japan break on a chasing Sweden.",
           "strength": 2
         }
       ],
       "assists": [
         {
+          "player": "Junya Ito",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Confirmed starter and a designated corner taker; his deliveries and wide running are Japan's main supply line into Ueda against an exposed back three.",
+          "strength": 3
+        },
+        {
           "player": "Ritsu Doan",
           "fairOdds": "5.00",
           "banker": false,
-          "note": "Japan's creative outlet and corner taker",
+          "note": "Starts wide-right and shares corner duties; direct carrier who can release runners on the counter Japan want to play.",
           "strength": 2
         },
         {
           "player": "Anthony Elanga",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Sweden's pace out wide to supply Isak/Gyokeres",
-          "strength": 2
-        },
-        {
-          "player": "Junya Ito",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "Set-piece delivery and right-side service",
+          "note": "Sweden's right-sided runner and a set-piece/corner taker; his pace stretches Japan's left and feeds Gyokeres and Isak as Sweden push forward.",
           "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "low-medium",
+        "likelihood": "medium",
         "taker": "Ayase Ueda (Japan); Viktor Gyokeres (Sweden)",
         "backup": "Daichi Kamada (Japan); Alexander Isak (Sweden)",
-        "note": "Sweden chasing a win may force a more stretched, foul-prone game; Gyokeres converted a play-off penalty v Ukraine, Ueda is Japan's nominated taker"
+        "note": "A must-win Sweden pushing numbers forward against a deep Japan block raises box-congestion and penalty potential at both ends; Ueda strikes for Japan, Gyokeres for Sweden with Isak as the secondary spot-kick option."
       },
       "lineups": {
-        "home": "Zion Suzuki; Takehiro Tomiyasu; Koki Taniguchi; Hiroki Ito; Ritsu Doan; Kaishu Sano; Daichi Kamada; Keito Nakamura; Junya Ito; Daizen Maeda; Ayase Ueda",
-        "away": "Viktor Johansson; Daniel Svensson; Isak Hien; Victor Lindelof; Gabriel Gudmundsson; Yasin Ayari; Mattias Svanberg; Anthony Elanga; Lucas Bergvall; Alexander Isak; Viktor Gyokeres",
-        "status": "probable"
+        "home": "Zion Suzuki; Takehiro Tomiyasu; Ko Itakura; Hiroki Ito; Ritsu Doan; Kodai Sano; Ao Tanaka; Keito Nakamura; Junya Ito; Daichi Kamada; Ayase Ueda",
+        "away": "Kristoffer Nordfeldt; Gustaf Lagerbielke; Isak Hien; Victor Lindelof; Anthony Elanga; Besfort Zeneli; Jesper Karlstrom; Yasin Ayari; Gabriel Gudmundsson; Viktor Gyokeres; Alexander Isak",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Takefusa Kubo",
+          "player": "Ao Tanaka",
           "team": "Japan",
-          "note": "Ruled out injured — key creator and set-piece taker absent"
+          "note": "Confirmed to start at the base of midfield (Leeds United, 4 goals in 31 games this season); sets tempo and shields the back three, the screen that makes Japan's draw-protect block work."
         },
         {
-          "player": "Wataru Endo",
+          "player": "Ko Itakura",
           "team": "Japan",
-          "note": "Withdrew pre-tournament with foot injury; retired from international duty"
+          "note": "Starts as central defender in the back three; aerial and organisational anchor tasked with containing the Gyokeres-Isak duo."
         },
         {
-          "player": "Ayase Ueda",
+          "player": "Zion Suzuki",
           "team": "Japan",
-          "note": "In-form striker and penalty taker; scored twice v Tunisia"
+          "note": "Confirmed No.1; a strong shot-stopping display is central to Japan keeping the clean sheet/draw they need."
+        },
+        {
+          "player": "Kristoffer Nordfeldt",
+          "team": "Sweden",
+          "note": "Confirmed to start in goal as Sweden's No.1 after the 5-1 loss to Netherlands; under pressure to steady a leaky back three."
         },
         {
           "player": "Viktor Gyokeres",
           "team": "Sweden",
-          "note": "Talisman striker and penalty taker; must-win game puts him central"
+          "note": "Primary penalty taker and Sweden's talisman (19 goals in 32 caps, PL top scorer with Arsenal); scored in the 5-1 Tunisia win, the key man Japan must nullify."
         },
         {
-          "player": "Alexander Isak",
+          "player": "Besfort Zeneli",
           "team": "Sweden",
-          "note": "Strike partner; quiet v Netherlands but scored v Tunisia"
-        },
-        {
-          "player": "Isak Hien",
-          "team": "Sweden",
-          "note": "Key centre-back; Sweden's defence conceded five v Netherlands and is under pressure"
+          "note": "Confirmed central midfielder (Union Saint-Gilloise); part of a reshaped midfield that must both create for the front two and protect an exposed defence as Sweden chase the win."
         }
       ],
       "confidence": "medium",
       "sources": [
+        "https://www.espn.com/soccer/story/_/id/49155285/fifa-world-cup-2026-japan-vs-sweden-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups",
         "https://www.rotowire.com/soccer/article/japan-vs-sweden-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-f-119486",
-        "https://www.skysports.com/football/news/12098/13543097/world-cup-2026-group-f-guide-fixtures-schedule-standings-and-odds-for-netherlands-japan-sweden-and-tunisia",
-        "https://www.aljazeera.com/sports/2026/6/21/japan-tunisia-4-0-fifa-world-cup-2026-ayase-ueda-daichi-kamada-junya-ito",
-        "https://www.sportsmole.co.uk/football/japan/world-cup-2026/preview/japan-vs-sweden-prediction-team-news-lineups_599879.html",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
-      ],
-      "strength": 3
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.foxsports.com/stories/soccer/world-cup-group-f-scenarios-what-netherlands-japan-sweden-need-advance"
+      ]
     },
     "tun-net-2026-06-25": {
       "win": {
         "pick": "Netherlands",
-        "fairOdds": "1.55",
-        "reason": "Netherlands top Group F and need a win to lock first seed; they thrashed Sweden 5-1 with Brobbey and Gakpo braces, while Tunisia are already eliminated having conceded nine goals in two games. But Tunisia are a disciplined African side and Renard may revert to a deeper four-man block to restore pride, and the Dutch could rest legs or ease off once seeding looks safe — so a frustrating draw or low-event game is a genuine risk rather than a formality. ~58% win probability, not certainty.",
+        "fairOdds": "1.40",
+        "reason": "Koeman makes just one change (Aké in for van de Ven) from the side that thrashed Sweden 5-1, keeping a near-full-strength front line of Gakpo, Brobbey and Malen against an already-eliminated Tunisia that has conceded nine in two games. Tunisia (now under Renard after Lamouchi's sacking) will likely sit in a deep block to restore pride, so a Dutch win is the clear lean — but a dead-rubber Netherlands chasing only seeding can ease off, and a disciplined low-block carries genuine draw/low-event risk, hence fairOdds well above 'banker' territory.",
         "strength": 4
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "2.70",
+        "fairOdds": "2.80",
         "alt": "0-0",
-        "altOdds": "2.90",
+        "altOdds": "3.40",
         "strength": 3
       },
       "htft": {
         "pick": "Netherlands/Netherlands",
-        "fairOdds": "2.20",
+        "fairOdds": "1.95",
         "strength": 3
       },
       "fullTime": {
         "score": "2-0",
-        "fairOdds": "6.50",
-        "strength": 2
+        "fairOdds": "5.50",
+        "strength": 3
       },
       "scorers": [
         {
-          "player": "Cody Gakpo",
-          "fairOdds": "2.30",
+          "player": "Brian Brobbey",
+          "fairOdds": "2.70",
           "banker": false,
-          "note": "Five WC group-stage goals, level with Van Persie; primary attacking threat from the left and on penalties/corners",
+          "note": "Scored a clinical brace inside 17 mins vs Sweden (5th and 17th); confirmed starting striker and the focal point against a porous Tunisia back line, but a deep block plus possible early substitution in a dead rubber adds risk.",
           "strength": 4
         },
         {
-          "player": "Brian Brobbey",
-          "fairOdds": "2.80",
+          "player": "Cody Gakpo",
+          "fairOdds": "2.50",
           "banker": false,
-          "note": "Scored twice vs Sweden, predatory CF; may be rotated if seeding is settled",
+          "note": "Brace and Man of the Match vs Sweden, and the on-pitch penalty taker with Depay/Weghorst on the bench; threat from the left cutting in, but downgrade if Tunisia pack the box.",
+          "strength": 4
+        },
+        {
+          "player": "Donyell Malen",
+          "fairOdds": "3.20",
+          "banker": false,
+          "note": "Arrives in scintillating form — 14 goals in 18 Serie A games for Roma — and starts on the right; pace and directness exploit a shaky Tunisia defence.",
           "strength": 3
         },
         {
-          "player": "Memphis Depay",
-          "fairOdds": "3.40",
+          "player": "Cody Gakpo (penalty)",
+          "fairOdds": "8.00",
           "banker": false,
-          "note": "Main penalty/free-kick taker; likely involved if rotated in, strong off set pieces",
-          "strength": 3
-        },
-        {
-          "player": "Firas Chaouat",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "Tunisia's likely lone striker; rare outlet for an eliminated side that has barely threatened",
+          "note": "If Netherlands win a spot-kick, Gakpo takes it with Depay off; penalty likelihood is only low-medium against a deep block, hence the long price.",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Memphis Depay",
-          "fairOdds": "3.80",
-          "banker": false,
-          "note": "Netherlands' chief set-piece and creative supplier (penalties, free kicks, corners)",
-          "strength": 3
-        },
-        {
           "player": "Denzel Dumfries",
-          "fairOdds": "4.50",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "Attacking right-back, repeated crossing threat into the box",
+          "note": "Provided two assists vs Sweden and is the Dutch crossing/byline machine from right-back; deliveries into the box are the most likely source against a deep block.",
+          "strength": 4
+        },
+        {
+          "player": "Cody Gakpo",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Created Brobbey's opener vs Sweden with a left-sided cross; doubles as scorer and creator from the left.",
           "strength": 3
         },
         {
-          "player": "Hannibal Mejbri",
-          "fairOdds": "6.00",
+          "player": "Frenkie de Jong",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Tunisia's main creative outlet and set-piece taker, one of few sources of chances",
+          "note": "Deep-lying creator who will see heavy possession against a passive Tunisia block; through-balls to Brobbey/Malen the likely route.",
           "strength": 2
         }
       ],
       "penalty": {
         "likelihood": "low-medium",
-        "taker": "Memphis Depay (Netherlands); Hannibal Mejbri (Tunisia)",
-        "backup": "Cody Gakpo (Netherlands); Ali Abdi (Tunisia)",
-        "note": "Tunisia's deep block can concede penalties; Depay is the master spot-kick taker for NED with Gakpo also confident. Abdi/Mejbri handle any Tunisia penalty."
+        "taker": "Hannibal Mejbri (Tunisia); Cody Gakpo (Netherlands)",
+        "backup": "Ali Abdi / Ismaël Gharbi (Tunisia); Donyell Malen (Netherlands)",
+        "note": "Depay and Weghorst (usual Dutch first-choice spot-kicks) start on the bench, so Gakpo is the on-pitch taker (two pens vs Uzbekistan in warm-up). A deep, retreating Tunisia block keeps the Dutch penalty chance only low-medium; for Tunisia, Mejbri is listed first among their takers."
       },
       "lineups": {
-        "home": "Aymen Dahmen; Mortadha Ben Ouanes; Montassar Talbi; Yassine Meriah; Ali Abdi; Ellyes Skhiri; Aissa Laidouni; Hannibal Mejbri; Elias Saad; Firas Chaouat; Naim Sliti",
-        "away": "Bart Verbruggen; Denzel Dumfries; Virgil van Dijk; Jan Paul van Hecke; Micky van de Ven; Ryan Gravenberch; Tijjani Reijnders; Frenkie de Jong; Donyell Malen; Brian Brobbey; Cody Gakpo",
-        "status": "probable"
+        "home": "Aymen Dahmen; Mohamed Amine Ben Hmida; Montassar Talbi; Yan Valery; Ali Abdi; Rani Khedira; Ellyes Skhiri; Ismaël Gharbi; Hannibal Mejbri; Anis Ben Slimane; Hazem Mastouri",
+        "away": "Bart Verbruggen; Nathan Aké; Virgil van Dijk; Jan Paul van Hecke; Denzel Dumfries; Tijjani Reijnders; Frenkie de Jong; Ryan Gravenberch; Cody Gakpo; Brian Brobbey; Donyell Malen",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
           "player": "Cody Gakpo",
           "team": "Netherlands",
-          "note": "In-form left forward, five WC group-stage goals; primary scoring and set-piece threat"
+          "note": "Brace + MOTM vs Sweden (5 career WC goals); starts left of a front three and is the designated penalty taker with Depay benched — top scorer and assist threat in one."
         },
         {
           "player": "Brian Brobbey",
           "team": "Netherlands",
-          "note": "Scored a brace vs Sweden in his first start; possible rotation risk if seeding is secured"
+          "note": "Confirmed central striker; brace inside 17 mins vs Sweden, only the second pair of Dutch teammates to net multiples in a single WC match alongside Gakpo. Sunderland's PL forward."
         },
         {
-          "player": "Memphis Depay",
+          "player": "Donyell Malen",
           "team": "Netherlands",
-          "note": "Senior penalty/free-kick/corner taker; rotation candidate but key if introduced"
+          "note": "Starts on the right after a stunning Roma half-season (14 goals in 18 Serie A games); pace and directness are a major mismatch versus Tunisia's full-backs."
         },
         {
-          "player": "Virgil van Dijk",
+          "player": "Denzel Dumfries",
           "team": "Netherlands",
-          "note": "Captain and defensive anchor; aerial threat on attacking set pieces"
-        },
-        {
-          "player": "Ellyes Skhiri",
-          "team": "Tunisia",
-          "note": "Captain at base of midfield; no injury concerns, central to Renard's structure"
+          "note": "Two assists vs Sweden; the Inter right-back is the primary width and crossing outlet, the most likely assist source against a packed box."
         },
         {
           "player": "Hannibal Mejbri",
           "team": "Tunisia",
-          "note": "Burnley creator and set-piece taker; one of the few attacking outlets for an eliminated side"
+          "note": "Tunisia's No.10 talisman and first-listed penalty taker; the creative outlet who must spring counters off Mastouri — their only realistic source of an upset moment."
+        },
+        {
+          "player": "Hazem Mastouri",
+          "team": "Tunisia",
+          "note": "Lone striker (Dynamo Makhachkala), 4 goals in 12 caps including vs Brazil; tasked with holding play in a deep block — the system's structural weak point if he can't retain possession."
         }
       ],
       "confidence": "medium",
       "sources": [
         "https://www.sportsmole.co.uk/football/tunisia/world-cup-2026/preview/tunisia-vs-netherlands-prediction-team-news-lineups_599913.html",
-        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/tunisia-s-predicted-lineup-vs-the-netherlands-at-the-fifa-world-cup-2026-2026-06-24",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://www.skysports.com/football/news/12098/13553790/world-cup-2026-netherlands-5-1-sweden-cody-gakpo-and-brian-brobbey-score-doubles-for-dutch-in-group-f-win"
-      ],
-      "strength": 4
+        "https://theanalyst.com/articles/tunisia-vs-netherlands-prediction-world-cup-2026-match-preview",
+        "https://www.goal.com/en/lists/netherlands-world-cup-news-cody-gakpo-uzbekistan-warm-up-injury-scare/blt35c7ef74737f5dbe",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+      ]
     }
   }
 }
