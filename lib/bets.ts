@@ -235,9 +235,15 @@ export type SpecialGrade =
  *   - "cleanSheet": the named side keeps a clean sheet — the OTHER side scores 0
  *     ("Team 2 To Keep Clean Sheet" → side:"away", home scores 0). Oriented to
  *     the leg match's listed home/away.
+ *   - "resultBtts": a 1X2 outcome AND both teams score in that match ("W2 + Both
+ *     Teams To Score"). Oriented to the leg match's listed home/away.
+ *
+ * `negate:true` (on "scored" or "resultBtts") inverts the leg — the bookmaker's
+ * "- No" pick. A negated "scored" leg WINS iff the player does NOT score (dies
+ * the instant he does); a negated "resultBtts" WINS iff NOT(outcome AND btts).
  */
 export type MultiLegCond =
-  | { matchId: string; kind: "scored"; player: string }
+  | { matchId: string; kind: "scored"; player: string; negate?: boolean }
   | {
       matchId: string;
       kind: "scoredAndScoreOneOf";
@@ -247,7 +253,8 @@ export type MultiLegCond =
   | { matchId: string; kind: "result"; outcome: "1" | "X" | "2" }
   | { matchId: string; kind: "correctScore"; home: number; away: number }
   | { matchId: string; kind: "btts" }
-  | { matchId: string; kind: "cleanSheet"; side: "home" | "away" };
+  | { matchId: string; kind: "cleanSheet"; side: "home" | "away" }
+  | { matchId: string; kind: "resultBtts"; outcome: "1" | "X" | "2"; negate?: boolean };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -660,7 +667,15 @@ export function gradeSpecial(special: Special): BetStatus {
       const finished = ev.status === "finished";
 
       if (leg.kind === "scored") {
-        if (goalsBy(ev.goals, leg.player).length > 0) continue; // leg won, even mid-match
+        const scoredIt = goalsBy(ev.goals, leg.player).length > 0;
+        if (leg.negate) {
+          // "- No": he must NOT score. Dies the instant he does; wins at FT blank.
+          if (scoredIt) return "lost";
+          if (finished) continue; // match over, never scored → leg won
+          pending = true;
+          continue;
+        }
+        if (scoredIt) continue; // leg won, even mid-match
         if (finished) return "lost"; // his match ended, no goal → whole acca dead
         pending = true;
         continue;
@@ -705,6 +720,16 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!ft) return "lost";
         const conceded = leg.side === "home" ? ft.away : ft.home;
         if (conceded !== 0) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "resultBtts") {
+        // 1X2 outcome AND both teams scored, oriented to the leg match's
+        // home/away. negate flips it ("- No": NOT(outcome AND btts)).
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        const raw = outcome === leg.outcome && ft.home >= 1 && ft.away >= 1;
+        if (!(leg.negate ? !raw : raw)) return "lost";
         continue;
       }
     }

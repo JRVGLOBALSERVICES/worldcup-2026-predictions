@@ -7211,6 +7211,219 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83557804489",
+      "slipNo": "83557804489",
+      "matchId": "tun-net-2026-06-25",
+      "player": "Brian Brobbey",
+      "market": "Score + match score",
+      "label": "Brobbey to score & score 0-1, 1-2 or 1-3",
+      "odds": 9.5,
+      "stake": 40,
+      "placedAt": "25/06 19:37",
+      "grade": {
+        "type": "scoredAndScoreOneOf",
+        "player": "Brian Brobbey",
+        "scores": [
+          {
+            "home": 0,
+            "away": 1
+          },
+          {
+            "home": 1,
+            "away": 2
+          },
+          {
+            "home": 1,
+            "away": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83557693221",
+      "slipNo": "83557693221",
+      "matchId": "cur-ivo-2026-06-25",
+      "player": "—",
+      "market": "Acca · 6 legs (1X2+BTTS)",
+      "label": "Acca — result+BTTS: Ivory Coast W2, Germany W2, Tunisia–NED No, Japan W1, Australia W2, Türkiye–USA Draw — all +BTTS (6 legs)",
+      "odds": 1252.784,
+      "stake": 10,
+      "placedAt": "25/06 19:34",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cur-ivo-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "2"
+          },
+          {
+            "matchId": "ecu-ger-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "2"
+          },
+          {
+            "matchId": "tun-net-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "2",
+            "negate": true
+          },
+          {
+            "matchId": "jap-swe-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "1"
+          },
+          {
+            "matchId": "par-aus-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "2"
+          },
+          {
+            "matchId": "tur-usa-2026-06-25",
+            "kind": "resultBtts",
+            "outcome": "X"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83557596051",
+      "slipNo": "83557596051",
+      "matchId": "ecu-ger-2026-06-25",
+      "player": "—",
+      "market": "Acca · 6 scorer legs",
+      "label": "Acca — Undav to score; Oulai, Summerville, Gyökeres, Ávalos & Pepi NOT to score (6 legs)",
+      "odds": 6.957,
+      "stake": 30,
+      "placedAt": "25/06 19:30",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cur-ivo-2026-06-25",
+            "kind": "scored",
+            "player": "Oulai",
+            "negate": true
+          },
+          {
+            "matchId": "ecu-ger-2026-06-25",
+            "kind": "scored",
+            "player": "Deniz Undav"
+          },
+          {
+            "matchId": "tun-net-2026-06-25",
+            "kind": "scored",
+            "player": "Crysencio Summerville",
+            "negate": true
+          },
+          {
+            "matchId": "jap-swe-2026-06-25",
+            "kind": "scored",
+            "player": "Viktor Gyokeres",
+            "negate": true
+          },
+          {
+            "matchId": "par-aus-2026-06-25",
+            "kind": "scored",
+            "player": "Gabriel Avalos",
+            "negate": true
+          },
+          {
+            "matchId": "tur-usa-2026-06-25",
+            "kind": "scored",
+            "player": "Ricardo Pepi",
+            "negate": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83557500151",
+      "slipNo": "83557500151",
+      "matchId": "ecu-ger-2026-06-25",
+      "player": "—",
+      "market": "Acca · 6 to score",
+      "label": "Acca — Undav, Amad Diallo, Gakpo, Ueda, Pepi & Enciso all to score anytime (6 legs)",
+      "odds": 278.33,
+      "stake": 10,
+      "placedAt": "25/06 19:27",
+      "grade": {
+        "type": "multiScorers",
+        "legs": [
+          {
+            "matchId": "ecu-ger-2026-06-25",
+            "player": "Deniz Undav"
+          },
+          {
+            "matchId": "cur-ivo-2026-06-25",
+            "player": "Amad Diallo"
+          },
+          {
+            "matchId": "tun-net-2026-06-25",
+            "player": "Cody Gakpo"
+          },
+          {
+            "matchId": "jap-swe-2026-06-25",
+            "player": "Ayase Ueda"
+          },
+          {
+            "matchId": "tur-usa-2026-06-25",
+            "player": "Ricardo Pepi"
+          },
+          {
+            "matchId": "par-aus-2026-06-25",
+            "player": "Enciso"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83557396953",
+      "slipNo": "83557396953",
+      "matchId": "cur-ivo-2026-06-25",
+      "player": "—",
+      "market": "Acca · 5 correct scores",
+      "label": "Acca — correct scores: Curaçao 0-2, Ecuador 0-2, Tunisia 0-2, Japan 1-1, Paraguay 1-1 (5 legs)",
+      "odds": 7290,
+      "stake": 10,
+      "placedAt": "25/06 19:23",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cur-ivo-2026-06-25",
+            "kind": "correctScore",
+            "home": 0,
+            "away": 2
+          },
+          {
+            "matchId": "ecu-ger-2026-06-25",
+            "kind": "correctScore",
+            "home": 0,
+            "away": 2
+          },
+          {
+            "matchId": "tun-net-2026-06-25",
+            "kind": "correctScore",
+            "home": 0,
+            "away": 2
+          },
+          {
+            "matchId": "jap-swe-2026-06-25",
+            "kind": "correctScore",
+            "home": 1,
+            "away": 1
+          },
+          {
+            "matchId": "par-aus-2026-06-25",
+            "kind": "correctScore",
+            "home": 1,
+            "away": 1
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

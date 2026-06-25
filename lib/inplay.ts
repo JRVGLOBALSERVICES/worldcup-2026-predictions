@@ -614,16 +614,21 @@ export function inPlayMultiLeg(
   for (const leg of legs) {
     // Per-leg display label: scorer legs show the player; result/CS legs show
     // the match code + the pick.
+    const w1x2 = (o: "1" | "X" | "2") => (o === "X" ? "X" : o === "1" ? "W1" : "W2");
     const legLabel =
       leg.kind === "result"
-        ? `${matchCode(leg.matchId)} ${leg.outcome === "X" ? "X" : leg.outcome === "1" ? "W1" : "W2"}`
+        ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}`
         : leg.kind === "correctScore"
           ? `${matchCode(leg.matchId)} ${leg.home}-${leg.away}`
           : leg.kind === "btts"
             ? `${matchCode(leg.matchId)} BTTS`
             : leg.kind === "cleanSheet"
               ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"}-CS`
-              : leg.player;
+              : leg.kind === "resultBtts"
+                ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+BTTS${leg.negate ? " (No)" : ""}`
+                : leg.kind === "scored" && leg.negate
+                  ? `No ${leg.player}`
+                  : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
@@ -709,8 +714,46 @@ export function inPlayMultiLeg(
       continue;
     }
 
+    if (leg.kind === "resultBtts") {
+      // 1X2 + both-teams-score, only decidable at FT (any current standing can
+      // swing). negate flips it ("- No"). Mirrors the `result` leg's lock rules.
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const raw = outcome === leg.outcome && cur.home >= 1 && cur.away >= 1;
+      const hitting = leg.negate ? !raw : raw;
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
     const scored = goalsBy(lm.goals, leg.player).length > 0;
     if (leg.kind === "scored") {
+      if (leg.negate) {
+        // "- No": must NOT score. Dies the instant he scores; locks won at FT
+        // blank. Currently-blank shows ⋯ (on track) rather than — (neutral).
+        if (scored) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else if (done) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
+        continue;
+      }
       if (scored) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
