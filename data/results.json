@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T22:20:25.318Z",
+    "generatedAt": "2026-06-25T23:20:23.125Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 36,
-    "live": 0
+    "live": 2
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -4499,6 +4499,149 @@
             "reliable": true
           }
         }
+      }
+    },
+    "jap-swe-2026-06-25": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "goals": [],
+      "cards": [],
+      "updatedAt": "2026-06-25T23:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 0,
+          "away": 2
+        },
+        "sot": {
+          "home": 0,
+          "away": 1
+        },
+        "shots": {
+          "home": 1,
+          "away": 1
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            2,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "playerSot": {
+          "Alexander Bernhardsson": 1
+        },
+        "firstGoalMethod": null,
+        "waterBreak": {}
+      }
+    },
+    "tun-net-2026-06-25": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ellyes Skhiri",
+          "minute": 2,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
+        },
+        {
+          "team": "away",
+          "scorer": "Brian Brobbey",
+          "minute": 6,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [],
+      "updatedAt": "2026-06-25T23:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 1
+        },
+        "sot": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 3,
+          "away": 3
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Anis Slimane": 1
+        },
+        "firstGoalMethod": "owngoal",
+        "waterBreak": {}
       }
     }
   }
