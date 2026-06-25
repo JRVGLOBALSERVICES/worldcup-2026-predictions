@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T02:20:37.970Z",
+    "generatedAt": "2026-06-25T06:20:30.291Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 36
+    "finished": 38
   },
   "categories": {
     "scorers": [
@@ -189,45 +189,45 @@
         "value": 2
       },
       {
-        "rank": 4,
+        "rank": 1,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 2
+      },
+      {
+        "rank": 5,
         "team": "Belgium",
         "flag": "🇧🇪",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Curacao",
         "flag": "🇨🇼",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Ecuador",
         "flag": "🇪🇨",
-        "value": 1
-      },
-      {
-        "rank": 4,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 1
       }
     ],
@@ -283,6 +283,13 @@
       },
       {
         "rank": 2,
+        "name": "Aubrey Modiba",
+        "team": "South Africa",
+        "flag": "🇿🇦",
+        "value": 1
+      },
+      {
+        "rank": 2,
         "name": "Bernardo Silva",
         "team": "Portugal",
         "flag": "🇵🇹",
@@ -293,13 +300,6 @@
         "name": "Caleb Yirenkyi",
         "team": "Ghana",
         "flag": "🇬🇭",
-        "value": 1
-      },
-      {
-        "rank": 2,
-        "name": "Callum McCowatt",
-        "team": "New Zealand",
-        "flag": "🇳🇿",
         "value": 1
       }
     ],
@@ -966,10 +966,19 @@
           "name": "Teboho Mokoena",
           "value": 1,
           "matches": 2
+        },
+        {
+          "name": "Thapelo Maseko",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [],
       "yellowCards": [
+        {
+          "name": "Aubrey Modiba",
+          "value": 1
+        },
         {
           "name": "Teboho Mokoena",
           "value": 1
@@ -1136,6 +1145,11 @@
       "flag": "🇲🇽",
       "scorers": [
         {
+          "name": "Álvaro Fidalgo",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Julián Quiñones",
           "value": 1,
           "matches": 2
@@ -1168,7 +1182,12 @@
           "matches": 2
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Edson Álvarez",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "usa": {
@@ -1953,6 +1972,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Cho Gue-Sung",
+          "value": 1
+        },
         {
           "name": "Lee Kang-In",
           "value": 1
