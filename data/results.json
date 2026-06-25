@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-24T23:20:20.687Z",
+    "generatedAt": "2026-06-25T00:20:31.112Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 30,
-    "live": 2
+    "finished": 32,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -3692,15 +3692,18 @@
       }
     },
     "sco-bra-2026-06-24": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 2
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 3
+      },
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "goals": [
         {
@@ -3718,59 +3721,89 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Matheus Cunha",
+          "minute": 60,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Danilo",
+          "minute": 62,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Fabinho",
+          "minute": 82,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Ryan Christie",
+          "minute": 89,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-24T22:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
-          "away": 4
+          "home": 7,
+          "away": 7
         },
         "sot": {
-          "home": 1,
-          "away": 6
+          "home": 5,
+          "away": 9
         },
         "shots": {
-          "home": 5,
-          "away": 13
+          "home": 14,
+          "away": 21
         },
         "yellow": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 2
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
             3,
-            0
+            4
           ],
           "away": [
             4,
-            0
+            3
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            1
+            5
           ],
           "away": [
             1,
-            2
+            4
           ]
         },
         "playerSot": {
           "Rayan": 1,
-          "Scott McTominay": 1,
-          "Vinícius Júnior": 2
+          "Scott McTominay": 3,
+          "Vinícius Júnior": 3,
+          "Lewis Ferguson": 1,
+          "Anthony Ralston": 1,
+          "Neymar": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -3783,19 +3816,32 @@
             "firstActionMinute": 28,
             "isCorner": true,
             "reliable": false
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
     },
     "mor-hai-2026-06-24": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 2,
         "away": 2
       },
-      "ft": null,
+      "ft": {
+        "home": 4,
+        "away": 2
+      },
       "score": {
-        "home": 2,
+        "home": 4,
         "away": 2
       },
       "goals": [
@@ -3830,26 +3876,61 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Soufiane Rahimi",
+          "minute": 77,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Gessime Yassine",
+          "minute": 89,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Johny Placide",
+          "minute": 78,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Duckens Nazon",
+          "minute": 79,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Josué Casimir",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-24T22:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 5,
-          "away": 0
-        },
-        "sot": {
-          "home": 7,
+          "home": 9,
           "away": 1
         },
+        "sot": {
+          "home": 11,
+          "away": 2
+        },
         "shots": {
-          "home": 13,
-          "away": 4
+          "home": 22,
+          "away": 9
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 3
         },
         "red": {
           "home": 0,
@@ -3857,33 +3938,34 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 3
         },
         "cornersByHalf": {
           "home": [
             3,
-            2
+            6
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             5,
-            0
+            2
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "playerSot": {
           "Ayoub El Kaabi": 2,
-          "Achraf Hakimi": 1,
-          "Bilal El Khannouss": 1,
-          "Neil El Aynaoui": 1
+          "Achraf Hakimi": 2,
+          "Bilal El Khannouss": 2,
+          "Neil El Aynaoui": 1,
+          "Duckens Nazon": 1
         },
         "firstGoalMethod": "owngoal",
         "waterBreak": {
@@ -3894,6 +3976,16 @@
             "breakEndMinute": 25,
             "firstActionType": "Foul",
             "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Offside",
+            "firstActionMinute": 71,
             "isCorner": false,
             "reliable": true
           }
