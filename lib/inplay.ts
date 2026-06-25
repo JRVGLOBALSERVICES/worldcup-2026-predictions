@@ -619,7 +619,11 @@ export function inPlayMultiLeg(
         ? `${matchCode(leg.matchId)} ${leg.outcome === "X" ? "X" : leg.outcome === "1" ? "W1" : "W2"}`
         : leg.kind === "correctScore"
           ? `${matchCode(leg.matchId)} ${leg.home}-${leg.away}`
-          : leg.player;
+          : leg.kind === "btts"
+            ? `${matchCode(leg.matchId)} BTTS`
+            : leg.kind === "cleanSheet"
+              ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"}-CS`
+              : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
@@ -669,6 +673,38 @@ export function inPlayMultiLeg(
         parts.push(`${legLabel} ⋯`);
       } else {
         parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "btts") {
+      // Both teams score — goals only accrue, so it locks WON once both have
+      // scored; can't die early (a side on 0 can still score), lost at FT short.
+      if (cur.home >= 1 && cur.away >= 1) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "cleanSheet") {
+      // Named side keeps a clean sheet — dies the instant the other side scores
+      // (goals don't come off), locks WON only at FT with the other side on 0.
+      const conceded = leg.side === "home" ? cur.away : cur.home;
+      if (conceded > 0) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else if (done) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
       }
       continue;
     }

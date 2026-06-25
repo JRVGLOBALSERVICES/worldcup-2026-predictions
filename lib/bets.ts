@@ -231,6 +231,10 @@ export type SpecialGrade =
  *     "2" away win), oriented to the leg match's listed home/away.
  *   - "correctScore": that match's exact full-time score, oriented to the leg
  *     match's listed home/away.
+ *   - "btts": both teams score in that match (final shows ≥1 each).
+ *   - "cleanSheet": the named side keeps a clean sheet — the OTHER side scores 0
+ *     ("Team 2 To Keep Clean Sheet" → side:"away", home scores 0). Oriented to
+ *     the leg match's listed home/away.
  */
 export type MultiLegCond =
   | { matchId: string; kind: "scored"; player: string }
@@ -241,7 +245,9 @@ export type MultiLegCond =
       scores: { home: number; away: number }[];
     }
   | { matchId: string; kind: "result"; outcome: "1" | "X" | "2" }
-  | { matchId: string; kind: "correctScore"; home: number; away: number };
+  | { matchId: string; kind: "correctScore"; home: number; away: number }
+  | { matchId: string; kind: "btts" }
+  | { matchId: string; kind: "cleanSheet"; side: "home" | "away" };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -685,6 +691,20 @@ export function gradeSpecial(special: Special): BetStatus {
 
       if (leg.kind === "correctScore") {
         if (!isFinalScore(ft, leg.home, leg.away)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "btts") {
+        // Both teams scored in that match.
+        if (!ft || !(ft.home >= 1 && ft.away >= 1)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "cleanSheet") {
+        // The named side conceded zero (the OTHER side scored 0).
+        if (!ft) return "lost";
+        const conceded = leg.side === "home" ? ft.away : ft.home;
+        if (conceded !== 0) return "lost";
         continue;
       }
     }
