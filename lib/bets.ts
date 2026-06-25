@@ -777,10 +777,12 @@ export function gradeSpecial(special: Special): BetStatus {
 
   const events = getEvents(special.matchId);
   const ft = getResult(special.matchId).ft;
-  if (events.status !== "finished") return "pending";
 
-  // First-goalscorer void: if the named player wasn't in the confirmed starting
-  // XI, the leg can't be the first scorer → stake returned, not lost.
+  // First-goalscorer void is known the MOMENT the XI is confirmed — it does not
+  // depend on the match being finished. Resolve it BEFORE the "not finished →
+  // pending" gate, so the static/SSR verdict is "void" (Refunded) right away
+  // instead of "Awaiting result" until the live poll catches it. Mirrors the
+  // ordering in inPlaySpecial, where the void gate also sits before everything.
   if (FIRST_SCORER_VOID_TYPES.has(g.type) && "player" in g) {
     if (playerStarted(special.matchId, g.player) === false) return "void";
   }
@@ -790,6 +792,8 @@ export function gradeSpecial(special: Special): BetStatus {
     const states = g.players.map((p) => playerStarted(special.matchId, p));
     if (states.length > 0 && states.every((s) => s === false)) return "void";
   }
+
+  if (events.status !== "finished") return "pending";
 
   const { goals } = events;
   const cards = events.cards ?? [];
