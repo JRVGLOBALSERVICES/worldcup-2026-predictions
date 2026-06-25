@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T09:05:26.412Z",
+    "generatedAt": "2026-06-25T19:04:48.121Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -7202,21 +7202,21 @@
     "ecu-ger-2026-06-25": {
       "win": {
         "pick": "Germany",
-        "fairOdds": "1.95",
-        "reason": "Germany are already through as group winners with six points and will rotate heavily, while Ecuador must win to have any chance of advancing and will throw caution forward late. Germany's attacking depth (Undav already 3 goals off the bench) makes them favourites, but Ecuador are the toughest side to break down in world football under Beccacece — just four goals conceded across his reign and unbeaten in 11 qualifiers conceding only five. A rotated German XI against a deep, disciplined block carries real draw/upset risk, so ~52-55% win probability is no certainty.",
+        "fairOdds": "2.05",
+        "reason": "Germany field a near-first-choice XI (Neuer, Kimmich, Tah, Rudiger, Sane, Musiala, Wirtz, Havertz) after two dominant wins and 9 goals, so on quality they should edge a possession-heavy game. But Ecuador are the toughest defensive side in the field, having conceded just five goals in 18 CONMEBOL qualifiers and only two competitively under Beccacece, with Pacho, Hincapie and Ordonez forming a compact, low block. Ecuador must win to have any chance, but their attack has been blunt (0 goals in two games), so this projects as a grind Germany wins narrowly rather than comfortably. Expect roughly a 53-55% German win probability, leaving genuine room for a draw or a smash-and-grab Ecuador result.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
+        "fairOdds": "2.20",
         "alt": "1-0",
-        "altOdds": "4.20",
+        "altOdds": "4.00",
         "strength": 3
       },
       "htft": {
         "pick": "Draw/Germany",
-        "fairOdds": "4.50",
-        "strength": 2
+        "fairOdds": "4.20",
+        "strength": 3
       },
       "fullTime": {
         "score": "1-0",
@@ -7225,31 +7225,31 @@
       },
       "scorers": [
         {
-          "player": "Deniz Undav",
-          "fairOdds": "3.20",
+          "player": "Kai Havertz",
+          "fairOdds": "3.30",
           "banker": false,
-          "note": "In red-hot form with 3 goals in 2 games off the bench; likely starts or impacts again",
+          "note": "Leads the line as the false-nine/striker and is Germany's primary penalty taker, so he carries both open-play and spot-kick scoring routes against a packed Ecuador box.",
           "strength": 3
         },
         {
-          "player": "Nick Woltemade",
+          "player": "Florian Wirtz",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "Has rediscovered form late in the season and already contributed in the group stage; his between-the-lines movement is Germany's best tool to unlock a deep block.",
+          "strength": 3
+        },
+        {
+          "player": "Jamal Musiala",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Back to starting after his long leg-injury recovery; dribbling in tight spaces is exactly what's needed versus a compact defence, though sharpness is a question after bench minutes.",
+          "strength": 2
+        },
+        {
+          "player": "Leroy Sane",
           "fairOdds": "4.20",
           "banker": false,
-          "note": "Top WC qualifying scorer (4 goals) yet to feature in USA; due minutes amid rotation",
-          "strength": 2
-        },
-        {
-          "player": "Enner Valencia",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "Ecuador's all-time top scorer one goal from 50; main aerial/penalty threat but team yet to score",
-          "strength": 2
-        },
-        {
-          "player": "Gonzalo Plata",
-          "fairOdds": "6.00",
-          "banker": false,
-          "note": "Ecuador's most dangerous wide outlet on the counter against a rotated back line",
+          "note": "Provides width and pace on the right with Gnabry out; his cut-inside shot is a live threat if Ecuador's full-backs tuck narrow.",
           "strength": 2
         }
       ],
@@ -7258,73 +7258,77 @@
           "player": "Florian Wirtz",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Primary creator and set-piece taker; chief supply line if he starts",
+          "note": "Germany's chief creator from the left/central pockets; most likely to thread the final ball against a low block.",
           "strength": 3
         },
         {
-          "player": "Moises Caicedo",
-          "fairOdds": "6.50",
+          "player": "Joshua Kimmich",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Ecuador's midfield engine; must drive play forward in a must-win",
-          "strength": 2
+          "note": "Set-piece deliverer and deep playmaker from right-back; corners and switches are a key route to break down Ecuador.",
+          "strength": 3
         },
         {
-          "player": "Nadiem Amiri",
-          "fairOdds": "7.00",
+          "player": "David Raum",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "Expected to start in a rotated midfield with licence to create",
+          "note": "Overlapping left-back whose crossing volume is a primary supply line if Germany pin Ecuador deep.",
           "strength": 2
         }
       ],
       "penalty": {
         "likelihood": "low-medium",
-        "taker": "Joshua Kimmich (Germany); Enner Valencia (Ecuador)",
-        "backup": "Kai Havertz (Germany); Pedro Vite (Ecuador)",
-        "note": "Kimmich first-choice with Havertz next; both may be rested in rotation, so the pecking order could shift. Ecuador rarely win penalties but Valencia would take any spot-kick for them."
+        "taker": "Kai Havertz; Enner Valencia",
+        "backup": "Joshua Kimmich; Moises Caicedo",
+        "note": "Havertz took both penalties at Euro 2024 and converted vs Ghana in March, making him Germany's first choice with Kimmich next in line; Ecuador's veteran Valencia is the established taker. A spot-kick is plausible given Germany's heavy possession into a crowded box but far from likely, hence low-medium."
       },
       "lineups": {
-        "home": "Hernan Galindez; Piero Hincapie; Willian Pacho; Joel Ordonez; John Yeboah; Jordy Alcivar; Moises Caicedo; Pedro Vite; Alan Minda; Enner Valencia; Gonzalo Plata",
-        "away": "Oliver Baumann; Waldemar Anton; Malick Thiaw; Antonio Ruediger; David Raum; Leon Goretzka; Angelo Stiller; Nadiem Amiri; Florian Wirtz; Maximilian Beier; Deniz Undav",
-        "status": "probable"
+        "home": "Hernan Galindez; Joel Ordonez; Willian Pacho; Piero Hincapie; Alan Franco; Moises Caicedo; Pedro Vite; John Yeboah; Nilson Angulo; Gonzalo Plata; Enner Valencia",
+        "away": "Manuel Neuer; Joshua Kimmich; Jonathan Tah; Antonio Ruediger; David Raum; Aleksandar Pavlovic; Felix Nmecha; Leroy Sane; Jamal Musiala; Florian Wirtz; Kai Havertz",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Nico Schlotterbeck",
-          "team": "Germany",
-          "note": "Ruled out for the rest of the tournament with an ankle ligament injury suffered vs Ivory Coast"
-        },
-        {
           "player": "Deniz Undav",
           "team": "Germany",
-          "note": "Breakout star, 3 goals in 2 games all off the bench; may earn a start"
+          "note": "In-form with 3 goals off the bench (Finland, Curacao, Ivory Coast) but starts on the bench again; he is Germany's most dangerous late-game changer if they need to chase a winner."
         },
         {
-          "player": "Florian Wirtz",
+          "player": "Jamal Musiala",
           "team": "Germany",
-          "note": "Key creator and free-kick/corner taker; central to Germany's chance creation"
+          "note": "Starting after recovering from last July's broken leg/dislocated ankle; he has mostly played from the bench recently, so match sharpness over 90 minutes is uncertain and he may be subbed."
         },
         {
-          "player": "Enner Valencia",
-          "team": "Ecuador",
-          "note": "36yo captain and all-time top scorer, one goal short of 50; leads the line and penalties"
-        },
-        {
-          "player": "Moises Caicedo",
-          "team": "Ecuador",
-          "note": "Midfield anchor; must dominate the centre in a do-or-die match"
+          "player": "Manuel Neuer",
+          "team": "Germany",
+          "note": "Came out of international retirement for the tournament; behind a side already qualified, he could face long spells of inactivity against Ecuador's low-volume attack."
         },
         {
           "player": "Willian Pacho",
           "team": "Ecuador",
-          "note": "PSG centre-back, spine of the meanest defence in world football (4 conceded under Beccacece)"
+          "note": "Anchors a backline that conceded only five goals in 18 qualifiers; alongside Hincapie and Ordonez he forms the disciplined block that makes an Ecuador clean sheet and a draw genuinely live."
+        },
+        {
+          "player": "Enner Valencia",
+          "team": "Ecuador",
+          "note": "At 36 with 49 international goals, he is Ecuador's main outlet and penalty taker, but as an aging veteran he is explicitly not a banker scorer; his threat is on the break, not sustained pressure."
+        },
+        {
+          "player": "Gonzalo Plata",
+          "team": "Ecuador",
+          "note": "Ecuador's most creative wide forward and their best chance to produce the goal they need; Ecuador must win after a goalless draw with Curacao, so expect him to push higher than a pure containment game."
         }
       ],
       "confidence": "medium",
       "sources": [
+        "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021466",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_E",
+        "https://www.dailysabah.com/sports/football/germany-eye-perfect-group-stage-as-ecuador-aim-world-cup-survival",
+        "https://theanalyst.com/articles/ecuador-defensive-steel-world-cup-2026-surprise-package",
+        "https://sports.yahoo.com/articles/takes-penalties-germany-havertz-gives-073100222.html",
+        "https://www.bundesliga.com/en/bundesliga/news/how-will-germany-line-up-havertz-musiala-wirtz-nagelsmann-world-cup-2026-28807",
         "https://www.rotowire.com/soccer/article/ecuador-vs-germany-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-119485",
-        "https://www.sportsmole.co.uk/football/ecuador/world-cup-2026/predicted-lineups/valencia-aiming-for-goalscoring-milestone-predicted-ecuador-lineup-vs-germany_599881.html",
-        "https://www.skysports.com/football/news/12098/13543089/world-cup-2026-group-e-guide-fixtures-schedule-standings-and-odds-for-germany-curacao-ivory-coast-and-ecuador",
-        "https://www.fourfourtwo.com/team/ecuador-world-cup-2026-squad"
+        "https://www.bavarianfootballworks.com/germany-international-soccer/220448/deniz-undav-nick-woltemade-set-to-reunite-in-germany-lineup-vs-ecuador"
       ],
       "strength": 3
     },
