@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T00:05:10.000Z",
+    "generatedAt": "2026-06-25T00:43:10.017Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -6682,15 +6682,15 @@
     "cze-mex-2026-06-24": {
       "win": {
         "pick": "Mexico",
-        "fairOdds": "2.00",
-        "reason": "Mexico hold home advantage at the Azteca (unbeaten in 8 WC matches there) and superior quality, though likely rotation with qualification secured and a desperate Czechia chasing a win keeps it from a certainty.",
+        "fairOdds": "2.10",
+        "reason": "Mexico already qualified as Group A winners and have rotated heavily (Rangel for Ochoa, G. Martinez leading instead of Jimenez/Gimenez, Fidalgo out), so the edge is softer than the bare names suggest. Czechia are do-or-die and MUST win, so they will chase rather than sit deep — that creates a genuine draw/Czechia-goal pathway and downgrades any comfortable Mexico win-to-nil. Home advantage at altitude plus the stronger spine (E. Alvarez, Montes, Mora, Quinones) still tips it Mexico's way, but ~50-53% only.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
+        "fairOdds": "2.60",
         "alt": "0-1",
-        "altOdds": "3.40",
+        "altOdds": "4.00",
         "strength": 3
       },
       "htft": {
@@ -6699,113 +6699,114 @@
         "strength": 2
       },
       "fullTime": {
-        "score": "1-2",
-        "fairOdds": "8.00",
+        "score": "1-1",
+        "fairOdds": "6.50",
         "strength": 2
       },
       "scorers": [
         {
-          "player": "Raul Jimenez",
-          "fairOdds": "3.10",
+          "player": "Julian Quinones",
+          "fairOdds": "3.30",
           "banker": false,
-          "note": "Mexico's nailed-on striker and penalty taker, already scored vs South Africa; rotation risk caps banker status",
+          "note": "Mexico's most reliable in-form attacker and an undisputed starter under Aguirre; sharpest goal threat in a rotated front line.",
           "strength": 3
         },
         {
-          "player": "Patrik Schick",
-          "fairOdds": "3.40",
-          "banker": true,
-          "note": "Czechia's in-form key striker and main goal threat in a must-win game",
+          "player": "Adam Hlozek",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Leads the Czech line with Schick benched; had a close-range chance saved vs South Korea and is also on free-kick duty.",
           "strength": 3
         },
         {
-          "player": "Santiago Gimenez",
-          "fairOdds": "4.20",
+          "player": "Guillermo Martinez",
+          "fairOdds": "4.00",
           "banker": false,
-          "note": "Likely to feature if Aguirre rotates the attack",
+          "note": "Handed the start as Mexico's No.9 ahead of Jimenez/Gimenez; central striker so gets the best chances but unproven at this level — not a banker.",
           "strength": 2
         },
         {
-          "player": "Roberto Alvarado",
-          "fairOdds": "5.00",
+          "player": "Ladislav Krejci",
+          "fairOdds": "7.00",
           "banker": false,
-          "note": "Pacey winger and set-piece outlet, scoring + assisting threat",
+          "note": "Czech captain and primary aerial set-piece threat — scored a header off a Coufal delivery vs South Korea; Czechia's set-piece route to a goal.",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Roberto Alvarado",
-          "fairOdds": "4.50",
+          "player": "Vladimir Coufal",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Set-piece delivery (assisted Jimenez vs South Africa) and wide creation",
+          "note": "Czechia's primary corner and free-kick taker; assist threat comes from his deliveries (and long throws) onto Krejci/Hlozek.",
           "strength": 3
         },
         {
-          "player": "Alvaro Fidalgo",
+          "player": "Gilberto Mora",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Mexico's chief midfield creator",
-          "strength": 2
+          "note": "17-year-old creative starter on Mexico set pieces; main creator from open play and dead balls.",
+          "strength": 3
         },
         {
-          "player": "Lukas Provod",
+          "player": "Roberto Alvarado",
           "fairOdds": "6.00",
           "banker": false,
-          "note": "Czechia's main attacking-midfield creator behind Schick",
+          "note": "Wide creator feeding the Mexican strikers; on the corner/free-kick rota too.",
           "strength": 2
         }
       ],
       "penalty": {
         "likelihood": "Medium",
-        "taker": "Raul Jimenez",
-        "backup": "Alexis Vega",
-        "note": "Jimenez is Mexico's designated penalty taker (5 in qualifying); Vega/Chavez handle dead balls"
+        "taker": "Pavel Sulc",
+        "backup": "Adam Hlozek",
+        "note": "Czechia's designated takers Schick (1st) and Soucek (2nd) are BOTH benched, so among starters free-kick takers Sulc and Hlozek become the de-facto penalty options. For Mexico (Jimenez benched), Alvarado or teenager Mora would step up. With both sides rotated and Czechia chasing, a spot-kick is a live but not high-probability scenario."
       },
       "lineups": {
-        "home": "Kovar; Holes, Hranac, L. Krejci; Coufal, Soucek, Darida, Sojka; Provod, Sulc; Schick",
-        "away": "Ochoa; J. Sanchez, Reyes, E. Alvarez, Gallardo; Fidalgo, Romo, Mora; Alvarado, Gimenez, Huerta",
-        "status": "probable"
+        "home": "Kovar; Holes, Hranac, L. Krejci; Coufal, Cerv, Sadilek, Doudera; Sulc, Visinsky; Hlozek",
+        "away": "Rangel; J. Sanchez, Reyes, Montes, Chavez; Romo, E. Alvarez, Mora; Alvarado, G. Martinez, Quinones",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
           "player": "Patrik Schick",
           "team": "Czechia",
-          "note": "Key central striker and primary goal threat; must deliver in a do-or-die finale"
+          "note": "Benched after going scoreless in the first two games; Czechia's first-choice penalty taker and top scorer is only a bench option — a likely impact sub if they need a goal, but NOT a banker starting."
         },
         {
-          "player": "Tomas Soucek",
+          "player": "Adam Hlozek",
           "team": "Czechia",
-          "note": "West Ham midfield anchor, pivotal box-to-box presence and aerial set-piece threat"
+          "note": "Promoted to lead the line in Schick's place; also on free-kick/penalty duty among the starters. Hoffenheim forward, part of the Hoffenheim trio starting."
         },
         {
-          "player": "Lukas Provod",
+          "player": "Ladislav Krejci",
           "team": "Czechia",
-          "note": "Main creative outlet behind the striker; carried Czech attacking moments vs South Africa"
+          "note": "Captain and aerial set-piece weapon — already scored a header off a Coufal long throw vs South Korea; Czechia's best route to a goal in a must-win game."
         },
         {
-          "player": "Raul Jimenez",
+          "player": "Raul Rangel",
           "team": "Mexico",
-          "note": "34yo lead striker and penalty taker, scored vs South Africa; possible rotation given qualification secured"
+          "note": "Starts in goal as Aguirre rotates Ochoa out; Mexico have already locked top spot so the keeper change carries low stakes."
         },
         {
-          "player": "Edson Alvarez",
+          "player": "Guillermo Martinez",
           "team": "Mexico",
-          "note": "Captain and holding midfielder; Aguirre may rest him with knockout spot locked"
+          "note": "Surprise No.9 start ahead of Jimenez and Gimenez (both benched); leads a rotated front line — central chances but unproven, so a speculative rather than banker scorer."
         },
         {
-          "player": "Santiago Gimenez",
+          "player": "Gilberto Mora",
           "team": "Mexico",
-          "note": "Down the depth chart after a poor Milan season, but in line for minutes if Aguirre rotates"
+          "note": "17-year-old retains his starting role — Mexico's youngest-ever WC starter; chief creator and on the set-piece rota despite his age."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.espn.com/soccer/story/_/id/49142462/czechia-vs-mexico-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://www.si.com/soccer/czechia-vs-mexico-world-cup-preview-predictions-lineups-6-24-26",
-        "https://theanalyst.com/articles/czechia-vs-mexico-prediction-world-cup-2026-match-preview",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://worldsoccertalk.com/world-cup/czechia-vs-mexico-projected-lineups-for-the-2026-world-cup-group-a-game/",
+        "https://www.cbssports.com/soccer/news/world-cup-group-a-scenarios-june-23-2026/",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.espn.com/soccer/story/_/id/49156230/mexico-players-back-memo-ochoa-historic-world-cup-start-czechia",
+        "https://www.fanduel.com/research/czechia-vs-mexico-prediction-best-anytime-goalscorer-bets-and-odds-world-cup-2026-group-a"
       ]
     },
     "sou-sou-2026-06-24": {
