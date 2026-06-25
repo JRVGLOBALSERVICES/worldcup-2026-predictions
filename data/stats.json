@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T06:20:30.291Z",
+    "generatedAt": "2026-06-25T08:20:35.668Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 38
   },
@@ -31,7 +31,15 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 2,
+        "name": "Vinícius Júnior",
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 4,
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -39,50 +47,42 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
+        "name": "Ismael Saibari",
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 3,
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "name": "Johan Manzambi",
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 3,
-        "matches": 2
+        "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Jonathan David",
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 3,
-        "matches": 2
+        "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Matheus Cunha",
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 3,
-        "matches": 2
+        "matches": 3
       },
       {
-        "rank": 4,
-        "name": "Vinícius Júnior",
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 3,
-        "matches": 2
-      },
-      {
-        "rank": 9,
+        "rank": 10,
         "name": "Ayase Ueda",
         "team": "Japan",
         "flag": "🇯🇵",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 9,
-        "name": "Brian Brobbey",
-        "team": "Netherlands",
-        "flag": "🇳🇱",
         "value": 2,
         "matches": 2
       }
@@ -98,6 +98,14 @@
       },
       {
         "rank": 1,
+        "name": "Bruno Guimarães",
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 3,
+        "matches": 3
+      },
+      {
+        "rank": 1,
         "name": "Michael Olise",
         "team": "France",
         "flag": "🇫🇷",
@@ -105,23 +113,23 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Brahim Díaz",
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 2,
-        "matches": 2
+        "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Breel Embolo",
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 2,
-        "matches": 2
+        "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Chris Wood",
         "team": "New Zealand",
         "flag": "🇳🇿",
@@ -129,7 +137,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -137,7 +145,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Denzel Dumfries",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -145,7 +153,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Joshua Kimmich",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -153,18 +161,10 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Julio Enciso",
         "team": "Paraguay",
         "flag": "🇵🇾",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 3,
-        "name": "Martin Ødegaard",
-        "team": "Norway",
-        "flag": "🇳🇴",
         "value": 2,
         "matches": 2
       }
@@ -485,7 +485,7 @@
         {
           "name": "David Møller Wolfe",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Patrick Berg",
@@ -539,7 +539,7 @@
         {
           "name": "Facundo Medina",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Nico González",
@@ -549,7 +549,7 @@
         {
           "name": "Rodrigo De Paul",
           "value": 1,
-          "matches": 2
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -609,7 +609,7 @@
         {
           "name": "Ali Olwan",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Nizar Al-Rashdan",
@@ -649,7 +649,7 @@
         {
           "name": "João Neves",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Nuno Mendes",
@@ -762,7 +762,7 @@
         {
           "name": "Elliot Anderson",
           "value": 1,
-          "matches": 2
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -785,7 +785,7 @@
         {
           "name": "Martin Baturina",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Petar Musa",
@@ -864,7 +864,7 @@
         {
           "name": "Luis Díaz",
           "value": 1,
-          "matches": 2
+          "matches": 1
         }
       ],
       "assists": [
@@ -876,7 +876,7 @@
         {
           "name": "Gustavo Puerta",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Luis Díaz",
@@ -930,24 +930,24 @@
         {
           "name": "Ladislav Krejcí",
           "value": 1,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Michal Sadílek",
           "value": 1,
-          "matches": 1
+          "matches": 3
         }
       ],
       "assists": [
         {
           "name": "Alexandr Sojka",
           "value": 1,
-          "matches": 1
+          "matches": 3
         },
         {
           "name": "Vladimír Coufal",
           "value": 1,
-          "matches": 2
+          "matches": 3
         }
       ],
       "yellowCards": [
@@ -997,39 +997,39 @@
         {
           "name": "Johan Manzambi",
           "value": 3,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Rubén Vargas",
           "value": 2,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Breel Embolo",
           "value": 1,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Granit Xhaka",
           "value": 1,
-          "matches": 2
+          "matches": 3
         }
       ],
       "assists": [
         {
           "name": "Breel Embolo",
           "value": 2,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Johan Manzambi",
           "value": 1,
-          "matches": 1
+          "matches": 3
         },
         {
           "name": "Rubén Vargas",
           "value": 1,
-          "matches": 1
+          "matches": 3
         }
       ],
       "yellowCards": [
@@ -1056,19 +1056,19 @@
         {
           "name": "Kerim Alajbegovic",
           "value": 1,
-          "matches": 1
+          "matches": 3
         }
       ],
       "assists": [
         {
           "name": "Ivan Basic",
           "value": 1,
-          "matches": 1
+          "matches": 3
         },
         {
           "name": "Sead Kolasinac",
           "value": 1,
-          "matches": 2
+          "matches": 3
         }
       ],
       "yellowCards": [
@@ -1099,12 +1099,12 @@
         {
           "name": "Jonathan David",
           "value": 3,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Cyle Larin",
           "value": 2,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Nathan Saliba",
@@ -1120,8 +1120,8 @@
       "assists": [
         {
           "name": "Nathan Saliba",
-          "value": 1,
-          "matches": 1
+          "value": 2,
+          "matches": 2
         }
       ],
       "yellowCards": [
@@ -1145,14 +1145,14 @@
       "flag": "🇲🇽",
       "scorers": [
         {
+          "name": "Julián Quiñones",
+          "value": 2,
+          "matches": 3
+        },
+        {
           "name": "Álvaro Fidalgo",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Julián Quiñones",
-          "value": 1,
-          "matches": 2
         },
         {
           "name": "Luis Romo",
@@ -1167,7 +1167,12 @@
       ],
       "assists": [
         {
-          "name": "Érik Lira",
+          "name": "Roberto Alvarado",
+          "value": 2,
+          "matches": 3
+        },
+        {
+          "name": "Jorge Sánchez",
           "value": 1,
           "matches": 2
         },
@@ -1175,11 +1180,6 @@
           "name": "Luis Romo",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Roberto Alvarado",
-          "value": 1,
-          "matches": 2
         }
       ],
       "yellowCards": [
@@ -1239,13 +1239,13 @@
       "scorers": [
         {
           "name": "Ismael Saibari",
-          "value": 2,
-          "matches": 2
+          "value": 3,
+          "matches": 3
         },
         {
           "name": "Achraf Hakimi",
           "value": 1,
-          "matches": 1
+          "matches": 3
         },
         {
           "name": "Gessime Yassine",
@@ -1255,19 +1255,29 @@
         {
           "name": "Soufiane Rahimi",
           "value": 1,
-          "matches": 1
+          "matches": 3
         }
       ],
       "assists": [
         {
           "name": "Brahim Díaz",
           "value": 2,
-          "matches": 2
+          "matches": 3
         },
         {
           "name": "Achraf Hakimi",
           "value": 1,
-          "matches": 1
+          "matches": 3
+        },
+        {
+          "name": "Chadi Riad",
+          "value": 1,
+          "matches": 3
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "value": 1,
+          "matches": 3
         }
       ],
       "yellowCards": [
@@ -1283,26 +1293,26 @@
       "flag": "🇧🇷",
       "scorers": [
         {
-          "name": "Matheus Cunha",
-          "value": 3,
-          "matches": 2
+          "name": "Vinícius Júnior",
+          "value": 4,
+          "matches": 3
         },
         {
-          "name": "Vinícius Júnior",
+          "name": "Matheus Cunha",
           "value": 3,
-          "matches": 2
+          "matches": 3
         }
       ],
       "assists": [
         {
           "name": "Bruno Guimarães",
-          "value": 1,
-          "matches": 1
+          "value": 3,
+          "matches": 3
         },
         {
           "name": "Lucas Paquetá",
           "value": 1,
-          "matches": 1
+          "matches": 3
         },
         {
           "name": "Rayan",
@@ -1312,7 +1322,7 @@
         {
           "name": "Vinícius Júnior",
           "value": 1,
-          "matches": 2
+          "matches": 3
         }
       ],
       "yellowCards": [
@@ -1426,11 +1436,6 @@
           "matches": 2
         },
         {
-          "name": "Alexander Isak",
-          "value": 1,
-          "matches": 2
-        },
-        {
           "name": "Anthony Elanga",
           "value": 1,
           "matches": 1
@@ -1502,11 +1507,6 @@
           "name": "Kai Havertz",
           "value": 2,
           "matches": 2
-        },
-        {
-          "name": "Felix Nmecha",
-          "value": 1,
-          "matches": 2
         }
       ],
       "assists": [
@@ -1523,7 +1523,7 @@
         {
           "name": "Felix Nmecha",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Florian Wirtz",
@@ -1557,18 +1557,13 @@
           "name": "Junya Ito",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Keito Nakamura",
-          "value": 1,
-          "matches": 2
         }
       ],
       "assists": [
         {
           "name": "Ayase Ueda",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Kaishu Sano",
@@ -1578,7 +1573,7 @@
         {
           "name": "Keito Nakamura",
           "value": 1,
-          "matches": 2
+          "matches": 1
         },
         {
           "name": "Kou Itakura",
@@ -1710,7 +1705,7 @@
         {
           "name": "Tim Payne",
           "value": 1,
-          "matches": 2
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -1808,7 +1803,7 @@
         {
           "name": "Edmílson Junior",
           "value": 1,
-          "matches": 1
+          "matches": 3
         }
       ],
       "yellowCards": [
@@ -1835,7 +1830,7 @@
         {
           "name": "Wilson Isidor",
           "value": 1,
-          "matches": 1
+          "matches": 3
         }
       ],
       "assists": [
@@ -1864,6 +1859,72 @@
         },
         {
           "name": "Johny Placide",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
+    "southkorea": {
+      "team": "South Korea",
+      "flag": "🇰🇷",
+      "scorers": [
+        {
+          "name": "Hwang In-Beom",
+          "value": 1,
+          "matches": 3
+        },
+        {
+          "name": "Oh Hyeon-Gyu",
+          "value": 1,
+          "matches": 3
+        }
+      ],
+      "assists": [
+        {
+          "name": "Hwang In-Beom",
+          "value": 1,
+          "matches": 3
+        },
+        {
+          "name": "Lee Kang-In",
+          "value": 1,
+          "matches": 3
+        }
+      ],
+      "yellowCards": [
+        {
+          "name": "Cho Gue-Sung",
+          "value": 1
+        },
+        {
+          "name": "Lee Kang-In",
+          "value": 1
+        },
+        {
+          "name": "Paik Seung-Ho",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
+    "scotland": {
+      "team": "Scotland",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "scorers": [
+        {
+          "name": "John McGinn",
+          "value": 1,
+          "matches": 3
+        }
+      ],
+      "assists": [],
+      "yellowCards": [
+        {
+          "name": "Andy Robertson",
+          "value": 1
+        },
+        {
+          "name": "Ryan Christie",
           "value": 1
         }
       ],
@@ -1914,133 +1975,6 @@
       ],
       "redCards": []
     },
-    "curacao": {
-      "team": "Curacao",
-      "flag": "🇨🇼",
-      "scorers": [
-        {
-          "name": "Livano Comenencia",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Gervane Kastaneer",
-          "value": 1
-        },
-        {
-          "name": "Juninho Bacuna",
-          "value": 1
-        },
-        {
-          "name": "Juriën Gaari",
-          "value": 1
-        },
-        {
-          "name": "Leandro Bacuna",
-          "value": 1
-        },
-        {
-          "name": "Livano Comenencia",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "southkorea": {
-      "team": "South Korea",
-      "flag": "🇰🇷",
-      "scorers": [
-        {
-          "name": "Hwang In-Beom",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "assists": [
-        {
-          "name": "Hwang In-Beom",
-          "value": 1,
-          "matches": 2
-        },
-        {
-          "name": "Lee Kang-In",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "yellowCards": [
-        {
-          "name": "Cho Gue-Sung",
-          "value": 1
-        },
-        {
-          "name": "Lee Kang-In",
-          "value": 1
-        },
-        {
-          "name": "Paik Seung-Ho",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "scotland": {
-      "team": "Scotland",
-      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      "scorers": [
-        {
-          "name": "John McGinn",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Andy Robertson",
-          "value": 1
-        },
-        {
-          "name": "Ryan Christie",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "australia": {
-      "team": "Australia",
-      "flag": "🇦🇺",
-      "scorers": [],
-      "assists": [
-        {
-          "name": "Paul Okon-Engstler",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "yellowCards": [
-        {
-          "name": "Alessandro Circati",
-          "value": 1
-        },
-        {
-          "name": "Harry Souttar",
-          "value": 1
-        },
-        {
-          "name": "Jacob Italiano",
-          "value": 1
-        },
-        {
-          "name": "Jordan Bos",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
     "panama": {
       "team": "Panama",
       "flag": "🇵🇦",
@@ -2057,6 +1991,31 @@
         },
         {
           "name": "Édgar Yoel Bárcenas",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
+    "australia": {
+      "team": "Australia",
+      "flag": "🇦🇺",
+      "scorers": [],
+      "assists": [],
+      "yellowCards": [
+        {
+          "name": "Alessandro Circati",
+          "value": 1
+        },
+        {
+          "name": "Harry Souttar",
+          "value": 1
+        },
+        {
+          "name": "Jacob Italiano",
+          "value": 1
+        },
+        {
+          "name": "Jordan Bos",
           "value": 1
         }
       ],
@@ -2083,6 +2042,35 @@
       "yellowCards": [
         {
           "name": "Jordy Alcívar",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
+    "curacao": {
+      "team": "Curacao",
+      "flag": "🇨🇼",
+      "scorers": [],
+      "assists": [],
+      "yellowCards": [
+        {
+          "name": "Gervane Kastaneer",
+          "value": 1
+        },
+        {
+          "name": "Juninho Bacuna",
+          "value": 1
+        },
+        {
+          "name": "Juriën Gaari",
+          "value": 1
+        },
+        {
+          "name": "Leandro Bacuna",
+          "value": 1
+        },
+        {
+          "name": "Livano Comenencia",
           "value": 1
         }
       ],
