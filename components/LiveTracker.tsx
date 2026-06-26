@@ -252,12 +252,150 @@ function LiveScore({ live, m }: { live: LiveMatch | undefined; m: MatchRow }) {
   );
 }
 
-function Stat({ label, value, tone = "ink" }: { label: string; value: string; tone?: "ink" | "acid" | "rose" | "muted" | "amber" }) {
+function Stat({
+  label,
+  value,
+  sub,
+  tone = "ink",
+}: {
+  label: string;
+  value: string;
+  sub?: string;
+  tone?: "ink" | "acid" | "rose" | "muted" | "amber";
+}) {
   const toneMap = { ink: "text-ink", acid: "text-acid", rose: "text-rose", muted: "text-muted", amber: "text-amber" } as const;
   return (
-    <div className="rounded-2xl border border-line bg-card/50 px-4 py-3">
-      <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-faint">{label}</p>
-      <p className={`tnum mt-1 font-display text-2xl font-black tracking-tight ${toneMap[tone]}`}>{value}</p>
+    <div className="rounded-2xl border border-line bg-pitch/55 px-5 py-4">
+      <p className="font-mono text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-faint/55">{label}</p>
+      <p className={`tnum mt-2 font-mono text-[1.7rem] font-bold leading-none tracking-tight ${toneMap[tone]}`}>{value}</p>
+      {sub && <p className="mt-1.5 text-[0.72rem] leading-snug text-faint/55">{sub}</p>}
+    </div>
+  );
+}
+
+/** Per-leg live status parsed from the acca grader's note string (`label ✓/✗/⋯/—`).
+ *  Reuses the exact verdicts lib/inplay produces, so the grid never disagrees with
+ *  settlement. Returns null when the note carries no leg parts (confirmed override). */
+function parseLegs(note: string): { label: string; glyph: string }[] | null {
+  if (!note) return null;
+  const parts = note.split(" · ").map((p) => p.trim()).filter(Boolean);
+  const legs = parts.map((p) => {
+    const i = p.lastIndexOf(" ");
+    const glyph = i >= 0 ? p.slice(i + 1) : "";
+    const label = i >= 0 ? p.slice(0, i) : p;
+    return { label, glyph };
+  });
+  // Only treat as a leg grid when every part ends in a known status glyph.
+  const known = new Set(["✓", "✗", "⋯", "—"]);
+  return legs.every((l) => known.has(l.glyph)) && legs.length > 0 ? legs : null;
+}
+
+const LEG_GLYPH: Record<string, { cls: string; dot: string; pulse?: boolean }> = {
+  "✓": { cls: "text-acid", dot: "bg-acid" },
+  "✗": { cls: "text-rose", dot: "bg-rose" },
+  "⋯": { cls: "text-acid", dot: "bg-acid", pulse: true },
+  "—": { cls: "text-faint/60", dot: "bg-faint/40" },
+};
+
+/** Accumulator card — the slip-card leg grid, live-graded. One per non-mirror acca. */
+function AccaCard({
+  special,
+  verdict,
+  currency,
+}: {
+  special: SpecialRow;
+  verdict: InPlay;
+  currency: string;
+}) {
+  const legs = parseLegs(verdict.note);
+  const legCount = special.grade && "legs" in special.grade ? special.grade.legs.length : legs?.length ?? 0;
+  return (
+    <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+        <div className="flex items-center gap-2.5">
+          <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+            {legCount} legs
+          </span>
+          <span className="text-sm font-semibold text-ink">{special.market}</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="tnum font-mono text-[0.7rem] text-faint/70">
+            @{special.odds.toFixed(2)} · {money(special.stake, currency)} →{" "}
+            <span className="font-semibold text-acid">{money(special.potential, currency)}</span>
+          </span>
+          <VerdictPill verdict={verdict.verdict} />
+        </div>
+      </div>
+      {legs ? (
+        <ul className="mt-3.5 grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {legs.map((l, i) => {
+            const g = LEG_GLYPH[l.glyph] ?? LEG_GLYPH["—"];
+            return (
+              <li
+                key={i}
+                className="flex items-center gap-2.5 rounded-lg border border-line/70 bg-card/40 px-3 py-2"
+              >
+                <span className={`size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
+                <span className="min-w-0 flex-1 truncate text-[0.8rem] text-ink">{l.label}</span>
+                <span className={`shrink-0 font-mono text-xs font-bold ${g.cls}`}>{l.glyph}</span>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        verdict.note && <p className="mt-3 font-mono text-[0.7rem] text-faint/70">{verdict.note}</p>
+      )}
+    </div>
+  );
+}
+
+/** Slip breakdown band — singles vs accas vs total for the featured (today's) slate,
+ *  the live analogue of the bet-slip card's footer split. */
+function SlipBreakdown({ days, currency }: { days: DayRow[]; currency: string }) {
+  const featured = days.filter((d) => d.isFeatured);
+  let sStake = 0, sRet = 0, aStake = 0, aRet = 0;
+  for (const d of featured) {
+    for (const m of d.matches) {
+      for (const b of m.bets) {
+        sStake += b.stake;
+        sRet += b.potential;
+      }
+      for (const s of m.specials) {
+        if (s.mirror) continue;
+        const isAcca = !!s.grade && "legs" in s.grade && Array.isArray((s.grade as { legs?: unknown[] }).legs);
+        if (isAcca) {
+          aStake += s.stake;
+          aRet += s.potential;
+        } else {
+          sStake += s.stake;
+          sRet += s.potential;
+        }
+      }
+    }
+  }
+  if (sStake + aStake === 0) return null;
+  const col = (k: string, stake: number, ret: number, tone: "muted" | "acid") => (
+    <div className="flex-1">
+      <p className="font-mono text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-faint/55">{k}</p>
+      <p className="tnum mt-1.5 font-mono text-sm">
+        <span className="text-ink">{money(stake, currency)}</span>
+        <span className="px-1.5 text-faint/40">→</span>
+        <span className={tone === "acid" ? "font-bold text-acid" : "text-ink"}>{money(ret, currency)}</span>
+      </p>
+    </div>
+  );
+  const divider = <span className="hidden h-9 w-px shrink-0 bg-line sm:block" />;
+  return (
+    <div className="mt-4 flex flex-col gap-4 rounded-2xl border border-line bg-pitch/40 px-5 py-4 sm:flex-row sm:items-center">
+      {col("Singles", sStake, sRet, "muted")}
+      {aStake > 0 && (
+        <>
+          {divider}
+          {col("Accas", aStake, aRet, "muted")}
+        </>
+      )}
+      {divider}
+      {col("Total", sStake + aStake, sRet + aRet, "acid")}
     </div>
   );
 }
@@ -383,9 +521,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         <SiteNav active={activeNav} />
       </header>
 
-      <section className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-10">
+      <section className="slip-bloom relative overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 pl-7 sm:p-10 sm:pl-12">
+        <div className="accent-bar pointer-events-none absolute inset-y-0 left-0 w-1.5" aria-hidden />
         <div className="mb-4 flex flex-wrap items-center gap-3">
-          <p className="font-mono text-[0.72rem] uppercase tracking-[0.24em] text-acid">
+          <p className="inline-flex items-center gap-2 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-acid">
+            <span className="size-2 rounded-full bg-acid shadow-[0_0_12px_var(--color-acid)]" />
             Bet tracker · {base.meta.owner}&rsquo;s slip
           </p>
           {anyMatchLive && (
@@ -415,9 +555,14 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         </p>
 
         <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          <Stat label={anyMatchLive ? "If it ended now" : "Net P&L"} value={pnlValue} tone={pnlTone} />
-          <Stat label="Secured returns" value={money(securedReturns, cur)} tone="acid" />
-          <Stat label="Max return" value={money(base.potential, cur)} tone="acid" />
+          <Stat
+            label={anyMatchLive ? "If it ended now" : "Net P&L"}
+            value={pnlValue}
+            sub={`${totalToday} bets · staked ${money(base.staked, cur)}`}
+            tone={pnlTone}
+          />
+          <Stat label="Secured returns" value={money(securedReturns, cur)} sub="locked in so far" tone="acid" />
+          <Stat label="Max return" value={money(base.potential, cur)} sub="singles, if they all land" tone="acid" />
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-2 font-mono text-[0.66rem] text-faint">
           <span className="rounded-full border border-line px-2.5 py-1">Placed {base.meta.placedLabel} MYT</span>
@@ -437,6 +582,8 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           )}
           <ForceRefreshButton onRefresh={refresh} refreshing={refreshing} />
         </div>
+
+        {!empty && <SlipBreakdown days={base.days} currency={cur} />}
       </section>
 
       {empty && (
@@ -470,7 +617,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
               </div>
 
               <div className="space-y-4">
-                {sorted.map((m) => {
+                {sorted.map((m, mi) => {
                   const lm = live[m.matchId];
                   const finished = lm?.state === "finished";
                   const betVerdicts = m.bets.map((b) => gradeBet(b, lm));
@@ -479,6 +626,20 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // Float winning lines to the top, still-on next, losses last.
                   const orderedBets = orderByVerdict(m.bets, betVerdicts);
                   const orderedSpecials = orderByVerdict(m.specials, spVerdicts);
+                  // Accumulators (multi-leg, shown on their home card) get the leg-grid
+                  // card treatment; everything else stays a flat prop row. Mirror copies
+                  // of a cross-match acca stay as compact rows (the grid lives on its home card).
+                  const isAccaRow = (r: SpecialRow) => !r.mirror && !!r.grade && "legs" in r.grade;
+                  const accaRows = orderedSpecials.rows.filter((r) => isAccaRow(r as SpecialRow)) as SpecialRow[];
+                  const accaVerdicts = orderedSpecials.rows
+                    .map((r, i) => ({ r, v: orderedSpecials.verdicts[i] }))
+                    .filter(({ r }) => isAccaRow(r as SpecialRow))
+                    .map(({ v }) => v);
+                  const propIdx = orderedSpecials.rows
+                    .map((_, i) => i)
+                    .filter((i) => !isAccaRow(orderedSpecials.rows[i] as SpecialRow));
+                  const propRows = propIdx.map((i) => orderedSpecials.rows[i]);
+                  const propVerdicts = propIdx.map((i) => orderedSpecials.verdicts[i]);
                   // Mirror rows (cross-match acca shown on another card) are excluded
                   // from this card's money totals — their stake/return live on the home card.
                   const moneyRows = [...m.bets, ...m.specials];
@@ -494,21 +655,26 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   return (
                     <details key={m.matchId} open={!finished} className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden">
                       <summary className="flex cursor-pointer select-none flex-wrap items-center justify-between gap-3 bg-pitch-2/40 px-5 py-4">
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className="font-display text-lg font-extrabold uppercase tracking-tight">{m.home.flag} {m.home.name}</span>
-                            <LiveScore live={lm} m={m} />
-                            <span className="font-display text-lg font-extrabold uppercase tracking-tight">{m.away.name} {m.away.flag}</span>
-                          </div>
-                          <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                            Group {m.group} · {m.kickoffLabel}
-                          </p>
-                          {m.form && (
-                            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
-                              <FormStrip code={m.home.code} f={m.form.home} />
-                              <FormStrip code={m.away.code} f={m.form.away} />
+                        <div className="flex min-w-0 items-start gap-3">
+                          <span className="mt-0.5 shrink-0 rounded-md border border-line bg-card/50 px-2 py-1 font-mono text-[0.62rem] font-bold tabular-nums text-acid">
+                            {String(mi + 1).padStart(2, "0")}
+                          </span>
+                          <div className="min-w-0">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="font-display text-lg font-extrabold uppercase tracking-tight">{m.home.flag} {m.home.name}</span>
+                              <LiveScore live={lm} m={m} />
+                              <span className="font-display text-lg font-extrabold uppercase tracking-tight">{m.away.name} {m.away.flag}</span>
                             </div>
-                          )}
+                            <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                              Group {m.group} · {m.kickoffLabel}
+                            </p>
+                            {m.form && (
+                              <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+                                <FormStrip code={m.home.code} f={m.form.home} />
+                                <FormStrip code={m.away.code} f={m.form.away} />
+                              </div>
+                            )}
+                          </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <LiveBadge live={lm} />
@@ -556,15 +722,29 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                           </div>
                         )}
 
-                        <RowList title={null} rows={orderedBets.rows} verdicts={orderedBets.verdicts} currency={cur} chip={(r) => (r as BetRow).period} chipCls={(r) => ((r as BetRow).period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid")} />
+                        <RowList title={null} rows={orderedBets.rows} verdicts={orderedBets.verdicts} currency={cur} chip={(r) => (r as BetRow).period} chipCls={(r) => ((r as BetRow).period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid")} scoreChip={(r) => `${(r as BetRow).home}–${(r as BetRow).away}`} />
 
-                        {m.specials.length > 0 && (
+                        {accaRows.length > 0 && (
+                          <div className="border-t border-line">
+                            <div className="flex items-center gap-2 bg-pitch-2/50 px-5 py-2.5">
+                              <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-acid">Accumulators</span>
+                              <span className="rounded-full border border-acid-dim/50 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-acid">live leg grid</span>
+                            </div>
+                            <div className="space-y-3 px-5 py-4">
+                              {accaRows.map((r, i) => (
+                                <AccaCard key={r.id} special={r} verdict={accaVerdicts[i]} currency={cur} />
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {propRows.length > 0 && (
                           <div className="border-t border-line">
                             <div className="flex items-center gap-2 bg-pitch-2/50 px-5 py-2.5">
                               <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-mint">Player props</span>
                               <span className="rounded-full border border-mint/40 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-mint">1xBet · live grade</span>
                             </div>
-                            <RowList title={null} rows={orderedSpecials.rows} verdicts={orderedSpecials.verdicts} currency={cur} chip={(r) => (r as SpecialRow).market} chipCls={() => "bg-mint/15 text-mint"} />
+                            <RowList title={null} rows={propRows} verdicts={propVerdicts} currency={cur} chip={(r) => (r as SpecialRow).market} chipCls={() => "bg-mint/15 text-mint"} />
                           </div>
                         )}
                       </div>
@@ -625,6 +805,7 @@ function RowList({
   currency,
   chip,
   chipCls,
+  scoreChip,
 }: {
   title: string | null;
   rows: (BetRow | SpecialRow)[];
@@ -632,6 +813,7 @@ function RowList({
   currency: string;
   chip: (r: BetRow | SpecialRow) => string;
   chipCls: (r: BetRow | SpecialRow) => string;
+  scoreChip?: (r: BetRow | SpecialRow) => string | null;
 }) {
   return (
     <ul className="divide-y divide-line/60">
@@ -644,6 +826,11 @@ function RowList({
             <div className="min-w-0">
               <div className="flex items-start gap-2">
                 <span className={`mt-0.5 shrink-0 rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${chipCls(r)}`}>{chip(r)}</span>
+                {scoreChip && scoreChip(r) && (
+                  <span className="tnum mt-0.5 shrink-0 rounded-md border border-line bg-pitch-2/70 px-2 py-0.5 font-mono text-[0.72rem] font-bold text-ink">
+                    {scoreChip(r)}
+                  </span>
+                )}
                 <span className="text-sm text-ink">{r.label}</span>
               </div>
               {isMirror && (

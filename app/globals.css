@@ -40,6 +40,10 @@
   --color-hairline: oklch(1 0 0 / 0.022);      /* .stripes pitch markings */
   --color-on-acid: oklch(0.2 0.02 248);        /* ink on lime fills (selection) */
 
+  /* Slip-card corner blooms — premium tracker hero (lime top-right, mint bottom-left) */
+  --color-bloom-acid: oklch(0.91 0.18 121 / 0.10);
+  --color-bloom-mintcast: oklch(0.79 0.11 189 / 0.07);
+
   --font-display: var(--font-archivo), system-ui, sans-serif;
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
@@ -82,6 +86,18 @@
     transparent 2px,
     transparent 56px
   );
+}
+
+/* Slip-card chrome — two soft corner blooms behind the premium tracker hero. */
+.slip-bloom {
+  background-image:
+    radial-gradient(900px 440px at 88% -14%, var(--color-bloom-acid), transparent 60%),
+    radial-gradient(760px 480px at -8% 114%, var(--color-bloom-mintcast), transparent 55%);
+}
+
+/* The left energy bar that runs down the slip card's header. */
+.accent-bar {
+  background-image: linear-gradient(180deg, var(--color-acid), var(--color-acid-dim));
 }
 
 @media (prefers-reduced-motion: reduce) {
