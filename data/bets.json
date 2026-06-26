@@ -8129,6 +8129,174 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83610079563",
+      "slipNo": "83610079563",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 5 legs",
+      "label": "Acca — Norway/France BTTS + Cape Verde 1X + Uruguay W2 + Egypt 1X + NZ/Belgium Under 4.25 (5 legs)",
+      "odds": 8.003,
+      "stake": 125,
+      "placedAt": "26/06 22:57",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "btts"
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "totalUnder",
+            "line": 4.25
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83610273495",
+      "slipNo": "83610273495",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 5 legs",
+      "label": "Acca — Norway/France BTTS + Uruguay W2 + Cape Verde/Saudi BTTS + Egypt X + Belgium win & Under 2.5 (5 legs)",
+      "odds": 73.907,
+      "stake": 50,
+      "placedAt": "26/06 23:01",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "btts"
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "btts"
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "resultAndTotalUnder",
+            "outcome": "2",
+            "line": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83610431359",
+      "slipNo": "83610431359",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 5 legs",
+      "label": "Acca — Norway/France 1st-half X + Cape Verde 1X + Uruguay X + Egypt W1 + Belgium W2 (5 legs)",
+      "odds": 45.4,
+      "stake": 50,
+      "placedAt": "26/06 23:05",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "resultFirstHalf",
+            "outcome": "X"
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "result",
+            "outcome": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83610753671",
+      "slipNo": "83610753671",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 6 legs",
+      "label": "Acca — Norway 1-3 France + Senegal/Iraq X + Cape Verde/Saudi X + Uruguay/Spain BTTS + Iran W2 + Belgium Under 3.5 (6 legs)",
+      "odds": 3323,
+      "stake": 10,
+      "placedAt": "26/06 23:12",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "correctScore",
+            "home": 1,
+            "away": 3
+          },
+          {
+            "matchId": "sen-ira-2026-06-26",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "btts"
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "individualTotalUnder",
+            "side": "away",
+            "line": 3.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

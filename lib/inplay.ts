@@ -654,9 +654,17 @@ export function inPlayMultiLeg(
                   ? `${matchCode(leg.matchId)} Each ${leg.line + 1}+${leg.negate ? " (No)" : ""}`
                   : leg.kind === "totalUnder"
                     ? `${matchCode(leg.matchId)} U${leg.line}`
-                    : leg.kind === "scored" && leg.negate
-                      ? `No ${leg.player}`
-                      : leg.player;
+                    : leg.kind === "doubleChance"
+                      ? `${matchCode(leg.matchId)} ${leg.outcome}`
+                      : leg.kind === "resultFirstHalf"
+                        ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)} 1H`
+                        : leg.kind === "resultAndTotalUnder"
+                          ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+U${leg.line}`
+                          : leg.kind === "individualTotalUnder"
+                            ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"} U${leg.line}`
+                            : leg.kind === "scored" && leg.negate
+                              ? `No ${leg.player}`
+                              : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
@@ -811,6 +819,94 @@ export function inPlayMultiLeg(
       // total reaches the line; locks WON at FT if still under.
       const total = cur.home + cur.away;
       if (!(total < leg.line)) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else if (done) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "doubleChance") {
+      // FT in the covered pair — like `result`, only locks at FT, never dead
+      // mid-match (any current standing can still swing into the pair).
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const hitting = leg.outcome.includes(outcome);
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "resultFirstHalf") {
+      // 1X2 off the HALF-TIME score. Locks the instant HT is known.
+      const ht = lm.htScore;
+      const o = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      if (ht) {
+        if (o(ht.home, ht.away) === leg.outcome) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (o(cur.home, cur.away) === leg.outcome) {
+        onTrack = true; // first half still running, currently on the right side
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "resultAndTotalUnder") {
+      // 1X2 AND total under line. The total can only die early (goals accrue);
+      // the result swings until FT, so the combo locks only at FT.
+      const total = cur.home + cur.away;
+      if (!(total < leg.line)) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+        continue;
+      }
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const hitting = outcome === leg.outcome;
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "individualTotalUnder") {
+      // One side's goals under line. Goals only accrue → dies the moment that
+      // side reaches the line; locks WON at FT if still under.
+      const sideGoals = leg.side === "home" ? cur.home : cur.away;
+      if (!(sideGoals < leg.line)) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else if (done) {

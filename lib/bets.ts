@@ -266,7 +266,18 @@ export type MultiLegCond =
   | { matchId: string; kind: "cleanSheet"; side: "home" | "away" }
   | { matchId: string; kind: "resultBtts"; outcome: "1" | "X" | "2"; negate?: boolean }
   | { matchId: string; kind: "bttsEachOver"; line: number; negate?: boolean }
-  | { matchId: string; kind: "totalUnder"; line: number };
+  | { matchId: string; kind: "totalUnder"; line: number }
+  // Double chance — FT outcome is one of two ("1X" = home or draw, "12" = home
+  // or away, "X2" = draw or away), oriented to the leg match's home/away.
+  | { matchId: string; kind: "doubleChance"; outcome: "1X" | "12" | "X2" }
+  // 1X2 off the HALF-TIME score ("1X2 … 1st half"), oriented to home/away.
+  | { matchId: string; kind: "resultFirstHalf"; outcome: "1" | "X" | "2" }
+  // Result + Total: a 1X2 outcome AND the match total is under `line`
+  // ("Team 2 To Win And Total < (2.5)" → outcome:"2", line:2.5).
+  | { matchId: string; kind: "resultAndTotalUnder"; outcome: "1" | "X" | "2"; line: number }
+  // Individual Total — one side's own goals under `line` ("Individual Total 2
+  // Under (3.5)" → side:"away", line:3.5).
+  | { matchId: string; kind: "individualTotalUnder"; side: "home" | "away"; line: number };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -796,6 +807,39 @@ export function gradeSpecial(special: Special): BetStatus {
         // quarter lines; directionally correct for the .25 push-leg).
         if (!ft) return "lost";
         if (!(ft.home + ft.away < leg.line)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "doubleChance") {
+        // FT outcome must be one of the two covered ("1X"/"12"/"X2").
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        if (!leg.outcome.includes(outcome)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "resultFirstHalf") {
+        // 1X2 off the HALF-TIME score, oriented to the leg match's home/away.
+        const ht = getResult(leg.matchId).ht;
+        if (!ht) return "lost";
+        const outcome = ht.home > ht.away ? "1" : ht.home < ht.away ? "2" : "X";
+        if (outcome !== leg.outcome) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "resultAndTotalUnder") {
+        // 1X2 outcome AND total goals under `line`.
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        if (!(outcome === leg.outcome && ft.home + ft.away < leg.line)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "individualTotalUnder") {
+        // One side's own goals under `line`.
+        if (!ft) return "lost";
+        const scored = leg.side === "home" ? ft.home : ft.away;
+        if (!(scored < leg.line)) return "lost";
         continue;
       }
     }
