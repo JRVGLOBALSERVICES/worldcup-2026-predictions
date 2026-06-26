@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T01:20:29.472Z",
+    "generatedAt": "2026-06-26T02:20:30.964Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 42
   },
@@ -1203,6 +1203,11 @@
           "name": "Alex Freeman",
           "value": 1,
           "matches": 2
+        },
+        {
+          "name": "Auston Trusty",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1215,6 +1220,11 @@
           "name": "Malik Tillman",
           "value": 1,
           "matches": 2
+        },
+        {
+          "name": "Sebastian Berhalter",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -1228,6 +1238,10 @@
         },
         {
           "name": "Folarin Balogun",
+          "value": 1
+        },
+        {
+          "name": "Sebastian Berhalter",
           "value": 1
         }
       ],
@@ -1984,6 +1998,31 @@
       "yellowCards": [],
       "redCards": []
     },
+    "turkey": {
+      "team": "Turkiye",
+      "flag": "🇹🇷",
+      "scorers": [
+        {
+          "name": "Arda Güler",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "assists": [
+        {
+          "name": "Baris Alper Yilmaz",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "yellowCards": [
+        {
+          "name": "Eren Elmali",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
     "southkorea": {
       "team": "South Korea",
       "flag": "🇰🇷",
@@ -2116,19 +2155,6 @@
         },
         {
           "name": "Jordan Bos",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "turkey": {
-      "team": "Turkiye",
-      "flag": "🇹🇷",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Eren Elmali",
           "value": 1
         }
       ],
@@ -2671,6 +2697,23 @@
           {
             "name": "Pedro Vite",
             "team": "Ecuador"
+          }
+        ]
+      },
+      "760469": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760470": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Sebastian Berhalter",
+            "team": "USA"
+          },
+          {
+            "name": "Baris Alper Yilmaz",
+            "team": "Turkiye"
           }
         ]
       },
