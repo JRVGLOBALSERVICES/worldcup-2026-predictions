@@ -20,16 +20,18 @@
   --color-muted: oklch(1 0 0);
   --color-faint: oklch(1 0 0);
 
-  /* Lime #C7F464 — primary energy accent (CTAs, profit, won, key figure) */
-  --color-acid: oklch(0.91 0.18 121);
-  --color-acid-dim: oklch(0.72 0.14 124);
+  /* Emerald #39d98a — primary energy accent (CTAs, profit, won, key figure).
+   * Matched to Rj's slip-card image (the green he liked). */
+  --color-acid: #39d98a;
+  --color-acid-dim: #1f6f4a;
 
   /* Mint #4ECDC4 — secondary accent (info, player props, HT, upcoming) */
   --color-mint: oklch(0.79 0.11 189);
   --color-mint-dim: oklch(0.62 0.085 191);
 
-  /* Coral #FF6B6B — warm attention (live, medium confidence) */
-  --color-amber: oklch(0.72 0.175 32);
+  /* Gold #e8b73a — warm attention (live, medium confidence, accumulators).
+   * Matched to Rj's slip-card image (the yellow he liked). */
+  --color-amber: #e8b73a;
 
   /* Crimson #C44D58 — negative (lost, P&L down) */
   --color-rose: oklch(0.62 0.16 15);
@@ -40,8 +42,8 @@
   --color-hairline: oklch(1 0 0 / 0.022);      /* .stripes pitch markings */
   --color-on-acid: oklch(0.2 0.02 248);        /* ink on lime fills (selection) */
 
-  /* Slip-card corner blooms — premium tracker hero (lime top-right, mint bottom-left) */
-  --color-bloom-acid: oklch(0.91 0.18 121 / 0.10);
+  /* Slip-card corner blooms — premium tracker hero (emerald top-right, mint bottom-left) */
+  --color-bloom-acid: rgb(57 217 138 / 0.10);
   --color-bloom-mintcast: oklch(0.79 0.11 189 / 0.07);
 
   --font-display: var(--font-archivo), system-ui, sans-serif;
