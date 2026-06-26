@@ -54,9 +54,9 @@ export default function StandingsPage() {
 
       <footer className="mt-12 border-t border-line pt-6 text-sm text-faint">
         <p className="leading-relaxed text-muted">
-          Tables count finished matches only. Ordering: points, then goal difference, then goals
-          scored. Head-to-head and fair-play tiebreaks are applied by FIFA at the close of the group
-          stage.
+          Tables count finished matches only, mirrored from the official feed&apos;s standings — so
+          ordering already reflects the full FIFA tiebreak chain (points, goal difference, goals
+          scored, then head-to-head and fair-play).
         </p>
       </footer>
     </main>
