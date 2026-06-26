@@ -36,13 +36,28 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
     if (!specialsByMatch.has(matchId)) specialsByMatch.set(matchId, []);
     specialsByMatch.get(matchId)!.push(s);
   };
+  // All leg matchIds for a cross-match acca (multiScorers / multiLeg carry a
+  // `legs` array, each leg with its own matchId); empty for single-match specials.
+  const legMatchIds = (s: SpecialBucket): string[] => {
+    const legs = (s.grade as { legs?: { matchId?: string }[] } | undefined)?.legs;
+    return Array.isArray(legs)
+      ? legs.map((l) => l.matchId).filter((x): x is string => !!x)
+      : [];
+  };
   for (const s of specials) {
     // A cross-match accumulator (e.g. Ronaldo + Kane + Budimir, one leg per game)
-    // is bucketed under its first leg's match only and shown there once. We used
-    // to also mirror it onto every OTHER leg's match card so it was "visible from
-    // all 3 games", but that repeated the same acca across cards — Rj didn't want
-    // that, so the acca now lives on its home card only (no mirror copies).
+    // is anchored to its first leg's match (the real, counted copy) AND mirrored
+    // onto every OTHER leg's match card with mirror:true — so the acca is visible
+    // from every game it touches without its stake/return being double-counted
+    // (the `!s.mirror` guards downstream drop the copies from totals).
     pushSpecial(s.matchId, s);
+    const seen = new Set<string>([s.matchId]);
+    for (const id of legMatchIds(s)) {
+      if (!seen.has(id)) {
+        seen.add(id);
+        pushSpecial(id, { ...s, mirror: true });
+      }
+    }
   }
 
   // A match with ONLY specials (e.g. first-goal+score combos and no regular
