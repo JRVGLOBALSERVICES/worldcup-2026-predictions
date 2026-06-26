@@ -706,10 +706,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // Float winning lines to the top, still-on next, losses last.
                   const orderedBets = orderByVerdict(m.bets, betVerdicts);
                   const orderedSpecials = orderByVerdict(m.specials, spVerdicts);
-                  // Accumulators (multi-leg, shown on their home card) get the leg-grid
-                  // card treatment; everything else stays a flat prop row. Mirror copies
-                  // of a cross-match acca stay as compact rows (the grid lives on its home card).
-                  const isAccaRow = (r: SpecialRow) => !r.mirror && !!r.grade && "legs" in r.grade;
+                  // Accumulators (multi-leg) get the leg-grid card treatment; everything
+                  // else stays a flat prop row. Mirror copies render with the SAME leg-grid
+                  // card as the home copy — the acca looks identical on every game it
+                  // touches (the money totals below still exclude mirrors, so no double-count).
+                  const isAccaRow = (r: SpecialRow) => !!r.grade && "legs" in r.grade;
                   const accaRows = orderedSpecials.rows.filter((r) => isAccaRow(r as SpecialRow)) as SpecialRow[];
                   const accaVerdicts = orderedSpecials.rows
                     .map((r, i) => ({ r, v: orderedSpecials.verdicts[i] }))

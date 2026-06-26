@@ -239,6 +239,41 @@ function firstGoalMethod(keyEvents) {
   return "shot";
 }
 
+/**
+ * Opta prose for a goal struck from beyond the box — mirror of lib/live.ts
+ * SCORED_OUTSIDE_BOX, keep in sync. Lets the "score from outside the penalty
+ * area" market auto-settle off the per-event summary commentary.
+ */
+const OUTSIDE_BOX_RE =
+  /outside (the |of the )?(box|area|penalty area)|from (long range|distance)|long[- ]range (effort|strike|goal|shot)/i;
+
+/**
+ * Tag each goal that the summary keyEvents describe as scored from outside the
+ * box. Matches a scoring keyEvent to a goal by scorer name + nearby minute (the
+ * scoreboard `details` carry no location prose; only the summary does). Mutates
+ * `goals` in place, setting `outsideBox: true` where the prose says so.
+ */
+function tagOutsideBox(goals, keyEvents) {
+  const longRange = (keyEvents ?? [])
+    .filter((e) => e.scoringPlay && e.ownGoal !== true && OUTSIDE_BOX_RE.test(e.text ?? ""))
+    .map((e) => ({
+      scorer: norm(e.participants?.[0]?.athlete?.displayName ?? ""),
+      minute: e.clock?.value != null ? Math.round(e.clock.value / 60) : null,
+    }));
+  if (!longRange.length) return;
+  for (const g of goals) {
+    if (g.ownGoal) continue;
+    const gn = norm(g.scorer ?? "");
+    const hit = longRange.some(
+      (lr) =>
+        lr.scorer &&
+        (gn === lr.scorer || gn.includes(lr.scorer) || lr.scorer.includes(gn)) &&
+        (lr.minute == null || g.minute == null || Math.abs(lr.minute - g.minute) <= 2),
+    );
+    if (hit) g.outsideBox = true;
+  }
+}
+
 /** Convert one ESPN event to our result shape, oriented to the fixture's home/away. */
 function resultFromEvent(ev, fixture) {
   const comp = ev.competitions?.[0];
@@ -367,6 +402,7 @@ function settleBetsFromResults(bets, results) {
           assist: g.assist,
           penalty: g.penalty === true,
           ownGoal: g.ownGoal === true,
+          ...(g.outsideBox === true ? { outsideBox: true } : {}),
         })),
         cards: (r.cards ?? []).map((c) => ({
           team: c.team,
@@ -463,6 +499,9 @@ async function main() {
       r.stats = s;
       statsCount++;
     }
+    // Tag long-range goals from the same summary, so the "score from outside the
+    // box" market settles off real commentary (scoreboard details carry no location).
+    if (Array.isArray(r.goals)) tagOutsideBox(r.goals, b.value?.keyEvents);
   });
   // Carry forward reused final snapshots for matches we deliberately didn't refetch.
   for (const [id, r] of Object.entries(results)) {

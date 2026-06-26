@@ -8515,6 +8515,56 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83628637369",
+      "slipNo": "83628637369",
+      "matchId": "egy-ira-2026-06-26",
+      "player": "Mohamed Salah",
+      "market": "To Score From Outside The Box",
+      "label": "Mohamed Salah to score from outside the penalty area — Yes",
+      "odds": 18,
+      "stake": 20,
+      "placedAt": "27/06 05:24",
+      "grade": {
+        "type": "scoredOutsideBox",
+        "player": "Mohamed Salah"
+      }
+    },
+    {
+      "id": "sp-83628598655",
+      "slipNo": "83628598655",
+      "matchId": "cap-sau-2026-06-26",
+      "market": "Accumulator (4)",
+      "label": "Acca — Cape Verde to win a half + Spain to win a half + a player to score a brace (EGY/IRA) + New Zealand/Belgium HT-FT W2/X (4 legs)",
+      "odds": 351.54,
+      "stake": 30,
+      "placedAt": "27/06 05:23",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "winsAtLeastOneHalf",
+            "side": "home"
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "winsAtLeastOneHalf",
+            "side": "away"
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "brace"
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "htft",
+            "ht": "2",
+            "ft": "X"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

@@ -51,6 +51,10 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
     // from every game it touches without its stake/return being double-counted
     // (the `!s.mirror` guards downstream drop the copies from totals).
     pushSpecial(s.matchId, s);
+    // Once an acca is LOST, it's dead — don't carry it forward onto the later
+    // games' cards. A failed acca stays tracked on its anchor (first) game only;
+    // mirroring a dead slip onto matches it can no longer affect is just noise.
+    if (s.status === "lost") continue;
     const seen = new Set<string>([s.matchId]);
     for (const id of legMatchIds(s)) {
       if (!seen.has(id)) {

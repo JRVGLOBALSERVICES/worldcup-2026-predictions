@@ -404,6 +404,17 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         ? { verdict: "lost", note: `${player}: ${scored} goals` }
         : { verdict: "alive", note: `${player}: ${scored}/${Math.ceil(g.line + 0.5)} goals` };
 
+    case "scoredOutsideBox": {
+      // Locks won the moment a logged goal of his is flagged outside-the-box;
+      // until then stays alive (an inside-box goal doesn't kill it — a later
+      // long-ranger still can), loses at FT with no qualifying goal.
+      const out = goalsBy(goals, g.player).some((gl) => gl.outsideBox === true);
+      if (out) return { verdict: "won", note: `${g.player}: scored from outside the box ✓` };
+      return done
+        ? { verdict: "lost", note: `${g.player}: no goal from outside the box` }
+        : { verdict: "alive", note: `${g.player}: needs a goal from outside the box` };
+    }
+
     case "bttsEachOver": {
       // Both teams strictly over `line` each (line 1 → 2+ each). Locked once met.
       const home = goals.filter((gl) => gl.team === "home" && !gl.ownGoal).length;
@@ -680,9 +691,15 @@ export function inPlayMultiLeg(
                           ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+U${leg.line}`
                           : leg.kind === "individualTotalUnder"
                             ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"} U${leg.line}`
-                            : leg.kind === "scored" && leg.negate
-                              ? `No ${leg.player}`
-                              : leg.player;
+                            : leg.kind === "winsAtLeastOneHalf"
+                              ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "T1" : "T2"} win a half`
+                              : leg.kind === "brace"
+                                ? `${matchCode(leg.matchId)} brace`
+                                : leg.kind === "htft"
+                                  ? `${matchCode(leg.matchId)} ${w1x2(leg.ht)}/${w1x2(leg.ft)}`
+                                  : leg.kind === "scored" && leg.negate
+                                    ? `No ${leg.player}`
+                                    : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
@@ -950,6 +967,92 @@ export function inPlayMultiLeg(
       } else {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "winsAtLeastOneHalf") {
+      // Won iff the side takes H1 (HT) OR H2 (FT−HT). H1 locks at the break, so a
+      // half won there is banked immediately; otherwise the leg can still win on
+      // H2 right up to FT, so it never dies early.
+      const ht = lm.htScore;
+      const wonH1 = ht ? (leg.side === "home" ? ht.home > ht.away : ht.away > ht.home) : false;
+      if (wonH1) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+        continue;
+      }
+      if (done) {
+        const sh = ht ? cur.home - ht.home : cur.home;
+        const sa = ht ? cur.away - ht.away : cur.away;
+        const wonH2 = leg.side === "home" ? sh > sa : sa > sh;
+        if (wonH2) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+        continue;
+      }
+      // Live: leading the half currently in play → on track.
+      const sh = ht ? cur.home - ht.home : cur.home;
+      const sa = ht ? cur.away - ht.away : cur.away;
+      const leading = leg.side === "home" ? sh > sa : sa > sh;
+      if (leading) onTrack = true;
+      parts.push(`${legLabel} ${leading ? "⋯" : "—"}`);
+      continue;
+    }
+
+    if (leg.kind === "brace") {
+      // Any single scorer on 2+ non-own goals. Locks won immediately; lost at FT.
+      const counts = new Map<string, number>();
+      for (const gl of realGoals(lm.goals)) {
+        const k = deburr(gl.scorer);
+        counts.set(k, (counts.get(k) ?? 0) + 1);
+      }
+      const max = counts.size ? Math.max(...counts.values()) : 0;
+      if (max >= 2) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else if (max === 1) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "htft") {
+      // HT + FT 1X2 double. Wrong HT outcome at the break kills it; otherwise
+      // locks at FT.
+      const ht = lm.htScore;
+      const out = (s: { home: number; away: number }) =>
+        s.home > s.away ? "1" : s.home < s.away ? "2" : "X";
+      if (ht && out(ht) !== leg.ht) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+        continue;
+      }
+      if (done) {
+        if (ht && out(ht) === leg.ht && out(cur) === leg.ft) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+        continue;
+      }
+      if (ht && out(ht) === leg.ht && out(cur) === leg.ft) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
       }
       continue;
     }

@@ -34,6 +34,15 @@ export type Goal = {
   freeKick?: boolean;
   penalty?: boolean;
   ownGoal?: boolean;
+  /**
+   * Goal struck from OUTSIDE the penalty area. Parsed from ESPN's per-event
+   * summary keyEvents commentary prose ("…with a right footed shot from outside
+   * the box"). The lighter scoreboard feed carries no location, so this is only
+   * set once the summary is read (scripts/build-results.mjs + lib/live.ts).
+   * Absent/false = inside the box or not yet determined. This is what lets the
+   * "Player to score from outside the penalty area" market auto-settle.
+   */
+  outsideBox?: boolean;
 };
 
 /** One scraped booking. `team` is relative to the fixture's listed home/away.
@@ -168,6 +177,10 @@ export type SpecialGrade =
   | { type: "waterBreakCorner"; half: 1 | 2 }
   | { type: "bttsEachOver"; line: number }
   | { type: "goalsOver"; player: string; line: number }
+  // Player scores a goal struck from OUTSIDE the penalty area ("Player To Score
+  // From Outside The Penalty Area — Yes"). Settled off the per-goal `outsideBox`
+  // flag parsed from the summary keyEvents prose. Loses at FT if no such goal.
+  | { type: "scoredOutsideBox"; player: string }
   | { type: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
   | { type: "matchResult"; outcome: "1" | "X" | "2" }
   | { type: "firstScorerAndScoreOther"; player: string; excludeScores: { home: number; away: number }[] }
@@ -291,7 +304,17 @@ export type MultiLegCond =
   | { matchId: string; kind: "resultAndTotalUnder"; outcome: "1" | "X" | "2"; line: number }
   // Individual Total — one side's own goals under `line` ("Individual Total 2
   // Under (3.5)" → side:"away", line:3.5).
-  | { matchId: string; kind: "individualTotalUnder"; side: "home" | "away"; line: number };
+  | { matchId: string; kind: "individualTotalUnder"; side: "home" | "away"; line: number }
+  // Side wins AT LEAST ONE half ("Team 1/2 To Win At Least One Half — Yes").
+  // A half is won when that side outscores the opponent in it: H1 off the HT
+  // score, H2 off FT−HT. Wins iff the side takes H1 OR H2. Needs ht + ft.
+  | { matchId: string; kind: "winsAtLeastOneHalf"; side: "home" | "away" }
+  // Brace — ANY single player scores 2+ (non-own) goals in that match ("A Player
+  // To Score Two Goals — Yes"). Graded off the leg match's own goal list at FT.
+  | { matchId: string; kind: "brace" }
+  // Half-time/full-time double result ("HT-FT W2X" etc.), oriented to the leg
+  // match's home/away. ht + ft are each a 1X2 outcome that must both match.
+  | { matchId: string; kind: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -864,6 +887,38 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!(scored < leg.line)) return "lost";
         continue;
       }
+
+      if (leg.kind === "winsAtLeastOneHalf") {
+        // Won iff the side outscores the opponent in H1 (HT) OR H2 (FT − HT).
+        const ht = getResult(leg.matchId).ht;
+        if (!ht || !ft) return "lost";
+        const wonH1 = leg.side === "home" ? ht.home > ht.away : ht.away > ht.home;
+        const sh = ft.home - ht.home;
+        const sa = ft.away - ht.away;
+        const wonH2 = leg.side === "home" ? sh > sa : sa > sh;
+        if (!(wonH1 || wonH2)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "brace") {
+        // Any single player scored 2+ non-own goals in that match.
+        const counts = new Map<string, number>();
+        for (const gl of realGoals(ev.goals)) {
+          const k = deburr(gl.scorer);
+          counts.set(k, (counts.get(k) ?? 0) + 1);
+        }
+        if (![...counts.values()].some((n) => n >= 2)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "htft") {
+        // HT and FT 1X2 outcomes must both match, oriented to the leg's home/away.
+        const ht = getResult(leg.matchId).ht;
+        if (!ht || !ft) return "lost";
+        const o = (s: Score) => (!s ? "" : s.home > s.away ? "1" : s.home < s.away ? "2" : "X");
+        if (!(o(ht) === leg.ht && o(ft) === leg.ft)) return "lost";
+        continue;
+      }
     }
     return pending ? "pending" : "won";
   }
@@ -1028,6 +1083,11 @@ export function gradeSpecial(special: Special): BetStatus {
     case "goalsOver":
       // Player scores strictly more than `line` goals (line=1.5 → 2+ = brace/over-1.5).
       hit = goalsBy(goals, g.player).length > g.line;
+      break;
+    case "scoredOutsideBox":
+      // Player scores ≥1 (non-own) goal struck from outside the penalty area.
+      // outsideBox is parsed from the summary keyEvents prose by the scraper.
+      hit = goalsBy(goals, g.player).some((gl) => gl.outsideBox === true);
       break;
     case "goalsAssistsOver":
       // Player's goals + assists combined strictly over the line (2.5 → 3+).

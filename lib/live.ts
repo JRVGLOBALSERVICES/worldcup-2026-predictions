@@ -297,6 +297,15 @@ type EspnSummary = {
  * [1]); the cheap scoreboard `details` omits it, and frequently omits the
  * scorer's name too. Solo / penalty goals have no assister → null.
  */
+/**
+ * Opta prose for a goal scored from beyond the 18-yard box. Covers ESPN's usual
+ * phrasings: "from outside the box", "from outside the area", "from long range",
+ * "from distance", "a long-range effort". Deliberately NOT matched: "edge of the
+ * box" (ambiguous) — only clearly-outside phrasings settle Yes.
+ */
+const SCORED_OUTSIDE_BOX =
+  /outside (the |of the )?(box|area|penalty area)|from (long range|distance)|long[- ]range (effort|strike|goal|shot)/i;
+
 export function goalsFromKeyEvents(
   keyEvents: EspnKeyEvent[] | undefined,
   homeName: string,
@@ -314,6 +323,9 @@ export function goalsFromKeyEvents(
         assist: e.ownGoal ? null : p[1]?.athlete?.displayName ?? null,
         penalty: e.penaltyKick === true,
         ownGoal: e.ownGoal === true,
+        // Long-range goal — read from the Opta prose ("…from outside the box").
+        // Lets the "score from outside the penalty area" market auto-settle.
+        outsideBox: e.ownGoal !== true && SCORED_OUTSIDE_BOX.test(e.text ?? ""),
       };
     });
 }
@@ -345,6 +357,8 @@ function enrichGoals(base: Goal[], rich: Goal[]): Goal[] {
       ...g,
       scorer: g.scorer && g.scorer !== "Unknown" ? g.scorer : r.scorer,
       assist: g.assist ?? r.assist,
+      // Goal location rides ONLY on the summary prose, so layer it in from rich.
+      outsideBox: g.outsideBox || r.outsideBox,
     };
   });
 }
