@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T23:03:28.626Z",
+    "generatedAt": "2026-06-26T23:05:00.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
   },
@@ -9682,133 +9682,135 @@
     "uru-spa-2026-06-26": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "1.95",
-        "reason": "Spain field a possession-heavy XI with Rodri-Merino-Pedri controlling midfield, Yamal and Baena providing width and elite set-piece delivery, and Oyarzabal leading the line after his 4-0 demolition of Saudi Arabia (2 goals). However Uruguay under Bielsa sit a disciplined deep block and counter through Darwin Nunez and Valverde, and Spain were already held 0-0 by Cape Verde's low block this tournament. Spain only need a draw to top the group, which can flatten their urgency, while Uruguay must chase the win to be safe. Real draw and narrow-win risk, so this is a lean favourite not a banker.",
+        "fairOdds": "1.85",
+        "reason": "Spain top the group, haven't conceded in two games, and with Rodri-Pedri-Merino controlling tempo and Oyarzabal (2g+1a vs Saudi) leading the line they are clear favourites at Opta's 62.2%. But Bielsa's Uruguay have drawn both games via a disciplined deep block, and with Baena (creator, not pure goal threat) starting wide over Nico Williams and Yamal only just back from hamstring, Spain's edge is real but not overwhelming. A possession-favourite vs an organised counter side carries genuine draw risk (Opta 22.1%); 55-62% is not certainty.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.80",
-        "alt": "1-0",
-        "altOdds": "3.40",
+        "fairOdds": "2.40",
+        "alt": "0-1",
+        "altOdds": "3.60",
         "strength": 3
       },
       "htft": {
         "pick": "Draw/Spain",
-        "fairOdds": "4.50",
-        "strength": 2
+        "fairOdds": "3.40",
+        "strength": 3
       },
       "fullTime": {
-        "score": "1-0",
+        "score": "0-1",
         "fairOdds": "6.50",
         "strength": 2
       },
       "scorers": [
         {
-          "player": "Mikel Oyarzabal",
-          "fairOdds": "2.90",
-          "banker": false,
-          "note": "Spain's central striker and confirmed first-choice penalty taker; scored twice vs Saudi Arabia, on the end of Spain's box service",
-          "strength": 3
-        },
-        {
-          "player": "Lamine Yamal",
+          "player": "Oyarzabal",
           "fairOdds": "3.20",
           "banker": false,
-          "note": "Starts on the right, scored his first WC goal vs Saudi; cuts inside vs Sanabria/Olivera, also a set-piece option",
+          "note": "Spain's central #9 and first-choice penalty taker; 2g+1a vs Saudi, the safest goalscorer signal but facing a packed Uruguay block.",
           "strength": 3
         },
         {
-          "player": "Alex Baena",
-          "fairOdds": "4.50",
-          "banker": false,
-          "note": "Comes in for Nico Williams on the left; elite dead-ball and arriving-midfielder threat, La Liga's former top assister with FK-scoring pedigree",
-          "strength": 2
-        },
-        {
-          "player": "Darwin Nunez",
+          "player": "Yamal",
           "fairOdds": "3.80",
           "banker": false,
-          "note": "Uruguay's lone striker, main counter outlet and joint penalty taker; chaotic but their primary goal threat against a high Spain line",
+          "note": "Right-wing threat and Spain's biggest dribbler, but only just back from hamstring and unlikely to play 90; backup set-piece option.",
+          "strength": 3
+        },
+        {
+          "player": "Merino",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Late box-arriving runs and aerial threat from midfield; 6 qualifying goals incl. headers makes him a live set-piece scorer vs a side that can be got at in the air.",
+          "strength": 3
+        },
+        {
+          "player": "Nunez",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Bielsa's clinical #9 over Vinas; pace-and-chaos runner who is Uruguay's main outlet on the counter, but isolated against Cubarsi-Laporte.",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Alex Baena",
-          "fairOdds": "3.60",
+          "player": "Baena",
+          "fairOdds": "4.80",
           "banker": false,
-          "note": "Spain's sharpened set-piece deliverer with Williams out - corners and free-kicks plus open-play left-side service; was La Liga's top assist provider",
-          "strength": 3
-        },
-        {
-          "player": "Lamine Yamal",
-          "fairOdds": "3.90",
-          "banker": false,
-          "note": "Primary chance creator from the right, assisted/combined for goals vs Saudi; also delivers corners and free-kicks",
+          "note": "Starting wide-left over Nico Williams as Spain's elite left-footed creator (La Liga assist leader history); chief chance-supplier in open play.",
           "strength": 3
         },
         {
           "player": "Pedri",
           "fairOdds": "5.50",
           "banker": false,
-          "note": "Spain's deep-lying creator threading the final ball through Uruguay's block; also a free-kick option",
+          "note": "Spain's metronome who threads the final-third passes; high involvement against a deep block.",
+          "strength": 2
+        },
+        {
+          "player": "Yamal",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Crosses and cutbacks from the right were Spain's main creation route vs Saudi; assist threat even if minutes are managed.",
           "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "medium - Spain's possession in and around a packed Uruguay box invites contact, plus Bielsa's aggressive recovery tackling; Uruguay penalties less likely as the counter is rushed",
-        "taker": "Mikel Oyarzabal",
-        "backup": "Lamine Yamal",
-        "note": "Spain: Oyarzabal first, Yamal next. Uruguay: Federico Valverde and Darwin Nunez share spot-kick duties (Valverde the primary with de Arrascaeta out)"
+        "likelihood": "medium - Spain dominate the ball and draw fouls vs a deep block, raising spot-kick odds, though Uruguay defend the box well",
+        "taker": "Oyarzabal",
+        "backup": "Rodri",
+        "note": "Spain: Oyarzabal first choice, Rodri/Yamal as backups. Uruguay: Valverde primary (also FKs and corners), Nunez secondary."
       },
       "lineups": {
-        "home": "Uruguay 4-3-3: Muslera; Varela, Caceres, Olivera, Sanabria; Valverde, Ugarte, Bentancur; Canobbio, Nunez, M. Araujo",
-        "away": "Spain 4-3-3: Simon; Llorente, Cubarsi, Laporte, Cucurella; Rodri, Merino, Pedri; Yamal, Oyarzabal, Baena",
+        "home": "Uruguay 4-3-3: Muslera; Varela, Caceres, Olivera, Sanabria; Valverde, Ugarte, Bentancur; Canobbio, Nunez, M. Araujo. Out: Ronald Araujo, de Arrascaeta (calf).",
+        "away": "Spain 4-3-3: Simon; Llorente, Cubarsi, Laporte, Cucurella; Rodri, Merino, Pedri; Yamal, Oyarzabal, Baena. Benched: Nico Williams, Olmo, Fabian Ruiz.",
         "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Alex Baena",
+          "player": "Baena",
           "team": "Spain",
-          "note": "Major selection news - starts on the left ahead of Nico Williams. Right-footed creator/set-piece specialist (former La Liga top assister, scored a FK in the Olympic final); sharpens Spain's dead-ball delivery rather than offering Williams' direct pace"
+          "note": "Big selection call: starts wide-left over Nico Williams. He is a creator/assist-maker (former La Liga assist leader), not a high-volume goal threat, so Spain's left side is more chance-creation than direct verticality."
         },
         {
-          "player": "Mikel Merino",
+          "player": "Oyarzabal",
           "team": "Spain",
-          "note": "Starts in midfield with Fabian Ruiz benched; box-arriving runner and aerial set-piece target alongside Rodri and Pedri"
+          "note": "Confirmed central #9 and first-choice penalty taker; came alive vs Saudi with 2 goals + 1 assist after a quiet debut. Spain's safest goalscorer but must break a stubborn block."
         },
         {
-          "player": "Mikel Oyarzabal",
+          "player": "Yamal",
           "team": "Spain",
-          "note": "Confirmed first-choice penalty taker; bounced back from a quiet Cape Verde game with a brace vs Saudi Arabia. Central reference point Spain feed in a congested box"
+          "note": "Just back from an April hamstring injury, not at 100% and unlikely to finish 90; still Spain's most dangerous 1v1 wide threat and a growing set-piece/penalty backup."
         },
         {
-          "player": "Lamine Yamal",
+          "player": "Merino",
           "team": "Spain",
-          "note": "Starts after managing a hamstring issue; scored his first World Cup goal vs Saudi. Width, dribbling and dead-ball threat from the right, second in Spain's penalty order"
+          "note": "Underrated late-runner and aerial scorer from midfield (6 goals in qualifying, headers vs Bulgaria/Turkiye); a key set-piece weapon against Uruguay."
         },
         {
-          "player": "Darwin Nunez",
+          "player": "Nunez",
           "team": "Uruguay",
-          "note": "Lone striker and chief counter outlet, joint penalty taker; inconsistent finishing but Uruguay's main threat in transition against Spain's high line"
+          "note": "Bielsa picks him as the clinical #9 over Vinas; the 'Agent of Chaos' is Uruguay's primary outlet on the counter but his club form is inconsistent and he'll be isolated against Cubarsi-Laporte."
         },
         {
-          "player": "Federico Valverde",
+          "player": "Valverde",
           "team": "Uruguay",
-          "note": "Engine of Bielsa's midfield and primary free-kick/penalty taker with de Arrascaeta (calf) absent; carries Uruguay's set-piece and long-range threat, also Ronald Araujo missing leaves Caceres-Olivera as the centre-back pairing"
+          "note": "Captain and set-piece hub: takes penalties, direct free-kicks and corners, plays advanced behind the striker, and carries the long-range shooting threat. Uruguay's most versatile prop target."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.espn.com/soccer/story/_/id/49167172/fifa-world-cup-2026-uruguay-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://oddspedia.com/insights/football/world-cup-2026-penalty-takers",
-        "https://en.wikipedia.org/wiki/%C3%81lex_Baena",
-        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H",
+        "https://tips.gg/article/uruguay-vs-spain-27-06-2026/",
         "https://www.aljazeera.com/sports/2026/6/25/world-cup-2026-uruguay-vs-spain-knockouts-prediction-lineups",
-        "https://www.skysports.com/football/news/12098/13553799/world-cup-2026-spain-4-0-saudi-arabia-lamine-yamal-and-mikel-oyarzabal-star-as-la-roja-earn-first-group-h-win"
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.olympics.com/en/news/lamine-yamal-fifa-world-cup-2026-stats-form-and-how-to-watch-spain-star",
+        "https://www.aljazeera.com/sports/2025/9/7/spain-thump-turkiye-6-0-in-world-cup-2026-qualifier-as-merino-scores-three",
+        "https://en.wikipedia.org/wiki/%C3%81lex_Baena",
+        "https://www.matchbingo.co.uk/world-cup-2026/uruguay/darwin-nunez",
+        "https://footballwhispers.com/blog/uruguay-vs-spain-prediction-world-cup-2026/",
+        "https://www.matchbingo.co.uk/world-cup-2026/uruguay/federico-valverde"
       ]
     },
     "nor-fra-2026-06-26": {
