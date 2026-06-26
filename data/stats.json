@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T16:20:48.508Z",
+    "generatedAt": "2026-06-26T19:20:39.890Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 44
   },
@@ -255,6 +255,13 @@
       },
       {
         "rank": 4,
+        "name": "Abdoulaye Seck",
+        "team": "Senegal",
+        "flag": "🇸🇳",
+        "value": 1
+      },
+      {
+        "rank": 4,
         "name": "Abdukodir Khusanov",
         "team": "Uzbekistan",
         "flag": "🇺🇿",
@@ -294,13 +301,6 @@
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 1
-      },
-      {
-        "rank": 4,
-        "name": "Andy Robertson",
-        "team": "Scotland",
-        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "value": 1
       }
     ],
     "redCards": [
@@ -330,6 +330,13 @@
         "name": "Nathan Ngoy",
         "team": "Belgium",
         "flag": "🇧🇪",
+        "value": 1
+      },
+      {
+        "rank": 1,
+        "name": "Rebin Sulaka",
+        "team": "Iraq",
+        "flag": "🇮🇶",
         "value": 1
       },
       {
@@ -391,12 +398,12 @@
           "matches": 2
         },
         {
-          "name": "Bradley Barcola",
-          "value": 1,
-          "matches": 1
+          "name": "Ousmane Dembélé",
+          "value": 2,
+          "matches": 2
         },
         {
-          "name": "Ousmane Dembélé",
+          "name": "Bradley Barcola",
           "value": 1,
           "matches": 1
         }
@@ -409,6 +416,11 @@
         },
         {
           "name": "Adrien Rabiot",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Kylian Mbappé",
           "value": 1,
           "matches": 1
         },
@@ -431,12 +443,22 @@
           "matches": 2
         },
         {
+          "name": "Habib Diarra",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Ibrahim Mbaye",
           "value": 1,
           "matches": 1
         }
       ],
       "assists": [
+        {
+          "name": "Abdoulaye Seck",
+          "value": 1,
+          "matches": 1
+        },
         {
           "name": "Iliman Ndiaye",
           "value": 1,
@@ -448,7 +470,12 @@
           "matches": 1
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Abdoulaye Seck",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "norway": {
@@ -488,7 +515,12 @@
           "matches": 1
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Patrick Berg",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "iraq": {
@@ -518,7 +550,12 @@
           "value": 1
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "name": "Rebin Sulaka",
+          "value": 1
+        }
+      ]
     },
     "argentina": {
       "team": "Argentina",
@@ -2793,6 +2830,24 @@
           {
             "name": "Yan Diomande",
             "team": "Ivory Coast"
+          }
+        ]
+      },
+      "760474": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Abdoulaye Seck",
+            "team": "Senegal"
+          }
+        ]
+      },
+      "760475": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Kylian Mbappé",
+            "team": "France"
           }
         ]
       }

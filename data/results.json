@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T16:20:43.184Z",
+    "generatedAt": "2026-06-26T19:20:31.915Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 40,
-    "live": 0
+    "live": 2
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -5005,6 +5005,173 @@
             "reliable": true
           }
         }
+      }
+    },
+    "nor-fra-2026-06-26": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ousmane Dembélé",
+          "minute": 6,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Patrick Berg",
+          "minute": 9,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-26T19:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 0,
+          "away": 1
+        },
+        "sot": {
+          "home": 1,
+          "away": 6
+        },
+        "shots": {
+          "home": 2,
+          "away": 7
+        },
+        "yellow": {
+          "home": 1,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            5,
+            0
+          ]
+        },
+        "playerSot": {
+          "Kylian Mbappé": 2,
+          "Manu Koné": 1,
+          "Désiré Doué": 2,
+          "Kristian Thorstvedt": 1
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
+      }
+    },
+    "sen-ira-2026-06-26": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Habib Diarra",
+          "minute": 3,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Rebin Sulaka",
+          "minute": 13,
+          "type": "red"
+        },
+        {
+          "team": "home",
+          "player": "Abdoulaye Seck",
+          "minute": 18,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-26T19:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 2,
+          "away": 0
+        },
+        "sot": {
+          "home": 2,
+          "away": 0
+        },
+        "shots": {
+          "home": 5,
+          "away": 0
+        },
+        "yellow": {
+          "home": 0,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 1
+        },
+        "cards": {
+          "home": 0,
+          "away": 2
+        },
+        "cornersByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Sadio Mané": 1
+        },
+        "firstGoalMethod": "shot",
+        "waterBreak": {}
       }
     }
   }
