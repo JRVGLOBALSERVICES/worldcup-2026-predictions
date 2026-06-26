@@ -386,6 +386,49 @@ function PropCard({
   );
 }
 
+/** Match-score bet, carded to match AccaCard/PropCard — so the score block reads
+ *  as cards like accumulators, not the old flat row list. Carries the HT/FT period
+ *  chip and the predicted scoreline chip up top, the bet label below. */
+function BetCard({
+  bet,
+  verdict,
+  currency,
+}: {
+  bet: BetRow;
+  verdict: InPlay;
+  currency: string;
+}) {
+  const dim = verdict.verdict === "lost" || verdict.verdict === "dead";
+  const periodCls = bet.period === "HT" ? "border-mint/40 bg-mint/10 text-mint" : "border-acid-dim/50 bg-acid/10 text-acid";
+  return (
+    <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+        <div className="flex items-center gap-2.5">
+          <span className={`rounded-full border px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider ${periodCls}`}>
+            {bet.period}
+          </span>
+          <span className="tnum rounded-md border border-line bg-card/50 px-2 py-0.5 font-mono text-[0.72rem] font-bold text-ink">
+            {bet.home}–{bet.away}
+          </span>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="tnum font-mono text-[0.7rem] text-faint/70">
+            @{bet.odds.toFixed(2)} · {money(bet.stake, currency)} →{" "}
+            <span className={`font-semibold ${verdict.verdict === "won" ? "text-acid" : dim ? "text-faint line-through" : "text-ink"}`}>
+              {money(bet.potential, currency)}
+            </span>
+          </span>
+          <VerdictPill verdict={verdict.verdict} />
+        </div>
+      </div>
+      <p className="mt-3 text-sm text-ink">{bet.label}</p>
+      {verdict.note && (
+        <p className="mt-2 font-mono text-[0.66rem] text-faint/70">{verdict.note}</p>
+      )}
+    </div>
+  );
+}
+
 /** Slip breakdown band — singles vs accas vs total for the featured (today's) slate,
  *  the live analogue of the bet-slip card's footer split. */
 function SlipBreakdown({ days, currency }: { days: DayRow[]; currency: string }) {
@@ -759,7 +802,19 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                           </div>
                         )}
 
-                        <RowList title={null} rows={orderedBets.rows} verdicts={orderedBets.verdicts} currency={cur} chip={(r) => (r as BetRow).period} chipCls={(r) => ((r as BetRow).period === "HT" ? "bg-mint/15 text-mint" : "bg-acid/15 text-acid")} scoreChip={(r) => `${(r as BetRow).home}–${(r as BetRow).away}`} />
+                        {orderedBets.rows.length > 0 && (
+                          <div>
+                            <div className="flex items-center gap-2 bg-pitch-2/50 px-5 py-2.5">
+                              <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-acid">Match score</span>
+                              <span className="rounded-full border border-acid-dim/50 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-acid">HT · FT · live grade</span>
+                            </div>
+                            <div className="space-y-3 px-5 py-4">
+                              {(orderedBets.rows as BetRow[]).map((r, i) => (
+                                <BetCard key={r.id} bet={r} verdict={orderedBets.verdicts[i]} currency={cur} />
+                              ))}
+                            </div>
+                          </div>
+                        )}
 
                         {accaRows.length > 0 && (
                           <div className="border-t border-line">
@@ -838,62 +893,4 @@ function orderByVerdict<T>(rows: T[], verdicts: InPlay[]): { rows: T[]; verdicts
   const idx = rows.map((_, i) => i);
   idx.sort((a, b) => VERDICT_ORDER[verdicts[a].verdict] - VERDICT_ORDER[verdicts[b].verdict]);
   return { rows: idx.map((i) => rows[i]), verdicts: idx.map((i) => verdicts[i]) };
-}
-
-function RowList({
-  rows,
-  verdicts,
-  currency,
-  chip,
-  chipCls,
-  scoreChip,
-}: {
-  title: string | null;
-  rows: (BetRow | SpecialRow)[];
-  verdicts: InPlay[];
-  currency: string;
-  chip: (r: BetRow | SpecialRow) => string;
-  chipCls: (r: BetRow | SpecialRow) => string;
-  scoreChip?: (r: BetRow | SpecialRow) => string | null;
-}) {
-  return (
-    <ul className="divide-y divide-line/60">
-      {rows.map((r, i) => {
-        const v = verdicts[i] ?? { verdict: "scheduled" as LiveVerdict, note: "" };
-        const dim = v.verdict === "lost" || v.verdict === "dead";
-        const isMirror = (r as SpecialRow).mirror === true;
-        return (
-          <li key={r.id} className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-5 py-3.5 sm:grid-cols-[1fr_auto_auto_auto]">
-            <div className="min-w-0">
-              <div className="flex items-start gap-2">
-                <span className={`mt-0.5 shrink-0 rounded-sm px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider ${chipCls(r)}`}>{chip(r)}</span>
-                {scoreChip && scoreChip(r) && (
-                  <span className="tnum mt-0.5 shrink-0 rounded-md border border-line bg-pitch-2/70 px-2 py-0.5 font-mono text-[0.72rem] font-bold text-ink">
-                    {scoreChip(r)}
-                  </span>
-                )}
-                <span className="text-sm text-ink">{r.label}</span>
-              </div>
-              {isMirror && (
-                <span className="mt-1 inline-block rounded-sm border border-mint/30 px-1.5 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-mint/80">
-                  ↗ cross-match acca · stake counted on its home card
-                </span>
-              )}
-              {v.note && (
-                <span className="mt-1 block font-mono text-[0.62rem] text-faint">{v.note}</span>
-              )}
-              <span className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[0.62rem] sm:hidden">
-                <span className="text-faint">Stake <span className="tnum text-muted">{money(r.stake, currency)}</span></span>
-                <span className="text-faint">@ <span className="tnum text-muted">{r.odds.toFixed(2)}</span></span>
-                <span className="text-faint">Win <span className={`tnum ${v.verdict === "won" ? "text-acid" : dim ? "text-faint line-through" : "text-ink"}`}>{money(r.potential, currency)}</span></span>
-              </span>
-            </div>
-            <span className="tnum order-2 hidden text-right font-mono text-sm text-muted sm:order-none sm:block">{r.odds.toFixed(2)}</span>
-            <span className={`tnum hidden text-right font-mono text-sm sm:block ${v.verdict === "won" ? "text-acid" : dim ? "text-faint line-through" : "text-ink"}`}>{money(r.potential, currency)}</span>
-            <span className="order-3 flex justify-end sm:order-none"><VerdictPill verdict={v.verdict} /></span>
-          </li>
-        );
-      })}
-    </ul>
-  );
 }
