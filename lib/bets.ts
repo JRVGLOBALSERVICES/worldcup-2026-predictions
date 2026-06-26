@@ -212,6 +212,15 @@ export type SpecialGrade =
   // shots on target"). Settled off MatchStats.playerSot, tallied per-shooter
   // from ESPN commentary "Shot On Target" plays.
   | { type: "playerSotOver"; player: string; line: number }
+  // A named player's GOALS + ASSISTS combined strictly over `line` ("Mbappe
+  // Total Goals + Assists Combined Over 2.5" → needs 3+). Settled off the same
+  // goalsBy / assistsBy tallies used by goalsOver and assistsOver.
+  | { type: "goalsAssistsOver"; player: string; line: number }
+  // A bookmaker qualifier ESPN's feed cannot verify ("Team to score a penalty
+  // FOR A FOUL ON <player>"): the penalty goal and scorer are in the feed, but
+  // the foul-drawn-by attribution is not. Never auto-resolved — stays pending
+  // for a human to settle by eye. `note` says what to check.
+  | { type: "manual"; note: string }
   // Multi-leg build-a-bet — ALL `conds` must hold (a 1xBet accumulator single).
   // Each leg is graded off the final score (goals/result/btts) or the verified
   // ESPN MatchStats (corners / shots-on-target / cards). Pending until every
@@ -1007,6 +1016,14 @@ export function gradeSpecial(special: Special): BetStatus {
       // Player scores strictly more than `line` goals (line=1.5 → 2+ = brace/over-1.5).
       hit = goalsBy(goals, g.player).length > g.line;
       break;
+    case "goalsAssistsOver":
+      // Player's goals + assists combined strictly over the line (2.5 → 3+).
+      hit = goalsBy(goals, g.player).length + assistsBy(goals, g.player).length > g.line;
+      break;
+    case "manual":
+      // Unverifiable bookmaker qualifier (e.g. foul-drawn-by) — never auto-graded;
+      // always pending so a human settles it. ESPN carries no such datum.
+      return "pending";
     case "htft": {
       // Half-time AND full-time 1X2 outcome must both match.
       const ht = getResult(special.matchId).ht;

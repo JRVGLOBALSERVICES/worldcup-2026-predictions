@@ -8297,6 +8297,37 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83610984035",
+      "slipNo": "83610984035",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Kylian Mbappe",
+      "market": "Player Goals + Assists Over 2.5",
+      "label": "Kylian Mbappe — goals + assists combined Over 2.5 (needs 3+)",
+      "odds": 12,
+      "stake": 20,
+      "placedAt": "26/06 23:18",
+      "grade": {
+        "type": "goalsAssistsOver",
+        "player": "Kylian Mbappe",
+        "line": 2.5
+      }
+    },
+    {
+      "id": "sp-83611021397",
+      "slipNo": "83611021397",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Kylian Mbappe",
+      "market": "France penalty from a foul on Mbappe",
+      "label": "France to score a penalty from a foul on Kylian Mbappe — Yes (manual settle)",
+      "odds": 8,
+      "stake": 45,
+      "placedAt": "26/06 23:18",
+      "grade": {
+        "type": "manual",
+        "note": "France penalty won by a foul on Mbappe — ESPN can't verify foul-drawn-by; settle by eye"
+      }
     }
   ],
   "matchStats": {

@@ -554,6 +554,22 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
         : { verdict: "alive", note: `${player}: ${sot}/${need} shots on target` };
     }
 
+    case "goalsAssistsOver": {
+      // Player goals + assists combined, Over `line`. Both accrue monotonically,
+      // so once the combined tally clears the line it's a locked win.
+      const ga = scored + assists;
+      const need = Math.ceil(g.line + 0.5);
+      if (ga > g.line) return { verdict: "won", note: `${player}: ${scored}g+${assists}a = ${ga} ✓` };
+      return done
+        ? { verdict: "lost", note: `${player}: ${scored}g+${assists}a = ${ga} (need ${need})` }
+        : { verdict: "alive", note: `${player}: ${scored}g+${assists}a = ${ga}/${need}` };
+    }
+
+    case "manual":
+      // ESPN can't verify this qualifier — surface it as awaiting a manual settle,
+      // both live and at FT (never auto won/lost). Mirrors the static "pending".
+      return { verdict: "alive", note: g.note };
+
     default:
       return { verdict: "scheduled", note: "Not started" };
   }
