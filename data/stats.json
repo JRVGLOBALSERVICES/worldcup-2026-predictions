@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T19:20:39.890Z",
+    "generatedAt": "2026-06-26T20:20:38.843Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 44
   },
@@ -32,6 +32,14 @@
       },
       {
         "rank": 2,
+        "name": "Ousmane Dembélé",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 4,
+        "matches": 2
+      },
+      {
+        "rank": 2,
         "name": "Vinícius Júnior",
         "team": "Brazil",
         "flag": "🇧🇷",
@@ -39,7 +47,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -47,7 +55,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -55,7 +63,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Ismael Saibari",
         "team": "Morocco",
         "flag": "🇲🇦",
@@ -63,7 +71,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Johan Manzambi",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -71,18 +79,10 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Jonathan David",
         "team": "Canada",
         "flag": "🇨🇦",
-        "value": 3,
-        "matches": 3
-      },
-      {
-        "rank": 5,
-        "name": "Matheus Cunha",
-        "team": "Brazil",
-        "flag": "🇧🇷",
         "value": 3,
         "matches": 3
       }
@@ -380,6 +380,13 @@
     "penaltyMissed": [
       {
         "rank": 1,
+        "name": "Jørgen Strand Larsen",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Lionel Messi",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -399,7 +406,7 @@
         },
         {
           "name": "Ousmane Dembélé",
-          "value": 2,
+          "value": 4,
           "matches": 2
         },
         {
@@ -415,12 +422,17 @@
           "matches": 2
         },
         {
+          "name": "Kylian Mbappé",
+          "value": 2,
+          "matches": 1
+        },
+        {
           "name": "Adrien Rabiot",
           "value": 1,
           "matches": 1
         },
         {
-          "name": "Kylian Mbappé",
+          "name": "Aurélien Tchouaméni",
           "value": 1,
           "matches": 1
         },
@@ -496,6 +508,11 @@
           "name": "Marcus Holmgren Pedersen",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Thelo Aasgaard",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -503,6 +520,11 @@
           "name": "Martin Ødegaard",
           "value": 2,
           "matches": 2
+        },
+        {
+          "name": "Andreas Schjelderup",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "David Møller Wolfe",
@@ -2843,10 +2865,27 @@
         ]
       },
       "760475": {
-        "penMiss": [],
+        "penMiss": [
+          {
+            "name": "Jørgen Strand Larsen",
+            "team": "Norway"
+          }
+        ],
         "assists": [
           {
             "name": "Kylian Mbappé",
+            "team": "France"
+          },
+          {
+            "name": "Kylian Mbappé",
+            "team": "France"
+          },
+          {
+            "name": "Andreas Schjelderup",
+            "team": "Norway"
+          },
+          {
+            "name": "Aurélien Tchouaméni",
             "team": "France"
           }
         ]
