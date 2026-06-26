@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T20:20:38.843Z",
+    "generatedAt": "2026-06-26T21:20:35.326Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 44
+    "finished": 46
   },
   "categories": {
     "scorers": [
@@ -72,17 +72,17 @@
       },
       {
         "rank": 6,
-        "name": "Johan Manzambi",
-        "team": "Switzerland",
-        "flag": "🇨🇭",
+        "name": "Ismaïla Sarr",
+        "team": "Senegal",
+        "flag": "🇸🇳",
         "value": 3,
-        "matches": 3
+        "matches": 2
       },
       {
         "rank": 6,
-        "name": "Jonathan David",
-        "team": "Canada",
-        "flag": "🇨🇦",
+        "name": "Johan Manzambi",
+        "team": "Switzerland",
+        "flag": "🇨🇭",
         "value": 3,
         "matches": 3
       }
@@ -241,6 +241,13 @@
       },
       {
         "rank": 1,
+        "name": "Amir Al-Ammari",
+        "team": "Iraq",
+        "flag": "🇮🇶",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Gervane Kastaneer",
         "team": "Curacao",
         "flag": "🇨🇼",
@@ -254,52 +261,45 @@
         "value": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Abdoulaye Seck",
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Abdukodir Khusanov",
         "team": "Uzbekistan",
         "flag": "🇺🇿",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Alan Franco",
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Aleksandar Pavlovic",
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Alessandro Circati",
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 1
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Amar Dedic",
         "team": "Bosnia",
         "flag": "🇧🇦",
-        "value": 1
-      },
-      {
-        "rank": 4,
-        "name": "Amir Al-Ammari",
-        "team": "Iraq",
-        "flag": "🇮🇶",
         "value": 1
       }
     ],
@@ -413,6 +413,11 @@
           "name": "Bradley Barcola",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Désiré Doué",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -442,7 +447,12 @@
           "matches": 1
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Aurélien Tchouaméni",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "senegal": {
@@ -451,8 +461,13 @@
       "scorers": [
         {
           "name": "Ismaïla Sarr",
-          "value": 2,
+          "value": 3,
           "matches": 2
+        },
+        {
+          "name": "Pape Gueye",
+          "value": 2,
+          "matches": 1
         },
         {
           "name": "Habib Diarra",
@@ -461,6 +476,11 @@
         },
         {
           "name": "Ibrahim Mbaye",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Iliman Ndiaye",
           "value": 1,
           "matches": 1
         }
@@ -485,6 +505,10 @@
       "yellowCards": [
         {
           "name": "Abdoulaye Seck",
+          "value": 1
+        },
+        {
+          "name": "Pape Gueye",
           "value": 1
         }
       ],
@@ -565,6 +589,10 @@
       "yellowCards": [
         {
           "name": "Amir Al-Ammari",
+          "value": 2
+        },
+        {
+          "name": "Merchas Doski",
           "value": 1
         },
         {
