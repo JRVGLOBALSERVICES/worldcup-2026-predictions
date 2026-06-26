@@ -3630,6 +3630,84 @@
       "odds": 8,
       "stake": 50,
       "placedAt": "26/06 04:19"
+    },
+    {
+      "id": "b-83594155203",
+      "slipNo": "83594155203",
+      "matchId": "nor-fra-2026-06-26",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-5",
+      "home": 0,
+      "away": 5,
+      "odds": 41,
+      "stake": 9,
+      "placedAt": "26/06 05:39"
+    },
+    {
+      "id": "b-83594151435",
+      "slipNo": "83594151435",
+      "matchId": "nor-fra-2026-06-26",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 1-5",
+      "home": 1,
+      "away": 5,
+      "odds": 36,
+      "stake": 30,
+      "placedAt": "26/06 05:39"
+    },
+    {
+      "id": "b-83594144731",
+      "slipNo": "83594144731",
+      "matchId": "nor-fra-2026-06-26",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 2-4",
+      "home": 2,
+      "away": 4,
+      "odds": 26,
+      "stake": 40,
+      "placedAt": "26/06 05:38"
+    },
+    {
+      "id": "b-83594142303",
+      "slipNo": "83594142303",
+      "matchId": "nor-fra-2026-06-26",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-4",
+      "home": 0,
+      "away": 4,
+      "odds": 19,
+      "stake": 50,
+      "placedAt": "26/06 05:38"
+    },
+    {
+      "id": "b-83594135957",
+      "slipNo": "83594135957",
+      "matchId": "nor-fra-2026-06-26",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-1",
+      "home": 0,
+      "away": 1,
+      "odds": 9.5,
+      "stake": 30,
+      "placedAt": "26/06 05:38"
+    },
+    {
+      "id": "b-83594133279",
+      "slipNo": "83594133279",
+      "matchId": "nor-fra-2026-06-26",
+      "side": "CS",
+      "period": "FT",
+      "label": "Correct Score 0-0",
+      "home": 0,
+      "away": 0,
+      "odds": 17,
+      "stake": 50,
+      "placedAt": "26/06 05:37"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -7800,6 +7878,254 @@
             "matchId": "tur-usa-2026-06-25",
             "kind": "resultBtts",
             "outcome": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83594063577",
+      "slipNo": "83594063577",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Ousmane Dembele",
+      "market": "First goal + match score",
+      "label": "Ousmane Dembélé scores first and the match ends 1-2",
+      "odds": 46,
+      "stake": 20,
+      "placedAt": "26/06 05:33",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Ousmane Dembele",
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "id": "sp-83594062441",
+      "slipNo": "83594062441",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Ousmane Dembele",
+      "market": "First goal + match score",
+      "label": "Ousmane Dembélé scores first and the match ends 0-2",
+      "odds": 55,
+      "stake": 17,
+      "placedAt": "26/06 05:33",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Ousmane Dembele",
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "id": "sp-83594060985",
+      "slipNo": "83594060985",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Ousmane Dembele",
+      "market": "First goal + match score",
+      "label": "Ousmane Dembélé scores first and the match ends 0-3",
+      "odds": 75,
+      "stake": 11,
+      "placedAt": "26/06 05:33",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Ousmane Dembele",
+        "home": 0,
+        "away": 3
+      }
+    },
+    {
+      "id": "sp-83594058077",
+      "slipNo": "83594058077",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Ousmane Dembele",
+      "market": "First goal + match score",
+      "label": "Ousmane Dembélé scores first and the match ends 1-3",
+      "odds": 65,
+      "stake": 10,
+      "placedAt": "26/06 05:32",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Ousmane Dembele",
+        "home": 1,
+        "away": 3
+      }
+    },
+    {
+      "id": "sp-83594048901",
+      "slipNo": "83594048901",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Kylian Mbappe",
+      "market": "Goal + match score",
+      "label": "Kylian Mbappé to score & the match ends 0-3",
+      "odds": 15,
+      "stake": 30,
+      "placedAt": "26/06 05:32",
+      "grade": {
+        "type": "scoredAndScore",
+        "player": "Kylian Mbappe",
+        "home": 0,
+        "away": 3
+      }
+    },
+    {
+      "id": "sp-83594047545",
+      "slipNo": "83594047545",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Kylian Mbappe",
+      "market": "Goal + match score",
+      "label": "Kylian Mbappé to score & the match ends 2-3",
+      "odds": 27,
+      "stake": 20,
+      "placedAt": "26/06 05:32",
+      "grade": {
+        "type": "scoredAndScore",
+        "player": "Kylian Mbappe",
+        "home": 2,
+        "away": 3
+      }
+    },
+    {
+      "id": "sp-83594044631",
+      "slipNo": "83594044631",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "Kylian Mbappe",
+      "market": "Goal + match score",
+      "label": "Kylian Mbappé to score & the match ends 1-3",
+      "odds": 15,
+      "stake": 20,
+      "placedAt": "26/06 05:31",
+      "grade": {
+        "type": "scoredAndScore",
+        "player": "Kylian Mbappe",
+        "home": 1,
+        "away": 3
+      }
+    },
+    {
+      "id": "sp-83594123101",
+      "slipNo": "83594123101",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 6 legs (BTTS / each-2+)",
+      "label": "Acca — Nor–Fra Each 2+; Sen–Ira & Cap–Sau Each 2+ No; Uru–Spa BTTS; Egy–Ira BTTS No; NZ–Bel BTTS (6 legs)",
+      "odds": 37.611,
+      "stake": 20,
+      "placedAt": "26/06 05:37",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "bttsEachOver",
+            "line": 1
+          },
+          {
+            "matchId": "sen-ira-2026-06-26",
+            "kind": "bttsEachOver",
+            "line": 1,
+            "negate": true
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "bttsEachOver",
+            "line": 1,
+            "negate": true
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "btts"
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "btts",
+            "negate": true
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "btts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83594097083",
+      "slipNo": "83594097083",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 6 scorer legs",
+      "label": "Acca — Mbappé, Sarr & Salah to score; Tavares, Yamal & Lukaku NOT to score (6 legs)",
+      "odds": 37.445,
+      "stake": 30,
+      "placedAt": "26/06 05:35",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "sen-ira-2026-06-26",
+            "kind": "scored",
+            "player": "Ismaila Sarr"
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "scored",
+            "player": "Gilson Tavares",
+            "negate": true
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "scored",
+            "player": "Lamine Yamal",
+            "negate": true
+          },
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "scored",
+            "player": "Mohamed Salah"
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "scored",
+            "player": "Romelu Lukaku",
+            "negate": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83594036411",
+      "slipNo": "83594036411",
+      "matchId": "nor-fra-2026-06-26",
+      "player": "—",
+      "market": "Acca · 4 legs (BTTS/draw/U2.25)",
+      "label": "Acca — Nor–Fra BTTS, Sen–Ira Draw, Cap–Sau Under 2.25, Uru–Spa BTTS (4 legs)",
+      "odds": 46.482,
+      "stake": 50,
+      "placedAt": "26/06 05:31",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-fra-2026-06-26",
+            "kind": "btts"
+          },
+          {
+            "matchId": "sen-ira-2026-06-26",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "cap-sau-2026-06-26",
+            "kind": "totalUnder",
+            "line": 2.25
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "btts"
           }
         ]
       }

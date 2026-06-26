@@ -645,14 +645,18 @@ export function inPlayMultiLeg(
         : leg.kind === "correctScore"
           ? `${matchCode(leg.matchId)} ${leg.home}-${leg.away}`
           : leg.kind === "btts"
-            ? `${matchCode(leg.matchId)} BTTS`
+            ? `${matchCode(leg.matchId)} BTTS${leg.negate ? " (No)" : ""}`
             : leg.kind === "cleanSheet"
               ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"}-CS`
               : leg.kind === "resultBtts"
                 ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+BTTS${leg.negate ? " (No)" : ""}`
-                : leg.kind === "scored" && leg.negate
-                  ? `No ${leg.player}`
-                  : leg.player;
+                : leg.kind === "bttsEachOver"
+                  ? `${matchCode(leg.matchId)} Each ${leg.line + 1}+${leg.negate ? " (No)" : ""}`
+                  : leg.kind === "totalUnder"
+                    ? `${matchCode(leg.matchId)} U${leg.line}`
+                    : leg.kind === "scored" && leg.negate
+                      ? `No ${leg.player}`
+                      : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
@@ -707,9 +711,22 @@ export function inPlayMultiLeg(
     }
 
     if (leg.kind === "btts") {
-      // Both teams score — goals only accrue, so it locks WON once both have
-      // scored; can't die early (a side on 0 can still score), lost at FT short.
-      if (cur.home >= 1 && cur.away >= 1) {
+      // Both teams score — goals only accrue. For "Yes" it locks WON once both
+      // have scored; can't die early, lost at FT short. For "No" (negate) the
+      // mirror: dies the instant both have scored, locks WON at FT if short.
+      const raw = cur.home >= 1 && cur.away >= 1;
+      if (leg.negate) {
+        if (raw) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else if (done) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
+      } else if (raw) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (done) {
@@ -757,6 +774,51 @@ export function inPlayMultiLeg(
         parts.push(`${legLabel} ⋯`);
       } else {
         parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "bttsEachOver") {
+      // Each team scores > line goals. Goals only accrue, so for "Yes" it locks
+      // WON the moment both sides clear the line; for "No" it dies the instant
+      // both clear it. Decides short at FT.
+      const raw = cur.home > leg.line && cur.away > leg.line;
+      if (leg.negate) {
+        if (raw) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else if (done) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
+      } else if (raw) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "totalUnder") {
+      // Total goals under line. Goals only accrue → dies the moment the running
+      // total reaches the line; locks WON at FT if still under.
+      const total = cur.home + cur.away;
+      if (!(total < leg.line)) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else if (done) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
       }
       continue;
     }

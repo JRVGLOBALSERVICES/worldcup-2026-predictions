@@ -240,8 +240,15 @@ export type SpecialGrade =
  *     the leg match's listed home/away.
  *   - "resultBtts": a 1X2 outcome AND both teams score in that match ("W2 + Both
  *     Teams To Score"). Oriented to the leg match's listed home/away.
+ *   - "bttsEachOver": EACH team scores strictly more than `line` non-own goals
+ *     ("Each Team To Score (2) Or More" → line:1 → 2+ each). negate = the "- No".
+ *   - "totalUnder": that match's TOTAL goals are under `line` ("Asian Total
+ *     Under 2.25" → line:2.25 → won at ≤2, lost at ≥3). Integer goals mean a
+ *     plain `total < line` is exact for whole/quarter lines and is directionally
+ *     correct for the .25 push-leg (a 2-goal game still nets positive on Under
+ *     2.25), which is all a binary acca leg needs.
  *
- * `negate:true` (on "scored" or "resultBtts") inverts the leg — the bookmaker's
+ * `negate:true` (on "scored", "resultBtts" or "bttsEachOver") inverts the leg — the bookmaker's
  * "- No" pick. A negated "scored" leg WINS iff the player does NOT score (dies
  * the instant he does); a negated "resultBtts" WINS iff NOT(outcome AND btts).
  */
@@ -255,9 +262,11 @@ export type MultiLegCond =
     }
   | { matchId: string; kind: "result"; outcome: "1" | "X" | "2" }
   | { matchId: string; kind: "correctScore"; home: number; away: number }
-  | { matchId: string; kind: "btts" }
+  | { matchId: string; kind: "btts"; negate?: boolean }
   | { matchId: string; kind: "cleanSheet"; side: "home" | "away" }
-  | { matchId: string; kind: "resultBtts"; outcome: "1" | "X" | "2"; negate?: boolean };
+  | { matchId: string; kind: "resultBtts"; outcome: "1" | "X" | "2"; negate?: boolean }
+  | { matchId: string; kind: "bttsEachOver"; line: number; negate?: boolean }
+  | { matchId: string; kind: "totalUnder"; line: number };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -749,8 +758,10 @@ export function gradeSpecial(special: Special): BetStatus {
       }
 
       if (leg.kind === "btts") {
-        // Both teams scored in that match.
-        if (!ft || !(ft.home >= 1 && ft.away >= 1)) return "lost";
+        // Both teams scored in that match. negate = "BTTS - No".
+        if (!ft) return "lost";
+        const raw = ft.home >= 1 && ft.away >= 1;
+        if (!(leg.negate ? !raw : raw)) return "lost";
         continue;
       }
 
@@ -769,6 +780,22 @@ export function gradeSpecial(special: Special): BetStatus {
         const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
         const raw = outcome === leg.outcome && ft.home >= 1 && ft.away >= 1;
         if (!(leg.negate ? !raw : raw)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "bttsEachOver") {
+        // Each team scores strictly more than `line` non-own goals.
+        if (!ft) return "lost";
+        const raw = ft.home > leg.line && ft.away > leg.line;
+        if (!(leg.negate ? !raw : raw)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "totalUnder") {
+        // Total match goals under `line` (integer goals → exact for whole &
+        // quarter lines; directionally correct for the .25 push-leg).
+        if (!ft) return "lost";
+        if (!(ft.home + ft.away < leg.line)) return "lost";
         continue;
       }
     }
