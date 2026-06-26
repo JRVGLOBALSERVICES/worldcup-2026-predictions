@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T23:20:27.955Z",
+    "generatedAt": "2026-06-26T00:20:29.474Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 40
   },
@@ -1464,6 +1464,10 @@
           "value": 1
         },
         {
+          "name": "Isak Hien",
+          "value": 1
+        },
+        {
           "name": "Lucas Bergvall",
           "value": 1
         },
@@ -1579,6 +1583,11 @@
           "matches": 2
         },
         {
+          "name": "Daizen Maeda",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Junya Ito",
           "value": 1,
           "matches": 1
@@ -1602,6 +1611,11 @@
         },
         {
           "name": "Kou Itakura",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Ritsu Doan",
           "value": 1,
           "matches": 1
         }
@@ -1931,6 +1945,31 @@
       ],
       "redCards": []
     },
+    "tunisia": {
+      "team": "Tunisia",
+      "flag": "🇹🇳",
+      "scorers": [
+        {
+          "name": "Hazem Mastouri",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Omar Rekik",
+          "value": 1,
+          "matches": 2
+        }
+      ],
+      "assists": [
+        {
+          "name": "Hannibal Mejbri",
+          "value": 1,
+          "matches": 2
+        }
+      ],
+      "yellowCards": [],
+      "redCards": []
+    },
     "southkorea": {
       "team": "South Korea",
       "flag": "🇰🇷",
@@ -1995,26 +2034,6 @@
           "value": 1
         }
       ],
-      "redCards": []
-    },
-    "tunisia": {
-      "team": "Tunisia",
-      "flag": "🇹🇳",
-      "scorers": [
-        {
-          "name": "Omar Rekik",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "assists": [
-        {
-          "name": "Hannibal Mejbri",
-          "value": 1,
-          "matches": 2
-        }
-      ],
-      "yellowCards": [],
       "redCards": []
     },
     "iran": {
@@ -2643,7 +2662,12 @@
       },
       "760471": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Ritsu Doan",
+            "team": "Japan"
+          }
+        ]
       },
       "760472": {
         "penMiss": [],
@@ -2651,6 +2675,10 @@
           {
             "name": "Virgil van Dijk",
             "team": "Netherlands"
+          },
+          {
+            "name": "Hannibal Mejbri",
+            "team": "Tunisia"
           }
         ]
       },

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-25T23:20:23.125Z",
+    "generatedAt": "2026-06-26T00:20:25.861Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 36,
     "live": 2
@@ -4503,31 +4503,50 @@
     },
     "jap-swe-2026-06-25": {
       "state": "live",
-      "ht": null,
-      "ft": null,
-      "score": {
+      "ht": {
         "home": 0,
         "away": 0
       },
-      "goals": [],
-      "cards": [],
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Daizen Maeda",
+          "minute": 55,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Isak Hien",
+          "minute": 31,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-25T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 2
+          "home": 1,
+          "away": 5
         },
         "sot": {
-          "home": 0,
+          "home": 3,
           "away": 1
         },
         "shots": {
-          "home": 1,
-          "away": 1
+          "home": 7,
+          "away": 3
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -4535,21 +4554,21 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
-            2,
-            0
+            3,
+            2
           ]
         },
         "sotByHalf": {
           "home": [
-            0,
+            2,
             0
           ],
           "away": [
@@ -4558,18 +4577,34 @@
           ]
         },
         "playerSot": {
-          "Alexander Bernhardsson": 1
+          "Alexander Bernhardsson": 1,
+          "Yukinari Sugawara": 1,
+          "Keito Nakamura": 1
         },
-        "firstGoalMethod": null,
-        "waterBreak": {}
+        "firstGoalMethod": "shot",
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 27,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     },
     "tun-net-2026-06-25": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 2
+      },
       "ft": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 2
       },
       "goals": [
@@ -4588,22 +4623,30 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Hazem Mastouri",
+          "minute": 53,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [],
       "updatedAt": "2026-06-25T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
-          "away": 1
+          "home": 2,
+          "away": 4
         },
         "sot": {
-          "home": 1,
-          "away": 1
+          "home": 2,
+          "away": 3
         },
         "shots": {
-          "home": 3,
-          "away": 3
+          "home": 5,
+          "away": 13
         },
         "yellow": {
           "home": 0,
@@ -4620,11 +4663,11 @@
         "cornersByHalf": {
           "home": [
             1,
-            0
+            1
           ],
           "away": [
-            1,
-            0
+            3,
+            1
           ]
         },
         "sotByHalf": {
@@ -4633,15 +4676,28 @@
             0
           ],
           "away": [
-            0,
+            2,
             0
           ]
         },
         "playerSot": {
-          "Anis Slimane": 1
+          "Anis Slimane": 1,
+          "Tijjani Reijnders": 1,
+          "Denzel Dumfries": 1
         },
         "firstGoalMethod": "owngoal",
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
