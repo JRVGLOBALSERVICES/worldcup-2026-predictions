@@ -103,14 +103,15 @@ function GroupCard({ table }: { table: GroupTable }) {
       </div>
 
       {/* column header — grid kept identical to rows so numbers align and never overflow.
-          P (games played) shows at every width alongside GD + Pts; W/D/L stay desktop-only. */}
-      <div className="grid grid-cols-[1.25rem_minmax(0,1fr)_1.5rem_1.25rem_1.25rem_1.25rem_1.75rem_2rem] items-center gap-x-1.5 px-3 py-2 font-mono text-[0.58rem] uppercase tracking-wider text-faint sm:gap-x-2 sm:px-4">
+          Full P W D L GD Pts show at EVERY width; the mobile grid is tighter (narrow
+          stat columns + smaller gaps) so the whole league line fits on a phone. */}
+      <div className="grid grid-cols-[1rem_minmax(0,1fr)_1.05rem_1.05rem_1.05rem_1.05rem_1.6rem_1.7rem] items-center gap-x-1 px-3 py-2 font-mono text-[0.58rem] uppercase tracking-wider text-faint sm:grid-cols-[1.25rem_minmax(0,1fr)_1.5rem_1.25rem_1.25rem_1.25rem_1.75rem_2rem] sm:gap-x-2 sm:px-4">
         <span className="text-center">#</span>
         <span>Team</span>
         <span className="text-center" title="Games played">P</span>
-        <span className="hidden text-center sm:block">W</span>
-        <span className="hidden text-center sm:block">D</span>
-        <span className="hidden text-center sm:block">L</span>
+        <span className="text-center" title="Won">W</span>
+        <span className="text-center" title="Drawn">D</span>
+        <span className="text-center" title="Lost">L</span>
         <span className="text-right">GD</span>
         <span className="text-right">Pts</span>
       </div>
@@ -131,7 +132,7 @@ function Row({ row, rank }: { row: StandingRow; rank: number }) {
     rank <= 2 ? { bar: "bg-acid", num: "text-acid" } : rank === 3 ? { bar: "bg-amber", num: "text-amber" } : { bar: "bg-transparent", num: "text-faint" };
 
   return (
-    <li className="grid grid-cols-[1.25rem_minmax(0,1fr)_1.5rem_1.25rem_1.25rem_1.25rem_1.75rem_2rem] items-center gap-x-1.5 px-3 py-2.5 text-sm [&:not(:last-child)]:border-b [&:not(:last-child)]:border-line/60 sm:gap-x-2 sm:px-4">
+    <li className="grid grid-cols-[1rem_minmax(0,1fr)_1.05rem_1.05rem_1.05rem_1.05rem_1.6rem_1.7rem] items-center gap-x-1 px-3 py-2.5 text-sm [&:not(:last-child)]:border-b [&:not(:last-child)]:border-line/60 sm:grid-cols-[1.25rem_minmax(0,1fr)_1.5rem_1.25rem_1.25rem_1.25rem_1.75rem_2rem] sm:gap-x-2 sm:px-4">
       <span className="relative grid place-items-center">
         <span className={`absolute -left-3 h-full w-0.5 rounded-full ${zone.bar}`} aria-hidden />
         <span className={`tnum font-mono text-[0.72rem] font-bold ${zone.num}`}>{rank}</span>
@@ -145,11 +146,11 @@ function Row({ row, rank }: { row: StandingRow; rank: number }) {
         <FormDots form={row.form} />
       </span>
 
-      <span className="tnum text-center font-mono text-[0.78rem] text-muted">{row.played}</span>
-      <span className="hidden tnum text-center font-mono text-[0.78rem] text-acid sm:block">{row.won}</span>
-      <span className="hidden tnum text-center font-mono text-[0.78rem] text-muted sm:block">{row.drawn}</span>
-      <span className="hidden tnum text-center font-mono text-[0.78rem] text-rose sm:block">{row.lost}</span>
-      <span className="tnum text-right font-mono text-[0.78rem] text-muted">
+      <span className="tnum text-center font-mono text-[0.72rem] text-muted sm:text-[0.78rem]">{row.played}</span>
+      <span className="tnum text-center font-mono text-[0.72rem] text-acid sm:text-[0.78rem]">{row.won}</span>
+      <span className="tnum text-center font-mono text-[0.72rem] text-muted sm:text-[0.78rem]">{row.drawn}</span>
+      <span className="tnum text-center font-mono text-[0.72rem] text-rose sm:text-[0.78rem]">{row.lost}</span>
+      <span className="tnum text-right font-mono text-[0.72rem] text-muted sm:text-[0.78rem]">
         {row.goalDiff > 0 ? "+" : ""}
         {row.goalDiff}
       </span>
