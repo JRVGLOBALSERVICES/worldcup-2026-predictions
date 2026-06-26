@@ -349,6 +349,43 @@ function AccaCard({
   );
 }
 
+/** Single-leg player prop, carded to match AccaCard — so the props block reads
+ *  as cards like accumulators, not the old flat row list. Uses the warm (mint→amber)
+ *  accent family to stay distinct from the green accas. */
+function PropCard({
+  special,
+  verdict,
+  currency,
+}: {
+  special: SpecialRow;
+  verdict: InPlay;
+  currency: string;
+}) {
+  const dim = verdict.verdict === "lost" || verdict.verdict === "dead";
+  return (
+    <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+        <span className="rounded-full border border-mint/40 bg-mint/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-mint">
+          {special.market}
+        </span>
+        <div className="flex items-center gap-3">
+          <span className="tnum font-mono text-[0.7rem] text-faint/70">
+            @{special.odds.toFixed(2)} · {money(special.stake, currency)} →{" "}
+            <span className={`font-semibold ${verdict.verdict === "won" ? "text-acid" : dim ? "text-faint line-through" : "text-ink"}`}>
+              {money(special.potential, currency)}
+            </span>
+          </span>
+          <VerdictPill verdict={verdict.verdict} />
+        </div>
+      </div>
+      <p className="mt-3 text-sm text-ink">{special.label}</p>
+      {verdict.note && (
+        <p className="mt-2 font-mono text-[0.66rem] text-faint/70">{verdict.note}</p>
+      )}
+    </div>
+  );
+}
+
 /** Slip breakdown band — singles vs accas vs total for the featured (today's) slate,
  *  the live analogue of the bet-slip card's footer split. */
 function SlipBreakdown({ days, currency }: { days: DayRow[]; currency: string }) {
@@ -744,7 +781,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                               <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-mint">Player props</span>
                               <span className="rounded-full border border-mint/40 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-mint">1xBet · live grade</span>
                             </div>
-                            <RowList title={null} rows={propRows} verdicts={propVerdicts} currency={cur} chip={(r) => (r as SpecialRow).market} chipCls={() => "bg-mint/15 text-mint"} />
+                            <div className="space-y-3 px-5 py-4">
+                              {propRows.map((r, i) => (
+                                <PropCard key={r.id} special={r as SpecialRow} verdict={propVerdicts[i]} currency={cur} />
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
