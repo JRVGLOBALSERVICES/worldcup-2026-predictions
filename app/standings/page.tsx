@@ -37,9 +37,21 @@ export default function StandingsPage() {
           The road out of the groups.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          All twelve groups, A to L — points, played, goal difference and recent form, built
-          straight from the official match feed. {totalPlayed} of {totalGames} group games counted.
+          All twelve groups, A to L — built straight from the official match feed.
+          {" "}<span className="text-ink">{totalPlayed} of {totalGames}</span> group games played so far.
         </p>
+
+        {/* Plain-English primer — the format itself, so "4/6 played" never reads as a bug. */}
+        <div className="mt-6 max-w-2xl rounded-xl border border-line/70 bg-pitch/40 p-4 font-mono text-[0.7rem] leading-relaxed text-muted sm:text-[0.74rem]">
+          <span className="text-acid">How it works → </span>
+          Each group has <span className="text-ink">4 teams</span>{" "}who all play each other once —
+          that&apos;s <span className="text-ink">6 games per group</span>, 3 each. The
+          {" "}<span className="text-acid">top 2</span> of every group go through, plus the
+          {" "}<span className="text-amber">8 best 3rd-placed</span> teams.
+          A group showing <span className="text-ink">4/6</span>{" "}just hasn&apos;t finished its last
+          round yet — <span className="text-ink">6/6</span>{" "}means it&apos;s done.
+        </div>
+
         <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[0.66rem] uppercase tracking-[0.16em] text-faint">
           <Legend swatch="bg-acid" label="Top 2 — through" />
           <Legend swatch="bg-amber" label="3rd — best-third race" />
@@ -73,14 +85,20 @@ function Legend({ swatch, label }: { swatch: string; label: string }) {
 }
 
 function GroupCard({ table }: { table: GroupTable }) {
+  const left = table.total - table.played;
+  const done = left <= 0;
   return (
     <section className="overflow-hidden rounded-2xl border border-line bg-card/50">
       <div className="flex items-center justify-between border-b border-line/70 px-4 py-3">
         <h2 className="font-display text-sm font-extrabold uppercase tracking-[0.14em]">
           Group {table.group}
         </h2>
-        <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
-          {table.played}/{table.total} played
+        {/* status reads as words, not a bare fraction — "Complete" or "N to play" */}
+        <span className="flex items-center gap-1.5 font-mono text-[0.62rem] uppercase tracking-wider">
+          <span className="text-faint">{table.played}/{table.total}</span>
+          <span className={done ? "text-acid" : "text-amber"}>
+            {done ? "· Complete" : `· ${left} to play`}
+          </span>
         </span>
       </div>
 
