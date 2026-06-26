@@ -121,7 +121,117 @@ function GroupCard({ table }: { table: GroupTable }) {
           <Row key={row.name} row={row} rank={i + 1} />
         ))}
       </ul>
+
+      <NextUp rows={table.rows} />
     </section>
+  );
+}
+
+const SHORT_ROUND: Record<string, string> = {
+  "Round of 32": "R32",
+  "Round of 16": "R16",
+  "Quarter-final": "QF",
+  "Semi-final": "SF",
+  "Third place": "3RD",
+  Final: "FIN",
+  Group: "GRP",
+};
+
+function fmtDate(iso: string): string {
+  return new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+  }).format(new Date(iso));
+}
+
+/**
+ * "Next up" strip — each surviving team's next scheduled game, straight from the
+ * feed. Group teams show their final group match; advancing teams show their
+ * Round-of-32 tie (a real nation once drawn, or an unresolved bracket slot like
+ * "3rd: C/E/F/H/I" before the draw resolves). Eliminated teams are omitted, so
+ * the strip only ever lists who is still playing.
+ */
+function NextUp({ rows }: { rows: StandingRow[] }) {
+  const items = rows
+    .map((r) => {
+      if (r.next) return { name: r.name, flag: r.flag, ...r.next, date: r.next.kickoffUTC };
+      // Qualified but the bracket slot isn't drawn yet (best-third race):
+      // surface it honestly as a Round-of-32 spot with the opponent still TBD.
+      const advancing = /advance|best/i.test(r.advance?.label ?? "");
+      if (advancing)
+        return {
+          name: r.name,
+          flag: r.flag,
+          round: "Round of 32",
+          opponent: "To be drawn",
+          opponentFlag: null,
+          home: true,
+          placeholder: true,
+          date: "",
+        };
+      return null;
+    })
+    .filter(Boolean) as Array<{
+    name: string;
+    flag: string;
+    round: string;
+    opponent: string;
+    opponentFlag: string | null;
+    home: boolean;
+    placeholder: boolean;
+    date: string;
+  }>;
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className="border-t border-line/70 bg-pitch/30 px-3 py-3 sm:px-4">
+      <p className="mb-2 font-mono text-[0.56rem] uppercase tracking-[0.2em] text-faint">
+        Next up
+      </p>
+      <ul className="flex flex-col gap-1.5">
+        {items.map((it) => (
+          <li key={it.name} className="flex items-center gap-2 text-[0.78rem]">
+            {/* who */}
+            <span className="flex min-w-0 shrink items-center gap-1.5">
+              <span className="shrink-0 text-sm leading-none">{it.flag}</span>
+              <span className="truncate font-display text-[0.8rem] font-bold uppercase tracking-tight text-ink">
+                {it.name}
+              </span>
+            </span>
+
+            {/* round badge */}
+            <span className="shrink-0 rounded bg-acid/15 px-1.5 py-0.5 font-mono text-[0.56rem] font-bold uppercase tracking-wider text-acid">
+              {SHORT_ROUND[it.round] ?? it.round}
+            </span>
+
+            {/* opponent + date, right-aligned */}
+            <span className="ml-auto flex min-w-0 items-center justify-end gap-1.5 text-right">
+              <span className="shrink-0 font-mono text-[0.6rem] uppercase tracking-wider text-faint">
+                {it.home ? "vs" : "@"}
+              </span>
+              {it.opponentFlag && (
+                <span className="shrink-0 text-sm leading-none">{it.opponentFlag}</span>
+              )}
+              <span
+                className={`truncate font-display text-[0.78rem] font-bold uppercase tracking-tight ${
+                  it.placeholder ? "text-muted" : "text-ink"
+                }`}
+              >
+                {it.opponent}
+              </span>
+              {it.date && (
+                <span className="shrink-0 font-mono text-[0.58rem] uppercase tracking-wider text-faint">
+                  · {fmtDate(it.date)}
+                </span>
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

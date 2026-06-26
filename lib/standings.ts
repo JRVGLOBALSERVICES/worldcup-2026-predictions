@@ -16,6 +16,20 @@ export type StandingRow = {
   form: ("W" | "D" | "L")[];
   /** ESPN's official advance note for this row, e.g. "Advance to Round of 32". */
   advance?: { label: string; color: string | null } | null;
+  /**
+   * The team's next scheduled game, mirrored from the same feed — their last
+   * group match, or a Round-of-32 tie once they advance. `opponent` is either a
+   * real nation (with `opponentFlag`) or an unresolved bracket slot like
+   * "3rd: C/E/F/H/I" (then `placeholder` is true and `opponentFlag` is null).
+   */
+  next?: {
+    round: string;
+    opponent: string;
+    opponentFlag: string | null;
+    kickoffUTC: string;
+    home: boolean;
+    placeholder: boolean;
+  } | null;
 };
 
 export type GroupTable = {
@@ -41,6 +55,7 @@ export function groupTables(): GroupTable[] {
     rows: g.rows.map((r) => ({
       ...r,
       form: (r.form ?? []) as ("W" | "D" | "L")[],
+      next: r.next ?? null,
     })),
     played: g.played,
     total: g.total,

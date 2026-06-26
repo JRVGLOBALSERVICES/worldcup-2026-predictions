@@ -137,10 +137,93 @@ function statOf(entry, name) {
   return s ? Number(s.value) : 0;
 }
 
+// Map ESPN's per-date season slug to the short round badge we show.
+const ROUND_LABEL = {
+  "group-stage": "Group",
+  "round-of-32": "Round of 32",
+  "round-of-16": "Round of 16",
+  quarterfinals: "Quarter-final",
+  semifinals: "Semi-final",
+  "third-place": "Third place",
+  final: "Final",
+};
+
+// A knockout slot ESPN hasn't resolved yet ("Third Place Group C/E/F/H/I",
+// "Group I Winner", "Group K 2nd Place") — no real nation, so no flag. Shorten
+// the verbose ESPN label to something that fits a chip.
+function placeholderOpponent(displayName) {
+  if (!/group|winner|place|round of/i.test(displayName)) return null;
+  return displayName
+    .replace(/^Third Place Group\s*/i, "3rd: ")
+    .replace(/^Group\s+([A-L])\s+Winner$/i, "Winner Grp $1")
+    .replace(/^Group\s+([A-L])\s+2nd Place$/i, "2nd Grp $1")
+    .replace(/^Round of 32\s+(\d+)\s+Winner$/i, "R32-$1 Winner")
+    .replace(/^Round of 16\s+(\d+)\s+Winner$/i, "R16-$1 Winner");
+}
+
+/**
+ * Each team's NEXT scheduled game, mirrored from the same ESPN scoreboard feed:
+ * sweep every not-yet-played fixture from today through the final and, per team,
+ * keep the earliest one they appear in. Group teams resolve to their last group
+ * match; advanced teams resolve to a concrete Round-of-32 tie (or an unresolved
+ * placeholder slot when the bracket position isn't filled yet). Returns a map of
+ * teamKey -> { round, opponent, opponentFlag, kickoffUTC, home, placeholder }.
+ */
+async function buildNextMatches() {
+  const dates = [];
+  for (let d = 11; d <= 30; d++)
+    dates.push(dateParam(new Date(Date.UTC(2026, 5, d))));
+  for (let d = 1; d <= 19; d++)
+    dates.push(dateParam(new Date(Date.UTC(2026, 6, d))));
+
+  const batches = await Promise.allSettled(
+    dates.map((dt) => fetchJson(`${ESPN_BASE}?dates=${dt}`)),
+  );
+
+  const next = {}; // teamKey -> fixture (earliest pre match)
+  const consider = (teamKey, fixture) => {
+    const cur = next[teamKey];
+    if (!cur || fixture.kickoffUTC < cur.kickoffUTC) next[teamKey] = fixture;
+  };
+
+  for (const b of batches) {
+    if (b.status !== "fulfilled") continue;
+    const round = ROUND_LABEL[b.value.events?.[0]?.season?.slug] || "Group";
+    for (const ev of b.value.events || []) {
+      // Only games not yet played count as a "next" fixture.
+      if (ev.status?.type?.state !== "pre") continue;
+      const cs = ev.competitions?.[0]?.competitors || [];
+      const h = cs.find((c) => c.homeAway === "home");
+      const a = cs.find((c) => c.homeAway === "away");
+      if (!h || !a) continue;
+
+      const rnd = ROUND_LABEL[ev.season?.slug] || round;
+      const sides = [
+        [h, a, true],
+        [a, h, false],
+      ];
+      for (const [self, opp, home] of sides) {
+        const ph = placeholderOpponent(opp.team.displayName);
+        if (placeholderOpponent(self.team.displayName)) continue; // skip placeholder rows
+        consider(key(self.team.displayName), {
+          round: rnd,
+          opponent: ph || DISPLAY[opp.team.displayName] || opp.team.displayName,
+          opponentFlag: ph ? null : flagFor(opp.team.displayName),
+          kickoffUTC: ev.date,
+          home,
+          placeholder: Boolean(ph),
+        });
+      }
+    }
+  }
+  return next;
+}
+
 async function main() {
-  const [standings, form] = await Promise.all([
+  const [standings, form, nextMatches] = await Promise.all([
     fetchJson(ESPN_STANDINGS),
     buildForm(),
+    buildNextMatches(),
   ]);
 
   const groups = [];
@@ -172,6 +255,7 @@ async function main() {
           ? { label: note.description, color: note.color || null }
           : null,
         form: (form[key(name)] || []).slice(-5).reverse(),
+        next: nextMatches[key(name)] || null,
       };
     });
 
