@@ -3,6 +3,17 @@ import { strengthFromOdds, strengthLabel, overallStrength } from "@/lib/data";
 import { SectionLabel, Banker, Confidence, StrengthMeter } from "./atoms";
 import { LineupPitch } from "./LineupPitch";
 
+/** Split a penalty-likelihood string into a short grade token + optional reason.
+ * Data is inconsistent: most are a bare grade ("medium", "low-medium"), but some
+ * pack a full sentence after a dash ("medium — Senegal's attacking edge…"). The
+ * pill must only ever carry the short grade, or a long value blows out the row
+ * width and forces page-wide horizontal scroll on mobile. */
+function splitLikelihood(raw: string): { grade: string; reason: string } {
+  const m = (raw ?? "").match(/^\s*(.+?)\s*(?:—|–|-{1,2}|:)\s+(.+)$/);
+  if (m) return { grade: m[1].trim(), reason: m[2].trim() };
+  return { grade: (raw ?? "").trim(), reason: "" };
+}
+
 export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Prediction }) {
   const overall = overallStrength(pred);
   return (
@@ -65,22 +76,28 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
       </div>
 
       {/* penalty */}
-      <div className="rounded-2xl border border-amber/40 bg-amber/[0.06] p-5">
-        <div className="mb-2 flex items-center justify-between">
-          <SectionLabel>Penalty</SectionLabel>
-          <span className="tnum inline-flex shrink-0 items-center rounded-full border border-amber/50 px-2 py-0.5 font-mono text-[0.72rem] leading-none text-amber">
-            {pred.penalty.likelihood}
-          </span>
-        </div>
-        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-          <span className="text-sm text-muted">Taker</span>
-          <span className="font-display text-xl font-extrabold uppercase tracking-tight text-amber">
-            {pred.penalty.taker}
-          </span>
-          <span className="text-sm text-faint">backup: {pred.penalty.backup}</span>
-        </div>
-        <p className="mt-2 text-sm leading-relaxed text-muted">{pred.penalty.note}</p>
-      </div>
+      {(() => {
+        const { grade, reason } = splitLikelihood(pred.penalty.likelihood);
+        return (
+          <div className="rounded-2xl border border-amber/40 bg-amber/[0.06] p-5">
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <SectionLabel>Penalty</SectionLabel>
+              <span className="tnum inline-flex max-w-[55%] shrink-0 items-center truncate rounded-full border border-amber/50 px-2 py-0.5 font-mono text-[0.72rem] uppercase leading-none text-amber">
+                {grade}
+              </span>
+            </div>
+            {reason && <p className="mb-2 text-sm leading-relaxed text-muted">{reason}</p>}
+            <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span className="text-sm text-muted">Taker</span>
+              <span className="font-display text-xl font-extrabold uppercase tracking-tight text-amber">
+                {pred.penalty.taker}
+              </span>
+              <span className="text-sm text-faint">backup: {pred.penalty.backup}</span>
+            </div>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{pred.penalty.note}</p>
+          </div>
+        );
+      })()}
 
       {/* lineups — formation board */}
       <LineupPitch fixture={fixture} lineups={pred.lineups} />
