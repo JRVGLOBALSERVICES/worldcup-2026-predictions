@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-26T00:20:25.861Z",
+    "generatedAt": "2026-06-26T01:20:25.247Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 36,
-    "live": 2
+    "finished": 38,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -4502,21 +4502,32 @@
       }
     },
     "jap-swe-2026-06-25": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 1,
+        "away": 1
+      },
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "goals": [
         {
           "team": "home",
           "scorer": "Daizen Maeda",
           "minute": 55,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Anthony Elanga",
+          "minute": 61,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -4528,42 +4539,54 @@
           "player": "Isak Hien",
           "minute": 31,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Shogo Taniguchi",
+          "minute": 76,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Viktor Gyökeres",
+          "minute": 84,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-25T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
-          "away": 5
+          "home": 2,
+          "away": 8
         },
         "sot": {
           "home": 3,
-          "away": 1
+          "away": 5
         },
         "shots": {
-          "home": 7,
-          "away": 3
+          "home": 8,
+          "away": 11
         },
         "yellow": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
             1,
-            0
+            1
           ],
           "away": [
             3,
-            2
+            5
           ]
         },
         "sotByHalf": {
@@ -4573,13 +4596,15 @@
           ],
           "away": [
             1,
-            0
+            2
           ]
         },
         "playerSot": {
           "Alexander Bernhardsson": 1,
           "Yukinari Sugawara": 1,
-          "Keito Nakamura": 1
+          "Keito Nakamura": 1,
+          "Alexander Isak": 1,
+          "Anthony Elanga": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -4592,20 +4617,33 @@
             "firstActionMinute": 27,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Foul",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
     },
     "tun-net-2026-06-25": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 2
       },
-      "ft": null,
+      "ft": {
+        "home": 1,
+        "away": 3
+      },
       "score": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "goals": [
         {
@@ -4631,22 +4669,30 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jan Paul van Hecke",
+          "minute": 61,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [],
       "updatedAt": "2026-06-25T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
-          "away": 4
+          "home": 4,
+          "away": 6
         },
         "sot": {
-          "home": 2,
-          "away": 3
+          "home": 4,
+          "away": 7
         },
         "shots": {
-          "home": 5,
-          "away": 13
+          "home": 10,
+          "away": 20
         },
         "yellow": {
           "home": 0,
@@ -4663,27 +4709,30 @@
         "cornersByHalf": {
           "home": [
             1,
-            1
+            3
           ],
           "away": [
             3,
-            1
+            3
           ]
         },
         "sotByHalf": {
           "home": [
             1,
-            0
+            2
           ],
           "away": [
             2,
-            0
+            2
           ]
         },
         "playerSot": {
           "Anis Slimane": 1,
-          "Tijjani Reijnders": 1,
-          "Denzel Dumfries": 1
+          "Tijjani Reijnders": 2,
+          "Denzel Dumfries": 1,
+          "Hazem Mastouri": 1,
+          "Hannibal Mejbri": 1,
+          "Virgil van Dijk": 1
         },
         "firstGoalMethod": "owngoal",
         "waterBreak": {
@@ -4694,6 +4743,16 @@
             "breakEndMinute": 25,
             "firstActionType": "Foul",
             "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 73,
             "isCorner": false,
             "reliable": true
           }

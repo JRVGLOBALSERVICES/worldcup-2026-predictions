@@ -367,6 +367,26 @@
         "home": 0,
         "away": 2
       }
+    },
+    "jap-swe-2026-06-25": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    "tun-net-2026-06-25": {
+      "ht": {
+        "home": 0,
+        "away": 2
+      },
+      "ft": {
+        "home": 1,
+        "away": 3
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -1973,6 +1993,85 @@
           "type": "yellow"
         }
       ]
+    },
+    "jap-swe-2026-06-25": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Daizen Maeda",
+          "minute": 55,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Anthony Elanga",
+          "minute": 61,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Isak Hien",
+          "minute": 31,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Shogo Taniguchi",
+          "minute": 76,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Viktor Gyökeres",
+          "minute": 84,
+          "type": "yellow"
+        }
+      ]
+    },
+    "tun-net-2026-06-25": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ellyes Skhiri",
+          "minute": 2,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
+        },
+        {
+          "team": "away",
+          "scorer": "Brian Brobbey",
+          "minute": 6,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Hazem Mastouri",
+          "minute": 53,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jan Paul van Hecke",
+          "minute": 61,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": []
     }
   },
   "bets": [
@@ -9986,37 +10085,37 @@
     },
     "jap-swe-2026-06-25": {
       "corners": {
-        "home": 1,
-        "away": 5
+        "home": 2,
+        "away": 8
       },
       "sot": {
         "home": 3,
-        "away": 1
+        "away": 5
       },
       "shots": {
-        "home": 7,
-        "away": 3
+        "home": 8,
+        "away": 11
       },
       "yellow": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
           3,
-          2
+          5
         ]
       },
       "sotByHalf": {
@@ -10026,13 +10125,15 @@
         ],
         "away": [
           1,
-          0
+          2
         ]
       },
       "playerSot": {
         "Alexander Bernhardsson": 1,
         "Yukinari Sugawara": 1,
-        "Keito Nakamura": 1
+        "Keito Nakamura": 1,
+        "Alexander Isak": 1,
+        "Anthony Elanga": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -10045,21 +10146,31 @@
           "firstActionMinute": 27,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 71,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
     "tun-net-2026-06-25": {
       "corners": {
-        "home": 2,
-        "away": 4
+        "home": 4,
+        "away": 6
       },
       "sot": {
-        "home": 2,
-        "away": 3
+        "home": 4,
+        "away": 7
       },
       "shots": {
-        "home": 5,
-        "away": 13
+        "home": 10,
+        "away": 20
       },
       "yellow": {
         "home": 0,
@@ -10076,27 +10187,30 @@
       "cornersByHalf": {
         "home": [
           1,
-          1
+          3
         ],
         "away": [
           3,
-          1
+          3
         ]
       },
       "sotByHalf": {
         "home": [
           1,
-          0
+          2
         ],
         "away": [
           2,
-          0
+          2
         ]
       },
       "playerSot": {
         "Anis Slimane": 1,
-        "Tijjani Reijnders": 1,
-        "Denzel Dumfries": 1
+        "Tijjani Reijnders": 2,
+        "Denzel Dumfries": 1,
+        "Hazem Mastouri": 1,
+        "Hannibal Mejbri": 1,
+        "Virgil van Dijk": 1
       },
       "firstGoalMethod": "owngoal",
       "waterBreak": {
@@ -10107,6 +10221,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Foul",
           "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 73,
           "isCorner": false,
           "reliable": true
         }
