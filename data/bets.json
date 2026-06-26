@@ -387,6 +387,26 @@
         "home": 1,
         "away": 3
       }
+    },
+    "tur-usa-2026-06-25": {
+      "ht": {
+        "home": 2,
+        "away": 1
+      },
+      "ft": {
+        "home": 3,
+        "away": 2
+      }
+    },
+    "par-aus-2026-06-25": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 0
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -2072,6 +2092,77 @@
         }
       ],
       "cards": []
+    },
+    "tur-usa-2026-06-25": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Auston Trusty",
+          "minute": 2,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Arda Güler",
+          "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Baris Alper Yilmaz",
+          "minute": 30,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Sebastian Berhalter",
+          "minute": 48,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Kaan Ayhan",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Sebastian Berhalter",
+          "minute": 18,
+          "type": "yellow"
+        }
+      ]
+    },
+    "par-aus-2026-06-25": {
+      "status": "finished",
+      "goals": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Jackson Irvine",
+          "minute": 46,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Diego Gómez",
+          "minute": 77,
+          "type": "yellow"
+        }
+      ]
     }
   },
   "bets": [
@@ -10239,15 +10330,15 @@
     "tur-usa-2026-06-25": {
       "corners": {
         "home": 2,
-        "away": 6
+        "away": 9
       },
       "sot": {
-        "home": 2,
-        "away": 5
+        "home": 3,
+        "away": 7
       },
       "shots": {
-        "home": 4,
-        "away": 9
+        "home": 9,
+        "away": 18
       },
       "yellow": {
         "home": 0,
@@ -10268,7 +10359,7 @@
         ],
         "away": [
           5,
-          1
+          4
         ]
       },
       "sotByHalf": {
@@ -10278,13 +10369,14 @@
         ],
         "away": [
           3,
-          0
+          2
         ]
       },
       "playerSot": {
         "Auston Trusty": 1,
         "Brenden Aaronson": 1,
-        "Weston McKennie": 1
+        "Weston McKennie": 1,
+        "Christian Pulisic": 2
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -10297,6 +10389,16 @@
           "firstActionMinute": 26,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 69,
+          "firstActionType": "Foul",
+          "firstActionMinute": 70,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
@@ -10306,15 +10408,15 @@
         "away": 3
       },
       "sot": {
-        "home": 1,
-        "away": 3
+        "home": 2,
+        "away": 5
       },
       "shots": {
-        "home": 4,
-        "away": 6
+        "home": 7,
+        "away": 12
       },
       "yellow": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "red": {
@@ -10322,7 +10424,7 @@
         "away": 0
       },
       "cards": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "cornersByHalf": {
@@ -10338,18 +10440,19 @@
       "sotByHalf": {
         "home": [
           0,
-          1
+          2
         ],
         "away": [
           3,
-          0
+          2
         ]
       },
       "playerSot": {
         "Jackson Irvine": 1,
-        "Jordan Bos": 1,
+        "Jordan Bos": 2,
         "Cristian Volpato": 1,
-        "Maurício": 1
+        "Maurício": 2,
+        "Tete Yengi": 1
       },
       "firstGoalMethod": null,
       "waterBreak": {
@@ -10360,6 +10463,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Foul",
           "firstActionMinute": 33,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 75,
           "isCorner": false,
           "reliable": true
         }
