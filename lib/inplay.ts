@@ -670,7 +670,9 @@ export function inPlayMultiLeg(
                   ? `${matchCode(leg.matchId)} Each ${leg.line + 1}+${leg.negate ? " (No)" : ""}`
                   : leg.kind === "totalUnder"
                     ? `${matchCode(leg.matchId)} U${leg.line}`
-                    : leg.kind === "doubleChance"
+                    : leg.kind === "totalOver"
+                      ? `${matchCode(leg.matchId)} O${leg.line}`
+                      : leg.kind === "doubleChance"
                       ? `${matchCode(leg.matchId)} ${leg.outcome}`
                       : leg.kind === "resultFirstHalf"
                         ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)} 1H`
@@ -843,6 +845,23 @@ export function inPlayMultiLeg(
       } else {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "totalOver") {
+      // Total goals over line. Goals only accrue → locks WON the moment the
+      // running total clears the line; dead at FT if it never got there. While
+      // still short it's currently losing, so it shows neutral pending, not "on track".
+      const total = cur.home + cur.away;
+      if (total > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
       }
       continue;
     }

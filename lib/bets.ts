@@ -276,6 +276,11 @@ export type MultiLegCond =
   | { matchId: string; kind: "resultBtts"; outcome: "1" | "X" | "2"; negate?: boolean }
   | { matchId: string; kind: "bttsEachOver"; line: number; negate?: boolean }
   | { matchId: string; kind: "totalUnder"; line: number }
+  // Total match goals (both teams) strictly over `line` ("Total Over (2)" →
+  // line:2 → won at 3+, lost at ≤2). Mirror of `totalUnder`; integer goals make
+  // `total > line` exact for whole/half lines (a 2-goal game grades identically
+  // for line 2 and 2.5), so the displayed line drives the label.
+  | { matchId: string; kind: "totalOver"; line: number }
   // Double chance — FT outcome is one of two ("1X" = home or draw, "12" = home
   // or away, "X2" = draw or away), oriented to the leg match's home/away.
   | { matchId: string; kind: "doubleChance"; outcome: "1X" | "12" | "X2" }
@@ -816,6 +821,14 @@ export function gradeSpecial(special: Special): BetStatus {
         // quarter lines; directionally correct for the .25 push-leg).
         if (!ft) return "lost";
         if (!(ft.home + ft.away < leg.line)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "totalOver") {
+        // Total match goals over `line` (integer goals → exact for whole & half
+        // lines; mirror of totalUnder).
+        if (!ft) return "lost";
+        if (!(ft.home + ft.away > leg.line)) return "lost";
         continue;
       }
 

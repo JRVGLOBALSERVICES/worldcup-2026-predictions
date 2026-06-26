@@ -8328,6 +8328,36 @@
         "type": "manual",
         "note": "France penalty won by a foul on Mbappe — ESPN can't verify foul-drawn-by; settle by eye"
       }
+    },
+    {
+      "id": "sp-83625533657",
+      "slipNo": "83625533657",
+      "matchId": "egy-ira-2026-06-26",
+      "market": "Accumulator (3)",
+      "label": "Acca — Egypt to beat Iran + Uruguay/Spain Over 2 goals + New Zealand/Belgium Under 4 goals (3 legs)",
+      "odds": 7.887,
+      "stake": 300.34,
+      "placedAt": "27/06 04:09",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "egy-ira-2026-06-26",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "uru-spa-2026-06-26",
+            "kind": "totalOver",
+            "line": 2
+          },
+          {
+            "matchId": "new-bel-2026-06-26",
+            "kind": "totalUnder",
+            "line": 4
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
