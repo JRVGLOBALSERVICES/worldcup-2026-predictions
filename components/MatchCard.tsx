@@ -27,11 +27,11 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
           <Side flag={fixture.away.flag} name={fixture.away.name} />
         </div>
 
-        <div className="shrink-0 text-right">
+        <div className="max-w-[46%] shrink-0 text-right sm:max-w-[50%]">
           {pred ? (
             <div className="flex flex-col items-end space-y-1">
               <div className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">Pick</div>
-              <div className="text-sm font-semibold text-acid">{pred.win.pick}</div>
+              <div className="text-balance text-sm font-semibold leading-tight text-acid">{pred.win.pick}</div>
               <StrengthMeter value={overallStrength(pred)} size="sm" />
             </div>
           ) : (
