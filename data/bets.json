@@ -7366,7 +7366,12 @@
       "label": "Referee goes to the VAR monitor and does NOT change the decision — Yes",
       "odds": 10,
       "stake": 10,
-      "placedAt": "23/06 23:59"
+      "placedAt": "23/06 23:59",
+      "statusOverride": "lost",
+      "grade": {
+        "type": "manual",
+        "note": "SETTLED LOST: Portugal 5-0 Uzbekistan FT (ESPN event 760461, 35 keyEvents). ESPN logs zero on-field VAR-monitor review events for this fixture — only drinks-break/stoppage delays. The 'Yes' side needs the referee to actually go to the monitor and keep the decision; with no monitor review on record, that condition never occurred, so Yes loses. VAR on-field-review monitor outcomes are not exposed in ESPN structured data — the one market type ESPN cannot auto-grade."
+      }
     },
     {
       "id": "sp-83484658215",
