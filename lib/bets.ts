@@ -345,6 +345,18 @@ export type MultiLegCond =
   // match ends with NO penalty the market voids — in a fixed-odds acca a void
   // leg passes through (the stored combined odds already don't reprice).
   | { matchId: string; kind: "firstPenalty"; side: "home" | "away" }
+  // Named player scores strictly over `line` GOALS only (not assists) — "To
+  // Score Two Goals (Brace) — Yes" → line:1.5 → won at 2+. Clinches mid-match
+  // the moment his goal tally clears the line (graded like `scored`), loses at FT.
+  | { matchId: string; kind: "goalsOver"; player: string; line: number }
+  // Double Chance + Both Teams To Score — a DC outcome ("1X"/"12"/"X2") AND both
+  // teams score ("1X And Both Teams To Score — Yes" → outcome:"1X"). Decides at
+  // FT (the result swings until then); negate flips it ("- No").
+  | { matchId: string; kind: "doubleChanceBtts"; outcome: "1X" | "12" | "X2"; negate?: boolean }
+  // At Least One Team Not To Score + Total Over — NOT both-teams-score (one side
+  // blanks) AND the match total is over `line` ("At Least One Team Will Not Score
+  // + Total Over (2.5) — Yes" → line:2.5). Decided off the FT score.
+  | { matchId: string; kind: "notBttsAndTotalOver"; line: number }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -832,6 +844,15 @@ export function gradeSpecial(special: Special): BetStatus {
         continue;
       }
 
+      if (leg.kind === "goalsOver") {
+        // Named player's GOALS only (no assists) over the line — clinches
+        // mid-match like `scored`; dies only when the match ends short.
+        if (goalsBy(ev.goals, leg.player).length > leg.line) continue; // leg won
+        if (finished) return "lost";
+        pending = true;
+        continue;
+      }
+
       if (leg.kind === "firstPenalty") {
         // Which side took the match's first penalty (scored/missed/saved), from
         // MatchStats.firstPenalty. Clinches mid-match the moment a pen is taken.
@@ -903,6 +924,24 @@ export function gradeSpecial(special: Special): BetStatus {
         const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
         const raw = outcome === leg.outcome && ft.home >= 1 && ft.away >= 1;
         if (!(leg.negate ? !raw : raw)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "doubleChanceBtts") {
+        // DC outcome (one of the covered pair) AND both teams scored. negate
+        // flips it ("- No": NOT(dc AND btts)).
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        const raw = leg.outcome.includes(outcome) && ft.home >= 1 && ft.away >= 1;
+        if (!(leg.negate ? !raw : raw)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "notBttsAndTotalOver") {
+        // At least one team failed to score (NOT btts) AND total over `line`.
+        if (!ft) return "lost";
+        const oneBlank = ft.home === 0 || ft.away === 0;
+        if (!(oneBlank && ft.home + ft.away > leg.line)) return "lost";
         continue;
       }
 

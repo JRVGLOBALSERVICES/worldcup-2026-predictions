@@ -9305,6 +9305,201 @@
         "type": "matchResult",
         "outcome": "1"
       }
+    },
+    {
+      "id": "sp-83661354703",
+      "slipNo": "83661354703",
+      "matchId": "col-por-2026-06-27",
+      "player": "Cristiano Ronaldo",
+      "market": "To Score Two Goals (Brace)",
+      "label": "Cristiano Ronaldo to score 2 goals (brace) — Colombia v Portugal",
+      "odds": 7.0,
+      "stake": 100,
+      "placedAt": "28/06 00:12",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Cristiano Ronaldo",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83661005177",
+      "slipNo": "83661005177",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "6-leg acca",
+      "market": "Accumulator (6)",
+      "label": "Acca — Kane 2+ goals & assists + Croatia (1X) & BTTS + DR Congo win & under 3.5 + Colombia/Portugal BTTS + Algeria/Austria BTTS + Jordan/Argentina a team blanks & over 2.5 (6 legs)",
+      "odds": 141.255,
+      "stake": 43,
+      "placedAt": "28/06 00:04",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Harry Kane",
+            "line": 1.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "resultAndTotalUnder",
+            "outcome": "1",
+            "line": 3.5
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "notBttsAndTotalOver",
+            "line": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83660571351",
+      "slipNo": "83660571351",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "6-leg acca",
+      "market": "Accumulator (6)",
+      "label": "Acca — Saka 2+ goals & assists + Petar Musa to score + Bruno Fernandes 1+ goals & assists + DR Congo win + Amine Gouiri to score or assist + Argentina win (6 legs)",
+      "odds": 182.193,
+      "stake": 25,
+      "placedAt": "27/06 23:54",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Bukayo Saka",
+            "line": 1.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "scored",
+            "player": "Petar Musa"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Bruno Fernandes",
+            "line": 0.5
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "scoredOrAssisted",
+            "player": "Amine Gouiri"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "result",
+            "outcome": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83660419657",
+      "slipNo": "83660419657",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "5-leg acca",
+      "market": "Accumulator (5)",
+      "label": "Acca — Kane to score 2 goals + Croatia/Ghana BTTS + Ronaldo 2+ goals & assists + Algeria win + Argentina win (5 legs)",
+      "odds": 265.866,
+      "stake": 48,
+      "placedAt": "27/06 23:50",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsOver",
+            "player": "Harry Kane",
+            "line": 1.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Cristiano Ronaldo",
+            "line": 1.5
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "result",
+            "outcome": "2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83660197385",
+      "slipNo": "83660197385",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "5-leg acca",
+      "market": "Accumulator (5)",
+      "label": "Acca — Kane 2+ goals & assists + Petar Musa 2+ goals & assists + Ronaldo 1+ goals & assists + Lautaro Martinez to score or assist + Algeria/Austria BTTS (5 legs)",
+      "odds": 133.086,
+      "stake": 24,
+      "placedAt": "27/06 23:45",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Harry Kane",
+            "line": 1.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Petar Musa",
+            "line": 1.5
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Cristiano Ronaldo",
+            "line": 0.5
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "scoredOrAssisted",
+            "player": "Lautaro Martinez"
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "btts"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

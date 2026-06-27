@@ -79,8 +79,21 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${side(leg.side)} — first penalty of the match`;
     case "goalsAssistsOver":
       return `${leg.player} — ${plus(leg.line)} goals & assists`;
+    case "goalsOver":
+      return `${leg.player} — ${plus(leg.line)} goals`;
     case "scoredOrAssisted":
       return `${leg.player} to score or assist`;
+    case "doubleChanceBtts": {
+      const dc =
+        leg.outcome === "1X"
+          ? `${h} win or draw`
+          : leg.outcome === "X2"
+            ? `${a} win or draw`
+            : `${h} or ${a} to win`;
+      return `${m} — ${dc} + both teams score${leg.negate ? " (no)" : ""}`;
+    }
+    case "notBttsAndTotalOver":
+      return `${m} — a team to blank + over ${leg.line} goals`;
     case "scored":
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
     case "scoredAndScoreOneOf":
@@ -872,6 +885,56 @@ export function inPlayMultiLeg(
       continue;
     }
 
+    if (leg.kind === "doubleChanceBtts") {
+      // DC pair + both-teams-score. Like `resultBtts`, only decidable at FT (the
+      // result can swing into/out of the pair), so it never dies early. negate flips it.
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const raw = leg.outcome.includes(outcome) && cur.home >= 1 && cur.away >= 1;
+      const hitting = leg.negate ? !raw : raw;
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "notBttsAndTotalOver") {
+      // At least one team blanks AND total over line. Dies the instant BOTH
+      // teams have scored (the blank can't come back); the over only accrues but
+      // the blank-side can still score, so it locks WON only at FT.
+      if (cur.home >= 1 && cur.away >= 1) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+        continue;
+      }
+      const hitting = cur.home + cur.away > leg.line; // one side is on 0 here
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
     if (leg.kind === "bttsEachOver") {
       // Each team scores > line goals. Goals only accrue, so for "Yes" it locks
       // WON the moment both sides clear the line; for "No" it dies the instant
@@ -1183,6 +1246,21 @@ export function inPlayMultiLeg(
       const tally =
         goalsBy(lm.goals, leg.player).length + assistsBy(lm.goals, leg.player).length;
       if (tally > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "goalsOver") {
+      // Named player's GOALS only over line — clinches WON the moment his goal
+      // tally clears the line; dies only at FT short of it.
+      if (goalsBy(lm.goals, leg.player).length > leg.line) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (done) {
