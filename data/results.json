@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T01:20:21.880Z",
+    "generatedAt": "2026-06-27T02:20:26.875Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 42,
-    "live": 2
+    "finished": 44,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -5008,12 +5008,15 @@
       }
     },
     "cap-sau-2026-06-26": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 0
+      },
       "score": {
         "home": 0,
         "away": 0
@@ -5031,25 +5034,37 @@
           "player": "Wagner Pina",
           "minute": 8,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Nasser Al-Dawsari",
+          "minute": 67,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Feras Al-Brikan",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-27T00:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
-          "away": 1
+          "home": 4,
+          "away": 2
         },
         "sot": {
-          "home": 1,
-          "away": 1
+          "home": 2,
+          "away": 3
         },
         "shots": {
-          "home": 7,
-          "away": 4
+          "home": 15,
+          "away": 7
         },
         "yellow": {
           "home": 1,
-          "away": 1
+          "away": 3
         },
         "red": {
           "home": 0,
@@ -5057,31 +5072,34 @@
         },
         "cards": {
           "home": 1,
-          "away": 1
+          "away": 3
         },
         "cornersByHalf": {
           "home": [
             2,
-            0
+            2
           ],
           "away": [
             0,
-            1
+            2
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            1
+            2
           ],
           "away": [
             1,
-            0
+            2
           ]
         },
         "playerSot": {
           "Mohamed Kanno": 1,
-          "Jamiro Monteiro": 1
+          "Jamiro Monteiro": 1,
+          "Mohammed Abu Al-Shamat": 1,
+          "Laros Duarte": 1,
+          "Abdullah Al-Hamdan": 1
         },
         "firstGoalMethod": null,
         "waterBreak": {
@@ -5094,17 +5112,30 @@
             "firstActionMinute": 27,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 72,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
     },
     "uru-spa-2026-06-26": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
       "score": {
         "home": 0,
         "away": 1
@@ -5131,55 +5162,75 @@
           "player": "Juan Manuel Sanabria",
           "minute": 53,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Guillermo Varela",
+          "minute": 58,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nicolás de la Cruz",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Agustín Canobbio",
+          "minute": 90,
+          "type": "red"
         }
       ],
       "updatedAt": "2026-06-27T00:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 5
+          "home": 1,
+          "away": 6
         },
         "sot": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "shots": {
-          "home": 3,
-          "away": 4
+          "home": 5,
+          "away": 6
         },
         "yellow": {
-          "home": 1,
+          "home": 3,
           "away": 1
         },
         "red": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cards": {
-          "home": 1,
+          "home": 4,
           "away": 1
         },
         "cornersByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             5,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             0,
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Nicolás de la Cruz": 1
+        },
         "firstGoalMethod": "shot",
         "waterBreak": {
           "h1": {
@@ -5189,6 +5240,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Foul",
             "firstActionMinute": 31,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 69,
+            "firstActionType": "Foul",
+            "firstActionMinute": 74,
             "isCorner": false,
             "reliable": true
           }

@@ -427,6 +427,26 @@
         "home": 5,
         "away": 0
       }
+    },
+    "cap-sau-2026-06-26": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 0
+      }
+    },
+    "uru-spa-2026-06-26": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -2317,6 +2337,81 @@
           "player": "Merchas Doski",
           "minute": 90,
           "type": "yellow"
+        }
+      ]
+    },
+    "cap-sau-2026-06-26": {
+      "status": "finished",
+      "goals": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Saud Abdulhamid",
+          "minute": 3,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Wagner Pina",
+          "minute": 8,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Nasser Al-Dawsari",
+          "minute": 67,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Feras Al-Brikan",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "uru-spa-2026-06-26": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Álex Baena",
+          "minute": 41,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Álex Baena",
+          "minute": 46,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Juan Manuel Sanabria",
+          "minute": 53,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Guillermo Varela",
+          "minute": 58,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nicolás de la Cruz",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Agustín Canobbio",
+          "minute": 90,
+          "type": "red"
         }
       ]
     }
@@ -11396,20 +11491,20 @@
     },
     "cap-sau-2026-06-26": {
       "corners": {
-        "home": 2,
-        "away": 1
+        "home": 4,
+        "away": 2
       },
       "sot": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 3
       },
       "shots": {
-        "home": 7,
-        "away": 4
+        "home": 15,
+        "away": 7
       },
       "yellow": {
         "home": 1,
-        "away": 1
+        "away": 3
       },
       "red": {
         "home": 0,
@@ -11417,31 +11512,34 @@
       },
       "cards": {
         "home": 1,
-        "away": 1
+        "away": 3
       },
       "cornersByHalf": {
         "home": [
           2,
-          0
+          2
         ],
         "away": [
           0,
-          1
+          2
         ]
       },
       "sotByHalf": {
         "home": [
           0,
-          1
+          2
         ],
         "away": [
           1,
-          0
+          2
         ]
       },
       "playerSot": {
         "Mohamed Kanno": 1,
-        "Jamiro Monteiro": 1
+        "Jamiro Monteiro": 1,
+        "Mohammed Abu Al-Shamat": 1,
+        "Laros Duarte": 1,
+        "Abdullah Al-Hamdan": 1
       },
       "firstGoalMethod": null,
       "waterBreak": {
@@ -11454,55 +11552,67 @@
           "firstActionMinute": 27,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 72,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
     "uru-spa-2026-06-26": {
       "corners": {
-        "home": 0,
-        "away": 5
+        "home": 1,
+        "away": 6
       },
       "sot": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "shots": {
-        "home": 3,
-        "away": 4
+        "home": 5,
+        "away": 6
       },
       "yellow": {
-        "home": 1,
+        "home": 3,
         "away": 1
       },
       "red": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "cards": {
-        "home": 1,
+        "home": 4,
         "away": 1
       },
       "cornersByHalf": {
         "home": [
           0,
-          0
+          1
         ],
         "away": [
           5,
-          0
+          1
         ]
       },
       "sotByHalf": {
         "home": [
           0,
-          0
+          1
         ],
         "away": [
           0,
           0
         ]
       },
-      "playerSot": {},
+      "playerSot": {
+        "Nicolás de la Cruz": 1
+      },
       "firstGoalMethod": "shot",
       "waterBreak": {
         "h1": {
@@ -11512,6 +11622,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Foul",
           "firstActionMinute": 31,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 69,
+          "firstActionType": "Foul",
+          "firstActionMinute": 74,
           "isCorner": false,
           "reliable": true
         }
