@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T02:20:32.616Z",
+    "generatedAt": "2026-06-27T03:20:30.845Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 48
   },
@@ -397,6 +397,13 @@
         "name": "Lionel Messi",
         "team": "Argentina",
         "flag": "🇦🇷",
+        "value": 1
+      },
+      {
+        "rank": 1,
+        "name": "Mehdi Taremi",
+        "team": "Iran",
+        "flag": "🇮🇷",
         "value": 1
       }
     ]
@@ -1941,6 +1948,11 @@
       "flag": "🇪🇬",
       "scorers": [
         {
+          "name": "Mahmoud Saber",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Mohamed Salah",
           "value": 1,
           "matches": 1
@@ -1971,9 +1983,18 @@
           "name": "Mostafa Zico",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Trézéguet",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [
+        {
+          "name": "Mahmoud Saber",
+          "value": 1
+        },
         {
           "name": "Mohanad Lashin",
           "value": 1
@@ -2192,6 +2213,29 @@
       ],
       "redCards": []
     },
+    "iran": {
+      "team": "Iran",
+      "flag": "🇮🇷",
+      "scorers": [
+        {
+          "name": "Ramin Rezaeian",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "assists": [],
+      "yellowCards": [
+        {
+          "name": "Hossein Kanani",
+          "value": 1
+        },
+        {
+          "name": "Saeid Ezatolahi",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
     "southkorea": {
       "team": "South Korea",
       "flag": "🇰🇷",
@@ -2396,19 +2440,6 @@
           "value": 1
         }
       ]
-    },
-    "iran": {
-      "team": "Iran",
-      "flag": "🇮🇷",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Saeid Ezatolahi",
-          "value": 1
-        }
-      ],
-      "redCards": []
     }
   },
   "cache": {
@@ -2972,6 +3003,24 @@
             "team": "France"
           }
         ]
+      },
+      "760476": {
+        "penMiss": [
+          {
+            "name": "Mehdi Taremi",
+            "team": "Iran"
+          }
+        ],
+        "assists": [
+          {
+            "name": "Trézéguet",
+            "team": "Egypt"
+          }
+        ]
+      },
+      "760477": {
+        "penMiss": [],
+        "assists": []
       },
       "760478": {
         "penMiss": [],
