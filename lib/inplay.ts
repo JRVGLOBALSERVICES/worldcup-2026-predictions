@@ -1,6 +1,96 @@
-import type { Goal, Card, Score, SpecialGrade, BetStatus } from "./bets";
+import type { Goal, Card, Score, SpecialGrade, BetStatus, MultiLegCond } from "./bets";
 import { comboDead, evalCombo, playerSotCount, playerStarted } from "./bets";
 import type { LiveMatch } from "./live";
+import fixturesJson from "@/data/fixtures.json";
+import type { Fixture } from "./types";
+
+// matchId → fixture, so acca legs can read with real team names instead of
+// uppercased id slugs ("Croatia v Ghana", not "CRO v GHA").
+const FX_BY_ID = new Map((fixturesJson as Fixture[]).map((f) => [f.id, f]));
+function legTeams(id: string): { home: string; away: string } {
+  const fx = FX_BY_ID.get(id);
+  if (fx) return { home: fx.home.name, away: fx.away.name };
+  const [h, a] = id.split("-");
+  return { home: (h ?? "").toUpperCase(), away: (a ?? "").toUpperCase() };
+}
+
+/**
+ * Plain-English label for one acca leg — what the slip grid shows.
+ * No bookmaker shorthand ("o2.5", "W1+BTTS", "U3"): every leg reads as a
+ * sentence a human can scan. MUST NOT contain " · " (the grader joins legs on
+ * that token, and the UI parser splits the note on it). The trailing status
+ * glyph (✓/✗/⋯/—) is appended by the caller, separated by a single space.
+ */
+export function legLabelFor(leg: MultiLegCond): string {
+  const { home: h, away: a } = legTeams(leg.matchId);
+  const m = `${h} v ${a}`;
+  const side = (s: "home" | "away") => (s === "home" ? h : a);
+  // goals+assists "over X.5" → the whole-number threshold the punter needs.
+  const plus = (line: number) => `${Math.floor(line) + 1}+`;
+  switch (leg.kind) {
+    case "result":
+      return leg.outcome === "X" ? `${m} — draw` : `${leg.outcome === "1" ? h : a} to win`;
+    case "correctScore":
+      return `${m} — exactly ${leg.home}-${leg.away}`;
+    case "btts":
+      return `${m} — both teams to score${leg.negate ? " (no)" : ""}`;
+    case "cleanSheet":
+      return `${side(leg.side)} to keep a clean sheet`;
+    case "resultBtts": {
+      const r = leg.outcome === "1" ? `${h} win` : leg.outcome === "2" ? `${a} win` : "draw";
+      return `${m} — ${r} + both teams score${leg.negate ? " (no)" : ""}`;
+    }
+    case "bttsEachOver":
+      return `${m} — each team ${leg.line + 1}+ goals${leg.negate ? " (no)" : ""}`;
+    case "totalUnder":
+      return `${m} — under ${leg.line} goals`;
+    case "totalOver":
+      return `${m} — over ${leg.line} goals`;
+    case "doubleChance": {
+      const dc =
+        leg.outcome === "1X"
+          ? `${h} win or draw`
+          : leg.outcome === "X2"
+            ? `${a} win or draw`
+            : `${h} or ${a} to win`;
+      return `${m} — ${dc}`;
+    }
+    case "resultFirstHalf":
+      return leg.outcome === "X"
+        ? `${m} — level at half-time`
+        : `${leg.outcome === "1" ? h : a} to lead at half-time`;
+    case "resultAndTotalUnder":
+      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} win`} + under ${leg.line} goals`;
+    case "resultAndTotalOver":
+      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} win`} + over ${leg.line} goals`;
+    case "individualTotalUnder":
+      return `${side(leg.side)} to score under ${leg.line}`;
+    case "winsAtLeastOneHalf":
+      return `${side(leg.side)} to win a half`;
+    case "brace":
+      return `${m} — a player to score twice`;
+    case "htft": {
+      const lab = (o: "1" | "X" | "2") => (o === "1" ? h : o === "2" ? a : "draw");
+      return `${m} — ${lab(leg.ht)} at half-time then ${lab(leg.ft)} at full-time`;
+    }
+    case "winByMargin":
+      return `${m} — win by ${leg.line}+ goals`;
+    case "firstPenalty":
+      return `${side(leg.side)} — first penalty of the match`;
+    case "goalsAssistsOver":
+      return `${leg.player} — ${plus(leg.line)} goals & assists`;
+    case "scoredOrAssisted":
+      return `${leg.player} to score or assist`;
+    case "scored":
+      return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
+    case "scoredAndScoreOneOf":
+      return `${leg.player} to score`;
+    case "manual":
+      return `${m} — settled by hand`;
+    default:
+      return (leg as { player?: string }).player ?? `${h} v ${a}`;
+  }
+}
 
 /** Minimal shapes the graders read — so both the full Bet/Special and the
  *  serialisable client rows satisfy them without casts. */
@@ -656,62 +746,11 @@ export function inPlayMultiLeg(
   let dead = false;
   let anyLive = false;
   const parts: string[] = [];
-  // Short fallback label for legs without a player (result / correctScore):
-  // "SWI v CAN" from the matchId prefix.
-  const matchCode = (id: string) => {
-    const [h, a] = id.split("-");
-    return `${(h ?? "").toUpperCase()} v ${(a ?? "").toUpperCase()}`;
-  };
   for (const leg of legs) {
-    // Per-leg display label: scorer legs show the player; result/CS legs show
-    // the match code + the pick.
-    const w1x2 = (o: "1" | "X" | "2") => (o === "X" ? "X" : o === "1" ? "W1" : "W2");
-    const legLabel =
-      leg.kind === "result"
-        ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}`
-        : leg.kind === "correctScore"
-          ? `${matchCode(leg.matchId)} ${leg.home}-${leg.away}`
-          : leg.kind === "btts"
-            ? `${matchCode(leg.matchId)} BTTS${leg.negate ? " (No)" : ""}`
-            : leg.kind === "cleanSheet"
-              ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"}-CS`
-              : leg.kind === "resultBtts"
-                ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+BTTS${leg.negate ? " (No)" : ""}`
-                : leg.kind === "bttsEachOver"
-                  ? `${matchCode(leg.matchId)} Each ${leg.line + 1}+${leg.negate ? " (No)" : ""}`
-                  : leg.kind === "totalUnder"
-                    ? `${matchCode(leg.matchId)} U${leg.line}`
-                    : leg.kind === "totalOver"
-                      ? `${matchCode(leg.matchId)} O${leg.line}`
-                      : leg.kind === "doubleChance"
-                      ? `${matchCode(leg.matchId)} ${leg.outcome}`
-                      : leg.kind === "resultFirstHalf"
-                        ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)} 1H`
-                        : leg.kind === "resultAndTotalUnder"
-                          ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+U${leg.line}`
-                          : leg.kind === "individualTotalUnder"
-                            ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "H" : "A"} U${leg.line}`
-                            : leg.kind === "winsAtLeastOneHalf"
-                              ? `${matchCode(leg.matchId)} ${leg.side === "home" ? "T1" : "T2"} win a half`
-                              : leg.kind === "brace"
-                                ? `${matchCode(leg.matchId)} brace`
-                                : leg.kind === "htft"
-                                  ? `${matchCode(leg.matchId)} ${w1x2(leg.ht)}/${w1x2(leg.ft)}`
-                                  : leg.kind === "resultAndTotalOver"
-                                    ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+O${leg.line}`
-                                    : leg.kind === "winByMargin"
-                                      ? `${matchCode(leg.matchId)} win by ${leg.line}+`
-                                      : leg.kind === "firstPenalty"
-                                        ? `${matchCode(leg.matchId)} 1st pen ${leg.side}`
-                                        : leg.kind === "manual"
-                                          ? `${matchCode(leg.matchId)} (manual)`
-                                        : leg.kind === "goalsAssistsOver"
-                                          ? `${leg.player} G+A o${leg.line}`
-                                          : leg.kind === "scoredOrAssisted"
-                                            ? `${leg.player} G/A`
-                                            : leg.kind === "scored" && leg.negate
-                                              ? `No ${leg.player}`
-                                              : leg.player;
+    // Plain-English leg label — built by legLabel() so the slip grid reads as
+    // sentences ("Croatia to win + both teams score") instead of bookmaker
+    // shorthand. The status glyph is appended below with a single space.
+    const legLabel = legLabelFor(leg);
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
