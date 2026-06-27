@@ -467,6 +467,26 @@
         "home": 1,
         "away": 5
       }
+    },
+    "pan-eng-2026-06-27": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "cro-gha-2026-06-27": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 2,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -2564,6 +2584,91 @@
           "team": "home",
           "player": "Elijah Just",
           "minute": 55,
+          "type": "yellow"
+        }
+      ]
+    },
+    "pan-eng-2026-06-27": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Jude Bellingham",
+          "minute": 61,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Harry Kane",
+          "minute": 67,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "José Fajardo",
+          "minute": 53,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Jarell Quansah",
+          "minute": 59,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Andrés Andrade",
+          "minute": 83,
+          "type": "yellow"
+        }
+      ]
+    },
+    "cro-gha-2026-06-27": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Petar Sucic",
+          "minute": 31,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "away",
+          "scorer": "Derrick Luckassen",
+          "minute": 72,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Nikola Vlasic",
+          "minute": 82,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Ivan Perisic",
+          "minute": 67,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Kojo Peprah Oppong",
+          "minute": 90,
           "type": "yellow"
         }
       ]
@@ -12629,37 +12734,37 @@
     },
     "pan-eng-2026-06-27": {
       "corners": {
-        "home": 1,
-        "away": 6
+        "home": 3,
+        "away": 7
       },
       "sot": {
         "home": 2,
-        "away": 3
+        "away": 6
       },
       "shots": {
-        "home": 4,
-        "away": 11
+        "home": 13,
+        "away": 17
       },
       "yellow": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          2
         ],
         "away": [
           5,
-          1
+          2
         ]
       },
       "sotByHalf": {
@@ -12669,7 +12774,7 @@
         ],
         "away": [
           2,
-          1
+          2
         ]
       },
       "playerSot": {
@@ -12677,9 +12782,10 @@
         "Marcus Rashford": 1,
         "José Luis Rodríguez": 1,
         "Elliot Anderson": 1,
-        "Harry Kane": 1
+        "Harry Kane": 1,
+        "Noni Madueke": 1
       },
-      "firstGoalMethod": null,
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
       "waterBreak": {
         "h1": {
@@ -12691,48 +12797,58 @@
           "firstActionMinute": 26,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 72,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
     "cro-gha-2026-06-27": {
       "corners": {
-        "home": 0,
-        "away": 1
+        "home": 3,
+        "away": 2
       },
       "sot": {
-        "home": 2,
-        "away": 0
+        "home": 4,
+        "away": 1
       },
       "shots": {
-        "home": 5,
-        "away": 3
+        "home": 8,
+        "away": 6
       },
       "yellow": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
           0,
-          0
+          3
         ],
         "away": [
           0,
-          1
+          2
         ]
       },
       "sotByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
           0,
@@ -12740,7 +12856,8 @@
         ]
       },
       "playerSot": {
-        "Ivan Perisic": 1
+        "Ivan Perisic": 1,
+        "Mario Pasalic": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -12752,6 +12869,16 @@
           "breakEndMinute": 28,
           "firstActionType": "Foul",
           "firstActionMinute": 29,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 72,
           "isCorner": false,
           "reliable": true
         }

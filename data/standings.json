@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T22:20:28.862Z",
+    "generatedAt": "2026-06-27T23:20:27.875Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -33,11 +33,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "3rd: C/E/F/H/I",
-            "opponentFlag": null,
+            "opponent": "Ecuador",
+            "opponentFlag": "🇪🇨",
             "kickoffUTC": "2026-07-01T01:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -557,7 +557,14 @@
             "D",
             "L"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Mexico",
+            "opponentFlag": "🇲🇽",
+            "kickoffUTC": "2026-07-01T01:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Curaçao",
@@ -1292,84 +1299,108 @@
     {
       "group": "L",
       "total": 6,
-      "played": 4,
+      "played": 6,
       "rows": [
         {
           "name": "England",
           "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-          "played": 2,
-          "won": 1,
+          "played": 3,
+          "won": 2,
           "drawn": 1,
           "lost": 0,
-          "goalsFor": 4,
+          "goalsFor": 6,
           "goalsAgainst": 2,
-          "goalDiff": 2,
-          "points": 4,
+          "goalDiff": 4,
+          "points": 7,
           "rank": 1,
           "advance": {
             "label": "Advance to Round of 32",
             "color": "#81D6AC"
           },
           "form": [
+            "W",
             "D",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "3rd: E/H/I/J/K",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-01T16:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
-          "name": "Ghana",
-          "flag": "🇬🇭",
-          "played": 2,
-          "won": 1,
-          "drawn": 1,
-          "lost": 0,
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDiff": 1,
-          "points": 4,
+          "name": "Croatia",
+          "flag": "🇭🇷",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 5,
+          "goalsAgainst": 5,
+          "goalDiff": 0,
+          "points": 6,
           "rank": 2,
           "advance": {
             "label": "Advance to Round of 32",
             "color": "#81D6AC"
           },
           "form": [
-            "D",
-            "W"
+            "W",
+            "W",
+            "L"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "2nd Grp K",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-02T23:00Z",
+            "home": false,
+            "placeholder": true
+          }
         },
         {
-          "name": "Croatia",
-          "flag": "🇭🇷",
-          "played": 2,
+          "name": "Ghana",
+          "flag": "🇬🇭",
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "goalsFor": 3,
-          "goalsAgainst": 4,
-          "goalDiff": -1,
-          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDiff": 0,
+          "points": 4,
           "rank": 3,
           "advance": {
             "label": "Best 8 advance",
             "color": "#B5E7CE"
           },
           "form": [
-            "W",
-            "L"
+            "L",
+            "D",
+            "W"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Winner Grp K",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-04T01:30Z",
+            "home": false,
+            "placeholder": true
+          }
         },
         {
           "name": "Panama",
           "flag": "🇵🇦",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 0,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 0,
-          "goalsAgainst": 2,
-          "goalDiff": -2,
+          "goalsAgainst": 4,
+          "goalDiff": -4,
           "points": 0,
           "rank": 4,
           "advance": {
@@ -1377,6 +1408,7 @@
             "color": "#FF7F84"
           },
           "form": [
+            "L",
             "L",
             "L"
           ],
