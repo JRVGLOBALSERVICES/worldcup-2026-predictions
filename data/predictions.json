@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T19:43:58.803Z",
+    "generatedAt": "2026-06-27T20:23:21.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-27T09:09:33.875Z"
@@ -10982,125 +10982,138 @@
     "pan-eng-2026-06-27": {
       "win": {
         "pick": "England",
-        "fairOdds": "1.50",
-        "reason": "Model: England to win at 66% (Panama 11% / draw 23% / England 66%). Expected goals 0.5–1.7 from group-stage attack/defence rates (Panama 0.7 for / 1.2 against per game, England 1.7 / 1.2). Most likely score 0-1.",
-        "strength": 5
+        "fairOdds": "1.62",
+        "reason": "England's confirmed 4-2-3-1 with Saka, Rashford, Rogers and Kane carries clear quality and wide overloads vs Panama's deep 5-4-1 block. But Panama held Croatia to 0-1 and will sit deep to frustrate; chance-creation against a low block is not guaranteed, so this is a genuine ~60-64% win, not a certainty — the draw and a 1-0 grind both have real weight.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.65",
+        "fairOdds": "2.40",
         "alt": "1-0",
-        "altOdds": "4.50"
+        "altOdds": "3.10"
       },
       "htft": {
         "pick": "Draw/England",
-        "fairOdds": "3.76"
+        "fairOdds": "3.20"
       },
       "fullTime": {
-        "score": "0-1",
-        "fairOdds": "5.39"
+        "score": "1-0",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Harry Kane",
           "team": "England",
-          "fairOdds": "1.97",
-          "banker": true,
-          "note": "2 goals in 2 group games; 51% modelled anytime chance on 1.7 team xG.",
+          "fairOdds": "2.20",
+          "banker": false,
+          "note": "Captain and penalty taker; scored twice vs Croatia (one pen). Primary scorer but drops deep vs a low block, so chances can be scrappy — banker:false for safety.",
           "strength": 4
         },
         {
-          "player": "Jude Bellingham",
+          "player": "Bukayo Saka",
           "team": "England",
-          "fairOdds": "2.89",
+          "fairOdds": "3.10",
           "banker": false,
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 1.7 team xG.",
-          "strength": 2
+          "note": "Starts on the right and now England's main corner taker with Rice benched; wide overload vs Panama's LWB Gutiérrez is England's cleanest edge.",
+          "strength": 3
         },
         {
           "player": "Marcus Rashford",
           "team": "England",
-          "fairOdds": "2.89",
+          "fairOdds": "3.30",
           "banker": false,
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 1.7 team xG.",
-          "strength": 2
+          "note": "Came off bench to score vs Croatia; now starts LW, attacking Panama's RWB Murillo. Cutting in onto his right is a real goal route.",
+          "strength": 3
+        },
+        {
+          "player": "Morgan Rogers",
+          "team": "England",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Confirmed at the 10; 10 PL goals + Europa League Player of the Season form. Late runs from midfield and long-range shooting make him a live threat against a packed box.",
+          "strength": 3
         }
       ],
       "assists": [
         {
           "player": "Bukayo Saka",
           "team": "England",
-          "fairOdds": "2.64",
-          "banker": true,
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Set up Rashford vs Croatia; corners plus right-wing cutbacks make him England's top assist source."
         },
         {
-          "player": "Declan Rice",
+          "player": "Harry Kane",
           "team": "England",
-          "fairOdds": "2.64",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "Drops deep to link play; his lay-offs and flick-ons feed Rogers/Bellingham runners against a deep block."
         },
         {
-          "player": "Elliot Anderson",
+          "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "2.64",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "In the deeper pivot tonight but still drives forward; scored vs Croatia and can slide through-balls for Kane/Saka."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Harry Kane",
-        "backup": "Jude Bellingham",
-        "note": "England favoured to control the game, so a penalty is less pivotal; Harry Kane would take one if awarded."
+        "backup": "Bukayo Saka",
+        "note": "Panama's deep 5-4-1 block invites England pressure in the box; Kane is the confirmed penalty taker (most pens in WC history). Medium not high — Panama defend honestly and England may not earn one."
       },
       "lineups": {
-        "home": "Orlando Mosquera, José Córdoba, Andrés Andrade, Jiovany Ramos, César Blackman, Amir Murillo, Édgar Yoel Bárcenas, Carlos Harvey, José Luis Rodríguez, Cristian Martínez, José Fajardo",
-        "away": "Jordan Pickford, Marc Guéhi, Ezri Konsa, Djed Spence, Reece James, Jude Bellingham, Declan Rice, Elliot Anderson, Harry Kane, Anthony Gordon, Noni Madueke",
-        "status": "unconfirmed",
+        "home": "Orlando Mosquera, Amir Murillo, Fidel Escobar, José Córdoba, Andrés Andrade, Jorge Gutiérrez, Carlos Harvey, Cristian Martínez, Yoel Bárcenas, José Luis Rodríguez, Tomás Rodríguez",
+        "away": "Jordan Pickford, Jarell Quansah, Ezri Konsa, Marc Guéhi, Nico O'Reilly, Jude Bellingham, Elliot Anderson, Bukayo Saka, Morgan Rogers, Marcus Rashford, Harry Kane",
+        "status": "confirmed",
         "homeXI": {
           "formation": "5-4-1",
           "players": [
             {
-              "num": 22,
+              "num": 1,
               "name": "Orlando Mosquera",
-              "pos": "G"
-            },
-            {
-              "num": 3,
-              "name": "José Córdoba",
-              "pos": "CD"
-            },
-            {
-              "num": 16,
-              "name": "Andrés Andrade",
-              "pos": "CD-L"
-            },
-            {
-              "num": 13,
-              "name": "Jiovany Ramos",
-              "pos": "CD-R"
+              "pos": "GK"
             },
             {
               "num": 2,
-              "name": "César Blackman",
-              "pos": "LB"
-            },
-            {
-              "num": 23,
               "name": "Amir Murillo",
-              "pos": "RB"
+              "pos": "RWB"
             },
             {
-              "num": 11,
-              "name": "Édgar Yoel Bárcenas",
-              "pos": "CM-L"
+              "num": 3,
+              "name": "Fidel Escobar",
+              "pos": "CB"
             },
             {
-              "num": 14,
+              "num": 5,
+              "name": "José Córdoba",
+              "pos": "CB"
+            },
+            {
+              "num": 4,
+              "name": "Andrés Andrade",
+              "pos": "CB"
+            },
+            {
+              "num": 15,
+              "name": "Jorge Gutiérrez",
+              "pos": "LWB"
+            },
+            {
+              "num": 20,
               "name": "Carlos Harvey",
-              "pos": "CM-R"
+              "pos": "CM"
+            },
+            {
+              "num": 8,
+              "name": "Cristian Martínez",
+              "pos": "CM"
+            },
+            {
+              "num": 21,
+              "name": "Yoel Bárcenas",
+              "pos": "RM"
             },
             {
               "num": 7,
@@ -11108,14 +11121,9 @@
               "pos": "LM"
             },
             {
-              "num": 6,
-              "name": "Cristian Martínez",
-              "pos": "RM"
-            },
-            {
-              "num": 17,
-              "name": "José Fajardo",
-              "pos": "F"
+              "num": 9,
+              "name": "Tomás Rodríguez",
+              "pos": "ST"
             }
           ]
         },
@@ -11125,84 +11133,104 @@
             {
               "num": 1,
               "name": "Jordan Pickford",
-              "pos": "G"
+              "pos": "GK"
             },
             {
-              "num": 6,
-              "name": "Marc Guéhi",
-              "pos": "CD-L"
+              "num": 26,
+              "name": "Jarell Quansah",
+              "pos": "RB"
             },
             {
               "num": 2,
               "name": "Ezri Konsa",
-              "pos": "CD-R"
+              "pos": "CB"
             },
             {
-              "num": 25,
-              "name": "Djed Spence",
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "CB"
+            },
+            {
+              "num": 3,
+              "name": "Nico O'Reilly",
               "pos": "LB"
-            },
-            {
-              "num": 24,
-              "name": "Reece James",
-              "pos": "RB"
             },
             {
               "num": 10,
               "name": "Jude Bellingham",
-              "pos": "AM"
-            },
-            {
-              "num": 4,
-              "name": "Declan Rice",
-              "pos": "LM"
+              "pos": "CM"
             },
             {
               "num": 8,
               "name": "Elliot Anderson",
-              "pos": "RM"
+              "pos": "CM"
+            },
+            {
+              "num": 7,
+              "name": "Bukayo Saka",
+              "pos": "RW"
+            },
+            {
+              "num": 17,
+              "name": "Morgan Rogers",
+              "pos": "AM"
+            },
+            {
+              "num": 11,
+              "name": "Marcus Rashford",
+              "pos": "LW"
             },
             {
               "num": 9,
               "name": "Harry Kane",
-              "pos": "F"
-            },
-            {
-              "num": 18,
-              "name": "Anthony Gordon",
-              "pos": "AM-L"
-            },
-            {
-              "num": 20,
-              "name": "Noni Madueke",
-              "pos": "AM-R"
+              "pos": "ST"
             }
           ]
         }
       },
       "playerNotes": [
         {
-          "player": "Harry Kane",
+          "player": "Morgan Rogers",
           "team": "England",
-          "note": "2 goals in 2 group games; 51% modelled anytime chance on 1.7 team xG."
-        },
-        {
-          "player": "Jude Bellingham",
-          "team": "England",
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 1.7 team xG."
+          "note": "Confirmed start at the 10 over Palmer; 10 PL goals + Europa League Player of the Season. Late runs and long shots make him England's variable goal threat to unlock a packed box."
         },
         {
           "player": "Bukayo Saka",
           "team": "England",
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "Now primary corner taker with Rice on the bench; right-wing overload vs LWB Jorge Gutiérrez is England's cleanest creative edge. Assisted Rashford vs Croatia."
+        },
+        {
+          "player": "Marcus Rashford",
+          "team": "England",
+          "note": "Promoted to start LW after his super-sub goal vs Croatia. Attacks RWB Amir Murillo, cutting inside onto his right foot."
+        },
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "note": "Captain, penalty taker and most prolific WC penalty scorer. Drops deep to link, so against a deep block his service work may matter as much as his finishing."
+        },
+        {
+          "player": "Tomás Rodríguez",
+          "team": "Panama",
+          "note": "Panama's lone striker and main outlet on the counter; isolated against Konsa/Guéhi, his hold-up and transition runs are Panama's slim route to a goal."
+        },
+        {
+          "player": "Yoel Bárcenas",
+          "team": "Panama",
+          "note": "Wide-midfield counter outlet and dead-ball option in the confirmed XI; alongside José Luis Rodríguez he carries Panama's break threat and feeds Tomás Rodríguez."
         }
       ],
-      "confidence": "high",
-      "strength": 5,
+      "confidence": "medium",
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://worldsoccertalk.com/amp/world-cup/is-harry-kane-playing-panama-vs-england-projected-lineups-for-the-2026-world-cup-group-l-game/",
+        "https://www.fourfourtwo.com/team/england-world-cup-2026-squad",
+        "https://www.skysports.com/football/news/32461/13552729/world-cup-2026-england-4-2-croatia-harry-kane-jude-bellingham-and-marcus-rashford-on-target-as-three-lions-make-winning-start",
+        "https://en.wikipedia.org/wiki/Morgan_Rogers",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.rotowire.com/soccer/article/panama-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119774",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/panama/team-news",
+        "https://www.squawka.com/us/news/bukayo-saka-stats/"
       ]
     },
     "cro-gha-2026-06-27": {
