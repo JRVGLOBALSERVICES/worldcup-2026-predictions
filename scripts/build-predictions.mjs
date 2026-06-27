@@ -122,10 +122,20 @@ function formScore(line) {
   return den ? num / den : 0.5;
 }
 
+/**
+ * League-average ratings for a team we have no group data on yet (e.g. a future
+ * knockout fixture whose teams haven't been keyed into standings). Returns a
+ * neutral, perfectly-average side so buildPrediction NEVER fails — every fixture
+ * with a bet on it always gets a tracked prediction, even on a thin data day.
+ */
+function baselineRatings() {
+  return { row: null, attack: 1, defence: 1, gfg: MU, gag: MU, ppg: PPG_AVG, fs: 0.5, baseline: true };
+}
+
 /** Per-team attack/defence ratings with Bayesian shrink + form/quality tilt. */
 function ratings(name) {
   const r = teamRows[norm(name)];
-  if (!r || !r.played) return null;
+  if (!r || !r.played) return baselineRatings();
   const gfg = (r.goalsFor + MU * SHRINK) / (r.played + SHRINK);
   const gag = (r.goalsAgainst + MU * SHRINK) / (r.played + SHRINK);
   // quality: blend points-per-game (vs field) and recent form line from research
@@ -222,7 +232,7 @@ function lastKnownXI(name) {
 function buildPrediction(f) {
   const rh = ratings(f.home.name);
   const ra = ratings(f.away.name);
-  if (!rh || !ra) return null; // can't model without group data on both sides
+  if (!rh || !ra) return null; // defensive only — ratings() now falls back to a league-average side
 
   const lh = MU * rh.attack * ra.defence * HFA;
   const la = MU * ra.attack * rh.defence / HFA;
