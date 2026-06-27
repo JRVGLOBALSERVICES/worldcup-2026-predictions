@@ -697,9 +697,19 @@ export function inPlayMultiLeg(
                                 ? `${matchCode(leg.matchId)} brace`
                                 : leg.kind === "htft"
                                   ? `${matchCode(leg.matchId)} ${w1x2(leg.ht)}/${w1x2(leg.ft)}`
-                                  : leg.kind === "scored" && leg.negate
-                                    ? `No ${leg.player}`
-                                    : leg.player;
+                                  : leg.kind === "resultAndTotalOver"
+                                    ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+O${leg.line}`
+                                    : leg.kind === "winByMargin"
+                                      ? `${matchCode(leg.matchId)} win by ${leg.line}+`
+                                      : leg.kind === "manual"
+                                        ? `${matchCode(leg.matchId)} (manual)`
+                                        : leg.kind === "goalsAssistsOver"
+                                          ? `${leg.player} G+A o${leg.line}`
+                                          : leg.kind === "scoredOrAssisted"
+                                            ? `${leg.player} G/A`
+                                            : leg.kind === "scored" && leg.negate
+                                              ? `No ${leg.player}`
+                                              : leg.player;
     const lm = live[leg.matchId];
     if (!lm || lm.state === "scheduled") {
       parts.push(`${legLabel} —`);
@@ -1051,6 +1061,91 @@ export function inPlayMultiLeg(
       if (ht && out(ht) === leg.ht && out(cur) === leg.ft) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "resultAndTotalOver") {
+      // 1X2 AND total over line. The total only accrues (the over-part, once hit,
+      // is banked), but the result swings until FT, so the combo locks only at FT.
+      const total = cur.home + cur.away;
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const hitting = total > leg.line && outcome === leg.outcome;
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "winByMargin") {
+      // Any side wins by line+ goals — absolute FT goal difference. The margin
+      // swings both ways until FT, so it never dies early.
+      const hitting = Math.abs(cur.home - cur.away) >= leg.line;
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "manual") {
+      // Unverifiable from ESPN (e.g. which team took the first penalty) — never
+      // auto-graded; shows neutral and the whole acca holds pending for a human.
+      parts.push(`${legLabel} —`);
+      continue;
+    }
+
+    if (leg.kind === "goalsAssistsOver") {
+      // Goals + assists combined over line — clinches WON the moment the tally
+      // clears the line; dies only at FT short of it.
+      const tally =
+        goalsBy(lm.goals, leg.player).length + assistsBy(lm.goals, leg.player).length;
+      if (tally > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "scoredOrAssisted") {
+      // Involved in a goal (scored OR assisted) at least once — clinches WON on
+      // first involvement; dies at FT if never involved.
+      const involved =
+        goalsBy(lm.goals, leg.player).length + assistsBy(lm.goals, leg.player).length;
+      if (involved > 0) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
       } else {
         parts.push(`${legLabel} —`);
       }

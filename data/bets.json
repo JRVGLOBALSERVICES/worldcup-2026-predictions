@@ -4112,6 +4112,97 @@
       "odds": 17,
       "stake": 50,
       "placedAt": "26/06 05:37"
+    },
+    {
+      "id": "b-83641497373",
+      "slipNo": "83641497373",
+      "matchId": "col-por-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 0-3 (1st half)",
+      "home": 0,
+      "away": 3,
+      "odds": 29,
+      "stake": 10,
+      "placedAt": "27/06 14:07"
+    },
+    {
+      "id": "b-83641495535",
+      "slipNo": "83641495535",
+      "matchId": "col-por-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 1-3 (1st half)",
+      "home": 1,
+      "away": 3,
+      "odds": 50,
+      "stake": 10,
+      "placedAt": "27/06 14:07"
+    },
+    {
+      "id": "b-83641492013",
+      "slipNo": "83641492013",
+      "matchId": "col-por-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 2-2 (1st half)",
+      "home": 2,
+      "away": 2,
+      "odds": 50,
+      "stake": 10,
+      "placedAt": "27/06 14:07"
+    },
+    {
+      "id": "b-83641490011",
+      "slipNo": "83641490011",
+      "matchId": "col-por-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 1-1 (1st half)",
+      "home": 1,
+      "away": 1,
+      "odds": 8,
+      "stake": 40,
+      "placedAt": "27/06 14:07"
+    },
+    {
+      "id": "b-83641478257",
+      "slipNo": "83641478257",
+      "matchId": "pan-eng-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 0-3 (1st half)",
+      "home": 0,
+      "away": 3,
+      "odds": 11,
+      "stake": 20,
+      "placedAt": "27/06 14:07"
+    },
+    {
+      "id": "b-83641474245",
+      "slipNo": "83641474245",
+      "matchId": "pan-eng-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 0-2 (1st half)",
+      "home": 0,
+      "away": 2,
+      "odds": 5,
+      "stake": 30,
+      "placedAt": "27/06 14:06"
+    },
+    {
+      "id": "b-83641469741",
+      "slipNo": "83641469741",
+      "matchId": "pan-eng-2026-06-27",
+      "side": "CS",
+      "period": "HT",
+      "label": "Correct Score 1-1 (1st half)",
+      "home": 1,
+      "away": 1,
+      "odds": 11,
+      "stake": 20,
+      "placedAt": "27/06 14:06"
     }
   ],
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
@@ -8810,6 +8901,241 @@
             "kind": "htft",
             "ht": "2",
             "ft": "X"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83641753589",
+      "slipNo": "83641753589",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "5-leg acca",
+      "market": "Accumulator (5)",
+      "label": "Acca — Kane G+A o1.5 + Musa G+A o0.5 + Ronaldo G+A o0.5 + Messi G+A o2.5 + Gouiri to score/assist (5 legs)",
+      "odds": 171.417,
+      "stake": 24,
+      "placedAt": "27/06 14:20",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Harry Kane",
+            "line": 1.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Petar Musa",
+            "line": 0.5
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Cristiano Ronaldo",
+            "line": 0.5
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Lionel Messi",
+            "line": 2.5
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "scoredOrAssisted",
+            "player": "Amine Gouiri"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83641608561",
+      "slipNo": "83641608561",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "6-leg acca",
+      "market": "Accumulator (6)",
+      "label": "Acca — England win + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + Argentina win & total >3.5 (6 legs)",
+      "odds": 15.083,
+      "stake": 100,
+      "placedAt": "27/06 14:13",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "totalUnder",
+            "line": 2.25
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "doubleChance",
+            "outcome": "X2"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "resultAndTotalOver",
+            "outcome": "2",
+            "line": 3.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83641457473",
+      "slipNo": "83641457473",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "6-leg acca",
+      "market": "Accumulator (6)",
+      "label": "Acca — England take first penalty (manual) + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
+      "odds": 40.207,
+      "stake": 50,
+      "placedAt": "27/06 14:06",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "manual"
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "totalUnder",
+            "line": 2.25
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "doubleChance",
+            "outcome": "X2"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "winByMargin",
+            "line": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83641165433",
+      "slipNo": "83641165433",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "3-leg acca",
+      "market": "Accumulator (3)",
+      "label": "Acca — Kane G+A o1.5 + Ronaldo G+A o0.5 + Messi G+A o2.5 (3 legs)",
+      "odds": 30.834,
+      "stake": 48,
+      "placedAt": "27/06 13:52",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Harry Kane",
+            "line": 1.5
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Cristiano Ronaldo",
+            "line": 0.5
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Lionel Messi",
+            "line": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83641116405",
+      "slipNo": "83641116405",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "6-leg acca",
+      "market": "Accumulator (6)",
+      "label": "Acca — Kane G+A o2.5 + Croatia win & BTTS + DRC/Uzb Under 3 + Col/Por BTTS + Messi G+A o2.5 + Alg/Aus BTTS (6 legs)",
+      "odds": 981.36,
+      "stake": 38,
+      "placedAt": "27/06 13:49",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Harry Kane",
+            "line": 2.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "resultBtts",
+            "outcome": "1"
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Lionel Messi",
+            "line": 2.5
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "btts"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83641249801",
+      "slipNo": "83641249801",
+      "matchId": "jor-arg-2026-06-27",
+      "player": "Lionel Messi",
+      "market": "To score a hat-trick",
+      "label": "Lionel Messi to score a hat-trick (Jordan v Argentina) — manual settle",
+      "odds": 13.5,
+      "stake": 50,
+      "placedAt": "27/06 13:56",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "manual"
           }
         ]
       }

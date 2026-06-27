@@ -314,7 +314,24 @@ export type MultiLegCond =
   | { matchId: string; kind: "brace" }
   // Half-time/full-time double result ("HT-FT W2X" etc.), oriented to the leg
   // match's home/away. ht + ft are each a 1X2 outcome that must both match.
-  | { matchId: string; kind: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" };
+  | { matchId: string; kind: "htft"; ht: "1" | "X" | "2"; ft: "1" | "X" | "2" }
+  // Player's goals + assists combined strictly over `line` ("Total Goals +
+  // Assists Combined Over 1.5" → line:1.5 → won at 2+). Can clinch mid-match the
+  // moment the tally clears the line (graded like `scored`), loses only at FT.
+  | { matchId: string; kind: "goalsAssistsOver"; player: string; line: number }
+  // Player to score OR provide an assist ("To Score Or To Provide An Assist —
+  // Yes"). Won the moment he's involved in a goal; loses at FT if never.
+  | { matchId: string; kind: "scoredOrAssisted"; player: string }
+  // Result + Total: a 1X2 outcome AND the match total is over `line` ("Team 2 To
+  // Win And Total > (3.5)" → outcome:"2", line:3.5). Over-mirror of
+  // resultAndTotalUnder.
+  | { matchId: string; kind: "resultAndTotalOver"; outcome: "1" | "X" | "2"; line: number }
+  // Any team to win by a margin of `line` or more ("Win With Difference Of (3)
+  // Or More Goals — Yes" → line:3). Decided off the absolute FT goal difference.
+  | { matchId: string; kind: "winByMargin"; line: number }
+  // Unverifiable from ESPN data (e.g. which team took the first penalty). Never
+  // blind-grades — holds the acca pending for a human to settle by hand.
+  | { matchId: string; kind: "manual" };
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
@@ -777,6 +794,34 @@ export function gradeSpecial(special: Special): BetStatus {
         continue;
       }
 
+      if (leg.kind === "goalsAssistsOver") {
+        // Goals + assists combined over the line — can clinch mid-match like
+        // `scored`; dies only when the match ends short of the line.
+        const tally =
+          goalsBy(ev.goals, leg.player).length + assistsBy(ev.goals, leg.player).length;
+        if (tally > leg.line) continue; // leg won, even mid-match
+        if (finished) return "lost"; // match over, never cleared → acca dead
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "scoredOrAssisted") {
+        // Involved in a goal (scored OR assisted) at least once.
+        const involved =
+          goalsBy(ev.goals, leg.player).length + assistsBy(ev.goals, leg.player).length;
+        if (involved > 0) continue; // leg won
+        if (finished) return "lost";
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "manual") {
+        // Unverifiable from ESPN (e.g. which team took the first penalty) — hold
+        // the whole acca pending so a human settles it; never blind-grade.
+        pending = true;
+        continue;
+      }
+
       // Every remaining leg kind needs the FINAL score, so it can't decide
       // until the leg match is finished.
       if (!finished) {
@@ -919,6 +964,26 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!(o(ht) === leg.ht && o(ft) === leg.ft)) return "lost";
         continue;
       }
+
+      if (leg.kind === "resultAndTotalOver") {
+        // 1X2 outcome AND total goals over `line` (over-mirror of
+        // resultAndTotalUnder).
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        if (!(outcome === leg.outcome && ft.home + ft.away > leg.line)) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "winByMargin") {
+        // Either side wins by `line`+ goals — absolute FT goal difference.
+        if (!ft) return "lost";
+        if (Math.abs(ft.home - ft.away) < leg.line) return "lost";
+        continue;
+      }
+
+      // Unrecognised leg kind — never blind-win; hold the acca pending so a
+      // human notices and settles it rather than silently grading it "won".
+      pending = true;
     }
     return pending ? "pending" : "won";
   }
