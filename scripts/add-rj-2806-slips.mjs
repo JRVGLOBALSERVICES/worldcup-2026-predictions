@@ -92,9 +92,9 @@ const accas = [
     player: "6-leg acca",
     market: "Accumulator (6)",
     label:
-      "Acca — England take first penalty (manual) + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
+      "Acca — England take first penalty + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
     legs: [
-      { matchId: M.PANENG, kind: "manual" }, // first penalty taken by England — unverifiable from ESPN
+      { matchId: M.PANENG, kind: "firstPenalty", side: "away" }, // England (away) take the first pen — auto-grades off ESPN keyEvents
       { matchId: M.CROGHA, kind: "doubleChance", outcome: "1X" },
       { matchId: M.COLPOR, kind: "btts" },
       { matchId: M.DRCUZB, kind: "totalUnder", line: 2.25 },
@@ -151,8 +151,8 @@ for (const a of accas) {
   });
 }
 
-// Messi hat-trick single — no named-player hat-trick grade exists; hold pending
-// for a human to settle (manual leg never blind-grades).
+// Messi hat-trick single — 3+ goals = goalsOver line 2.5, exactly like Kane's
+// hat-trick. Auto-grades off the per-player goal tally (ESPN keyEvents).
 if (!have.has("83641249801")) {
   b.specials.push({
     id: "sp-83641249801",
@@ -160,11 +160,11 @@ if (!have.has("83641249801")) {
     matchId: M.JORARG,
     player: "Lionel Messi",
     market: "To score a hat-trick",
-    label: "Lionel Messi to score a hat-trick (Jordan v Argentina) — manual settle",
+    label: "Lionel Messi to score a hat-trick (3+ goals, Jordan v Argentina)",
     odds: 13.5,
     stake: 50,
     placedAt: "27/06 13:56",
-    grade: { type: "multiLeg", legs: [{ matchId: M.JORARG, kind: "manual" }] },
+    grade: { type: "goalsOver", player: "Lionel Messi", line: 2.5 },
   });
 }
 

@@ -103,6 +103,16 @@ export type MatchStats = {
    */
   firstGoalMethod?: GoalMethod | null;
   /**
+   * Which side took the match's FIRST penalty kick — scored, missed, OR saved —
+   * parsed from the summary `keyEvents` (a scored pen carries `penaltyKick:true`;
+   * a miss/save only shows as a "Penalty - Missed/Saved" play). Earliest by
+   * period→clock, oriented to our home/away. Lets the "Team to take/be awarded
+   * the first penalty" market auto-settle. `null` until a penalty is taken (and
+   * stays null all match if none is — that market then voids). Written by
+   * scripts/build-results.mjs (final) and lib/live.ts fetchStats (in-play).
+   */
+  firstPenalty?: "home" | "away" | null;
+  /**
    * First logged on-pitch action AFTER each half's mandatory hydration break.
    * FIFA's 2026 rule fixes the break at a set point in every match — 22' into
    * the first half, 22' into the second (≈67'), regardless of weather — so the
@@ -329,8 +339,15 @@ export type MultiLegCond =
   // Any team to win by a margin of `line` or more ("Win With Difference Of (3)
   // Or More Goals — Yes" → line:3). Decided off the absolute FT goal difference.
   | { matchId: string; kind: "winByMargin"; line: number }
-  // Unverifiable from ESPN data (e.g. which team took the first penalty). Never
-  // blind-grades — holds the acca pending for a human to settle by hand.
+  // The named side takes the match's FIRST penalty kick ("Team to be awarded /
+  // take the first penalty"), settled off MatchStats.firstPenalty. `side` is
+  // that match's home/away. Clinches the moment the first pen is taken; if the
+  // match ends with NO penalty the market voids — in a fixed-odds acca a void
+  // leg passes through (the stored combined odds already don't reprice).
+  | { matchId: string; kind: "firstPenalty"; side: "home" | "away" }
+  // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
+  // pen + scorer are in the feed but not who was fouled). Never blind-grades —
+  // holds the acca pending for a human to settle by hand.
   | { matchId: string; kind: "manual" };
 
 /**
@@ -815,9 +832,22 @@ export function gradeSpecial(special: Special): BetStatus {
         continue;
       }
 
+      if (leg.kind === "firstPenalty") {
+        // Which side took the match's first penalty (scored/missed/saved), from
+        // MatchStats.firstPenalty. Clinches mid-match the moment a pen is taken.
+        const fp = getStats(leg.matchId)?.firstPenalty ?? null;
+        if (fp === leg.side) continue; // our side took the first pen → leg won
+        if (fp) return "lost"; // the other side took it first → acca dead
+        // No penalty taken yet. At FT with still none, the market voids; a void
+        // leg in a fixed-odds acca neither wins nor loses, so pass it through.
+        if (finished) continue;
+        pending = true;
+        continue;
+      }
+
       if (leg.kind === "manual") {
-        // Unverifiable from ESPN (e.g. which team took the first penalty) — hold
-        // the whole acca pending so a human settles it; never blind-grade.
+        // Truly unverifiable from ESPN (e.g. "penalty for a foul on <player>") —
+        // hold the whole acca pending so a human settles it; never blind-grade.
         pending = true;
         continue;
       }

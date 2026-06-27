@@ -701,8 +701,10 @@ export function inPlayMultiLeg(
                                     ? `${matchCode(leg.matchId)} ${w1x2(leg.outcome)}+O${leg.line}`
                                     : leg.kind === "winByMargin"
                                       ? `${matchCode(leg.matchId)} win by ${leg.line}+`
-                                      : leg.kind === "manual"
-                                        ? `${matchCode(leg.matchId)} (manual)`
+                                      : leg.kind === "firstPenalty"
+                                        ? `${matchCode(leg.matchId)} 1st pen ${leg.side}`
+                                        : leg.kind === "manual"
+                                          ? `${matchCode(leg.matchId)} (manual)`
                                         : leg.kind === "goalsAssistsOver"
                                           ? `${leg.player} G+A o${leg.line}`
                                           : leg.kind === "scoredOrAssisted"
@@ -1111,9 +1113,27 @@ export function inPlayMultiLeg(
       continue;
     }
 
+    if (leg.kind === "firstPenalty") {
+      // Which side took the match's first penalty (scored/missed/saved), from
+      // live.stats.firstPenalty. Clinches WON the instant our side takes it; if
+      // the other side takes it first the acca dies; no pen by FT → voids, which
+      // in a fixed-odds acca passes through as on-track/neutral (never kills it).
+      const fp = lm.stats?.firstPenalty ?? null;
+      if (fp === leg.side) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (fp) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
     if (leg.kind === "manual") {
-      // Unverifiable from ESPN (e.g. which team took the first penalty) — never
-      // auto-graded; shows neutral and the whole acca holds pending for a human.
+      // Truly unverifiable from ESPN (e.g. "penalty for a foul on <player>") —
+      // never auto-graded; shows neutral and the whole acca holds for a human.
       parts.push(`${legLabel} —`);
       continue;
     }

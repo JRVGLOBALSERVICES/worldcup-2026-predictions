@@ -9002,7 +9002,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca — England take first penalty (manual) + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
+      "label": "Acca — England take first penalty + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
       "odds": 40.207,
       "stake": 50,
       "placedAt": "27/06 14:06",
@@ -9011,7 +9011,8 @@
         "legs": [
           {
             "matchId": "pan-eng-2026-06-27",
-            "kind": "manual"
+            "kind": "firstPenalty",
+            "side": "away"
           },
           {
             "matchId": "cro-gha-2026-06-27",
@@ -9126,18 +9127,14 @@
       "matchId": "jor-arg-2026-06-27",
       "player": "Lionel Messi",
       "market": "To score a hat-trick",
-      "label": "Lionel Messi to score a hat-trick (Jordan v Argentina) — manual settle",
+      "label": "Lionel Messi to score a hat-trick (3+ goals, Jordan v Argentina)",
       "odds": 13.5,
       "stake": 50,
       "placedAt": "27/06 13:56",
       "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "jor-arg-2026-06-27",
-            "kind": "manual"
-          }
-        ]
+        "type": "goalsOver",
+        "player": "Lionel Messi",
+        "line": 2.5
       }
     }
   ],

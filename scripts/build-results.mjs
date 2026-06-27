@@ -145,8 +145,38 @@ function statsFromSummary(summary, fixture) {
   return {
     corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot,
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
+    firstPenalty: firstPenaltyTeam(summary.keyEvents, ours),
     waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
   };
+}
+
+/**
+ * Opta phrasing for a penalty actually TAKEN but not scored ("Penalty - Missed/
+ * Saved"); scored pens carry the structured `penaltyKick` flag instead. Strict
+ * `penalty - …` so it never fires on "penalty area" prose. Mirrors lib/live.ts.
+ */
+const PENALTY_TAKEN = /penalty\s*-\s*(missed|saved|scored)/i;
+
+/**
+ * Which side took the match's FIRST penalty kick — scored, missed, or saved —
+ * from the summary keyEvents (earliest by period→clock), oriented via `ours`.
+ * Mirrors lib/live.ts firstPenaltyTeam — keep in sync. null until one is taken
+ * (and all match if none, in which case the "first penalty" market voids).
+ */
+function firstPenaltyTeam(keyEvents, ours) {
+  const pens = (keyEvents ?? []).filter(
+    (e) => e.penaltyKick === true || PENALTY_TAKEN.test(e.text ?? ""),
+  );
+  if (!pens.length) return null;
+  const first = pens.slice().sort((a, b) => {
+    const pa = a.period?.number ?? 1;
+    const pb = b.period?.number ?? 1;
+    if (pa !== pb) return pa - pb;
+    return (a.clock?.value ?? 0) - (b.clock?.value ?? 0);
+  })[0];
+  const name = first.team?.displayName;
+  if (!name) return null;
+  return ours(name);
 }
 
 /** Break anchor in match-minutes under FIFA's 2026 rule: 22' into each half. */

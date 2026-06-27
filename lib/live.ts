@@ -111,6 +111,7 @@ async function fetchStats(
       sotByHalf,
       playerSot,
       firstGoalMethod: firstGoalMethod(data.keyEvents),
+      firstPenalty: firstPenaltyTeam(data.keyEvents, homeName),
       waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
     },
     goals,
@@ -389,6 +390,41 @@ export function firstGoalMethod(keyEvents: EspnKeyEvent[] | undefined): GoalMeth
   if (/direct free kick/.test(text) || (/free kick/.test(text) && !/assisted by/.test(text)))
     return "freekick";
   return "shot";
+}
+
+/**
+ * Opta phrasing for a penalty that was actually TAKEN but not scored — "Penalty
+ * - Missed" / "Penalty - Saved". A scored penalty is caught separately by the
+ * structured `penaltyKick` flag, so this regex only needs the miss/save plays.
+ * Deliberately strict (`penalty - …`) so it never fires on "penalty area" prose
+ * in an ordinary goal description.
+ */
+const PENALTY_TAKEN = /penalty\s*-\s*(missed|saved|scored)/i;
+
+/**
+ * Which side took the match's FIRST penalty kick — scored, missed, or saved —
+ * from the summary `keyEvents` (earliest by period→clock). A scored penalty
+ * carries `penaltyKick:true`; a miss/save only appears as a "Penalty - …" play.
+ * Oriented to our home/away. Mirrors scripts/build-results.mjs firstPenaltyTeam
+ * — keep in sync. Returns null until a penalty is taken (and all match if none).
+ */
+export function firstPenaltyTeam(
+  keyEvents: EspnKeyEvent[] | undefined,
+  homeName: string,
+): "home" | "away" | null {
+  const pens = (keyEvents ?? []).filter(
+    (e) => e.penaltyKick === true || PENALTY_TAKEN.test(e.text ?? ""),
+  );
+  if (!pens.length) return null;
+  const first = pens.slice().sort((a, b) => {
+    const pa = a.period?.number ?? 1;
+    const pb = b.period?.number ?? 1;
+    if (pa !== pb) return pa - pb;
+    return (a.clock?.value ?? 0) - (b.clock?.value ?? 0);
+  })[0];
+  const name = first.team?.displayName;
+  if (!name) return null;
+  return norm(name) === homeName ? "home" : "away";
 }
 
 /** Break anchor in match-minutes under FIFA's 2026 rule: 22' into each half. */
