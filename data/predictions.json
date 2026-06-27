@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T09:09:33.875Z",
+    "generatedAt": "2026-06-27T19:43:58.803Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-27T09:09:33.875Z"
@@ -11207,99 +11207,92 @@
     },
     "cro-gha-2026-06-27": {
       "win": {
-        "pick": "Ghana",
-        "fairOdds": "2.15",
-        "reason": "Model: Ghana to win at 47% (Croatia 23% / draw 31% / Ghana 47%). Expected goals 0.7–1.2 from group-stage attack/defence rates (Croatia 1.5 for / 1.7 against per game, Ghana 1.0 / 0.7). Most likely score 0-1.",
+        "pick": "Draw",
+        "fairOdds": "3.30",
+        "reason": "Confirmed XIs: Croatia (4-2-3-1) field Budimir up top with Modric (201st cap) and Kovacic anchoring, the unchanged Panama backline; Ghana (4-1-4-1) keep Asare after their clean sheet vs England, with Partey shielding and Williams/Semenyo as the counter outlet. Classic possession-favourite vs Queiroz deep-block: Ghana need only avoid defeat (4 pts) and have conceded zero this tournament, while Croatia must win from 3rd. Model gives Ghana ~47% but ~53% sits with draw+Croatia, so the result is a genuine toss-up. Ghana's last four games all went under 2 goals and they'll happily sit for a point, making the draw the live primary play rather than either win.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.31",
-        "alt": "1-0",
-        "altOdds": "3.95"
+        "fairOdds": "1.95",
+        "alt": "0-1",
+        "altOdds": "5.50"
       },
       "htft": {
-        "pick": "Draw/Ghana",
-        "fairOdds": "5.37"
+        "pick": "Draw/Draw",
+        "fairOdds": "4.20"
       },
       "fullTime": {
-        "score": "0-1",
-        "fairOdds": "5.72"
+        "score": "0-0",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
-          "player": "Caleb Yirenkyi",
-          "team": "Ghana",
-          "fairOdds": "2.25",
-          "banker": true,
-          "note": "1 goal in 1 group game; 45% modelled anytime chance on 1.2 team xG.",
+          "player": "Ante Budimir",
+          "team": "Croatia",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Confirmed to start ahead of Musa after scoring the Panama winner off the bench; penalty-box poacher and aerial threat who feeds off Perisic/Baturina service and is a designated backup pen taker.",
           "strength": 3
         },
         {
-          "player": "Ante Budimir",
-          "team": "Croatia",
-          "fairOdds": "5.09",
-          "banker": false,
-          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Martin Baturina",
-          "team": "Croatia",
-          "fairOdds": "5.09",
-          "banker": false,
-          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Petar Musa",
-          "team": "Croatia",
-          "fairOdds": "5.09",
-          "banker": false,
-          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG.",
-          "strength": 1
-        }
-      ],
-      "assists": [
-        {
-          "player": "Brandon Thomas-Asante",
+          "player": "Antoine Semenyo",
           "team": "Ghana",
-          "fairOdds": "2.36",
-          "banker": true,
-          "note": "1 assist in the group stage; 42% modelled chance to set one up."
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Ghana's most dangerous attacker (62.5m Man City move, 10 PL goals first half of season); main pace-and-power counter outlet against a high Croatia line.",
+          "strength": 3
         },
         {
           "player": "Ivan Perisic",
           "team": "Croatia",
-          "fairOdds": "5.41",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "1 assist in the group stage; 18% modelled chance to set one up."
+          "note": "Starts wide-left in the 3-band; arrives at the back post on crosses and is a corner/set-piece threat plus an alternate penalty option.",
+          "strength": 2
         },
         {
-          "player": "Josip Stanisic",
-          "team": "Croatia",
-          "fairOdds": "5.41",
+          "player": "Jordan Ayew",
+          "team": "Ghana",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "1 assist in the group stage; 18% modelled chance to set one up."
+          "note": "Captain and lone striker, 7 goals/7 assists in qualifying and Ghana's confirmed penalty taker — most of his realistic output here is from the spot given Ghana's deep setup.",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Ivan Perisic",
+          "team": "Croatia",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Croatia's chief crosser from the left and corner taker; most likely supply line to Budimir."
         },
         {
-          "player": "Petar Sucic",
+          "player": "Martin Baturina",
           "team": "Croatia",
-          "fairOdds": "5.41",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "1 assist in the group stage; 18% modelled chance to set one up."
+          "note": "Starting No.10 / creative fulcrum between midfield and Budimir; on corner duty alongside Modric and Perisic."
+        },
+        {
+          "player": "Inaki Williams",
+          "team": "Ghana",
+          "fairOdds": "7.00",
+          "banker": false,
+          "note": "Pace on the break; most of Ghana's chance creation comes from Williams/Semenyo transitions to release Ayew."
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Caleb Yirenkyi",
-        "backup": "Ante Budimir",
-        "note": "Ghana favoured to control the game, so a penalty is less pivotal; Caleb Yirenkyi would take one if awarded."
+        "likelihood": "medium",
+        "taker": "Jordan Ayew (Ghana)",
+        "backup": "Mohammed Kudus (off bench) / Inaki Williams on-pitch for Ghana; Luka Modric for Croatia",
+        "note": "Ghana's Ayew is a proven, ice-cold spot-kick taker (AFCON shootout vs Senegal, multiple qualifier conversions). For Croatia, Modric is the primary penalty taker with Budimir/Perisic as alternates. With Ghana likely sitting deep and Croatia overloading the box, a Croatia-favouring penalty shout is the more probable source — but overall likelihood is only medium in a tight low-block game."
       },
       "lineups": {
-        "home": "Dominik Livakovic, Marin Pongracic, Josip Sutalo, Josko Gvardiol, Josip Stanisic, Martin Baturina, Mateo Kovacic, Luka Modric, Petar Musa, Ivan Perisic, Marco Pasalic",
-        "away": "Benjamin Asare, Jerome Opoku, Jonas Adjetey, Thomas Partey, Gideon Mensah, Marvin Senaya, Kwasi Sibo, Caleb Yirenkyi, Antoine Semenyo, Iñaki Williams, Jordan Ayew",
-        "status": "unconfirmed",
+        "home": "Livakovic, Stanisic, Pongracic, Sutalo, Gvardiol, Kovacic, Modric, Pasalic, Baturina, Perisic, Budimir",
+        "away": "Asare, Senaya, Adjetey, Opoku, Mensah, Partey, Williams, Yirenkyi, Sibo, Semenyo, Ayew",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -11309,54 +11302,54 @@
               "pos": "G"
             },
             {
-              "num": 3,
-              "name": "Marin Pongracic",
-              "pos": "CD-L"
-            },
-            {
-              "num": 6,
-              "name": "Josip Sutalo",
-              "pos": "CD-R"
-            },
-            {
-              "num": 4,
-              "name": "Josko Gvardiol",
-              "pos": "LB"
-            },
-            {
               "num": 2,
               "name": "Josip Stanisic",
               "pos": "RB"
             },
             {
-              "num": 16,
-              "name": "Martin Baturina",
-              "pos": "AM"
+              "num": 21,
+              "name": "Marin Pongracic",
+              "pos": "CD-R"
+            },
+            {
+              "num": 6,
+              "name": "Josip Sutalo",
+              "pos": "CD-L"
+            },
+            {
+              "num": 20,
+              "name": "Josko Gvardiol",
+              "pos": "LB"
             },
             {
               "num": 8,
               "name": "Mateo Kovacic",
-              "pos": "LM"
+              "pos": "DM"
             },
             {
               "num": 10,
               "name": "Luka Modric",
-              "pos": "RM"
+              "pos": "CM-R"
             },
             {
-              "num": 26,
-              "name": "Petar Musa",
-              "pos": "F"
+              "num": 15,
+              "name": "Marco Pasalic",
+              "pos": "AM-R"
             },
             {
-              "num": 14,
+              "num": 25,
+              "name": "Martin Baturina",
+              "pos": "AM"
+            },
+            {
+              "num": 4,
               "name": "Ivan Perisic",
               "pos": "AM-L"
             },
             {
-              "num": 24,
-              "name": "Marco Pasalic",
-              "pos": "AM-R"
+              "num": 17,
+              "name": "Ante Budimir",
+              "pos": "F"
             }
           ]
         },
@@ -11364,54 +11357,54 @@
           "formation": "4-1-4-1",
           "players": [
             {
-              "num": 16,
+              "num": 12,
               "name": "Benjamin Asare",
               "pos": "G"
             },
             {
-              "num": 18,
-              "name": "Jerome Opoku",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Jonas Adjetey",
-              "pos": "CD-R"
-            },
-            {
-              "num": 5,
-              "name": "Thomas Partey",
-              "pos": "DM"
-            },
-            {
-              "num": 14,
-              "name": "Gideon Mensah",
-              "pos": "LB"
-            },
-            {
-              "num": 26,
+              "num": 2,
               "name": "Marvin Senaya",
               "pos": "RB"
             },
             {
-              "num": 8,
-              "name": "Kwasi Sibo",
-              "pos": "CM-L"
+              "num": 5,
+              "name": "Jonas Adjetey",
+              "pos": "CD-R"
+            },
+            {
+              "num": 4,
+              "name": "Jerome Opoku",
+              "pos": "CD-L"
             },
             {
               "num": 3,
+              "name": "Gideon Mensah",
+              "pos": "LB"
+            },
+            {
+              "num": 6,
+              "name": "Thomas Partey",
+              "pos": "DM"
+            },
+            {
+              "num": 19,
+              "name": "Inaki Williams",
+              "pos": "RM"
+            },
+            {
+              "num": 8,
               "name": "Caleb Yirenkyi",
               "pos": "CM-R"
             },
             {
-              "num": 11,
-              "name": "Antoine Semenyo",
-              "pos": "LM"
+              "num": 15,
+              "name": "Kwasi Sibo",
+              "pos": "CM-L"
             },
             {
-              "num": 19,
-              "name": "Iñaki Williams",
-              "pos": "RM"
+              "num": 18,
+              "name": "Antoine Semenyo",
+              "pos": "LM"
             },
             {
               "num": 9,
@@ -11423,27 +11416,45 @@
       },
       "playerNotes": [
         {
-          "player": "Caleb Yirenkyi",
-          "team": "Ghana",
-          "note": "1 goal in 1 group game; 45% modelled anytime chance on 1.2 team xG."
-        },
-        {
           "player": "Ante Budimir",
           "team": "Croatia",
-          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG."
+          "note": "Promoted to starter over Petar Musa on the back of his match-winning sub goal vs Panama; pure penalty-box striker who will look to attack crosses against Ghana's compact centre-backs."
         },
         {
-          "player": "Brandon Thomas-Asante",
+          "player": "Luka Modric",
+          "team": "Croatia",
+          "note": "Makes his 201st cap, primary free-kick taker and a Croatia penalty option; at 40 he is the metronome but is NOT a banker scorer — treat any goal threat as a bonus, not a base case."
+        },
+        {
+          "player": "Mateo Kovacic",
+          "team": "Croatia",
+          "note": "Sits as the deeper of the double pivot, carrying the ball through midfield to break Ghana's block; key to whether Croatia can sustain pressure."
+        },
+        {
+          "player": "Thomas Partey",
           "team": "Ghana",
-          "note": "1 assist in the group stage; 42% modelled chance to set one up."
+          "note": "Lone holding midfielder screening the back four — the hinge of Queiroz's low block; his positioning is central to Ghana's clean-sheet ambition."
+        },
+        {
+          "player": "Antoine Semenyo",
+          "team": "Ghana",
+          "note": "Top counter-attacking weapon with pace and power; on transitions against Croatia's high line he is Ghana's likeliest scorer or chance creator."
+        },
+        {
+          "player": "Benjamin Asare",
+          "team": "Ghana",
+          "note": "Keeps the gloves after a clean sheet vs England; Ghana have conceded zero this tournament, reinforcing the under-2.5 / draw-no-bet case for the Black Stars."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021509",
+        "https://www.si.com/soccer/croatia-vs-ghana-world-cup-preview-predictions-lineups-6-27-26",
+        "https://www.rotowire.com/soccer/article/croatia-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119773",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.covers.com/world-cup/croatia-vs-ghana-prediction-picks-odds-saturday-6-27-2026",
+        "https://www.cbssports.com/soccer/news/croatia-ghana-odds-prediction-line-time-2026-world-cup-picks-best-bets/"
       ]
     }
   }
