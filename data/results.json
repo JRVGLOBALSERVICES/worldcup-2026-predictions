@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T21:20:23.851Z",
+    "generatedAt": "2026-06-27T22:20:21.151Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 46,
     "live": 2
@@ -5882,26 +5882,134 @@
     },
     "pan-eng-2026-06-27": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "score": {
         "home": 0,
         "away": 0
       },
       "goals": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "José Fajardo",
+          "minute": 53,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Jarell Quansah",
+          "minute": 59,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-27T21:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 6
+        },
+        "sot": {
+          "home": 2,
+          "away": 3
+        },
+        "shots": {
+          "home": 4,
+          "away": 11
+        },
+        "yellow": {
+          "home": 1,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            5,
+            1
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            2,
+            1
+          ]
+        },
+        "playerSot": {
+          "Tomás Rodríguez": 1,
+          "Marcus Rashford": 1,
+          "José Luis Rodríguez": 1,
+          "Elliot Anderson": 1,
+          "Harry Kane": 1
+        },
+        "firstGoalMethod": null,
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Shot On Target",
+            "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
+      }
+    },
+    "cro-gha-2026-06-27": {
+      "state": "live",
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Petar Sucic",
+          "minute": 31,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-06-27T21:00:00.000Z",
       "stats": {
         "corners": {
           "home": 0,
-          "away": 4
+          "away": 1
         },
         "sot": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 0
         },
         "shots": {
-          "home": 1,
+          "home": 5,
           "away": 3
         },
         "yellow": {
@@ -5922,8 +6030,8 @@
             0
           ],
           "away": [
-            4,
-            0
+            0,
+            1
           ]
         },
         "sotByHalf": {
@@ -5932,79 +6040,27 @@
             0
           ],
           "away": [
-            1,
+            0,
             0
           ]
         },
         "playerSot": {
-          "Tomás Rodríguez": 1,
-          "Marcus Rashford": 1
+          "Ivan Perisic": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
-        "waterBreak": {}
-      }
-    },
-    "cro-gha-2026-06-27": {
-      "state": "live",
-      "ht": null,
-      "ft": null,
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "goals": [],
-      "cards": [],
-      "updatedAt": "2026-06-27T21:00:00.000Z",
-      "stats": {
-        "corners": {
-          "home": 0,
-          "away": 0
-        },
-        "sot": {
-          "home": 0,
-          "away": 0
-        },
-        "shots": {
-          "home": 1,
-          "away": 0
-        },
-        "yellow": {
-          "home": 0,
-          "away": 0
-        },
-        "red": {
-          "home": 0,
-          "away": 0
-        },
-        "cards": {
-          "home": 0,
-          "away": 0
-        },
-        "cornersByHalf": {
-          "home": [
-            0,
-            0
-          ],
-          "away": [
-            0,
-            0
-          ]
-        },
-        "sotByHalf": {
-          "home": [
-            0,
-            0
-          ],
-          "away": [
-            0,
-            0
-          ]
-        },
-        "playerSot": {},
-        "firstGoalMethod": null,
-        "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 28,
+            "firstActionType": "Foul",
+            "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
