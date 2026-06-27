@@ -9136,6 +9136,95 @@
         "player": "Lionel Messi",
         "line": 2.5
       }
+    },
+    {
+      "id": "sp-83644148089",
+      "slipNo": "83644148089",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "6-leg acca",
+      "market": "Accumulator (6)",
+      "label": "Acca — Saka G+A o1.5 + Musa to score + Bruno G+A o0.5 + DR Congo win + Gouiri to score/assist (incl subs) + Messi to score (6 legs)",
+      "odds": 238.314,
+      "stake": 25,
+      "placedAt": "27/06 16:03",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Bukayo Saka",
+            "line": 1.5
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "scored",
+            "player": "Petar Musa"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "goalsAssistsOver",
+            "player": "Bruno Fernandes",
+            "line": 0.5
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "scoredOrAssisted",
+            "player": "Amine Gouiri"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83644289637",
+      "slipNo": "83644289637",
+      "matchId": "pan-eng-2026-06-27",
+      "player": "5-leg acca",
+      "market": "Accumulator (5)",
+      "label": "Acca — Kane to score + Croatia/Ghana BTTS + DR Congo/Uzbekistan draw + Portugal win & BTTS + Argentina win & total o3.5 (5 legs)",
+      "odds": 118.764,
+      "stake": 25,
+      "placedAt": "27/06 16:09",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "pan-eng-2026-06-27",
+            "kind": "scored",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "btts"
+          },
+          {
+            "matchId": "drc-uzb-2026-06-27",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "resultBtts",
+            "outcome": "2"
+          },
+          {
+            "matchId": "jor-arg-2026-06-27",
+            "kind": "resultAndTotalOver",
+            "outcome": "2",
+            "line": 3.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
