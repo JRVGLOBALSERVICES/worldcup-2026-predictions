@@ -9230,6 +9230,81 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83652583181",
+      "slipNo": "83652583181",
+      "matchId": "cro-gha-2026-06-27",
+      "player": "3-leg acca",
+      "market": "Accumulator (3)",
+      "label": "Acca — Croatia win + Portugal win (v Colombia) + Algeria to finish 1st-2nd in Group J (3 legs)",
+      "odds": 100.879,
+      "stake": 25,
+      "placedAt": "27/06 20:34",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "manual"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83652514443",
+      "slipNo": "83652514443",
+      "matchId": "cro-gha-2026-06-27",
+      "player": "3-leg acca",
+      "market": "Accumulator (3)",
+      "label": "Acca — Croatia win + Colombia win (v Portugal) + Algeria to finish 1st-2nd in Group J (3 legs)",
+      "odds": 99.639,
+      "stake": 25,
+      "placedAt": "27/06 20:32",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "cro-gha-2026-06-27",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "col-por-2026-06-27",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "alg-aus-2026-06-27",
+            "kind": "manual"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83652195501",
+      "slipNo": "83652195501",
+      "matchId": "cro-gha-2026-06-27",
+      "player": "Croatia",
+      "market": "Match Result",
+      "label": "Croatia to win (v Ghana, Group L)",
+      "odds": 13.6,
+      "stake": 50,
+      "placedAt": "27/06 20:23",
+      "grade": {
+        "type": "matchResult",
+        "outcome": "1"
+      }
     }
   ],
   "matchStats": {
