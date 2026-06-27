@@ -142,39 +142,57 @@ function ratings(name) {
   };
 }
 
+// A 2-3 game sample makes a hot striker look like a 95% lock. Regress each
+// player's goal/assist share toward a prior and cap the anytime probability at a
+// realistic ceiling (even the best WC strikers sit ~55-65% anytime).
+const SHARE_PRIOR = 2.0;   // ghost goals/assists added to the team pool
+const SCORER_CAP = 0.66;
+const ASSIST_CAP = 0.58;
+
 /** Top anytime scorers for a team given its expected goals λ. */
-function scorerPicks(name, lambda, limit = 4) {
+function scorerPicks(name, lambda, team, limit = 4) {
   const st = teamStats[norm(name)];
   if (!st || !st.scorers || !st.scorers.length) return [];
-  const totalGoals = st.scorers.reduce((s, p) => s + p.value, 0) || 1;
+  const totalGoals = st.scorers.reduce((s, p) => s + p.value, 0);
   return st.scorers
     .map((p) => {
-      const share = p.value / totalGoals;
-      const lamP = lambda * share;        // expected goals for this player in THIS match
-      const prob = 1 - Math.exp(-lamP);   // anytime-scorer probability
-      return { player: p.name, prob, goals: p.value, matches: p.matches };
+      const share = (p.value + 0.5) / (totalGoals + SHARE_PRIOR); // regressed share
+      const lamP = lambda * share;                                // player xG this match
+      const prob = Math.min(SCORER_CAP, 1 - Math.exp(-lamP));
+      return { player: p.name, prob, goals: p.value, matches: p.matches, team };
     })
     .sort((a, b) => b.prob - a.prob)
     .slice(0, limit)
-    .map((p, i) => ({
+    .map((p) => ({
       player: p.player,
+      team: p.team,
       fairOdds: odds(p.prob),
-      banker: i === 0,
-      note: `Scored ${p.goals} in ${p.matches} group game${p.matches === 1 ? "" : "s"} — ${(p.prob * 100).toFixed(0)}% modelled anytime chance on ${lambda.toFixed(1)} team xG.`,
+      banker: false,
+      note: `${p.goals} goal${p.goals === 1 ? "" : "s"} in ${p.matches} group game${p.matches === 1 ? "" : "s"}; ${(p.prob * 100).toFixed(0)}% modelled anytime chance on ${lambda.toFixed(1)} team xG.`,
       strength: strengthFromProb(p.prob, true),
     }));
 }
 
-function assistPicks(name, limit = 3) {
+/** Assists scale with the team's expected goals — no team goal, no assist. */
+function assistPicks(name, lambda, team, limit = 3) {
   const st = teamStats[norm(name)];
   if (!st || !st.assists || !st.assists.length) return [];
-  const top = st.assists[0].value || 1;
-  return st.assists.slice(0, limit).map((p, i) => ({
-    player: p.name,
-    fairOdds: odds(Math.min(0.9, 0.18 + 0.45 * (p.value / top))),
-    banker: i === 0,
-    note: `${p.value} assist${p.value === 1 ? "" : "s"} in the group stage — the side's chief creator.`,
-  }));
+  const totalAssists = st.assists.reduce((s, p) => s + p.value, 0);
+  return st.assists
+    .map((p) => {
+      const share = (p.value + 0.4) / (totalAssists + SHARE_PRIOR);
+      const prob = Math.min(ASSIST_CAP, 1 - Math.exp(-lambda * share));
+      return { player: p.name, prob, value: p.value, team };
+    })
+    .sort((a, b) => b.prob - a.prob)
+    .slice(0, limit)
+    .map((p) => ({
+      player: p.player,
+      team: p.team,
+      fairOdds: odds(p.prob),
+      banker: false,
+      note: `${p.value} assist${p.value === 1 ? "" : "s"} in the group stage; ${(p.prob * 100).toFixed(0)}% modelled chance to set one up.`,
+    }));
 }
 
 function strengthFromProb(p, scorer = false) {
@@ -225,10 +243,10 @@ function buildPrediction(f) {
   const htft = `${htLeader === "Draw" ? "Draw" : htLeader}/${ftLeader === "Draw" ? "Draw" : ftLeader}`;
 
   // scorers/assists for both teams, merged + ranked
-  const scorers = [...scorerPicks(f.home.name, lh), ...scorerPicks(f.away.name, la)]
+  const scorers = [...scorerPicks(f.home.name, lh, f.home.name), ...scorerPicks(f.away.name, la, f.away.name)]
     .sort((a, b) => Number(a.fairOdds) - Number(b.fairOdds)).slice(0, 5);
   if (scorers.length) scorers.forEach((s, i) => (s.banker = i === 0));
-  const assists = [...assistPicks(f.home.name), ...assistPicks(f.away.name)]
+  const assists = [...assistPicks(f.home.name, lh, f.home.name), ...assistPicks(f.away.name, la, f.away.name)]
     .sort((a, b) => Number(a.fairOdds) - Number(b.fairOdds)).slice(0, 4);
   if (assists.length) assists.forEach((s, i) => (s.banker = i === 0));
 
@@ -277,7 +295,7 @@ function buildPrediction(f) {
     },
     playerNotes: [...scorers.slice(0, 2), ...assists.slice(0, 1)].map((p) => ({
       player: p.player,
-      team: "",
+      team: p.team ?? "",
       note: p.note,
     })),
     confidence: confidenceFromProb(fav.p),

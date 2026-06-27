@@ -3,9 +3,35 @@
 This is the procedure the scheduled Friday spawn follows to keep predictions current.
 Repo lives at `/root/repos/worldcup-2026` on the VPS.
 
+## Model baseline (deterministic — run FIRST, every refresh)
+
+`scripts/build-predictions.mjs` generates a full `Prediction` for **every
+not-yet-finished fixture** from data the tournament already produced — no web
+search, no blank knockout matches. This is the floor: a match always has a
+proper scoreline / scorers / 1X2 call.
+
+```
+node scripts/build-results.mjs && node scripts/build-standings.mjs && \
+node scripts/build-stats.mjs && node scripts/build-predictions.mjs
+```
+
+The model (bivariate Poisson) reads `standings.json` (group GF/GA/pts/form),
+`results.json` (goal baseline) and `stats.json` (real per-team scorers) →
+expected goals per side → most-likely score, win/draw/loss fair odds, anytime
+scorer/assist odds (regressed + capped so a hot 2-game striker isn't priced at
+1.04). It is **strictly additive**: finished matches keep their researched
+calls, and any upcoming match already carrying a **confirmed** XI (near-kickoff
+hand research) is left untouched. Sanity-check the engine any time with
+`node scripts/build-predictions.mjs --backtest` (scores it on finished games).
+
+The web-search research steps below now **enrich** the model baseline near
+kickoff (confirmed XIs, injury/suspension news, set-piece/penalty takers) — they
+are no longer what stops a knockout match from being blank.
+
 ## Daily refresh (runs ~08:00 MYT)
 
-1. From `data/fixtures.json`, find every fixture whose MYT match-day is **today or
+1. Run the model baseline above so every upcoming fixture has a prediction.
+2. From `data/fixtures.json`, find every fixture whose MYT match-day is **today or
    tomorrow** and that is not yet finished.
 2. For each, spawn a research agent (one per match, in parallel) that does live web
    search on BOTH squads: probable XI, injuries/suspensions/squad news, recent form,

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T06:20:57.465Z",
+    "generatedAt": "2026-06-27T06:22:19.753Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-06-27T06:20:57.464Z"
+    "modelUpdatedAt": "2026-06-27T06:22:19.753Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -10097,39 +10097,44 @@
       "scorers": [
         {
           "player": "Marko Arnautovic",
-          "fairOdds": "1.76",
+          "team": "Austria",
+          "fairOdds": "2.15",
           "banker": true,
-          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG.",
-          "strength": 5
+          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG.",
+          "strength": 4
         },
         {
           "player": "Romano Schmid",
-          "fairOdds": "1.76",
+          "team": "Austria",
+          "fairOdds": "2.15",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG.",
-          "strength": 5
+          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG.",
+          "strength": 4
         },
         {
           "player": "Amine Gouiri",
-          "fairOdds": "2.08",
+          "team": "Algeria",
+          "fairOdds": "2.58",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 48% modelled anytime chance on 1.3 team xG.",
-          "strength": 4
+          "note": "1 goal in 1 group game; 39% modelled anytime chance on 1.3 team xG.",
+          "strength": 3
         },
         {
           "player": "Nadhir Benbouali",
-          "fairOdds": "2.08",
+          "team": "Algeria",
+          "fairOdds": "2.58",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 48% modelled anytime chance on 1.3 team xG.",
-          "strength": 4
+          "note": "1 goal in 1 group game; 39% modelled anytime chance on 1.3 team xG.",
+          "strength": 3
         }
       ],
       "assists": [
         {
           "player": "Xaver Schlager",
-          "fairOdds": "1.59",
+          "team": "Austria",
+          "fairOdds": "1.84",
           "banker": true,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 54% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -10266,18 +10271,18 @@
       "playerNotes": [
         {
           "player": "Marko Arnautovic",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG."
+          "team": "Austria",
+          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG."
         },
         {
           "player": "Romano Schmid",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG."
+          "team": "Austria",
+          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG."
         },
         {
           "player": "Xaver Schlager",
-          "team": "",
-          "note": "1 assist in the group stage — the side's chief creator."
+          "team": "Austria",
+          "note": "1 assist in the group stage; 54% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
@@ -10312,50 +10317,57 @@
       "scorers": [
         {
           "player": "Lionel Messi",
-          "fairOdds": "1.04",
+          "team": "Argentina",
+          "fairOdds": "1.52",
           "banker": true,
-          "note": "Scored 5 in 2 group games — 96% modelled anytime chance on 3.3 team xG.",
+          "note": "5 goals in 2 group games; 66% modelled anytime chance on 3.3 team xG.",
           "strength": 5
         },
         {
           "player": "Ali Olwan",
-          "fairOdds": "4.75",
+          "team": "Jordan",
+          "fairOdds": "6.15",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 21% modelled anytime chance on 0.5 team xG.",
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 0.5 team xG.",
           "strength": 1
         },
         {
           "player": "Nizar Al-Rashdan",
-          "fairOdds": "4.75",
+          "team": "Jordan",
+          "fairOdds": "6.15",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 21% modelled anytime chance on 0.5 team xG.",
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 0.5 team xG.",
           "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Mousa Al-Tamari",
-          "fairOdds": "1.59",
-          "banker": true,
-          "note": "1 assist in the group stage — the side's chief creator."
-        },
-        {
-          "player": "Noor Al-Rawabdeh",
-          "fairOdds": "1.59",
-          "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
-        },
-        {
           "player": "Facundo Medina",
-          "fairOdds": "1.59",
-          "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "team": "Argentina",
+          "fairOdds": "1.72",
+          "banker": true,
+          "note": "1 assist in the group stage; 58% modelled chance to set one up."
         },
         {
           "player": "Nico González",
-          "fairOdds": "1.59",
+          "team": "Argentina",
+          "fairOdds": "1.72",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+        },
+        {
+          "player": "Rodrigo De Paul",
+          "team": "Argentina",
+          "fairOdds": "1.72",
+          "banker": false,
+          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "team": "Jordan",
+          "fairOdds": "6.55",
+          "banker": false,
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -10492,18 +10504,18 @@
       "playerNotes": [
         {
           "player": "Lionel Messi",
-          "team": "",
-          "note": "Scored 5 in 2 group games — 96% modelled anytime chance on 3.3 team xG."
+          "team": "Argentina",
+          "note": "5 goals in 2 group games; 66% modelled anytime chance on 3.3 team xG."
         },
         {
           "player": "Ali Olwan",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 21% modelled anytime chance on 0.5 team xG."
+          "team": "Jordan",
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 0.5 team xG."
         },
         {
-          "player": "Mousa Al-Tamari",
-          "team": "",
-          "note": "1 assist in the group stage — the side's chief creator."
+          "player": "Facundo Medina",
+          "team": "Argentina",
+          "note": "1 assist in the group stage; 58% modelled chance to set one up."
         }
       ],
       "confidence": "high",
@@ -10538,64 +10550,73 @@
       "scorers": [
         {
           "player": "Daniel Muñoz",
-          "fairOdds": "2.07",
+          "team": "Colombia",
+          "fairOdds": "2.36",
           "banker": true,
-          "note": "Scored 2 in 2 group games — 48% modelled anytime chance on 1.3 team xG.",
-          "strength": 4
+          "note": "2 goals in 2 group games; 42% modelled anytime chance on 1.3 team xG.",
+          "strength": 3
         },
         {
           "player": "Cristiano Ronaldo",
-          "fairOdds": "2.49",
+          "team": "Portugal",
+          "fairOdds": "2.72",
           "banker": false,
-          "note": "Scored 2 in 2 group games — 40% modelled anytime chance on 1.3 team xG.",
+          "note": "2 goals in 2 group games; 37% modelled anytime chance on 1.3 team xG.",
           "strength": 3
         },
         {
           "player": "Jáminton Campaz",
+          "team": "Colombia",
           "fairOdds": "3.56",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 28% modelled anytime chance on 1.3 team xG.",
+          "note": "1 goal in 1 group game; 28% modelled anytime chance on 1.3 team xG.",
           "strength": 2
         },
         {
           "player": "Luis Díaz",
+          "team": "Colombia",
           "fairOdds": "3.56",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 28% modelled anytime chance on 1.3 team xG.",
+          "note": "1 goal in 1 group game; 28% modelled anytime chance on 1.3 team xG.",
           "strength": 2
         },
         {
           "player": "João Neves",
-          "fairOdds": "4.42",
+          "team": "Portugal",
+          "fairOdds": "4.16",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 23% modelled anytime chance on 1.3 team xG.",
+          "note": "1 goal in 1 group game; 24% modelled anytime chance on 1.3 team xG.",
           "strength": 1
         }
       ],
       "assists": [
         {
           "player": "Cucho Hernández",
-          "fairOdds": "1.59",
+          "team": "Colombia",
+          "fairOdds": "3.24",
           "banker": true,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
         },
         {
           "player": "Gustavo Puerta",
-          "fairOdds": "1.59",
+          "team": "Colombia",
+          "fairOdds": "3.24",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
         },
         {
           "player": "Luis Díaz",
-          "fairOdds": "1.59",
+          "team": "Colombia",
+          "fairOdds": "3.24",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
         },
         {
           "player": "Bruno Fernandes",
-          "fairOdds": "1.59",
+          "team": "Portugal",
+          "fairOdds": "3.31",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 30% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -10732,18 +10753,18 @@
       "playerNotes": [
         {
           "player": "Daniel Muñoz",
-          "team": "",
-          "note": "Scored 2 in 2 group games — 48% modelled anytime chance on 1.3 team xG."
+          "team": "Colombia",
+          "note": "2 goals in 2 group games; 42% modelled anytime chance on 1.3 team xG."
         },
         {
           "player": "Cristiano Ronaldo",
-          "team": "",
-          "note": "Scored 2 in 2 group games — 40% modelled anytime chance on 1.3 team xG."
+          "team": "Portugal",
+          "note": "2 goals in 2 group games; 37% modelled anytime chance on 1.3 team xG."
         },
         {
           "player": "Cucho Hernández",
-          "team": "",
-          "note": "1 assist in the group stage — the side's chief creator."
+          "team": "Colombia",
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
         }
       ],
       "confidence": "low",
@@ -10778,25 +10799,28 @@
       "scorers": [
         {
           "player": "Yoane Wissa",
-          "fairOdds": "1.15",
+          "team": "DR Congo",
+          "fairOdds": "1.56",
           "banker": true,
-          "note": "Scored 1 in 1 group game — 87% modelled anytime chance on 2.1 team xG.",
+          "note": "1 goal in 1 group game; 64% modelled anytime chance on 2.1 team xG.",
           "strength": 5
         },
         {
           "player": "Abbosbek Fayzullaev",
-          "fairOdds": "1.95",
+          "team": "Uzbekistan",
+          "fairOdds": "3.31",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 51% modelled anytime chance on 0.7 team xG.",
-          "strength": 4
+          "note": "1 goal in 1 group game; 30% modelled anytime chance on 0.7 team xG.",
+          "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Arthur Masuaku",
-          "fairOdds": "1.59",
+          "team": "DR Congo",
+          "fairOdds": "1.72",
           "banker": true,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 58% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -10933,18 +10957,18 @@
       "playerNotes": [
         {
           "player": "Yoane Wissa",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 87% modelled anytime chance on 2.1 team xG."
+          "team": "DR Congo",
+          "note": "1 goal in 1 group game; 64% modelled anytime chance on 2.1 team xG."
         },
         {
           "player": "Abbosbek Fayzullaev",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 51% modelled anytime chance on 0.7 team xG."
+          "team": "Uzbekistan",
+          "note": "1 goal in 1 group game; 30% modelled anytime chance on 0.7 team xG."
         },
         {
           "player": "Arthur Masuaku",
-          "team": "",
-          "note": "1 assist in the group stage — the side's chief creator."
+          "team": "DR Congo",
+          "note": "1 assist in the group stage; 58% modelled chance to set one up."
         }
       ],
       "confidence": "high",
@@ -10979,44 +11003,50 @@
       "scorers": [
         {
           "player": "Harry Kane",
-          "fairOdds": "1.75",
+          "team": "England",
+          "fairOdds": "1.97",
           "banker": true,
-          "note": "Scored 2 in 2 group games — 57% modelled anytime chance on 1.7 team xG.",
-          "strength": 5
+          "note": "2 goals in 2 group games; 51% modelled anytime chance on 1.7 team xG.",
+          "strength": 4
         },
         {
           "player": "Jude Bellingham",
+          "team": "England",
           "fairOdds": "2.89",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 35% modelled anytime chance on 1.7 team xG.",
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 1.7 team xG.",
           "strength": 2
         },
         {
           "player": "Marcus Rashford",
+          "team": "England",
           "fairOdds": "2.89",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 35% modelled anytime chance on 1.7 team xG.",
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 1.7 team xG.",
           "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Bukayo Saka",
-          "fairOdds": "1.59",
+          "team": "England",
+          "fairOdds": "2.64",
           "banker": true,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 38% modelled chance to set one up."
         },
         {
           "player": "Declan Rice",
-          "fairOdds": "1.59",
+          "team": "England",
+          "fairOdds": "2.64",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 38% modelled chance to set one up."
         },
         {
           "player": "Elliot Anderson",
-          "fairOdds": "1.59",
+          "team": "England",
+          "fairOdds": "2.64",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 38% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -11153,18 +11183,18 @@
       "playerNotes": [
         {
           "player": "Harry Kane",
-          "team": "",
-          "note": "Scored 2 in 2 group games — 57% modelled anytime chance on 1.7 team xG."
+          "team": "England",
+          "note": "2 goals in 2 group games; 51% modelled anytime chance on 1.7 team xG."
         },
         {
           "player": "Jude Bellingham",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 35% modelled anytime chance on 1.7 team xG."
+          "team": "England",
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 1.7 team xG."
         },
         {
           "player": "Bukayo Saka",
-          "team": "",
-          "note": "1 assist in the group stage — the side's chief creator."
+          "team": "England",
+          "note": "1 assist in the group stage; 38% modelled chance to set one up."
         }
       ],
       "confidence": "high",
@@ -11199,57 +11229,65 @@
       "scorers": [
         {
           "player": "Caleb Yirenkyi",
-          "fairOdds": "1.44",
+          "team": "Ghana",
+          "fairOdds": "2.25",
           "banker": true,
-          "note": "Scored 1 in 1 group game — 69% modelled anytime chance on 1.2 team xG.",
-          "strength": 5
+          "note": "1 goal in 1 group game; 45% modelled anytime chance on 1.2 team xG.",
+          "strength": 3
         },
         {
           "player": "Ante Budimir",
-          "fairOdds": "4.63",
+          "team": "Croatia",
+          "fairOdds": "5.09",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG.",
+          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG.",
           "strength": 1
         },
         {
           "player": "Martin Baturina",
-          "fairOdds": "4.63",
+          "team": "Croatia",
+          "fairOdds": "5.09",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG.",
+          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG.",
           "strength": 1
         },
         {
           "player": "Petar Musa",
-          "fairOdds": "4.63",
+          "team": "Croatia",
+          "fairOdds": "5.09",
           "banker": false,
-          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG.",
+          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG.",
           "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Ivan Perisic",
-          "fairOdds": "1.59",
+          "player": "Brandon Thomas-Asante",
+          "team": "Ghana",
+          "fairOdds": "2.36",
           "banker": true,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 42% modelled chance to set one up."
+        },
+        {
+          "player": "Ivan Perisic",
+          "team": "Croatia",
+          "fairOdds": "5.41",
+          "banker": false,
+          "note": "1 assist in the group stage; 18% modelled chance to set one up."
         },
         {
           "player": "Josip Stanisic",
-          "fairOdds": "1.59",
+          "team": "Croatia",
+          "fairOdds": "5.41",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 18% modelled chance to set one up."
         },
         {
           "player": "Petar Sucic",
-          "fairOdds": "1.59",
+          "team": "Croatia",
+          "fairOdds": "5.41",
           "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
-        },
-        {
-          "player": "Brandon Thomas-Asante",
-          "fairOdds": "1.59",
-          "banker": false,
-          "note": "1 assist in the group stage — the side's chief creator."
+          "note": "1 assist in the group stage; 18% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -11386,18 +11424,18 @@
       "playerNotes": [
         {
           "player": "Caleb Yirenkyi",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 69% modelled anytime chance on 1.2 team xG."
+          "team": "Ghana",
+          "note": "1 goal in 1 group game; 45% modelled anytime chance on 1.2 team xG."
         },
         {
           "player": "Ante Budimir",
-          "team": "",
-          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG."
+          "team": "Croatia",
+          "note": "1 goal in 1 group game; 20% modelled anytime chance on 0.7 team xG."
         },
         {
-          "player": "Ivan Perisic",
-          "team": "",
-          "note": "1 assist in the group stage — the side's chief creator."
+          "player": "Brandon Thomas-Asante",
+          "team": "Ghana",
+          "note": "1 assist in the group stage; 42% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
