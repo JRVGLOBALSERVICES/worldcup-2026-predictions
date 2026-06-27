@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T04:20:31.748Z",
+    "generatedAt": "2026-06-27T05:20:24.690Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 44,
-    "live": 2
+    "finished": 46,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -5008,12 +5008,15 @@
       }
     },
     "egy-ira-2026-06-26": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 1,
+        "away": 1
+      },
       "score": {
         "home": 1,
         "away": 1
@@ -5060,42 +5063,60 @@
           "player": "Ali Nemati",
           "minute": 43,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Saeid Ezatolahi",
+          "minute": 79,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mohanad Lashin",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Shoja Khalilzadeh",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-27T03:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 5,
-          "away": 1
+          "home": 8,
+          "away": 2
         },
         "sot": {
           "home": 3,
-          "away": 3
+          "away": 4
         },
         "shots": {
-          "home": 11,
-          "away": 7
+          "home": 15,
+          "away": 13
         },
         "yellow": {
-          "home": 2,
-          "away": 2
+          "home": 3,
+          "away": 4
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 2,
-          "away": 2
+          "home": 3,
+          "away": 4
         },
         "cornersByHalf": {
           "home": [
             4,
-            1
+            4
           ],
           "away": [
             0,
-            0
+            2
           ]
         },
         "sotByHalf": {
@@ -5123,20 +5144,33 @@
             "firstActionMinute": 29,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot Off Target",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
     },
     "new-bel-2026-06-26": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
+      "ft": {
+        "home": 1,
+        "away": 5
+      },
       "score": {
-        "home": 0,
-        "away": 2
+        "home": 1,
+        "away": 5
       },
       "goals": [
         {
@@ -5151,6 +5185,39 @@
           "team": "away",
           "scorer": "Leandro Trossard",
           "minute": 50,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Kevin De Bruyne",
+          "minute": 66,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Elijah Just",
+          "minute": 83,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Romelu Lukaku",
+          "minute": 85,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Alexis Saelemaekers",
+          "minute": 90,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -5173,16 +5240,16 @@
       "updatedAt": "2026-06-27T03:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
-          "away": 4
+          "home": 5,
+          "away": 8
         },
         "sot": {
-          "home": 1,
-          "away": 5
+          "home": 2,
+          "away": 10
         },
         "shots": {
-          "home": 2,
-          "away": 19
+          "home": 6,
+          "away": 35
         },
         "yellow": {
           "home": 2,
@@ -5199,11 +5266,11 @@
         "cornersByHalf": {
           "home": [
             1,
-            0
+            4
           ],
           "away": [
             4,
-            0
+            4
           ]
         },
         "sotByHalf": {
@@ -5213,14 +5280,16 @@
           ],
           "away": [
             3,
-            0
+            2
           ]
         },
         "playerSot": {
           "Kevin De Bruyne": 1,
           "Jérémy Doku": 1,
           "Charles De Ketelaere": 1,
-          "Elijah Just": 1
+          "Elijah Just": 1,
+          "Arthur Theate": 1,
+          "Maxim De Cuyper": 1
         },
         "firstGoalMethod": "shot",
         "waterBreak": {
@@ -5231,6 +5300,16 @@
             "breakEndMinute": 25,
             "firstActionType": "Foul",
             "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Foul",
+            "firstActionMinute": 72,
             "isCorner": false,
             "reliable": true
           }

@@ -447,6 +447,26 @@
         "home": 0,
         "away": 1
       }
+    },
+    "egy-ira-2026-06-26": {
+      "ht": {
+        "home": 1,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    "new-bel-2026-06-26": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 5
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -2412,6 +2432,139 @@
           "player": "Agustín Canobbio",
           "minute": 90,
           "type": "red"
+        }
+      ]
+    },
+    "egy-ira-2026-06-26": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Mahmoud Saber",
+          "minute": 4,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ramin Rezaeian",
+          "minute": 13,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Hossein Kanani",
+          "minute": 18,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mahmoud Saber",
+          "minute": 19,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Yasser Ibrahim",
+          "minute": 41,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Ali Nemati",
+          "minute": 43,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Saeid Ezatolahi",
+          "minute": 79,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mohanad Lashin",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Shoja Khalilzadeh",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "new-bel-2026-06-26": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Leandro Trossard",
+          "minute": 27,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Leandro Trossard",
+          "minute": 50,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Kevin De Bruyne",
+          "minute": 66,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Elijah Just",
+          "minute": 83,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Romelu Lukaku",
+          "minute": 85,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Alexis Saelemaekers",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Marko Stamenic",
+          "minute": 46,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Elijah Just",
+          "minute": 55,
+          "type": "yellow"
         }
       ]
     }
@@ -11639,37 +11792,37 @@
     },
     "egy-ira-2026-06-26": {
       "corners": {
-        "home": 5,
-        "away": 1
+        "home": 8,
+        "away": 2
       },
       "sot": {
         "home": 3,
-        "away": 3
+        "away": 4
       },
       "shots": {
-        "home": 11,
-        "away": 7
+        "home": 15,
+        "away": 13
       },
       "yellow": {
-        "home": 2,
-        "away": 2
+        "home": 3,
+        "away": 4
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 2,
-        "away": 2
+        "home": 3,
+        "away": 4
       },
       "cornersByHalf": {
         "home": [
           4,
-          1
+          4
         ],
         "away": [
           0,
-          0
+          2
         ]
       },
       "sotByHalf": {
@@ -11697,21 +11850,31 @@
           "firstActionMinute": 29,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Shot Off Target",
+          "firstActionMinute": 71,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
     "new-bel-2026-06-26": {
       "corners": {
-        "home": 1,
-        "away": 4
+        "home": 5,
+        "away": 8
       },
       "sot": {
-        "home": 1,
-        "away": 5
+        "home": 2,
+        "away": 10
       },
       "shots": {
-        "home": 2,
-        "away": 19
+        "home": 6,
+        "away": 35
       },
       "yellow": {
         "home": 2,
@@ -11728,11 +11891,11 @@
       "cornersByHalf": {
         "home": [
           1,
-          0
+          4
         ],
         "away": [
           4,
-          0
+          4
         ]
       },
       "sotByHalf": {
@@ -11742,14 +11905,16 @@
         ],
         "away": [
           3,
-          0
+          2
         ]
       },
       "playerSot": {
         "Kevin De Bruyne": 1,
         "Jérémy Doku": 1,
         "Charles De Ketelaere": 1,
-        "Elijah Just": 1
+        "Elijah Just": 1,
+        "Arthur Theate": 1,
+        "Maxim De Cuyper": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -11760,6 +11925,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Foul",
           "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 72,
           "isCorner": false,
           "reliable": true
         }
