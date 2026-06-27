@@ -11396,16 +11396,16 @@
     },
     "cap-sau-2026-06-26": {
       "corners": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "sot": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "shots": {
-        "home": 0,
-        "away": 0
+        "home": 7,
+        "away": 4
       },
       "yellow": {
         "home": 1,
@@ -11421,52 +11421,66 @@
       },
       "cornersByHalf": {
         "home": [
-          0,
+          2,
           0
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
       "sotByHalf": {
         "home": [
           0,
-          0
+          1
         ],
         "away": [
-          0,
+          1,
           0
         ]
       },
-      "playerSot": {},
+      "playerSot": {
+        "Mohamed Kanno": 1,
+        "Jamiro Monteiro": 1
+      },
       "firstGoalMethod": null,
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 27,
+          "firstActionType": "Foul",
+          "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     },
     "uru-spa-2026-06-26": {
       "corners": {
         "home": 0,
-        "away": 4
+        "away": 5
       },
       "sot": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "shots": {
-        "home": 0,
-        "away": 2
+        "home": 3,
+        "away": 4
       },
       "yellow": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
@@ -11474,7 +11488,7 @@
           0
         ],
         "away": [
-          4,
+          5,
           0
         ]
       },
@@ -11489,8 +11503,19 @@
         ]
       },
       "playerSot": {},
-      "firstGoalMethod": null,
-      "waterBreak": {}
+      "firstGoalMethod": "shot",
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 26,
+          "firstActionType": "Foul",
+          "firstActionMinute": 31,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }

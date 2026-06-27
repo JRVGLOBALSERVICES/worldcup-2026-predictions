@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T00:20:34.621Z",
+    "generatedAt": "2026-06-27T01:20:23.083Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 46
   },
@@ -297,9 +297,9 @@
       },
       {
         "rank": 5,
-        "name": "Amar Dedic",
-        "team": "Bosnia",
-        "flag": "🇧🇦",
+        "name": "Álex Baena",
+        "team": "Spain",
+        "flag": "🇪🇸",
         "value": 1
       }
     ],
@@ -1767,6 +1767,11 @@
           "matches": 2
         },
         {
+          "name": "Álex Baena",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Lamine Yamal",
           "value": 1,
           "matches": 1
@@ -1784,12 +1789,22 @@
           "matches": 1
         },
         {
+          "name": "Marcos Llorente",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Mikel Oyarzabal",
           "value": 1,
           "matches": 1
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "name": "Álex Baena",
+          "value": 1
+        }
+      ],
       "redCards": []
     },
     "caboverde": {
@@ -1847,6 +1862,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Juan Manuel Sanabria",
+          "value": 1
+        },
         {
           "name": "Mathías Olivera",
           "value": 1
@@ -2932,7 +2951,12 @@
       },
       "760479": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Marcos Llorente",
+            "team": "Spain"
+          }
+        ]
       }
     }
   }
