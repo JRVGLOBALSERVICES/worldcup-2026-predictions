@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T03:20:30.845Z",
+    "generatedAt": "2026-06-27T04:20:37.492Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 48
   },
@@ -1937,6 +1937,14 @@
           "value": 1
         },
         {
+          "name": "Elijah Just",
+          "value": 1
+        },
+        {
+          "name": "Marko Stamenic",
+          "value": 1
+        },
+        {
           "name": "Sarpreet Singh",
           "value": 1
         }
@@ -1997,6 +2005,10 @@
         },
         {
           "name": "Mohanad Lashin",
+          "value": 1
+        },
+        {
+          "name": "Yasser Ibrahim",
           "value": 1
         }
       ],
@@ -2226,6 +2238,10 @@
       "assists": [],
       "yellowCards": [
         {
+          "name": "Ali Nemati",
+          "value": 1
+        },
+        {
           "name": "Hossein Kanani",
           "value": 1
         },
@@ -2235,6 +2251,36 @@
         }
       ],
       "redCards": []
+    },
+    "belgium": {
+      "team": "Belgium",
+      "flag": "🇧🇪",
+      "scorers": [
+        {
+          "name": "Leandro Trossard",
+          "value": 2,
+          "matches": 1
+        }
+      ],
+      "assists": [
+        {
+          "name": "Hans Vanaken",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "yellowCards": [
+        {
+          "name": "Romelu Lukaku",
+          "value": 1
+        }
+      ],
+      "redCards": [
+        {
+          "name": "Nathan Ngoy",
+          "value": 1
+        }
+      ]
     },
     "southkorea": {
       "team": "South Korea",
@@ -2422,24 +2468,6 @@
         }
       ],
       "redCards": []
-    },
-    "belgium": {
-      "team": "Belgium",
-      "flag": "🇧🇪",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Romelu Lukaku",
-          "value": 1
-        }
-      ],
-      "redCards": [
-        {
-          "name": "Nathan Ngoy",
-          "value": 1
-        }
-      ]
     }
   },
   "cache": {
@@ -3020,7 +3048,12 @@
       },
       "760477": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Hans Vanaken",
+            "team": "Belgium"
+          }
+        ]
       },
       "760478": {
         "penMiss": [],
