@@ -1,8 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T02:04:20.593Z",
+    "generatedAt": "2026-06-27T06:20:57.465Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
-    "method": "Per-match deep research on both squads (probable XIs, form, injuries, set-piece + penalty takers) via live web search, refreshed daily and again near kickoff when lineups are confirmed."
+    "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
+    "modelUpdatedAt": "2026-06-27T06:20:57.464Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -10070,6 +10071,1341 @@
         "https://www.olympics.com/en/news/fifa-world-cup-2026-ibrahim-mbaye-senegal-stoppage-time-hero-history",
         "https://allaboutfpl.com/2026/06/fifa-world-cup-2026-penalty-and-set-piece-takers-of-all-48-teams/",
         "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I"
+      ]
+    },
+    "alg-aus-2026-06-27": {
+      "win": {
+        "pick": "Austria",
+        "fairOdds": "2.17",
+        "reason": "Model: Austria to win at 46% (Algeria 30% / draw 24% / Austria 46%). Expected goals 1.3–1.7 from group-stage attack/defence rates (Algeria 1.2 for / 1.7 against per game, Austria 1.5 / 1.5). Most likely score 1-1.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "3.71",
+        "alt": "1-0",
+        "altOdds": "5.05"
+      },
+      "htft": {
+        "pick": "Draw/Austria",
+        "fairOdds": "5.43"
+      },
+      "fullTime": {
+        "score": "1-1",
+        "fairOdds": "9.00"
+      },
+      "scorers": [
+        {
+          "player": "Marko Arnautovic",
+          "fairOdds": "1.76",
+          "banker": true,
+          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Romano Schmid",
+          "fairOdds": "1.76",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Amine Gouiri",
+          "fairOdds": "2.08",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 48% modelled anytime chance on 1.3 team xG.",
+          "strength": 4
+        },
+        {
+          "player": "Nadhir Benbouali",
+          "fairOdds": "2.08",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 48% modelled anytime chance on 1.3 team xG.",
+          "strength": 4
+        }
+      ],
+      "assists": [
+        {
+          "player": "Xaver Schlager",
+          "fairOdds": "1.59",
+          "banker": true,
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Marko Arnautovic",
+        "backup": "Romano Schmid",
+        "note": "Tight model margin (16 pts) raises the odds a spot-kick decides it; Marko Arnautovic is Austria's group-stage top scorer and likely taker."
+      },
+      "lineups": {
+        "home": "Luca Zidane, Ramy Bensebaini, Aïssa Mandi, Rayan Aït-Nouri, Rafik Belghali, Ibrahim Maza, Ramiz Zerrouki, Hicham Boudaoui, Amine Gouiri, Farès Chaïbi, Riyad Mahrez",
+        "away": "Alexander Schlager, David Alaba, Kevin Danso, Konrad Laimer, Stefan Posch, Paul Wanner, Xaver Schlager, Nicolas Seiwald, Michael Gregoritsch, Marcel Sabitzer, Romano Schmid",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 23,
+              "name": "Luca Zidane",
+              "pos": "G"
+            },
+            {
+              "num": 21,
+              "name": "Ramy Bensebaini",
+              "pos": "CD-L"
+            },
+            {
+              "num": 2,
+              "name": "Aïssa Mandi",
+              "pos": "CD-R"
+            },
+            {
+              "num": 15,
+              "name": "Rayan Aït-Nouri",
+              "pos": "LB"
+            },
+            {
+              "num": 17,
+              "name": "Rafik Belghali",
+              "pos": "RB"
+            },
+            {
+              "num": 22,
+              "name": "Ibrahim Maza",
+              "pos": "AM"
+            },
+            {
+              "num": 6,
+              "name": "Ramiz Zerrouki",
+              "pos": "LM"
+            },
+            {
+              "num": 14,
+              "name": "Hicham Boudaoui",
+              "pos": "RM"
+            },
+            {
+              "num": 9,
+              "name": "Amine Gouiri",
+              "pos": "F"
+            },
+            {
+              "num": 10,
+              "name": "Farès Chaïbi",
+              "pos": "AM-L"
+            },
+            {
+              "num": 7,
+              "name": "Riyad Mahrez",
+              "pos": "AM-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Alexander Schlager",
+              "pos": "G"
+            },
+            {
+              "num": 8,
+              "name": "David Alaba",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Kevin Danso",
+              "pos": "CD-R"
+            },
+            {
+              "num": 20,
+              "name": "Konrad Laimer",
+              "pos": "LB"
+            },
+            {
+              "num": 5,
+              "name": "Stefan Posch",
+              "pos": "RB"
+            },
+            {
+              "num": 24,
+              "name": "Paul Wanner",
+              "pos": "AM"
+            },
+            {
+              "num": 4,
+              "name": "Xaver Schlager",
+              "pos": "LM"
+            },
+            {
+              "num": 6,
+              "name": "Nicolas Seiwald",
+              "pos": "RM"
+            },
+            {
+              "num": 11,
+              "name": "Michael Gregoritsch",
+              "pos": "F"
+            },
+            {
+              "num": 9,
+              "name": "Marcel Sabitzer",
+              "pos": "AM-L"
+            },
+            {
+              "num": 18,
+              "name": "Romano Schmid",
+              "pos": "AM-R"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Marko Arnautovic",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG."
+        },
+        {
+          "player": "Romano Schmid",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 57% modelled anytime chance on 1.7 team xG."
+        },
+        {
+          "player": "Xaver Schlager",
+          "team": "",
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 3,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ]
+    },
+    "jor-arg-2026-06-27": {
+      "win": {
+        "pick": "Argentina",
+        "fairOdds": "1.14",
+        "reason": "Model: Argentina to win at 88% (Jordan 3% / draw 7% / Argentina 88%). Expected goals 0.5–3.3 from group-stage attack/defence rates (Jordan 1.2 for / 2.0 against per game, Argentina 2.0 / 0.7). Most likely score 0-3.",
+        "strength": 5
+      },
+      "halfTime": {
+        "score": "0-1",
+        "fairOdds": "3.64",
+        "alt": "0-0",
+        "altOdds": "8.06"
+      },
+      "htft": {
+        "pick": "Argentina/Argentina",
+        "fairOdds": "1.42"
+      },
+      "fullTime": {
+        "score": "0-3",
+        "fairOdds": "7.30"
+      },
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "fairOdds": "1.04",
+          "banker": true,
+          "note": "Scored 5 in 2 group games — 96% modelled anytime chance on 3.3 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Ali Olwan",
+          "fairOdds": "4.75",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 21% modelled anytime chance on 0.5 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Nizar Al-Rashdan",
+          "fairOdds": "4.75",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 21% modelled anytime chance on 0.5 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Mousa Al-Tamari",
+          "fairOdds": "1.59",
+          "banker": true,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Noor Al-Rawabdeh",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Facundo Medina",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Nico González",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Lionel Messi",
+        "backup": "Ali Olwan",
+        "note": "Argentina favoured to control the game, so a penalty is less pivotal; Lionel Messi would take one if awarded."
+      },
+      "lineups": {
+        "home": "Yazeed Abulaila, Yazan Al-Arab, Husam Abu Dahab, Abdallah Nasib, Noor Al-Rawabdeh, Nizar Al-Rashdan, Mohannad Abu Taha, Ehsan Haddad, Mousa Al-Tamari, Mahmoud Al-Mardi, Ali Olwan",
+        "away": "Emiliano Martínez, Lisandro Martínez, Cristian Romero, Facundo Medina, Nahuel Molina, Enzo Fernández, Alexis Mac Allister, Thiago Almada, Rodrigo De Paul, Lautaro Martínez, Lionel Messi",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "3-4-2-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Yazeed Abulaila",
+              "pos": "G"
+            },
+            {
+              "num": 5,
+              "name": "Yazan Al-Arab",
+              "pos": "CD"
+            },
+            {
+              "num": 4,
+              "name": "Husam Abu Dahab",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Abdallah Nasib",
+              "pos": "CD-R"
+            },
+            {
+              "num": 8,
+              "name": "Noor Al-Rawabdeh",
+              "pos": "CM-L"
+            },
+            {
+              "num": 21,
+              "name": "Nizar Al-Rashdan",
+              "pos": "CM-R"
+            },
+            {
+              "num": 20,
+              "name": "Mohannad Abu Taha",
+              "pos": "LM"
+            },
+            {
+              "num": 23,
+              "name": "Ehsan Haddad",
+              "pos": "RM"
+            },
+            {
+              "num": 10,
+              "name": "Mousa Al-Tamari",
+              "pos": "F"
+            },
+            {
+              "num": 13,
+              "name": "Mahmoud Al-Mardi",
+              "pos": "CF-L"
+            },
+            {
+              "num": 9,
+              "name": "Ali Olwan",
+              "pos": "CF-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-4-2",
+          "players": [
+            {
+              "num": 23,
+              "name": "Emiliano Martínez",
+              "pos": "G"
+            },
+            {
+              "num": 6,
+              "name": "Lisandro Martínez",
+              "pos": "CD-L"
+            },
+            {
+              "num": 13,
+              "name": "Cristian Romero",
+              "pos": "CD-R"
+            },
+            {
+              "num": 25,
+              "name": "Facundo Medina",
+              "pos": "LB"
+            },
+            {
+              "num": 26,
+              "name": "Nahuel Molina",
+              "pos": "RB"
+            },
+            {
+              "num": 24,
+              "name": "Enzo Fernández",
+              "pos": "CM-L"
+            },
+            {
+              "num": 20,
+              "name": "Alexis Mac Allister",
+              "pos": "CM-R"
+            },
+            {
+              "num": 16,
+              "name": "Thiago Almada",
+              "pos": "LM"
+            },
+            {
+              "num": 7,
+              "name": "Rodrigo De Paul",
+              "pos": "RM"
+            },
+            {
+              "num": 22,
+              "name": "Lautaro Martínez",
+              "pos": "CF-L"
+            },
+            {
+              "num": 10,
+              "name": "Lionel Messi",
+              "pos": "CF-R"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Lionel Messi",
+          "team": "",
+          "note": "Scored 5 in 2 group games — 96% modelled anytime chance on 3.3 team xG."
+        },
+        {
+          "player": "Ali Olwan",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 21% modelled anytime chance on 0.5 team xG."
+        },
+        {
+          "player": "Mousa Al-Tamari",
+          "team": "",
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "confidence": "high",
+      "strength": 5,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ]
+    },
+    "col-por-2026-06-27": {
+      "win": {
+        "pick": "Colombia",
+        "fairOdds": "2.66",
+        "reason": "Model: Colombia to win at 38% (Colombia 38% / draw 26% / Portugal 36%). Expected goals 1.3–1.3 from group-stage attack/defence rates (Colombia 1.7 for / 1.0 against per game, Portugal 2.2 / 1.0). Most likely score 1-1.",
+        "strength": 2
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "3.14",
+        "alt": "1-0",
+        "altOdds": "4.64"
+      },
+      "htft": {
+        "pick": "Draw/Colombia",
+        "fairOdds": "6.64"
+      },
+      "fullTime": {
+        "score": "1-1",
+        "fairOdds": "7.97"
+      },
+      "scorers": [
+        {
+          "player": "Daniel Muñoz",
+          "fairOdds": "2.07",
+          "banker": true,
+          "note": "Scored 2 in 2 group games — 48% modelled anytime chance on 1.3 team xG.",
+          "strength": 4
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "fairOdds": "2.49",
+          "banker": false,
+          "note": "Scored 2 in 2 group games — 40% modelled anytime chance on 1.3 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Jáminton Campaz",
+          "fairOdds": "3.56",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 28% modelled anytime chance on 1.3 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Luis Díaz",
+          "fairOdds": "3.56",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 28% modelled anytime chance on 1.3 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "João Neves",
+          "fairOdds": "4.42",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 23% modelled anytime chance on 1.3 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Cucho Hernández",
+          "fairOdds": "1.59",
+          "banker": true,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Gustavo Puerta",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Luis Díaz",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Bruno Fernandes",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Daniel Muñoz",
+        "backup": "Jáminton Campaz",
+        "note": "Tight model margin (2 pts) raises the odds a spot-kick decides it; Daniel Muñoz is Colombia's group-stage top scorer and likely taker."
+      },
+      "lineups": {
+        "home": "Camilo Vargas, Jhon Lucumí, Davinson Sánchez, Johan Mojica, Daniel Muñoz, Jefferson Lerma, Jhon Arias, Gustavo Puerta, Luis Suárez, Luis Díaz, James Rodríguez",
+        "away": "Diogo Costa, Renato Veiga, Rúben Dias, Nuno Mendes, João Cancelo, Bruno Fernandes, Vitinha , João Neves, Cristiano Ronaldo, João Félix, Pedro Neto",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 12,
+              "name": "Camilo Vargas",
+              "pos": "G"
+            },
+            {
+              "num": 3,
+              "name": "Jhon Lucumí",
+              "pos": "CD-L"
+            },
+            {
+              "num": 23,
+              "name": "Davinson Sánchez",
+              "pos": "CD-R"
+            },
+            {
+              "num": 17,
+              "name": "Johan Mojica",
+              "pos": "LB"
+            },
+            {
+              "num": 2,
+              "name": "Daniel Muñoz",
+              "pos": "RB"
+            },
+            {
+              "num": 16,
+              "name": "Jefferson Lerma",
+              "pos": "CM"
+            },
+            {
+              "num": 11,
+              "name": "Jhon Arias",
+              "pos": "LM"
+            },
+            {
+              "num": 14,
+              "name": "Gustavo Puerta",
+              "pos": "RM"
+            },
+            {
+              "num": 25,
+              "name": "Luis Suárez",
+              "pos": "F"
+            },
+            {
+              "num": 7,
+              "name": "Luis Díaz",
+              "pos": "LF"
+            },
+            {
+              "num": 10,
+              "name": "James Rodríguez",
+              "pos": "RF"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Diogo Costa",
+              "pos": "G"
+            },
+            {
+              "num": 13,
+              "name": "Renato Veiga",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Rúben Dias",
+              "pos": "CD-R"
+            },
+            {
+              "num": 25,
+              "name": "Nuno Mendes",
+              "pos": "LB"
+            },
+            {
+              "num": 20,
+              "name": "João Cancelo",
+              "pos": "RB"
+            },
+            {
+              "num": 8,
+              "name": "Bruno Fernandes",
+              "pos": "AM"
+            },
+            {
+              "num": 23,
+              "name": "Vitinha ",
+              "pos": "LM"
+            },
+            {
+              "num": 15,
+              "name": "João Neves",
+              "pos": "RM"
+            },
+            {
+              "num": 7,
+              "name": "Cristiano Ronaldo",
+              "pos": "F"
+            },
+            {
+              "num": 11,
+              "name": "João Félix",
+              "pos": "AM-L"
+            },
+            {
+              "num": 18,
+              "name": "Pedro Neto",
+              "pos": "AM-R"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Daniel Muñoz",
+          "team": "",
+          "note": "Scored 2 in 2 group games — 48% modelled anytime chance on 1.3 team xG."
+        },
+        {
+          "player": "Cristiano Ronaldo",
+          "team": "",
+          "note": "Scored 2 in 2 group games — 40% modelled anytime chance on 1.3 team xG."
+        },
+        {
+          "player": "Cucho Hernández",
+          "team": "",
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "confidence": "low",
+      "strength": 2,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ]
+    },
+    "drc-uzb-2026-06-27": {
+      "win": {
+        "pick": "DR Congo",
+        "fairOdds": "1.46",
+        "reason": "Model: DR Congo to win at 68% (DR Congo 68% / draw 20% / Uzbekistan 12%). Expected goals 2.1–0.7 from group-stage attack/defence rates (DR Congo 1.0 for / 1.2 against per game, Uzbekistan 1.0 / 2.7). Most likely score 2-0.",
+        "strength": 5
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "3.38",
+        "alt": "1-0",
+        "altOdds": "5.18"
+      },
+      "htft": {
+        "pick": "Draw/DR Congo",
+        "fairOdds": "3.66"
+      },
+      "fullTime": {
+        "score": "2-0",
+        "fairOdds": "7.58"
+      },
+      "scorers": [
+        {
+          "player": "Yoane Wissa",
+          "fairOdds": "1.15",
+          "banker": true,
+          "note": "Scored 1 in 1 group game — 87% modelled anytime chance on 2.1 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "fairOdds": "1.95",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 51% modelled anytime chance on 0.7 team xG.",
+          "strength": 4
+        }
+      ],
+      "assists": [
+        {
+          "player": "Arthur Masuaku",
+          "fairOdds": "1.59",
+          "banker": true,
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Yoane Wissa",
+        "backup": "Abbosbek Fayzullaev",
+        "note": "DR Congo favoured to control the game, so a penalty is less pivotal; Yoane Wissa would take one if awarded."
+      },
+      "lineups": {
+        "home": "Lionel Mpasi, Axel Tuanzebe, Steve Kapuadi, Chancel Mbemba, Arthur Masuaku, Aaron Wan-Bissaka, Samuel Moutoussamy, Edo Kayembe, Ngal'ayel Mukau, Yoane Wissa, Cédric Bakambu",
+        "away": "Abduvohid Nematov, Abdulla Abdullaev, Rustam Ashurmatov, Abdukodir Khusanov, Otabek Shukurov, Odiljon Xamrobekov, Sherzod Nasrullaev, Behruzjon Karimov, Eldor Shomurodov, Abbosbek Fayzullaev, Azizjon Ganiev",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "5-3-2",
+          "players": [
+            {
+              "num": 1,
+              "name": "Lionel Mpasi",
+              "pos": "G"
+            },
+            {
+              "num": 4,
+              "name": "Axel Tuanzebe",
+              "pos": "CD"
+            },
+            {
+              "num": 3,
+              "name": "Steve Kapuadi",
+              "pos": "CD-L"
+            },
+            {
+              "num": 22,
+              "name": "Chancel Mbemba",
+              "pos": "CD-R"
+            },
+            {
+              "num": 26,
+              "name": "Arthur Masuaku",
+              "pos": "LB"
+            },
+            {
+              "num": 2,
+              "name": "Aaron Wan-Bissaka",
+              "pos": "RB"
+            },
+            {
+              "num": 8,
+              "name": "Samuel Moutoussamy",
+              "pos": "CM"
+            },
+            {
+              "num": 25,
+              "name": "Edo Kayembe",
+              "pos": "CM-L"
+            },
+            {
+              "num": 6,
+              "name": "Ngal'ayel Mukau",
+              "pos": "CM-R"
+            },
+            {
+              "num": 20,
+              "name": "Yoane Wissa",
+              "pos": "CF-L"
+            },
+            {
+              "num": 17,
+              "name": "Cédric Bakambu",
+              "pos": "CF-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "3-4-2-1",
+          "players": [
+            {
+              "num": 12,
+              "name": "Abduvohid Nematov",
+              "pos": "G"
+            },
+            {
+              "num": 18,
+              "name": "Abdulla Abdullaev",
+              "pos": "CD"
+            },
+            {
+              "num": 5,
+              "name": "Rustam Ashurmatov",
+              "pos": "CD-L"
+            },
+            {
+              "num": 2,
+              "name": "Abdukodir Khusanov",
+              "pos": "CD-R"
+            },
+            {
+              "num": 7,
+              "name": "Otabek Shukurov",
+              "pos": "CM-L"
+            },
+            {
+              "num": 9,
+              "name": "Odiljon Xamrobekov",
+              "pos": "CM-R"
+            },
+            {
+              "num": 13,
+              "name": "Sherzod Nasrullaev",
+              "pos": "LM"
+            },
+            {
+              "num": 24,
+              "name": "Behruzjon Karimov",
+              "pos": "RM"
+            },
+            {
+              "num": 14,
+              "name": "Eldor Shomurodov",
+              "pos": "F"
+            },
+            {
+              "num": 22,
+              "name": "Abbosbek Fayzullaev",
+              "pos": "CF-L"
+            },
+            {
+              "num": 19,
+              "name": "Azizjon Ganiev",
+              "pos": "CF-R"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Yoane Wissa",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 87% modelled anytime chance on 2.1 team xG."
+        },
+        {
+          "player": "Abbosbek Fayzullaev",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 51% modelled anytime chance on 0.7 team xG."
+        },
+        {
+          "player": "Arthur Masuaku",
+          "team": "",
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "confidence": "high",
+      "strength": 5,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ]
+    },
+    "pan-eng-2026-06-27": {
+      "win": {
+        "pick": "England",
+        "fairOdds": "1.50",
+        "reason": "Model: England to win at 66% (Panama 11% / draw 23% / England 66%). Expected goals 0.5–1.7 from group-stage attack/defence rates (Panama 0.7 for / 1.2 against per game, England 1.7 / 1.2). Most likely score 0-1.",
+        "strength": 5
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.65",
+        "alt": "1-0",
+        "altOdds": "4.50"
+      },
+      "htft": {
+        "pick": "Draw/England",
+        "fairOdds": "3.76"
+      },
+      "fullTime": {
+        "score": "0-1",
+        "fairOdds": "5.39"
+      },
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "fairOdds": "1.75",
+          "banker": true,
+          "note": "Scored 2 in 2 group games — 57% modelled anytime chance on 1.7 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Jude Bellingham",
+          "fairOdds": "2.89",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 35% modelled anytime chance on 1.7 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Marcus Rashford",
+          "fairOdds": "2.89",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 35% modelled anytime chance on 1.7 team xG.",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Bukayo Saka",
+          "fairOdds": "1.59",
+          "banker": true,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Declan Rice",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Elliot Anderson",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Harry Kane",
+        "backup": "Jude Bellingham",
+        "note": "England favoured to control the game, so a penalty is less pivotal; Harry Kane would take one if awarded."
+      },
+      "lineups": {
+        "home": "Orlando Mosquera, José Córdoba, Andrés Andrade, Jiovany Ramos, César Blackman, Amir Murillo, Édgar Yoel Bárcenas, Carlos Harvey, José Luis Rodríguez, Cristian Martínez, José Fajardo",
+        "away": "Jordan Pickford, Marc Guéhi, Ezri Konsa, Djed Spence, Reece James, Jude Bellingham, Declan Rice, Elliot Anderson, Harry Kane, Anthony Gordon, Noni Madueke",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "5-4-1",
+          "players": [
+            {
+              "num": 22,
+              "name": "Orlando Mosquera",
+              "pos": "G"
+            },
+            {
+              "num": 3,
+              "name": "José Córdoba",
+              "pos": "CD"
+            },
+            {
+              "num": 16,
+              "name": "Andrés Andrade",
+              "pos": "CD-L"
+            },
+            {
+              "num": 13,
+              "name": "Jiovany Ramos",
+              "pos": "CD-R"
+            },
+            {
+              "num": 2,
+              "name": "César Blackman",
+              "pos": "LB"
+            },
+            {
+              "num": 23,
+              "name": "Amir Murillo",
+              "pos": "RB"
+            },
+            {
+              "num": 11,
+              "name": "Édgar Yoel Bárcenas",
+              "pos": "CM-L"
+            },
+            {
+              "num": 14,
+              "name": "Carlos Harvey",
+              "pos": "CM-R"
+            },
+            {
+              "num": 7,
+              "name": "José Luis Rodríguez",
+              "pos": "LM"
+            },
+            {
+              "num": 6,
+              "name": "Cristian Martínez",
+              "pos": "RM"
+            },
+            {
+              "num": 17,
+              "name": "José Fajardo",
+              "pos": "F"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Jordan Pickford",
+              "pos": "G"
+            },
+            {
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "CD-L"
+            },
+            {
+              "num": 2,
+              "name": "Ezri Konsa",
+              "pos": "CD-R"
+            },
+            {
+              "num": 25,
+              "name": "Djed Spence",
+              "pos": "LB"
+            },
+            {
+              "num": 24,
+              "name": "Reece James",
+              "pos": "RB"
+            },
+            {
+              "num": 10,
+              "name": "Jude Bellingham",
+              "pos": "AM"
+            },
+            {
+              "num": 4,
+              "name": "Declan Rice",
+              "pos": "LM"
+            },
+            {
+              "num": 8,
+              "name": "Elliot Anderson",
+              "pos": "RM"
+            },
+            {
+              "num": 9,
+              "name": "Harry Kane",
+              "pos": "F"
+            },
+            {
+              "num": 18,
+              "name": "Anthony Gordon",
+              "pos": "AM-L"
+            },
+            {
+              "num": 20,
+              "name": "Noni Madueke",
+              "pos": "AM-R"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Harry Kane",
+          "team": "",
+          "note": "Scored 2 in 2 group games — 57% modelled anytime chance on 1.7 team xG."
+        },
+        {
+          "player": "Jude Bellingham",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 35% modelled anytime chance on 1.7 team xG."
+        },
+        {
+          "player": "Bukayo Saka",
+          "team": "",
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "confidence": "high",
+      "strength": 5,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ]
+    },
+    "cro-gha-2026-06-27": {
+      "win": {
+        "pick": "Ghana",
+        "fairOdds": "2.15",
+        "reason": "Model: Ghana to win at 47% (Croatia 23% / draw 31% / Ghana 47%). Expected goals 0.7–1.2 from group-stage attack/defence rates (Croatia 1.5 for / 1.7 against per game, Ghana 1.0 / 0.7). Most likely score 0-1.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.31",
+        "alt": "1-0",
+        "altOdds": "3.95"
+      },
+      "htft": {
+        "pick": "Draw/Ghana",
+        "fairOdds": "5.37"
+      },
+      "fullTime": {
+        "score": "0-1",
+        "fairOdds": "5.72"
+      },
+      "scorers": [
+        {
+          "player": "Caleb Yirenkyi",
+          "fairOdds": "1.44",
+          "banker": true,
+          "note": "Scored 1 in 1 group game — 69% modelled anytime chance on 1.2 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Ante Budimir",
+          "fairOdds": "4.63",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Martin Baturina",
+          "fairOdds": "4.63",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Petar Musa",
+          "fairOdds": "4.63",
+          "banker": false,
+          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Ivan Perisic",
+          "fairOdds": "1.59",
+          "banker": true,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Josip Stanisic",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Petar Sucic",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        },
+        {
+          "player": "Brandon Thomas-Asante",
+          "fairOdds": "1.59",
+          "banker": false,
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Caleb Yirenkyi",
+        "backup": "Ante Budimir",
+        "note": "Ghana favoured to control the game, so a penalty is less pivotal; Caleb Yirenkyi would take one if awarded."
+      },
+      "lineups": {
+        "home": "Dominik Livakovic, Marin Pongracic, Josip Sutalo, Josko Gvardiol, Josip Stanisic, Martin Baturina, Mateo Kovacic, Luka Modric, Petar Musa, Ivan Perisic, Marco Pasalic",
+        "away": "Benjamin Asare, Jerome Opoku, Jonas Adjetey, Thomas Partey, Gideon Mensah, Marvin Senaya, Kwasi Sibo, Caleb Yirenkyi, Antoine Semenyo, Iñaki Williams, Jordan Ayew",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Dominik Livakovic",
+              "pos": "G"
+            },
+            {
+              "num": 3,
+              "name": "Marin Pongracic",
+              "pos": "CD-L"
+            },
+            {
+              "num": 6,
+              "name": "Josip Sutalo",
+              "pos": "CD-R"
+            },
+            {
+              "num": 4,
+              "name": "Josko Gvardiol",
+              "pos": "LB"
+            },
+            {
+              "num": 2,
+              "name": "Josip Stanisic",
+              "pos": "RB"
+            },
+            {
+              "num": 16,
+              "name": "Martin Baturina",
+              "pos": "AM"
+            },
+            {
+              "num": 8,
+              "name": "Mateo Kovacic",
+              "pos": "LM"
+            },
+            {
+              "num": 10,
+              "name": "Luka Modric",
+              "pos": "RM"
+            },
+            {
+              "num": 26,
+              "name": "Petar Musa",
+              "pos": "F"
+            },
+            {
+              "num": 14,
+              "name": "Ivan Perisic",
+              "pos": "AM-L"
+            },
+            {
+              "num": 24,
+              "name": "Marco Pasalic",
+              "pos": "AM-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-1-4-1",
+          "players": [
+            {
+              "num": 16,
+              "name": "Benjamin Asare",
+              "pos": "G"
+            },
+            {
+              "num": 18,
+              "name": "Jerome Opoku",
+              "pos": "CD-L"
+            },
+            {
+              "num": 4,
+              "name": "Jonas Adjetey",
+              "pos": "CD-R"
+            },
+            {
+              "num": 5,
+              "name": "Thomas Partey",
+              "pos": "DM"
+            },
+            {
+              "num": 14,
+              "name": "Gideon Mensah",
+              "pos": "LB"
+            },
+            {
+              "num": 26,
+              "name": "Marvin Senaya",
+              "pos": "RB"
+            },
+            {
+              "num": 8,
+              "name": "Kwasi Sibo",
+              "pos": "CM-L"
+            },
+            {
+              "num": 3,
+              "name": "Caleb Yirenkyi",
+              "pos": "CM-R"
+            },
+            {
+              "num": 11,
+              "name": "Antoine Semenyo",
+              "pos": "LM"
+            },
+            {
+              "num": 19,
+              "name": "Iñaki Williams",
+              "pos": "RM"
+            },
+            {
+              "num": 9,
+              "name": "Jordan Ayew",
+              "pos": "F"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Caleb Yirenkyi",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 69% modelled anytime chance on 1.2 team xG."
+        },
+        {
+          "player": "Ante Budimir",
+          "team": "",
+          "note": "Scored 1 in 1 group game — 22% modelled anytime chance on 0.7 team xG."
+        },
+        {
+          "player": "Ivan Perisic",
+          "team": "",
+          "note": "1 assist in the group stage — the side's chief creator."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 3,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ]
     }
   }
