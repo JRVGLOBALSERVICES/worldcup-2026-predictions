@@ -128,6 +128,91 @@ function topTeams(rows, flagFor, n = TOP_N) {
   }));
 }
 
+// Sum every team's per-match boxscore counters into one bucket per team, keyed
+// on the normalised name. matches counts only games the team actually featured in.
+function aggregateTeamBox(byEvent) {
+  const agg = {};
+  for (const rec of Object.values(byEvent)) {
+    for (const tb of rec.teamBox ?? []) {
+      if (!tb.team) continue;
+      const key = norm(tb.team);
+      const a = (agg[key] ??= {
+        team: tb.team,
+        matches: 0,
+        possessionSum: 0,
+        possessionN: 0,
+        accuratePasses: 0,
+        totalPasses: 0,
+        shotsOnTarget: 0,
+        totalShots: 0,
+        effectiveTackles: 0,
+        totalTackles: 0,
+        accurateCrosses: 0,
+        totalCrosses: 0,
+        accurateLongBalls: 0,
+        totalLongBalls: 0,
+      });
+      a.matches += 1;
+      if (tb.possessionPct != null) {
+        a.possessionSum += tb.possessionPct;
+        a.possessionN += 1;
+      }
+      for (const f of [
+        "accuratePasses",
+        "totalPasses",
+        "shotsOnTarget",
+        "totalShots",
+        "effectiveTackles",
+        "totalTackles",
+        "accurateCrosses",
+        "totalCrosses",
+        "accurateLongBalls",
+        "totalLongBalls",
+      ]) {
+        if (tb[f] != null) a[f] += tb[f];
+      }
+    }
+  }
+  return agg;
+}
+
+// Rank teams by a derived percentage (true aggregate: Σ accurate / Σ attempted),
+// top-N, standard competition ranking. `pick` returns the % or null (no attempts).
+function pctBoard(agg, pick, flagFor, n = TOP_N) {
+  const rows = Object.values(agg)
+    .map((a) => {
+      const value = pick(a);
+      return value == null || !Number.isFinite(value)
+        ? null
+        : { team: a.team, value: Math.round(value * 10) / 10, matches: a.matches };
+    })
+    .filter(Boolean)
+    .sort((x, y) => y.value - x.value || x.team.localeCompare(y.team))
+    .slice(0, n);
+  return rows.map((r) => ({
+    rank: 1 + rows.filter((o) => o.value > r.value).length,
+    team: r.team,
+    flag: flagFor(r.team),
+    value: r.value,
+    display: `${r.value.toFixed(1)}%`,
+    matches: r.matches,
+  }));
+}
+
+const ratio = (num, den) => (den > 0 ? (num / den) * 100 : null);
+
+function buildTeamStats(byEvent, flagFor) {
+  const agg = aggregateTeamBox(byEvent);
+  return {
+    passCompletion: pctBoard(agg, (a) => ratio(a.accuratePasses, a.totalPasses), flagFor),
+    possession: pctBoard(agg, (a) => (a.possessionN > 0 ? a.possessionSum / a.possessionN : null), flagFor),
+    shotAccuracy: pctBoard(agg, (a) => ratio(a.shotsOnTarget, a.totalShots), flagFor),
+    tackleSuccess: pctBoard(agg, (a) => ratio(a.effectiveTackles, a.totalTackles), flagFor),
+    crossCompletion: pctBoard(agg, (a) => ratio(a.accurateCrosses, a.totalCrosses), flagFor),
+    longBallAccuracy: pctBoard(agg, (a) => ratio(a.accurateLongBalls, a.totalLongBalls), flagFor),
+  };
+}
+
 async function main() {
   const fixtures = JSON.parse(readFileSync(FIXTURES_PATH, "utf8"));
 
@@ -288,10 +373,14 @@ async function main() {
   const liveEventIds = [...eventById.values()]
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id);
-  // Refetch a summary when the match is live, never cached, or cached before assists
-  // existed (migrated penMiss-only entry) — so assists backfill exactly once.
+  // Refetch a summary when the match is live, never cached, cached before assists
+  // existed (migrated penMiss-only entry), or cached before teamBox existed — so
+  // assists and the per-match team boxscore each backfill exactly once.
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
-    (id) => liveEventIds.includes(id) || byEvent[id]?.assists == null,
+    (id) =>
+      liveEventIds.includes(id) ||
+      byEvent[id]?.assists == null ||
+      byEvent[id]?.teamBox == null,
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -320,7 +409,32 @@ async function main() {
         if (a) assistsArr.push({ name: a, team });
       }
     }
-    byEvent[id] = { penMiss: misses, assists: assistsArr }; // [] is a valid "checked, none"
+    // Per-match team boxscore → the raw counters behind the completion boards
+    // (pass/shot/tackle/cross/long-ball accuracy + possession). Stored as raw
+    // sums so the aggregate % is computed over all attempts, not an avg-of-avgs.
+    const teamBox = (b.value?.boxscore?.teams ?? []).map((tm) => {
+      const disp = tm.team?.displayName ?? "";
+      const get = (n) => {
+        const v = (tm.statistics ?? []).find((s) => s.name === n)?.displayValue;
+        const f = parseFloat(v);
+        return Number.isFinite(f) ? f : null;
+      };
+      return {
+        team: nameByTeam[norm(disp)] ?? disp,
+        possessionPct: get("possessionPct"),
+        accuratePasses: get("accuratePasses"),
+        totalPasses: get("totalPasses"),
+        shotsOnTarget: get("shotsOnTarget"),
+        totalShots: get("totalShots"),
+        effectiveTackles: get("effectiveTackles"),
+        totalTackles: get("totalTackles"),
+        accurateCrosses: get("accurateCrosses"),
+        totalCrosses: get("totalCrosses"),
+        accurateLongBalls: get("accurateLongBalls"),
+        totalLongBalls: get("totalLongBalls"),
+      };
+    });
+    byEvent[id] = { penMiss: misses, assists: assistsArr, teamBox }; // [] is a valid "checked, none"
   });
   // Drop cache entries for events no longer in our window (keeps the file tight).
   const validIds = new Set([...eventById.keys()]);
@@ -411,6 +525,8 @@ async function main() {
     };
   }
 
+  const teamStats = buildTeamStats(byEvent, flagFor);
+
   const payload = {
     meta: {
       generatedAt: new Date().toISOString(),
@@ -418,12 +534,13 @@ async function main() {
       finished: finishedEventIds.length,
     },
     categories,
+    teamStats,
     byTeam,
     cache: { byEvent },
   };
 
   // Change-detection ignores the timestamp + cache (cache is plumbing, not output).
-  const sig = (p) => JSON.stringify({ categories: p.categories, byTeam: p.byTeam });
+  const sig = (p) => JSON.stringify({ categories: p.categories, teamStats: p.teamStats, byTeam: p.byTeam });
   let prevSig = "";
   try {
     prevSig = sig(JSON.parse(readFileSync(STATS_PATH, "utf8")));

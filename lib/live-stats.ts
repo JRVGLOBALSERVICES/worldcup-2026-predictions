@@ -1,6 +1,6 @@
 import fixturesJson from "@/data/fixtures.json";
 import statsJson from "@/data/stats.json";
-import type { StatRow, StatCategoryKey, StatsFile } from "./stats";
+import type { StatRow, StatCategoryKey, StatsFile, TeamPerfKey, TeamPerfRow } from "./stats";
 
 /**
  * On-demand recompute of the tournament stat leaderboards (the /stats boards:
@@ -99,9 +99,46 @@ type EspnKeyEvent = {
   team?: { id?: string; displayName?: string };
   participants?: { athlete?: { displayName?: string } }[];
 };
-type EspnSummary = { keyEvents?: EspnKeyEvent[] };
+type EspnBoxTeam = {
+  team?: { displayName?: string };
+  statistics?: { name?: string; displayValue?: string }[];
+};
+type EspnSummary = { keyEvents?: EspnKeyEvent[]; boxscore?: { teams?: EspnBoxTeam[] } };
 
 type Tally = { name: string; team: string; value: number; matches?: number | null };
+
+// Raw per-match team counters behind the completion boards.
+type TeamBox = {
+  team: string;
+  possessionPct: number | null;
+  accuratePasses: number | null;
+  totalPasses: number | null;
+  shotsOnTarget: number | null;
+  totalShots: number | null;
+  effectiveTackles: number | null;
+  totalTackles: number | null;
+  accurateCrosses: number | null;
+  totalCrosses: number | null;
+  accurateLongBalls: number | null;
+  totalLongBalls: number | null;
+};
+
+type TeamAgg = {
+  team: string;
+  matches: number;
+  possessionSum: number;
+  possessionN: number;
+  accuratePasses: number;
+  totalPasses: number;
+  shotsOnTarget: number;
+  totalShots: number;
+  effectiveTackles: number;
+  totalTackles: number;
+  accurateCrosses: number;
+  totalCrosses: number;
+  accurateLongBalls: number;
+  totalLongBalls: number;
+};
 
 const fetchDate = (param: string) =>
   getJson<{ events?: EspnEvent[] }>(`${ESPN_BASE}?dates=${param}`).then((d) => d.events ?? []);
@@ -140,6 +177,97 @@ function topTeams(rows: { team: string; value: number }[], flagFor: (t: string) 
     flag: flagFor(r.team),
     value: r.value,
   }));
+}
+
+function aggregateTeamBox(byEvent: Record<string, { teamBox?: TeamBox[] }>): Record<string, TeamAgg> {
+  const agg: Record<string, TeamAgg> = {};
+  for (const rec of Object.values(byEvent)) {
+    for (const tb of rec.teamBox ?? []) {
+      if (!tb.team) continue;
+      const key = norm(tb.team);
+      const a = (agg[key] ??= {
+        team: tb.team,
+        matches: 0,
+        possessionSum: 0,
+        possessionN: 0,
+        accuratePasses: 0,
+        totalPasses: 0,
+        shotsOnTarget: 0,
+        totalShots: 0,
+        effectiveTackles: 0,
+        totalTackles: 0,
+        accurateCrosses: 0,
+        totalCrosses: 0,
+        accurateLongBalls: 0,
+        totalLongBalls: 0,
+      });
+      a.matches += 1;
+      if (tb.possessionPct != null) {
+        a.possessionSum += tb.possessionPct;
+        a.possessionN += 1;
+      }
+      const fields = [
+        "accuratePasses",
+        "totalPasses",
+        "shotsOnTarget",
+        "totalShots",
+        "effectiveTackles",
+        "totalTackles",
+        "accurateCrosses",
+        "totalCrosses",
+        "accurateLongBalls",
+        "totalLongBalls",
+      ] as const;
+      for (const f of fields) {
+        const v = tb[f];
+        if (v != null) a[f] += v;
+      }
+    }
+  }
+  return agg;
+}
+
+function pctBoard(
+  agg: Record<string, TeamAgg>,
+  pick: (a: TeamAgg) => number | null,
+  flagFor: (t: string) => string,
+  n = TOP_N,
+): TeamPerfRow[] {
+  const rows = Object.values(agg)
+    .map((a) => {
+      const value = pick(a);
+      return value == null || !Number.isFinite(value)
+        ? null
+        : { team: a.team, value: Math.round(value * 10) / 10, matches: a.matches };
+    })
+    .filter((r): r is { team: string; value: number; matches: number } => r !== null)
+    .sort((x, y) => y.value - x.value || x.team.localeCompare(y.team))
+    .slice(0, n);
+  return rows.map((r) => ({
+    rank: 1 + rows.filter((o) => o.value > r.value).length,
+    team: r.team,
+    flag: flagFor(r.team),
+    value: r.value,
+    display: `${r.value.toFixed(1)}%`,
+    matches: r.matches,
+  }));
+}
+
+const ratio = (num: number, den: number) => (den > 0 ? (num / den) * 100 : null);
+
+function buildTeamStats(
+  byEvent: Record<string, { teamBox?: TeamBox[] }>,
+  flagFor: (t: string) => string,
+): Record<TeamPerfKey, TeamPerfRow[]> {
+  const agg = aggregateTeamBox(byEvent);
+  return {
+    passCompletion: pctBoard(agg, (a) => ratio(a.accuratePasses, a.totalPasses), flagFor),
+    possession: pctBoard(agg, (a) => (a.possessionN > 0 ? a.possessionSum / a.possessionN : null), flagFor),
+    shotAccuracy: pctBoard(agg, (a) => ratio(a.shotsOnTarget, a.totalShots), flagFor),
+    tackleSuccess: pctBoard(agg, (a) => ratio(a.effectiveTackles, a.totalTackles), flagFor),
+    crossCompletion: pctBoard(agg, (a) => ratio(a.accurateCrosses, a.totalCrosses), flagFor),
+    longBallAccuracy: pctBoard(agg, (a) => ratio(a.accurateLongBalls, a.totalLongBalls), flagFor),
+  };
 }
 
 /**
@@ -281,7 +409,11 @@ export async function computeStats(now: number): Promise<StatsFile> {
   // The assister isn't in the cheap scoreboard `details` (only the scorer is), so
   // assists are read from each match's keyEvents (participant[1] of a non-own
   // Goal) alongside penalty-miss plays. Both ride one per-event summary cache.
-  type EventCache = { penMiss?: { name: string; team: string }[]; assists?: { name: string; team: string }[] };
+  type EventCache = {
+    penMiss?: { name: string; team: string }[];
+    assists?: { name: string; team: string }[];
+    teamBox?: TeamBox[];
+  };
   const rawCache =
     (statsJson as {
       cache?: { byEvent?: Record<string, EventCache>; penMissByEvent?: Record<string, { name: string; team: string }[]> };
@@ -294,9 +426,10 @@ export async function computeStats(now: number): Promise<StatsFile> {
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id!)
     .filter(Boolean);
-  // Refetch when live, never cached, or cached before assists existed (migrated entry).
+  // Refetch when live, never cached, or cached before assists / teamBox existed.
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
-    (id) => liveEventIds.includes(id) || byEvent[id]?.assists == null,
+    (id) =>
+      liveEventIds.includes(id) || byEvent[id]?.assists == null || byEvent[id]?.teamBox == null,
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -324,7 +457,30 @@ export async function computeStats(now: number): Promise<StatsFile> {
         if (a) assistsArr.push({ name: a, team });
       }
     }
-    byEvent[id] = { penMiss: misses, assists: assistsArr };
+    // Per-match team boxscore → raw counters for the completion boards.
+    const teamBox: TeamBox[] = (b.value?.boxscore?.teams ?? []).map((tm) => {
+      const disp = tm.team?.displayName ?? "";
+      const get = (n: string): number | null => {
+        const v = (tm.statistics ?? []).find((s) => s.name === n)?.displayValue;
+        const f = parseFloat(v ?? "");
+        return Number.isFinite(f) ? f : null;
+      };
+      return {
+        team: nameByTeam[norm(disp)] ?? disp,
+        possessionPct: get("possessionPct"),
+        accuratePasses: get("accuratePasses"),
+        totalPasses: get("totalPasses"),
+        shotsOnTarget: get("shotsOnTarget"),
+        totalShots: get("totalShots"),
+        effectiveTackles: get("effectiveTackles"),
+        totalTackles: get("totalTackles"),
+        accurateCrosses: get("accurateCrosses"),
+        totalCrosses: get("totalCrosses"),
+        accurateLongBalls: get("accurateLongBalls"),
+        totalLongBalls: get("totalLongBalls"),
+      };
+    });
+    byEvent[id] = { penMiss: misses, assists: assistsArr, teamBox };
   });
   const validIds = new Set([...eventById.keys()]);
   for (const id of Object.keys(byEvent)) if (!validIds.has(id)) delete byEvent[id];
@@ -376,5 +532,6 @@ export async function computeStats(now: number): Promise<StatsFile> {
       finished: finishedEventIds.length,
     },
     categories,
+    teamStats: buildTeamStats(byEvent, flagFor),
   };
 }

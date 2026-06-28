@@ -21,6 +21,26 @@ export type StatCategoryKey =
   | "penaltyScored"
   | "penaltyMissed";
 
+// One team row on a completion/accuracy board. `value` is the numeric % (for
+// sort + the share bar), `display` is the formatted "87.4%", `matches` is how
+// many finished games fed the aggregate.
+export type TeamPerfRow = {
+  rank: number;
+  team: string;
+  flag: string;
+  value: number;
+  display: string;
+  matches: number;
+};
+
+export type TeamPerfKey =
+  | "passCompletion"
+  | "possession"
+  | "shotAccuracy"
+  | "tackleSuccess"
+  | "crossCompletion"
+  | "longBallAccuracy";
+
 // One player line on a per-team mini-board (no rank/flag — the team owns those).
 export type TeamStatLeader = { name: string; value: number; matches?: number };
 
@@ -37,6 +57,10 @@ export type TeamStatBoards = {
 export type StatsFile = {
   meta: { generatedAt: string; source: string; finished: number };
   categories: Record<StatCategoryKey, StatRow[]>;
+  // The completion / control boards (pass %, possession, shot/tackle/cross/
+  // long-ball accuracy), aggregated per team across every finished match.
+  // Optional so an older stats.json snapshot without the block still type-checks.
+  teamStats?: Record<TeamPerfKey, TeamPerfRow[]>;
   // Keyed on the normalised team name (see teamKey below). Optional so an older
   // stats.json snapshot without the block still type-checks.
   byTeam?: Record<string, TeamStatBoards>;
@@ -62,6 +86,22 @@ export const STAT_CATEGORIES: {
   { key: "redCards", label: "Red Cards", unit: "reds", entity: "player", accent: "rose" },
   { key: "penaltyScored", label: "Penalties Scored", unit: "scored", entity: "player", accent: "acid" },
   { key: "penaltyMissed", label: "Penalties Missed", unit: "missed", entity: "player", accent: "rose" },
+];
+
+// Display order + copy for the completion / control boards. Every value is a
+// percentage where higher = sharper; `passCompletion` is featured (full width).
+export const TEAM_PERF_CATEGORIES: {
+  key: TeamPerfKey;
+  label: string;
+  unit: string;
+  accent: "acid" | "mint" | "amber" | "rose";
+}[] = [
+  { key: "passCompletion", label: "Pass Completion", unit: "of passes found a teammate", accent: "acid" },
+  { key: "possession", label: "Possession", unit: "average share of the ball", accent: "mint" },
+  { key: "shotAccuracy", label: "Shot Accuracy", unit: "of shots on target", accent: "amber" },
+  { key: "tackleSuccess", label: "Tackle Success", unit: "of tackles won the ball", accent: "acid" },
+  { key: "crossCompletion", label: "Cross Completion", unit: "of crosses picked out a man", accent: "mint" },
+  { key: "longBallAccuracy", label: "Long-Ball Accuracy", unit: "of long balls reached a teammate", accent: "rose" },
 ];
 
 export function getStats(): StatsFile {

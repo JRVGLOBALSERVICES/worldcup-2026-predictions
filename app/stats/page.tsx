@@ -11,7 +11,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "Tournament Stats — World Cup 2026 Leaders",
   description:
-    "Live World Cup 2026 leaderboards in Malaysia time — top scorers, assists, clean sheets, yellow & red cards, and penalties scored vs missed. Pulled from the official match feed.",
+    "Live World Cup 2026 leaderboards in Malaysia time — top scorers, assists, clean sheets, cards, penalties, plus team completion stats: pass completion, possession, shot, tackle, cross and long-ball accuracy. Pulled from the official match feed.",
 };
 
 export default function StatsPage() {
@@ -39,9 +39,10 @@ export default function StatsPage() {
           The race for the Golden Boot.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          Top scorers, assists, clean sheets, the cards table and penalties scored vs missed —
-          every board pulled straight from the official match feed and ranked top ten, in Malaysia
-          time.
+          Top scorers, assists, clean sheets, the cards table and penalties scored vs missed — then
+          the team completion boards below: pass, shot, tackle, cross and long-ball accuracy plus
+          possession. Every number pulled straight from the official match feed, ranked top ten, in
+          Malaysia time.
         </p>
       </section>
 
@@ -49,7 +50,9 @@ export default function StatsPage() {
 
       <p className="mt-10 font-mono text-[0.62rem] uppercase leading-relaxed tracking-[0.1em] text-ink/35">
         Source: {initial.meta.source}. Clean sheets credited to the team that kept the opponent
-        scoreless. Boards refresh as results come in — tap Force update for the latest.
+        scoreless. Completion boards are true aggregates — total completed ÷ total attempted across
+        every finished match, not an average of per-game rates. Boards refresh as results come in —
+        tap Force update for the latest.
       </p>
     </main>
   );

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T07:20:33.116Z",
+    "generatedAt": "2026-06-28T07:25:22.316Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 56
   },
@@ -130,6 +130,14 @@
       },
       {
         "rank": 4,
+        "name": "Bukayo Saka",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 4,
         "name": "Chris Wood",
         "team": "New Zealand",
         "flag": "🇳🇿",
@@ -157,14 +165,6 @@
         "name": "Florian Wirtz",
         "team": "Germany",
         "flag": "🇩🇪",
-        "value": 2,
-        "matches": 3
-      },
-      {
-        "rank": 4,
-        "name": "Hannibal Mejbri",
-        "team": "Tunisia",
-        "flag": "🇹🇳",
         "value": 2,
         "matches": 3
       }
@@ -422,6 +422,500 @@
       }
     ]
   },
+  "teamStats": {
+    "passCompletion": [
+      {
+        "rank": 1,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 91.3,
+        "display": "91.3%",
+        "matches": 3
+      },
+      {
+        "rank": 2,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 91.2,
+        "display": "91.2%",
+        "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 91.2,
+        "display": "91.2%",
+        "matches": 3
+      },
+      {
+        "rank": 4,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 90.8,
+        "display": "90.8%",
+        "matches": 2
+      },
+      {
+        "rank": 5,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 90.6,
+        "display": "90.6%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 90.6,
+        "display": "90.6%",
+        "matches": 2
+      },
+      {
+        "rank": 7,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 89,
+        "display": "89.0%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 88.9,
+        "display": "88.9%",
+        "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 88.2,
+        "display": "88.2%",
+        "matches": 2
+      },
+      {
+        "rank": 10,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 88,
+        "display": "88.0%",
+        "matches": 3
+      }
+    ],
+    "possession": [
+      {
+        "rank": 1,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 67,
+        "display": "67.0%",
+        "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 65.9,
+        "display": "65.9%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 64,
+        "display": "64.0%",
+        "matches": 2
+      },
+      {
+        "rank": 4,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 63.1,
+        "display": "63.1%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "South Korea",
+        "flag": "🇰🇷",
+        "value": 63,
+        "display": "63.0%",
+        "matches": 2
+      },
+      {
+        "rank": 5,
+        "team": "Turkiye",
+        "flag": "🇹🇷",
+        "value": 63,
+        "display": "63.0%",
+        "matches": 2
+      },
+      {
+        "rank": 7,
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 62.3,
+        "display": "62.3%",
+        "matches": 2
+      },
+      {
+        "rank": 8,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 62.2,
+        "display": "62.2%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 61.9,
+        "display": "61.9%",
+        "matches": 2
+      },
+      {
+        "rank": 10,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 61.2,
+        "display": "61.2%",
+        "matches": 2
+      }
+    ],
+    "shotAccuracy": [
+      {
+        "rank": 1,
+        "team": "Switzerland",
+        "flag": "🇨🇭",
+        "value": 57.9,
+        "display": "57.9%",
+        "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "Ecuador",
+        "flag": "🇪🇨",
+        "value": 52.9,
+        "display": "52.9%",
+        "matches": 2
+      },
+      {
+        "rank": 3,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 48.3,
+        "display": "48.3%",
+        "matches": 2
+      },
+      {
+        "rank": 4,
+        "team": "Sweden",
+        "flag": "🇸🇪",
+        "value": 48.1,
+        "display": "48.1%",
+        "matches": 2
+      },
+      {
+        "rank": 5,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 47.4,
+        "display": "47.4%",
+        "matches": 2
+      },
+      {
+        "rank": 6,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 46.7,
+        "display": "46.7%",
+        "matches": 2
+      },
+      {
+        "rank": 7,
+        "team": "Croatia",
+        "flag": "🇭🇷",
+        "value": 45.8,
+        "display": "45.8%",
+        "matches": 3
+      },
+      {
+        "rank": 7,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 45.8,
+        "display": "45.8%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 45.7,
+        "display": "45.7%",
+        "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 44.1,
+        "display": "44.1%",
+        "matches": 3
+      }
+    ],
+    "tackleSuccess": [
+      {
+        "rank": 1,
+        "team": "Cape Verde",
+        "flag": "🇨🇻",
+        "value": 87.1,
+        "display": "87.1%",
+        "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 75.6,
+        "display": "75.6%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 71.4,
+        "display": "71.4%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Tunisia",
+        "flag": "🇹🇳",
+        "value": 71.4,
+        "display": "71.4%",
+        "matches": 2
+      },
+      {
+        "rank": 5,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 70,
+        "display": "70.0%",
+        "matches": 3
+      },
+      {
+        "rank": 6,
+        "team": "Australia",
+        "flag": "🇦🇺",
+        "value": 69.7,
+        "display": "69.7%",
+        "matches": 2
+      },
+      {
+        "rank": 6,
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 69.7,
+        "display": "69.7%",
+        "matches": 2
+      },
+      {
+        "rank": 8,
+        "team": "Iran",
+        "flag": "🇮🇷",
+        "value": 68.3,
+        "display": "68.3%",
+        "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Uzbekistan",
+        "flag": "🇺🇿",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 3
+      }
+    ],
+    "crossCompletion": [
+      {
+        "rank": 1,
+        "team": "Curacao",
+        "flag": "🇨🇼",
+        "value": 37.5,
+        "display": "37.5%",
+        "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 36.1,
+        "display": "36.1%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Haiti",
+        "flag": "🇭🇹",
+        "value": 35.7,
+        "display": "35.7%",
+        "matches": 2
+      },
+      {
+        "rank": 3,
+        "team": "Iraq",
+        "flag": "🇮🇶",
+        "value": 35.7,
+        "display": "35.7%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 33.3,
+        "display": "33.3%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Scotland",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "value": 33.3,
+        "display": "33.3%",
+        "matches": 2
+      },
+      {
+        "rank": 7,
+        "team": "Ivory Coast",
+        "flag": "🇨🇮",
+        "value": 32,
+        "display": "32.0%",
+        "matches": 2
+      },
+      {
+        "rank": 8,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 30.8,
+        "display": "30.8%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "Ecuador",
+        "flag": "🇪🇨",
+        "value": 30.4,
+        "display": "30.4%",
+        "matches": 2
+      },
+      {
+        "rank": 10,
+        "team": "Qatar",
+        "flag": "🇶🇦",
+        "value": 30,
+        "display": "30.0%",
+        "matches": 2
+      }
+    ],
+    "longBallAccuracy": [
+      {
+        "rank": 1,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 63.9,
+        "display": "63.9%",
+        "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 62.4,
+        "display": "62.4%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 57.9,
+        "display": "57.9%",
+        "matches": 2
+      },
+      {
+        "rank": 4,
+        "team": "Senegal",
+        "flag": "🇸🇳",
+        "value": 56.7,
+        "display": "56.7%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 53.1,
+        "display": "53.1%",
+        "matches": 3
+      },
+      {
+        "rank": 6,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 52.4,
+        "display": "52.4%",
+        "matches": 3
+      },
+      {
+        "rank": 7,
+        "team": "Haiti",
+        "flag": "🇭🇹",
+        "value": 52,
+        "display": "52.0%",
+        "matches": 2
+      },
+      {
+        "rank": 8,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 51.5,
+        "display": "51.5%",
+        "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 51.2,
+        "display": "51.2%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 51.2,
+        "display": "51.2%",
+        "matches": 3
+      }
+    ]
+  },
   "byTeam": {
     "france": {
       "team": "France",
@@ -470,9 +964,9 @@
           "matches": 1
         },
         {
-          "name": "Ousmane Dembélé",
+          "name": "Bradley Barcola",
           "value": 1,
-          "matches": 3
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -731,6 +1225,11 @@
           "matches": 1
         },
         {
+          "name": "Michael Gregoritsch",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Xaver Schlager",
           "value": 1,
           "matches": 1
@@ -895,6 +1394,11 @@
           "name": "Arthur Masuaku",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Meschack Elia",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -944,8 +1448,8 @@
       "assists": [
         {
           "name": "Bukayo Saka",
-          "value": 1,
-          "matches": 1
+          "value": 2,
+          "matches": 2
         },
         {
           "name": "Declan Rice",
@@ -954,6 +1458,11 @@
         },
         {
           "name": "Elliot Anderson",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Jude Bellingham",
           "value": 1,
           "matches": 1
         }
@@ -1012,6 +1521,11 @@
           "matches": 1
         },
         {
+          "name": "Luka Modric",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Mateo Kovacic",
           "value": 1,
           "matches": 1
@@ -1052,6 +1566,11 @@
       "assists": [
         {
           "name": "Brandon Thomas-Asante",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Ernest Nuamah",
           "value": 1,
           "matches": 1
         }
@@ -1100,6 +1619,11 @@
         },
         {
           "name": "Gustavo Puerta",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Juan Fernando Quintero",
           "value": 1,
           "matches": 1
         },
@@ -1217,7 +1741,13 @@
           "matches": 1
         }
       ],
-      "assists": [],
+      "assists": [
+        {
+          "name": "Tshepang Moremi",
+          "value": 1,
+          "matches": 1
+        }
+      ],
       "yellowCards": [
         {
           "name": "Aubrey Modiba",
@@ -1304,6 +1834,11 @@
         }
       ],
       "assists": [
+        {
+          "name": "Dennis Hadzikadunic",
+          "value": 1,
+          "matches": 1
+        },
         {
           "name": "Ivan Basic",
           "value": 1,
@@ -1416,6 +1951,11 @@
           "matches": 3
         },
         {
+          "name": "Jorge Sánchez",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Luis Romo",
           "value": 1,
           "matches": 1
@@ -1521,6 +2061,11 @@
           "name": "Chadi Riad",
           "value": 1,
           "matches": 3
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -1755,6 +2300,11 @@
         }
       ],
       "assists": [
+        {
+          "name": "Ibrahim Sangaré",
+          "value": 1,
+          "matches": 1
+        },
         {
           "name": "Yan Diomande",
           "value": 1,
@@ -2152,7 +2702,18 @@
           "matches": 1
         }
       ],
-      "assists": [],
+      "assists": [
+        {
+          "name": "Houssem Aouar",
+          "value": 2,
+          "matches": 1
+        },
+        {
+          "name": "Riyad Mahrez",
+          "value": 1,
+          "matches": 1
+        }
+      ],
       "yellowCards": [
         {
           "name": "Ramiz Zerrouki",
@@ -2253,6 +2814,11 @@
       ],
       "assists": [
         {
+          "name": "Kevin Rodríguez",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Pedro Vite",
           "value": 1,
           "matches": 3
@@ -2325,7 +2891,7 @@
           "matches": 1
         },
         {
-          "name": "Eren Elmali",
+          "name": "Orkun Kökçü",
           "value": 1,
           "matches": 1
         }
@@ -2408,6 +2974,16 @@
       "assists": [
         {
           "name": "Hans Vanaken",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Nicolas Raskin",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Romelu Lukaku",
           "value": 1,
           "matches": 1
         }
@@ -2620,6 +3196,36 @@
             "name": "Martin Ødegaard",
             "team": "Norway"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Iraq",
+            "possessionPct": 38.7,
+            "accuratePasses": 271,
+            "totalPasses": 334,
+            "shotsOnTarget": 1,
+            "totalShots": 11,
+            "effectiveTackles": 13,
+            "totalTackles": 19,
+            "accurateCrosses": 6,
+            "totalCrosses": 13,
+            "accurateLongBalls": 22,
+            "totalLongBalls": 54
+          },
+          {
+            "team": "Norway",
+            "possessionPct": 61.3,
+            "accuratePasses": 477,
+            "totalPasses": 537,
+            "shotsOnTarget": 5,
+            "totalShots": 12,
+            "effectiveTackles": 10,
+            "totalTackles": 15,
+            "accurateCrosses": 7,
+            "totalCrosses": 17,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 42
+          }
         ]
       },
       "760431": {
@@ -2632,6 +3238,36 @@
           {
             "name": "Noor Al-Rawabdeh",
             "team": "Jordan"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Austria",
+            "possessionPct": 63.2,
+            "accuratePasses": 487,
+            "totalPasses": 580,
+            "shotsOnTarget": 4,
+            "totalShots": 11,
+            "effectiveTackles": 7,
+            "totalTackles": 17,
+            "accurateCrosses": 3,
+            "totalCrosses": 17,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 47
+          },
+          {
+            "team": "Jordan",
+            "possessionPct": 36.8,
+            "accuratePasses": 241,
+            "totalPasses": 332,
+            "shotsOnTarget": 4,
+            "totalShots": 11,
+            "effectiveTackles": 6,
+            "totalTackles": 15,
+            "accurateCrosses": 3,
+            "totalCrosses": 15,
+            "accurateLongBalls": 23,
+            "totalLongBalls": 52
           }
         ]
       },
@@ -2650,6 +3286,36 @@
             "name": "Iliman Ndiaye",
             "team": "Senegal"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "France",
+            "possessionPct": 53.4,
+            "accuratePasses": 505,
+            "totalPasses": 575,
+            "shotsOnTarget": 8,
+            "totalShots": 11,
+            "effectiveTackles": 14,
+            "totalTackles": 19,
+            "accurateCrosses": 0,
+            "totalCrosses": 9,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 44
+          },
+          {
+            "team": "Senegal",
+            "possessionPct": 46.6,
+            "accuratePasses": 430,
+            "totalPasses": 502,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 10,
+            "totalTackles": 14,
+            "accurateCrosses": 1,
+            "totalCrosses": 9,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 49
+          }
         ]
       },
       "760433": {
@@ -2663,6 +3329,36 @@
             "name": "Nico González",
             "team": "Argentina"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Argentina",
+            "possessionPct": 47.8,
+            "accuratePasses": 504,
+            "totalPasses": 561,
+            "shotsOnTarget": 6,
+            "totalShots": 10,
+            "effectiveTackles": 19,
+            "totalTackles": 27,
+            "accurateCrosses": 1,
+            "totalCrosses": 6,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 32
+          },
+          {
+            "team": "Algeria",
+            "possessionPct": 52.2,
+            "accuratePasses": 563,
+            "totalPasses": 609,
+            "shotsOnTarget": 1,
+            "totalShots": 7,
+            "effectiveTackles": 10,
+            "totalTackles": 17,
+            "accurateCrosses": 1,
+            "totalCrosses": 9,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 25
+          }
         ]
       },
       "760434": {
@@ -2671,6 +3367,36 @@
           {
             "name": "Brandon Thomas-Asante",
             "team": "Ghana"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Ghana",
+            "possessionPct": 38,
+            "accuratePasses": 292,
+            "totalPasses": 352,
+            "shotsOnTarget": 2,
+            "totalShots": 7,
+            "effectiveTackles": 9,
+            "totalTackles": 16,
+            "accurateCrosses": 4,
+            "totalCrosses": 16,
+            "accurateLongBalls": 30,
+            "totalLongBalls": 52
+          },
+          {
+            "team": "Panama",
+            "possessionPct": 62,
+            "accuratePasses": 503,
+            "totalPasses": 583,
+            "shotsOnTarget": 4,
+            "totalShots": 11,
+            "effectiveTackles": 11,
+            "totalTackles": 29,
+            "accurateCrosses": 4,
+            "totalCrosses": 21,
+            "accurateLongBalls": 34,
+            "totalLongBalls": 70
           }
         ]
       },
@@ -2683,7 +3409,37 @@
           },
           {
             "name": "Arthur Masuaku",
-            "team": "DR Congo"
+            "team": "Congo DR"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Portugal",
+            "possessionPct": 75.4,
+            "accuratePasses": 724,
+            "totalPasses": 783,
+            "shotsOnTarget": 1,
+            "totalShots": 7,
+            "effectiveTackles": 6,
+            "totalTackles": 12,
+            "accurateCrosses": 6,
+            "totalCrosses": 23,
+            "accurateLongBalls": 41,
+            "totalLongBalls": 64
+          },
+          {
+            "team": "Congo DR",
+            "possessionPct": 24.6,
+            "accuratePasses": 195,
+            "totalPasses": 249,
+            "shotsOnTarget": 2,
+            "totalShots": 8,
+            "effectiveTackles": 9,
+            "totalTackles": 17,
+            "accurateCrosses": 1,
+            "totalCrosses": 10,
+            "accurateLongBalls": 11,
+            "totalLongBalls": 40
           }
         ]
       },
@@ -2701,6 +3457,36 @@
           {
             "name": "Cucho Hernández",
             "team": "Colombia"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Uzbekistan",
+            "possessionPct": 38.6,
+            "accuratePasses": 243,
+            "totalPasses": 319,
+            "shotsOnTarget": 2,
+            "totalShots": 8,
+            "effectiveTackles": 7,
+            "totalTackles": 10,
+            "accurateCrosses": 3,
+            "totalCrosses": 13,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 53
+          },
+          {
+            "team": "Colombia",
+            "possessionPct": 61.4,
+            "accuratePasses": 444,
+            "totalPasses": 519,
+            "shotsOnTarget": 4,
+            "totalShots": 15,
+            "effectiveTackles": 3,
+            "totalTackles": 10,
+            "accurateCrosses": 6,
+            "totalCrosses": 16,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 48
           }
         ]
       },
@@ -2727,6 +3513,36 @@
             "name": "Bukayo Saka",
             "team": "England"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "England",
+            "possessionPct": 51.7,
+            "accuratePasses": 406,
+            "totalPasses": 474,
+            "shotsOnTarget": 11,
+            "totalShots": 22,
+            "effectiveTackles": 7,
+            "totalTackles": 9,
+            "accurateCrosses": 6,
+            "totalCrosses": 13,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 41
+          },
+          {
+            "team": "Croatia",
+            "possessionPct": 48.3,
+            "accuratePasses": 381,
+            "totalPasses": 443,
+            "shotsOnTarget": 5,
+            "totalShots": 10,
+            "effectiveTackles": 8,
+            "totalTackles": 11,
+            "accurateCrosses": 2,
+            "totalCrosses": 13,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 42
+          }
         ]
       },
       "760438": {
@@ -2735,6 +3551,36 @@
           {
             "name": "Alexandr Sojka",
             "team": "Czechia"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Czechia",
+            "possessionPct": 38.3,
+            "accuratePasses": 272,
+            "totalPasses": 341,
+            "shotsOnTarget": 3,
+            "totalShots": 14,
+            "effectiveTackles": 4,
+            "totalTackles": 12,
+            "accurateCrosses": 7,
+            "totalCrosses": 16,
+            "accurateLongBalls": 22,
+            "totalLongBalls": 45
+          },
+          {
+            "team": "South Africa",
+            "possessionPct": 61.7,
+            "accuratePasses": 508,
+            "totalPasses": 563,
+            "shotsOnTarget": 4,
+            "totalShots": 17,
+            "effectiveTackles": 11,
+            "totalTackles": 20,
+            "accurateCrosses": 4,
+            "totalCrosses": 17,
+            "accurateLongBalls": 30,
+            "totalLongBalls": 58
           }
         ]
       },
@@ -2749,6 +3595,36 @@
             "name": "Rubén Vargas",
             "team": "Switzerland"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Switzerland",
+            "possessionPct": 62.3,
+            "accuratePasses": 516,
+            "totalPasses": 586,
+            "shotsOnTarget": 7,
+            "totalShots": 13,
+            "effectiveTackles": 13,
+            "totalTackles": 19,
+            "accurateCrosses": 1,
+            "totalCrosses": 23,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 50
+          },
+          {
+            "team": "Bosnia-Herzegovina",
+            "possessionPct": 37.7,
+            "accuratePasses": 287,
+            "totalPasses": 354,
+            "shotsOnTarget": 3,
+            "totalShots": 5,
+            "effectiveTackles": 3,
+            "totalTackles": 13,
+            "accurateCrosses": 1,
+            "totalCrosses": 12,
+            "accurateLongBalls": 13,
+            "totalLongBalls": 48
+          }
         ]
       },
       "760440": {
@@ -2758,15 +3634,105 @@
             "name": "Nathan Saliba",
             "team": "Canada"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Canada",
+            "possessionPct": 79,
+            "accuratePasses": 515,
+            "totalPasses": 567,
+            "shotsOnTarget": 10,
+            "totalShots": 32,
+            "effectiveTackles": 5,
+            "totalTackles": 9,
+            "accurateCrosses": 13,
+            "totalCrosses": 55,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 16
+          },
+          {
+            "team": "Qatar",
+            "possessionPct": 21,
+            "accuratePasses": 104,
+            "totalPasses": 162,
+            "shotsOnTarget": 0,
+            "totalShots": 2,
+            "effectiveTackles": 10,
+            "totalTackles": 16,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 54
+          }
         ]
       },
       "760441": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Mexico",
+            "possessionPct": 42.4,
+            "accuratePasses": 349,
+            "totalPasses": 427,
+            "shotsOnTarget": 4,
+            "totalShots": 8,
+            "effectiveTackles": 7,
+            "totalTackles": 14,
+            "accurateCrosses": 4,
+            "totalCrosses": 6,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 56
+          },
+          {
+            "team": "South Korea",
+            "possessionPct": 57.6,
+            "accuratePasses": 488,
+            "totalPasses": 578,
+            "shotsOnTarget": 2,
+            "totalShots": 9,
+            "effectiveTackles": 10,
+            "totalTackles": 17,
+            "accurateCrosses": 5,
+            "totalCrosses": 9,
+            "accurateLongBalls": 23,
+            "totalLongBalls": 64
+          }
+        ]
       },
       "760442": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "United States",
+            "possessionPct": 61.9,
+            "accuratePasses": 444,
+            "totalPasses": 523,
+            "shotsOnTarget": 2,
+            "totalShots": 10,
+            "effectiveTackles": 8,
+            "totalTackles": 20,
+            "accurateCrosses": 4,
+            "totalCrosses": 14,
+            "accurateLongBalls": 26,
+            "totalLongBalls": 59
+          },
+          {
+            "team": "Australia",
+            "possessionPct": 38.1,
+            "accuratePasses": 219,
+            "totalPasses": 310,
+            "shotsOnTarget": 2,
+            "totalShots": 5,
+            "effectiveTackles": 11,
+            "totalTackles": 13,
+            "accurateCrosses": 4,
+            "totalCrosses": 19,
+            "accurateLongBalls": 19,
+            "totalLongBalls": 46
+          }
+        ]
       },
       "760443": {
         "penMiss": [],
@@ -2774,6 +3740,36 @@
           {
             "name": "Julio Enciso",
             "team": "Paraguay"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Turkiye",
+            "possessionPct": 78.5,
+            "accuratePasses": 559,
+            "totalPasses": 629,
+            "shotsOnTarget": 5,
+            "totalShots": 32,
+            "effectiveTackles": 11,
+            "totalTackles": 17,
+            "accurateCrosses": 8,
+            "totalCrosses": 42,
+            "accurateLongBalls": 28,
+            "totalLongBalls": 42
+          },
+          {
+            "team": "Paraguay",
+            "possessionPct": 21.5,
+            "accuratePasses": 96,
+            "totalPasses": 178,
+            "shotsOnTarget": 2,
+            "totalShots": 7,
+            "effectiveTackles": 15,
+            "totalTackles": 25,
+            "accurateCrosses": 2,
+            "totalCrosses": 6,
+            "accurateLongBalls": 22,
+            "totalLongBalls": 64
           }
         ]
       },
@@ -2788,6 +3784,36 @@
             "name": "Lucas Paquetá",
             "team": "Brazil"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Brazil",
+            "possessionPct": 56.7,
+            "accuratePasses": 462,
+            "totalPasses": 525,
+            "shotsOnTarget": 5,
+            "totalShots": 8,
+            "effectiveTackles": 10,
+            "totalTackles": 21,
+            "accurateCrosses": 1,
+            "totalCrosses": 9,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 44
+          },
+          {
+            "team": "Haiti",
+            "possessionPct": 43.3,
+            "accuratePasses": 332,
+            "totalPasses": 399,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
+            "effectiveTackles": 10,
+            "totalTackles": 16,
+            "accurateCrosses": 3,
+            "totalCrosses": 11,
+            "accurateLongBalls": 31,
+            "totalLongBalls": 56
+          }
         ]
       },
       "760445": {
@@ -2797,11 +3823,71 @@
             "name": "Brahim Díaz",
             "team": "Morocco"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Scotland",
+            "possessionPct": 41.1,
+            "accuratePasses": 388,
+            "totalPasses": 456,
+            "shotsOnTarget": 0,
+            "totalShots": 6,
+            "effectiveTackles": 12,
+            "totalTackles": 20,
+            "accurateCrosses": 3,
+            "totalCrosses": 13,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 47
+          },
+          {
+            "team": "Morocco",
+            "possessionPct": 58.9,
+            "accuratePasses": 600,
+            "totalPasses": 670,
+            "shotsOnTarget": 2,
+            "totalShots": 12,
+            "effectiveTackles": 6,
+            "totalTackles": 10,
+            "accurateCrosses": 2,
+            "totalCrosses": 10,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 44
+          }
         ]
       },
       "760446": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Ecuador",
+            "possessionPct": 74.6,
+            "accuratePasses": 581,
+            "totalPasses": 644,
+            "shotsOnTarget": 15,
+            "totalShots": 27,
+            "effectiveTackles": 11,
+            "totalTackles": 19,
+            "accurateCrosses": 11,
+            "totalCrosses": 33,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 34
+          },
+          {
+            "team": "Curacao",
+            "possessionPct": 25.4,
+            "accuratePasses": 159,
+            "totalPasses": 227,
+            "shotsOnTarget": 3,
+            "totalShots": 10,
+            "effectiveTackles": 7,
+            "totalTackles": 17,
+            "accurateCrosses": 1,
+            "totalCrosses": 1,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 50
+          }
+        ]
       },
       "760447": {
         "penMiss": [],
@@ -2830,6 +3916,36 @@
             "name": "Memphis Depay",
             "team": "Netherlands"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Netherlands",
+            "possessionPct": 50.9,
+            "accuratePasses": 398,
+            "totalPasses": 449,
+            "shotsOnTarget": 7,
+            "totalShots": 10,
+            "effectiveTackles": 8,
+            "totalTackles": 15,
+            "accurateCrosses": 3,
+            "totalCrosses": 16,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 35
+          },
+          {
+            "team": "Sweden",
+            "possessionPct": 49.1,
+            "accuratePasses": 361,
+            "totalPasses": 425,
+            "shotsOnTarget": 8,
+            "totalShots": 16,
+            "effectiveTackles": 9,
+            "totalTackles": 18,
+            "accurateCrosses": 3,
+            "totalCrosses": 21,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 30
+          }
         ]
       },
       "760448": {
@@ -2842,6 +3958,36 @@
           {
             "name": "Felix Nmecha",
             "team": "Germany"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Germany",
+            "possessionPct": 59.5,
+            "accuratePasses": 555,
+            "totalPasses": 624,
+            "shotsOnTarget": 7,
+            "totalShots": 16,
+            "effectiveTackles": 17,
+            "totalTackles": 26,
+            "accurateCrosses": 5,
+            "totalCrosses": 21,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 31
+          },
+          {
+            "team": "Ivory Coast",
+            "possessionPct": 40.5,
+            "accuratePasses": 367,
+            "totalPasses": 431,
+            "shotsOnTarget": 2,
+            "totalShots": 9,
+            "effectiveTackles": 11,
+            "totalTackles": 20,
+            "accurateCrosses": 5,
+            "totalCrosses": 9,
+            "accurateLongBalls": 28,
+            "totalLongBalls": 57
           }
         ]
       },
@@ -2864,6 +4010,36 @@
             "name": "Kaishu Sano",
             "team": "Japan"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Tunisia",
+            "possessionPct": 37.9,
+            "accuratePasses": 284,
+            "totalPasses": 354,
+            "shotsOnTarget": 0,
+            "totalShots": 2,
+            "effectiveTackles": 16,
+            "totalTackles": 18,
+            "accurateCrosses": 2,
+            "totalCrosses": 10,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 56
+          },
+          {
+            "team": "Japan",
+            "possessionPct": 62.1,
+            "accuratePasses": 521,
+            "totalPasses": 583,
+            "shotsOnTarget": 5,
+            "totalShots": 11,
+            "effectiveTackles": 12,
+            "totalTackles": 18,
+            "accurateCrosses": 2,
+            "totalCrosses": 11,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 32
+          }
         ]
       },
       "760450": {
@@ -2873,11 +4049,71 @@
             "name": "Maxi Araújo",
             "team": "Uruguay"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Uruguay",
+            "possessionPct": 65.2,
+            "accuratePasses": 420,
+            "totalPasses": 511,
+            "shotsOnTarget": 2,
+            "totalShots": 17,
+            "effectiveTackles": 8,
+            "totalTackles": 16,
+            "accurateCrosses": 4,
+            "totalCrosses": 29,
+            "accurateLongBalls": 23,
+            "totalLongBalls": 48
+          },
+          {
+            "team": "Cape Verde",
+            "possessionPct": 34.8,
+            "accuratePasses": 205,
+            "totalPasses": 278,
+            "shotsOnTarget": 4,
+            "totalShots": 12,
+            "effectiveTackles": 15,
+            "totalTackles": 16,
+            "accurateCrosses": 2,
+            "totalCrosses": 7,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 61
+          }
         ]
       },
       "760451": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Belgium",
+            "possessionPct": 70.1,
+            "accuratePasses": 533,
+            "totalPasses": 621,
+            "shotsOnTarget": 7,
+            "totalShots": 23,
+            "effectiveTackles": 7,
+            "totalTackles": 12,
+            "accurateCrosses": 6,
+            "totalCrosses": 32,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 35
+          },
+          {
+            "team": "Iran",
+            "possessionPct": 29.9,
+            "accuratePasses": 198,
+            "totalPasses": 270,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
+            "effectiveTackles": 11,
+            "totalTackles": 19,
+            "accurateCrosses": 2,
+            "totalCrosses": 8,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 50
+          }
+        ]
       },
       "760452": {
         "penMiss": [],
@@ -2898,6 +4134,36 @@
             "name": "Mohamed Salah",
             "team": "Egypt"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "New Zealand",
+            "possessionPct": 44.4,
+            "accuratePasses": 337,
+            "totalPasses": 421,
+            "shotsOnTarget": 5,
+            "totalShots": 11,
+            "effectiveTackles": 6,
+            "totalTackles": 12,
+            "accurateCrosses": 3,
+            "totalCrosses": 15,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 50
+          },
+          {
+            "team": "Egypt",
+            "possessionPct": 55.6,
+            "accuratePasses": 460,
+            "totalPasses": 526,
+            "shotsOnTarget": 7,
+            "totalShots": 19,
+            "effectiveTackles": 13,
+            "totalTackles": 16,
+            "accurateCrosses": 7,
+            "totalCrosses": 22,
+            "accurateLongBalls": 22,
+            "totalLongBalls": 48
+          }
         ]
       },
       "760453": {
@@ -2915,6 +4181,36 @@
             "name": "Dani Olmo",
             "team": "Spain"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Spain",
+            "possessionPct": 67.1,
+            "accuratePasses": 668,
+            "totalPasses": 726,
+            "shotsOnTarget": 8,
+            "totalShots": 22,
+            "effectiveTackles": 8,
+            "totalTackles": 10,
+            "accurateCrosses": 7,
+            "totalCrosses": 25,
+            "accurateLongBalls": 28,
+            "totalLongBalls": 38
+          },
+          {
+            "team": "Saudi Arabia",
+            "possessionPct": 32.9,
+            "accuratePasses": 294,
+            "totalPasses": 364,
+            "shotsOnTarget": 1,
+            "totalShots": 3,
+            "effectiveTackles": 12,
+            "totalTackles": 15,
+            "accurateCrosses": 0,
+            "totalCrosses": 5,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 35
+          }
         ]
       },
       "760454": {
@@ -2931,6 +4227,40 @@
           {
             "name": "Patrick Berg",
             "team": "Norway"
+          },
+          {
+            "name": "Nicolas Jackson",
+            "team": "Senegal"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Norway",
+            "possessionPct": 41.7,
+            "accuratePasses": 282,
+            "totalPasses": 353,
+            "shotsOnTarget": 7,
+            "totalShots": 13,
+            "effectiveTackles": 9,
+            "totalTackles": 10,
+            "accurateCrosses": 3,
+            "totalCrosses": 10,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 51
+          },
+          {
+            "team": "Senegal",
+            "possessionPct": 58.3,
+            "accuratePasses": 430,
+            "totalPasses": 489,
+            "shotsOnTarget": 4,
+            "totalShots": 16,
+            "effectiveTackles": 7,
+            "totalTackles": 16,
+            "accurateCrosses": 8,
+            "totalCrosses": 23,
+            "accurateLongBalls": 37,
+            "totalLongBalls": 58
           }
         ]
       },
@@ -2940,6 +4270,40 @@
           {
             "name": "Mousa Al-Tamari",
             "team": "Jordan"
+          },
+          {
+            "name": "Riyad Mahrez",
+            "team": "Algeria"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Jordan",
+            "possessionPct": 27.9,
+            "accuratePasses": 181,
+            "totalPasses": 251,
+            "shotsOnTarget": 4,
+            "totalShots": 8,
+            "effectiveTackles": 17,
+            "totalTackles": 30,
+            "accurateCrosses": 2,
+            "totalCrosses": 5,
+            "accurateLongBalls": 23,
+            "totalLongBalls": 53
+          },
+          {
+            "team": "Algeria",
+            "possessionPct": 72.1,
+            "accuratePasses": 561,
+            "totalPasses": 641,
+            "shotsOnTarget": 8,
+            "totalShots": 17,
+            "effectiveTackles": 18,
+            "totalTackles": 25,
+            "accurateCrosses": 5,
+            "totalCrosses": 21,
+            "accurateLongBalls": 19,
+            "totalLongBalls": 44
           }
         ]
       },
@@ -2955,6 +4319,36 @@
             "name": "Facundo Medina",
             "team": "Argentina"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Argentina",
+            "possessionPct": 53.6,
+            "accuratePasses": 494,
+            "totalPasses": 554,
+            "shotsOnTarget": 5,
+            "totalShots": 12,
+            "effectiveTackles": 11,
+            "totalTackles": 21,
+            "accurateCrosses": 1,
+            "totalCrosses": 4,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 27
+          },
+          {
+            "team": "Austria",
+            "possessionPct": 46.4,
+            "accuratePasses": 401,
+            "totalPasses": 468,
+            "shotsOnTarget": 1,
+            "totalShots": 6,
+            "effectiveTackles": 7,
+            "totalTackles": 12,
+            "accurateCrosses": 3,
+            "totalCrosses": 17,
+            "accurateLongBalls": 11,
+            "totalLongBalls": 21
+          }
         ]
       },
       "760457": {
@@ -2967,16 +4361,115 @@
           {
             "name": "Ousmane Dembélé",
             "team": "France"
+          },
+          {
+            "name": "Michael Olise",
+            "team": "France"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "France",
+            "possessionPct": 55.6,
+            "accuratePasses": 540,
+            "totalPasses": 603,
+            "shotsOnTarget": 5,
+            "totalShots": 19,
+            "effectiveTackles": 9,
+            "totalTackles": 14,
+            "accurateCrosses": 2,
+            "totalCrosses": 14,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 30
+          },
+          {
+            "team": "Iraq",
+            "possessionPct": 44.4,
+            "accuratePasses": 413,
+            "totalPasses": 481,
+            "shotsOnTarget": 0,
+            "totalShots": 4,
+            "effectiveTackles": 8,
+            "totalTackles": 16,
+            "accurateCrosses": 4,
+            "totalCrosses": 9,
+            "accurateLongBalls": 21,
+            "totalLongBalls": 51
           }
         ]
       },
       "760458": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "England",
+            "possessionPct": 78.9,
+            "accuratePasses": 586,
+            "totalPasses": 633,
+            "shotsOnTarget": 3,
+            "totalShots": 19,
+            "effectiveTackles": 7,
+            "totalTackles": 14,
+            "accurateCrosses": 7,
+            "totalCrosses": 30,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 26
+          },
+          {
+            "team": "Ghana",
+            "possessionPct": 21.1,
+            "accuratePasses": 127,
+            "totalPasses": 172,
+            "shotsOnTarget": 1,
+            "totalShots": 2,
+            "effectiveTackles": 17,
+            "totalTackles": 22,
+            "accurateCrosses": 0,
+            "totalCrosses": 5,
+            "accurateLongBalls": 24,
+            "totalLongBalls": 57
+          }
+        ]
       },
       "760459": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Juan Fernando Quintero",
+            "team": "Colombia"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Colombia",
+            "possessionPct": 63.5,
+            "accuratePasses": 473,
+            "totalPasses": 541,
+            "shotsOnTarget": 9,
+            "totalShots": 20,
+            "effectiveTackles": 6,
+            "totalTackles": 10,
+            "accurateCrosses": 3,
+            "totalCrosses": 12,
+            "accurateLongBalls": 40,
+            "totalLongBalls": 66
+          },
+          {
+            "team": "Congo DR",
+            "possessionPct": 36.5,
+            "accuratePasses": 226,
+            "totalPasses": 299,
+            "shotsOnTarget": 1,
+            "totalShots": 7,
+            "effectiveTackles": 10,
+            "totalTackles": 15,
+            "accurateCrosses": 4,
+            "totalCrosses": 14,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 48
+          }
+        ]
       },
       "760460": {
         "penMiss": [],
@@ -2984,6 +4477,36 @@
           {
             "name": "Josip Stanisic",
             "team": "Croatia"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Panama",
+            "possessionPct": 42,
+            "accuratePasses": 277,
+            "totalPasses": 352,
+            "shotsOnTarget": 1,
+            "totalShots": 8,
+            "effectiveTackles": 5,
+            "totalTackles": 10,
+            "accurateCrosses": 6,
+            "totalCrosses": 31,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 54
+          },
+          {
+            "team": "Croatia",
+            "possessionPct": 58,
+            "accuratePasses": 432,
+            "totalPasses": 512,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 7,
+            "totalTackles": 19,
+            "accurateCrosses": 5,
+            "totalCrosses": 18,
+            "accurateLongBalls": 19,
+            "totalLongBalls": 51
           }
         ]
       },
@@ -2998,6 +4521,36 @@
             "name": "Bruno Fernandes",
             "team": "Portugal"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Portugal",
+            "possessionPct": 65.9,
+            "accuratePasses": 561,
+            "totalPasses": 624,
+            "shotsOnTarget": 9,
+            "totalShots": 17,
+            "effectiveTackles": 10,
+            "totalTackles": 14,
+            "accurateCrosses": 5,
+            "totalCrosses": 22,
+            "accurateLongBalls": 22,
+            "totalLongBalls": 40
+          },
+          {
+            "team": "Uzbekistan",
+            "possessionPct": 34.1,
+            "accuratePasses": 262,
+            "totalPasses": 327,
+            "shotsOnTarget": 2,
+            "totalShots": 7,
+            "effectiveTackles": 13,
+            "totalTackles": 18,
+            "accurateCrosses": 0,
+            "totalCrosses": 8,
+            "accurateLongBalls": 9,
+            "totalLongBalls": 30
+          }
         ]
       },
       "760462": {
@@ -3005,11 +4558,45 @@
         "assists": [
           {
             "name": "Ivan Basic",
-            "team": "Bosnia"
+            "team": "Bosnia-Herzegovina"
           },
           {
             "name": "Edmílson Junior",
             "team": "Qatar"
+          },
+          {
+            "name": "Dennis Hadzikadunic",
+            "team": "Bosnia-Herzegovina"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Bosnia-Herzegovina",
+            "possessionPct": 54.4,
+            "accuratePasses": 452,
+            "totalPasses": 515,
+            "shotsOnTarget": 5,
+            "totalShots": 14,
+            "effectiveTackles": 9,
+            "totalTackles": 10,
+            "accurateCrosses": 3,
+            "totalCrosses": 22,
+            "accurateLongBalls": 30,
+            "totalLongBalls": 50
+          },
+          {
+            "team": "Qatar",
+            "possessionPct": 45.6,
+            "accuratePasses": 371,
+            "totalPasses": 434,
+            "shotsOnTarget": 3,
+            "totalShots": 9,
+            "effectiveTackles": 5,
+            "totalTackles": 13,
+            "accurateCrosses": 5,
+            "totalCrosses": 17,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 52
           }
         ]
       },
@@ -3023,6 +4610,40 @@
           {
             "name": "Breel Embolo",
             "team": "Switzerland"
+          },
+          {
+            "name": "Nathan Saliba",
+            "team": "Canada"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Switzerland",
+            "possessionPct": 55.3,
+            "accuratePasses": 369,
+            "totalPasses": 443,
+            "shotsOnTarget": 4,
+            "totalShots": 6,
+            "effectiveTackles": 7,
+            "totalTackles": 16,
+            "accurateCrosses": 1,
+            "totalCrosses": 6,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 45
+          },
+          {
+            "team": "Canada",
+            "possessionPct": 44.7,
+            "accuratePasses": 271,
+            "totalPasses": 339,
+            "shotsOnTarget": 7,
+            "totalShots": 13,
+            "effectiveTackles": 5,
+            "totalTackles": 9,
+            "accurateCrosses": 6,
+            "totalCrosses": 26,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 43
           }
         ]
       },
@@ -3036,6 +4657,44 @@
           {
             "name": "Achraf Hakimi",
             "team": "Morocco"
+          },
+          {
+            "name": "Chadi Riad",
+            "team": "Morocco"
+          },
+          {
+            "name": "Soufiane Rahimi",
+            "team": "Morocco"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Morocco",
+            "possessionPct": 69.1,
+            "accuratePasses": 477,
+            "totalPasses": 541,
+            "shotsOnTarget": 11,
+            "totalShots": 22,
+            "effectiveTackles": 8,
+            "totalTackles": 20,
+            "accurateCrosses": 7,
+            "totalCrosses": 22,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 34
+          },
+          {
+            "team": "Haiti",
+            "possessionPct": 30.9,
+            "accuratePasses": 198,
+            "totalPasses": 247,
+            "shotsOnTarget": 2,
+            "totalShots": 9,
+            "effectiveTackles": 12,
+            "totalTackles": 25,
+            "accurateCrosses": 2,
+            "totalCrosses": 3,
+            "accurateLongBalls": 21,
+            "totalLongBalls": 44
           }
         ]
       },
@@ -3049,12 +4708,81 @@
           {
             "name": "Bruno Guimarães",
             "team": "Brazil"
+          },
+          {
+            "name": "Bruno Guimarães",
+            "team": "Brazil"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Scotland",
+            "possessionPct": 46,
+            "accuratePasses": 450,
+            "totalPasses": 500,
+            "shotsOnTarget": 5,
+            "totalShots": 14,
+            "effectiveTackles": 8,
+            "totalTackles": 12,
+            "accurateCrosses": 9,
+            "totalCrosses": 23,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 33
+          },
+          {
+            "team": "Brazil",
+            "possessionPct": 54,
+            "accuratePasses": 564,
+            "totalPasses": 605,
+            "shotsOnTarget": 9,
+            "totalShots": 21,
+            "effectiveTackles": 6,
+            "totalTackles": 14,
+            "accurateCrosses": 2,
+            "totalCrosses": 12,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 27
           }
         ]
       },
       "760466": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Tshepang Moremi",
+            "team": "South Africa"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "South Africa",
+            "possessionPct": 31.6,
+            "accuratePasses": 277,
+            "totalPasses": 340,
+            "shotsOnTarget": 4,
+            "totalShots": 13,
+            "effectiveTackles": 7,
+            "totalTackles": 11,
+            "accurateCrosses": 1,
+            "totalCrosses": 8,
+            "accurateLongBalls": 19,
+            "totalLongBalls": 57
+          },
+          {
+            "team": "South Korea",
+            "possessionPct": 68.4,
+            "accuratePasses": 641,
+            "totalPasses": 719,
+            "shotsOnTarget": 3,
+            "totalShots": 8,
+            "effectiveTackles": 9,
+            "totalTackles": 12,
+            "accurateCrosses": 7,
+            "totalCrosses": 34,
+            "accurateLongBalls": 29,
+            "totalLongBalls": 52
+          }
+        ]
       },
       "760467": {
         "penMiss": [],
@@ -3062,6 +4790,44 @@
           {
             "name": "Luis Romo",
             "team": "Mexico"
+          },
+          {
+            "name": "Jorge Sánchez",
+            "team": "Mexico"
+          },
+          {
+            "name": "Roberto Alvarado",
+            "team": "Mexico"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Czechia",
+            "possessionPct": 51.9,
+            "accuratePasses": 333,
+            "totalPasses": 398,
+            "shotsOnTarget": 1,
+            "totalShots": 13,
+            "effectiveTackles": 7,
+            "totalTackles": 12,
+            "accurateCrosses": 5,
+            "totalCrosses": 26,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 53
+          },
+          {
+            "team": "Mexico",
+            "possessionPct": 48.1,
+            "accuratePasses": 330,
+            "totalPasses": 386,
+            "shotsOnTarget": 5,
+            "totalShots": 11,
+            "effectiveTackles": 8,
+            "totalTackles": 12,
+            "accurateCrosses": 1,
+            "totalCrosses": 12,
+            "accurateLongBalls": 34,
+            "totalLongBalls": 55
           }
         ]
       },
@@ -3075,27 +4841,121 @@
           {
             "name": "Pedro Vite",
             "team": "Ecuador"
+          },
+          {
+            "name": "Kevin Rodríguez",
+            "team": "Ecuador"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Ecuador",
+            "possessionPct": 38.9,
+            "accuratePasses": 312,
+            "totalPasses": 378,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
+            "effectiveTackles": 16,
+            "totalTackles": 26,
+            "accurateCrosses": 3,
+            "totalCrosses": 13,
+            "accurateLongBalls": 24,
+            "totalLongBalls": 50
+          },
+          {
+            "team": "Germany",
+            "possessionPct": 61.1,
+            "accuratePasses": 517,
+            "totalPasses": 592,
+            "shotsOnTarget": 3,
+            "totalShots": 11,
+            "effectiveTackles": 13,
+            "totalTackles": 20,
+            "accurateCrosses": 5,
+            "totalCrosses": 16,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 37
           }
         ]
       },
       "760469": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Paraguay",
+            "possessionPct": 44,
+            "accuratePasses": 330,
+            "totalPasses": 426,
+            "shotsOnTarget": 2,
+            "totalShots": 7,
+            "effectiveTackles": 17,
+            "totalTackles": 24,
+            "accurateCrosses": 0,
+            "totalCrosses": 7,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 59
+          },
+          {
+            "team": "Australia",
+            "possessionPct": 56,
+            "accuratePasses": 438,
+            "totalPasses": 537,
+            "shotsOnTarget": 5,
+            "totalShots": 12,
+            "effectiveTackles": 12,
+            "totalTackles": 20,
+            "accurateCrosses": 4,
+            "totalCrosses": 13,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 58
+          }
+        ]
       },
       "760470": {
         "penMiss": [],
         "assists": [
           {
             "name": "Sebastian Berhalter",
-            "team": "USA"
+            "team": "United States"
           },
           {
             "name": "Baris Alper Yilmaz",
             "team": "Turkiye"
           },
           {
-            "name": "Eren Elmali",
+            "name": "Orkun Kökçü",
             "team": "Turkiye"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Turkiye",
+            "possessionPct": 47.4,
+            "accuratePasses": 335,
+            "totalPasses": 434,
+            "shotsOnTarget": 3,
+            "totalShots": 9,
+            "effectiveTackles": 20,
+            "totalTackles": 32,
+            "accurateCrosses": 0,
+            "totalCrosses": 12,
+            "accurateLongBalls": 24,
+            "totalLongBalls": 66
+          },
+          {
+            "team": "United States",
+            "possessionPct": 52.6,
+            "accuratePasses": 398,
+            "totalPasses": 471,
+            "shotsOnTarget": 7,
+            "totalShots": 18,
+            "effectiveTackles": 9,
+            "totalTackles": 14,
+            "accurateCrosses": 5,
+            "totalCrosses": 19,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 42
           }
         ]
       },
@@ -3105,6 +4965,40 @@
           {
             "name": "Ritsu Doan",
             "team": "Japan"
+          },
+          {
+            "name": "Viktor Gyökeres",
+            "team": "Sweden"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Japan",
+            "possessionPct": 52.3,
+            "accuratePasses": 378,
+            "totalPasses": 445,
+            "shotsOnTarget": 3,
+            "totalShots": 8,
+            "effectiveTackles": 7,
+            "totalTackles": 13,
+            "accurateCrosses": 4,
+            "totalCrosses": 13,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 49
+          },
+          {
+            "team": "Sweden",
+            "possessionPct": 47.7,
+            "accuratePasses": 312,
+            "totalPasses": 395,
+            "shotsOnTarget": 5,
+            "totalShots": 11,
+            "effectiveTackles": 3,
+            "totalTackles": 7,
+            "accurateCrosses": 4,
+            "totalCrosses": 16,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 50
           }
         ]
       },
@@ -3118,6 +5012,40 @@
           {
             "name": "Hannibal Mejbri",
             "team": "Tunisia"
+          },
+          {
+            "name": "Tijjani Reijnders",
+            "team": "Netherlands"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Tunisia",
+            "possessionPct": 28.6,
+            "accuratePasses": 199,
+            "totalPasses": 258,
+            "shotsOnTarget": 4,
+            "totalShots": 10,
+            "effectiveTackles": 9,
+            "totalTackles": 17,
+            "accurateCrosses": 4,
+            "totalCrosses": 13,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 47
+          },
+          {
+            "team": "Netherlands",
+            "possessionPct": 71.4,
+            "accuratePasses": 602,
+            "totalPasses": 647,
+            "shotsOnTarget": 7,
+            "totalShots": 20,
+            "effectiveTackles": 5,
+            "totalTackles": 8,
+            "accurateCrosses": 6,
+            "totalCrosses": 27,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 22
           }
         ]
       },
@@ -3127,6 +5055,40 @@
           {
             "name": "Yan Diomande",
             "team": "Ivory Coast"
+          },
+          {
+            "name": "Ibrahim Sangaré",
+            "team": "Ivory Coast"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Curacao",
+            "possessionPct": 36.7,
+            "accuratePasses": 295,
+            "totalPasses": 355,
+            "shotsOnTarget": 2,
+            "totalShots": 11,
+            "effectiveTackles": 11,
+            "totalTackles": 17,
+            "accurateCrosses": 5,
+            "totalCrosses": 15,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 30
+          },
+          {
+            "team": "Ivory Coast",
+            "possessionPct": 63.3,
+            "accuratePasses": 558,
+            "totalPasses": 624,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
+            "effectiveTackles": 9,
+            "totalTackles": 16,
+            "accurateCrosses": 3,
+            "totalCrosses": 16,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 38
           }
         ]
       },
@@ -3136,6 +5098,52 @@
           {
             "name": "Abdoulaye Seck",
             "team": "Senegal"
+          },
+          {
+            "name": "Lamine Camara",
+            "team": "Senegal"
+          },
+          {
+            "name": "Ismaïla Sarr",
+            "team": "Senegal"
+          },
+          {
+            "name": "Iliman Ndiaye",
+            "team": "Senegal"
+          },
+          {
+            "name": "Pape Gueye",
+            "team": "Senegal"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Senegal",
+            "possessionPct": 69.2,
+            "accuratePasses": 517,
+            "totalPasses": 590,
+            "shotsOnTarget": 12,
+            "totalShots": 28,
+            "effectiveTackles": 9,
+            "totalTackles": 12,
+            "accurateCrosses": 7,
+            "totalCrosses": 25,
+            "accurateLongBalls": 23,
+            "totalLongBalls": 43
+          },
+          {
+            "team": "Iraq",
+            "possessionPct": 30.8,
+            "accuratePasses": 184,
+            "totalPasses": 266,
+            "shotsOnTarget": 1,
+            "totalShots": 6,
+            "effectiveTackles": 13,
+            "totalTackles": 20,
+            "accurateCrosses": 0,
+            "totalCrosses": 6,
+            "accurateLongBalls": 13,
+            "totalLongBalls": 68
           }
         ]
       },
@@ -3162,6 +5170,40 @@
           {
             "name": "Aurélien Tchouaméni",
             "team": "France"
+          },
+          {
+            "name": "Bradley Barcola",
+            "team": "France"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Norway",
+            "possessionPct": 43.3,
+            "accuratePasses": 343,
+            "totalPasses": 421,
+            "shotsOnTarget": 4,
+            "totalShots": 10,
+            "effectiveTackles": 11,
+            "totalTackles": 17,
+            "accurateCrosses": 3,
+            "totalCrosses": 9,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 40
+          },
+          {
+            "team": "France",
+            "possessionPct": 56.7,
+            "accuratePasses": 480,
+            "totalPasses": 555,
+            "shotsOnTarget": 9,
+            "totalShots": 18,
+            "effectiveTackles": 12,
+            "totalTackles": 17,
+            "accurateCrosses": 3,
+            "totalCrosses": 10,
+            "accurateLongBalls": 28,
+            "totalLongBalls": 53
           }
         ]
       },
@@ -3177,6 +5219,36 @@
             "name": "Trézéguet",
             "team": "Egypt"
           }
+        ],
+        "teamBox": [
+          {
+            "team": "Egypt",
+            "possessionPct": 61.4,
+            "accuratePasses": 513,
+            "totalPasses": 589,
+            "shotsOnTarget": 3,
+            "totalShots": 15,
+            "effectiveTackles": 10,
+            "totalTackles": 17,
+            "accurateCrosses": 4,
+            "totalCrosses": 15,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 44
+          },
+          {
+            "team": "Iran",
+            "possessionPct": 38.6,
+            "accuratePasses": 281,
+            "totalPasses": 367,
+            "shotsOnTarget": 4,
+            "totalShots": 13,
+            "effectiveTackles": 17,
+            "totalTackles": 22,
+            "accurateCrosses": 1,
+            "totalCrosses": 10,
+            "accurateLongBalls": 29,
+            "totalLongBalls": 66
+          }
         ]
       },
       "760477": {
@@ -3185,12 +5257,80 @@
           {
             "name": "Hans Vanaken",
             "team": "Belgium"
+          },
+          {
+            "name": "Nicolas Raskin",
+            "team": "Belgium"
+          },
+          {
+            "name": "Romelu Lukaku",
+            "team": "Belgium"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "New Zealand",
+            "possessionPct": 45.5,
+            "accuratePasses": 369,
+            "totalPasses": 436,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 6,
+            "totalTackles": 10,
+            "accurateCrosses": 2,
+            "totalCrosses": 17,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 38
+          },
+          {
+            "team": "Belgium",
+            "possessionPct": 54.5,
+            "accuratePasses": 462,
+            "totalPasses": 525,
+            "shotsOnTarget": 10,
+            "totalShots": 35,
+            "effectiveTackles": 8,
+            "totalTackles": 13,
+            "accurateCrosses": 6,
+            "totalCrosses": 16,
+            "accurateLongBalls": 28,
+            "totalLongBalls": 46
           }
         ]
       },
       "760478": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Cape Verde",
+            "possessionPct": 51,
+            "accuratePasses": 381,
+            "totalPasses": 451,
+            "shotsOnTarget": 2,
+            "totalShots": 15,
+            "effectiveTackles": 12,
+            "totalTackles": 15,
+            "accurateCrosses": 2,
+            "totalCrosses": 18,
+            "accurateLongBalls": 29,
+            "totalLongBalls": 55
+          },
+          {
+            "team": "Saudi Arabia",
+            "possessionPct": 49,
+            "accuratePasses": 359,
+            "totalPasses": 444,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
+            "effectiveTackles": 15,
+            "totalTackles": 29,
+            "accurateCrosses": 3,
+            "totalCrosses": 11,
+            "accurateLongBalls": 21,
+            "totalLongBalls": 50
+          }
+        ]
       },
       "760479": {
         "penMiss": [],
@@ -3198,6 +5338,36 @@
           {
             "name": "Marcos Llorente",
             "team": "Spain"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Uruguay",
+            "possessionPct": 33.1,
+            "accuratePasses": 228,
+            "totalPasses": 301,
+            "shotsOnTarget": 1,
+            "totalShots": 5,
+            "effectiveTackles": 15,
+            "totalTackles": 25,
+            "accurateCrosses": 1,
+            "totalCrosses": 16,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 43
+          },
+          {
+            "team": "Spain",
+            "possessionPct": 66.9,
+            "accuratePasses": 553,
+            "totalPasses": 622,
+            "shotsOnTarget": 1,
+            "totalShots": 6,
+            "effectiveTackles": 10,
+            "totalTackles": 17,
+            "accurateCrosses": 3,
+            "totalCrosses": 12,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 34
           }
         ]
       },
@@ -3207,12 +5377,80 @@
           {
             "name": "Mateo Kovacic",
             "team": "Croatia"
+          },
+          {
+            "name": "Ernest Nuamah",
+            "team": "Ghana"
+          },
+          {
+            "name": "Luka Modric",
+            "team": "Croatia"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Croatia",
+            "possessionPct": 53.3,
+            "accuratePasses": 477,
+            "totalPasses": 523,
+            "shotsOnTarget": 4,
+            "totalShots": 8,
+            "effectiveTackles": 8,
+            "totalTackles": 14,
+            "accurateCrosses": 3,
+            "totalCrosses": 15,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 38
+          },
+          {
+            "team": "Ghana",
+            "possessionPct": 46.7,
+            "accuratePasses": 402,
+            "totalPasses": 455,
+            "shotsOnTarget": 1,
+            "totalShots": 6,
+            "effectiveTackles": 7,
+            "totalTackles": 13,
+            "accurateCrosses": 3,
+            "totalCrosses": 12,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 39
           }
         ]
       },
       "760481": {
         "penMiss": [],
-        "assists": []
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Colombia",
+            "possessionPct": 54.6,
+            "accuratePasses": 485,
+            "totalPasses": 544,
+            "shotsOnTarget": 6,
+            "totalShots": 24,
+            "effectiveTackles": 8,
+            "totalTackles": 15,
+            "accurateCrosses": 3,
+            "totalCrosses": 11,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 46
+          },
+          {
+            "team": "Portugal",
+            "possessionPct": 45.4,
+            "accuratePasses": 405,
+            "totalPasses": 446,
+            "shotsOnTarget": 2,
+            "totalShots": 13,
+            "effectiveTackles": 5,
+            "totalTackles": 9,
+            "accurateCrosses": 2,
+            "totalCrosses": 13,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 29
+          }
+        ]
       },
       "760482": {
         "penMiss": [],
@@ -3220,6 +5458,40 @@
           {
             "name": "Akmal Mozgovoy",
             "team": "Uzbekistan"
+          },
+          {
+            "name": "Meschack Elia",
+            "team": "Congo DR"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Congo DR",
+            "possessionPct": 57.6,
+            "accuratePasses": 400,
+            "totalPasses": 485,
+            "shotsOnTarget": 4,
+            "totalShots": 19,
+            "effectiveTackles": 13,
+            "totalTackles": 20,
+            "accurateCrosses": 6,
+            "totalCrosses": 22,
+            "accurateLongBalls": 28,
+            "totalLongBalls": 60
+          },
+          {
+            "team": "Uzbekistan",
+            "possessionPct": 42.4,
+            "accuratePasses": 269,
+            "totalPasses": 355,
+            "shotsOnTarget": 1,
+            "totalShots": 3,
+            "effectiveTackles": 18,
+            "totalTackles": 29,
+            "accurateCrosses": 2,
+            "totalCrosses": 16,
+            "accurateLongBalls": 21,
+            "totalLongBalls": 59
           }
         ]
       },
@@ -3229,6 +5501,36 @@
           {
             "name": "Ehsan Haddad",
             "team": "Jordan"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Jordan",
+            "possessionPct": 26.7,
+            "accuratePasses": 228,
+            "totalPasses": 285,
+            "shotsOnTarget": 1,
+            "totalShots": 5,
+            "effectiveTackles": 8,
+            "totalTackles": 16,
+            "accurateCrosses": 2,
+            "totalCrosses": 7,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 36
+          },
+          {
+            "team": "Argentina",
+            "possessionPct": 73.3,
+            "accuratePasses": 737,
+            "totalPasses": 801,
+            "shotsOnTarget": 4,
+            "totalShots": 12,
+            "effectiveTackles": 5,
+            "totalTackles": 14,
+            "accurateCrosses": 3,
+            "totalCrosses": 5,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 25
           }
         ]
       },
@@ -3242,12 +5544,93 @@
           {
             "name": "Konrad Laimer",
             "team": "Austria"
+          },
+          {
+            "name": "Houssem Aouar",
+            "team": "Algeria"
+          },
+          {
+            "name": "Houssem Aouar",
+            "team": "Algeria"
+          },
+          {
+            "name": "Michael Gregoritsch",
+            "team": "Austria"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Algeria",
+            "possessionPct": 65,
+            "accuratePasses": 706,
+            "totalPasses": 754,
+            "shotsOnTarget": 5,
+            "totalShots": 12,
+            "effectiveTackles": 5,
+            "totalTackles": 11,
+            "accurateCrosses": 0,
+            "totalCrosses": 5,
+            "accurateLongBalls": 26,
+            "totalLongBalls": 44
+          },
+          {
+            "team": "Austria",
+            "possessionPct": 35,
+            "accuratePasses": 346,
+            "totalPasses": 396,
+            "shotsOnTarget": 3,
+            "totalShots": 10,
+            "effectiveTackles": 4,
+            "totalTackles": 11,
+            "accurateCrosses": 3,
+            "totalCrosses": 13,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 32
           }
         ]
       },
       "760485": {
         "penMiss": [],
-        "assists": []
+        "assists": [
+          {
+            "name": "Bukayo Saka",
+            "team": "England"
+          },
+          {
+            "name": "Jude Bellingham",
+            "team": "England"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Panama",
+            "possessionPct": 32.9,
+            "accuratePasses": 202,
+            "totalPasses": 268,
+            "shotsOnTarget": 2,
+            "totalShots": 13,
+            "effectiveTackles": 11,
+            "totalTackles": 16,
+            "accurateCrosses": 3,
+            "totalCrosses": 9,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 54
+          },
+          {
+            "team": "England",
+            "possessionPct": 67.1,
+            "accuratePasses": 490,
+            "totalPasses": 558,
+            "shotsOnTarget": 6,
+            "totalShots": 17,
+            "effectiveTackles": 17,
+            "totalTackles": 18,
+            "accurateCrosses": 4,
+            "totalCrosses": 25,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 36
+          }
+        ]
       }
     }
   }
