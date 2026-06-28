@@ -27,7 +27,17 @@ export type Score = { home: number; away: number } | null;
 // scripts/build-results.mjs once a tie is final; absent/null for group games and
 // ties not yet decided. This is what separates a "to qualify" market (settles on
 // advancement) from a 1X2 "to win" market (settles on the 90-minute score).
-export type MatchResult = { ht: Score; ft: Score; advanced?: "home" | "away" | null };
+// `ft` is the full-time score INCLUDING extra time (so a 2-1 AET reads 2-1); `ft90`
+// is the 90-minute scoreline (ET goals removed) that every 90-minute market settles
+// on. `finishPhase` is ESPN's authoritative match-end phase. For group/regulation
+// games ft90 === ft and finishPhase === "regulation".
+export type MatchResult = {
+  ht: Score;
+  ft: Score;
+  ft90?: Score;
+  advanced?: "home" | "away" | null;
+  finishPhase?: "regulation" | "extra_time" | "penalties" | null;
+};
 
 /** One scraped goal. `team` is relative to the fixture's listed home/away sides.
  *  Goals are stored in chronological scoring order — first non-own-goal = first scorer. */
@@ -39,6 +49,13 @@ export type Goal = {
   freeKick?: boolean;
   penalty?: boolean;
   ownGoal?: boolean;
+  /**
+   * Real goal scored in EXTRA TIME (minute > 90 of an ET/pens knockout). Excluded
+   * from every 90-minute market (1X2, correct score, first/anytime scorer, totals)
+   * — only "to qualify" counts goals beyond 90. Never set on a group/regulation
+   * game (no ET played). Shootout kicks are dropped entirely upstream, not flagged.
+   */
+  et?: boolean;
   /**
    * Goal struck from OUTSIDE the penalty area. Parsed from ESPN's per-event
    * summary keyEvents commentary prose ("…with a right footed shot from outside
@@ -461,10 +478,22 @@ export function getStats(matchId: string): MatchStats | null {
   return betSlip.matchStats?.[matchId] ?? null;
 }
 
+/**
+ * The 90-MINUTE full-time score every standard FT market settles on. Falls back to
+ * `ft` (= ft90 for group/regulation games, where no ET was played). A knockout
+ * decided in ET/pens has ft (incl. ET) ≠ ft90, and the bookmaker grades 1X2 /
+ * correct score / BTTS / totals / HT-FT on the 90-minute line — this returns it.
+ */
+export function ft90(matchId: string): Score {
+  const r = getResult(matchId);
+  return r.ft90 ?? r.ft;
+}
+
 /** Settle one correct-score bet against the relevant period's score. */
 export function settleBet(bet: Bet): BetStatus {
   const result = getResult(bet.matchId);
-  const score = bet.period === "HT" ? result.ht : result.ft;
+  // Full-time correct score is a 90-minute market (ET goals excluded).
+  const score = bet.period === "HT" ? result.ht : (result.ft90 ?? result.ft);
   if (!score) return "pending";
   return score.home === bet.home && score.away === bet.away ? "won" : "lost";
 }
@@ -604,11 +633,15 @@ export const playerSotCount = (stats: MatchStats | null, player: string): number
   );
 };
 
-const realGoals = (goals: Goal[]) => goals.filter((g) => !g.ownGoal);
+// `realGoals` = the 90-minute scoring goals: no own goals, no extra-time goals.
+// Every scorer/first-scorer/brace/total market reads through this, so they all
+// settle on regulation only — matching the bookmaker rule that those markets are
+// 90 minutes. (Shootout kicks are already dropped at scrape time.)
+const realGoals = (goals: Goal[]) => goals.filter((g) => !g.ownGoal && !g.et);
 const goalsBy = (goals: Goal[], player: string) =>
   realGoals(goals).filter((g) => nameMatch(g.scorer, player));
 const assistsBy = (goals: Goal[], player: string) =>
-  goals.filter((g) => g.assist && nameMatch(g.assist, player));
+  goals.filter((g) => g.assist && !g.et && nameMatch(g.assist, player));
 const firstScorer = (goals: Goal[]): string | null => realGoals(goals)[0]?.scorer ?? null;
 
 /**
@@ -890,7 +923,7 @@ export function gradeSpecial(special: Special): BetStatus {
         pending = true;
         continue;
       }
-      const ft = getResult(leg.matchId).ft;
+      const ft = ft90(leg.matchId); // 90-minute scoreline; ET goals excluded
 
       if (leg.kind === "scoredAndScoreOneOf") {
         const scoredIt = goalsBy(ev.goals, leg.player).length > 0;
@@ -1091,7 +1124,7 @@ export function gradeSpecial(special: Special): BetStatus {
   }
 
   const events = getEvents(special.matchId);
-  const ft = getResult(special.matchId).ft;
+  const ft = ft90(special.matchId); // 90-minute scoreline; ET goals excluded
 
   // First-goalscorer void is known the MOMENT the XI is confirmed — it does not
   // depend on the match being finished. Resolve it BEFORE the "not finished →

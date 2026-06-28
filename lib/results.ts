@@ -9,12 +9,18 @@ export type ResultGoal = {
   assist: string | null;
   penalty: boolean;
   ownGoal: boolean;
+  /** Real goal scored in extra time — excluded from 90-minute scorer/score markets. */
+  et?: boolean;
 };
 
 export type MatchResult = {
   state: "live" | "finished";
   ht: { home: number; away: number } | null;
   ft: { home: number; away: number } | null;
+  /** 90-minute scoreline (ET goals removed). Equals `ft` for regulation/group games. */
+  ft90?: { home: number; away: number } | null;
+  /** ESPN-verified match-end phase. Absent/regulation for group games. */
+  finishPhase?: "regulation" | "extra_time" | "penalties" | null;
   score: { home: number; away: number };
   goals: ResultGoal[];
   updatedAt: string;
@@ -94,7 +100,7 @@ function scorerScored(predicted: string, goals: ResultGoal[]): boolean {
   const ps = surname(predicted);
   const pk = nameKey(predicted);
   return goals.some((g) => {
-    if (g.ownGoal) return false; // own goals don't count as an "anytime scorer" hit
+    if (g.ownGoal || g.et) return false; // own goals + ET goals aren't a 90-min scorer hit
     const gs = surname(g.scorer);
     const gk = nameKey(g.scorer);
     return gs === ps || gk === pk || gk.includes(ps) || pk.includes(gs);
@@ -116,8 +122,18 @@ export function gradePrediction(
   fx: Fixture,
 ): PredictionGrade {
   const settled = result.state === "finished";
-  const score = result.ft ?? result.score;
-  const scoreLabel = `${fx.home.name} ${score.home}–${score.away} ${fx.away.name}`;
+  // Grade on the 90-minute scoreline (every market the model predicts is a 90-min
+  // market). The displayed scoreline shows the REAL final (incl. ET) plus a phase
+  // tag, so a knockout that went the distance reads e.g. "2–1 (AET)".
+  const score = result.ft90 ?? result.ft ?? result.score;
+  const shown = result.ft ?? result.score;
+  const phaseTag =
+    result.finishPhase === "penalties"
+      ? " (pens)"
+      : result.finishPhase === "extra_time"
+        ? " (AET)"
+        : "";
+  const scoreLabel = `${fx.home.name} ${shown.home}–${shown.away} ${fx.away.name}${phaseTag}`;
 
   const markets: MarketVerdict[] = [];
 
@@ -202,7 +218,7 @@ export function gradePrediction(
   // Goalscorers the model didn't name (excluding own goals)
   const namedKeys = new Set(pred.scorers.map((s) => surname(s.player)));
   const surprises = result.goals
-    .filter((g) => !g.ownGoal && !namedKeys.has(surname(g.scorer)))
+    .filter((g) => !g.ownGoal && !g.et && !namedKeys.has(surname(g.scorer)))
     .map((g) => g.scorer);
 
   const hitCount = markets.filter((m) => m.verdict === "hit").length;

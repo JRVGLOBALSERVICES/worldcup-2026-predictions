@@ -321,22 +321,50 @@ function resultFromEvent(ev, fixture) {
   const state = espnState === "post" ? "finished" : espnState === "in" ? "live" : "scheduled";
   if (state === "scheduled") return null; // nothing to persist pre-kickoff
 
+  // Match-end phase, cross-checked against ESPN's AUTHORITATIVE status.type — a
+  // knockout decided in extra time or a shootout carries a different status name
+  // (and id) than a regulation finish, and lists its shootout kicks as 120' goals:
+  //   STATUS_FINAL_PEN (id 47, "FT-Pens") → penalties
+  //   STATUS_FINAL_AET (id 45, "AET")     → extra_time
+  //   STATUS_FULL_TIME (id 28, "FT")      → regulation
+  // `period` is the backup signal (5 = shootout, 3|4 = ET halves, ≤2 = regulation).
+  const typeName = ev.status?.type?.name ?? "";
+  const period = ev.status?.period ?? 0;
+  let finishPhase = null;
+  if (state === "finished") {
+    if (typeName === "STATUS_FINAL_PEN" || period === 5) finishPhase = "penalties";
+    else if (typeName === "STATUS_FINAL_AET" || period === 3 || period === 4)
+      finishPhase = "extra_time";
+    else finishPhase = "regulation";
+  }
+  const wentToEt = finishPhase === "extra_time" || finishPhase === "penalties";
+
   const score = {
     home: parseInt(ourHome.score ?? "0", 10) || 0,
     away: parseInt(ourAway.score ?? "0", 10) || 0,
   };
 
-  const details = (comp?.details ?? []).filter((d) => d.scoringPlay);
+  // Drop shootout kicks: ESPN lists every penalty in a shootout as a 120' scoring
+  // play flagged `shootout:true`. They are NOT goals — counting them would credit
+  // each taker with a goal and wreck first/anytime-scorer + total-goals markets.
+  // (The aggregate `score` already excludes them — it stays the post-ET scoreline.)
+  const details = (comp?.details ?? []).filter((d) => d.scoringPlay && d.shootout !== true);
   const goals = details.map((d) => {
     const side = d.team?.id === homeId ? "home" : "away";
     const athletes = d.athletesInvolved ?? [];
+    const minute = d.clock?.value != null ? Math.round(d.clock.value / 60) : null;
     return {
       team: side,
       scorer: athletes[0]?.displayName ?? "Unknown",
-      minute: d.clock?.value != null ? Math.round(d.clock.value / 60) : null,
+      minute,
       assist: athletes[1]?.displayName ?? null,
       penalty: d.penaltyKick === true,
       ownGoal: d.ownGoal === true,
+      // Real goal struck in extra time (minute > 90 in an ET/pens match). Tagged so
+      // 90-minute markets (1X2, correct score, first/anytime scorer, totals) can
+      // exclude it; only "to qualify" counts goals beyond 90. Regulation/group
+      // games never set this (no ET played).
+      ...(wentToEt && minute != null && minute > 90 ? { et: true } : {}),
     };
   });
 
@@ -363,23 +391,36 @@ function resultFromEvent(ev, fixture) {
     }
   }
 
-  // Knockout advancement — ESPN flags the progressing competitor with
-  // `advance:true` once a tie is final (covers extra time AND penalty shootouts,
-  // the cases a bare scoreline can't express). Absent on group games → null.
-  // This is what settles "to qualify" markets independently of the 90-min 1X2.
+  // Knockout advancement — which side PROGRESSED, by any route (90-min win, ET, or
+  // shootout). ESPN sets `advance:true` on the progressing competitor for most
+  // ties, but on some finals it leaves `advance` undefined and only sets
+  // `winner:true` (verified on the 2022 final payload) — so accept either. Absent
+  // on an undecided/level game → null. Settles "to qualify" independently of 1X2.
   const advanced =
     state === "finished"
-      ? ourHome.advance === true
+      ? ourHome.advance === true || ourHome.winner === true
         ? "home"
-        : ourAway.advance === true
+        : ourAway.advance === true || ourAway.winner === true
           ? "away"
           : null
       : null;
+
+  // 90-minute scoreline: the shootout-free ESPN aggregate MINUS any extra-time
+  // goal. For a regulation/group game this equals `ft`. Every 90-minute market
+  // settles on this; full `ft` (incl. ET) + `advanced` cover the qualify markets.
+  let ft90 = null;
+  if (state === "finished") {
+    const etHome = goals.filter((g) => g.et && g.team === "home").length;
+    const etAway = goals.filter((g) => g.et && g.team === "away").length;
+    ft90 = { home: Math.max(0, score.home - etHome), away: Math.max(0, score.away - etAway) };
+  }
 
   return {
     state,
     ht,
     ft: state === "finished" ? score : null,
+    ft90,
+    finishPhase,
     score,
     advanced,
     goals,
@@ -428,6 +469,16 @@ function settleBetsFromResults(bets, results) {
       rec.ft = { home: r.ft.home, away: r.ft.away };
       changed = true;
     }
+    // 90-minute scoreline + the ESPN-verified finish phase (regulation/ET/pens),
+    // so every 90-minute market settles on ft90 while qualify reads `advanced`.
+    if (rec.ft90 == null && r.ft90) {
+      rec.ft90 = { home: r.ft90.home, away: r.ft90.away };
+      changed = true;
+    }
+    if (rec.finishPhase == null && r.finishPhase) {
+      rec.finishPhase = r.finishPhase;
+      changed = true;
+    }
     if (rec.ht == null && r.ht) {
       rec.ht = { home: r.ht.home, away: r.ht.away };
       changed = true;
@@ -453,6 +504,7 @@ function settleBetsFromResults(bets, results) {
           assist: g.assist,
           penalty: g.penalty === true,
           ownGoal: g.ownGoal === true,
+          ...(g.et === true ? { et: true } : {}),
           ...(g.outsideBox === true ? { outsideBox: true } : {}),
         })),
         cards: (r.cards ?? []).map((c) => ({
