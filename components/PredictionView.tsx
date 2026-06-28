@@ -1,4 +1,4 @@
-import type { Fixture, Prediction, Pick } from "@/lib/types";
+import type { Fixture, Prediction, Pick, Resolution } from "@/lib/types";
 import { strengthFromOdds, strengthLabel, overallStrength } from "@/lib/data";
 import { SectionLabel, Banker, Confidence, StrengthMeter } from "./atoms";
 import { LineupPitch } from "./LineupPitch";
@@ -63,6 +63,9 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
         />
       </div>
 
+      {/* knockout: how the tie is settled — 90 / extra time / penalties */}
+      {pred.resolution && <ResolutionPanel res={pred.resolution} />}
+
       {/* scorers + assists */}
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
@@ -125,6 +128,61 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
         <Confidence level={pred.confidence} />
         <span className="text-[0.72rem] text-faint">
           Sources: {pred.sources.join(" · ")}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/** Knockout-only: a single segmented route-bar — regulation / extra time /
+ * penalties — with the most-likely route leading in the acid accent. One bar,
+ * three semantic colours (acid → amber → rose), not three identical cards. */
+function ResolutionPanel({ res }: { res: Resolution }) {
+  const routes = [
+    { key: "Regulation", sub: "decided in 90", pct: res.ninety, bar: "bg-acid", text: "text-acid", chip: "border-acid-dim text-acid" },
+    { key: "Extra time", sub: "level at 90", pct: res.extraTime, bar: "bg-amber", text: "text-amber", chip: "border-amber/50 text-amber" },
+    { key: "Penalties", sub: "level at 120", pct: res.penalties, bar: "bg-rose-400", text: "text-rose-300", chip: "border-rose-400/50 text-rose-300" },
+  ] as const;
+  return (
+    <div className="rounded-2xl border border-line bg-card/50 p-5">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <SectionLabel>How it&apos;s settled</SectionLabel>
+        <span className={`inline-flex shrink-0 items-center rounded-full border px-2 py-0.5 font-mono text-[0.72rem] uppercase leading-none ${routes.find((r) => r.key === res.mostLikely)?.chip ?? "border-line text-muted"}`}>
+          {res.mostLikely}
+        </span>
+      </div>
+
+      {/* one segmented bar — width = probability of each route */}
+      <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-line/60">
+        {routes.map((r) => (
+          <div key={r.key} className={r.bar} style={{ width: `${r.pct}%` }} aria-label={`${r.key} ${r.pct}%`} />
+        ))}
+      </div>
+
+      {/* the three routes as a legend row — number leading, label under */}
+      <div className="mt-4 grid grid-cols-3 gap-3">
+        {routes.map((r) => (
+          <div key={r.key}>
+            <div className={`tnum font-display text-2xl font-extrabold leading-none tracking-tight ${r.text}`}>
+              {r.pct}%
+            </div>
+            <div className="mt-1 text-[0.82rem] font-semibold text-ink">{r.key}</div>
+            <div className="text-[0.72rem] text-faint">{r.sub}</div>
+          </div>
+        ))}
+      </div>
+
+      <p className="mt-4 text-sm leading-relaxed text-muted">{res.note}</p>
+
+      {/* extra-time favourite + shootout read */}
+      <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-line pt-3 text-sm">
+        <span className="text-muted">
+          <span className="text-faint">If extra time: </span>
+          <span className="font-semibold text-ink">{res.etWinner}</span> favoured
+        </span>
+        <span className="text-muted">
+          <span className="text-faint">Shootout: </span>
+          {res.shootout}
         </span>
       </div>
     </div>

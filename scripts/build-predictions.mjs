@@ -567,6 +567,55 @@ function buildBrainSummary(f, ctx, pitch, value, trap) {
   return { verdict: trap.verdict, call, read, price, trap: trapLine };
 }
 
+/**
+ * How a KNOCKOUT tie is settled — 90 minutes vs extra time vs penalties.
+ * A level game after 90 goes to extra time (30 min ≈ a ⅓-length match on the
+ * same xG); still level after 120 → penalties. So:
+ *   P(regulation) = 1 − P(draw at 90)
+ *   P(extra time) = P(draw at 90) · P(someone wins the extra 30)
+ *   P(penalties)  = P(draw at 90) · P(still level after extra time)
+ * Returns null for group-stage matches (a draw just stands there — no ET/pens).
+ */
+function buildResolution(f, ctx) {
+  if (!ctx.isKnockout) return null;
+  const { lh, la, ft, fav } = ctx;
+  const home = f.home.name, away = f.away.name;
+  const pDraw = ft.pDraw;
+
+  // Extra time = 30 min on the same scoring rates → ⅓ of the 90-min xG.
+  const et = scoreGrid(lh / 3, la / 3);
+  const pNinety = 1 - pDraw;
+  const pExtra = pDraw * (1 - et.pDraw);
+  const pPens = pDraw * et.pDraw;
+
+  const ninety = pct(pNinety), extraTime = pct(pExtra), penalties = pct(pPens);
+  const routes = [
+    { k: "Regulation", v: pNinety },
+    { k: "Extra time", v: pExtra },
+    { k: "Penalties", v: pPens },
+  ].sort((a, b) => b.v - a.v);
+  const mostLikely = routes[0].k;
+
+  // Who's favoured if it actually reaches extra time — the side with the higher
+  // ET goal expectancy (conditional on ET happening).
+  const etWinner = lh > la + 0.05 ? home : la > lh + 0.05 ? away : "too close to call";
+  // Shootouts are close to a coin-flip; give the modelled favourite the lean.
+  const favName = fav.pick === "Draw" ? (lh >= la ? home : away) : fav.pick;
+  const shootout =
+    Math.abs(lh - la) < 0.15
+      ? `Essentially 50/50 — a true coin-flip from twelve yards.`
+      : `Near coin-flip, with the marginal nerve edge to ${favName}.`;
+
+  const note =
+    mostLikely === "Regulation"
+      ? `Most likely settled inside 90 (${ninety}%). But a ${pct(pDraw)}% level 90 keeps extra time (${extraTime}%) and penalties (${penalties}%) live — in a knockout, that's the bit a straight win bet ignores.`
+      : mostLikely === "Penalties"
+        ? `Profiles as a war of attrition — ${penalties}% to reach penalties, ${extraTime}% decided in extra time, only ${ninety}% settled in the 90. Lean to the patient, deep-block read.`
+        : `${extraTime}% to be decided in extra time off a ${pct(pDraw)}% level 90 — tight enough that the extra half-hour, not the 90, likely separates them.`;
+
+  return { ninety, extraTime, penalties, mostLikely, etWinner, shootout, note };
+}
+
 /** Reuse a team's most recent confirmed/probable XI from earlier predictions. */
 function lastKnownXI(name) {
   const want = norm(name);
@@ -699,6 +748,10 @@ function attachBrain(f, pred) {
   pred.valueSpot = buildValueSpot(f, ctx);
   pred.trapDetector = buildTrapDetector(f, ctx, pred.valueSpot);
   pred.brainSummary = buildBrainSummary(f, ctx, pred.pitchReport, pred.valueSpot, pred.trapDetector);
+  // How it's settled — 90 / extra time / penalties (knockout-only; null on groups).
+  const resolution = buildResolution(f, ctx);
+  if (resolution) pred.resolution = resolution;
+  else delete pred.resolution;
 }
 
 // ── backtest: score the model against finished matches ──────────────────────

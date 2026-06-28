@@ -95,11 +95,30 @@ export type BrainSummary = {
   trap: { tag: string; line: string };   // the honest filter
 };
 
+/**
+ * How a KNOCKOUT tie is settled — the three routes a level game can take:
+ * decided inside 90 minutes, in extra time, or on penalties. The percentages
+ * sum to ~100. Undefined on group-stage matches (a draw simply stands there).
+ * Computed in build-predictions.mjs: extra time is modelled as a ⅓-length match
+ * on the same expected goals; penalties is the chance it's still level at 120.
+ */
+export type Resolution = {
+  ninety: number;        // % decided in regulation (someone wins the 90)
+  extraTime: number;     // % level at 90, then decided in extra time
+  penalties: number;     // % still level after 120 → shootout
+  mostLikely: "Regulation" | "Extra time" | "Penalties";
+  etWinner: string;      // who's favoured if it reaches extra time
+  shootout: string;      // the shootout read (near coin-flip / slight edge)
+  note: string;          // one plain-English line tying it together
+};
+
 export type Prediction = {
   win: { pick: string; fairOdds: string; reason: string; strength?: number };
   halfTime: { score: string; fairOdds: string; alt: string; altOdds: string; strength?: number };
   htft: { pick: string; fairOdds: string; strength?: number };
   fullTime: { score: string; fairOdds: string; strength?: number };
+  /** Knockout route to a result — 90 / extra time / penalties. Knockout-only. */
+  resolution?: Resolution;
   scorers: Pick[];
   assists: Pick[];
   penalty: { likelihood: string; taker: string; backup: string; note: string };
