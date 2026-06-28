@@ -12886,19 +12886,19 @@
     },
     "col-por-2026-06-27": {
       "corners": {
-        "home": 1,
-        "away": 1
+        "home": 4,
+        "away": 2
       },
       "sot": {
-        "home": 3,
+        "home": 6,
         "away": 2
       },
       "shots": {
-        "home": 13,
-        "away": 9
+        "home": 21,
+        "away": 12
       },
       "yellow": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "red": {
@@ -12906,23 +12906,23 @@
         "away": 0
       },
       "cards": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          3
         ],
         "away": [
           0,
-          0
+          2
         ]
       },
       "sotByHalf": {
         "home": [
           3,
-          0
+          3
         ],
         "away": [
           2,
@@ -12934,7 +12934,9 @@
         "Cristiano Ronaldo": 1,
         "Bruno Fernandes": 1,
         "Gustavo Puerta": 1,
-        "James Rodríguez": 1
+        "James Rodríguez": 1,
+        "Jefferson Lerma": 1,
+        "Jhon Arias": 2
       },
       "firstGoalMethod": null,
       "firstPenalty": null,
@@ -12948,38 +12950,48 @@
           "firstActionMinute": 31,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Shot Blocked",
+          "firstActionMinute": 73,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
     "drc-uzb-2026-06-27": {
       "corners": {
-        "home": 1,
+        "home": 2,
         "away": 3
       },
       "sot": {
-        "home": 1,
-        "away": 1
-      },
-      "shots": {
         "home": 3,
         "away": 1
       },
+      "shots": {
+        "home": 14,
+        "away": 3
+      },
       "yellow": {
-        "home": 1,
-        "away": 1
+        "home": 3,
+        "away": 2
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 1,
-        "away": 1
+        "home": 3,
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
           3,
@@ -12989,14 +13001,16 @@
       "sotByHalf": {
         "home": [
           0,
-          0
+          1
         ],
         "away": [
           0,
           0
         ]
       },
-      "playerSot": {},
+      "playerSot": {
+        "Nathanaël Mbuku": 1
+      },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
       "waterBreak": {
@@ -13007,6 +13021,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Corner Awarded",
           "firstActionMinute": 26,
+          "isCorner": true,
+          "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 72,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 73,
           "isCorner": true,
           "reliable": false
         }
