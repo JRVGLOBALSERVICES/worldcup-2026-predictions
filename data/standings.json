@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T01:20:30.704Z",
+    "generatedAt": "2026-06-28T02:20:28.895Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -739,11 +739,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "3rd: A/E/H/I/J",
-            "opponentFlag": null,
+            "opponent": "Senegal",
+            "opponentFlag": "🇸🇳",
             "kickoffUTC": "2026-07-01T20:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -1023,7 +1023,14 @@
             "L",
             "L"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Belgium",
+            "opponentFlag": "🇧🇪",
+            "kickoffUTC": "2026-07-01T20:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Iraq",
@@ -1076,11 +1083,11 @@
             "W"
           ],
           "next": {
-            "round": "Group",
-            "opponent": "Jordan",
-            "opponentFlag": "🇯🇴",
-            "kickoffUTC": "2026-06-28T02:00Z",
-            "home": false,
+            "round": "Round of 32",
+            "opponent": "Cape Verde",
+            "opponentFlag": "🇨🇻",
+            "kickoffUTC": "2026-07-03T22:00Z",
+            "home": true,
             "placeholder": false
           }
         },
@@ -1104,14 +1111,7 @@
             "L",
             "W"
           ],
-          "next": {
-            "round": "Group",
-            "opponent": "Algeria",
-            "opponentFlag": "🇩🇿",
-            "kickoffUTC": "2026-06-28T02:00Z",
-            "home": false,
-            "placeholder": false
-          }
+          "next": null
         },
         {
           "name": "Algeria",
@@ -1133,14 +1133,7 @@
             "W",
             "L"
           ],
-          "next": {
-            "round": "Group",
-            "opponent": "Austria",
-            "opponentFlag": "🇦🇹",
-            "kickoffUTC": "2026-06-28T02:00Z",
-            "home": true,
-            "placeholder": false
-          }
+          "next": null
         },
         {
           "name": "Jordan",
@@ -1162,98 +1155,115 @@
             "L",
             "L"
           ],
-          "next": {
-            "round": "Group",
-            "opponent": "Argentina",
-            "opponentFlag": "🇦🇷",
-            "kickoffUTC": "2026-06-28T02:00Z",
-            "home": true,
-            "placeholder": false
-          }
+          "next": null
         }
       ]
     },
     {
       "group": "K",
       "total": 6,
-      "played": 4,
+      "played": 6,
       "rows": [
         {
           "name": "Colombia",
           "flag": "🇨🇴",
-          "played": 2,
+          "played": 3,
           "won": 2,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 0,
           "goalsFor": 4,
           "goalsAgainst": 1,
           "goalDiff": 3,
-          "points": 6,
+          "points": 7,
           "rank": 1,
           "advance": {
             "label": "Advance to Round of 32",
             "color": "#81D6AC"
           },
           "form": [
+            "D",
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Ghana",
+            "opponentFlag": "🇬🇭",
+            "kickoffUTC": "2026-07-04T01:30Z",
+            "home": true,
+            "placeholder": false
+          }
         },
         {
           "name": "Portugal",
           "flag": "🇵🇹",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 1,
+          "drawn": 2,
           "lost": 0,
           "goalsFor": 6,
           "goalsAgainst": 1,
           "goalDiff": 5,
-          "points": 4,
+          "points": 5,
           "rank": 2,
           "advance": {
             "label": "Advance to Round of 32",
             "color": "#81D6AC"
           },
           "form": [
+            "D",
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Croatia",
+            "opponentFlag": "🇭🇷",
+            "kickoffUTC": "2026-07-02T23:00Z",
+            "home": true,
+            "placeholder": false
+          }
         },
         {
           "name": "Congo DR",
           "flag": "🇨🇩",
-          "played": 2,
-          "won": 0,
+          "played": 3,
+          "won": 1,
           "drawn": 1,
           "lost": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 2,
-          "goalDiff": -1,
-          "points": 1,
+          "goalsFor": 4,
+          "goalsAgainst": 3,
+          "goalDiff": 1,
+          "points": 4,
           "rank": 3,
           "advance": {
             "label": "Best 8 advance",
             "color": "#B5E7CE"
           },
           "form": [
+            "W",
             "L",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "England",
+            "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "kickoffUTC": "2026-07-01T16:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Uzbekistan",
           "flag": "🇺🇿",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 0,
-          "lost": 2,
-          "goalsFor": 1,
-          "goalsAgainst": 8,
-          "goalDiff": -7,
+          "lost": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 11,
+          "goalDiff": -9,
           "points": 0,
           "rank": 4,
           "advance": {
@@ -1261,6 +1271,7 @@
             "color": "#FF7F84"
           },
           "form": [
+            "L",
             "L",
             "L"
           ],
@@ -1296,11 +1307,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "3rd: E/H/I/J/K",
-            "opponentFlag": null,
+            "opponent": "Congo DR",
+            "opponentFlag": "🇨🇩",
             "kickoffUTC": "2026-07-01T16:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -1326,11 +1337,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "2nd Grp K",
-            "opponentFlag": null,
+            "opponent": "Portugal",
+            "opponentFlag": "🇵🇹",
             "kickoffUTC": "2026-07-02T23:00Z",
             "home": false,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -1356,11 +1367,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "Winner Grp K",
-            "opponentFlag": null,
+            "opponent": "Colombia",
+            "opponentFlag": "🇨🇴",
             "kickoffUTC": "2026-07-04T01:30Z",
             "home": false,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T01:20:29.480Z",
+    "generatedAt": "2026-06-28T02:20:27.688Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 52
+    "finished": 54
   },
   "categories": {
     "scorers": [
@@ -184,6 +184,12 @@
       },
       {
         "rank": 1,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 2
@@ -208,26 +214,20 @@
       },
       {
         "rank": 1,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 2
       },
       {
-        "rank": 8,
+        "rank": 10,
         "team": "Australia",
         "flag": "🇦🇺",
-        "value": 1
-      },
-      {
-        "rank": 8,
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 1
-      },
-      {
-        "rank": 8,
-        "team": "Canada",
-        "flag": "🇨🇦",
         "value": 1
       }
     ],
@@ -646,6 +646,11 @@
           "name": "Lionel Messi",
           "value": 5,
           "matches": 2
+        },
+        {
+          "name": "Giovani Lo Celso",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -709,6 +714,10 @@
           "value": 1
         },
         {
+          "name": "Marko Arnautovic",
+          "value": 1
+        },
+        {
           "name": "Stefan Posch",
           "value": 1
         }
@@ -745,6 +754,10 @@
       "yellowCards": [
         {
           "name": "Husam Abu Dahab",
+          "value": 1
+        },
+        {
+          "name": "Mohannad Abu Taha",
           "value": 1
         }
       ],
@@ -818,7 +831,7 @@
       "scorers": [
         {
           "name": "Yoane Wissa",
-          "value": 2,
+          "value": 3,
           "matches": 2
         },
         {
@@ -3149,6 +3162,14 @@
             "team": "Uzbekistan"
           }
         ]
+      },
+      "760483": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760484": {
+        "penMiss": [],
+        "assists": []
       },
       "760485": {
         "penMiss": [],

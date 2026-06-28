@@ -487,6 +487,26 @@
         "home": 2,
         "away": 1
       }
+    },
+    "col-por-2026-06-27": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 0
+      }
+    },
+    "drc-uzb-2026-06-27": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 3,
+        "away": 1
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -2669,6 +2689,88 @@
           "team": "away",
           "player": "Kojo Peprah Oppong",
           "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "col-por-2026-06-27": {
+      "status": "finished",
+      "goals": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Gustavo Puerta",
+          "minute": 86,
+          "type": "yellow"
+        }
+      ]
+    },
+    "drc-uzb-2026-06-27": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Eldor Shomurodov",
+          "minute": 9,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Yoane Wissa",
+          "minute": 68,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Fiston Mayele",
+          "minute": 77,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Yoane Wissa",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Noah Sadiki",
+          "minute": 20,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Abdukodir Khusanov",
+          "minute": 43,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nathanaël Mbuku",
+          "minute": 45,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Sherzod Nasrullaev",
+          "minute": 47,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Samuel Moutoussamy",
+          "minute": 61,
           "type": "yellow"
         }
       ]
@@ -12886,7 +12988,7 @@
     },
     "col-por-2026-06-27": {
       "corners": {
-        "home": 4,
+        "home": 5,
         "away": 2
       },
       "sot": {
@@ -12894,8 +12996,8 @@
         "away": 2
       },
       "shots": {
-        "home": 21,
-        "away": 12
+        "home": 24,
+        "away": 13
       },
       "yellow": {
         "home": 1,
@@ -12912,7 +13014,7 @@
       "cornersByHalf": {
         "home": [
           1,
-          3
+          4
         ],
         "away": [
           0,
@@ -12966,14 +13068,14 @@
     "drc-uzb-2026-06-27": {
       "corners": {
         "home": 2,
-        "away": 3
+        "away": 4
       },
       "sot": {
-        "home": 3,
+        "home": 4,
         "away": 1
       },
       "shots": {
-        "home": 14,
+        "home": 19,
         "away": 3
       },
       "yellow": {
@@ -12995,7 +13097,7 @@
         ],
         "away": [
           3,
-          0
+          1
         ]
       },
       "sotByHalf": {
@@ -13035,6 +13137,106 @@
           "reliable": false
         }
       }
+    },
+    "alg-aus-2026-06-27": {
+      "corners": {
+        "home": 0,
+        "away": 0
+      },
+      "sot": {
+        "home": 0,
+        "away": 0
+      },
+      "shots": {
+        "home": 1,
+        "away": 1
+      },
+      "yellow": {
+        "home": 0,
+        "away": 1
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 0,
+        "away": 1
+      },
+      "cornersByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {},
+      "firstGoalMethod": null,
+      "firstPenalty": null,
+      "waterBreak": {}
+    },
+    "jor-arg-2026-06-27": {
+      "corners": {
+        "home": 0,
+        "away": 1
+      },
+      "sot": {
+        "home": 0,
+        "away": 1
+      },
+      "shots": {
+        "home": 0,
+        "away": 2
+      },
+      "yellow": {
+        "home": 1,
+        "away": 0
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 1,
+        "away": 0
+      },
+      "cornersByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          1,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {},
+      "firstGoalMethod": "freekick",
+      "firstPenalty": null,
+      "waterBreak": {}
     }
   }
 }
