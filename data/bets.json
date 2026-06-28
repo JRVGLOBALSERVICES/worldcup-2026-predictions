@@ -827,6 +827,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "rsa-can-2026-06-28": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
+      "ft90": {
+        "home": 0,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3210,6 +3226,34 @@
           "team": "home",
           "player": "Mohammed Abu Zraiq",
           "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "rsa-can-2026-06-28": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Stephen Eustáquio",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Nathan Saliba",
+          "minute": 54,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Niko Sigur",
+          "minute": 67,
           "type": "yellow"
         }
       ]
@@ -14199,19 +14243,19 @@
     "rsa-can-2026-06-28": {
       "corners": {
         "home": 1,
-        "away": 3
+        "away": 4
       },
       "sot": {
         "home": 1,
-        "away": 4
+        "away": 7
       },
       "shots": {
-        "home": 3,
-        "away": 7
+        "home": 6,
+        "away": 12
       },
       "yellow": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "red": {
         "home": 0,
@@ -14219,7 +14263,7 @@
       },
       "cards": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
@@ -14228,7 +14272,7 @@
         ],
         "away": [
           3,
-          0
+          1
         ]
       },
       "sotByHalf": {
@@ -14238,16 +14282,17 @@
         ],
         "away": [
           3,
-          0
+          2
         ]
       },
       "playerSot": {
         "Teboho Mokoena": 1,
         "Derek Cornelius": 1,
-        "Tani Oluwaseyi": 1,
-        "Tajon Buchanan": 1
+        "Tani Oluwaseyi": 2,
+        "Tajon Buchanan": 1,
+        "Jonathan David": 1
       },
-      "firstGoalMethod": null,
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
       "waterBreak": {
         "h1": {
@@ -14257,6 +14302,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Shot On Target",
           "firstActionMinute": 34,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 71,
           "isCorner": false,
           "reliable": true
         }

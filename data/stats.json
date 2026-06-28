@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T20:20:18.331Z",
+    "generatedAt": "2026-06-28T21:20:20.348Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 56
+    "finished": 57
   },
   "categories": {
     "scorers": [
@@ -184,6 +184,12 @@
       },
       {
         "rank": 1,
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 2
@@ -223,12 +229,6 @@
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 2
-      },
-      {
-        "rank": 10,
-        "team": "Australia",
-        "flag": "🇦🇺",
-        "value": 1
       }
     ],
     "yellowCards": [
@@ -1889,6 +1889,11 @@
           "name": "Promise David",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Stephen Eustáquio",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1913,6 +1918,10 @@
         },
         {
           "name": "Nathan Saliba",
+          "value": 1
+        },
+        {
+          "name": "Niko Sigur",
           "value": 1
         }
       ],

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T20:20:19.820Z",
+    "generatedAt": "2026-06-28T21:20:21.767Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -57,6 +57,7 @@
             "color": "#81D6AC"
           },
           "form": [
+            "L",
             "W",
             "D",
             "L"
@@ -163,11 +164,19 @@
             "color": "#81D6AC"
           },
           "form": [
+            "W",
             "L",
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 16",
+            "opponent": "R32-3 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-04T17:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "Bosnia",
