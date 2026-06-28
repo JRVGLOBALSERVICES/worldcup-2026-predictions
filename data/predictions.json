@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T06:54:48.786Z",
+    "generatedAt": "2026-06-28T09:02:58.698Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-06-28T06:54:48.786Z"
+    "modelUpdatedAt": "2026-06-28T09:00:34.084Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -12788,229 +12788,123 @@
     "rsa-can-2026-06-28": {
       "win": {
         "pick": "Canada",
-        "fairOdds": "1.74",
-        "reason": "Model: Canada to win at 57% (South Africa 19% / draw 24% / Canada 57%). Expected goals 0.8–1.7 from group-stage attack/defence rates (South Africa 1.0 for / 1.2 against per game, Canada 2.2 / 1.2). Most likely score 0-1.",
-        "strength": 4
+        "fairOdds": "2.05",
+        "reason": "Canada have more attacking quality through Jonathan David (4 group goals) and Eustaquio's control, and Opta gives them ~66% to reach the last 16, but South Africa defend deep and counter well, so a tight knockout keeps the draw live.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "3.03",
-        "alt": "1-0",
-        "altOdds": "4.69"
+        "fairOdds": "2.30",
+        "alt": "0-1",
+        "altOdds": "4.20",
+        "strength": 3
       },
       "htft": {
         "pick": "Draw/Canada",
-        "fairOdds": "4.36"
+        "fairOdds": "4.50",
+        "strength": 3
       },
       "fullTime": {
-        "score": "0-1",
-        "fairOdds": "7.39"
+        "score": "1-1",
+        "fairOdds": "6.50",
+        "strength": 2
       },
       "scorers": [
         {
           "player": "Jonathan David",
-          "team": "Canada",
-          "fairOdds": "2.08",
-          "banker": true,
-          "note": "3 goals in 3 group games; 48% modelled anytime chance on 1.7 team xG.",
-          "strength": 4
+          "fairOdds": "2.40",
+          "banker": false,
+          "note": "Canada — Hat-trick vs Qatar; Canada's main threat but RSA sit deep"
+        },
+        {
+          "player": "Lyle Foster",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "South Africa — Burnley forward, RSA's most natural finisher on the counter"
         },
         {
           "player": "Cyle Larin",
-          "team": "Canada",
-          "fairOdds": "2.68",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "2 goals in 3 group games; 37% modelled anytime chance on 1.7 team xG.",
-          "strength": 3
+          "note": "Canada — Veteran target man; non-banker, in-and-out starter"
         },
         {
-          "player": "Teboho Mokoena",
-          "team": "South Africa",
-          "fairOdds": "3.71",
+          "player": "Promise David",
+          "fairOdds": "4.00",
           "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 0.8 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Thapelo Maseko",
-          "team": "South Africa",
-          "fairOdds": "3.71",
-          "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 0.8 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "fairOdds": "4.09",
-          "banker": false,
-          "note": "1 goal in 1 group game; 24% modelled anytime chance on 1.7 team xG.",
-          "strength": 1
+          "note": "Canada — Scored vs Switzerland; impact/rotation option"
         }
       ],
       "assists": [
         {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "player": "Alphonso Davies",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Canada — Back from hamstring injury; likely off bench, left-side creator"
+        },
+        {
+          "player": "Tajon Buchanan",
+          "fairOdds": "4.80",
+          "banker": false,
+          "note": "Canada — Width and crossing from the right"
+        },
+        {
+          "player": "Oswin Appollis",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "South Africa — RSA's set-piece and chance-creation hub"
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Jonathan David",
-        "backup": "Cyle Larin",
-        "note": "Canada favoured to control the game, so a penalty is less pivotal; Jonathan David would take one if awarded."
+        "likelihood": "medium",
+        "taker": "Teboho Mokoena",
+        "backup": "Oswin Appollis",
+        "note": "Mokoena returns from suspension and took RSA's pen vs Czechia; Appollis covered pens/set-pieces in his absence. For Canada, Jonathan David is the spot-kick man. Knockout — if level after extra time, expect Mokoena, David, Eustaquio, Larin among first shootout takers; RSA captain-GK Ronwen Williams holds an AFCON penalty-save record, a real shootout edge for South Africa."
       },
       "lineups": {
-        "home": "Ronwen Williams, Mbekezeli Mbokazi, Ime Okon, Aubrey Modiba, Khuliso Mudau, Relebohile Mofokeng, Sphephelo Sithole, Thalente Mbatha, Evidence Makgopa, Oswin Appollis, Thapelo Maseko",
-        "away": "Maxime Crépeau, Derek Cornelius, Luc de Fougerolles, Richie Laryea, Alistair Johnston, Mathieu Choinière, Nathan Saliba, Ali Ahmed, Tajon Buchanan, Cyle Larin, Jonathan David",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Ronwen Williams",
-              "pos": "G"
-            },
-            {
-              "num": 14,
-              "name": "Mbekezeli Mbokazi",
-              "pos": "CD-L"
-            },
-            {
-              "num": 21,
-              "name": "Ime Okon",
-              "pos": "CD-R"
-            },
-            {
-              "num": 6,
-              "name": "Aubrey Modiba",
-              "pos": "LB"
-            },
-            {
-              "num": 20,
-              "name": "Khuliso Mudau",
-              "pos": "RB"
-            },
-            {
-              "num": 10,
-              "name": "Relebohile Mofokeng",
-              "pos": "AM"
-            },
-            {
-              "num": 13,
-              "name": "Sphephelo Sithole",
-              "pos": "LM"
-            },
-            {
-              "num": 5,
-              "name": "Thalente Mbatha",
-              "pos": "RM"
-            },
-            {
-              "num": 17,
-              "name": "Evidence Makgopa",
-              "pos": "F"
-            },
-            {
-              "num": 7,
-              "name": "Oswin Appollis",
-              "pos": "AM-L"
-            },
-            {
-              "num": 12,
-              "name": "Thapelo Maseko",
-              "pos": "AM-R"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-4-2",
-          "players": [
-            {
-              "num": 16,
-              "name": "Maxime Crépeau",
-              "pos": "G"
-            },
-            {
-              "num": 13,
-              "name": "Derek Cornelius",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Luc de Fougerolles",
-              "pos": "CD-R"
-            },
-            {
-              "num": 22,
-              "name": "Richie Laryea",
-              "pos": "LB"
-            },
-            {
-              "num": 2,
-              "name": "Alistair Johnston",
-              "pos": "RB"
-            },
-            {
-              "num": 6,
-              "name": "Mathieu Choinière",
-              "pos": "CM-L"
-            },
-            {
-              "num": 25,
-              "name": "Nathan Saliba",
-              "pos": "CM-R"
-            },
-            {
-              "num": 20,
-              "name": "Ali Ahmed",
-              "pos": "LM"
-            },
-            {
-              "num": 17,
-              "name": "Tajon Buchanan",
-              "pos": "RM"
-            },
-            {
-              "num": 9,
-              "name": "Cyle Larin",
-              "pos": "CF-L"
-            },
-            {
-              "num": 10,
-              "name": "Jonathan David",
-              "pos": "CF-R"
-            }
-          ]
-        }
+        "home": "Ronwen Williams, Khuliso Mudau, Ime Okon, Mbekezeli Mbokazi, Aubrey Modiba, Teboho Mokoena, Thalente Mbatha, Oswin Appollis, Relebohile Mofokeng, Thapelo Maseko, Lyle Foster",
+        "away": "Maxime Crepeau, Alistair Johnston, Luc de Fougerolles, Derek Cornelius, Richie Laryea, Tajon Buchanan, Stephen Eustaquio, Nathan Saliba, Ali Ahmed, Jonathan David, Cyle Larin",
+        "status": "probable"
       },
       "playerNotes": [
         {
           "player": "Jonathan David",
           "team": "Canada",
-          "note": "3 goals in 3 group games; 48% modelled anytime chance on 1.7 team xG."
+          "note": "Group-stage hat-trick vs Qatar; primary scorer and Canada's penalty taker, but faces a low compact block."
         },
         {
-          "player": "Cyle Larin",
+          "player": "Alphonso Davies",
           "team": "Canada",
-          "note": "2 goals in 3 group games; 37% modelled anytime chance on 1.7 team xG."
+          "note": "Captain back from a hamstring injury that cost him the whole group stage — likely bench/sub, big-match X-factor if introduced."
         },
         {
-          "player": "Nathan Saliba",
+          "player": "Stephen Eustaquio",
           "team": "Canada",
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Midfield metronome carrying a muscle/fitness concern; if he can't go, Choiniere or Saliba steps in and Canada lose control."
+        },
+        {
+          "player": "Teboho Mokoena",
+          "team": "South Africa",
+          "note": "Returns from a one-game suspension; deep-lying playmaker and the side's designated penalty taker (scored vs Czechia)."
+        },
+        {
+          "player": "Ronwen Williams",
+          "team": "South Africa",
+          "note": "Captain-goalkeeper and AFCON penalty-save record-holder — a genuine shootout weapon in a knockout that can go to pens."
+        },
+        {
+          "player": "Lyle Foster",
+          "team": "South Africa",
+          "note": "Burnley forward, RSA's most natural finisher; veteran-ish presence and a counter-attack outlet, not a banker."
         }
       ],
       "confidence": "medium",
-      "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa",
+        "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
+        "https://www.aljazeera.com/sports/2026/6/28/south-africa-vs-canada-fifa-world-cup-2026-prediction-team-news-start-lineups",
+        "https://news.bet365.com/en-us/article/south-africa-canada-preview-and-lineup-predictions/2026062519380087643",
+        "https://www.cbssports.com/soccer/news/canada-vs-south-africa-odds-prediction-time-2026-world-cup-round-of-32-picks/"
       ]
     },
     "bra-jpn-2026-06-29": {
@@ -13568,17 +13462,10 @@
       ],
       "assists": [
         {
-          "player": "Brahim Díaz",
-          "team": "Morocco",
-          "fairOdds": "2.14",
-          "banker": true,
-          "note": "2 assists in the group stage; 47% modelled chance to set one up."
-        },
-        {
           "player": "Denzel Dumfries",
           "team": "Netherlands",
           "fairOdds": "2.26",
-          "banker": false,
+          "banker": true,
           "note": "2 assists in the group stage; 44% modelled chance to set one up."
         },
         {
@@ -13589,11 +13476,18 @@
           "note": "2 assists in the group stage; 44% modelled chance to set one up."
         },
         {
-          "player": "Achraf Hakimi",
+          "player": "Brahim Díaz",
           "team": "Morocco",
-          "fairOdds": "3.26",
+          "fairOdds": "2.40",
           "banker": false,
-          "note": "1 assist in the group stage; 31% modelled chance to set one up."
+          "note": "2 assists in the group stage; 42% modelled chance to set one up."
+        },
+        {
+          "player": "Cody Gakpo",
+          "team": "Netherlands",
+          "fairOdds": "3.47",
+          "banker": false,
+          "note": "1 assist in the group stage; 29% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -13739,9 +13633,9 @@
           "note": "3 goals in 3 group games; 50% modelled anytime chance on 1.6 team xG."
         },
         {
-          "player": "Brahim Díaz",
-          "team": "Morocco",
-          "note": "2 assists in the group stage; 47% modelled chance to set one up."
+          "player": "Denzel Dumfries",
+          "team": "Netherlands",
+          "note": "2 assists in the group stage; 44% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
@@ -13795,7 +13689,7 @@
           "team": "Ivory Coast",
           "fairOdds": "2.25",
           "banker": false,
-          "note": "1 goal in 3 group games; 44% modelled anytime chance on 2.0 team xG.",
+          "note": "1 goal in 1 group game; 44% modelled anytime chance on 2.0 team xG.",
           "strength": 3
         },
         {
@@ -13817,11 +13711,18 @@
       ],
       "assists": [
         {
+          "player": "Ibrahim Sangaré",
+          "team": "Ivory Coast",
+          "fairOdds": "2.02",
+          "banker": true,
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+        },
+        {
           "player": "Yan Diomande",
           "team": "Ivory Coast",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+          "fairOdds": "2.02",
+          "banker": false,
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
         },
         {
           "player": "Martin Ødegaard",
@@ -13832,13 +13733,6 @@
         },
         {
           "player": "Andreas Schjelderup",
-          "team": "Norway",
-          "fairOdds": "4.12",
-          "banker": false,
-          "note": "1 assist in the group stage; 24% modelled chance to set one up."
-        },
-        {
-          "player": "David Møller Wolfe",
           "team": "Norway",
           "fairOdds": "4.12",
           "banker": false,
@@ -13988,9 +13882,9 @@
           "note": "4 goals in 2 group games; 50% modelled anytime chance on 1.4 team xG."
         },
         {
-          "player": "Yan Diomande",
+          "player": "Ibrahim Sangaré",
           "team": "Ivory Coast",
-          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
@@ -14317,23 +14211,30 @@
         {
           "player": "Roberto Alvarado",
           "team": "Mexico",
-          "fairOdds": "1.97",
+          "fairOdds": "2.24",
           "banker": true,
-          "note": "2 assists in the group stage; 51% modelled chance to set one up."
+          "note": "2 assists in the group stage; 45% modelled chance to set one up."
+        },
+        {
+          "player": "Jorge Sánchez",
+          "team": "Mexico",
+          "fairOdds": "3.43",
+          "banker": false,
+          "note": "1 assist in the group stage; 29% modelled chance to set one up."
         },
         {
           "player": "Luis Romo",
           "team": "Mexico",
-          "fairOdds": "2.95",
+          "fairOdds": "3.43",
           "banker": false,
-          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+          "note": "1 assist in the group stage; 29% modelled chance to set one up."
         },
         {
-          "player": "Pedro Vite",
+          "player": "Kevin Rodríguez",
           "team": "Ecuador",
-          "fairOdds": "7.28",
+          "fairOdds": "9.53",
           "banker": false,
-          "note": "1 assist in the group stage; 14% modelled chance to set one up."
+          "note": "1 assist in the group stage; 10% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -14481,7 +14382,7 @@
         {
           "player": "Roberto Alvarado",
           "team": "Mexico",
-          "note": "2 assists in the group stage; 51% modelled chance to set one up."
+          "note": "2 assists in the group stage; 45% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
@@ -14519,7 +14420,7 @@
           "team": "England",
           "fairOdds": "1.91",
           "banker": true,
-          "note": "3 goals in 2 group games; 52% modelled anytime chance on 1.7 team xG.",
+          "note": "3 goals in 3 group games; 52% modelled anytime chance on 1.7 team xG.",
           "strength": 4
         },
         {
@@ -14527,7 +14428,7 @@
           "team": "England",
           "fairOdds": "2.43",
           "banker": false,
-          "note": "2 goals in 2 group games; 41% modelled anytime chance on 1.7 team xG.",
+          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.7 team xG.",
           "strength": 3
         },
         {
@@ -14535,7 +14436,7 @@
           "team": "Congo DR",
           "fairOdds": "2.72",
           "banker": false,
-          "note": "3 goals in 2 group games; 37% modelled anytime chance on 0.8 team xG.",
+          "note": "3 goals in 3 group games; 37% modelled anytime chance on 0.8 team xG.",
           "strength": 3
         },
         {
@@ -14559,30 +14460,30 @@
         {
           "player": "Bukayo Saka",
           "team": "England",
-          "fairOdds": "2.65",
+          "fairOdds": "2.27",
           "banker": true,
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "2 assists in the group stage; 44% modelled chance to set one up."
         },
         {
           "player": "Declan Rice",
           "team": "England",
-          "fairOdds": "2.65",
+          "fairOdds": "3.48",
           "banker": false,
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "1 assist in the group stage; 29% modelled chance to set one up."
         },
         {
           "player": "Elliot Anderson",
           "team": "England",
-          "fairOdds": "2.65",
+          "fairOdds": "3.48",
           "banker": false,
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "1 assist in the group stage; 29% modelled chance to set one up."
         },
         {
           "player": "Arthur Masuaku",
           "team": "Congo DR",
-          "fairOdds": "3.26",
+          "fairOdds": "4.16",
           "banker": false,
-          "note": "1 assist in the group stage; 31% modelled chance to set one up."
+          "note": "1 assist in the group stage; 24% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -14720,17 +14621,17 @@
         {
           "player": "Harry Kane",
           "team": "England",
-          "note": "3 goals in 2 group games; 52% modelled anytime chance on 1.7 team xG."
+          "note": "3 goals in 3 group games; 52% modelled anytime chance on 1.7 team xG."
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "note": "2 goals in 2 group games; 41% modelled anytime chance on 1.7 team xG."
+          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.7 team xG."
         },
         {
           "player": "Bukayo Saka",
           "team": "England",
-          "note": "1 assist in the group stage; 38% modelled chance to set one up."
+          "note": "2 assists in the group stage; 44% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
@@ -14808,9 +14709,23 @@
         {
           "player": "Hans Vanaken",
           "team": "Belgium",
-          "fairOdds": "1.72",
+          "fairOdds": "1.98",
           "banker": true,
-          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+        },
+        {
+          "player": "Nicolas Raskin",
+          "team": "Belgium",
+          "fairOdds": "1.98",
+          "banker": false,
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+        },
+        {
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "fairOdds": "1.98",
+          "banker": false,
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
         },
         {
           "player": "Iliman Ndiaye",
@@ -14818,20 +14733,6 @@
           "fairOdds": "3.17",
           "banker": false,
           "note": "2 assists in the group stage; 32% modelled chance to set one up."
-        },
-        {
-          "player": "Abdoulaye Seck",
-          "team": "Senegal",
-          "fairOdds": "5.05",
-          "banker": false,
-          "note": "1 assist in the group stage; 20% modelled chance to set one up."
-        },
-        {
-          "player": "Ismaïla Sarr",
-          "team": "Senegal",
-          "fairOdds": "5.05",
-          "banker": false,
-          "note": "1 assist in the group stage; 20% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -14979,7 +14880,7 @@
         {
           "player": "Hans Vanaken",
           "team": "Belgium",
-          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+          "note": "1 assist in the group stage; 50% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
@@ -15062,18 +14963,25 @@
           "note": "1 assist in the group stage; 58% modelled chance to set one up."
         },
         {
+          "player": "Dennis Hadzikadunic",
+          "team": "Bosnia-Herzegovina",
+          "fairOdds": "3.26",
+          "banker": false,
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
+        },
+        {
           "player": "Ivan Basic",
           "team": "Bosnia-Herzegovina",
-          "fairOdds": "2.72",
+          "fairOdds": "3.26",
           "banker": false,
-          "note": "1 assist in the group stage; 37% modelled chance to set one up."
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
         },
         {
           "player": "Sead Kolasinac",
           "team": "Bosnia-Herzegovina",
-          "fairOdds": "2.72",
+          "fairOdds": "3.26",
           "banker": false,
-          "note": "1 assist in the group stage; 37% modelled chance to set one up."
+          "note": "1 assist in the group stage; 31% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -15283,7 +15191,7 @@
           "team": "Austria",
           "fairOdds": "5.09",
           "banker": false,
-          "note": "2 goals in 2 group games; 20% modelled anytime chance on 0.6 team xG.",
+          "note": "2 goals in 3 group games; 20% modelled anytime chance on 0.6 team xG.",
           "strength": 1
         },
         {
@@ -15291,7 +15199,7 @@
           "team": "Austria",
           "fairOdds": "8.13",
           "banker": false,
-          "note": "1 goal in 1 group game; 12% modelled anytime chance on 0.6 team xG.",
+          "note": "1 goal in 3 group games; 12% modelled anytime chance on 0.6 team xG.",
           "strength": 1
         }
       ],
@@ -15320,9 +15228,9 @@
         {
           "player": "David Alaba",
           "team": "Austria",
-          "fairOdds": "6.35",
+          "fairOdds": "7.51",
           "banker": false,
-          "note": "1 assist in the group stage; 16% modelled chance to set one up."
+          "note": "1 assist in the group stage; 13% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -15508,7 +15416,7 @@
           "team": "Portugal",
           "fairOdds": "1.95",
           "banker": true,
-          "note": "2 goals in 2 group games; 51% modelled anytime chance on 2.0 team xG.",
+          "note": "2 goals in 3 group games; 51% modelled anytime chance on 2.0 team xG.",
           "strength": 4
         },
         {
@@ -15569,9 +15477,9 @@
         {
           "player": "Ivan Perisic",
           "team": "Croatia",
-          "fairOdds": "5.80",
+          "fairOdds": "6.68",
           "banker": false,
-          "note": "1 assist in the group stage; 17% modelled chance to set one up."
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -15709,7 +15617,7 @@
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "note": "2 goals in 2 group games; 51% modelled anytime chance on 2.0 team xG."
+          "note": "2 goals in 3 group games; 51% modelled anytime chance on 2.0 team xG."
         },
         {
           "player": "João Neves",
@@ -15763,25 +15671,17 @@
         {
           "player": "Rubén Vargas",
           "team": "Switzerland",
-          "fairOdds": "1.72",
+          "fairOdds": "1.60",
           "banker": false,
-          "note": "2 goals in 3 group games; 58% modelled anytime chance on 3.1 team xG.",
+          "note": "2 goals in 3 group games; 62% modelled anytime chance on 3.1 team xG.",
           "strength": 5
-        },
-        {
-          "player": "Breel Embolo",
-          "team": "Switzerland",
-          "fairOdds": "2.46",
-          "banker": false,
-          "note": "1 goal in 3 group games; 41% modelled anytime chance on 3.1 team xG.",
-          "strength": 3
         },
         {
           "player": "Granit Xhaka",
           "team": "Switzerland",
-          "fairOdds": "2.46",
+          "fairOdds": "2.25",
           "banker": false,
-          "note": "1 goal in 3 group games; 41% modelled anytime chance on 3.1 team xG.",
+          "note": "1 goal in 3 group games; 44% modelled anytime chance on 3.1 team xG.",
           "strength": 3
         },
         {
@@ -15789,8 +15689,16 @@
           "team": "Algeria",
           "fairOdds": "3.12",
           "banker": false,
-          "note": "2 goals in 1 group game; 32% modelled anytime chance on 1.1 team xG.",
+          "note": "2 goals in 3 group games; 32% modelled anytime chance on 1.1 team xG.",
           "strength": 2
+        },
+        {
+          "player": "Amine Gouiri",
+          "team": "Algeria",
+          "fairOdds": "4.83",
+          "banker": false,
+          "note": "1 goal in 1 group game; 21% modelled anytime chance on 1.1 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
@@ -15814,6 +15722,13 @@
           "fairOdds": "1.93",
           "banker": false,
           "note": "1 assist in the group stage; 52% modelled chance to set one up."
+        },
+        {
+          "player": "Houssem Aouar",
+          "team": "Algeria",
+          "fairOdds": "2.47",
+          "banker": false,
+          "note": "2 assists in the group stage; 41% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -15956,7 +15871,7 @@
         {
           "player": "Rubén Vargas",
           "team": "Switzerland",
-          "note": "2 goals in 3 group games; 58% modelled anytime chance on 3.1 team xG."
+          "note": "2 goals in 3 group games; 62% modelled anytime chance on 3.1 team xG."
         },
         {
           "player": "Breel Embolo",
@@ -16265,7 +16180,7 @@
           "team": "Cape Verde",
           "fairOdds": "6.89",
           "banker": false,
-          "note": "1 goal in 3 group games; 15% modelled anytime chance on 0.4 team xG.",
+          "note": "1 goal in 1 group game; 15% modelled anytime chance on 0.4 team xG.",
           "strength": 1
         }
       ],
@@ -16475,7 +16390,7 @@
           "team": "Colombia",
           "fairOdds": "2.74",
           "banker": true,
-          "note": "2 goals in 2 group games; 36% modelled anytime chance on 1.1 team xG.",
+          "note": "2 goals in 3 group games; 36% modelled anytime chance on 1.1 team xG.",
           "strength": 3
         },
         {
@@ -16491,7 +16406,7 @@
           "team": "Colombia",
           "fairOdds": "4.20",
           "banker": false,
-          "note": "1 goal in 1 group game; 24% modelled anytime chance on 1.1 team xG.",
+          "note": "1 goal in 3 group games; 24% modelled anytime chance on 1.1 team xG.",
           "strength": 1
         },
         {
@@ -16515,30 +16430,30 @@
         {
           "player": "Cucho Hernández",
           "team": "Colombia",
-          "fairOdds": "3.81",
+          "fairOdds": "4.46",
           "banker": true,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "1 assist in the group stage; 22% modelled chance to set one up."
         },
         {
           "player": "Gustavo Puerta",
           "team": "Colombia",
-          "fairOdds": "3.81",
+          "fairOdds": "4.46",
           "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "1 assist in the group stage; 22% modelled chance to set one up."
         },
         {
-          "player": "Luis Díaz",
+          "player": "Juan Fernando Quintero",
           "team": "Colombia",
-          "fairOdds": "3.81",
+          "fairOdds": "4.46",
           "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "1 assist in the group stage; 22% modelled chance to set one up."
         },
         {
           "player": "Brandon Thomas-Asante",
           "team": "Ghana",
-          "fairOdds": "5.27",
+          "fairOdds": "6.84",
           "banker": false,
-          "note": "1 assist in the group stage; 19% modelled chance to set one up."
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -16676,7 +16591,7 @@
         {
           "player": "Daniel Muñoz",
           "team": "Colombia",
-          "note": "2 goals in 2 group games; 36% modelled anytime chance on 1.1 team xG."
+          "note": "2 goals in 3 group games; 36% modelled anytime chance on 1.1 team xG."
         },
         {
           "player": "Jáminton Campaz",
@@ -16686,7 +16601,7 @@
         {
           "player": "Cucho Hernández",
           "team": "Colombia",
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "1 assist in the group stage; 22% modelled chance to set one up."
         }
       ],
       "confidence": "medium",

@@ -22,7 +22,12 @@ export type Bet = {
 };
 
 export type Score = { home: number; away: number } | null;
-export type MatchResult = { ht: Score; ft: Score };
+// `advanced` = which side PROGRESSED to the next round (knockout only), by any
+// means — 90-min win, extra time, or penalty shootout. Captured by
+// scripts/build-results.mjs once a tie is final; absent/null for group games and
+// ties not yet decided. This is what separates a "to qualify" market (settles on
+// advancement) from a 1X2 "to win" market (settles on the 90-minute score).
+export type MatchResult = { ht: Score; ft: Score; advanced?: "home" | "away" | null };
 
 /** One scraped goal. `team` is relative to the fixture's listed home/away sides.
  *  Goals are stored in chronological scoring order — first non-own-goal = first scorer. */
@@ -293,6 +298,12 @@ export type MultiLegCond =
       scores: { home: number; away: number }[];
     }
   | { matchId: string; kind: "result"; outcome: "1" | "X" | "2" }
+  // Knockout ADVANCEMENT — the named side reaches the next round, by ANY means
+  // (90-min win, extra time, OR penalty shootout). Distinct from `result` (a
+  // 90-minute 1X2 win): a side that draws after 90 and goes through on penalties
+  // WINS a `qualify` leg but LOSES a `result` leg. Settles off `advanced` (who
+  // progressed); falls back to the FT score only when one side wins in regulation.
+  | { matchId: string; kind: "qualify"; side: "home" | "away" }
   | { matchId: string; kind: "correctScore"; home: number; away: number }
   | { matchId: string; kind: "btts"; negate?: boolean }
   | { matchId: string; kind: "cleanSheet"; side: "home" | "away" }
@@ -889,10 +900,32 @@ export function gradeSpecial(special: Special): BetStatus {
       }
 
       if (leg.kind === "result") {
-        // 1X2: full-time outcome oriented to the leg match's home/away.
+        // 1X2: full-time outcome oriented to the leg match's home/away. This is a
+        // 90-MINUTE win — a draw after 90 loses, regardless of any ET/pens result.
         if (!ft) return "lost";
         const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
         if (outcome !== leg.outcome) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "qualify") {
+        // Knockout advancement — the side PROGRESSES by any route. Prefer the
+        // recorded `advanced` (set once the tie, incl. ET/pens, is final). If a
+        // knockout is final but advancement wasn't captured, fall back to the FT
+        // score: a regulation winner is the side that went through; a level FT
+        // means it went to ET/pens we can't yet read, so hold the acca pending.
+        const adv = getResult(leg.matchId).advanced;
+        if (adv) {
+          if (adv !== leg.side) return "lost";
+          continue;
+        }
+        if (!ft) return "lost";
+        const winner = ft.home > ft.away ? "home" : ft.home < ft.away ? "away" : null;
+        if (winner == null) {
+          pending = true;
+          continue;
+        }
+        if (winner !== leg.side) return "lost";
         continue;
       }
 

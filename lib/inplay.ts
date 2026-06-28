@@ -29,7 +29,11 @@ export function legLabelFor(leg: MultiLegCond): string {
   const plus = (line: number) => `${Math.floor(line) + 1}+`;
   switch (leg.kind) {
     case "result":
-      return leg.outcome === "X" ? `${m} — draw` : `${leg.outcome === "1" ? h : a} to win`;
+      return leg.outcome === "X"
+        ? `${m} — draw (90 min)`
+        : `${leg.outcome === "1" ? h : a} to win (90 min)`;
+    case "qualify":
+      return `${side(leg.side)} to qualify`;
     case "correctScore":
       return `${m} — exactly ${leg.home}-${leg.away}`;
     case "btts":
@@ -787,6 +791,34 @@ export function inPlayMultiLeg(
           parts.push(`${legLabel} ✗`);
         }
       } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "qualify") {
+      // Advancement — can't lock from the live score alone (ET/pens decide a
+      // level tie), so this never goes "dead" mid-match: a side level or behind
+      // can still go through. Leading → on track. At FINAL, a decisive score
+      // implies who advanced; a level final waits for the captured `advanced`
+      // (the static settle), shown here as still pending (⋯).
+      const ours = leg.side === "home" ? cur.home : cur.away;
+      const theirs = leg.side === "home" ? cur.away : cur.home;
+      if (done) {
+        if (ours > theirs) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (ours < theirs) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
+      } else if (ours > theirs) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
       } else {

@@ -5,7 +5,7 @@
     "currency": "RM",
     "unitStake": 10,
     "note": "",
-    "disclaimer": "Fun-money tracking only. Returns shown are stake \u00d7 odds (includes the stake back). Some scorelines on the same match are mutually exclusive \u2014 they can't all land."
+    "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Some scorelines on the same match are mutually exclusive — they can't all land."
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -529,7 +529,7 @@
       }
     }
   },
-  "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order \u2014 the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events \u2014 only fill from a verified live source.",
+  "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
   "matchEvents": {
     "por-drc-2026-06-17": {
       "status": "finished",
@@ -614,7 +614,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Daniel Mu\u00f1oz",
+          "scorer": "Daniel Muñoz",
           "minute": 40,
           "assist": null,
           "penalty": false,
@@ -630,7 +630,7 @@
         },
         {
           "team": "away",
-          "scorer": "Luis D\u00edaz",
+          "scorer": "Luis Díaz",
           "minute": 65,
           "assist": null,
           "penalty": false,
@@ -638,7 +638,7 @@
         },
         {
           "team": "away",
-          "scorer": "J\u00e1minton Campaz",
+          "scorer": "Jáminton Campaz",
           "minute": 90,
           "assist": null,
           "penalty": false,
@@ -665,7 +665,7 @@
       "goals": [
         {
           "team": "home",
-          "scorer": "Michal Sad\u00edlek",
+          "scorer": "Michal Sadílek",
           "minute": 5,
           "assist": null,
           "penalty": false,
@@ -695,7 +695,7 @@
         },
         {
           "team": "home",
-          "player": "Ladislav Krejc\u00ed",
+          "player": "Ladislav Krejcí",
           "minute": 75,
           "type": "yellow"
         }
@@ -714,7 +714,7 @@
         },
         {
           "team": "home",
-          "scorer": "Rub\u00e9n Vargas",
+          "scorer": "Rubén Vargas",
           "minute": 84,
           "assist": null,
           "penalty": false,
@@ -991,7 +991,7 @@
         },
         {
           "team": "home",
-          "scorer": "Vin\u00edcius J\u00fanior",
+          "scorer": "Vinícius Júnior",
           "minute": 45,
           "assist": null,
           "penalty": false,
@@ -1030,7 +1030,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Mat\u00edas Galarza",
+          "scorer": "Matías Galarza",
           "minute": 1,
           "assist": null,
           "penalty": false,
@@ -1040,13 +1040,13 @@
       "cards": [
         {
           "team": "away",
-          "player": "Mat\u00edas Galarza",
+          "player": "Matías Galarza",
           "minute": 3,
           "type": "yellow"
         },
         {
           "team": "away",
-          "player": "Miguel Almir\u00f3n",
+          "player": "Miguel Almirón",
           "minute": 45,
           "type": "red"
         },
@@ -1142,7 +1142,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Franck Kessi\u00e9",
+          "scorer": "Franck Kessié",
           "minute": 29,
           "assist": null,
           "penalty": false,
@@ -1173,7 +1173,7 @@
       "cards": [
         {
           "team": "home",
-          "player": "Jordy Alc\u00edvar",
+          "player": "Jordy Alcívar",
           "minute": 37,
           "type": "yellow"
         },
@@ -1197,7 +1197,7 @@
         },
         {
           "team": "away",
-          "player": "Juri\u00ebn Gaari",
+          "player": "Juriën Gaari",
           "minute": 74,
           "type": "yellow"
         },
@@ -1335,7 +1335,7 @@
         },
         {
           "team": "home",
-          "scorer": "Maxi Ara\u00fajo",
+          "scorer": "Maxi Araújo",
           "minute": 43,
           "assist": null,
           "penalty": false,
@@ -1343,7 +1343,7 @@
         },
         {
           "team": "home",
-          "scorer": "Agust\u00edn Canobbio",
+          "scorer": "Agustín Canobbio",
           "minute": 45,
           "assist": null,
           "penalty": false,
@@ -1351,7 +1351,7 @@
         },
         {
           "team": "away",
-          "scorer": "H\u00e9lio Varela",
+          "scorer": "Hélio Varela",
           "minute": 60,
           "assist": null,
           "penalty": false,
@@ -1373,7 +1373,7 @@
         },
         {
           "team": "home",
-          "player": "Math\u00edas Olivera",
+          "player": "Mathías Olivera",
           "minute": 57,
           "type": "yellow"
         },
@@ -1414,7 +1414,7 @@
         },
         {
           "team": "away",
-          "scorer": "Tr\u00e9z\u00e9guet",
+          "scorer": "Trézéguet",
           "minute": 81,
           "assist": null,
           "penalty": false,
@@ -1494,7 +1494,7 @@
       "goals": [
         {
           "team": "home",
-          "scorer": "Kylian Mbapp\u00e9",
+          "scorer": "Kylian Mbappé",
           "minute": 14,
           "assist": null,
           "penalty": false,
@@ -1502,7 +1502,7 @@
         },
         {
           "team": "home",
-          "scorer": "Kylian Mbapp\u00e9",
+          "scorer": "Kylian Mbappé",
           "minute": 54,
           "assist": null,
           "penalty": false,
@@ -1510,7 +1510,7 @@
         },
         {
           "team": "home",
-          "scorer": "Ousmane Demb\u00e9l\u00e9",
+          "scorer": "Ousmane Dembélé",
           "minute": 66,
           "assist": null,
           "penalty": false,
@@ -1547,7 +1547,7 @@
         },
         {
           "team": "away",
-          "scorer": "Isma\u00efla Sarr",
+          "scorer": "Ismaïla Sarr",
           "minute": 53,
           "assist": null,
           "penalty": false,
@@ -1563,7 +1563,7 @@
         },
         {
           "team": "away",
-          "scorer": "Isma\u00efla Sarr",
+          "scorer": "Ismaïla Sarr",
           "minute": 90,
           "assist": null,
           "penalty": false,
@@ -1652,7 +1652,7 @@
         },
         {
           "team": "home",
-          "scorer": "Rafael Le\u00e3o",
+          "scorer": "Rafael Leão",
           "minute": 87,
           "assist": null,
           "penalty": false,
@@ -1686,7 +1686,7 @@
         },
         {
           "team": "away",
-          "player": "I\u00f1aki Williams",
+          "player": "Iñaki Williams",
           "minute": 59,
           "type": "yellow"
         }
@@ -1707,7 +1707,7 @@
       "cards": [
         {
           "team": "home",
-          "player": "\u00c9dgar Yoel B\u00e1rcenas",
+          "player": "Édgar Yoel Bárcenas",
           "minute": 60,
           "type": "yellow"
         },
@@ -1724,7 +1724,7 @@
       "goals": [
         {
           "team": "home",
-          "scorer": "Daniel Mu\u00f1oz",
+          "scorer": "Daniel Muñoz",
           "minute": 75,
           "assist": null,
           "penalty": false,
@@ -1734,7 +1734,7 @@
       "cards": [
         {
           "team": "home",
-          "player": "Jhon Lucum\u00ed",
+          "player": "Jhon Lucumí",
           "minute": 56,
           "type": "yellow"
         },
@@ -1757,7 +1757,7 @@
       "goals": [
         {
           "team": "home",
-          "scorer": "Rub\u00e9n Vargas",
+          "scorer": "Rubén Vargas",
           "minute": 46,
           "assist": null,
           "penalty": false,
@@ -1857,7 +1857,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Vin\u00edcius J\u00fanior",
+          "scorer": "Vinícius Júnior",
           "minute": 7,
           "assist": null,
           "penalty": false,
@@ -1865,7 +1865,7 @@
         },
         {
           "team": "away",
-          "scorer": "Vin\u00edcius J\u00fanior",
+          "scorer": "Vinícius Júnior",
           "minute": 45,
           "assist": null,
           "penalty": false,
@@ -1968,7 +1968,7 @@
         },
         {
           "team": "away",
-          "player": "Josu\u00e9 Casimir",
+          "player": "Josué Casimir",
           "minute": 90,
           "type": "yellow"
         }
@@ -1979,7 +1979,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Mateo Ch\u00e1vez",
+          "scorer": "Mateo Chávez",
           "minute": 54,
           "assist": null,
           "penalty": false,
@@ -1987,7 +1987,7 @@
         },
         {
           "team": "away",
-          "scorer": "Juli\u00e1n Qui\u00f1ones",
+          "scorer": "Julián Quiñones",
           "minute": 61,
           "assist": null,
           "penalty": false,
@@ -1995,7 +1995,7 @@
         },
         {
           "team": "away",
-          "scorer": "\u00c1lvaro Fidalgo",
+          "scorer": "Álvaro Fidalgo",
           "minute": 90,
           "assist": null,
           "penalty": false,
@@ -2005,7 +2005,7 @@
       "cards": [
         {
           "team": "away",
-          "player": "Edson \u00c1lvarez",
+          "player": "Edson Álvarez",
           "minute": 63,
           "type": "yellow"
         }
@@ -2043,7 +2043,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Leroy San\u00e9",
+          "scorer": "Leroy Sané",
           "minute": 2,
           "assist": null,
           "penalty": false,
@@ -2069,7 +2069,7 @@
       "cards": [
         {
           "team": "home",
-          "player": "Piero Hincapi\u00e9",
+          "player": "Piero Hincapié",
           "minute": 42,
           "type": "yellow"
         },
@@ -2098,7 +2098,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Nicolas P\u00e9p\u00e9",
+          "scorer": "Nicolas Pépé",
           "minute": 6,
           "assist": null,
           "penalty": false,
@@ -2106,7 +2106,7 @@
         },
         {
           "team": "away",
-          "scorer": "Nicolas P\u00e9p\u00e9",
+          "scorer": "Nicolas Pépé",
           "minute": 63,
           "assist": null,
           "penalty": false,
@@ -2116,7 +2116,7 @@
       "cards": [
         {
           "team": "away",
-          "player": "Nicolas P\u00e9p\u00e9",
+          "player": "Nicolas Pépé",
           "minute": 34,
           "type": "yellow"
         },
@@ -2169,7 +2169,7 @@
         },
         {
           "team": "away",
-          "player": "Viktor Gy\u00f6keres",
+          "player": "Viktor Gyökeres",
           "minute": 84,
           "type": "yellow"
         }
@@ -2226,7 +2226,7 @@
         },
         {
           "team": "home",
-          "scorer": "Arda G\u00fcler",
+          "scorer": "Arda Güler",
           "minute": 10,
           "assist": null,
           "penalty": false,
@@ -2278,7 +2278,7 @@
         },
         {
           "team": "home",
-          "player": "Diego G\u00f3mez",
+          "player": "Diego Gómez",
           "minute": 77,
           "type": "yellow"
         }
@@ -2289,7 +2289,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "Ousmane Demb\u00e9l\u00e9",
+          "scorer": "Ousmane Dembélé",
           "minute": 6,
           "assist": null,
           "penalty": false,
@@ -2297,7 +2297,7 @@
         },
         {
           "team": "away",
-          "scorer": "Ousmane Demb\u00e9l\u00e9",
+          "scorer": "Ousmane Dembélé",
           "minute": 19,
           "assist": null,
           "penalty": false,
@@ -2313,7 +2313,7 @@
         },
         {
           "team": "away",
-          "scorer": "Ousmane Demb\u00e9l\u00e9",
+          "scorer": "Ousmane Dembélé",
           "minute": 32,
           "assist": null,
           "penalty": false,
@@ -2321,7 +2321,7 @@
         },
         {
           "team": "away",
-          "scorer": "D\u00e9sir\u00e9 Dou\u00e9",
+          "scorer": "Désiré Doué",
           "minute": 90,
           "assist": null,
           "penalty": false,
@@ -2337,7 +2337,7 @@
         },
         {
           "team": "away",
-          "player": "Aur\u00e9lien Tchouam\u00e9ni",
+          "player": "Aurélien Tchouaméni",
           "minute": 74,
           "type": "yellow"
         }
@@ -2356,7 +2356,7 @@
         },
         {
           "team": "home",
-          "scorer": "Isma\u00efla Sarr",
+          "scorer": "Ismaïla Sarr",
           "minute": 55,
           "assist": null,
           "penalty": false,
@@ -2455,7 +2455,7 @@
       "goals": [
         {
           "team": "away",
-          "scorer": "\u00c1lex Baena",
+          "scorer": "Álex Baena",
           "minute": 41,
           "assist": null,
           "penalty": false,
@@ -2465,7 +2465,7 @@
       "cards": [
         {
           "team": "away",
-          "player": "\u00c1lex Baena",
+          "player": "Álex Baena",
           "minute": 46,
           "type": "yellow"
         },
@@ -2483,13 +2483,13 @@
         },
         {
           "team": "home",
-          "player": "Nicol\u00e1s de la Cruz",
+          "player": "Nicolás de la Cruz",
           "minute": 90,
           "type": "yellow"
         },
         {
           "team": "home",
-          "player": "Agust\u00edn Canobbio",
+          "player": "Agustín Canobbio",
           "minute": 90,
           "type": "red"
         }
@@ -2651,7 +2651,7 @@
       "cards": [
         {
           "team": "home",
-          "player": "Jos\u00e9 Fajardo",
+          "player": "José Fajardo",
           "minute": 53,
           "type": "yellow"
         },
@@ -2663,7 +2663,7 @@
         },
         {
           "team": "home",
-          "player": "Andr\u00e9s Andrade",
+          "player": "Andrés Andrade",
           "minute": 83,
           "type": "yellow"
         }
@@ -2777,7 +2777,7 @@
         },
         {
           "team": "home",
-          "player": "Nathana\u00ebl Mbuku",
+          "player": "Nathanaël Mbuku",
           "minute": 45,
           "type": "yellow"
         },
@@ -2870,7 +2870,7 @@
         },
         {
           "team": "away",
-          "scorer": "Lautaro Mart\u00ednez",
+          "scorer": "Lautaro Martínez",
           "minute": 30,
           "assist": null,
           "penalty": true,
@@ -2921,7 +2921,7 @@
       "matchId": "por-drc-2026-06-17",
       "side": "Portugal",
       "period": "HT",
-      "label": "Portugal to lead 1\u20130 at half-time",
+      "label": "Portugal to lead 1–0 at half-time",
       "home": 1,
       "away": 0,
       "odds": 3.1,
@@ -2932,7 +2932,7 @@
       "matchId": "por-drc-2026-06-17",
       "side": "Portugal",
       "period": "FT",
-      "label": "Portugal to win 2\u20130",
+      "label": "Portugal to win 2–0",
       "home": 2,
       "away": 0,
       "odds": 5.5,
@@ -2943,7 +2943,7 @@
       "matchId": "por-drc-2026-06-17",
       "side": "Portugal",
       "period": "FT",
-      "label": "Portugal to win 3\u20130",
+      "label": "Portugal to win 3–0",
       "home": 3,
       "away": 0,
       "odds": 7.5,
@@ -2954,7 +2954,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
       "period": "HT",
-      "label": "England to lead 1\u20130 at half-time",
+      "label": "England to lead 1–0 at half-time",
       "home": 1,
       "away": 0,
       "odds": 3.5,
@@ -2965,7 +2965,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
       "period": "FT",
-      "label": "England to win 2\u20131",
+      "label": "England to win 2–1",
       "home": 2,
       "away": 1,
       "odds": 8.5,
@@ -2976,7 +2976,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "Draw",
       "period": "FT",
-      "label": "Match to finish 1\u20131",
+      "label": "Match to finish 1–1",
       "home": 1,
       "away": 1,
       "odds": 6.5,
@@ -2987,7 +2987,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
       "period": "FT",
-      "label": "England to win 3\u20131",
+      "label": "England to win 3–1",
       "home": 3,
       "away": 1,
       "odds": 13,
@@ -2998,7 +2998,7 @@
       "matchId": "gha-pan-2026-06-17",
       "side": "Draw",
       "period": "HT",
-      "label": "Goalless at half-time (0\u20130)",
+      "label": "Goalless at half-time (0–0)",
       "home": 0,
       "away": 0,
       "odds": 2.52,
@@ -3009,7 +3009,7 @@
       "matchId": "gha-pan-2026-06-17",
       "side": "Draw",
       "period": "FT",
-      "label": "Match to finish 1\u20131",
+      "label": "Match to finish 1–1",
       "home": 1,
       "away": 1,
       "odds": 6.5,
@@ -3020,7 +3020,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Colombia",
       "period": "HT",
-      "label": "Colombia to lead 1\u20130 at half-time",
+      "label": "Colombia to lead 1–0 at half-time",
       "home": 0,
       "away": 1,
       "odds": 3.1,
@@ -3031,7 +3031,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Colombia",
       "period": "FT",
-      "label": "Colombia to win 2\u20130",
+      "label": "Colombia to win 2–0",
       "home": 0,
       "away": 2,
       "odds": 5.5,
@@ -3042,7 +3042,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Colombia",
       "period": "FT",
-      "label": "Colombia to win 2\u20131",
+      "label": "Colombia to win 2–1",
       "home": 1,
       "away": 2,
       "odds": 8.5,
@@ -3054,7 +3054,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
       "period": "FT",
-      "label": "England to win 3\u20131",
+      "label": "England to win 3–1",
       "home": 3,
       "away": 1,
       "odds": 13,
@@ -3067,7 +3067,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
       "period": "FT",
-      "label": "England to win 3\u20130",
+      "label": "England to win 3–0",
       "home": 3,
       "away": 0,
       "odds": 12,
@@ -3080,7 +3080,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "Draw",
       "period": "FT",
-      "label": "Match to finish 2\u20132",
+      "label": "Match to finish 2–2",
       "home": 2,
       "away": 2,
       "odds": 14,
@@ -3093,7 +3093,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "England",
       "period": "FT",
-      "label": "England to win 2\u20131",
+      "label": "England to win 2–1",
       "home": 2,
       "away": 1,
       "odds": 8,
@@ -3106,7 +3106,7 @@
       "matchId": "por-drc-2026-06-17",
       "side": "Portugal",
       "period": "FT",
-      "label": "Portugal to win 2\u20131",
+      "label": "Portugal to win 2–1",
       "home": 2,
       "away": 1,
       "odds": 3.25,
@@ -3119,7 +3119,7 @@
       "matchId": "por-drc-2026-06-17",
       "side": "Draw",
       "period": "FT",
-      "label": "Match to finish 1\u20131",
+      "label": "Match to finish 1–1",
       "home": 1,
       "away": 1,
       "odds": 4.79,
@@ -3132,7 +3132,7 @@
       "matchId": "por-drc-2026-06-17",
       "side": "Portugal",
       "period": "FT",
-      "label": "Portugal to win 3\u20131",
+      "label": "Portugal to win 3–1",
       "home": 3,
       "away": 1,
       "odds": 4.75,
@@ -3145,7 +3145,7 @@
       "matchId": "eng-cro-2026-06-17",
       "side": "Draw",
       "period": "FT",
-      "label": "Match to finish 0\u20130",
+      "label": "Match to finish 0–0",
       "home": 0,
       "away": 0,
       "odds": 10.6,
@@ -3158,7 +3158,7 @@
       "matchId": "gha-pan-2026-06-17",
       "side": "Panama",
       "period": "FT",
-      "label": "Match to finish 0\u20131 (Panama)",
+      "label": "Match to finish 0–1 (Panama)",
       "home": 0,
       "away": 1,
       "odds": 4.5,
@@ -3171,7 +3171,7 @@
       "matchId": "gha-pan-2026-06-17",
       "side": "Ghana",
       "period": "FT",
-      "label": "Match to finish 1\u20130 (Ghana)",
+      "label": "Match to finish 1–0 (Ghana)",
       "home": 1,
       "away": 0,
       "odds": 4.5,
@@ -3184,7 +3184,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Draw",
       "period": "HT",
-      "label": "Goalless at half-time (0\u20130)",
+      "label": "Goalless at half-time (0–0)",
       "home": 0,
       "away": 0,
       "odds": 3.125,
@@ -3197,7 +3197,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Colombia",
       "period": "HT",
-      "label": "Colombia to lead 0\u20131 at half-time",
+      "label": "Colombia to lead 0–1 at half-time",
       "home": 0,
       "away": 1,
       "odds": 3.2,
@@ -3210,7 +3210,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Draw",
       "period": "HT",
-      "label": "1\u20131 at half-time",
+      "label": "1–1 at half-time",
       "home": 1,
       "away": 1,
       "odds": 10,
@@ -3223,7 +3223,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Uzbekistan",
       "period": "HT",
-      "label": "Uzbekistan to lead 1\u20130 at half-time",
+      "label": "Uzbekistan to lead 1–0 at half-time",
       "home": 1,
       "away": 0,
       "odds": 9.5,
@@ -3236,7 +3236,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Uzbekistan",
       "period": "FT",
-      "label": "Uzbekistan to win 3\u20132",
+      "label": "Uzbekistan to win 3–2",
       "home": 3,
       "away": 2,
       "odds": 51,
@@ -3249,7 +3249,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Draw",
       "period": "FT",
-      "label": "2\u20132 draw",
+      "label": "2–2 draw",
       "home": 2,
       "away": 2,
       "odds": 11,
@@ -3262,7 +3262,7 @@
       "matchId": "uzb-col-2026-06-17",
       "side": "Colombia",
       "period": "FT",
-      "label": "Colombia to win 3\u20132",
+      "label": "Colombia to win 3–2",
       "home": 2,
       "away": 3,
       "odds": 13,
@@ -3275,7 +3275,7 @@
       "matchId": "cze-sou-2026-06-18",
       "side": "South Africa",
       "period": "HT",
-      "label": "South Africa to lead 0\u20131 at half-time",
+      "label": "South Africa to lead 0–1 at half-time",
       "home": 0,
       "away": 1,
       "odds": 6,
@@ -3288,7 +3288,7 @@
       "matchId": "cze-sou-2026-06-18",
       "side": "Draw",
       "period": "HT",
-      "label": "1\u20131 at half-time",
+      "label": "1–1 at half-time",
       "home": 1,
       "away": 1,
       "odds": 8,
@@ -3301,7 +3301,7 @@
       "matchId": "cze-sou-2026-06-18",
       "side": "Draw",
       "period": "HT",
-      "label": "0\u20130 at half-time",
+      "label": "0–0 at half-time",
       "home": 0,
       "away": 0,
       "odds": 2.765,
@@ -3314,7 +3314,7 @@
       "matchId": "mex-sou-2026-06-18",
       "side": "Mexico",
       "period": "HT",
-      "label": "Mexico to lead 1\u20130 at half-time",
+      "label": "Mexico to lead 1–0 at half-time",
       "home": 1,
       "away": 0,
       "odds": 4,
@@ -3327,7 +3327,7 @@
       "matchId": "mex-sou-2026-06-18",
       "side": "Draw",
       "period": "HT",
-      "label": "0\u20130 at half-time",
+      "label": "0–0 at half-time",
       "home": 0,
       "away": 0,
       "odds": 2.57,
@@ -3340,7 +3340,7 @@
       "matchId": "mex-sou-2026-06-18",
       "side": "Draw",
       "period": "HT",
-      "label": "1\u20131 at half-time",
+      "label": "1–1 at half-time",
       "home": 1,
       "away": 1,
       "odds": 8.5,
@@ -3353,7 +3353,7 @@
       "matchId": "mex-sou-2026-06-18",
       "side": "South Korea",
       "period": "FT",
-      "label": "South Korea to win 2\u20131 (Mexico 1\u20132 South Korea)",
+      "label": "South Korea to win 2–1 (Mexico 1–2 South Korea)",
       "home": 1,
       "away": 2,
       "odds": 12,
@@ -3366,7 +3366,7 @@
       "matchId": "mex-sou-2026-06-18",
       "side": "Mexico",
       "period": "FT",
-      "label": "Mexico to win 2\u20131",
+      "label": "Mexico to win 2–1",
       "home": 2,
       "away": 1,
       "odds": 8.5,
@@ -3379,7 +3379,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "HT",
-      "label": "USA to lead 2\u20131 at half-time",
+      "label": "USA to lead 2–1 at half-time",
       "home": 2,
       "away": 1,
       "odds": 19,
@@ -3392,7 +3392,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "HT",
-      "label": "USA to lead 2\u20130 at half-time",
+      "label": "USA to lead 2–0 at half-time",
       "home": 2,
       "away": 0,
       "odds": 8,
@@ -3405,7 +3405,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "Draw",
       "period": "HT",
-      "label": "0\u20130 at half-time",
+      "label": "0–0 at half-time",
       "home": 0,
       "away": 0,
       "odds": 3.18,
@@ -3418,7 +3418,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "HT",
-      "label": "USA to lead 1\u20130 at half-time",
+      "label": "USA to lead 1–0 at half-time",
       "home": 1,
       "away": 0,
       "odds": 3.5,
@@ -3431,7 +3431,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "FT",
-      "label": "USA to win 2\u20130",
+      "label": "USA to win 2–0",
       "home": 2,
       "away": 0,
       "odds": 7,
@@ -3444,7 +3444,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "FT",
-      "label": "USA to win 3\u20131",
+      "label": "USA to win 3–1",
       "home": 3,
       "away": 1,
       "odds": 12,
@@ -3457,7 +3457,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "FT",
-      "label": "USA to win 3\u20130",
+      "label": "USA to win 3–0",
       "home": 3,
       "away": 0,
       "odds": 11,
@@ -3470,7 +3470,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Scotland",
       "period": "FT",
-      "label": "Scotland to win 1\u20130",
+      "label": "Scotland to win 1–0",
       "home": 1,
       "away": 0,
       "odds": 11,
@@ -3483,7 +3483,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Scotland",
       "period": "FT",
-      "label": "Scotland to win 1\u20130",
+      "label": "Scotland to win 1–0",
       "home": 1,
       "away": 0,
       "odds": 11,
@@ -3496,7 +3496,7 @@
       "matchId": "bra-hai-2026-06-19",
       "side": "Brazil",
       "period": "FT",
-      "label": "Brazil to win 2\u20131",
+      "label": "Brazil to win 2–1",
       "home": 2,
       "away": 1,
       "odds": 13,
@@ -3509,7 +3509,7 @@
       "matchId": "bra-hai-2026-06-19",
       "side": "Brazil",
       "period": "FT",
-      "label": "Brazil to win 3\u20130",
+      "label": "Brazil to win 3–0",
       "home": 3,
       "away": 0,
       "odds": 6,
@@ -3522,7 +3522,7 @@
       "matchId": "bra-hai-2026-06-19",
       "side": "Brazil",
       "period": "FT",
-      "label": "Brazil to win 2\u20130",
+      "label": "Brazil to win 2–0",
       "home": 2,
       "away": 0,
       "odds": 6.5,
@@ -3535,7 +3535,7 @@
       "matchId": "bra-hai-2026-06-19",
       "side": "Draw",
       "period": "FT",
-      "label": "1\u20131 draw",
+      "label": "1–1 draw",
       "home": 1,
       "away": 1,
       "odds": 17,
@@ -3548,7 +3548,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Morocco",
       "period": "HT",
-      "label": "Morocco to lead 1\u20132 at half-time",
+      "label": "Morocco to lead 1–2 at half-time",
       "home": 1,
       "away": 2,
       "odds": 23,
@@ -3561,7 +3561,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Draw",
       "period": "HT",
-      "label": "1\u20131 at half-time",
+      "label": "1–1 at half-time",
       "home": 1,
       "away": 1,
       "odds": 9.5,
@@ -3574,7 +3574,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Draw",
       "period": "FT",
-      "label": "1\u20131 draw",
+      "label": "1–1 draw",
       "home": 1,
       "away": 1,
       "odds": 6.5,
@@ -3587,7 +3587,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Morocco",
       "period": "FT",
-      "label": "Morocco to win 1\u20132",
+      "label": "Morocco to win 1–2",
       "home": 1,
       "away": 2,
       "odds": 8,
@@ -3600,7 +3600,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Morocco",
       "period": "FT",
-      "label": "Morocco to win 0\u20132",
+      "label": "Morocco to win 0–2",
       "home": 0,
       "away": 2,
       "odds": 6.5,
@@ -3613,7 +3613,7 @@
       "matchId": "sco-mor-2026-06-19",
       "side": "Morocco",
       "period": "FT",
-      "label": "Morocco to win 0\u20131",
+      "label": "Morocco to win 0–1",
       "home": 0,
       "away": 1,
       "odds": 5,
@@ -3626,7 +3626,7 @@
       "matchId": "usa-aus-2026-06-19",
       "side": "USA",
       "period": "FT",
-      "label": "USA to win 4\u20130",
+      "label": "USA to win 4–0",
       "home": 4,
       "away": 0,
       "odds": 6.5,
@@ -4649,8 +4649,8 @@
       "slipNo": "83207258911",
       "matchId": "por-drc-2026-06-17",
       "player": "Bruno Fernandes",
-      "market": "Goal + 2\u20130 win",
-      "label": "Bruno Fernandes scores and the match ends 2\u20130",
+      "market": "Goal + 2–0 win",
+      "label": "Bruno Fernandes scores and the match ends 2–0",
       "odds": 15,
       "stake": 10,
       "placedAt": "17/06 20:17",
@@ -4696,8 +4696,8 @@
       "slipNo": "83207177883",
       "matchId": "por-drc-2026-06-17",
       "player": "Ronaldo",
-      "market": "1st goal + 3\u20130 win",
-      "label": "Ronaldo scores first and the match ends 3\u20130",
+      "market": "1st goal + 3–0 win",
+      "label": "Ronaldo scores first and the match ends 3–0",
       "odds": 25,
       "stake": 10,
       "placedAt": "17/06 20:14",
@@ -4712,7 +4712,7 @@
       "id": "sp-83222821419",
       "slipNo": "83222821419",
       "matchId": "por-drc-2026-06-17",
-      "player": "\u2014",
+      "player": "—",
       "market": "Both teams score 2+",
       "label": "Both teams to score 2 or more goals (Yes)",
       "odds": 5.09,
@@ -4739,8 +4739,8 @@
       "id": "sp-83229541461",
       "slipNo": "83229541461",
       "matchId": "eng-cro-2026-06-17",
-      "player": "\u2014",
-      "market": "HT/FT \u2014 England / Croatia",
+      "player": "—",
+      "market": "HT/FT — England / Croatia",
       "label": "England ahead at half-time and Croatia to win full-time (HT/FT W1/W2)",
       "odds": 41,
       "stake": 10,
@@ -4772,8 +4772,8 @@
       "slipNo": "83237939347",
       "matchId": "uzb-col-2026-06-17",
       "player": "Luis Diaz",
-      "market": "First goal + match score 0\u20131",
-      "label": "Luis Diaz scores first goal and match ends 0\u20131 (Colombia)",
+      "market": "First goal + match score 0–1",
+      "label": "Luis Diaz scores first goal and match ends 0–1 (Colombia)",
       "odds": 12,
       "stake": 10,
       "placedAt": "18/06 08:41",
@@ -4804,8 +4804,8 @@
       "id": "sp-83237918973",
       "slipNo": "83237918973",
       "matchId": "uzb-col-2026-06-17",
-      "player": "\u2014",
-      "market": "Match winner \u2014 W1",
+      "player": "—",
+      "market": "Match winner — W1",
       "label": "Uzbekistan to win (1X2 W1)",
       "odds": 9.3,
       "stake": 10,
@@ -4820,8 +4820,8 @@
       "slipNo": "83238786677",
       "matchId": "uzb-col-2026-06-17",
       "player": "Luis Suarez",
-      "market": "First goal + match score 0\u20131",
-      "label": "Luis Su\u00e1rez scores first goal and match ends 0\u20131 (Colombia)",
+      "market": "First goal + match score 0–1",
+      "label": "Luis Suárez scores first goal and match ends 0–1 (Colombia)",
       "odds": 13.7,
       "stake": 10,
       "placedAt": "18/06 09:24",
@@ -4838,7 +4838,7 @@
       "matchId": "uzb-col-2026-06-17",
       "player": "Luis Suarez",
       "market": "First goal + match score Any Other",
-      "label": "Luis Su\u00e1rez scores first goal and match ends in any other score",
+      "label": "Luis Suárez scores first goal and match ends in any other score",
       "odds": 26,
       "stake": 10,
       "placedAt": "18/06 09:25",
@@ -5273,9 +5273,9 @@
       "id": "sp-83260144403",
       "slipNo": "83260144403",
       "matchId": "cze-sou-2026-06-18",
-      "player": "\u2014",
-      "market": "2nd half correct score 0\u20130",
-      "label": "Second half to finish 0\u20130",
+      "player": "—",
+      "market": "2nd half correct score 0–0",
+      "label": "Second half to finish 0–0",
       "odds": 3.64,
       "stake": 10,
       "placedAt": "18/06 23:50",
@@ -5289,9 +5289,9 @@
       "id": "sp-83260139663",
       "slipNo": "83260139663",
       "matchId": "cze-sou-2026-06-18",
-      "player": "\u2014",
-      "market": "2nd half correct score 1\u20131",
-      "label": "Second half to finish 1\u20131",
+      "player": "—",
+      "market": "2nd half correct score 1–1",
+      "label": "Second half to finish 1–1",
       "odds": 8.44,
       "stake": 20,
       "placedAt": "18/06 23:50",
@@ -5305,7 +5305,7 @@
       "id": "sp-83260060565",
       "slipNo": "83260060565",
       "matchId": "cze-sou-2026-06-18",
-      "player": "\u2014",
+      "player": "—",
       "market": "Match draw (1X2 X)",
       "label": "Czechia v South Africa to be a draw (1X2 X)",
       "odds": 3.61,
@@ -5322,7 +5322,7 @@
       "matchId": "mex-sou-2026-06-18",
       "player": "Raul Jimenez / Kangin Lee",
       "market": "Both players to score",
-      "label": "Ra\u00fal Jim\u00e9nez and Kang-in Lee both to score during the match",
+      "label": "Raúl Jiménez and Kang-in Lee both to score during the match",
       "odds": 17,
       "stake": 16,
       "placedAt": "19/06 01:13",
@@ -5340,7 +5340,7 @@
       "matchId": "mex-sou-2026-06-18",
       "player": "Raul Jimenez",
       "market": "First goal + Any Other score",
-      "label": "Ra\u00fal Jim\u00e9nez to score first goal and match ends any other score",
+      "label": "Raúl Jiménez to score first goal and match ends any other score",
       "odds": 65,
       "stake": 14,
       "placedAt": "19/06 01:11",
@@ -5419,7 +5419,7 @@
       "id": "sp-83263815357",
       "slipNo": "83263815357",
       "matchId": "mex-sou-2026-06-18",
-      "player": "\u2014",
+      "player": "—",
       "market": "W2 + Both Teams To Score",
       "label": "South Korea to win and both teams to score",
       "odds": 7.8,
@@ -5434,7 +5434,7 @@
       "id": "sp-83263789899",
       "slipNo": "83263789899",
       "matchId": "mex-sou-2026-06-18",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 (W2)",
       "label": "South Korea to win (1X2 W2)",
       "odds": 4.04,
@@ -5451,7 +5451,7 @@
       "matchId": "swi-bos-2026-06-18",
       "player": "Dan Ndoye",
       "market": "First goal + Score 3-1",
-      "label": "Dan Ndoye to score first goal and match ends 3\u20131 (Switzerland)",
+      "label": "Dan Ndoye to score first goal and match ends 3–1 (Switzerland)",
       "odds": 95,
       "stake": 10,
       "placedAt": "19/06 02:15",
@@ -5468,7 +5468,7 @@
       "matchId": "swi-bos-2026-06-18",
       "player": "Dan Ndoye",
       "market": "First goal + Score 2-0",
-      "label": "Dan Ndoye to score first goal and match ends 2\u20130 (Switzerland)",
+      "label": "Dan Ndoye to score first goal and match ends 2–0 (Switzerland)",
       "odds": 50,
       "stake": 10,
       "placedAt": "19/06 02:15",
@@ -5485,7 +5485,7 @@
       "matchId": "swi-bos-2026-06-18",
       "player": "Ruben Vargas",
       "market": "First goal + Score 2-0",
-      "label": "Ruben Vargas to score first goal and match ends 2\u20130 (Switzerland)",
+      "label": "Ruben Vargas to score first goal and match ends 2–0 (Switzerland)",
       "odds": 60,
       "stake": 10,
       "placedAt": "19/06 02:14",
@@ -5744,8 +5744,8 @@
       "slipNo": "83285853257",
       "matchId": "usa-aus-2026-06-19",
       "player": "Balogun",
-      "market": "1st goal + 2\u20130 win",
-      "label": "Balogun scores first and USA win 2\u20130",
+      "market": "1st goal + 2–0 win",
+      "label": "Balogun scores first and USA win 2–0",
       "odds": 35,
       "stake": 3,
       "placedAt": "19/06 14:08",
@@ -5761,8 +5761,8 @@
       "slipNo": "83285846951",
       "matchId": "usa-aus-2026-06-19",
       "player": "Balogun",
-      "market": "1st goal + 3\u20131 win",
-      "label": "Balogun scores first and USA win 3\u20131",
+      "market": "1st goal + 3–1 win",
+      "label": "Balogun scores first and USA win 3–1",
       "odds": 65,
       "stake": 3,
       "placedAt": "19/06 14:07",
@@ -5777,7 +5777,7 @@
       "id": "sp-83295436003",
       "slipNo": "83295436003",
       "matchId": "sco-mor-2026-06-19",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 (X)",
       "label": "Scotland v Morocco to be a draw (1X2 X)",
       "odds": 3.735,
@@ -5792,7 +5792,7 @@
       "id": "sp-83295422359",
       "slipNo": "83295422359",
       "matchId": "sco-mor-2026-06-19",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 (W1)",
       "label": "Scotland to win (1X2 W1)",
       "odds": 5.8,
@@ -5809,7 +5809,7 @@
       "matchId": "sco-mor-2026-06-19",
       "player": "Brahim Diaz",
       "market": "Player to score in both halves",
-      "label": "Brahim D\u00edaz to score in both halves (Yes)",
+      "label": "Brahim Díaz to score in both halves (Yes)",
       "odds": 21,
       "stake": 10,
       "placedAt": "19/06 19:57",
@@ -5822,7 +5822,7 @@
       "id": "sp-83303298983",
       "slipNo": "83303298983",
       "matchId": "bra-hai-2026-06-19",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 (X)",
       "label": "Brazil v Haiti to be a draw (1X2 X)",
       "odds": 11.1,
@@ -5920,7 +5920,7 @@
       "matchId": "bra-hai-2026-06-19",
       "player": "Vinicius Junior",
       "market": "First goal + Any-Other score",
-      "label": "Vin\u00edcius J\u00fanior scores first goal and match ends any other score",
+      "label": "Vinícius Júnior scores first goal and match ends any other score",
       "odds": 10,
       "stake": 20,
       "placedAt": "19/06 23:30",
@@ -5999,7 +5999,7 @@
       "id": "sp-83316805435",
       "slipNo": "83316805435",
       "matchId": "sco-mor-2026-06-19",
-      "player": "\u2014",
+      "player": "—",
       "market": "W2 + Both Teams To Score",
       "label": "Morocco to win and both teams to score",
       "odds": 4,
@@ -6014,7 +6014,7 @@
       "id": "sp-83316799791",
       "slipNo": "83316799791",
       "matchId": "sco-mor-2026-06-19",
-      "player": "\u2014",
+      "player": "—",
       "market": "X + Both Teams To Score",
       "label": "Draw and both teams to score",
       "odds": 5.5,
@@ -6382,7 +6382,7 @@
       "id": "sp-83315770923",
       "slipNo": "83315770923",
       "matchId": "sco-mor-2026-06-19",
-      "player": "\u2014",
+      "player": "—",
       "market": "W2 + Both Teams To Score",
       "label": "Morocco to win and both teams to score",
       "odds": 4,
@@ -6414,7 +6414,7 @@
       "slipNo": "83315630279",
       "matchId": "usa-aus-2026-06-19",
       "player": "Folarin Balogun / Weston McKennie",
-      "market": "Assist \u2014 at least one",
+      "market": "Assist — at least one",
       "label": "Balogun or McKennie to make an assist",
       "odds": 4.33,
       "stake": 20,
@@ -6432,7 +6432,7 @@
       "slipNo": "83315624545",
       "matchId": "usa-aus-2026-06-19",
       "player": "Folarin Balogun / Sergino Dest",
-      "market": "Assist \u2014 at least one",
+      "market": "Assist — at least one",
       "label": "Balogun or Dest to make an assist",
       "odds": 4,
       "stake": 20,
@@ -6449,7 +6449,7 @@
       "id": "sp-83333615387",
       "slipNo": "83333615387",
       "matchId": "net-swe-2026-06-20",
-      "player": "\u2014",
+      "player": "—",
       "market": "How goal scored",
       "label": "1st goal a header",
       "odds": 5.2,
@@ -6464,7 +6464,7 @@
       "id": "sp-83333606047",
       "slipNo": "83333606047",
       "matchId": "net-swe-2026-06-20",
-      "player": "\u2014",
+      "player": "—",
       "market": "How goal scored",
       "label": "1st goal a direct free kick",
       "odds": 35,
@@ -6479,7 +6479,7 @@
       "id": "sp-83333598977",
       "slipNo": "83333598977",
       "matchId": "net-swe-2026-06-20",
-      "player": "\u2014",
+      "player": "—",
       "market": "How goal scored",
       "label": "1st goal an own goal",
       "odds": 22,
@@ -6496,7 +6496,7 @@
       "matchId": "net-swe-2026-06-20",
       "player": "Viktor Gyokeres",
       "market": "Score + match score",
-      "label": "Gy\u00f6keres to score & score 0-2, 1-2 or 1-3",
+      "label": "Gyökeres to score & score 0-2, 1-2 or 1-3",
       "odds": 12,
       "stake": 10,
       "placedAt": "20/06 15:45",
@@ -6554,7 +6554,7 @@
       "matchId": "net-swe-2026-06-20",
       "player": "Viktor Gyokeres",
       "market": "Score + match score",
-      "label": "Gy\u00f6keres to score & score 0-1, 0-2 or 1-2",
+      "label": "Gyökeres to score & score 0-1, 0-2 or 1-2",
       "odds": 11,
       "stake": 10,
       "placedAt": "20/06 15:45",
@@ -6742,7 +6742,7 @@
       "id": "sp-83333341251",
       "slipNo": "83333341251",
       "matchId": "net-swe-2026-06-20",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 + BTTS",
       "label": "Sweden win & both teams score",
       "odds": 7.9,
@@ -6757,7 +6757,7 @@
       "id": "sp-83333339541",
       "slipNo": "83333339541",
       "matchId": "net-swe-2026-06-20",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 + BTTS",
       "label": "Draw & both teams score",
       "odds": 4.8,
@@ -6772,7 +6772,7 @@
       "id": "sp-83333338081",
       "slipNo": "83333338081",
       "matchId": "net-swe-2026-06-20",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 + BTTS",
       "label": "Netherlands win & both teams score",
       "odds": 3.1,
@@ -7008,8 +7008,8 @@
       "slipNo": "83360441815",
       "matchId": "ger-ivo-2026-06-20",
       "player": "Germany v Ivory Coast",
-      "market": "Special \u2014 first action after water break",
-      "label": "First action after the 1st-half water break (\u224822') to be a corner \u2014 Yes (auto-settled off first ESPN commentary action after the anchor)",
+      "market": "Special — first action after water break",
+      "label": "First action after the 1st-half water break (≈22') to be a corner — Yes (auto-settled off first ESPN commentary action after the anchor)",
       "odds": 15,
       "stake": 10,
       "placedAt": "21/06 03:09",
@@ -7022,7 +7022,7 @@
       "id": "sp-83396676365",
       "slipNo": "83396676365",
       "matchId": "spa-sau-2026-06-21",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 X (Draw)",
       "label": "Match to be a draw (1X2 X)",
       "odds": 11.2,
@@ -7037,7 +7037,7 @@
       "id": "sp-83396678901",
       "slipNo": "83396678901",
       "matchId": "spa-sau-2026-06-21",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2 W2 (Saudi Arabia)",
       "label": "Saudi Arabia to win (1X2 W2)",
       "odds": 34,
@@ -7054,7 +7054,7 @@
       "matchId": "spa-sau-2026-06-21",
       "player": "Sultan Mandash",
       "market": "Anytime goal (incl. subs)",
-      "label": "Sultan Mandash to score at any time (incl. substitutions) \u2014 Yes",
+      "label": "Sultan Mandash to score at any time (incl. substitutions) — Yes",
       "odds": 14,
       "stake": 20,
       "placedAt": "21/06 23:23",
@@ -7069,7 +7069,7 @@
       "matchId": "spa-sau-2026-06-21",
       "player": "Musab Fahd Al-Juwayr",
       "market": "Anytime goal (incl. subs)",
-      "label": "Musab Fahd Al-Juwayr to score at any time (incl. substitutions) \u2014 Yes",
+      "label": "Musab Fahd Al-Juwayr to score at any time (incl. substitutions) — Yes",
       "odds": 11.2,
       "stake": 20,
       "placedAt": "21/06 23:23",
@@ -7084,7 +7084,7 @@
       "matchId": "spa-sau-2026-06-21",
       "player": "Khalid Al Ghannam",
       "market": "Anytime goal (incl. subs)",
-      "label": "Khalid Al Ghannam to score at any time (incl. substitutions) \u2014 Yes",
+      "label": "Khalid Al Ghannam to score at any time (incl. substitutions) — Yes",
       "odds": 14,
       "stake": 20,
       "placedAt": "21/06 23:23",
@@ -7099,7 +7099,7 @@
       "matchId": "spa-sau-2026-06-21",
       "player": "Salem Al-Dawsari",
       "market": "Anytime goal (incl. subs)",
-      "label": "Salem Al-Dawsari to score at any time (incl. substitutions) \u2014 Yes",
+      "label": "Salem Al-Dawsari to score at any time (incl. substitutions) — Yes",
       "odds": 11.2,
       "stake": 20,
       "placedAt": "21/06 23:22",
@@ -7112,8 +7112,8 @@
       "id": "sp-83406207987",
       "slipNo": "83406207987",
       "matchId": "uru-cap-2026-06-21",
-      "player": "\u2014",
-      "market": "Match winner \u2014 W2",
+      "player": "—",
+      "market": "Match winner — W2",
       "label": "Cape Verde to win (1X2 W2)",
       "odds": 9.45,
       "stake": 100,
@@ -7127,8 +7127,8 @@
       "id": "sp-83406198857",
       "slipNo": "83406198857",
       "matchId": "uru-cap-2026-06-21",
-      "player": "\u2014",
-      "market": "Match winner \u2014 X",
+      "player": "—",
+      "market": "Match winner — X",
       "label": "Match to be a draw (1X2 X)",
       "odds": 4.495,
       "stake": 100,
@@ -7159,8 +7159,8 @@
       "slipNo": "83405835029",
       "matchId": "bel-ira-2026-06-21",
       "player": "Belgium v Iran",
-      "market": "First 10 min \u2014 goal + corner + card",
-      "label": "Over 0 goals, over 0 corners AND over 0 cards all before 9:59 (accumulator) \u2014 manual settle, no time-window auto-grade",
+      "market": "First 10 min — goal + corner + card",
+      "label": "Over 0 goals, over 0 corners AND over 0 cards all before 9:59 (accumulator) — manual settle, no time-window auto-grade",
       "odds": 41,
       "stake": 10,
       "placedAt": "22/06 02:18",
@@ -7170,8 +7170,8 @@
       "id": "sp-83405661815",
       "slipNo": "83405661815",
       "matchId": "bel-ira-2026-06-21",
-      "player": "\u2014",
-      "market": "How 1st goal scored \u2014 own goal",
+      "player": "—",
+      "market": "How 1st goal scored — own goal",
       "label": "1st goal of the match to be an own goal",
       "odds": 22,
       "stake": 50,
@@ -7185,8 +7185,8 @@
       "id": "sp-83423005603",
       "slipNo": "83423005603",
       "matchId": "fra-ira-2026-06-22",
-      "player": "\u2014",
-      "market": "Match winner \u2014 W1",
+      "player": "—",
+      "market": "Match winner — W1",
       "label": "France to win (1X2 W1)",
       "odds": 1.095,
       "stake": 49.5,
@@ -7278,9 +7278,9 @@
       "id": "sp-83438161277",
       "slipNo": "83438161277",
       "matchId": "arg-aus-2026-06-22",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2",
-      "label": "Argentina v Austria \u2014 Draw (X)",
+      "label": "Argentina v Austria — Draw (X)",
       "odds": 4.545,
       "stake": 50,
       "placedAt": "22/06 23:25",
@@ -7294,8 +7294,8 @@
       "slipNo": "83449007135",
       "matchId": "fra-ira-2026-06-22",
       "player": "Kylian Mbappe",
-      "market": "1st goal + 3\u20130 win",
-      "label": "Kylian Mbappe scores first and the match ends 3\u20130",
+      "market": "1st goal + 3–0 win",
+      "label": "Kylian Mbappe scores first and the match ends 3–0",
       "odds": 20,
       "stake": 20,
       "placedAt": "23/06 03:32",
@@ -7364,8 +7364,8 @@
       "slipNo": "83449243777",
       "matchId": "nor-sen-2026-06-22",
       "player": "Sadio Mane",
-      "market": "1st goal + 2\u20131",
-      "label": "Sadio Mane scores first and Norway win 2\u20131",
+      "market": "1st goal + 2–1",
+      "label": "Sadio Mane scores first and Norway win 2–1",
       "odds": 65,
       "stake": 10,
       "placedAt": "23/06 03:37",
@@ -7381,8 +7381,8 @@
       "slipNo": "83449235257",
       "matchId": "nor-sen-2026-06-22",
       "player": "Erling Haaland",
-      "market": "1st goal + 2\u20130",
-      "label": "Erling Haaland scores first and Norway win 2\u20130",
+      "market": "1st goal + 2–0",
+      "label": "Erling Haaland scores first and Norway win 2–0",
       "odds": 48,
       "stake": 10,
       "placedAt": "23/06 03:37",
@@ -7423,8 +7423,8 @@
       "slipNo": "83449218903",
       "matchId": "nor-sen-2026-06-22",
       "player": "Erling Haaland",
-      "market": "1st goal + 2\u20131",
-      "label": "Erling Haaland scores first and Norway win 2\u20131",
+      "market": "1st goal + 2–1",
+      "label": "Erling Haaland scores first and Norway win 2–1",
       "odds": 38,
       "stake": 10,
       "placedAt": "23/06 03:37",
@@ -7439,9 +7439,9 @@
       "id": "sp-83449143923",
       "slipNo": "83449143923",
       "matchId": "nor-sen-2026-06-22",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2",
-      "label": "Norway v Senegal \u2014 Norway to win (W1)",
+      "label": "Norway v Senegal — Norway to win (W1)",
       "odds": 2.346,
       "stake": 50,
       "placedAt": "23/06 03:35",
@@ -7454,9 +7454,9 @@
       "id": "sp-83449132507",
       "slipNo": "83449132507",
       "matchId": "nor-sen-2026-06-22",
-      "player": "\u2014",
+      "player": "—",
       "market": "1X2",
-      "label": "Norway v Senegal \u2014 Draw (X)",
+      "label": "Norway v Senegal — Draw (X)",
       "odds": 3.475,
       "stake": 50,
       "placedAt": "23/06 03:35",
@@ -7484,7 +7484,7 @@
       "id": "sp-83460639249",
       "slipNo": "83460639249",
       "matchId": "jor-alg-2026-06-22",
-      "player": "\u2014",
+      "player": "—",
       "market": "Match draw (1X2 X)",
       "label": "Jordan v Algeria to be a draw (1X2 X)",
       "odds": 3.86,
@@ -7499,8 +7499,8 @@
       "id": "sp-83460636969",
       "slipNo": "83460636969",
       "matchId": "jor-alg-2026-06-22",
-      "player": "\u2014",
-      "market": "Match winner \u2014 W1",
+      "player": "—",
+      "market": "Match winner — W1",
       "label": "Jordan to win (1X2 W1)",
       "odds": 7.21,
       "stake": 100,
@@ -7578,7 +7578,7 @@
       "id": "sp-83477293865",
       "slipNo": "83477293865",
       "matchId": "por-uzb-2026-06-23",
-      "player": "\u2014",
+      "player": "—",
       "market": "First goalscorer (either)",
       "label": "Cristiano Ronaldo or Pedro Neto to score the first goal",
       "odds": 2.625,
@@ -7596,7 +7596,7 @@
       "id": "sp-83477290859",
       "slipNo": "83477290859",
       "matchId": "por-uzb-2026-06-23",
-      "player": "\u2014",
+      "player": "—",
       "market": "First goalscorer (either)",
       "label": "Bruno Fernandes or Cristiano Ronaldo to score the first goal",
       "odds": 2.5,
@@ -7614,9 +7614,9 @@
       "id": "sp-83472489817",
       "slipNo": "83472489817",
       "matchId": "por-uzb-2026-06-23",
-      "player": "\u2014",
-      "market": "Acca \u00b7 3 to score",
-      "label": "Acca \u2014 Ronaldo, Kane & Budimir all to score anytime (3 legs)",
+      "player": "—",
+      "market": "Acca · 3 to score",
+      "label": "Acca — Ronaldo, Kane & Budimir all to score anytime (3 legs)",
       "odds": 5.456,
       "stake": 50,
       "placedAt": "23/06 19:47",
@@ -7642,9 +7642,9 @@
       "id": "sp-83482147865",
       "slipNo": "83482147865",
       "matchId": "por-uzb-2026-06-23",
-      "player": "\u2014",
-      "market": "Acca \u00b7 4 legs",
-      "label": "Acca \u2014 Ronaldo, Kane & Musa to score anytime + D\u00edaz scores & Colombia 2-0/2-1/3-1 (4 legs)",
+      "player": "—",
+      "market": "Acca · 4 legs",
+      "label": "Acca — Ronaldo, Kane & Musa to score anytime + Díaz scores & Colombia 2-0/2-1/3-1 (4 legs)",
       "odds": 33.984,
       "stake": 35,
       "placedAt": "24/06 00:04",
@@ -7669,7 +7669,7 @@
           {
             "matchId": "col-drc-2026-06-23",
             "kind": "scoredAndScoreOneOf",
-            "player": "Luis D\u00edaz",
+            "player": "Luis Díaz",
             "scores": [
               {
                 "home": 2,
@@ -7707,16 +7707,16 @@
       "id": "sp-83481923073",
       "slipNo": "83481923073",
       "matchId": "por-uzb-2026-06-23",
-      "player": "\u2014",
-      "market": "Special \u00b7 VAR",
-      "label": "Referee goes to the VAR monitor and does NOT change the decision \u2014 Yes",
+      "player": "—",
+      "market": "Special · VAR",
+      "label": "Referee goes to the VAR monitor and does NOT change the decision — Yes",
       "odds": 10,
       "stake": 10,
       "placedAt": "23/06 23:59",
       "statusOverride": "lost",
       "grade": {
         "type": "manual",
-        "note": "SETTLED LOST: Portugal 5-0 Uzbekistan FT (ESPN event 760461, 35 keyEvents). ESPN logs zero on-field VAR-monitor review events for this fixture \u2014 only drinks-break/stoppage delays. The 'Yes' side needs the referee to actually go to the monitor and keep the decision; with no monitor review on record, that condition never occurred, so Yes loses. VAR on-field-review monitor outcomes are not exposed in ESPN structured data \u2014 the one market type ESPN cannot auto-grade."
+        "note": "SETTLED LOST: Portugal 5-0 Uzbekistan FT (ESPN event 760461, 35 keyEvents). ESPN logs zero on-field VAR-monitor review events for this fixture — only drinks-break/stoppage delays. The 'Yes' side needs the referee to actually go to the monitor and keep the decision; with no monitor review on record, that condition never occurred, so Yes loses. VAR on-field-review monitor outcomes are not exposed in ESPN structured data — the one market type ESPN cannot auto-grade."
       }
     },
     {
@@ -7753,8 +7753,8 @@
       "id": "sp-83484332225",
       "slipNo": "83484332225",
       "matchId": "por-uzb-2026-06-23",
-      "player": "\u2014",
-      "market": "Cards \u00b7 each team over 2",
+      "player": "—",
+      "market": "Cards · each team over 2",
       "label": "Each team to have more than 2 cards (3+ each)",
       "odds": 23,
       "stake": 12,
@@ -7882,7 +7882,7 @@
       "id": "sp-83506794549",
       "slipNo": "83506794549",
       "matchId": "sco-bra-2026-06-24",
-      "player": "\u2014",
+      "player": "—",
       "market": "Match draw (1X2 X)",
       "label": "Scotland v Brazil to be a draw (1X2 X)",
       "odds": 5.66,
@@ -7897,7 +7897,7 @@
       "id": "sp-83506791741",
       "slipNo": "83506791741",
       "matchId": "mor-hai-2026-06-24",
-      "player": "\u2014",
+      "player": "—",
       "market": "Match draw (1X2 X)",
       "label": "Morocco v Haiti to be a draw (1X2 X)",
       "odds": 7.47,
@@ -7912,7 +7912,7 @@
       "id": "sp-83506788381",
       "slipNo": "83506788381",
       "matchId": "swi-can-2026-06-24",
-      "player": "\u2014",
+      "player": "—",
       "market": "Match draw (1X2 X)",
       "label": "Switzerland v Canada to be a draw (1X2 X)",
       "odds": 3.17,
@@ -7927,8 +7927,8 @@
       "id": "sp-83506785301",
       "slipNo": "83506785301",
       "matchId": "swi-can-2026-06-24",
-      "player": "\u2014",
-      "market": "Match winner \u2014 W2",
+      "player": "—",
+      "market": "Match winner — W2",
       "label": "Canada to win (1X2 W2)",
       "odds": 3.435,
       "stake": 100,
@@ -7942,7 +7942,7 @@
       "id": "sp-83506773435",
       "slipNo": "83506773435",
       "matchId": "bos-qat-2026-06-24",
-      "player": "\u2014",
+      "player": "—",
       "market": "Match draw (1X2 X)",
       "label": "Bosnia v Qatar to be a draw (1X2 X)",
       "odds": 5.25,
@@ -7957,9 +7957,9 @@
       "id": "sp-83507216961",
       "slipNo": "83507216961",
       "matchId": "swi-can-2026-06-24",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 to score anytime",
-      "label": "Acca \u2014 Embolo, Demirovi\u0107, Cunha, Saibari, Alvarado & Son all to score anytime (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 to score anytime",
+      "label": "Acca — Embolo, Demirović, Cunha, Saibari, Alvarado & Son all to score anytime (6 legs)",
       "odds": 391.256,
       "stake": 1.5,
       "placedAt": "24/06 14:48",
@@ -7997,9 +7997,9 @@
       "id": "sp-83523600667",
       "slipNo": "83523600667",
       "matchId": "bos-qat-2026-06-24",
-      "player": "\u2014",
-      "market": "Acca \u00b7 4 legs",
-      "label": "Acca \u2014 Bosnia\u2013Qatar draw + Switzerland\u2013Canada draw + Morocco 2-0 Haiti + Brazil to beat Scotland (4 legs)",
+      "player": "—",
+      "market": "Acca · 4 legs",
+      "label": "Acca — Bosnia–Qatar draw + Switzerland–Canada draw + Morocco 2-0 Haiti + Brazil to beat Scotland (4 legs)",
       "odds": 124.883,
       "stake": 50,
       "placedAt": "25/06 00:09",
@@ -8034,9 +8034,9 @@
       "id": "sp-83523536447",
       "slipNo": "83523536447",
       "matchId": "swi-can-2026-06-24",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 legs",
-      "label": "Acca \u2014 Switzerland win + Bosnia\u2013Qatar draw + Brazil win + Morocco win + Czechia\u2013Mexico draw + South Korea win (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 legs",
+      "label": "Acca — Switzerland win + Bosnia–Qatar draw + Brazil win + Morocco win + Czechia–Mexico draw + South Korea win (6 legs)",
       "odds": 144.032,
       "stake": 50,
       "placedAt": "25/06 00:08",
@@ -8080,9 +8080,9 @@
       "id": "sp-83548881219",
       "slipNo": "83548881219",
       "matchId": "ecu-ger-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 to score anytime",
-      "label": "Acca \u2014 Undav, Diallo, Gakpo, Ueda, \u00c1valos & Pepi all to score anytime (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 to score anytime",
+      "label": "Acca — Undav, Diallo, Gakpo, Ueda, Ávalos & Pepi all to score anytime (6 legs)",
       "odds": 315.878,
       "stake": 4,
       "placedAt": "25/06 12:56",
@@ -8269,9 +8269,9 @@
       "id": "sp-83548734967",
       "slipNo": "83548734967",
       "matchId": "cur-ivo-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 legs (BTTS / clean sheet)",
-      "label": "Acca \u2014 BTTS Cura\u00e7ao\u2013Ivory Coast, Japan\u2013Sweden, Paraguay\u2013Australia & T\u00fcrkiye\u2013USA + Germany and Netherlands clean sheets (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 legs (BTTS / clean sheet)",
+      "label": "Acca — BTTS Curaçao–Ivory Coast, Japan–Sweden, Paraguay–Australia & Türkiye–USA + Germany and Netherlands clean sheets (6 legs)",
       "odds": 51.446,
       "stake": 30,
       "placedAt": "25/06 12:44",
@@ -8360,8 +8360,8 @@
       "slipNo": "83550692599",
       "matchId": "tun-net-2026-06-25",
       "player": "Cody Gakpo",
-      "market": "Goal + 0\u20132",
-      "label": "Cody Gakpo scores and the match ends 0\u20132 (Tunisia\u2013Netherlands)",
+      "market": "Goal + 0–2",
+      "label": "Cody Gakpo scores and the match ends 0–2 (Tunisia–Netherlands)",
       "odds": 12,
       "stake": 16.5,
       "placedAt": "25/06 14:52",
@@ -8377,8 +8377,8 @@
       "slipNo": "83550690205",
       "matchId": "tun-net-2026-06-25",
       "player": "Cody Gakpo",
-      "market": "Goal + 1\u20132",
-      "label": "Cody Gakpo scores and the match ends 1\u20132 (Tunisia\u2013Netherlands)",
+      "market": "Goal + 1–2",
+      "label": "Cody Gakpo scores and the match ends 1–2 (Tunisia–Netherlands)",
       "odds": 20,
       "stake": 16.5,
       "placedAt": "25/06 14:52",
@@ -8394,8 +8394,8 @@
       "slipNo": "83550652325",
       "matchId": "tun-net-2026-06-25",
       "player": "Cody Gakpo",
-      "market": "Goal + 1\u20131",
-      "label": "Cody Gakpo scores and the match ends 1\u20131 (Tunisia\u2013Netherlands)",
+      "market": "Goal + 1–1",
+      "label": "Cody Gakpo scores and the match ends 1–1 (Tunisia–Netherlands)",
       "odds": 55,
       "stake": 17,
       "placedAt": "25/06 14:50",
@@ -8411,8 +8411,8 @@
       "slipNo": "83550649023",
       "matchId": "tun-net-2026-06-25",
       "player": "Cody Gakpo",
-      "market": "Goal + 1\u20133",
-      "label": "Cody Gakpo scores and the match ends 1\u20133 (Tunisia\u2013Netherlands)",
+      "market": "Goal + 1–3",
+      "label": "Cody Gakpo scores and the match ends 1–3 (Tunisia–Netherlands)",
       "odds": 19,
       "stake": 50,
       "placedAt": "25/06 14:50",
@@ -8428,8 +8428,8 @@
       "slipNo": "83550647749",
       "matchId": "tun-net-2026-06-25",
       "player": "Cody Gakpo",
-      "market": "Goal + 0\u20133",
-      "label": "Cody Gakpo scores and the match ends 0\u20133 (Tunisia\u2013Netherlands)",
+      "market": "Goal + 0–3",
+      "label": "Cody Gakpo scores and the match ends 0–3 (Tunisia–Netherlands)",
       "odds": 10,
       "stake": 50,
       "placedAt": "25/06 14:50",
@@ -8444,9 +8444,9 @@
       "id": "sp-83550636251",
       "slipNo": "83550636251",
       "matchId": "ecu-ger-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 3 to score",
-      "label": "Acca \u2014 Undav, Brobbey & Ueda all to score anytime (3 legs)",
+      "player": "—",
+      "market": "Acca · 3 to score",
+      "label": "Acca — Undav, Brobbey & Ueda all to score anytime (3 legs)",
       "odds": 12.512,
       "stake": 50,
       "placedAt": "25/06 14:49",
@@ -8501,9 +8501,9 @@
       "id": "sp-83557693221",
       "slipNo": "83557693221",
       "matchId": "cur-ivo-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 legs (1X2+BTTS)",
-      "label": "Acca \u2014 result+BTTS: Ivory Coast W2, Germany W2, Tunisia\u2013NED No, Japan W1, Australia W2, T\u00fcrkiye\u2013USA Draw \u2014 all +BTTS (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 legs (1X2+BTTS)",
+      "label": "Acca — result+BTTS: Ivory Coast W2, Germany W2, Tunisia–NED No, Japan W1, Australia W2, Türkiye–USA Draw — all +BTTS (6 legs)",
       "odds": 1252.784,
       "stake": 10,
       "placedAt": "25/06 19:34",
@@ -8548,9 +8548,9 @@
       "id": "sp-83557596051",
       "slipNo": "83557596051",
       "matchId": "ecu-ger-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 scorer legs",
-      "label": "Acca \u2014 Undav to score; Oulai, Summerville, Gy\u00f6keres, \u00c1valos & Pepi NOT to score (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 scorer legs",
+      "label": "Acca — Undav to score; Oulai, Summerville, Gyökeres, Ávalos & Pepi NOT to score (6 legs)",
       "odds": 6.957,
       "stake": 30,
       "placedAt": "25/06 19:30",
@@ -8599,9 +8599,9 @@
       "id": "sp-83557500151",
       "slipNo": "83557500151",
       "matchId": "ecu-ger-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 to score",
-      "label": "Acca \u2014 Undav, Amad Diallo, Gakpo, Ueda, Pepi & Enciso all to score anytime (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 to score",
+      "label": "Acca — Undav, Amad Diallo, Gakpo, Ueda, Pepi & Enciso all to score anytime (6 legs)",
       "odds": 278.33,
       "stake": 10,
       "placedAt": "25/06 19:27",
@@ -8639,9 +8639,9 @@
       "id": "sp-83557396953",
       "slipNo": "83557396953",
       "matchId": "cur-ivo-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 5 correct scores",
-      "label": "Acca \u2014 correct scores: Cura\u00e7ao 0-2, Ecuador 0-2, Tunisia 0-2, Japan 1-1, Paraguay 1-1 (5 legs)",
+      "player": "—",
+      "market": "Acca · 5 correct scores",
+      "label": "Acca — correct scores: Curaçao 0-2, Ecuador 0-2, Tunisia 0-2, Japan 1-1, Paraguay 1-1 (5 legs)",
       "odds": 7290,
       "stake": 10,
       "placedAt": "25/06 19:23",
@@ -8685,9 +8685,9 @@
       "id": "sp-83579367607",
       "slipNo": "83579367607",
       "matchId": "ecu-ger-2026-06-25",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 legs (1X2/BTTS+scorer)",
-      "label": "Acca \u2014 Ivory Coast W2 +BTTS-No, Ecuador\u2013Germany Draw, Japan\u2013Sweden Draw +BTTS, Brobbey to score, Australia W2, T\u00fcrkiye\u2013USA W1 +BTTS (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 legs (1X2/BTTS+scorer)",
+      "label": "Acca — Ivory Coast W2 +BTTS-No, Ecuador–Germany Draw, Japan–Sweden Draw +BTTS, Brobbey to score, Australia W2, Türkiye–USA W1 +BTTS (6 legs)",
       "odds": 1140.381,
       "stake": 10,
       "placedAt": "26/06 04:17",
@@ -8734,7 +8734,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Ousmane Dembele",
       "market": "First goal + match score",
-      "label": "Ousmane Demb\u00e9l\u00e9 scores first and the match ends 1-2",
+      "label": "Ousmane Dembélé scores first and the match ends 1-2",
       "odds": 46,
       "stake": 20,
       "placedAt": "26/06 05:33",
@@ -8751,7 +8751,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Ousmane Dembele",
       "market": "First goal + match score",
-      "label": "Ousmane Demb\u00e9l\u00e9 scores first and the match ends 0-2",
+      "label": "Ousmane Dembélé scores first and the match ends 0-2",
       "odds": 55,
       "stake": 17,
       "placedAt": "26/06 05:33",
@@ -8768,7 +8768,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Ousmane Dembele",
       "market": "First goal + match score",
-      "label": "Ousmane Demb\u00e9l\u00e9 scores first and the match ends 0-3",
+      "label": "Ousmane Dembélé scores first and the match ends 0-3",
       "odds": 75,
       "stake": 11,
       "placedAt": "26/06 05:33",
@@ -8785,7 +8785,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Ousmane Dembele",
       "market": "First goal + match score",
-      "label": "Ousmane Demb\u00e9l\u00e9 scores first and the match ends 1-3",
+      "label": "Ousmane Dembélé scores first and the match ends 1-3",
       "odds": 65,
       "stake": 10,
       "placedAt": "26/06 05:32",
@@ -8802,7 +8802,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Kylian Mbappe",
       "market": "Goal + match score",
-      "label": "Kylian Mbapp\u00e9 to score & the match ends 0-3",
+      "label": "Kylian Mbappé to score & the match ends 0-3",
       "odds": 15,
       "stake": 30,
       "placedAt": "26/06 05:32",
@@ -8819,7 +8819,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Kylian Mbappe",
       "market": "Goal + match score",
-      "label": "Kylian Mbapp\u00e9 to score & the match ends 2-3",
+      "label": "Kylian Mbappé to score & the match ends 2-3",
       "odds": 27,
       "stake": 20,
       "placedAt": "26/06 05:32",
@@ -8836,7 +8836,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Kylian Mbappe",
       "market": "Goal + match score",
-      "label": "Kylian Mbapp\u00e9 to score & the match ends 1-3",
+      "label": "Kylian Mbappé to score & the match ends 1-3",
       "odds": 15,
       "stake": 20,
       "placedAt": "26/06 05:31",
@@ -8851,9 +8851,9 @@
       "id": "sp-83594123101",
       "slipNo": "83594123101",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 legs (BTTS / each-2+)",
-      "label": "Acca \u2014 Nor\u2013Fra Each 2+; Sen\u2013Ira & Cap\u2013Sau Each 2+ No; Uru\u2013Spa BTTS; Egy\u2013Ira BTTS No; NZ\u2013Bel BTTS (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 legs (BTTS / each-2+)",
+      "label": "Acca — Nor–Fra Each 2+; Sen–Ira & Cap–Sau Each 2+ No; Uru–Spa BTTS; Egy–Ira BTTS No; NZ–Bel BTTS (6 legs)",
       "odds": 37.611,
       "stake": 20,
       "placedAt": "26/06 05:37",
@@ -8897,9 +8897,9 @@
       "id": "sp-83594097083",
       "slipNo": "83594097083",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 scorer legs",
-      "label": "Acca \u2014 Mbapp\u00e9, Sarr & Salah to score; Tavares, Yamal & Lukaku NOT to score (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 scorer legs",
+      "label": "Acca — Mbappé, Sarr & Salah to score; Tavares, Yamal & Lukaku NOT to score (6 legs)",
       "odds": 37.445,
       "stake": 30,
       "placedAt": "26/06 05:35",
@@ -8946,9 +8946,9 @@
       "id": "sp-83594036411",
       "slipNo": "83594036411",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 4 legs (BTTS/draw/U2.25)",
-      "label": "Acca \u2014 Nor\u2013Fra BTTS, Sen\u2013Ira Draw, Cap\u2013Sau Under 2.25, Uru\u2013Spa BTTS (4 legs)",
+      "player": "—",
+      "market": "Acca · 4 legs (BTTS/draw/U2.25)",
+      "label": "Acca — Nor–Fra BTTS, Sen–Ira Draw, Cap–Sau Under 2.25, Uru–Spa BTTS (4 legs)",
       "odds": 46.482,
       "stake": 50,
       "placedAt": "26/06 05:31",
@@ -8980,9 +8980,9 @@
       "id": "sp-83610079563",
       "slipNo": "83610079563",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 5 legs",
-      "label": "Acca \u2014 Norway/France BTTS + Cape Verde 1X + Uruguay W2 + Egypt 1X + NZ/Belgium Under 4.25 (5 legs)",
+      "player": "—",
+      "market": "Acca · 5 legs",
+      "label": "Acca — Norway/France BTTS + Cape Verde 1X + Uruguay W2 + Egypt 1X + NZ/Belgium Under 4.25 (5 legs)",
       "odds": 8.003,
       "stake": 125,
       "placedAt": "26/06 22:57",
@@ -9020,9 +9020,9 @@
       "id": "sp-83610273495",
       "slipNo": "83610273495",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 5 legs",
-      "label": "Acca \u2014 Norway/France BTTS + Uruguay W2 + Cape Verde/Saudi BTTS + Egypt X + Belgium win & Under 2.5 (5 legs)",
+      "player": "—",
+      "market": "Acca · 5 legs",
+      "label": "Acca — Norway/France BTTS + Uruguay W2 + Cape Verde/Saudi BTTS + Egypt X + Belgium win & Under 2.5 (5 legs)",
       "odds": 73.907,
       "stake": 50,
       "placedAt": "26/06 23:01",
@@ -9060,9 +9060,9 @@
       "id": "sp-83610431359",
       "slipNo": "83610431359",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 5 legs",
-      "label": "Acca \u2014 Norway/France 1st-half X + Cape Verde 1X + Uruguay X + Egypt W1 + Belgium W2 (5 legs)",
+      "player": "—",
+      "market": "Acca · 5 legs",
+      "label": "Acca — Norway/France 1st-half X + Cape Verde 1X + Uruguay X + Egypt W1 + Belgium W2 (5 legs)",
       "odds": 45.4,
       "stake": 50,
       "placedAt": "26/06 23:05",
@@ -9101,9 +9101,9 @@
       "id": "sp-83610753671",
       "slipNo": "83610753671",
       "matchId": "nor-fra-2026-06-26",
-      "player": "\u2014",
-      "market": "Acca \u00b7 6 legs",
-      "label": "Acca \u2014 Norway 1-3 France + Senegal/Iraq X + Cape Verde/Saudi X + Uruguay/Spain BTTS + Iran W2 + Belgium Under 3.5 (6 legs)",
+      "player": "—",
+      "market": "Acca · 6 legs",
+      "label": "Acca — Norway 1-3 France + Senegal/Iraq X + Cape Verde/Saudi X + Uruguay/Spain BTTS + Iran W2 + Belgium Under 3.5 (6 legs)",
       "odds": 3323,
       "stake": 10,
       "placedAt": "26/06 23:12",
@@ -9150,7 +9150,7 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Kylian Mbappe",
       "market": "Player Goals + Assists Over 2.5",
-      "label": "Kylian Mbappe \u2014 goals + assists combined Over 2.5 (needs 3+)",
+      "label": "Kylian Mbappe — goals + assists combined Over 2.5 (needs 3+)",
       "odds": 12,
       "stake": 20,
       "placedAt": "26/06 23:18",
@@ -9166,13 +9166,13 @@
       "matchId": "nor-fra-2026-06-26",
       "player": "Kylian Mbappe",
       "market": "France penalty from a foul on Mbappe",
-      "label": "France to score a penalty from a foul on Kylian Mbappe \u2014 Yes (manual settle)",
+      "label": "France to score a penalty from a foul on Kylian Mbappe — Yes (manual settle)",
       "odds": 8,
       "stake": 45,
       "placedAt": "26/06 23:18",
       "grade": {
         "type": "manual",
-        "note": "SETTLED LOST: France beat Norway 4-1 but all 4 goals open play (Dembele x3 + Doue header) \u2014 zero penalties, Mbappe not on scoresheet (ESPN event 760475, FT). No penalty drawn/scored."
+        "note": "SETTLED LOST: France beat Norway 4-1 but all 4 goals open play (Dembele x3 + Doue header) — zero penalties, Mbappe not on scoresheet (ESPN event 760475, FT). No penalty drawn/scored."
       },
       "statusOverride": "lost"
     },
@@ -9181,7 +9181,7 @@
       "slipNo": "83625533657",
       "matchId": "egy-ira-2026-06-26",
       "market": "Accumulator (3)",
-      "label": "Acca \u2014 Egypt to beat Iran + Uruguay/Spain Over 2 goals + New Zealand/Belgium Under 4 goals (3 legs)",
+      "label": "Acca — Egypt to beat Iran + Uruguay/Spain Over 2 goals + New Zealand/Belgium Under 4 goals (3 legs)",
       "odds": 7.887,
       "stake": 300.34,
       "placedAt": "27/06 04:09",
@@ -9212,7 +9212,7 @@
       "matchId": "egy-ira-2026-06-26",
       "player": "Mohamed Salah",
       "market": "To Score From Outside The Box",
-      "label": "Mohamed Salah to score from outside the penalty area \u2014 Yes",
+      "label": "Mohamed Salah to score from outside the penalty area — Yes",
       "odds": 18,
       "stake": 20,
       "placedAt": "27/06 05:24",
@@ -9226,7 +9226,7 @@
       "slipNo": "83628598655",
       "matchId": "cap-sau-2026-06-26",
       "market": "Accumulator (4)",
-      "label": "Acca \u2014 Cape Verde to win a half + Spain to win a half + a player to score a brace (EGY/IRA) + New Zealand/Belgium HT-FT W2/X (4 legs)",
+      "label": "Acca — Cape Verde to win a half + Spain to win a half + a player to score a brace (EGY/IRA) + New Zealand/Belgium HT-FT W2/X (4 legs)",
       "odds": 351.54,
       "stake": 30,
       "placedAt": "27/06 05:23",
@@ -9262,7 +9262,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "5-leg acca",
       "market": "Accumulator (5)",
-      "label": "Acca \u2014 Kane G+A o1.5 + Musa G+A o0.5 + Ronaldo G+A o0.5 + Messi G+A o2.5 + Gouiri to score/assist (5 legs)",
+      "label": "Acca — Kane G+A o1.5 + Musa G+A o0.5 + Ronaldo G+A o0.5 + Messi G+A o2.5 + Gouiri to score/assist (5 legs)",
       "odds": 171.417,
       "stake": 24,
       "placedAt": "27/06 14:20",
@@ -9307,7 +9307,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca \u2014 England win + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + Argentina win & total >3.5 (6 legs)",
+      "label": "Acca — England win + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + Argentina win & total >3.5 (6 legs)",
       "odds": 15.083,
       "stake": 100,
       "placedAt": "27/06 14:13",
@@ -9353,7 +9353,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca \u2014 England take first penalty + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
+      "label": "Acca — England take first penalty + Croatia 1X + Col/Por BTTS + DRC/Uzb Under 2.25 + Austria/draw (2X) + any team win by 3+ (Jor/Arg) (6 legs)",
       "odds": 40.207,
       "stake": 50,
       "placedAt": "27/06 14:06",
@@ -9398,7 +9398,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "3-leg acca",
       "market": "Accumulator (3)",
-      "label": "Acca \u2014 Kane G+A o1.5 + Ronaldo G+A o0.5 + Messi G+A o2.5 (3 legs)",
+      "label": "Acca — Kane G+A o1.5 + Ronaldo G+A o0.5 + Messi G+A o2.5 (3 legs)",
       "odds": 30.834,
       "stake": 48,
       "placedAt": "27/06 13:52",
@@ -9432,7 +9432,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca \u2014 Kane G+A o2.5 + Croatia win & BTTS + DRC/Uzb Under 3 + Col/Por BTTS + Messi G+A o2.5 + Alg/Aus BTTS (6 legs)",
+      "label": "Acca — Kane G+A o2.5 + Croatia win & BTTS + DRC/Uzb Under 3 + Col/Por BTTS + Messi G+A o2.5 + Alg/Aus BTTS (6 legs)",
       "odds": 981.36,
       "stake": 38,
       "placedAt": "27/06 13:49",
@@ -9494,7 +9494,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca \u2014 Saka G+A o1.5 + Musa to score + Bruno G+A o0.5 + DR Congo win + Gouiri to score/assist (incl subs) + Messi to score (6 legs)",
+      "label": "Acca — Saka G+A o1.5 + Musa to score + Bruno G+A o0.5 + DR Congo win + Gouiri to score/assist (incl subs) + Messi to score (6 legs)",
       "odds": 238.314,
       "stake": 25,
       "placedAt": "27/06 16:03",
@@ -9542,7 +9542,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "5-leg acca",
       "market": "Accumulator (5)",
-      "label": "Acca \u2014 Kane to score + Croatia/Ghana BTTS + DR Congo/Uzbekistan draw + Portugal win & BTTS + Argentina win & total o3.5 (5 legs)",
+      "label": "Acca — Kane to score + Croatia/Ghana BTTS + DR Congo/Uzbekistan draw + Portugal win & BTTS + Argentina win & total o3.5 (5 legs)",
       "odds": 118.764,
       "stake": 25,
       "placedAt": "27/06 16:09",
@@ -9583,7 +9583,7 @@
       "matchId": "cro-gha-2026-06-27",
       "player": "3-leg acca",
       "market": "Accumulator (3)",
-      "label": "Acca \u2014 Croatia win + Portugal win (v Colombia) + Algeria to finish 1st-2nd in Group J (3 legs)",
+      "label": "Acca — Croatia win + Portugal win (v Colombia) + Algeria to finish 1st-2nd in Group J (3 legs)",
       "odds": 100.879,
       "stake": 25,
       "placedAt": "27/06 20:34",
@@ -9613,7 +9613,7 @@
       "matchId": "cro-gha-2026-06-27",
       "player": "3-leg acca",
       "market": "Accumulator (3)",
-      "label": "Acca \u2014 Croatia win + Colombia win (v Portugal) + Algeria to finish 1st-2nd in Group J (3 legs)",
+      "label": "Acca — Croatia win + Colombia win (v Portugal) + Algeria to finish 1st-2nd in Group J (3 legs)",
       "odds": 99.639,
       "stake": 25,
       "placedAt": "27/06 20:32",
@@ -9643,7 +9643,7 @@
       "matchId": "cro-gha-2026-06-27",
       "player": "Croatia",
       "market": "Group L Winner (outright)",
-      "label": "Croatia to win Group L @13.6 \u2014 LOST: England won Group L (7 pts), Croatia 2nd (6 pts)",
+      "label": "Croatia to win Group L @13.6 — LOST: England won Group L (7 pts), Croatia 2nd (6 pts)",
       "odds": 13.6,
       "stake": 50,
       "placedAt": "27/06 20:23",
@@ -9660,7 +9660,7 @@
       "matchId": "col-por-2026-06-27",
       "player": "Cristiano Ronaldo",
       "market": "To Score Two Goals (Brace)",
-      "label": "Cristiano Ronaldo to score 2 goals (brace) \u2014 Colombia v Portugal",
+      "label": "Cristiano Ronaldo to score 2 goals (brace) — Colombia v Portugal",
       "odds": 7,
       "stake": 100,
       "placedAt": "28/06 00:12",
@@ -9676,7 +9676,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca \u2014 Kane 2+ goals & assists + Croatia (1X) & BTTS + DR Congo win & under 3.5 + Colombia/Portugal BTTS + Algeria/Austria BTTS + Jordan/Argentina a team blanks & over 2.5 (6 legs)",
+      "label": "Acca — Kane 2+ goals & assists + Croatia (1X) & BTTS + DR Congo win & under 3.5 + Colombia/Portugal BTTS + Algeria/Austria BTTS + Jordan/Argentina a team blanks & over 2.5 (6 legs)",
       "odds": 141.255,
       "stake": 43,
       "placedAt": "28/06 00:04",
@@ -9722,7 +9722,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "6-leg acca",
       "market": "Accumulator (6)",
-      "label": "Acca \u2014 Saka 2+ goals & assists + Petar Musa to score + Bruno Fernandes 1+ goals & assists + DR Congo win + Amine Gouiri to score or assist + Argentina win (6 legs)",
+      "label": "Acca — Saka 2+ goals & assists + Petar Musa to score + Bruno Fernandes 1+ goals & assists + DR Congo win + Amine Gouiri to score or assist + Argentina win (6 legs)",
       "odds": 182.193,
       "stake": 25,
       "placedAt": "27/06 23:54",
@@ -9770,7 +9770,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "5-leg acca",
       "market": "Accumulator (5)",
-      "label": "Acca \u2014 Kane to score 2 goals + Croatia/Ghana BTTS + Ronaldo 2+ goals & assists + Algeria win + Argentina win (5 legs)",
+      "label": "Acca — Kane to score 2 goals + Croatia/Ghana BTTS + Ronaldo 2+ goals & assists + Algeria win + Argentina win (5 legs)",
       "odds": 265.866,
       "stake": 48,
       "placedAt": "27/06 23:50",
@@ -9812,7 +9812,7 @@
       "matchId": "pan-eng-2026-06-27",
       "player": "5-leg acca",
       "market": "Accumulator (5)",
-      "label": "Acca \u2014 Kane 2+ goals & assists + Petar Musa 2+ goals & assists + Ronaldo 1+ goals & assists + Lautaro Martinez to score or assist + Algeria/Austria BTTS (5 legs)",
+      "label": "Acca — Kane 2+ goals & assists + Petar Musa 2+ goals & assists + Ronaldo 1+ goals & assists + Lautaro Martinez to score or assist + Algeria/Austria BTTS (5 legs)",
       "odds": 133.086,
       "stake": 24,
       "placedAt": "27/06 23:45",
@@ -9853,9 +9853,9 @@
       "id": "sp-83689086939",
       "slipNo": "83689086939",
       "matchId": "rsa-can-2026-06-28",
-      "player": "\u2014",
-      "market": "Acca \u00b7 8 legs",
-      "label": "Acca \u2014 Canada beat South Africa + Brazil beat Japan + Germany beat Paraguay + Netherlands beat Morocco + France beat Sweden + England beat DR Congo + Senegal beat Belgium + Spain beat Austria (8 legs)",
+      "player": "—",
+      "market": "Acca · 8 legs",
+      "label": "Acca — Canada beat South Africa + Brazil beat Japan + Germany beat Paraguay + Netherlands beat Morocco + France beat Sweden + England beat DR Congo + Senegal beat Belgium + Spain beat Austria (8 legs)",
       "odds": 78.734,
       "stake": 50,
       "placedAt": "28/06 15:02",
@@ -9909,9 +9909,9 @@
       "id": "sp-83691275953",
       "slipNo": "83691275953",
       "matchId": "bra-jpn-2026-06-29",
-      "player": "\u2014",
-      "market": "Acca \u00b7 11 legs",
-      "label": "Acca (R32, regular time) \u2014 Vini Jr & Cunha to score \u00b7 Haaland 2+ \u00b7 Dembele & Mbappe to score \u00b7 Messi 2+ \u00b7 Netherlands/Spain/Australia/Colombia qualify \u00b7 England win",
+      "player": "—",
+      "market": "Acca · 11 legs",
+      "label": "Acca (R32, regular time) — Vini Jr & Cunha to score · Haaland 2+ · Dembele & Mbappe to score · Messi 2+ · Netherlands/Spain/Australia/Colombia qualify · England win",
       "odds": 3198.858,
       "stake": 10,
       "placedAt": "28/06 16:40",
@@ -9930,8 +9930,8 @@
           },
           {
             "matchId": "ned-mar-2026-06-30",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "civ-nor-2026-06-30",
@@ -9956,13 +9956,13 @@
           },
           {
             "matchId": "esp-aut-2026-07-02",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "aus-egy-2026-07-03",
-            "kind": "result",
-            "outcome": "2"
+            "kind": "qualify",
+            "side": "away"
           },
           {
             "matchId": "arg-cpv-2026-07-03",
@@ -9972,8 +9972,8 @@
           },
           {
             "matchId": "col-gha-2026-07-04",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           }
         ]
       }
@@ -9982,9 +9982,9 @@
       "id": "sp-83690800543",
       "slipNo": "83690800543",
       "matchId": "rsa-can-2026-06-28",
-      "player": "\u2014",
-      "market": "Acca \u00b7 9 legs",
-      "label": "Acca (R32 qualify) \u2014 Canada, Brazil, Germany, Netherlands, France, England, USA, Spain, Argentina to qualify",
+      "player": "—",
+      "market": "Acca · 9 legs",
+      "label": "Acca (R32 qualify) — Canada, Brazil, Germany, Netherlands, France, England, USA, Spain, Argentina to qualify",
       "odds": 5.84,
       "stake": 300,
       "placedAt": "28/06 16:21",
@@ -9993,48 +9993,48 @@
         "legs": [
           {
             "matchId": "rsa-can-2026-06-28",
-            "kind": "result",
-            "outcome": "2"
+            "kind": "qualify",
+            "side": "away"
           },
           {
             "matchId": "bra-jpn-2026-06-29",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "ger-par-2026-06-29",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "ned-mar-2026-06-30",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "fra-swe-2026-06-30",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "eng-cod-2026-07-01",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "usa-bih-2026-07-02",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "esp-aut-2026-07-02",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "arg-cpv-2026-07-03",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           }
         ]
       }
@@ -10043,9 +10043,9 @@
       "id": "sp-83690655855",
       "slipNo": "83690655855",
       "matchId": "bra-jpn-2026-06-29",
-      "player": "\u2014",
-      "market": "Acca \u00b7 10 legs",
-      "label": "Acca (R32) \u2014 Vini Jr score & Brazil win \u00b7 Wirtz goal+assist \u00b7 Brobbey score & Netherlands win \u00b7 France/England/USA/Spain/Argentina qualify",
+      "player": "—",
+      "market": "Acca · 10 legs",
+      "label": "Acca (R32) — Vini Jr score & Brazil win · Wirtz goal+assist · Brobbey score & Netherlands win · France/England/USA/Spain/Argentina qualify",
       "odds": 50.304,
       "stake": 50,
       "placedAt": "28/06 16:14",
@@ -10080,28 +10080,28 @@
           },
           {
             "matchId": "fra-swe-2026-06-30",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "eng-cod-2026-07-01",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "usa-bih-2026-07-02",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "esp-aut-2026-07-02",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "arg-cpv-2026-07-03",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           }
         ]
       }
@@ -10110,9 +10110,9 @@
       "id": "sp-83690518707",
       "slipNo": "83690518707",
       "matchId": "rsa-can-2026-06-28",
-      "player": "\u2014",
-      "market": "Acca \u00b7 8 legs",
-      "label": "Acca (R32 qualify) \u2014 Canada, Brazil, Germany, Netherlands, France, England, Senegal, USA to qualify",
+      "player": "—",
+      "market": "Acca · 8 legs",
+      "label": "Acca (R32 qualify) — Canada, Brazil, Germany, Netherlands, France, England, Senegal, USA to qualify",
       "odds": 34.435,
       "stake": 50,
       "placedAt": "28/06 16:08",
@@ -10121,43 +10121,43 @@
         "legs": [
           {
             "matchId": "rsa-can-2026-06-28",
-            "kind": "result",
-            "outcome": "2"
+            "kind": "qualify",
+            "side": "away"
           },
           {
             "matchId": "bra-jpn-2026-06-29",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "ger-par-2026-06-29",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "ned-mar-2026-06-30",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "fra-swe-2026-06-30",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "eng-cod-2026-07-01",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           },
           {
             "matchId": "bel-sen-2026-07-01",
-            "kind": "result",
-            "outcome": "2"
+            "kind": "qualify",
+            "side": "away"
           },
           {
             "matchId": "usa-bih-2026-07-02",
-            "kind": "result",
-            "outcome": "1"
+            "kind": "qualify",
+            "side": "home"
           }
         ]
       }
@@ -10680,7 +10680,7 @@
       },
       "playerSot": {
         "Mohamed Toure": 1,
-        "Sergi\u00f1o Dest": 1,
+        "Sergiño Dest": 1,
         "Connor Metcalfe": 1
       }
     },
@@ -10779,9 +10779,9 @@
         ]
       },
       "playerSot": {
-        "Vin\u00edcius J\u00fanior": 1,
+        "Vinícius Júnior": 1,
         "Raphinha ": 1,
-        "Ricardo Ad\u00e9": 1,
+        "Ricardo Adé": 1,
         "Wilson Isidor": 1,
         "Dominique Simon": 1
       }
@@ -10833,9 +10833,9 @@
       },
       "playerSot": {
         "Kenan Yildiz": 1,
-        "Juan Jose C\u00e1ceres": 1,
+        "Juan Jose Cáceres": 1,
         "Merih Demiral": 2,
-        "Deniz G\u00fcl": 1,
+        "Deniz Gül": 1,
         "Can Uzun": 1
       }
     },
@@ -10885,7 +10885,7 @@
         ]
       },
       "playerSot": {
-        "Viktor Gy\u00f6keres": 3,
+        "Viktor Gyökeres": 3,
         "Cody Gakpo": 2,
         "Yasin Ayari": 1,
         "Alexander Isak": 1,
@@ -11020,10 +11020,10 @@
         "Enner Valencia": 5,
         "John Yeboah": 2,
         "Gonzalo Plata": 3,
-        "Mois\u00e9s Caicedo": 1,
+        "Moisés Caicedo": 1,
         "Leandro Bacuna": 1,
         "Livano Comenencia": 1,
-        "Kevin Rodr\u00edguez": 1,
+        "Kevin Rodríguez": 1,
         "Willian Pacho": 1,
         "Nilson Angulo": 1,
         "Juninho Bacuna": 1,
@@ -11251,7 +11251,7 @@
         "Youri Tielemans": 1,
         "Kevin De Bruyne": 1,
         "Mehdi Taremi": 1,
-        "Dodi Luk\u00e9bakio": 1,
+        "Dodi Lukébakio": 1,
         "Saeid Ezatolahi": 1
       },
       "firstGoalMethod": null,
@@ -11475,7 +11475,7 @@
       },
       "playerSot": {
         "Marcel Sabitzer": 1,
-        "Juli\u00e1n \u00c1lvarez": 1
+        "Julián Álvarez": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -11547,8 +11547,8 @@
         ]
       },
       "playerSot": {
-        "Ousmane Demb\u00e9l\u00e9": 1,
-        "Kylian Mbapp\u00e9": 1
+        "Ousmane Dembélé": 1,
+        "Kylian Mbappé": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -11621,8 +11621,8 @@
       },
       "playerSot": {
         "Kristoffer Ajer": 1,
-        "Martin \u00d8degaard": 1,
-        "Isma\u00efla Sarr": 1,
+        "Martin Ødegaard": 1,
+        "Ismaïla Sarr": 1,
         "Erling Haaland": 1,
         "Nicolas Jackson": 1
       },
@@ -11703,7 +11703,7 @@
         "Ibrahim Maza": 2,
         "Nadhir Benbouali": 1,
         "Mahmoud Al-Mardi": 1,
-        "Far\u00e8s Cha\u00efbi": 1
+        "Farès Chaïbi": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -11778,7 +11778,7 @@
         "Sherzod Nasrullaev": 1,
         "Abbosbek Fayzullaev": 1,
         "Cristiano Ronaldo": 2,
-        "Jo\u00e3o F\u00e9lix": 1,
+        "João Félix": 1,
         "Bruno Fernandes": 1
       },
       "firstGoalMethod": "shot",
@@ -11999,12 +11999,12 @@
       },
       "playerSot": {
         "Jhon Arias": 1,
-        "James Rodr\u00edguez": 1,
+        "James Rodríguez": 1,
         "Johan Mojica": 1,
-        "Luis D\u00edaz": 2,
+        "Luis Díaz": 2,
         "Gustavo Puerta": 2,
-        "Davinson S\u00e1nchez": 1,
-        "Nathana\u00ebl Mbuku": 1
+        "Davinson Sánchez": 1,
+        "Nathanaël Mbuku": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -12231,7 +12231,7 @@
       "playerSot": {
         "Rayan": 1,
         "Scott McTominay": 3,
-        "Vin\u00edcius J\u00fanior": 3,
+        "Vinícius Júnior": 3,
         "Lewis Ferguson": 1,
         "Anthony Ralston": 1,
         "Neymar": 1
@@ -12382,8 +12382,8 @@
         ]
       },
       "playerSot": {
-        "Jorge S\u00e1nchez": 1,
-        "Luk\u00e1s Cerv": 1,
+        "Jorge Sánchez": 1,
+        "Lukás Cerv": 1,
         "Santiago Gimenez": 1
       },
       "firstGoalMethod": "shot",
@@ -12534,7 +12534,7 @@
       "playerSot": {
         "Kai Havertz": 1,
         "Enner Valencia": 1,
-        "Leroy San\u00e9": 1
+        "Leroy Sané": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -12910,7 +12910,7 @@
         "Jackson Irvine": 1,
         "Jordan Bos": 2,
         "Cristian Volpato": 1,
-        "Maur\u00edcio": 2,
+        "Maurício": 2,
         "Tete Yengi": 1
       },
       "firstGoalMethod": null,
@@ -12983,9 +12983,9 @@
         ]
       },
       "playerSot": {
-        "Kylian Mbapp\u00e9": 2,
-        "Manu Kon\u00e9": 1,
-        "D\u00e9sir\u00e9 Dou\u00e9": 2,
+        "Kylian Mbappé": 2,
+        "Manu Koné": 1,
+        "Désiré Doué": 2,
         "Kristian Thorstvedt": 1,
         "Oscar Bobb": 1
       },
@@ -13059,10 +13059,10 @@
         ]
       },
       "playerSot": {
-        "Sadio Man\u00e9": 1,
+        "Sadio Mané": 1,
         "Ali Jasim": 1,
-        "Isma\u00efla Sarr": 1,
-        "Path\u00e9 Ciss": 1,
+        "Ismaïla Sarr": 1,
+        "Pathé Ciss": 1,
         "Nicolas Jackson": 2,
         "Pape Gueye": 1,
         "Iliman Ndiaye": 1
@@ -13213,7 +13213,7 @@
         ]
       },
       "playerSot": {
-        "Nicol\u00e1s de la Cruz": 1
+        "Nicolás de la Cruz": 1
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -13286,7 +13286,7 @@
       },
       "playerSot": {
         "Milad Mohammadi": 1,
-        "Tr\u00e9z\u00e9guet": 2
+        "Trézéguet": 2
       },
       "firstGoalMethod": "shot",
       "waterBreak": {
@@ -13359,7 +13359,7 @@
       },
       "playerSot": {
         "Kevin De Bruyne": 1,
-        "J\u00e9r\u00e9my Doku": 1,
+        "Jérémy Doku": 1,
         "Charles De Ketelaere": 1,
         "Elijah Just": 1,
         "Arthur Theate": 1,
@@ -13435,9 +13435,9 @@
         ]
       },
       "playerSot": {
-        "Tom\u00e1s Rodr\u00edguez": 1,
+        "Tomás Rodríguez": 1,
         "Marcus Rashford": 1,
-        "Jos\u00e9 Luis Rodr\u00edguez": 1,
+        "José Luis Rodríguez": 1,
         "Elliot Anderson": 1,
         "Harry Kane": 1,
         "Noni Madueke": 1
@@ -13587,11 +13587,11 @@
         ]
       },
       "playerSot": {
-        "Jhon C\u00f3rdoba": 1,
+        "Jhon Córdoba": 1,
         "Cristiano Ronaldo": 1,
         "Bruno Fernandes": 1,
         "Gustavo Puerta": 1,
-        "James Rodr\u00edguez": 1,
+        "James Rodríguez": 1,
         "Jefferson Lerma": 1,
         "Jhon Arias": 2
       },
@@ -13666,7 +13666,7 @@
         ]
       },
       "playerSot": {
-        "Nathana\u00ebl Mbuku": 1
+        "Nathanaël Mbuku": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -13740,7 +13740,7 @@
       },
       "playerSot": {
         "Ibrahim Maza": 1,
-        "Far\u00e8s Cha\u00efbi": 1
+        "Farès Chaïbi": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -13813,7 +13813,7 @@
         ]
       },
       "playerSot": {
-        "Juli\u00e1n \u00c1lvarez": 1
+        "Julián Álvarez": 1
       },
       "firstGoalMethod": "freekick",
       "firstPenalty": null,

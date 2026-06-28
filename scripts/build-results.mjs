@@ -363,11 +363,25 @@ function resultFromEvent(ev, fixture) {
     }
   }
 
+  // Knockout advancement — ESPN flags the progressing competitor with
+  // `advance:true` once a tie is final (covers extra time AND penalty shootouts,
+  // the cases a bare scoreline can't express). Absent on group games → null.
+  // This is what settles "to qualify" markets independently of the 90-min 1X2.
+  const advanced =
+    state === "finished"
+      ? ourHome.advance === true
+        ? "home"
+        : ourAway.advance === true
+          ? "away"
+          : null
+      : null;
+
   return {
     state,
     ht,
     ft: state === "finished" ? score : null,
     score,
+    advanced,
     goals,
     cards,
     eventId: ev.id ?? null, // for the per-event summary (corner/SOT/card) fetch
@@ -416,6 +430,13 @@ function settleBetsFromResults(bets, results) {
     }
     if (rec.ht == null && r.ht) {
       rec.ht = { home: r.ht.home, away: r.ht.away };
+      changed = true;
+    }
+    // Advancement layer — fill once ESPN flags the side that progressed (incl.
+    // ET/pens). Lets "to qualify" legs settle even when the 90-min score was a
+    // draw. Additive: never overwrite a value already set.
+    if (rec.advanced == null && r.advanced) {
+      rec.advanced = r.advanced;
       changed = true;
     }
 
