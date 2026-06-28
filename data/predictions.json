@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T09:02:58.698Z",
+    "generatedAt": "2026-06-28T18:24:40.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-28T09:00:34.084Z"
@@ -12789,122 +12789,123 @@
       "win": {
         "pick": "Canada",
         "fairOdds": "2.05",
-        "reason": "Canada have more attacking quality through Jonathan David (4 group goals) and Eustaquio's control, and Opta gives them ~66% to reach the last 16, but South Africa defend deep and counter well, so a tight knockout keeps the draw live.",
+        "reason": "Canada are the on-paper favourites with Eustaquio controlling midfield and David in hat-trick form (6-0 vs Qatar), but South Africa's deep block and counter pace through Maseko/Mofokeng/Appollis make this a genuine draw/low-scoring risk; possession-favourite vs disciplined underdog is a classic out-xG trap, so Canada's edge is real but far from certain (~50%).",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
-        "alt": "0-1",
+        "fairOdds": "2.40",
+        "alt": "1-0",
         "altOdds": "4.20",
         "strength": 3
       },
       "htft": {
         "pick": "Draw/Canada",
-        "fairOdds": "4.50",
-        "strength": 3
+        "fairOdds": "5.50",
+        "strength": 2
       },
       "fullTime": {
-        "score": "1-1",
+        "score": "1-0",
         "fairOdds": "6.50",
         "strength": 2
       },
       "scorers": [
         {
           "player": "Jonathan David",
-          "fairOdds": "2.40",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "Canada — Hat-trick vs Qatar; Canada's main threat but RSA sit deep"
+          "note": "Canada's talisman and all-time top scorer (42 in 80); hat-trick vs Qatar and the penalty taker, so any spot-kick is his - but faced with a packed SA box and Williams behind it, no banker."
         },
         {
-          "player": "Lyle Foster",
-          "fairOdds": "3.80",
+          "player": "Tani Oluwaseyi",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "South Africa — Burnley forward, RSA's most natural finisher on the counter"
+          "note": "First start since the Bosnia opener; pace and runs in behind alongside David, lively outlet if SA's deep line steps up to counter."
         },
         {
-          "player": "Cyle Larin",
-          "fairOdds": "3.60",
+          "player": "Evidence Makgopa",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Canada — Veteran target man; non-banker, in-and-out starter"
+          "note": "SA's lone-ish target man; he gets the counter-attack chances (had a follow-up saved vs Korea) - the one realistic SA route to goal against Canada's press."
         },
         {
-          "player": "Promise David",
-          "fairOdds": "4.00",
+          "player": "Thapelo Maseko",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "Canada — Scored vs Switzerland; impact/rotation option"
+          "note": "Scored the historic 63rd-min winner vs South Korea that sent SA through; quick wide threat on the break, a live scorer if SA spring a counter."
         }
       ],
       "assists": [
         {
-          "player": "Alphonso Davies",
-          "fairOdds": "4.50",
+          "player": "Stephen Eustáquio",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Canada — Back from hamstring injury; likely off bench, left-side creator"
+          "note": "Canada captain back in the XI; the deep-lying creator who feeds David and the runners, plus set-piece delivery."
         },
         {
-          "player": "Tajon Buchanan",
-          "fairOdds": "4.80",
+          "player": "Alistair Johnston",
+          "fairOdds": "6.50",
           "banker": false,
-          "note": "Canada — Width and crossing from the right"
+          "note": "Overlapping right-back delivering crosses into David/Oluwaseyi; Canada's width comes from the full-backs against a narrow SA block."
         },
         {
-          "player": "Oswin Appollis",
-          "fairOdds": "5.50",
+          "player": "Relebohile Mofokeng",
+          "fairOdds": "6.50",
           "banker": false,
-          "note": "South Africa — RSA's set-piece and chance-creation hub"
+          "note": "SA's most creative spark; carries the ball on the counter and links with Makgopa/Maseko - the assist source if SA break."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Teboho Mokoena",
-        "backup": "Oswin Appollis",
-        "note": "Mokoena returns from suspension and took RSA's pen vs Czechia; Appollis covered pens/set-pieces in his absence. For Canada, Jonathan David is the spot-kick man. Knockout — if level after extra time, expect Mokoena, David, Eustaquio, Larin among first shootout takers; RSA captain-GK Ronwen Williams holds an AFCON penalty-save record, a real shootout edge for South Africa."
+        "taker": "Jonathan David",
+        "backup": "Teboho Mokoena (SA designated taker; Appollis backup)",
+        "note": "David earns and converts Canada's penalties (most fouled in the box, 27 club pens). For SA, Mokoena is the designated taker with Appollis backup. Crucially, if level after ET it goes to pens - Ronwen Williams is an elite shootout keeper (4 saves in one AFCON 2023 shootout, tournament best GK), a genuine SA edge."
       },
       "lineups": {
-        "home": "Ronwen Williams, Khuliso Mudau, Ime Okon, Mbekezeli Mbokazi, Aubrey Modiba, Teboho Mokoena, Thalente Mbatha, Oswin Appollis, Relebohile Mofokeng, Thapelo Maseko, Lyle Foster",
-        "away": "Maxime Crepeau, Alistair Johnston, Luc de Fougerolles, Derek Cornelius, Richie Laryea, Tajon Buchanan, Stephen Eustaquio, Nathan Saliba, Ali Ahmed, Jonathan David, Cyle Larin",
-        "status": "probable"
+        "home": "Ronwen Williams, Khuliso Mudau, Ime Okon, Mbekezeli Mbokazi, Aubrey Modiba, Sphephelo Sithole, Teboho Mokoena, Thapelo Maseko, Relebohile Mofokeng, Oswin Appollis, Evidence Makgopa",
+        "away": "Maxime Crépeau, Alistair Johnston, Derek Cornelius, Moïse Bombito, Richie Laryea, Tajon Buchanan, Stephen Eustáquio, Nathan Saliba, Liam Millar, Jonathan David, Tani Oluwaseyi",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
           "player": "Jonathan David",
           "team": "Canada",
-          "note": "Group-stage hat-trick vs Qatar; primary scorer and Canada's penalty taker, but faces a low compact block."
+          "note": "Hat-trick vs Qatar (6-0) after a quiet Bosnia opener; penalty taker and the focal point - but his pre-tournament form dipped (2 goals in 9, both pens), so streaky rather than nailed-on."
         },
         {
-          "player": "Alphonso Davies",
+          "player": "Moïse Bombito",
           "team": "Canada",
-          "note": "Captain back from a hamstring injury that cost him the whole group stage — likely bench/sub, big-match X-factor if introduced."
+          "note": "Makes his first WC start, slotting in beside Cornelius for De Fougerolles; physical CB, but a fresh partnership SA's counter pace could test early."
         },
         {
-          "player": "Stephen Eustaquio",
+          "player": "Stephen Eustáquio",
           "team": "Canada",
-          "note": "Midfield metronome carrying a muscle/fitness concern; if he can't go, Choiniere or Saliba steps in and Canada lose control."
+          "note": "Captain returns to the XI after starting the Switzerland loss on the bench; restores midfield control and tempo - key to Canada breaking the deep block."
         },
         {
-          "player": "Teboho Mokoena",
+          "player": "Thapelo Maseko",
           "team": "South Africa",
-          "note": "Returns from a one-game suspension; deep-lying playmaker and the side's designated penalty taker (scored vs Czechia)."
+          "note": "Sundowns winger, 22, scored the 63rd-min winner vs South Korea to make history; SA's quickest counter outlet and a real wide goal threat."
+        },
+        {
+          "player": "Evidence Makgopa",
+          "team": "South Africa",
+          "note": "The lone-ish target man up top; SA defend deep and feed him on the break - gets the chances but service is thin against Canada's press."
         },
         {
           "player": "Ronwen Williams",
           "team": "South Africa",
-          "note": "Captain-goalkeeper and AFCON penalty-save record-holder — a genuine shootout weapon in a knockout that can go to pens."
-        },
-        {
-          "player": "Lyle Foster",
-          "team": "South Africa",
-          "note": "Burnley forward, RSA's most natural finisher; veteran-ish presence and a counter-attack outlet, not a banker."
+          "note": "Captain and elite shootout keeper - saved 4 penalties in a single AFCON 2023 shootout and won best-GK; the single biggest SA edge if this reaches penalties after ET."
         }
       ],
       "confidence": "medium",
       "sources": [
-        "https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa",
-        "https://www.si.com/soccer/south-africa-vs-canada-world-cup-preview-predictions-lineups-6-28-26",
+        "https://www.tsn.ca/soccer/fifa-world-cup/article/eustaquio-bombito-return-to-canada-xi-against-south-africa/",
         "https://www.aljazeera.com/sports/2026/6/28/south-africa-vs-canada-fifa-world-cup-2026-prediction-team-news-start-lineups",
-        "https://news.bet365.com/en-us/article/south-africa-canada-preview-and-lineup-predictions/2026062519380087643",
-        "https://www.cbssports.com/soccer/news/canada-vs-south-africa-odds-prediction-time-2026-world-cup-round-of-32-picks/"
+        "https://www.skysports.com/football/news/12098/13556654/world-cup-2026-south-africa-1-0-south-korea-thapelo-masekos-winner-makes-history-after-heung-min-son-benched",
+        "https://www.espn.com/soccer/story/_/id/49201528/canada-star-alphonso-davies-ready-world-cup-knockouts-decoy-role",
+        "https://www.flashscore.co.za/news/why-south-africa-s-ronwen-williams-could-be-the-difference-against-canada/CW9qzhfL/",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
       ]
     },
     "bra-jpn-2026-06-29": {
