@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T19:20:16.534Z",
+    "generatedAt": "2026-06-28T20:20:13.717Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 52,
     "live": 1
@@ -7006,7 +7006,10 @@
     },
     "rsa-can-2026-06-28": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -7016,24 +7019,31 @@
       },
       "advanced": null,
       "goals": [],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Nathan Saliba",
+          "minute": 54,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-28T19:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 2
+          "home": 1,
+          "away": 3
         },
         "sot": {
           "home": 1,
-          "away": 0
+          "away": 4
         },
         "shots": {
-          "home": 1,
-          "away": 2
+          "home": 3,
+          "away": 7
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -7041,15 +7051,15 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
-            2,
+            3,
             0
           ]
         },
@@ -7059,16 +7069,30 @@
             0
           ],
           "away": [
-            0,
+            3,
             0
           ]
         },
         "playerSot": {
-          "Teboho Mokoena": 1
+          "Teboho Mokoena": 1,
+          "Derek Cornelius": 1,
+          "Tani Oluwaseyi": 1,
+          "Tajon Buchanan": 1
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Shot On Target",
+            "firstActionMinute": 34,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

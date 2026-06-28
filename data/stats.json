@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T19:20:21.243Z",
+    "generatedAt": "2026-06-28T20:20:18.331Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 56
   },
@@ -883,20 +883,20 @@
         "matches": 3
       },
       {
-        "rank": 6,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 52.4,
-        "display": "52.4%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
+        "rank": 7,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
         "display": "52.0%",
         "matches": 2
+      },
+      {
+        "rank": 8,
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 51.9,
+        "display": "51.9%",
+        "matches": 3
       },
       {
         "rank": 9,
@@ -1909,6 +1909,10 @@
         },
         {
           "name": "Liam Millar",
+          "value": 1
+        },
+        {
+          "name": "Nathan Saliba",
           "value": 1
         }
       ],
@@ -5616,31 +5620,31 @@
         "teamBox": [
           {
             "team": "South Africa",
-            "possessionPct": 65,
-            "accuratePasses": 118,
-            "totalPasses": 139,
+            "possessionPct": 59.7,
+            "accuratePasses": 295,
+            "totalPasses": 348,
             "shotsOnTarget": 1,
-            "totalShots": 1,
-            "effectiveTackles": 2,
-            "totalTackles": 6,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 19
+            "totalShots": 3,
+            "effectiveTackles": 8,
+            "totalTackles": 14,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 49
           },
           {
             "team": "Canada",
-            "possessionPct": 35,
-            "accuratePasses": 53,
-            "totalPasses": 70,
-            "shotsOnTarget": 0,
-            "totalShots": 2,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 4
+            "possessionPct": 40.3,
+            "accuratePasses": 173,
+            "totalPasses": 225,
+            "shotsOnTarget": 4,
+            "totalShots": 7,
+            "effectiveTackles": 6,
+            "totalTackles": 10,
+            "accurateCrosses": 4,
+            "totalCrosses": 7,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 18
           }
         ]
       }
