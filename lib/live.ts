@@ -7,6 +7,8 @@ type PersistedResult = {
   state: "live" | "finished";
   ht: { home: number; away: number } | null;
   ft: { home: number; away: number } | null;
+  ft90?: { home: number; away: number } | null;
+  finishPhase?: "regulation" | "extra_time" | "penalties" | null;
   score: { home: number; away: number };
   goals: {
     team: "home" | "away";
@@ -15,6 +17,7 @@ type PersistedResult = {
     assist: string | null;
     penalty: boolean;
     ownGoal: boolean;
+    et?: boolean;
   }[];
   cards?: {
     team: "home" | "away";
@@ -124,12 +127,20 @@ function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
   return {
     matchId,
     state: r.state,
-    statusDetail: r.state === "finished" ? "FT" : "Live",
+    statusDetail:
+      r.state === "finished"
+        ? r.finishPhase === "penalties"
+          ? "FT (pens)"
+          : r.finishPhase === "extra_time"
+            ? "FT (AET)"
+            : "FT"
+        : "Live",
     minute: null,
     period: 2,
     score,
     htScore: r.ht,
     ftScore: r.ft ?? (r.state === "finished" ? score : null),
+    finishPhase: r.finishPhase ?? null,
     goals: r.goals.map((g) => ({
       team: g.team,
       scorer: g.scorer,
@@ -137,6 +148,7 @@ function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
       assist: g.assist,
       penalty: g.penalty,
       ownGoal: g.ownGoal,
+      ...(g.et === true ? { et: true } : {}),
     })),
     cards: (r.cards ?? []).map((c) => ({
       team: c.team,
@@ -174,6 +186,8 @@ export type LiveMatch = {
   score: { home: number; away: number };
   htScore: { home: number; away: number } | null;
   ftScore: { home: number; away: number } | null;
+  /** ESPN-verified match-end phase (knockout only). Absent until finished. */
+  finishPhase?: "regulation" | "extra_time" | "penalties" | null;
   goals: Goal[];
   cards: Card[];
   /** Verified corner/SOT/card counts — present once the summary endpoint has data. */
@@ -235,6 +249,7 @@ type EspnDetail = {
   scoringPlay?: boolean;
   penaltyKick?: boolean;
   ownGoal?: boolean;
+  shootout?: boolean;
   yellowCard?: boolean;
   redCard?: boolean;
   athletesInvolved?: EspnAthlete[];
@@ -581,23 +596,40 @@ function normaliseEvent(ev: EspnEvent): LiveMatch | null {
           : "live"
         : "scheduled";
 
+  // Match-end phase, cross-checked against ESPN's authoritative status.type (same
+  // mapping as scripts/build-results.mjs). Drives the FT label + ET-goal tagging.
+  const typeName = ev.status?.type?.name ?? "";
+  const periodNo = ev.status?.period ?? 0;
+  let finishPhase: LiveMatch["finishPhase"] = null;
+  if (state === "finished") {
+    if (typeName === "STATUS_FINAL_PEN" || periodNo === 5) finishPhase = "penalties";
+    else if (typeName === "STATUS_FINAL_AET" || periodNo === 3 || periodNo === 4)
+      finishPhase = "extra_time";
+    else finishPhase = "regulation";
+  }
+  const wentToEt = finishPhase === "extra_time" || finishPhase === "penalties";
+
   const score = {
     home: parseInt(ourHome.score ?? "0", 10) || 0,
     away: parseInt(ourAway.score ?? "0", 10) || 0,
   };
 
-  // Build chronological goal list oriented to our home/away.
-  const details = (comp?.details ?? []).filter((d) => d.scoringPlay);
+  // Build chronological goal list oriented to our home/away. Shootout kicks (ESPN
+  // lists them as 120' scoring plays) are dropped — they are not goals. Real ET
+  // goals (minute > 90) are tagged so 90-minute markets can exclude them.
+  const details = (comp?.details ?? []).filter((d) => d.scoringPlay && d.shootout !== true);
   const goals: Goal[] = details.map((d) => {
     const side: "home" | "away" = d.team?.id === homeId ? "home" : "away";
     const athletes = d.athletesInvolved ?? [];
+    const minute = d.clock?.value != null ? Math.round(d.clock.value / 60) : undefined;
     return {
       team: side,
       scorer: athletes[0]?.displayName ?? "Unknown",
-      minute: d.clock?.value != null ? Math.round(d.clock.value / 60) : undefined,
+      minute,
       assist: athletes[1]?.displayName ?? null,
       penalty: d.penaltyKick === true,
       ownGoal: d.ownGoal === true,
+      ...(wentToEt && minute != null && minute > 90 ? { et: true } : {}),
     };
   });
 
@@ -631,7 +663,11 @@ function normaliseEvent(ev: EspnEvent): LiveMatch | null {
 
   const statusDetail =
     state === "finished"
-      ? "FT"
+      ? finishPhase === "penalties"
+        ? "FT (pens)"
+        : finishPhase === "extra_time"
+          ? "FT (AET)"
+          : "FT"
       : state === "halftime"
         ? "HT"
         : state === "live"
@@ -647,6 +683,7 @@ function normaliseEvent(ev: EspnEvent): LiveMatch | null {
     score,
     htScore,
     ftScore: state === "finished" ? score : null,
+    finishPhase,
     goals,
     cards,
   };
