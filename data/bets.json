@@ -10583,6 +10583,41 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83707618725",
+      "slipNo": "83707618725",
+      "matchId": "rsa-can-2026-06-28",
+      "player": "—",
+      "market": "Acca · 4 legs",
+      "label": "Acca — Canada to beat South Africa + Netherlands to beat Morocco + Norway to beat Ivory Coast + Germany–Paraguay BTTS (4 legs)",
+      "odds": 16.556,
+      "stake": 20,
+      "placedAt": "29/06 00:37",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "rsa-can-2026-06-28",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "ned-mar-2026-06-30",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "ger-par-2026-06-29",
+            "kind": "btts"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
