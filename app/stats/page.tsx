@@ -9,9 +9,9 @@ import { getStats } from "@/lib/stats";
 export const revalidate = 1800;
 
 export const metadata: Metadata = {
-  title: "Tournament Stats — World Cup 2026 Leaders",
+  title: "Team Completion Stats — World Cup 2026 Control & Accuracy",
   description:
-    "Live World Cup 2026 leaderboards in Malaysia time — top scorers, assists, clean sheets, cards, penalties, plus team completion stats: pass completion, possession, shot, tackle, cross and long-ball accuracy. Pulled from the official match feed.",
+    "Live World Cup 2026 team completion stats in Malaysia time — pass completion, possession, shot accuracy, tackle success, cross and long-ball accuracy. True aggregates across every finished match, pulled from the official feed. Player leaderboards live on the Standings page.",
 };
 
 export default function StatsPage() {
@@ -33,26 +33,29 @@ export default function StatsPage() {
 
       <section className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-10">
         <p className="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-acid">
-          World Cup 2026 · tournament leaders
+          World Cup 2026 · completion &amp; control
         </p>
         <h1 className="max-w-3xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl">
-          The race for the Golden Boot.
+          Who keeps the ball — and finds the target.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          Top scorers, assists, clean sheets, the cards table and penalties scored vs missed — then
-          the team completion boards below: pass, shot, tackle, cross and long-ball accuracy plus
-          possession. Every number pulled straight from the official match feed, ranked top ten, in
-          Malaysia time.
+          Pass completion, possession, shot accuracy, tackle success, cross and long-ball accuracy —
+          every percentage aggregated across all of a side&apos;s finished matches, not a single-game
+          flash. Ranked top ten per board, highest first, in Malaysia time. Looking for top scorers
+          and the cards table? They&apos;ve moved to the{" "}
+          <a href="/standings" className="text-acid underline underline-offset-2 hover:text-ink">
+            Standings page
+          </a>
+          .
         </p>
       </section>
 
       <StatsBoards initial={initial} />
 
       <p className="mt-10 font-mono text-[0.62rem] uppercase leading-relaxed tracking-[0.1em] text-ink/35">
-        Source: {initial.meta.source}. Clean sheets credited to the team that kept the opponent
-        scoreless. Completion boards are true aggregates — total completed ÷ total attempted across
-        every finished match, not an average of per-game rates. Boards refresh as results come in —
-        tap Force update for the latest.
+        Source: {initial.meta.source}. Completion boards are true aggregates — total completed ÷
+        total attempted across every finished match, not an average of per-game rates. Boards refresh
+        as results come in — tap Force update for the latest.
       </p>
     </main>
   );

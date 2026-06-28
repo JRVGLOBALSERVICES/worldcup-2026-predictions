@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import { SiteNav } from "@/components/SiteNav";
+import { StatLeaderboards } from "@/components/StatLeaderboards";
 import { groupTables, type GroupTable, type StandingRow } from "@/lib/standings";
+import { getStats } from "@/lib/stats";
 
 export const revalidate = 1800;
 
 export const metadata: Metadata = {
-  title: "Group Standings — World Cup 2026 Tables",
+  title: "Group Standings & Player Leaders — World Cup 2026 Tables",
   description:
-    "Live World Cup 2026 group standings — all twelve groups A–L with points, played, goal difference and recent form, built straight from the official match feed.",
+    "Live World Cup 2026 group standings — all twelve groups A–L with points, played, goal difference and recent form — plus the player leaderboards: top scorers, assists, clean sheets, cards and penalties. Built straight from the official match feed.",
 };
 
 export default function StandingsPage() {
   const tables = groupTables();
   const totalPlayed = tables.reduce((n, t) => n + t.played, 0);
   const totalGames = tables.reduce((n, t) => n + t.total, 0);
+  const stats = getStats();
 
   return (
     <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
@@ -63,6 +66,26 @@ export default function StandingsPage() {
           <GroupCard key={t.group} table={t} />
         ))}
       </div>
+
+      {/* Player leaderboards — relocated here from the Stats page (now completion
+          stats only). Server-rendered from the committed ESPN snapshot. */}
+      <section className="mt-16 border-t border-line/60 pt-10">
+        <p className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-acid">
+          World Cup 2026 · tournament leaders
+        </p>
+        <h2 className="max-w-3xl font-display text-3xl font-black uppercase leading-[0.95] tracking-tight sm:text-4xl">
+          The race for the Golden Boot.
+        </h2>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+          Top scorers, assists, clean sheets, the cards table and penalties scored vs missed — every
+          name ranked top ten straight from the official match feed.{" "}
+          <span className="text-ink">{stats.meta.finished}</span> matches counted so far.
+        </p>
+
+        <div className="mt-8">
+          <StatLeaderboards categories={stats.categories} />
+        </div>
+      </section>
 
       <footer className="mt-12 border-t border-line pt-6 text-sm text-faint">
         <p className="leading-relaxed text-muted">
