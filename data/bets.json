@@ -9642,15 +9642,16 @@
       "slipNo": "83652195501",
       "matchId": "cro-gha-2026-06-27",
       "player": "Croatia",
-      "market": "Match Result",
-      "label": "Croatia to win (v Ghana, Group L)",
+      "market": "Match Result (mislabel — @13.6 is a specific market, not plain win)",
+      "label": "Croatia v Ghana @13.6 — settled LOST by 1xBet (Croatia won 2-1, but this market did not land; awaiting exact line)",
       "odds": 13.6,
       "stake": 50,
       "placedAt": "27/06 20:23",
       "grade": {
         "type": "matchResult",
         "outcome": "1"
-      }
+      },
+      "statusOverride": "lost"
     },
     {
       "id": "sp-83661354703",
