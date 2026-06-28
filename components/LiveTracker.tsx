@@ -681,7 +681,8 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       )}
 
       <div className="mt-10 space-y-12">
-        {base.days.map((day) => {
+        {(() => {
+          const renderDay = (day: DayRow) => {
           const sorted = [...day.matches].sort((a, b) => rank(live[a.matchId]) - rank(live[b.matchId]));
           return (
             <section key={day.key}>
@@ -852,7 +853,42 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
               </div>
             </section>
           );
-        })}
+          };
+          // Active day is pinned at top; UPCOMING days (future round dates, not
+          // yet played) stay visible below it. Only days that finished BEFORE the
+          // active slate (key < featuredKey) are "earlier rounds" — those collapse
+          // into a folded accordion so settled history doesn't clutter the current
+          // round. Key comparison is deterministic (no Date.now → no hydration drift).
+          const isPast = (d: DayRow) => d.key !== "tbd" && d.key < base.featuredKey;
+          const featured = base.days.filter((d) => d.isFeatured);
+          const upcoming = base.days.filter((d) => !d.isFeatured && !isPast(d));
+          const past = base.days.filter((d) => !d.isFeatured && isPast(d));
+          const pastBets = past.reduce(
+            (s, d) => s + d.matches.reduce((x, m) => x + m.bets.length + m.specials.filter((sp) => !sp.mirror).length, 0),
+            0,
+          );
+          return (
+            <>
+              {featured.map(renderDay)}
+              {upcoming.map(renderDay)}
+              {past.length > 0 && (
+                <details className="group/earlier">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-b border-line/60 pb-2 font-display text-lg font-extrabold uppercase tracking-tight text-muted transition-colors hover:text-ink">
+                    <span className="flex items-baseline gap-2.5">
+                      <span className="self-center rounded-full border border-line px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-faint">Settled</span>
+                      Earlier rounds
+                    </span>
+                    <span className="flex items-center gap-2 font-mono text-[0.66rem] tracking-wider text-faint tnum">
+                      {pastBets} bets
+                      <span className="transition-transform group-open/earlier:rotate-180" aria-hidden>▾</span>
+                    </span>
+                  </summary>
+                  <div className="mt-8 space-y-12">{past.map(renderDay)}</div>
+                </details>
+              )}
+            </>
+          );
+        })()}
       </div>
 
       <footer className="mt-16 border-t border-line pt-8 text-sm text-faint">
