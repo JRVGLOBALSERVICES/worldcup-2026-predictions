@@ -397,6 +397,7 @@ function buildValueSpot(f, ctx) {
     bestSide,
     headline,
     capturedAt: book.capturedAt || new Date().toISOString(),
+    ...(book.live?.inGame ? { live: book.live } : {}),
   };
 }
 

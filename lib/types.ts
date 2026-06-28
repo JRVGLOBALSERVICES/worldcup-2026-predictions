@@ -62,12 +62,21 @@ export type ValueLeg = {
 
 /** Value Spot — odds value check (slide 4/6). null when no market is captured. */
 export type ValueSpot = {
-  source: string;         // "1xBet" | "FanDuel" | …
+  source: string;         // "1xBet" | "1xBet (LIVE)" | "FanDuel" | …
   overroundPct: number;   // book margin on the 3-way
   legs: ValueLeg[];
   bestSide: string | null;   // the one genuine value side, or null
   headline: string;       // one-line verdict on the price
   capturedAt: string;
+  // present only when this price is a live in-play snapshot (1xBet LiveFeed):
+  // the market is moving minute-by-minute, so the UI can flag it as live.
+  live?: {
+    inGame: boolean;
+    score: { home: number; away: number };
+    minute: number | null;       // 65
+    minuteLabel: string | null;  // "65 minutes"
+    period: string | null;       // "2nd half"
+  } | null;
 };
 
 /** One trap flag (slide 5/6). */

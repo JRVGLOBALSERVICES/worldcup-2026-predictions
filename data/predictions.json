@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T20:21:43.893Z",
+    "generatedAt": "2026-06-28T20:30:42.192Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-06-28T20:21:43.892Z"
+    "modelUpdatedAt": "2026-06-28T20:30:42.191Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -12936,50 +12936,60 @@
         "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": {
-        "source": "FanDuel",
-        "overroundPct": 4.8,
+        "source": "1xBet (LIVE)",
+        "overroundPct": 3.2,
         "legs": [
           {
             "market": "Match result",
             "side": "South Africa",
-            "price": "5.6",
-            "impliedPct": 17.9,
-            "fairPct": 17,
+            "price": "7.73",
+            "impliedPct": 12.9,
+            "fairPct": 12.5,
             "modelPct": 18.5,
-            "edgePts": 1.5,
+            "edgePts": 6,
             "verdict": "good"
           },
           {
             "market": "Match result",
             "side": "Draw",
-            "price": "3.6",
-            "impliedPct": 27.8,
-            "fairPct": 26.5,
+            "price": "1.79",
+            "impliedPct": 55.9,
+            "fairPct": 54.2,
             "modelPct": 24.1,
-            "edgePts": -2.4,
+            "edgePts": -30.1,
             "verdict": "bad"
           },
           {
             "market": "Match result",
             "side": "Canada",
-            "price": "1.69",
-            "impliedPct": 59.2,
-            "fairPct": 56.5,
+            "price": "2.91",
+            "impliedPct": 34.4,
+            "fairPct": 33.3,
             "modelPct": 57.4,
-            "edgePts": 0.9,
-            "verdict": "fair"
+            "edgePts": 24.1,
+            "verdict": "good"
           }
         ],
-        "bestSide": "South Africa",
-        "headline": "South Africa is the one number with positive value (+1.5 pts over fair).",
-        "capturedAt": "2026-06-28T18:55:00.000Z"
+        "bestSide": "Canada",
+        "headline": "Canada is the one number with positive value (+24.1 pts over fair).",
+        "capturedAt": "2026-06-28T20:28:40.126Z",
+        "live": {
+          "inGame": true,
+          "score": {
+            "home": 0,
+            "away": 0
+          },
+          "minute": 65,
+          "minuteLabel": "65 minutes",
+          "period": "2nd half"
+        }
       },
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
             "tripped": false,
-            "why": "Price broadly fair (59.2% implied vs 57.4% model)."
+            "why": "Price broadly fair (34.4% implied vs 57.4% model)."
           },
           {
             "name": "Dead rubber / rotation risk",
@@ -13013,20 +13023,20 @@
           }
         ],
         "trapsTripped": 1,
-        "edge": "edge-leaning",
-        "verdict": "LEAN",
+        "edge": "real edge",
+        "verdict": "PLAYABLE",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
-        "verdict": "LEAN",
-        "call": "Canada to win is a lean, not a lock — but the better value sits on South Africa. Respect the live draw.",
+        "verdict": "PLAYABLE",
+        "call": "Canada to win is a clean call and you're getting value on it. Respect the live draw.",
         "read": {
           "tag": "Lean",
           "line": "Canada are the model's 57% pick, but a 24.1% draw is very much alive."
         },
         "price": {
-          "tag": "Value: South Africa",
-          "line": "The real value is on South Africa, not the pick."
+          "tag": "Good price on Canada",
+          "line": "You're getting genuine value on the pick — about +24.1 points better than fair."
         },
         "trap": {
           "tag": "1 warning",

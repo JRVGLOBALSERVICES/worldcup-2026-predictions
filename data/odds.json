@@ -1,18 +1,42 @@
 {
-  "generatedAt": "2026-06-28T20:21:36.774Z",
-  "source": "1xBet LineFeed (Get1x2_VZip) + hand-captured fallback",
+  "generatedAt": "2026-06-28T20:28:49.982Z",
+  "source": "1xBet LineFeed (Get1x2_VZip) + LiveFeed in-play override + hand-captured fallback",
   "lastLive": null,
   "liveReachable": false,
   "liveNote": "redirect 302 (geo-block)",
+  "inPlay": {
+    "count": 1,
+    "fixtures": [
+      "rsa-can-2026-06-28"
+    ],
+    "ageMin": 0.16424903157552084
+  },
   "odds": {
     "rsa-can-2026-06-28": {
-      "source": "FanDuel",
+      "source": "1xBet (LIVE)",
       "h2h": {
-        "home": 5.6,
-        "draw": 3.6,
-        "away": 1.69
+        "home": 7.73,
+        "draw": 1.79,
+        "away": 2.91
       },
-      "capturedAt": "2026-06-28T18:55:00.000Z"
+      "totals": [
+        {
+          "line": 0.5,
+          "over": 1.768,
+          "under": 2.13
+        }
+      ],
+      "live": {
+        "inGame": true,
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "minute": 65,
+        "minuteLabel": "65 minutes",
+        "period": "2nd half"
+      },
+      "capturedAt": "2026-06-28T20:28:40.126Z"
     },
     "bra-jpn-2026-06-29": {
       "source": "1xBet (PC)",

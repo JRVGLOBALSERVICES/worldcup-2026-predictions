@@ -126,8 +126,26 @@ function parseEvent(ev) {
   return { home, draw, away, totals: tArr };
 }
 
-/** Match a LineFeed `Value` event array against our fixtures and write odds. */
-function ingestEvents(events, stamp, sourceLabel = "1xBet") {
+/** Pull live score + minute out of a LiveFeed event's SC block, side-aware. */
+function parseLive(ev, flipped) {
+  const SC = ev.SC || {};
+  let s1 = Number(SC?.FS?.S1 ?? SC?.SS?.S1 ?? 0) || 0;
+  let s2 = Number(SC?.FS?.S2 ?? SC?.SS?.S2 ?? 0) || 0;
+  const home = flipped ? s2 : s1;
+  const away = flipped ? s1 : s2;
+  // SLS is a human label like "65 minutes"; CPS the period ("2nd half")
+  const minLabel = typeof SC.SLS === "string" ? SC.SLS : null;
+  const minute = minLabel ? Number((minLabel.match(/\d+/) || [])[0]) || null : null;
+  return { inGame: true, score: { home, away }, minute, minuteLabel: minLabel, period: SC.CPS || null };
+}
+
+/**
+ * Match a `Value` event array against our fixtures and write odds.
+ * `extra(ev, flipped)` may return extra fields to merge into each entry (used
+ * to attach the live in-play badge). `override` forces the write even if a
+ * prior source already priced the fixture (live wins over prematch).
+ */
+function ingestEvents(events, stamp, sourceLabel = "1xBet", extra = null, override = false, markSet = null) {
   let matched = 0;
   for (const ev of events) {
     const h = norm(ev.O1 || ev.HomeTeam), a = norm(ev.O2 || ev.AwayTeam);
@@ -138,6 +156,7 @@ function ingestEvents(events, stamp, sourceLabel = "1xBet") {
       const dh = Math.abs(ev.S * 1000 - new Date(fx.kickoffUTC).getTime()) / 3.6e6;
       if (dh > 36) continue;
     }
+    if (!override && odds[fx.id]?.live?.inGame) continue; // never let a stale prematch clobber a live price
     const flipped = norm(ev.O1) === norm(fx.away?.name); // 1xBet listed sides reversed
     const p = parseEvent(ev);
     const h2h = flipped
@@ -148,8 +167,10 @@ function ingestEvents(events, stamp, sourceLabel = "1xBet") {
       source: sourceLabel,
       h2h: { home: round(h2h.home), draw: round(h2h.draw), away: round(h2h.away) },
       ...(p.totals.length ? { totals: p.totals.map((t) => ({ ...t, over: round(t.over), under: round(t.under) })) } : {}),
+      ...(extra ? extra(ev, flipped) : {}),
       capturedAt: stamp,
     };
+    if (markSet) markSet.add(fx.id);
     matched++;
   }
   return matched;
@@ -177,6 +198,45 @@ function rawFilePull() {
   if (!events.length) return { ok: false, reason: "raw file has no events", count: 0 };
   const matched = ingestEvents(events, new Date(stat.mtimeMs).toISOString(), "1xBet (PC)");
   return { ok: true, count: matched, ageH };
+}
+
+/**
+ * Live in-play pull — ingest the LiveFeed Get1x2_VZip snapshot Taildropped from
+ * Rj's desktop (fetch_1xbet_live.py, every 2 min). These are minute-by-minute
+ * in-game prices for WC2026 matches ON THE PITCH RIGHT NOW, and they OVERRIDE
+ * the prematch price for the same fixture plus carry a live badge (score+minute)
+ * the UI can render. Honoured only while genuinely fresh — live odds rot in
+ * minutes, so the window is tight (ONEXBET_LIVE_MAX_AGE_MIN, default 8). An empty
+ * Value array (no WC match currently live) is valid and simply matches nothing.
+ */
+function liveFeedPull() {
+  const file = process.env.ONEXBET_LIVE_FILE || "/root/blender-incoming/onexbet-live-raw.json";
+  if (!existsSync(file)) return { ok: false, reason: "no live file", count: 0 };
+  let stat, data;
+  try {
+    stat = statSync(file);
+    data = JSON.parse(readFileSync(file, "utf8"));
+  } catch (e) { return { ok: false, reason: `live file unreadable: ${e.message}`, count: 0 }; }
+  const maxAgeMin = Number(process.env.ONEXBET_LIVE_MAX_AGE_MIN || 8);
+  const ageMin = (Date.now() - stat.mtimeMs) / 6e4;
+  if (ageMin > maxAgeMin) return { ok: false, reason: `live file stale (${ageMin.toFixed(1)}m > ${maxAgeMin}m)`, count: 0, ageMin };
+  const events = data?.Value || data?.value || [];
+  const stamp = new Date(stat.mtimeMs).toISOString();
+  const ids = new Set();
+  const matched = events.length
+    ? ingestEvents(events, stamp, "1xBet (LIVE)", (ev, flipped) => ({ live: parseLive(ev, flipped) }), /*override*/ true, ids)
+    : 0;
+  return { ok: true, count: matched, ageMin, ids, idle: !events.length };
+}
+
+/** Strip a stale in-play badge off any fixture no longer live (match ended /
+ *  no longer in the fresh LiveFeed snapshot) so the UI never shows a frozen minute. */
+function reconcileLive(liveIds) {
+  let cleared = 0;
+  for (const [id, v] of Object.entries(odds)) {
+    if (v?.live && !liveIds.has(id)) { delete v.live; if (/\(LIVE\)/.test(v.source || "")) v.source = "1xBet (PC)"; cleared++; }
+  }
+  return cleared;
 }
 
 async function livePull() {
@@ -244,15 +304,26 @@ else console.log(`  raw file: skipped — ${raw.reason}`);
 const live = await livePull();
 if (live.ok) console.log(`  live 1xBet: matched ${live.count} fixture(s)`);
 else console.log(`  live 1xBet: unreachable — ${live.reason} (fail-soft; using raw + cached + manual)`);
+// In-play override LAST so live prices win over prematch for matches on the pitch.
+const inplay = liveFeedPull();
+if (inplay.ok && inplay.idle) console.log(`  in-play (LIVE): no WC match live right now [${inplay.ageMin.toFixed(1)}m old]`);
+else if (inplay.ok) console.log(`  in-play (LIVE): overrode ${inplay.count} live fixture(s) [${inplay.ageMin.toFixed(1)}m old]`);
+else console.log(`  in-play (LIVE): skipped — ${inplay.reason}`);
+// Strip stale in-play badges: trust only the fresh snapshot's ids (none if stale).
+const cleared = reconcileLive(inplay.ok ? inplay.ids : new Set());
+if (cleared) console.log(`  in-play (LIVE): cleared ${cleared} stale live badge(s)`);
 const seeded = mergeManual();
 if (seeded) console.log(`  manual seed: filled ${seeded} fixture(s)`);
 
+const liveFixtures = Object.entries(odds).filter(([, v]) => v?.live?.inGame).map(([id]) => id);
+
 const out = {
   generatedAt: new Date().toISOString(),
-  source: "1xBet LineFeed (Get1x2_VZip) + hand-captured fallback",
+  source: "1xBet LineFeed (Get1x2_VZip) + LiveFeed in-play override + hand-captured fallback",
   lastLive: live.ok ? new Date().toISOString() : prev.lastLive ?? null,
   liveReachable: live.ok,
   liveNote: live.ok ? `${live.count} matched` : live.reason,
+  inPlay: inplay.ok ? { count: liveFixtures.length, fixtures: liveFixtures, ageMin: inplay.ageMin ?? null } : null,
   odds,
 };
 
