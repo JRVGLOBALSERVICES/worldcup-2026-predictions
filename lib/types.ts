@@ -82,6 +82,19 @@ export type TrapDetector = {
   discipline: string;     // one sentence of tournament discipline
 };
 
+/**
+ * Brain summary — the three frameworks distilled into one plain-English call.
+ * This is what leads the AI prediction so the whole read fits in a glance;
+ * the detailed Pitch / Value / Trap blocks sit below it for anyone who wants them.
+ */
+export type BrainSummary = {
+  verdict: "PLAYABLE" | "LEAN" | "PASS"; // the bottom-line call (from the Trap filter)
+  call: string;                          // one plain sentence fusing read + price + traps
+  read: { tag: "Bet" | "Lean" | "Pass"; line: string };  // the match read
+  price: { tag: string; line: string };  // the value check
+  trap: { tag: string; line: string };   // the honest filter
+};
+
 export type Prediction = {
   win: { pick: string; fairOdds: string; reason: string; strength?: number };
   halfTime: { score: string; fairOdds: string; alt: string; altOdds: string; strength?: number };
@@ -105,6 +118,8 @@ export type Prediction = {
   pitchReport?: PitchReport;
   valueSpot?: ValueSpot | null;
   trapDetector?: TrapDetector;
+  /** Plain-English distillation of the three frameworks — leads the AI call. */
+  brainSummary?: BrainSummary;
   sources: string[];
 };
 

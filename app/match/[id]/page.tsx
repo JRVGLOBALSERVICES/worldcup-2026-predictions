@@ -102,7 +102,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
         </div>
       )}
 
-      {pred?.pitchReport && (
+      {pred?.brainSummary && (
         <div className="mt-8">
           <BrainPanel pred={pred} />
         </div>

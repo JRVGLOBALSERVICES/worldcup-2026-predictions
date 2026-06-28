@@ -487,6 +487,86 @@ function buildTrapDetector(f, ctx, valueSpot) {
   return { flags, trapsTripped, edge, verdict, discipline };
 }
 
+/**
+ * Distil the three frameworks into one plain-English call — the part a phone
+ * reader actually needs. Read (is the call sound?) + Price (is the number right?)
+ * + Traps (what's the catch?) collapsed to a single sentence plus three one-liners.
+ */
+function buildBrainSummary(f, ctx, pitch, value, trap) {
+  const { ft, fav, isKnockout } = ctx;
+  const pick = fav.pick;
+  const pickIsDraw = pick === "Draw";
+  const favPct = Math.round(fav.p * 100);
+  const drawPct = pct(ft.pDraw);
+  const drawLive = isKnockout && !pickIsDraw && drawPct >= 23;
+  const base = pickIsDraw ? "A draw" : `${pick} to win`;
+
+  // ── READ — the model's leaning, in one plain line ──────────────────────────
+  const read = {
+    tag: pitch.verdict,
+    line: pickIsDraw
+      ? `The model leans level — a ${drawPct}% draw on low goals, the tightest call on the board.`
+      : `${pick} are the model's ${favPct}% pick${drawLive ? `, but a ${drawPct}% draw is very much alive` : ""}.`,
+  };
+
+  // ── PRICE — is the number actually worth it? ───────────────────────────────
+  let price;
+  if (!value) {
+    price = { tag: "Not priced yet", line: "No live odds for this tie yet — this is a model-only call until the market lands." };
+  } else {
+    const pickLeg = value.legs.find((l) => l.market === "Match result" && l.side === pick);
+    const overpaying = pickLeg?.verdict === "bad";
+    if (value.bestSide === pick && pickLeg) {
+      price = { tag: `Good price on ${pick}`, line: `You're getting genuine value on the pick — about +${pickLeg.edgePts} points better than fair.` };
+    } else if (value.bestSide && value.bestSide !== pick) {
+      price = { tag: `Value: ${value.bestSide}`, line: `The real value is on ${value.bestSide}, not the pick${overpaying ? ` — and ${pick} is a poor price` : ""}.` };
+    } else if (overpaying && pickLeg) {
+      price = { tag: `${pick} overpriced`, line: `You'd overpay on ${pick} — a ${pickLeg.impliedPct}% price for what the model rates a ${pickLeg.modelPct}% chance.` };
+    } else {
+      price = { tag: "Priced fair", line: `The book has this priced efficiently — no number here is wrong enough to beat.` };
+    }
+  }
+
+  // ── TRAPS — the single most important catch ────────────────────────────────
+  const tripped = trap.flags.filter((x) => x.tripped);
+  const SHORT = {
+    "Favourite on reputation / at a poor price": "You're paying over the odds for the favourite.",
+    "Dead rubber / rotation risk": "Lineups could be rotated — check the table first.",
+    "Built on one result / a short hot streak": "The form leans on one big result, not a real trend.",
+    "Cagey knockout the market underrates": "This is built for a 1-0 or penalties, not a comfortable win.",
+    "Lineups unconfirmed and the bet depends on them": "XIs aren't confirmed — scorer/lineup picks are provisional.",
+    "Ignoring the draw": "The draw is live and a level game kills a straight win bet.",
+  };
+  const priority = [
+    "Favourite on reputation / at a poor price",
+    "Cagey knockout the market underrates",
+    "Ignoring the draw",
+    "Built on one result / a short hot streak",
+    "Lineups unconfirmed and the bet depends on them",
+    "Dead rubber / rotation risk",
+  ];
+  const top = priority.map((n) => tripped.find((t) => t.name === n)).find(Boolean);
+  const trapLine = tripped.length === 0
+    ? { tag: "Clean", line: "Nothing trips the filter — about as solid as a call gets." }
+    : { tag: `${tripped.length} warning${tripped.length === 1 ? "" : "s"}`, line: (top && SHORT[top.name]) || top?.why || "Mind the warnings below before staking." };
+
+  // ── THE CALL — one sentence fusing all three ───────────────────────────────
+  const verdictClause =
+    trap.verdict === "PLAYABLE" ? "is a clean call" :
+    trap.verdict === "LEAN" ? "is a lean, not a lock" :
+    "doesn't clear the filter — pass it";
+  let valueClause = "";
+  if (value) {
+    if (value.bestSide === pick) valueClause = " and you're getting value on it";
+    else if (value.bestSide && value.bestSide !== pick) valueClause = ` — but the better value sits on ${value.bestSide}`;
+    else if (price.tag.endsWith("overpriced")) valueClause = " and you're overpaying for it";
+  }
+  const drawClause = drawLive ? " Respect the live draw." : "";
+  const call = `${base} ${verdictClause}${valueClause}.${drawClause}`;
+
+  return { verdict: trap.verdict, call, read, price, trap: trapLine };
+}
+
 /** Reuse a team's most recent confirmed/probable XI from earlier predictions. */
 function lastKnownXI(name) {
   const want = norm(name);
@@ -618,6 +698,7 @@ function attachBrain(f, pred) {
   pred.pitchReport = buildPitchReport(f, ctx);
   pred.valueSpot = buildValueSpot(f, ctx);
   pred.trapDetector = buildTrapDetector(f, ctx, pred.valueSpot);
+  pred.brainSummary = buildBrainSummary(f, ctx, pred.pitchReport, pred.valueSpot, pred.trapDetector);
 }
 
 // ── backtest: score the model against finished matches ──────────────────────
