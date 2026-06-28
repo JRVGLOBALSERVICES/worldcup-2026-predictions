@@ -507,6 +507,26 @@
         "home": 3,
         "away": 1
       }
+    },
+    "alg-aus-2026-06-27": {
+      "ht": {
+        "home": 1,
+        "away": 1
+      },
+      "ft": {
+        "home": 3,
+        "away": 3
+      }
+    },
+    "jor-arg-2026-06-27": {
+      "ht": {
+        "home": 0,
+        "away": 2
+      },
+      "ft": {
+        "home": 1,
+        "away": 3
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -2771,6 +2791,125 @@
           "team": "home",
           "player": "Samuel Moutoussamy",
           "minute": 61,
+          "type": "yellow"
+        }
+      ]
+    },
+    "alg-aus-2026-06-27": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Marko Arnautovic",
+          "minute": 28,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Rafik Belghali",
+          "minute": 44,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Marcel Sabitzer",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Riyad Mahrez",
+          "minute": 59,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Riyad Mahrez",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Sasa Kalajdzic",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Marko Arnautovic",
+          "minute": 10,
+          "type": "yellow"
+        }
+      ]
+    },
+    "jor-arg-2026-06-27": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Giovani Lo Celso",
+          "minute": 18,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Lautaro Martínez",
+          "minute": 30,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mousa Al-Tamari",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Lionel Messi",
+          "minute": 79,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Mohannad Abu Taha",
+          "minute": 17,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Yazan Al-Arab",
+          "minute": 63,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mohammed Abu Zraiq",
+          "minute": 90,
           "type": "yellow"
         }
       ]
@@ -13141,15 +13280,15 @@
     "alg-aus-2026-06-27": {
       "corners": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
       "sot": {
-        "home": 3,
-        "away": 2
+        "home": 5,
+        "away": 3
       },
       "shots": {
-        "home": 9,
-        "away": 6
+        "home": 12,
+        "away": 10
       },
       "yellow": {
         "home": 0,
@@ -13170,7 +13309,7 @@
         ],
         "away": [
           2,
-          0
+          1
         ]
       },
       "sotByHalf": {
@@ -13199,24 +13338,34 @@
           "firstActionMinute": 28,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 78,
+          "isCorner": false,
+          "reliable": true
         }
       }
     },
     "jor-arg-2026-06-27": {
       "corners": {
-        "home": 1,
-        "away": 2
+        "home": 2,
+        "away": 6
       },
       "sot": {
         "home": 1,
-        "away": 3
+        "away": 4
       },
       "shots": {
         "home": 5,
-        "away": 6
+        "away": 12
       },
       "yellow": {
-        "home": 1,
+        "home": 3,
         "away": 0
       },
       "red": {
@@ -13224,17 +13373,17 @@
         "away": 0
       },
       "cards": {
-        "home": 1,
+        "home": 3,
         "away": 0
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
           2,
-          0
+          4
         ]
       },
       "sotByHalf": {
@@ -13262,6 +13411,16 @@
           "firstActionMinute": 26,
           "isCorner": true,
           "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 75,
+          "isCorner": false,
+          "reliable": true
         }
       }
     }

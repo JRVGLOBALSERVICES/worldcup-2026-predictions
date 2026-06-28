@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T03:20:26.523Z",
+    "generatedAt": "2026-06-28T04:20:28.036Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -146,11 +146,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "3rd: E/F/G/I/J",
-            "opponentFlag": null,
+            "opponent": "Algeria",
+            "opponentFlag": "🇩🇿",
             "kickoffUTC": "2026-07-03T03:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -852,11 +852,11 @@
           ],
           "next": {
             "round": "Round of 32",
-            "opponent": "2nd Grp J",
-            "opponentFlag": null,
+            "opponent": "Austria",
+            "opponentFlag": "🇦🇹",
             "kickoffUTC": "2026-07-02T19:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -1060,25 +1060,26 @@
     {
       "group": "J",
       "total": 6,
-      "played": 4,
+      "played": 6,
       "rows": [
         {
           "name": "Argentina",
           "flag": "🇦🇷",
-          "played": 2,
-          "won": 2,
+          "played": 3,
+          "won": 3,
           "drawn": 0,
           "lost": 0,
-          "goalsFor": 5,
-          "goalsAgainst": 0,
-          "goalDiff": 5,
-          "points": 6,
+          "goalsFor": 8,
+          "goalsAgainst": 1,
+          "goalDiff": 7,
+          "points": 9,
           "rank": 1,
           "advance": {
             "label": "Advance to Round of 32",
             "color": "#81D6AC"
           },
           "form": [
+            "W",
             "W",
             "W"
           ],
@@ -1094,57 +1095,73 @@
         {
           "name": "Austria",
           "flag": "🇦🇹",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "goalsFor": 3,
-          "goalsAgainst": 3,
+          "goalsFor": 6,
+          "goalsAgainst": 6,
           "goalDiff": 0,
-          "points": 3,
+          "points": 4,
           "rank": 2,
           "advance": {
             "label": "Advance to Round of 32",
             "color": "#81D6AC"
           },
           "form": [
+            "D",
             "L",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Spain",
+            "opponentFlag": "🇪🇸",
+            "kickoffUTC": "2026-07-02T19:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Algeria",
           "flag": "🇩🇿",
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "drawn": 0,
+          "drawn": 1,
           "lost": 1,
-          "goalsFor": 2,
-          "goalsAgainst": 4,
+          "goalsFor": 5,
+          "goalsAgainst": 7,
           "goalDiff": -2,
-          "points": 3,
+          "points": 4,
           "rank": 3,
           "advance": {
             "label": "Best 8 advance",
             "color": "#B5E7CE"
           },
           "form": [
+            "D",
             "W",
             "L"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 32",
+            "opponent": "Switzerland",
+            "opponentFlag": "🇨🇭",
+            "kickoffUTC": "2026-07-03T03:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Jordan",
           "flag": "🇯🇴",
-          "played": 2,
+          "played": 3,
           "won": 0,
           "drawn": 0,
-          "lost": 2,
-          "goalsFor": 2,
-          "goalsAgainst": 5,
-          "goalDiff": -3,
+          "lost": 3,
+          "goalsFor": 3,
+          "goalsAgainst": 8,
+          "goalDiff": -5,
           "points": 0,
           "rank": 4,
           "advance": {
@@ -1152,6 +1169,7 @@
             "color": "#FF7F84"
           },
           "form": [
+            "L",
             "L",
             "L"
           ],
