@@ -664,7 +664,13 @@ async function main() {
   }
 }
 
-main().catch((e) => {
-  console.error(e?.message ?? e);
-  process.exit(1);
-});
+// Export the pure transform so it can be unit-tested against captured ESPN
+// payloads; only run the side-effecting main() when invoked as a script.
+export { resultFromEvent };
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((e) => {
+    console.error(e?.message ?? e);
+    process.exit(1);
+  });
+}
