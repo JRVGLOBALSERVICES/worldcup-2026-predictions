@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T23:20:26.654Z",
+    "generatedAt": "2026-06-28T00:20:30.271Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 52
   },
@@ -234,6 +234,13 @@
     "yellowCards": [
       {
         "rank": 1,
+        "name": "Abdukodir Khusanov",
+        "team": "Uzbekistan",
+        "flag": "🇺🇿",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Ahmed Fathy",
         "team": "Qatar",
         "flag": "🇶🇦",
@@ -275,28 +282,21 @@
         "value": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Abdoulaye Seck",
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 1
       },
       {
-        "rank": 7,
-        "name": "Abdukodir Khusanov",
-        "team": "Uzbekistan",
-        "flag": "🇺🇿",
-        "value": 1
-      },
-      {
-        "rank": 7,
+        "rank": 8,
         "name": "Alan Franco",
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 1
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Aleksandar Pavlovic",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -830,6 +830,10 @@
         {
           "name": "Charles Pickel",
           "value": 1
+        },
+        {
+          "name": "Noah Sadiki",
+          "value": 1
         }
       ],
       "redCards": []
@@ -1046,13 +1050,24 @@
           "name": "Abbosbek Fayzullaev",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Eldor Shomurodov",
+          "value": 1,
+          "matches": 1
         }
       ],
-      "assists": [],
+      "assists": [
+        {
+          "name": "Akmal Mozgovoy",
+          "value": 1,
+          "matches": 1
+        }
+      ],
       "yellowCards": [
         {
           "name": "Abdukodir Khusanov",
-          "value": 1
+          "value": 2
         },
         {
           "name": "Odiljon Xamrobekov",
@@ -3091,6 +3106,19 @@
           {
             "name": "Mateo Kovacic",
             "team": "Croatia"
+          }
+        ]
+      },
+      "760481": {
+        "penMiss": [],
+        "assists": []
+      },
+      "760482": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Akmal Mozgovoy",
+            "team": "Uzbekistan"
           }
         ]
       },

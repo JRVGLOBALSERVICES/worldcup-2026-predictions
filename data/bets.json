@@ -12883,6 +12883,134 @@
           "reliable": true
         }
       }
+    },
+    "col-por-2026-06-27": {
+      "corners": {
+        "home": 1,
+        "away": 1
+      },
+      "sot": {
+        "home": 3,
+        "away": 2
+      },
+      "shots": {
+        "home": 13,
+        "away": 9
+      },
+      "yellow": {
+        "home": 0,
+        "away": 0
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 0,
+        "away": 0
+      },
+      "cornersByHalf": {
+        "home": [
+          1,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          3,
+          0
+        ],
+        "away": [
+          2,
+          0
+        ]
+      },
+      "playerSot": {
+        "Jhon Córdoba": 1,
+        "Cristiano Ronaldo": 1,
+        "Bruno Fernandes": 1,
+        "Gustavo Puerta": 1,
+        "James Rodríguez": 1
+      },
+      "firstGoalMethod": null,
+      "firstPenalty": null,
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 27,
+          "firstActionType": "VAR - Referee decision cancelled",
+          "firstActionMinute": 31,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
+    },
+    "drc-uzb-2026-06-27": {
+      "corners": {
+        "home": 1,
+        "away": 3
+      },
+      "sot": {
+        "home": 1,
+        "away": 1
+      },
+      "shots": {
+        "home": 3,
+        "away": 1
+      },
+      "yellow": {
+        "home": 1,
+        "away": 1
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 1,
+        "away": 1
+      },
+      "cornersByHalf": {
+        "home": [
+          1,
+          0
+        ],
+        "away": [
+          3,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {},
+      "firstGoalMethod": "shot",
+      "firstPenalty": null,
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 25,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 26,
+          "isCorner": true,
+          "reliable": false
+        }
+      }
     }
   }
 }
