@@ -94,6 +94,12 @@ const researchFile = JSON.parse(readFileSync(P("research.json"), "utf8"));
 const research = researchFile.research ?? {};
 const predFile = JSON.parse(readFileSync(P("predictions.json"), "utf8"));
 const predictions = predFile.predictions ?? {};
+// Real bookmaker prices (1xBet LineFeed + hand-captured fallback) → the Value Spot.
+let oddsBook = {};
+try {
+  const of = JSON.parse(readFileSync(P("odds.json"), "utf8"));
+  oddsBook = of.odds ?? {};
+} catch { /* no odds yet — Value Spot degrades to "no live market" */ }
 
 // ── team table: GF/GA/pts/form keyed by normalised name ─────────────────────
 const teamRows = {};
@@ -217,6 +223,270 @@ function strengthFromProb(p, scorer = false) {
 // eslint-disable-next-line no-unused-vars
 function confidenceFromProb(p) { return "medium"; }
 
+// ════════════════════════════════════════════════════════════════════════════
+//  THE BRAIN — three reasoning layers per match (thelocktalk framework deck)
+//  analyse the match (Pitch Report) → price it (Value Spot) → trap-filter it.
+//  All deterministic, derived from the model + standings + stats + real odds.
+// ════════════════════════════════════════════════════════════════════════════
+
+// 2026 host-city climate read — heat/altitude is a real WC-26 edge the model
+// can't see in goal rates. Keyed by city substring (matches fixtures.json city).
+const HOST_CITY = [
+  [/mexico city/i, { kind: "altitude", note: "Mexico City sits at ~2,240m — thin air saps high-press legs after the hour; the deeper-block side tires less." }],
+  [/guadalajara/i, { kind: "altitude", note: "Guadalajara altitude (~1,560m) takes the sting out of a high press late on." }],
+  [/houston|arlington|dallas/i, { kind: "heat", note: "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side." }],
+  [/miami/i, { kind: "heat", note: "Miami humidity drags the second-half tempo; hydration breaks reset momentum." }],
+  [/monterrey/i, { kind: "heat", note: "Monterrey runs hot and dry — energy management beats gegenpressing here." }],
+  [/atlanta|kansas/i, { kind: "heat", note: "Warm, humid venue — expect a hydration break and a cagier final 20." }],
+  [/inglewood|los angeles|santa clara|san francisco|seattle|vancouver|foxborough|boston/i, { kind: "mild", note: "Temperate, controlled venue — climate is neutral; the football decides it." }],
+];
+function cityFactor(city) {
+  for (const [re, v] of HOST_CITY) if (re.test(city || "")) return v;
+  return { kind: "neutral", note: "Climate broadly neutral at this venue — no heat/altitude tilt to price in." };
+}
+
+const pct = (x) => Math.round(x * 1000) / 10; // 0.567 → 56.7
+/** P(total goals ≥ n) from the sum-Poisson (sum of two Poissons is Poisson(λh+λa)). */
+function pOverTotal(lh, la, n) {
+  const lam = lh + la;
+  let cdf = 0;
+  for (let k = 0; k < n; k++) cdf += pois(k, lam);
+  return 1 - cdf;
+}
+
+/** Slide 3/6 — the 10-point structured read. */
+function buildPitchReport(f, ctx) {
+  const { rh, ra, lh, la, ft, fav, isKnockout, lineupStatus } = ctx;
+  const home = f.home.name, away = f.away.name;
+  const rowH = teamRows[norm(home)], rowA = teamRows[norm(away)];
+  const stH = teamStats[norm(home)], stA = teamStats[norm(away)];
+  const drawPct = pct(ft.pDraw), totalXg = lh + la;
+
+  // 1. facts — verifiable only
+  const facts = [];
+  const gd = (r) => (r ? (r.goalsFor - r.goalsAgainst >= 0 ? "+" : "") + (r.goalsFor - r.goalsAgainst) : null);
+  if (rowH?.played) facts.push(`${home}: ${rowH.points} pts, ${gd(rowH)} GD across ${rowH.played} group game${rowH.played === 1 ? "" : "s"} (${rowH.goalsFor} for / ${rowH.goalsAgainst} against).`);
+  if (rowA?.played) facts.push(`${away}: ${rowA.points} pts, ${gd(rowA)} GD across ${rowA.played} group game${rowA.played === 1 ? "" : "s"} (${rowA.goalsFor} for / ${rowA.goalsAgainst} against).`);
+  const topH = stH?.scorers?.[0], topA = stA?.scorers?.[0];
+  if (topH) facts.push(`${home}'s ${topH.name} leads them with ${topH.value} goal${topH.value === 1 ? "" : "s"} in ${topH.matches} game${topH.matches === 1 ? "" : "s"}.`);
+  if (topA) facts.push(`${away}'s ${topA.name} leads them with ${topA.value} goal${topA.value === 1 ? "" : "s"} in ${topA.matches} game${topA.matches === 1 ? "" : "s"}.`);
+  if (!facts.length) facts.push(`Both sides arrive via the knockout bracket; group goal-rates are the only hard data so far.`);
+
+  // 2. assumptions — what the model projects
+  const favName = fav.pick === "Draw" ? (lh >= la ? home : away) : fav.pick;
+  const dogName = favName === home ? away : home;
+  const assumptions = [
+    `Model projects ${favName} to carry more of the ball and the better chances (higher attack rating); ${dogName} to sit compact and play on the break.`,
+    `Goal expectancy ${lh.toFixed(1)}–${la.toFixed(1)} (${home}–${away}) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample.`,
+  ];
+
+  // 3. lineups
+  const lineups = lineupStatus === "confirmed"
+    ? "XIs confirmed — picks below are tuned to the actual starters."
+    : `XIs not yet confirmed${isKnockout ? " — but it's win-or-out, so expect both strongest available XI" : " — group rotation possible if a side is already through"}. Treat lineup-dependent props as provisional.`;
+
+  // 4. motivation
+  const motivation = isKnockout
+    ? `Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.`
+    : `Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.`;
+
+  // 5. style & xG read
+  const xgRead = lh > la + 0.25
+    ? `${home} shade the chance-creation (${lh.toFixed(1)} vs ${la.toFixed(1)} xG) — they should make the running.`
+    : la > lh + 0.25
+      ? `${away} shade the chance-creation (${la.toFixed(1)} vs ${lh.toFixed(1)} xG) — they should make the running.`
+      : `Chances project close (${lh.toFixed(1)}–${la.toFixed(1)} xG) — a true coin-flip for territory; small margins decide it.`;
+
+  // 6. draw risk
+  const drawRisk = totalXg < 2.3
+    ? `High. Low combined xG (${totalXg.toFixed(1)}) and a ${drawPct}% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.`
+    : drawPct >= 28
+      ? `Elevated — ${drawPct}% draw with goals on offer; a level game is very much in play.`
+      : `Moderate — ${drawPct}% modelled draw; not a stalemate profile, but never dismiss it in a knockout.`;
+
+  // 7. travel / climate
+  const travel = cityFactor(f.city).note;
+
+  // 8. case FOR / AGAINST the model's pick
+  const pickIsDraw = fav.pick === "Draw";
+  const caseFor = [];
+  const caseAgainst = [];
+  if (pickIsDraw) {
+    caseFor.push(`Tightest projection on the board — ${drawPct}% draw on low combined xG.`, `Knockout caution pulls both sides toward a level 90 minutes.`);
+    caseAgainst.push(`One moment of quality (set-piece, individual) breaks any draw.`, `Draw is the lowest-confidence headline call there is.`);
+  } else {
+    caseFor.push(`${favName} are the model's ${pct(fav.p)}% favourite — higher attack rating and the better recent goal-rate.`);
+    if ((favName === home ? topH : topA)) caseFor.push(`A genuine match-winner in ${(favName === home ? topH : topA).name} carrying the scoring load.`);
+    caseFor.push(cityFactor(f.city).kind === "mild" || cityFactor(f.city).kind === "neutral" ? `Neutral conditions let the better side's quality tell.` : `Conditions (${cityFactor(f.city).kind}) suit a controlled game ${favName} can manage.`);
+    caseAgainst.push(`${drawPct}% draw + ${dogName}'s deep block — a classic possession-favourite-vs-low-block out-xG trap.`);
+    caseAgainst.push(`Group goal-rates are a tiny sample; ${favName}'s number may be inflated by one result.`);
+    if (!isKnockout) caseAgainst.push(`Rotation/motivation risk if the table is already settled.`);
+  }
+
+  // 9 + 10. verdict + change-of-mind — "prefer Pass over a weak bet, never
+  // ignore the draw" (slide 3 rules). A live knockout draw or thin goals pulls a
+  // strong favourite down to a Lean, keeping all three brain layers coherent.
+  const drawLive = isKnockout && drawPct >= 23;
+  const verdict = fav.p < 0.45 || (pickIsDraw && drawPct < 30)
+    ? "Pass"
+    : fav.p >= 0.55 && totalXg >= 2.3 && !drawLive
+      ? "Bet"
+      : "Lean";
+  const changeMind = lineupStatus === "confirmed"
+    ? `An early goal flips the game state — the block either cracks open or locks shut.`
+    : `A confirmed XI resting ${favName === home ? (topH?.name ?? "a key starter") : (topA?.name ?? "a key starter")}, or news the underdog is missing a defensive linchpin.`;
+
+  return {
+    facts: facts.slice(0, 4),
+    assumptions,
+    lineups,
+    motivation,
+    xgRead,
+    drawRisk,
+    travel,
+    caseFor: caseFor.slice(0, 3),
+    caseAgainst: caseAgainst.slice(0, 3),
+    verdict,
+    changeMind,
+  };
+}
+
+/** Slide 4/6 — odds value check against real bookmaker prices. null if unpriced. */
+function buildValueSpot(f, ctx) {
+  const book = oddsBook[f.id];
+  if (!book || !book.h2h || !book.h2h.home || !book.h2h.draw || !book.h2h.away) return null;
+  const { ft, lh, la } = ctx;
+  const home = f.home.name, away = f.away.name;
+  const o = book.h2h;
+  // implied fractions + overround
+  const impH = 1 / o.home, impD = 1 / o.draw, impA = 1 / o.away;
+  const sum = impH + impD + impA;
+  const overroundPct = Math.round((sum - 1) * 1000) / 10;
+  const mk = (market, side, price, impFrac, modelP) => {
+    const fairFrac = impFrac / sum;
+    const edgePts = Math.round((modelP * 100 - fairFrac * 100) * 10) / 10;
+    const verdict = edgePts >= 1.5 ? "good" : edgePts <= -1.5 ? "bad" : "fair";
+    return { market, side, price: String(price), impliedPct: pct(impFrac), fairPct: pct(fairFrac), modelPct: pct(modelP), edgePts, verdict };
+  };
+  const legs = [
+    mk("Match result", home, o.home, impH, ft.pHome),
+    mk("Match result", "Draw", o.draw, impD, ft.pDraw),
+    mk("Match result", away, o.away, impA, ft.pAway),
+  ];
+  // totals leg if the book gave a ~2.5 line
+  const t = (book.totals || []).find((x) => Math.abs(x.line - 2.5) < 0.01);
+  if (t && t.over && t.under) {
+    const pOver = pOverTotal(lh, la, Math.ceil(t.line)); // ≥3 for the 2.5 line
+    const io = 1 / t.over, iu = 1 / t.under, s2 = io + iu;
+    const eo = Math.round((pOver * 100 - (io / s2) * 100) * 10) / 10;
+    const eu = Math.round(((1 - pOver) * 100 - (iu / s2) * 100) * 10) / 10;
+    const tv = (e) => (e >= 1.5 ? "good" : e <= -1.5 ? "bad" : "fair");
+    legs.push({ market: `Over ${t.line}`, side: `Over ${t.line}`, price: String(t.over), impliedPct: pct(io), fairPct: pct(io / s2), modelPct: pct(pOver), edgePts: eo, verdict: tv(eo) });
+    legs.push({ market: `Under ${t.line}`, side: `Under ${t.line}`, price: String(t.under), impliedPct: pct(iu), fairPct: pct(iu / s2), modelPct: pct(1 - pOver), edgePts: eu, verdict: tv(eu) });
+  }
+  const valued = legs.filter((l) => l.verdict === "good").sort((a, b) => b.edgePts - a.edgePts);
+  const bestSide = valued[0]?.side ?? null;
+  const fav = legs.slice(0, 3).reduce((m, l) => (l.modelPct > m.modelPct ? l : m));
+  const headline = bestSide
+    ? `${bestSide} is the one number with positive value (+${valued[0].edgePts} pts over fair). ${fav.verdict === "bad" ? `The favourite (${fav.side}) is a bad price — you'd overpay.` : ""}`.trim()
+    : `No positive-value side — the book has this priced efficiently (${overroundPct}% margin). ${fav.verdict === "bad" ? `Favourite ${fav.side} is a poor price.` : `Fair all round; nothing to beat.`}`;
+  return {
+    source: book.source || "book",
+    overroundPct,
+    legs,
+    bestSide,
+    headline,
+    capturedAt: book.capturedAt || new Date().toISOString(),
+  };
+}
+
+/** Slide 5/6 — talk-me-out-of-a-weak-bet filter on the model's headline pick. */
+function buildTrapDetector(f, ctx, valueSpot) {
+  const { ft, lh, la, fav, isKnockout, lineupStatus } = ctx;
+  const drawPct = pct(ft.pDraw), totalXg = lh + la;
+  const pickIsDraw = fav.pick === "Draw";
+  const favName = pickIsDraw ? null : fav.pick;
+  const tight = Math.abs(ft.pHome - ft.pAway) < 0.18;
+  // value on the pick, if priced
+  const pickLeg = valueSpot?.legs?.find((l) => l.market === "Match result" && l.side === fav.pick);
+  const overpaying = pickLeg ? pickLeg.verdict === "bad" : false;
+  // hot-streak: is the pick's top scorer's tally concentrated in one game?
+  const stPick = favName ? teamStats[norm(favName)] : null;
+  const topPick = stPick?.scorers?.[0];
+  const hotStreak = !!(topPick && topPick.value >= 3 && (topPick.matches ?? 3) <= 2);
+
+  const flags = [
+    {
+      name: "Favourite on reputation / at a poor price",
+      tripped: !pickIsDraw && (overpaying || (pickLeg && pickLeg.modelPct < pickLeg.impliedPct - 3)),
+      why: overpaying
+        ? `You're paying ${pickLeg.impliedPct}% for a ${pickLeg.modelPct}% thing — negative value on the favourite.`
+        : pickLeg
+          ? `Price broadly fair (${pickLeg.impliedPct}% implied vs ${pickLeg.modelPct}% model).`
+          : `Not priced — can't confirm the favourite is good value.`,
+    },
+    {
+      name: "Dead rubber / rotation risk",
+      tripped: !isKnockout,
+      why: isKnockout ? `Knockout — both name strongest XI, no rotation.` : `Group stage — qualification state could trigger rotation; check the table.`,
+    },
+    {
+      name: "Built on one result / a short hot streak",
+      tripped: hotStreak,
+      why: hotStreak
+        ? `${topPick.name}'s ${topPick.value} goals lean on ~1 big game — strip it and the attack looks ordinary.`
+        : `Scoring spread across games, not one rout — sample is thin but not a single-game mirage.`,
+    },
+    {
+      name: "Cagey knockout the market underrates",
+      tripped: isKnockout && totalXg < 2.5 && tight,
+      why: isKnockout && totalXg < 2.5 && tight
+        ? `Low combined xG (${totalXg.toFixed(1)}) + tight margin in a knockout — this is built for 1-0 / pens, not a comfortable win.`
+        : `Goals/margin profile doesn't scream stalemate.`,
+    },
+    {
+      name: "Lineups unconfirmed and the bet depends on them",
+      tripped: lineupStatus !== "confirmed",
+      why: lineupStatus === "confirmed" ? `XIs confirmed — no lineup risk.` : `XIs not out — any scorer/lineup-dependent angle is provisional.`,
+    },
+    {
+      // a knockout draw sends it to extra-time/pens and kills a 90-min win bet,
+      // so the bar to "respect the draw" is lower in knockouts than the group.
+      name: "Ignoring the draw",
+      tripped: !pickIsDraw && drawPct >= (isKnockout ? 23 : 28),
+      why: !pickIsDraw && drawPct >= (isKnockout ? 23 : 28)
+        ? `${drawPct}% draw is live${isKnockout ? " — and a level 90 then pens kills a straight win bet even if your side advances" : ""}.`
+        : pickIsDraw ? `The pick IS the draw — fully accounted for.` : `Draw chance (${drawPct}%) is low enough to discount.`,
+    },
+    {
+      name: "Emotional / a chase / just for action",
+      tripped: false,
+      why: `Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)`,
+    },
+  ];
+
+  const trapsTripped = flags.filter((x) => x.tripped).length;
+  // edge characterisation
+  let edge;
+  if (valueSpot?.bestSide === fav.pick) edge = "real edge";
+  else if (overpaying) edge = "narrative-leaning";
+  else if (!valueSpot) edge = pickIsDraw ? "narrative-leaning" : "edge-leaning";
+  else edge = "edge-leaning";
+  // verdict on the WIN pick
+  const drawTripped = flags.find((x) => x.name === "Ignoring the draw")?.tripped;
+  const pickValueGood = valueSpot?.bestSide === fav.pick;
+  let verdict;
+  if (trapsTripped >= 4 || (overpaying && trapsTripped >= 3)) verdict = "PASS";
+  else if (overpaying || trapsTripped >= 2 || pickIsDraw || (isKnockout && drawTripped && !pickValueGood)) verdict = "LEAN";
+  else verdict = "PLAYABLE";
+
+  const discipline = isKnockout
+    ? `Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few.`
+    : `Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow.`;
+
+  return { flags, trapsTripped, edge, verdict, discipline };
+}
+
 /** Reuse a team's most recent confirmed/probable XI from earlier predictions. */
 function lastKnownXI(name) {
   const want = norm(name);
@@ -322,6 +592,34 @@ function buildPrediction(f) {
   };
 }
 
+/**
+ * Attach The Brain (Pitch Report + Value Spot + TRAP Detector) to an existing
+ * prediction, IN PLACE. Strictly additive to a researched call: it reads the
+ * prediction's OWN headline `win.pick` and aligns the frameworks to it, so the
+ * three layers never contradict the call shown above them. The model only
+ * supplies the probabilities/xG the slides reason over.
+ */
+function attachBrain(f, pred) {
+  const rh = ratings(f.home.name);
+  const ra = ratings(f.away.name);
+  const lh = MU * rh.attack * ra.defence * HFA;
+  const la = MU * ra.attack * rh.defence / HFA;
+  const ft = scoreGrid(lh, la);
+  const home = f.home.name, away = f.away.name;
+  // align the frameworks' "pick" to the prediction's actual headline call
+  const pick = pred.win?.pick ?? (ft.pHome >= ft.pAway ? home : away);
+  const p = pick === home ? ft.pHome : pick === away ? ft.pAway : ft.pDraw;
+  const ctx = {
+    rh, ra, lh, la, ft,
+    fav: { pick, p },
+    isKnockout: Boolean(f.round),
+    lineupStatus: pred.lineups?.status ?? "unconfirmed",
+  };
+  pred.pitchReport = buildPitchReport(f, ctx);
+  pred.valueSpot = buildValueSpot(f, ctx);
+  pred.trapDetector = buildTrapDetector(f, ctx, pred.valueSpot);
+}
+
 // ── backtest: score the model against finished matches ──────────────────────
 if (BACKTEST) {
   let n = 0, resultHit = 0, scoreHit = 0;
@@ -358,26 +656,38 @@ for (const f of fixtures) {
   console.log(`  ✓ ${f.id.padEnd(22)} → ${pred.win.pick} ${pred.fullTime.score} (${pred.confidence})`);
 }
 
+// ── The Brain pass: enrich EVERY upcoming prediction (fresh + researched) ───
+let brained = 0;
+for (const f of fixtures) {
+  if (results[f.id]?.state === "finished") continue; // finished calls stay frozen
+  const pred = predictions[f.id];
+  if (!pred) continue;
+  attachBrain(f, pred);
+  brained++;
+}
+if (brained) console.log(`  🧠 brain attached to ${brained} upcoming prediction(s) (pitch · value · trap)`);
+
 predFile.predictions = predictions;
 predFile.meta = {
   ...predFile.meta,
   generatedAt: predFile.meta?.generatedAt, // preserve unless we write
   modelUpdatedAt: BACKTEST ? predFile.meta?.modelUpdatedAt : new Date().toISOString(),
   method:
-    "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
+    "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
 };
 
-if (skipped.length) console.log("  skipped:", skipped.join(", "));
+if (skipped.length) console.log("  skipped (kept):", skipped.join(", "));
 
+const touched = changed + brained;
 if (CHECK_ONLY) {
-  console.log(changed ? `predictions.json WOULD CHANGE (${changed} matches).` : "predictions.json clean.");
-  process.exit(changed ? 2 : 0);
+  console.log(touched ? `predictions.json WOULD CHANGE (${changed} model, ${brained} brain).` : "predictions.json clean.");
+  process.exit(touched ? 2 : 0);
 }
 
-if (changed) {
+if (touched) {
   predFile.meta.generatedAt = new Date().toISOString();
   writeFileSync(P("predictions.json"), JSON.stringify(predFile, null, 2) + "\n");
-  console.log(`\nWrote ${changed} model predictions to data/predictions.json`);
+  console.log(`\nWrote ${changed} fresh model prediction(s) + brain on ${brained} upcoming → data/predictions.json`);
 } else {
   console.log("No upcoming matches needed a prediction.");
 }

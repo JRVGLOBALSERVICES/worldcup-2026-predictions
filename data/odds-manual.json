@@ -1,0 +1,11 @@
+{
+  "_note": "Hand-captured real bookmaker prices, merged by scripts/build-odds.mjs as a fallback when the live 1xBet LineFeed pull is geo-blocked. Each entry keeps its honest `source`. A fresh live 1xBet price always overrides the matching manual entry. Decimal odds. h2h is home/draw/away in the SAME orientation as data/fixtures.json (home team first).",
+  "odds": {
+    "rsa-can-2026-06-28": {
+      "source": "FanDuel",
+      "h2h": { "home": 5.60, "draw": 3.60, "away": 1.69 },
+      "note": "South Africa (home) / Draw / Canada (away). Cross-check: Canada matched 1.71 on Rj's own 1xBet slip — same read.",
+      "capturedAt": "2026-06-28T18:55:00.000Z"
+    }
+  }
+}

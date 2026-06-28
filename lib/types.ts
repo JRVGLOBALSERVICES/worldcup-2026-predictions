@@ -26,6 +26,62 @@ export type Pick = { player: string; fairOdds: string; banker: boolean; note: st
 export type LineupPlayer = { num: number | null; name: string; pos: string };
 export type LineupXI = { formation: string; players: LineupPlayer[] };
 
+// ── The Brain — three reasoning layers baked onto each prediction ──────────────
+// Distilled from thelocktalk's framework deck: analyse the match (Pitch Report),
+// price the market against the model (Value Spot), then filter for weak bets
+// (TRAP Detector). All three are computed deterministically by
+// scripts/build-predictions.mjs so the page reads like a disciplined tipster,
+// not a probability dump.
+
+/** Pitch Report — the 10-point structured read (slide 3/6). */
+export type PitchReport = {
+  facts: string[];        // verifiable, from standings/results/stats
+  assumptions: string[];  // what the model is projecting
+  lineups: string;        // status + rotation risk
+  motivation: string;     // must-win / dead-rubber / cautious-knockout read
+  xgRead: string;         // who creates the better chances (λ home–away)
+  drawRisk: string;       // how cagey / low-scoring
+  travel: string;         // host-city heat / altitude / kickoff factor
+  caseFor: string[];      // max 3 for the model's pick
+  caseAgainst: string[];  // max 3 against it
+  verdict: "Bet" | "Lean" | "Pass";
+  changeMind: string;     // what would flip the call
+};
+
+/** One market priced against the model. */
+export type ValueLeg = {
+  market: string;         // "Match result", "Over/Under 2.5", …
+  side: string;           // "Canada", "Draw", "Over 2.5"
+  price: string;          // decimal odds as shown by the book
+  impliedPct: number;     // 100/price
+  fairPct: number;        // margin-stripped
+  modelPct: number;       // the engine's own estimate
+  edgePts: number;        // model − fair (positive = value)
+  verdict: "good" | "fair" | "bad";
+};
+
+/** Value Spot — odds value check (slide 4/6). null when no market is captured. */
+export type ValueSpot = {
+  source: string;         // "1xBet" | "FanDuel" | …
+  overroundPct: number;   // book margin on the 3-way
+  legs: ValueLeg[];
+  bestSide: string | null;   // the one genuine value side, or null
+  headline: string;       // one-line verdict on the price
+  capturedAt: string;
+};
+
+/** One trap flag (slide 5/6). */
+export type TrapFlag = { name: string; tripped: boolean; why: string };
+
+/** TRAP Detector — talk-me-out-of-a-weak-bet filter (slide 5/6). */
+export type TrapDetector = {
+  flags: TrapFlag[];
+  trapsTripped: number;
+  edge: "real edge" | "edge-leaning" | "narrative-leaning" | "pure narrative";
+  verdict: "PLAYABLE" | "LEAN" | "PASS";
+  discipline: string;     // one sentence of tournament discipline
+};
+
 export type Prediction = {
   win: { pick: string; fairOdds: string; reason: string; strength?: number };
   halfTime: { score: string; fairOdds: string; alt: string; altOdds: string; strength?: number };
@@ -45,6 +101,10 @@ export type Prediction = {
   confidence: "high" | "medium" | "low";
   /** Overall 1–5 conviction in the headline call. Optional; derived from the win pick when absent. */
   strength?: number;
+  /** The Brain — analyse → price → trap-filter. Optional; present on upcoming model calls. */
+  pitchReport?: PitchReport;
+  valueSpot?: ValueSpot | null;
+  trapDetector?: TrapDetector;
   sources: string[];
 };
 

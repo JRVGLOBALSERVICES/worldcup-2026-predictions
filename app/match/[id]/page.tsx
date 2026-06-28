@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { fixtures, getFixture, getPrediction, getResearch, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
+import { BrainPanel } from "@/components/BrainPanel";
 import { MatchTeamStats } from "@/components/MatchTeamStats";
 import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
@@ -98,6 +99,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       {pred && (
         <div className="mt-8">
           <VerdictBlock fixture={fixture} pred={pred} />
+        </div>
+      )}
+
+      {pred?.pitchReport && (
+        <div className="mt-8">
+          <BrainPanel pred={pred} />
         </div>
       )}
 

@@ -3,6 +3,7 @@ import type { Fixture } from "@/lib/types";
 import { mytTime, etTime, getPrediction, overallStrength } from "@/lib/data";
 import { LiveScore, LiveStatusLine } from "./LiveScore";
 import { StrengthMeter, StatusBadge } from "./atoms";
+import { BrainVerdictChip } from "./BrainPanel";
 
 export function MatchCard({ fixture }: { fixture: Fixture }) {
   const pred = getPrediction(fixture.id);
@@ -47,6 +48,7 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
       <div className="mt-4 flex items-center justify-between border-t border-line/70 pt-3 text-[0.72rem]">
         <LiveStatusLine matchId={fixture.id} kickoffUTC={fixture.kickoffUTC} />
         <div className="flex items-center gap-2">
+          {pred && <BrainVerdictChip pred={pred} />}
           {pred && <StatusBadge status={pred.lineups.status} />}
           <span className="tnum font-mono text-faint">{etTime(fixture.kickoffUTC)} ET</span>
         </div>

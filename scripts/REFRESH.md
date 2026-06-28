@@ -12,8 +12,31 @@ proper scoreline / scorers / 1X2 call.
 
 ```
 node scripts/build-results.mjs && node scripts/build-standings.mjs && \
-node scripts/build-stats.mjs && node scripts/build-predictions.mjs
+node scripts/build-stats.mjs && node scripts/build-odds.mjs && \
+node scripts/build-predictions.mjs
 ```
+
+`build-odds.mjs` pulls real bookmaker prices into `data/odds.json` (powers the
+Value Spot). It hits 1xBet's open LineFeed API (`Get1x2_VZip`) — **no auth, the
+only gate is geography**: the feed 302→/block any US-flagged egress, which this
+VPS is. So it is FAIL-SOFT: on a geo-block it writes nothing new, logs the
+reason, exits 0 (the chain never breaks). To turn the live 1xBet pull on, give
+it a non-US egress via env before the call:
+  • `ONEXBET_BASE`  — a 1xBet base reachable from a MY/SG/etc. IP, or
+  • `HTTPS_PROXY`   — a CONNECT proxy in a 1xBet-allowed geo.
+Meanwhile `data/odds-manual.json` (hand-captured real prices, honest `source`
+label per entry) fills any fixture the live pull didn't — a live 1xBet price
+always overrides the manual one.
+
+### The Brain (per-match, deterministic — added 2026-06-28)
+
+`build-predictions.mjs` now also attaches **The Brain** to every upcoming call
+(thelocktalk framework deck): a **Pitch Report** (10-point structured read), a
+**Value Spot** (model vs the real `odds.json` price — implied → fair → edge), and
+a **TRAP Detector** (7-flag weak-bet filter → PLAYABLE / LEAN / PASS). Strictly
+additive: it aligns each layer to the prediction's own `win.pick`, so a
+hand-researched call keeps its headline and just gains the three layers. Rendered
+by `components/BrainPanel.tsx` on every `/match/[id]`.
 
 The model (bivariate Poisson) reads `standings.json` (group GF/GA/pts/form),
 `results.json` (goal baseline) and `stats.json` (real per-team scorers) →
