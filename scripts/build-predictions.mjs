@@ -211,7 +211,11 @@ function strengthFromProb(p, scorer = false) {
   }
   if (p >= 0.60) return 5; if (p >= 0.50) return 4; if (p >= 0.42) return 3; if (p >= 0.36) return 2; return 1;
 }
-function confidenceFromProb(p) { return p >= 0.50 ? "high" : p >= 0.40 ? "medium" : "low"; }
+// Rj's standing call: every pick reads "medium" — never high/low (see commit
+// 1a4946e). The granular conviction the model computes is surfaced through the
+// 1–5 strength meter instead, so confidence stays a flat, honest "medium".
+// eslint-disable-next-line no-unused-vars
+function confidenceFromProb(p) { return "medium"; }
 
 /** Reuse a team's most recent confirmed/probable XI from earlier predictions. */
 function lastKnownXI(name) {

@@ -106,7 +106,7 @@ export default function Home() {
       </section>
 
       <h2 className="mb-4 mt-14 font-display text-sm font-bold uppercase tracking-[0.18em] text-faint">
-        Full group-stage schedule
+        Full tournament schedule
       </h2>
       <div className="space-y-5">
         {upcoming.map((d) => {

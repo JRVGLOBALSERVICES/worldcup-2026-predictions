@@ -26,7 +26,7 @@ export async function generateMetadata({
   const title = `${f.home.name} vs ${f.away.name} prediction`;
   const desc = pred
     ? `${f.home.name} vs ${f.away.name}: ${pred.win.pick} to win, ${pred.fullTime.score}. Scorers, assists & penalty taker — ${mytTime(f.kickoffUTC)} MYT.`
-    : `${f.home.name} vs ${f.away.name} — World Cup 2026 Group ${f.group}, ${mytTime(f.kickoffUTC)} MYT. Prediction coming soon.`;
+    : `${f.home.name} vs ${f.away.name} — World Cup 2026 ${f.round ?? `Group ${f.group}`}, ${mytTime(f.kickoffUTC)} MYT. Prediction coming soon.`;
   return { title, description: desc, openGraph: { title, description: desc } };
 }
 
@@ -70,7 +70,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       <header className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-8">
         <div className="mb-5 flex items-center justify-between font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint">
           <span>
-            Group {fixture.group} · {fixture.venue}, {fixture.city}
+            {fixture.round ?? `Group ${fixture.group}`} · {fixture.venue}, {fixture.city}
           </span>
           <span>{mytDayLabel(fixture.kickoffUTC)}</span>
         </div>

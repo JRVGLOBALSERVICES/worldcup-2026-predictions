@@ -99,6 +99,7 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
       home: { name: f?.home.name ?? "?", flag: f?.home.flag ?? "", code: f ? code(f.home.name) : "?" },
       away: { name: f?.away.name ?? "?", flag: f?.away.flag ?? "", code: f ? code(f.away.name) : "?" },
       group: f?.group ?? "—",
+      round: f?.round,
       kickoffUTC: f?.kickoffUTC ?? "",
       kickoffLabel: f ? `${mytTime(f.kickoffUTC)} MYT (${etTime(f.kickoffUTC)} ET)` : "Time TBC",
       staticResult: g.result,

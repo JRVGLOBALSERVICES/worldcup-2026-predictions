@@ -14,7 +14,7 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
     >
       <div className="mb-3 flex items-center justify-between text-[0.7rem] text-faint">
         <span className="font-mono uppercase tracking-[0.18em]">
-          Group {fixture.group} · {fixture.city}
+          {fixture.round ?? `Group ${fixture.group}`} · {fixture.city}
         </span>
         <span className="tnum font-mono">
           {mytTime(fixture.kickoffUTC)} <span className="text-acid-dim">MYT</span>

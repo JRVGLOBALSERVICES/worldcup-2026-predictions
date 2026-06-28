@@ -41,6 +41,7 @@ export type MatchRow = {
   home: { name: string; flag: string; code: string };
   away: { name: string; flag: string; code: string };
   group: string;
+  round?: string;
   kickoffUTC: string;
   kickoffLabel: string; // "21:00 MYT (9:00 PM ET)"
   staticResult: { ht: { home: number; away: number } | null; ft: { home: number; away: number } | null };
@@ -747,7 +748,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                               <span className="font-display text-lg font-extrabold uppercase tracking-tight">{m.away.name} {m.away.flag}</span>
                             </div>
                             <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                              Group {m.group} · {m.kickoffLabel}
+                              {m.round ?? `Group ${m.group}`} · {m.kickoffLabel}
                             </p>
                             {m.form && (
                               <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">

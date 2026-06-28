@@ -3,6 +3,9 @@ export type Team = { name: string; flag: string };
 export type Fixture = {
   id: string;
   group: string;
+  // Knockout ties carry a round label ("Round of 32", "Quarter-final", …) and an
+  // empty `group`; group-stage fixtures leave `round` undefined.
+  round?: string;
   home: Team;
   away: Team;
   venue: string;
