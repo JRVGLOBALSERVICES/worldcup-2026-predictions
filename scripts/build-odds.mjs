@@ -28,7 +28,7 @@
  *   node scripts/build-odds.mjs            # fetch + merge + write data/odds.json
  *   node scripts/build-odds.mjs --check    # report only (exit 2 if it would change)
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -126,6 +126,59 @@ function parseEvent(ev) {
   return { home, draw, away, totals: tArr };
 }
 
+/** Match a LineFeed `Value` event array against our fixtures and write odds. */
+function ingestEvents(events, stamp, sourceLabel = "1xBet") {
+  let matched = 0;
+  for (const ev of events) {
+    const h = norm(ev.O1 || ev.HomeTeam), a = norm(ev.O2 || ev.AwayTeam);
+    const fx = fixByTeams.get(`${h}|${a}`);
+    if (!fx) continue;
+    // kickoff sanity: 1xBet S is a unix-seconds start; keep if within 36h of ours
+    if (ev.S && fx.kickoffUTC) {
+      const dh = Math.abs(ev.S * 1000 - new Date(fx.kickoffUTC).getTime()) / 3.6e6;
+      if (dh > 36) continue;
+    }
+    const flipped = norm(ev.O1) === norm(fx.away?.name); // 1xBet listed sides reversed
+    const p = parseEvent(ev);
+    const h2h = flipped
+      ? { home: p.away, draw: p.draw, away: p.home }
+      : { home: p.home, draw: p.draw, away: p.away };
+    if (!h2h.home || !h2h.draw || !h2h.away) continue;
+    odds[fx.id] = {
+      source: sourceLabel,
+      h2h: { home: round(h2h.home), draw: round(h2h.draw), away: round(h2h.away) },
+      ...(p.totals.length ? { totals: p.totals.map((t) => ({ ...t, over: round(t.over), under: round(t.under) })) } : {}),
+      capturedAt: stamp,
+    };
+    matched++;
+  }
+  return matched;
+}
+
+/**
+ * Raw-file pull — ingest a LineFeed Get1x2_VZip response Taildropped from an
+ * allowed-geo machine (Rj's Malaysia desktop). The PC does the ONE geo-unblocked
+ * fetch and `tailscale file cp`s the raw JSON here; the VPS does all parsing.
+ * Path via env ONEXBET_RAW_FILE, default /root/blender-incoming/onexbet-raw.json.
+ * Honoured only if the file is fresh (mtime within ONEXBET_RAW_MAX_AGE_H, def 12h).
+ */
+function rawFilePull() {
+  const file = process.env.ONEXBET_RAW_FILE || "/root/blender-incoming/onexbet-raw.json";
+  if (!existsSync(file)) return { ok: false, reason: "no raw file", count: 0 };
+  let stat, data;
+  try {
+    stat = statSync(file);
+    data = JSON.parse(readFileSync(file, "utf8"));
+  } catch (e) { return { ok: false, reason: `raw file unreadable: ${e.message}`, count: 0 }; }
+  const maxAgeH = Number(process.env.ONEXBET_RAW_MAX_AGE_H || 12);
+  const ageH = (Date.now() - stat.mtimeMs) / 3.6e6;
+  if (ageH > maxAgeH) return { ok: false, reason: `raw file stale (${ageH.toFixed(1)}h > ${maxAgeH}h)`, count: 0 };
+  const events = data?.Value || data?.value || [];
+  if (!events.length) return { ok: false, reason: "raw file has no events", count: 0 };
+  const matched = ingestEvents(events, new Date(stat.mtimeMs).toISOString(), "1xBet (PC)");
+  return { ok: true, count: matched, ageH };
+}
+
 async function livePull() {
   // sports=1 → soccer; champ filter omitted so the WC champ events come through.
   const url = `${BASE}/LineFeed/Get1x2_VZip?sports=1&count=600&lng=en&mode=4&country=1&partner=51&getEmpty=true&virtualSports=false`;
@@ -172,7 +225,7 @@ function mergeManual() {
     if (!val || !val.h2h) continue;
     // live 1xBet pull wins; manual fills only the gaps (or refreshes a stale manual entry)
     const existing = odds[id];
-    if (existing && existing.source === "1xBet" && existing.capturedAt) continue;
+    if (existing && /^1xBet/.test(existing.source || "") && existing.capturedAt) continue;
     odds[id] = { source: val.source || "manual", h2h: val.h2h, ...(val.totals ? { totals: val.totals } : {}), capturedAt: val.capturedAt || new Date().toISOString() };
     n++;
   }
@@ -180,9 +233,17 @@ function mergeManual() {
 }
 
 // ── run ──────────────────────────────────────────────────────────────────────
+// Raw-file pull first — the authoritative real source: Rj's Malaysia desktop
+// runs headless Chromium against the 1xBet lite mirror (anti-bot passed by the
+// SPA), captures the WC2026 champ Get1x2_VZip feed, and Taildrops the raw JSON
+// here. The VPS itself is US-geo-blocked, so livePull() below is kept only as a
+// fail-soft path for runs from an allowed geo.
+const raw = rawFilePull();
+if (raw.ok) console.log(`  raw file (PC, Malaysia): matched ${raw.count} fixture(s) [${raw.ageH.toFixed(1)}h old]`);
+else console.log(`  raw file: skipped — ${raw.reason}`);
 const live = await livePull();
 if (live.ok) console.log(`  live 1xBet: matched ${live.count} fixture(s)`);
-else console.log(`  live 1xBet: unreachable — ${live.reason} (fail-soft; using cached + manual)`);
+else console.log(`  live 1xBet: unreachable — ${live.reason} (fail-soft; using raw + cached + manual)`);
 const seeded = mergeManual();
 if (seeded) console.log(`  manual seed: filled ${seeded} fixture(s)`);
 
