@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-28T15:20:27.326Z",
+    "generatedAt": "2026-06-28T19:20:21.243Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 56
   },
@@ -572,18 +572,18 @@
       },
       {
         "rank": 9,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 61.9,
-        "display": "61.9%",
-        "matches": 2
-      },
-      {
-        "rank": 10,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 61.2,
         "display": "61.2%",
+        "matches": 2
+      },
+      {
+        "rank": 10,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 60.3,
+        "display": "60.3%",
         "matches": 2
       }
     ],
@@ -883,7 +883,15 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 52.4,
+        "display": "52.4%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -891,7 +899,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 51.5,
@@ -899,17 +907,9 @@
         "matches": 2
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 51.2,
-        "display": "51.2%",
-        "matches": 3
-      },
-      {
-        "rank": 9,
-        "team": "France",
-        "flag": "🇫🇷",
         "value": 51.2,
         "display": "51.2%",
         "matches": 3
@@ -5607,6 +5607,40 @@
             "totalCrosses": 25,
             "accurateLongBalls": 20,
             "totalLongBalls": 36
+          }
+        ]
+      },
+      "760486": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "South Africa",
+            "possessionPct": 65,
+            "accuratePasses": 118,
+            "totalPasses": 139,
+            "shotsOnTarget": 1,
+            "totalShots": 1,
+            "effectiveTackles": 2,
+            "totalTackles": 6,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 9,
+            "totalLongBalls": 19
+          },
+          {
+            "team": "Canada",
+            "possessionPct": 35,
+            "accuratePasses": 53,
+            "totalPasses": 70,
+            "shotsOnTarget": 0,
+            "totalShots": 2,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 3,
+            "totalLongBalls": 4
           }
         ]
       }
