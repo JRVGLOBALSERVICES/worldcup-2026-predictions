@@ -9848,6 +9848,62 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83689086939",
+      "slipNo": "83689086939",
+      "matchId": "rsa-can-2026-06-28",
+      "player": "—",
+      "market": "Acca · 8 legs",
+      "label": "Acca — Canada beat South Africa + Brazil beat Japan + Germany beat Paraguay + Netherlands beat Morocco + France beat Sweden + England beat DR Congo + Senegal beat Belgium + Spain beat Austria (8 legs)",
+      "odds": 78.734,
+      "stake": 50,
+      "placedAt": "28/06 15:02",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "rsa-can-2026-06-28",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "bra-jpn-2026-06-29",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "ger-par-2026-06-29",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "ned-mar-2026-06-30",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "result",
+            "outcome": "1"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
