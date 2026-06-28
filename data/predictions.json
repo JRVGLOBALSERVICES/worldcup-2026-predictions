@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-27T23:24:44.309Z",
+    "generatedAt": "2026-06-28T01:24:24.080Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-27T09:09:33.875Z"
@@ -11275,135 +11275,149 @@
     },
     "alg-aus-2026-06-27": {
       "win": {
-        "pick": "Austria",
-        "fairOdds": "2.17",
-        "reason": "Model: Austria to win at 46% (Algeria 30% / draw 24% / Austria 46%). Expected goals 1.3–1.7 from group-stage attack/defence rates (Algeria 1.2 for / 1.7 against per game, Austria 1.5 / 1.5). Most likely score 1-1.",
+        "pick": "Draw",
+        "fairOdds": "3.10",
+        "reason": "Both sides sit on 3 points and a draw likely sends each through (Austria 2nd on goal difference, Algeria as a best third-placed side), which removes urgency and pushes toward a cagey game; Austria's Seiwald-X.Schlager double pivot plus Alaba/Lienhart is built to absorb, while Algeria's flair through Mahrez, Aouar and Gouiri can be neutralised by a deep block. With Algeria fielding backup keeper Benbot and neither team strictly needing to chase, the most probable single outcome is a low-scoring stalemate rather than a clear winner.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "3.71",
+        "fairOdds": "2.30",
         "alt": "1-0",
-        "altOdds": "5.05"
+        "altOdds": "5.00"
       },
       "htft": {
-        "pick": "Draw/Austria",
-        "fairOdds": "5.43"
+        "pick": "Draw/Draw",
+        "fairOdds": "5.50"
       },
       "fullTime": {
         "score": "1-1",
-        "fairOdds": "9.00"
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
-          "player": "Marko Arnautovic",
-          "team": "Austria",
-          "fairOdds": "2.15",
-          "banker": true,
-          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG.",
-          "strength": 4
-        },
-        {
-          "player": "Romano Schmid",
-          "team": "Austria",
-          "fairOdds": "2.15",
-          "banker": false,
-          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG.",
-          "strength": 4
-        },
-        {
           "player": "Amine Gouiri",
           "team": "Algeria",
-          "fairOdds": "2.58",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "1 goal in 1 group game; 39% modelled anytime chance on 1.3 team xG.",
+          "note": "Algeria's lead striker and the man who scored the late winner vs Jordan; sharp on second balls and from corners, the most likely Algerian goal threat with Amoura injured.",
           "strength": 3
         },
         {
-          "player": "Nadhir Benbouali",
+          "player": "Riyad Mahrez",
           "team": "Algeria",
-          "fairOdds": "2.58",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "1 goal in 1 group game; 39% modelled anytime chance on 1.3 team xG.",
+          "note": "Captain and primary set-piece/corner taker; his inswinging deliveries created both Algeria goals vs Jordan and he carries the penalty/free-kick threat from the right.",
           "strength": 3
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "team": "Austria",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Austria's most complete midfielder and the free-kick/corner taker; arrives late into the box and is the secondary penalty option behind Arnautovic.",
+          "strength": 3
+        },
+        {
+          "player": "Marko Arnautovic",
+          "team": "Austria",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Record scorer and lone striker, first-choice penalty taker, but he is 37 and a rotational/fading presence — a genuine threat from the spot or a set-piece, NOT a banker anytime scorer.",
+          "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Xaver Schlager",
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Algeria's chief creator and dead-ball supplier; his corners/free kicks are the most direct assist route given Algeria's reliance on set pieces."
+        },
+        {
+          "player": "Houssem Aouar",
+          "team": "Algeria",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Central creator in the 4-3-3, threads the final ball between the lines and links Mahrez and Gouiri; Algeria's open-play creativity runs through him."
+        },
+        {
+          "player": "David Alaba",
           "team": "Austria",
-          "fairOdds": "1.84",
-          "banker": true,
-          "note": "1 assist in the group stage; 54% modelled chance to set one up."
+          "fairOdds": "6.00",
+          "banker": false,
+          "note": "Shares corner duties and steps out from centre-back to deliver set pieces; Austria's aerial goal threat (Lienhart, Arnautovic) often originates from his deliveries."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Marko Arnautovic",
-        "backup": "Romano Schmid",
-        "note": "Tight model margin (16 pts) raises the odds a spot-kick decides it; Marko Arnautovic is Austria's group-stage top scorer and likely taker."
+        "taker": "Riyad Mahrez",
+        "backup": "Amine Gouiri",
+        "note": "Penalty likelihood medium in a tight knockout-stakes game. Mahrez is Algeria's captain and primary dead-ball man; for Austria the spot-kick would fall to Arnautovic, then Sabitzer."
       },
       "lineups": {
-        "home": "Luca Zidane, Ramy Bensebaini, Aïssa Mandi, Rayan Aït-Nouri, Rafik Belghali, Ibrahim Maza, Ramiz Zerrouki, Hicham Boudaoui, Amine Gouiri, Farès Chaïbi, Riyad Mahrez",
-        "away": "Alexander Schlager, David Alaba, Kevin Danso, Konrad Laimer, Stefan Posch, Paul Wanner, Xaver Schlager, Nicolas Seiwald, Michael Gregoritsch, Marcel Sabitzer, Romano Schmid",
-        "status": "unconfirmed",
+        "home": "Oussama Benbot, Rafik Belghali, Aïssa Mandi, Ramy Bensebaini, Jaouen Hadjam, Ibrahim Maza, Nabil Bentaleb, Houssem Aouar, Riyad Mahrez, Amine Gouiri, Farès Chaïbi",
+        "away": "Alexander Schlager, Stefan Posch, Philipp Lienhart, David Alaba, Phillipp Mwene, Nicolas Seiwald, Xaver Schlager, Romano Schmid, Konrad Laimer, Marcel Sabitzer, Marko Arnautovic",
+        "status": "confirmed",
         "homeXI": {
-          "formation": "4-2-3-1",
+          "formation": "4-3-3",
           "players": [
             {
-              "num": 23,
-              "name": "Luca Zidane",
+              "num": null,
+              "name": "Oussama Benbot",
               "pos": "G"
             },
             {
-              "num": 21,
-              "name": "Ramy Bensebaini",
-              "pos": "CD-L"
-            },
-            {
-              "num": 2,
-              "name": "Aïssa Mandi",
-              "pos": "CD-R"
-            },
-            {
-              "num": 15,
-              "name": "Rayan Aït-Nouri",
-              "pos": "LB"
-            },
-            {
-              "num": 17,
+              "num": null,
               "name": "Rafik Belghali",
               "pos": "RB"
             },
             {
-              "num": 22,
+              "num": null,
+              "name": "Aïssa Mandi",
+              "pos": "CB"
+            },
+            {
+              "num": null,
+              "name": "Ramy Bensebaini",
+              "pos": "CB"
+            },
+            {
+              "num": null,
+              "name": "Jaouen Hadjam",
+              "pos": "LB"
+            },
+            {
+              "num": null,
               "name": "Ibrahim Maza",
-              "pos": "AM"
+              "pos": "CM"
             },
             {
-              "num": 6,
-              "name": "Ramiz Zerrouki",
-              "pos": "LM"
+              "num": null,
+              "name": "Nabil Bentaleb",
+              "pos": "CM"
             },
             {
-              "num": 14,
-              "name": "Hicham Boudaoui",
-              "pos": "RM"
+              "num": null,
+              "name": "Houssem Aouar",
+              "pos": "CM"
             },
             {
-              "num": 9,
+              "num": null,
+              "name": "Riyad Mahrez",
+              "pos": "RW"
+            },
+            {
+              "num": null,
               "name": "Amine Gouiri",
               "pos": "F"
             },
             {
-              "num": 10,
+              "num": null,
               "name": "Farès Chaïbi",
-              "pos": "AM-L"
-            },
-            {
-              "num": 7,
-              "name": "Riyad Mahrez",
-              "pos": "AM-R"
+              "pos": "LW"
             }
           ]
         },
@@ -11411,86 +11425,104 @@
           "formation": "4-2-3-1",
           "players": [
             {
-              "num": 1,
+              "num": null,
               "name": "Alexander Schlager",
               "pos": "G"
             },
             {
-              "num": 8,
-              "name": "David Alaba",
-              "pos": "CD-L"
-            },
-            {
-              "num": 3,
-              "name": "Kevin Danso",
-              "pos": "CD-R"
-            },
-            {
-              "num": 20,
-              "name": "Konrad Laimer",
-              "pos": "LB"
-            },
-            {
-              "num": 5,
+              "num": null,
               "name": "Stefan Posch",
               "pos": "RB"
             },
             {
-              "num": 24,
-              "name": "Paul Wanner",
-              "pos": "AM"
+              "num": null,
+              "name": "Philipp Lienhart",
+              "pos": "CB"
             },
             {
-              "num": 4,
-              "name": "Xaver Schlager",
-              "pos": "LM"
+              "num": null,
+              "name": "David Alaba",
+              "pos": "CB"
             },
             {
-              "num": 6,
+              "num": null,
+              "name": "Phillipp Mwene",
+              "pos": "LB"
+            },
+            {
+              "num": null,
               "name": "Nicolas Seiwald",
+              "pos": "DM"
+            },
+            {
+              "num": null,
+              "name": "Xaver Schlager",
+              "pos": "DM"
+            },
+            {
+              "num": null,
+              "name": "Romano Schmid",
               "pos": "RM"
             },
             {
-              "num": 11,
-              "name": "Michael Gregoritsch",
-              "pos": "F"
+              "num": null,
+              "name": "Konrad Laimer",
+              "pos": "AM"
             },
             {
-              "num": 9,
+              "num": null,
               "name": "Marcel Sabitzer",
-              "pos": "AM-L"
+              "pos": "LM"
             },
             {
-              "num": 18,
-              "name": "Romano Schmid",
-              "pos": "AM-R"
+              "num": null,
+              "name": "Marko Arnautovic",
+              "pos": "F"
             }
           ]
         }
       },
       "playerNotes": [
         {
+          "player": "Oussama Benbot",
+          "team": "Algeria",
+          "note": "Backup keeper given the start as Algeria rotate with one eye on the draw scenario; less proven than the first-choice, a slight downgrade behind an experienced Mandi-Bensebaini pairing."
+        },
+        {
+          "player": "Amine Gouiri",
+          "team": "Algeria",
+          "note": "In form — scored the 82nd-minute winner vs Jordan and leads the line with Amoura injured; thrives on cut-backs and corner scraps."
+        },
+        {
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "note": "Captain, right wing, and set-piece engine; his inswinging corners directly created both goals vs Jordan and he is the main creative and dead-ball threat."
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "team": "Austria",
+          "note": "The fulcrum of Austria's midfield and free-kick/corner taker; technically the most complete player in the side and a late-arriving goal threat."
+        },
+        {
           "player": "Marko Arnautovic",
           "team": "Austria",
-          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG."
+          "note": "37-year-old record scorer (47 goals) and first-choice penalty taker, but a fading lone striker isolated against Mandi/Bensebaini — capable but rotational, NOT a banker."
         },
         {
-          "player": "Romano Schmid",
+          "player": "Konrad Laimer",
           "team": "Austria",
-          "note": "1 goal in 1 group game; 47% modelled anytime chance on 1.7 team xG."
-        },
-        {
-          "player": "Xaver Schlager",
-          "team": "Austria",
-          "note": "1 assist in the group stage; 54% modelled chance to set one up."
+          "note": "The engine of Rangnick's press, covers huge ground and sets tempo; his energy will try to choke Aouar and Bentaleb in central midfield."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J",
+        "https://www.rotowire.com/soccer/article/algeria-vs-austria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119778",
+        "https://www.oddschecker.com/insight/football/20260628-algeria-vs-austria-confirmed-lineups",
+        "https://bulinews.com/world-cup-several-bundesliga-stars-action-austria-and-algeria-lock-horns",
+        "https://allaboutfpl.com/2026/06/fifa-world-cup-2026-penalty-and-set-piece-takers-of-all-48-teams/",
+        "https://www.espn.com/soccer/story/_/id/49154542/why-algeria-austria-2026-world-cup-biggest-grudge-match-west-germany-1982-disgrace-gijon"
       ]
     },
     "jor-arg-2026-06-27": {
