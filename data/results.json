@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T21:20:16.000Z",
+    "generatedAt": "2026-06-29T22:20:20.526Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 54,
     "live": 1
@@ -7285,12 +7285,15 @@
     },
     "ger-par-2026-06-29": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "advanced": null,
@@ -7302,26 +7305,41 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Kai Havertz",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Andrés Cubas",
+          "minute": 64,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-29T20:30:00.000Z",
       "stats": {
         "corners": {
-          "home": 6,
-          "away": 2
+          "home": 9,
+          "away": 3
         },
         "sot": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 4
         },
         "shots": {
-          "home": 5,
-          "away": 3
+          "home": 11,
+          "away": 6
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -7329,31 +7347,33 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             6,
-            0
+            3
           ],
           "away": [
             2,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
-            1,
-            0
+            0,
+            1
           ],
           "away": [
             1,
-            0
+            2
           ]
         },
         "playerSot": {
           "Júnior Alonso": 1,
-          "Joshua Kimmich": 1
+          "Julio Enciso": 1,
+          "Gustavo Caballero": 1,
+          "Kai Havertz": 1
         },
         "firstGoalMethod": "header",
         "firstPenalty": null,
@@ -7365,6 +7385,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Offside",
             "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 73,
+            "firstActionType": "Offside",
+            "firstActionMinute": 77,
             "isCorner": false,
             "reliable": true
           }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T21:20:20.052Z",
+    "generatedAt": "2026-06-29T22:20:25.255Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 58
   },
@@ -492,8 +492,8 @@
         "rank": 9,
         "team": "Germany",
         "flag": "🇩🇪",
-        "value": 88.5,
-        "display": "88.5%",
+        "value": 88.8,
+        "display": "88.8%",
         "matches": 3
       },
       {
@@ -516,18 +516,18 @@
       },
       {
         "rank": 2,
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 66.4,
-        "display": "66.4%",
-        "matches": 3
-      },
-      {
-        "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 65.9,
         "display": "65.9%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 65.4,
+        "display": "65.4%",
         "matches": 3
       },
       {
@@ -870,8 +870,8 @@
         "rank": 5,
         "team": "Germany",
         "flag": "🇩🇪",
-        "value": 54.2,
-        "display": "54.2%",
+        "value": 55.2,
+        "display": "55.2%",
         "matches": 3
       },
       {
@@ -2184,6 +2184,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Andrés Cubas",
+          "value": 1
+        },
         {
           "name": "Diego Gómez",
           "value": 1
@@ -5743,36 +5747,40 @@
           {
             "name": "Matías Galarza",
             "team": "Paraguay"
+          },
+          {
+            "name": "Florian Wirtz",
+            "team": "Germany"
           }
         ],
         "teamBox": [
           {
             "team": "Germany",
-            "possessionPct": 78.7,
-            "accuratePasses": 303,
-            "totalPasses": 337,
-            "shotsOnTarget": 1,
-            "totalShots": 5,
-            "effectiveTackles": 3,
-            "totalTackles": 4,
-            "accurateCrosses": 2,
-            "totalCrosses": 16,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 15
+            "possessionPct": 75.5,
+            "accuratePasses": 530,
+            "totalPasses": 588,
+            "shotsOnTarget": 2,
+            "totalShots": 11,
+            "effectiveTackles": 4,
+            "totalTackles": 7,
+            "accurateCrosses": 5,
+            "totalCrosses": 34,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 28
           },
           {
             "team": "Paraguay",
-            "possessionPct": 21.3,
-            "accuratePasses": 54,
-            "totalPasses": 91,
-            "shotsOnTarget": 2,
-            "totalShots": 3,
-            "effectiveTackles": 7,
-            "totalTackles": 11,
-            "accurateCrosses": 2,
-            "totalCrosses": 4,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 28
+            "possessionPct": 24.5,
+            "accuratePasses": 117,
+            "totalPasses": 188,
+            "shotsOnTarget": 4,
+            "totalShots": 6,
+            "effectiveTackles": 14,
+            "totalTackles": 21,
+            "accurateCrosses": 5,
+            "totalCrosses": 12,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 54
           }
         ]
       }
