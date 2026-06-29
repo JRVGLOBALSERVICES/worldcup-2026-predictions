@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T20:20:23.687Z",
+    "generatedAt": "2026-06-29T21:20:20.052Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 58
   },
@@ -492,9 +492,9 @@
         "rank": 9,
         "team": "Germany",
         "flag": "🇩🇪",
-        "value": 88.2,
-        "display": "88.2%",
-        "matches": 2
+        "value": 88.5,
+        "display": "88.5%",
+        "matches": 3
       },
       {
         "rank": 10,
@@ -516,6 +516,14 @@
       },
       {
         "rank": 2,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 66.4,
+        "display": "66.4%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 65.9,
@@ -523,7 +531,7 @@
         "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 64,
@@ -531,7 +539,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
@@ -539,7 +547,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -547,7 +555,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -555,7 +563,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Belgium",
         "flag": "🇧🇪",
         "value": 62.3,
@@ -563,7 +571,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.2,
@@ -571,19 +579,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 61.2,
         "display": "61.2%",
-        "matches": 2
-      },
-      {
-        "rank": 10,
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 60.3,
-        "display": "60.3%",
         "matches": 2
       }
     ],
@@ -868,6 +868,14 @@
       },
       {
         "rank": 5,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 54.2,
+        "display": "54.2%",
+        "matches": 3
+      },
+      {
+        "rank": 6,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 53.1,
@@ -875,7 +883,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 52.4,
@@ -883,7 +891,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -891,20 +899,12 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
         "matches": 3
-      },
-      {
-        "rank": 9,
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 51.5,
-        "display": "51.5%",
-        "matches": 2
       },
       {
         "rank": 10,
@@ -2161,6 +2161,11 @@
       "flag": "🇵🇾",
       "scorers": [
         {
+          "name": "Julio Enciso",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Matías Galarza",
           "value": 1,
           "matches": 1
@@ -2171,6 +2176,11 @@
           "name": "Julio Enciso",
           "value": 2,
           "matches": 3
+        },
+        {
+          "name": "Matías Galarza",
+          "value": 1,
+          "matches": 1
         }
       ],
       "yellowCards": [
@@ -5724,6 +5734,45 @@
             "totalCrosses": 8,
             "accurateLongBalls": 15,
             "totalLongBalls": 29
+          }
+        ]
+      },
+      "760489": {
+        "penMiss": [],
+        "assists": [
+          {
+            "name": "Matías Galarza",
+            "team": "Paraguay"
+          }
+        ],
+        "teamBox": [
+          {
+            "team": "Germany",
+            "possessionPct": 78.7,
+            "accuratePasses": 303,
+            "totalPasses": 337,
+            "shotsOnTarget": 1,
+            "totalShots": 5,
+            "effectiveTackles": 3,
+            "totalTackles": 4,
+            "accurateCrosses": 2,
+            "totalCrosses": 16,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 15
+          },
+          {
+            "team": "Paraguay",
+            "possessionPct": 21.3,
+            "accuratePasses": 54,
+            "totalPasses": 91,
+            "shotsOnTarget": 2,
+            "totalShots": 3,
+            "effectiveTackles": 7,
+            "totalTackles": 11,
+            "accurateCrosses": 2,
+            "totalCrosses": 4,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 28
           }
         ]
       }
