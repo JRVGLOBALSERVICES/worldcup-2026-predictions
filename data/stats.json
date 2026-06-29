@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T17:20:23.779Z",
+    "generatedAt": "2026-06-29T18:20:29.661Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 57
   },
@@ -255,6 +255,13 @@
       },
       {
         "rank": 1,
+        "name": "Danilo",
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Gervane Kastaneer",
         "team": "Curacao",
         "flag": "🇨🇼",
@@ -282,24 +289,17 @@
         "value": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Abdoulaye Seck",
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 1
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Alan Franco",
         "team": "Ecuador",
         "flag": "🇪🇨",
-        "value": 1
-      },
-      {
-        "rank": 8,
-        "name": "Aleksandar Pavlovic",
-        "team": "Germany",
-        "flag": "🇩🇪",
         "value": 1
       }
     ],
@@ -452,8 +452,8 @@
         "rank": 4,
         "team": "Brazil",
         "flag": "🇧🇷",
-        "value": 91,
-        "display": "91.0%",
+        "value": 91.1,
+        "display": "91.1%",
         "matches": 3
       },
       {
@@ -656,8 +656,8 @@
         "rank": 9,
         "team": "Brazil",
         "flag": "🇧🇷",
-        "value": 45.5,
-        "display": "45.5%",
+        "value": 45.2,
+        "display": "45.2%",
         "matches": 3
       },
       {
@@ -2097,6 +2097,11 @@
           "name": "Matheus Cunha",
           "value": 3,
           "matches": 3
+        },
+        {
+          "name": "Casemiro",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -2104,6 +2109,11 @@
           "name": "Bruno Guimarães",
           "value": 3,
           "matches": 3
+        },
+        {
+          "name": "Gabriel Magalhães",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "Lucas Paquetá",
@@ -2123,11 +2133,11 @@
       ],
       "yellowCards": [
         {
-          "name": "Casemiro",
-          "value": 1
+          "name": "Danilo",
+          "value": 2
         },
         {
-          "name": "Danilo",
+          "name": "Casemiro",
           "value": 1
         },
         {
@@ -2404,6 +2414,11 @@
           "name": "Junya Ito",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Kaishu Sano",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -2434,6 +2449,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Daichi Kamada",
+          "value": 1
+        },
         {
           "name": "Kaishu Sano",
           "value": 1
@@ -5662,35 +5681,40 @@
       },
       "760487": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Gabriel Magalhães",
+            "team": "Brazil"
+          }
+        ],
         "teamBox": [
           {
             "team": "Brazil",
-            "possessionPct": 69.8,
-            "accuratePasses": 133,
-            "totalPasses": 144,
-            "shotsOnTarget": 1,
-            "totalShots": 4,
-            "effectiveTackles": 0,
-            "totalTackles": 2,
-            "accurateCrosses": 1,
-            "totalCrosses": 4,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 12
+            "possessionPct": 65.8,
+            "accuratePasses": 390,
+            "totalPasses": 424,
+            "shotsOnTarget": 5,
+            "totalShots": 13,
+            "effectiveTackles": 6,
+            "totalTackles": 10,
+            "accurateCrosses": 6,
+            "totalCrosses": 22,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 30
           },
           {
             "team": "Japan",
-            "possessionPct": 30.2,
-            "accuratePasses": 51,
-            "totalPasses": 59,
-            "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 3,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 10
+            "possessionPct": 34.2,
+            "accuratePasses": 185,
+            "totalPasses": 219,
+            "shotsOnTarget": 1,
+            "totalShots": 4,
+            "effectiveTackles": 2,
+            "totalTackles": 6,
+            "accurateCrosses": 2,
+            "totalCrosses": 8,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 29
           }
         ]
       }
