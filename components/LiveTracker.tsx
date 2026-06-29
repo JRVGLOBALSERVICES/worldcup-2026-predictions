@@ -32,6 +32,9 @@ export type SpecialRow = {
   staticStatus: BetStatus;
   grade?: SpecialGrade;
   statusOverride?: BetStatus;
+  // Whose bet this is (collection tag). Shown as an amber pill on the card so
+  // it's clear who to collect from / pay out. Absent = Rj's own.
+  punter?: string;
   // True when this row is a display mirror of a cross-match acca shown on another
   // card. Renders for visibility but is excluded from all stake/return/count sums.
   mirror?: boolean;
@@ -66,6 +69,17 @@ export type TrackerBase = {
 // ─────────────────────────────────────────────────────────────────────────────
 function money(n: number, currency: string) {
   return `${currency}${n.toFixed(2)}`;
+}
+
+/** A special is an "acca" when it carries a multi-leg grade; a "parlay" is the
+ *  subset with 2+ legs (the kind that gets mirrored across game cards). A lone
+ *  1-leg acca (e.g. a single correct-score dressed as multiLeg) stays in its
+ *  game card. `mirror` copies are display dupes and never count as the source. */
+function isAccaRow(r: SpecialRow): boolean {
+  return !!r.grade && "legs" in r.grade && Array.isArray((r.grade as { legs?: unknown[] }).legs);
+}
+function isParlayRow(r: SpecialRow): boolean {
+  return !r.mirror && isAccaRow(r) && ((r.grade as { legs: unknown[] }).legs.length >= 2);
 }
 
 /** Static fallback when no live feed exists — read the cron-filled JSON status. */
@@ -298,6 +312,18 @@ const LEG_GLYPH: Record<string, { cls: string; dot: string; pulse?: boolean }> =
   "—": { cls: "text-faint/60", dot: "bg-faint/40" },
 };
 
+/** Collection tag — whose bet this slip is, so it's clear who to collect from /
+ *  pay out. Amber to read as "money / collect", distinct from the green+orange
+ *  verdict accents. */
+function PunterTag({ name }: { name: string }) {
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full border border-amber/40 bg-amber/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-amber">
+      <span className="size-1.5 rounded-full bg-amber" />
+      {name}
+    </span>
+  );
+}
+
 /** Accumulator card — the slip-card leg grid, live-graded. One per non-mirror acca. */
 function AccaCard({
   special,
@@ -318,6 +344,7 @@ function AccaCard({
             {legCount} legs
           </span>
           <span className="text-sm font-semibold text-ink">{special.market}</span>
+          {special.punter && <PunterTag name={special.punter} />}
         </div>
         <div className="flex items-center gap-3">
           <span className="tnum font-mono text-[0.7rem] text-faint/70">
@@ -350,6 +377,62 @@ function AccaCard({
   );
 }
 
+/** Day-level parlay roll-up. Every multi-leg acca anchored in this day is shown
+ *  ONCE here with its overall verdict + live leg grid — instead of being mirrored
+ *  onto every game card it touches (the old behaviour, which repeated a 6-leg acca
+ *  across 6 cards). Sorted live-first so what's still in play floats to the top. */
+function DayParlays({
+  parlays,
+  live,
+  currency,
+}: {
+  parlays: { special: SpecialRow; anchorMatchId: string }[];
+  live: Record<string, LiveMatch | undefined>;
+  currency: string;
+}) {
+  if (parlays.length === 0) return null;
+  const graded = parlays
+    .map((p) => ({ ...p, verdict: gradeSpecial(p.special, live[p.anchorMatchId], live) }))
+    .sort((a, b) => VERDICT_ORDER[a.verdict.verdict] - VERDICT_ORDER[b.verdict.verdict]);
+  const stake = parlays.reduce((s, p) => s + p.special.stake, 0);
+  const secured = graded.reduce((s, p) => {
+    if (p.verdict.verdict === "won") return s + p.special.potential;
+    if (p.verdict.verdict === "void") return s + p.special.stake;
+    return s;
+  }, 0);
+  const liveCount = graded.filter((p) => p.verdict.verdict === "winning" || p.verdict.verdict === "alive").length;
+  const won = graded.filter((p) => p.verdict.verdict === "won").length;
+  const lost = graded.filter((p) => p.verdict.verdict === "lost" || p.verdict.verdict === "dead").length;
+  return (
+    <div className="mb-5 rounded-3xl border border-acid-dim/40 bg-pitch-2/40 p-4 sm:p-5">
+      <div className="mb-3.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-acid">Parlays</span>
+          <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+            {graded.length}
+          </span>
+          {(liveCount > 0 || won > 0 || lost > 0) && (
+            <span className="flex items-center gap-1.5 font-mono text-[0.6rem] uppercase tracking-wider">
+              {liveCount > 0 && <span className="text-acid">{liveCount} live</span>}
+              {won > 0 && <span className="text-acid">{won}W</span>}
+              {lost > 0 && <span className="text-rose">{lost}L</span>}
+            </span>
+          )}
+        </div>
+        <span className="tnum font-mono text-[0.66rem] text-faint/70">
+          {money(stake, currency)} staked
+          {secured > 0 && <> · <span className="font-semibold text-acid">{money(secured, currency)} secured</span></>}
+        </span>
+      </div>
+      <div className="space-y-3">
+        {graded.map((p) => (
+          <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /** Single-leg player prop, carded to match AccaCard — so the props block reads
  *  as cards like accumulators, not the old flat row list. Uses the warm (mint→amber)
  *  accent family to stay distinct from the green accas. */
@@ -366,9 +449,12 @@ function PropCard({
   return (
     <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-        <span className="rounded-full border border-mint/40 bg-mint/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-mint">
-          {special.market}
-        </span>
+        <div className="flex items-center gap-2.5">
+          <span className="rounded-full border border-mint/40 bg-mint/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-mint">
+            {special.market}
+          </span>
+          {special.punter && <PunterTag name={special.punter} />}
+        </div>
         <div className="flex items-center gap-3">
           <span className="tnum font-mono text-[0.7rem] text-faint/70">
             @{special.odds.toFixed(2)} · {money(special.stake, currency)} →{" "}
@@ -684,6 +770,19 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         {(() => {
           const renderDay = (day: DayRow) => {
           const sorted = [...day.matches].sort((a, b) => rank(live[a.matchId]) - rank(live[b.matchId]));
+          // Multi-leg parlays anchored in this day — surfaced ONCE at the top of the
+          // day (see DayParlays) instead of mirrored across every game card they
+          // touch. `!mirror` keeps only the single real copy; `legs >= 2` leaves
+          // 1-leg "accas" (e.g. a lone correct-score) inside their own game card.
+          const dayParlays = day.matches.flatMap((m) =>
+            m.specials
+              .filter((s) => isParlayRow(s))
+              .map((s) => ({ special: s, anchorMatchId: m.matchId })),
+          );
+          const singleCount = day.matches.reduce(
+            (n, m) => n + m.bets.length + m.specials.filter((s) => !s.mirror && !isParlayRow(s)).length,
+            0,
+          );
           return (
             <section key={day.key}>
               <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-line/60 pb-2">
@@ -694,9 +793,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   {day.label}
                 </h2>
                 <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
-                  {day.matches.reduce((n, m) => n + m.bets.length + m.specials.filter((s) => !s.mirror).length, 0)} bets
+                  {singleCount} bets{dayParlays.length > 0 && ` · ${dayParlays.length} parlays`}
                 </span>
               </div>
+
+              <DayParlays parlays={dayParlays} live={live} currency={cur} />
 
               <div className="space-y-4">
                 {sorted.map((m, mi) => {
@@ -708,21 +809,36 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // Float winning lines to the top, still-on next, losses last.
                   const orderedBets = orderByVerdict(m.bets, betVerdicts);
                   const orderedSpecials = orderByVerdict(m.specials, spVerdicts);
-                  // Accumulators (multi-leg) get the leg-grid card treatment; everything
-                  // else stays a flat prop row. Mirror copies render with the SAME leg-grid
-                  // card as the home copy — the acca looks identical on every game it
-                  // touches (the money totals below still exclude mirrors, so no double-count).
-                  const isAccaRow = (r: SpecialRow) => !!r.grade && "legs" in r.grade;
-                  const accaRows = orderedSpecials.rows.filter((r) => isAccaRow(r as SpecialRow)) as SpecialRow[];
-                  const accaVerdicts = orderedSpecials.rows
-                    .map((r, i) => ({ r, v: orderedSpecials.verdicts[i] }))
-                    .filter(({ r }) => isAccaRow(r as SpecialRow))
-                    .map(({ v }) => v);
+                  // Multi-leg parlays no longer render inside the game card — they're
+                  // rolled up ONCE at the top of the day (DayParlays), so a 6-leg acca
+                  // isn't repeated across 6 cards. What stays here: this game's own
+                  // singles. A lone 1-leg "acca" (no real parlay) keeps its leg-grid
+                  // card inline; mirror copies render nowhere (their source is up top).
+                  const isInlineAcca = (r: SpecialRow) =>
+                    isAccaRow(r) && !r.mirror && (r.grade as { legs: unknown[] }).legs.length < 2;
+                  const accaIdx = orderedSpecials.rows
+                    .map((_, i) => i)
+                    .filter((i) => isInlineAcca(orderedSpecials.rows[i] as SpecialRow));
+                  const accaRows = accaIdx.map((i) => orderedSpecials.rows[i]) as SpecialRow[];
+                  const accaVerdicts = accaIdx.map((i) => orderedSpecials.verdicts[i]);
                   const propIdx = orderedSpecials.rows
                     .map((_, i) => i)
                     .filter((i) => !isAccaRow(orderedSpecials.rows[i] as SpecialRow));
                   const propRows = propIdx.map((i) => orderedSpecials.rows[i]);
                   const propVerdicts = propIdx.map((i) => orderedSpecials.verdicts[i]);
+                  // Whether this game carries any of Rj's OWN lines (singles / props /
+                  // inline 1-leg acca). Games with none are pure parlay legs — kept
+                  // visible for the live score but collapsed, with a pointer to the
+                  // parlays above instead of an empty body.
+                  const hasOwnBets =
+                    orderedBets.rows.length > 0 || accaRows.length > 0 || propRows.length > 0;
+                  const liveNow = lm?.state === "live" || lm?.state === "halftime";
+                  // Which day-parlays use this match as a leg (for the pointer note).
+                  const legParlays = dayParlays.filter((p) =>
+                    ((p.special.grade as { legs?: { matchId?: string }[] }).legs ?? []).some(
+                      (l) => l.matchId === m.matchId,
+                    ),
+                  );
                   // Mirror rows (cross-match acca shown on another card) are excluded
                   // from this card's money totals — their stake/return live on the home card.
                   const moneyRows = [...m.bets, ...m.specials];
@@ -736,7 +852,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   }, 0);
 
                   return (
-                    <details key={m.matchId} open={!finished} className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden">
+                    <details key={m.matchId} open={liveNow || (!finished && hasOwnBets)} className="group overflow-hidden rounded-3xl border border-line bg-card/40 [&_summary::-webkit-details-marker]:hidden">
                       <summary className="flex cursor-pointer select-none flex-wrap items-center justify-between gap-3 bg-pitch-2/40 px-5 py-4">
                         <div className="flex min-w-0 items-start gap-3">
                           <span className="mt-0.5 shrink-0 rounded-md border border-line bg-card/50 px-2 py-1 font-mono text-[0.62rem] font-bold tabular-nums text-acid">
@@ -844,6 +960,24 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                                 <PropCard key={r.id} special={r as SpecialRow} verdict={propVerdicts[i]} currency={cur} />
                               ))}
                             </div>
+                          </div>
+                        )}
+
+                        {/* Pure parlay-leg game — no singles of its own. Point back to
+                            the parlays above instead of an empty body. */}
+                        {!hasOwnBets && (
+                          <div className="px-5 py-4">
+                            <p className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+                              No singles here —{" "}
+                              {legParlays.length > 0 ? (
+                                <span className="text-acid">
+                                  leg in {legParlays.length} parlay{legParlays.length > 1 ? "s" : ""} above
+                                </span>
+                              ) : (
+                                "on the slate for the live score"
+                              )}
+                              .
+                            </p>
                           </div>
                         )}
                       </div>

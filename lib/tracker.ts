@@ -127,6 +127,7 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
         staticStatus: s.status,
         grade: s.grade,
         statusOverride: s.statusOverride,
+        punter: s.punter,
         mirror: s.mirror ?? false,
       })),
     };
