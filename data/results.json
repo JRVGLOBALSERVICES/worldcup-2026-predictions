@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T22:20:20.526Z",
+    "generatedAt": "2026-06-29T23:20:17.279Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 54,
     "live": 1
@@ -7321,59 +7321,90 @@
           "player": "Andrés Cubas",
           "minute": 64,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Unknown",
+          "minute": 105,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Unknown",
+          "minute": 105,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Kai Havertz",
+          "minute": 106,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Jamal Musiala",
+          "minute": 115,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Matías Galarza",
+          "minute": 117,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-29T20:30:00.000Z",
       "stats": {
         "corners": {
-          "home": 9,
-          "away": 3
-        },
-        "sot": {
-          "home": 2,
-          "away": 4
-        },
-        "shots": {
-          "home": 11,
+          "home": 16,
           "away": 6
         },
+        "sot": {
+          "home": 6,
+          "away": 3
+        },
+        "shots": {
+          "home": 21,
+          "away": 7
+        },
         "yellow": {
-          "home": 0,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 0,
-          "away": 1
+          "home": 2,
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
             6,
-            3
+            10
           ],
           "away": [
             2,
-            1
+            4
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            1
+            4
           ],
           "away": [
             1,
-            2
+            1
           ]
         },
         "playerSot": {
           "Júnior Alonso": 1,
-          "Julio Enciso": 1,
           "Gustavo Caballero": 1,
-          "Kai Havertz": 1
+          "Kai Havertz": 2,
+          "Jonathan Tah": 1,
+          "Waldemar Anton": 1
         },
         "firstGoalMethod": "header",
         "firstPenalty": null,

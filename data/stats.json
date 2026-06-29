@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T22:20:25.255Z",
+    "generatedAt": "2026-06-29T23:20:21.564Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 58
   },
@@ -276,6 +276,13 @@
       },
       {
         "rank": 1,
+        "name": "Matías Galarza",
+        "team": "Paraguay",
+        "flag": "🇵🇾",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Mohanad Lashin",
         "team": "Egypt",
         "flag": "🇪🇬",
@@ -289,17 +296,10 @@
         "value": 2
       },
       {
-        "rank": 9,
+        "rank": 10,
         "name": "Abdoulaye Seck",
         "team": "Senegal",
         "flag": "🇸🇳",
-        "value": 1
-      },
-      {
-        "rank": 9,
-        "name": "Alan Franco",
-        "team": "Ecuador",
-        "flag": "🇪🇨",
         "value": 1
       }
     ],
@@ -381,6 +381,13 @@
         "name": "Marko Arnautovic",
         "team": "Austria",
         "flag": "🇦🇹",
+        "value": 1
+      },
+      {
+        "rank": 1,
+        "name": "Maurício",
+        "team": "Paraguay",
+        "flag": "🇵🇾",
         "value": 1
       },
       {
@@ -482,19 +489,19 @@
       },
       {
         "rank": 8,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 88.9,
+        "display": "88.9%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 88.9,
         "display": "88.9%",
         "matches": 2
-      },
-      {
-        "rank": 9,
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 88.8,
-        "display": "88.8%",
-        "matches": 3
       },
       {
         "rank": 10,
@@ -526,8 +533,8 @@
         "rank": 3,
         "team": "Germany",
         "flag": "🇩🇪",
-        "value": 65.4,
-        "display": "65.4%",
+        "value": 65.3,
+        "display": "65.3%",
         "matches": 3
       },
       {
@@ -736,19 +743,19 @@
       },
       {
         "rank": 9,
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
         "display": "66.7%",
         "matches": 2
-      },
-      {
-        "rank": 9,
-        "team": "Uzbekistan",
-        "flag": "🇺🇿",
-        "value": 66.7,
-        "display": "66.7%",
-        "matches": 3
       }
     ],
     "crossCompletion": [
@@ -860,18 +867,18 @@
       },
       {
         "rank": 4,
-        "team": "Senegal",
-        "flag": "🇸🇳",
-        "value": 56.7,
-        "display": "56.7%",
+        "team": "Germany",
+        "flag": "🇩🇪",
+        "value": 57,
+        "display": "57.0%",
         "matches": 3
       },
       {
         "rank": 5,
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 55.2,
-        "display": "55.2%",
+        "team": "Senegal",
+        "flag": "🇸🇳",
+        "value": 56.7,
+        "display": "56.7%",
         "matches": 3
       },
       {
@@ -2169,6 +2176,11 @@
           "name": "Matías Galarza",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Maurício",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -2185,15 +2197,15 @@
       ],
       "yellowCards": [
         {
+          "name": "Matías Galarza",
+          "value": 2
+        },
+        {
           "name": "Andrés Cubas",
           "value": 1
         },
         {
           "name": "Diego Gómez",
-          "value": 1
-        },
-        {
-          "name": "Matías Galarza",
           "value": 1
         }
       ],
@@ -2405,6 +2417,14 @@
       "yellowCards": [
         {
           "name": "Aleksandar Pavlovic",
+          "value": 1
+        },
+        {
+          "name": "Jamal Musiala",
+          "value": 1
+        },
+        {
+          "name": "Kai Havertz",
           "value": 1
         }
       ],
@@ -5756,31 +5776,31 @@
         "teamBox": [
           {
             "team": "Germany",
-            "possessionPct": 75.5,
-            "accuratePasses": 530,
-            "totalPasses": 588,
-            "shotsOnTarget": 2,
-            "totalShots": 11,
-            "effectiveTackles": 4,
-            "totalTackles": 7,
-            "accurateCrosses": 5,
-            "totalCrosses": 34,
-            "accurateLongBalls": 18,
-            "totalLongBalls": 28
+            "possessionPct": 75.3,
+            "accuratePasses": 719,
+            "totalPasses": 799,
+            "shotsOnTarget": 6,
+            "totalShots": 21,
+            "effectiveTackles": 10,
+            "totalTackles": 14,
+            "accurateCrosses": 10,
+            "totalCrosses": 56,
+            "accurateLongBalls": 26,
+            "totalLongBalls": 39
           },
           {
             "team": "Paraguay",
-            "possessionPct": 24.5,
-            "accuratePasses": 117,
-            "totalPasses": 188,
-            "shotsOnTarget": 4,
-            "totalShots": 6,
-            "effectiveTackles": 14,
-            "totalTackles": 21,
-            "accurateCrosses": 5,
-            "totalCrosses": 12,
-            "accurateLongBalls": 12,
-            "totalLongBalls": 54
+            "possessionPct": 24.7,
+            "accuratePasses": 161,
+            "totalPasses": 257,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
+            "effectiveTackles": 21,
+            "totalTackles": 33,
+            "accurateCrosses": 6,
+            "totalCrosses": 21,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 78
           }
         ]
       }
