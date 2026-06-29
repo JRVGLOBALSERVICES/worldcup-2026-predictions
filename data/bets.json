@@ -10867,6 +10867,41 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83740802271",
+      "slipNo": "83740802271",
+      "matchId": "bra-jpn-2026-06-29",
+      "player": "—",
+      "market": "Acca · 4 legs",
+      "label": "Acca (R32) — Brazil win & BTTS · Musiala assist · Netherlands to qualify · Haaland anytime scorer (4 legs)",
+      "odds": 43.74,
+      "stake": 15,
+      "placedAt": "29/06 23:20",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "bra-jpn-2026-06-29",
+            "kind": "resultBtts",
+            "outcome": "1"
+          },
+          {
+            "matchId": "ger-par-2026-06-29",
+            "kind": "manual"
+          },
+          {
+            "matchId": "ned-mar-2026-06-30",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "scored",
+            "player": "Erling Haaland"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
