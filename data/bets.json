@@ -10804,6 +10804,69 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83740252595",
+      "slipNo": "83740252595",
+      "matchId": "bra-jpn-2026-06-29",
+      "player": "Vinicius Junior",
+      "market": "Player brace (2 goals)",
+      "label": "Vinicius Junior to score 2 goals (Over 1.5)",
+      "odds": 9.2,
+      "stake": 50,
+      "placedAt": "29/06 23:06",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Vinicius Junior",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83740174729",
+      "slipNo": "83740174729",
+      "matchId": "bra-jpn-2026-06-29",
+      "player": "Matheus Cunha",
+      "market": "Player brace (2 goals)",
+      "label": "Matheus Cunha to score 2 goals (Over 1.5)",
+      "odds": 13.5,
+      "stake": 50,
+      "placedAt": "29/06 23:04",
+      "grade": {
+        "type": "goalsOver",
+        "player": "Matheus Cunha",
+        "line": 1.5
+      }
+    },
+    {
+      "id": "sp-83739963651",
+      "slipNo": "83739963651",
+      "matchId": "bra-jpn-2026-06-29",
+      "player": "—",
+      "market": "Acca · 3 legs (To Qualify)",
+      "label": "Acca (To Qualify) — Japan · Paraguay · Morocco to advance",
+      "odds": 39.1,
+      "stake": 50,
+      "placedAt": "29/06 22:59",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "bra-jpn-2026-06-29",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "ger-par-2026-06-29",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "ned-mar-2026-06-30",
+            "kind": "qualify",
+            "side": "away"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
