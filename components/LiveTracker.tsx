@@ -4,9 +4,28 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
+import type { Fixture } from "@/lib/types";
+import fixturesJson from "@/data/fixtures.json";
 import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { SiteNav, type NavKey } from "./SiteNav";
+
+// ── round lookup, shared by the round-grouped parlay roll-up and the all-games
+//    knockout section. A parlay's "headline round" = the round of its anchor
+//    match (the real, non-mirror copy lives on its first leg). Group-stage
+//    fixtures leave `round` undefined → bucketed as "Group stage".
+const FIXTURES = fixturesJson as Fixture[];
+const ROUND_BY_MATCH = new Map(FIXTURES.map((f) => [f.id, f.round]));
+// Knockout rounds lead (most-advanced first), group stage trails. Lower = shown
+// earlier. Currently this World Cup's first knockout round is the Round of 32.
+const ROUND_ORDER = ["Final", "Third place", "Semi-finals", "Quarter-finals", "Round of 16", "Round of 32"];
+function roundLabel(r: string | undefined): string {
+  return r && r.trim() ? r : "Group stage";
+}
+function roundRank(label: string): number {
+  const i = ROUND_ORDER.indexOf(label);
+  return i === -1 ? ROUND_ORDER.length + 1 : i; // unknown knockout label before group
+}
 
 // ── serialisable payload the server page hands down (no functions/classes) ────
 export type BetRow = {
@@ -435,13 +454,35 @@ function GlobalParlays({
       </div>
 
       {running.length > 0 ? (
-        <div className="space-y-3">
+        <div className="space-y-5">
           <p className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-faint/70">
             Running · {running.length}
           </p>
-          {running.map((p) => (
-            <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
-          ))}
+          {/* Grouped by knockout round so e.g. all Round-of-32 parlays sit
+              together under one labelled header — they no longer scatter by
+              whichever calendar day each one's first leg happens to fall on. */}
+          {(() => {
+            const groups = new Map<string, typeof running>();
+            for (const p of running) {
+              const label = roundLabel(ROUND_BY_MATCH.get(p.anchorMatchId));
+              if (!groups.has(label)) groups.set(label, []);
+              groups.get(label)!.push(p);
+            }
+            const ordered = [...groups.entries()].sort((a, b) => roundRank(a[0]) - roundRank(b[0]));
+            return ordered.map(([label, ps]) => (
+              <div key={label} className="space-y-3">
+                <p className="flex items-center gap-2 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-acid">
+                  {label}
+                  <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-1.5 py-0.5 text-[0.56rem] font-semibold tnum text-acid">
+                    {ps.length}
+                  </span>
+                </p>
+                {ps.map((p) => (
+                  <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
+                ))}
+              </div>
+            ));
+          })()}
         </div>
       ) : (
         <p className="font-mono text-[0.7rem] text-faint/70">No parlays still running — all settled below.</p>
@@ -473,6 +514,138 @@ function GlobalParlays({
           )}
         </div>
       )}
+    </section>
+  );
+}
+
+/** Compact MYT label for a fixture not on the betting slip (betted matches carry
+ *  their own server-built kickoffLabel). Intl with an explicit timeZone is stable
+ *  across SSR + client, so no hydration drift. */
+function mytKick(utc: string): string {
+  if (!utc) return "Time TBC";
+  return new Date(utc).toLocaleString("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
+}
+
+/** A 3-letter code for a team name, mirroring the server's code() so non-betted
+ *  fixtures read the same as betted ones. */
+function teamCode(name: string): string {
+  return name.replace(/[^a-z]/gi, "").slice(0, 3).toUpperCase();
+}
+
+/** Every game in a knockout round, shown ONCE — including fixtures with no bet on
+ *  the slip (those never become a MatchRow, so the day sections below can't show
+ *  them). Answers "show all games for the round": all 16 ties, live score when a
+ *  match is on, kickoff time otherwise, and a marker for the ones carrying action. */
+function RoundGames({
+  round,
+  live,
+  days,
+  parlays,
+}: {
+  round: string;
+  live: Record<string, LiveMatch | undefined>;
+  days: DayRow[];
+  parlays: { special: SpecialRow; anchorMatchId: string }[];
+}) {
+  const fixtures = FIXTURES.filter((f) => f.round === round).sort(
+    (a, b) => new Date(a.kickoffUTC).getTime() - new Date(b.kickoffUTC).getTime(),
+  );
+  if (fixtures.length === 0) return null;
+
+  // Bets the slip carries on each match: own singles + multi-leg parlays touching it.
+  const singlesByMatch = new Map<string, number>();
+  for (const d of days)
+    for (const m of d.matches) {
+      const n = m.bets.length + m.specials.filter((s) => !s.mirror && !isParlayRow(s)).length;
+      if (n > 0) singlesByMatch.set(m.matchId, (singlesByMatch.get(m.matchId) ?? 0) + n);
+    }
+  const parlaysByMatch = new Map<string, number>();
+  for (const p of parlays) {
+    const legs = (p.special.grade as { legs?: { matchId?: string }[] }).legs ?? [];
+    const touched = new Set(legs.map((l) => l.matchId).filter(Boolean) as string[]);
+    for (const id of touched) parlaysByMatch.set(id, (parlaysByMatch.get(id) ?? 0) + 1);
+  }
+
+  const withAction = fixtures.filter((f) => singlesByMatch.has(f.id) || parlaysByMatch.has(f.id)).length;
+
+  return (
+    <section className="rounded-3xl border border-line bg-pitch-2/40 p-4 sm:p-6">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3.5">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <span className="font-mono text-[0.66rem] uppercase tracking-[0.2em] text-acid">{round}</span>
+          <span className="rounded-full border border-line bg-card/40 px-2 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-faint">
+            {fixtures.length} games
+          </span>
+        </div>
+        <span className="font-mono text-[0.66rem] tracking-wider text-faint/70 tnum">
+          {withAction} with a bet on
+        </span>
+      </div>
+
+      <ul className="divide-y divide-line/50">
+        {fixtures.map((f) => {
+          const lm = live[f.id];
+          const sc = lm?.score;
+          const finished = lm?.state === "finished";
+          const onNow = lm?.state === "live" || lm?.state === "halftime";
+          const singles = singlesByMatch.get(f.id) ?? 0;
+          const inParlays = parlaysByMatch.get(f.id) ?? 0;
+          return (
+            <li key={f.id} className="flex items-center justify-between gap-3 py-3">
+              <div className="min-w-0">
+                <p className="flex items-center gap-2 font-semibold text-ink">
+                  <span aria-hidden>{f.home.flag}</span>
+                  <span className="tnum">{teamCode(f.home.name)}</span>
+                  <span className="text-faint">v</span>
+                  <span aria-hidden>{f.away.flag}</span>
+                  <span className="tnum">{teamCode(f.away.name)}</span>
+                </p>
+                <p className="mt-0.5 truncate font-mono text-[0.64rem] text-faint/70">
+                  {mytKick(f.kickoffUTC)} MYT · {f.city}
+                </p>
+              </div>
+
+              <div className="flex shrink-0 items-center gap-2.5">
+                {singles > 0 && (
+                  <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+                    {singles} bet{singles > 1 ? "s" : ""}
+                  </span>
+                )}
+                {inParlays > 0 && (
+                  <span className="rounded-full border border-line bg-card/40 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-muted">
+                    {inParlays} parlay{inParlays > 1 ? "s" : ""}
+                  </span>
+                )}
+                {sc ? (
+                  <span
+                    className={`tnum font-mono text-sm font-semibold ${finished ? "text-ink" : onNow ? "text-amber" : "text-faint"}`}
+                  >
+                    {sc.home}–{sc.away}
+                    <span className="ml-1.5 text-[0.56rem] uppercase tracking-wider text-faint/70">
+                      {finished ? "FT" : onNow ? (lm?.minute ? `${lm.minute}'` : "live") : ""}
+                    </span>
+                  </span>
+                ) : (
+                  <span className="font-mono text-[0.64rem] uppercase tracking-wider text-faint">
+                    {new Date(f.kickoffUTC).toLocaleString("en-GB", {
+                      timeZone: "Asia/Kuala_Lumpur",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      hour12: false,
+                    })}
+                  </span>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }
@@ -825,6 +998,26 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           <GlobalParlays parlays={allParlays} live={live} currency={cur} />
         </div>
       )}
+
+      {/* Every game in the current knockout round, including ties with no bet on
+          the slip. The active round = the least-advanced knockout round that still
+          has an unfinished game (Round of 32 right now), so it advances on its own
+          as the tournament progresses. */}
+      {!empty &&
+        (() => {
+          const knockoutRounds = [...new Set(FIXTURES.map((f) => f.round).filter((r): r is string => !!r))];
+          if (knockoutRounds.length === 0) return null;
+          const activeRound =
+            knockoutRounds
+              .sort((a, b) => roundRank(b) - roundRank(a)) // least-advanced first
+              .find((r) => FIXTURES.some((f) => f.round === r && live[f.id]?.state !== "finished")) ??
+            knockoutRounds.sort((a, b) => roundRank(a) - roundRank(b))[0];
+          return (
+            <div className="mt-10">
+              <RoundGames round={activeRound} live={live} days={base.days} parlays={allParlays} />
+            </div>
+          );
+        })()}
 
       <div className="mt-10 space-y-12">
         {(() => {
