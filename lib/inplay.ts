@@ -87,6 +87,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.player} — ${plus(leg.line)} goals`;
     case "scoredOrAssisted":
       return `${leg.player} to score or assist`;
+    case "assisted":
+      return leg.negate ? `${leg.player} not to assist` : `${leg.player} to provide an assist`;
     case "doubleChanceBtts": {
       const dc =
         leg.outcome === "1X"
@@ -1310,6 +1312,35 @@ export function inPlayMultiLeg(
       const involved =
         goalsBy(lm.goals, leg.player).length + assistsBy(lm.goals, leg.player).length;
       if (involved > 0) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "assisted") {
+      // Player to provide an assist — clinches WON on first assist; dies at FT
+      // if never. `negate` is the "- No" pick (blank-while-live shows ⋯).
+      const assisted = assistsBy(lm.goals, leg.player).length > 0;
+      if (leg.negate) {
+        if (assisted) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else if (done) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
+        continue;
+      }
+      if (assisted) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (done) {

@@ -360,6 +360,11 @@ export type MultiLegCond =
   // Player to score OR provide an assist ("To Score Or To Provide An Assist —
   // Yes"). Won the moment he's involved in a goal; loses at FT if never.
   | { matchId: string; kind: "scoredOrAssisted"; player: string }
+  // Player to provide an ASSIST ("<Player> to provide an assist — Yes"). Graded
+  // off the summary keyEvents assister (g.assist), accent-safe. Clinches the
+  // moment he records an assist; loses at FT if never. `negate:true` is the
+  // "- No" pick (WINS iff he never assists, dies the instant he does).
+  | { matchId: string; kind: "assisted"; player: string; negate?: boolean }
   // Result + Total: a 1X2 outcome AND the match total is over `line` ("Team 2 To
   // Win And Total > (3.5)" → outcome:"2", line:3.5). Over-mirror of
   // resultAndTotalUnder.
@@ -886,6 +891,23 @@ export function gradeSpecial(special: Special): BetStatus {
           goalsBy(ev.goals, leg.player).length + assistsBy(ev.goals, leg.player).length;
         if (involved > 0) continue; // leg won
         if (finished) return "lost";
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "assisted") {
+        // Player records an assist — graded off the summary keyEvents assister
+        // (g.assist), accent-safe via assistsBy. Clinches mid-match like `scored`.
+        const assistedIt = assistsBy(ev.goals, leg.player).length > 0;
+        if (leg.negate) {
+          // "- No": he must NOT assist. Dies the instant he does; wins at FT blank.
+          if (assistedIt) return "lost";
+          if (finished) continue; // match over, never assisted → leg won
+          pending = true;
+          continue;
+        }
+        if (assistedIt) continue; // leg won, even mid-match
+        if (finished) return "lost"; // his match ended, no assist → whole acca dead
         pending = true;
         continue;
       }
