@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T11:20:18.756Z",
+    "generatedAt": "2026-06-29T17:20:19.007Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 53,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -7125,6 +7125,84 @@
             "reliable": true
           }
         }
+      }
+    },
+    "bra-jpn-2026-06-29": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "ft90": null,
+      "finishPhase": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "advanced": null,
+      "goals": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Kaishu Sano",
+          "minute": 11,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Casemiro",
+          "minute": 14,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-29T17:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 2,
+          "away": 1
+        },
+        "sot": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 4,
+          "away": 1
+        },
+        "yellow": {
+          "home": 1,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 1
+        },
+        "cornersByHalf": {
+          "home": [
+            2,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {},
+        "firstGoalMethod": null,
+        "firstPenalty": null,
+        "waterBreak": {}
       }
     }
   }
