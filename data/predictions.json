@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T09:03:21.613Z",
+    "generatedAt": "2026-06-29T16:24:16.377Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-29T09:00:38.188Z"
@@ -13057,119 +13057,120 @@
       "win": {
         "pick": "Brazil",
         "fairOdds": "1.80",
-        "reason": "Brazil top scorers in Group C with a settled XI and Vinicius in form, but Japan's disciplined low block and 90-min-only ~57% Opta edge keeps this short of a banker."
+        "reason": "Brazil are clear favourites with Vinícius Júnior in scorching form (scored in all 3 group games, 4-5 goals) and Cunha (3 goals) as a mobile false-nine, but this is NOT a formality. Japan set up as a disciplined deep block that springs lethal vertical counters, and Brazil losing Raphinha's set-piece/penalty delivery and starting raw teenager Rayan on the right blunts one attacking lane. Model win-prob sits ~55-57%, leaving a combined ~43-45% for a Japan upset or draw — so the price is closer to 1.80 than a short-priced banker."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.90",
-        "alt": "1-0",
-        "altOdds": "3.30"
+        "fairOdds": "2.50",
+        "alt": "1-0 Brazil",
+        "altOdds": "3.20"
       },
       "htft": {
         "pick": "Draw/Brazil",
-        "fairOdds": "4.40"
+        "fairOdds": "5.50"
       },
       "fullTime": {
-        "score": "1-0",
+        "score": "1-0 Brazil",
         "fairOdds": "6.50"
       },
       "scorers": [
         {
+          "player": "Vinícius Júnior",
+          "fairOdds": "2.30",
+          "banker": false,
+          "note": "Scored in all three group games (4 goals); Brazil's primary left-side threat and corner/free-kick option now that Raphinha is out. Top scorer pick but never a banker."
+        },
+        {
           "player": "Matheus Cunha",
-          "fairOdds": "2.80",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "3 goals in 2 starts this tournament; leads the line vs a deep block but Japan concede few clear chances."
+          "note": "Three goals in the group stage including a brace vs Haiti; mobile central nine who drops to combine. Real anytime threat but anytime-scorer banker:false rule applies."
         },
         {
-          "player": "Vinicius Junior",
-          "fairOdds": "2.60",
+          "player": "Ayase Ueda",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "Scored in every group game (4 goals); main left-side threat, though wing-back doubling can blunt him."
+          "note": "Japan's danger man — brace vs Tunisia, 16 international goals, Eredivisie top scorer. Against a high Brazil line he's the most likely Japan scorer on the counter; underpins the Japan-to-score angle."
         },
         {
-          "player": "Rayan",
-          "fairOdds": "4.00",
+          "player": "Lucas Paquetá",
+          "fairOdds": "7.00",
           "banker": false,
-          "note": "Youngest WC assist-maker for Brazil vs Scotland; pacey right-side outlet stepping in for Raphinha."
-        },
-        {
-          "player": "Lucas Paqueta",
-          "fairOdds": "5.50",
-          "banker": false,
-          "note": "No.10 with late-arriving runs and penalty/set-piece duty; secondary scoring route."
+          "note": "Confirmed penalty taker with Raphinha out, plus a left-eight who arrives late in the box; carries the spot-kick equity that lifts his scorer price."
         }
       ],
       "assists": [
         {
-          "player": "Vinicius Junior",
+          "player": "Vinícius Júnior",
           "fairOdds": "3.80",
           "banker": false,
-          "note": "Five goal involvements in the group; chief creator from the left half-space."
+          "note": "Creates as much as he finishes from the left; likeliest Brazil assist source feeding Cunha centrally."
         },
         {
-          "player": "Lucas Paqueta",
-          "fairOdds": "4.50",
+          "player": "Bruno Guimarães",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Primary set-piece and central link; carries chance-creation with Raphinha out."
+          "note": "Now a primary set-piece/free-kick deliverer alongside the corner duty with Raphinha absent; line-breaking passes from deep."
         },
         {
-          "player": "Bruno Guimaraes",
-          "fairOdds": "6.00",
+          "player": "Junya Ito",
+          "fairOdds": "8.00",
           "banker": false,
-          "note": "Deep-lying distributor and corner taker feeding box runners."
+          "note": "Japan's quickest outlet on the counter; if Brazil's full-backs overcommit he is the most likely supplier for Ueda/Maeda."
         }
       ],
       "penalty": {
-        "likelihood": "Medium",
-        "taker": "Lucas Paqueta",
-        "backup": "Vinicius Junior",
-        "note": "Paqueta inherits spot-kicks with Raphinha sidelined; a deep Japan block can concede a box foul but is well-drilled, so only medium."
+        "likelihood": "medium",
+        "taker": "Lucas Paquetá",
+        "backup": "Vinícius Júnior",
+        "note": "Raphinha (Brazil's first-choice penalty taker) is OUT injured, so Paquetá is the reported on-pitch taker, with Vinícius the likely backup. Penalty probability is only medium — Japan defend with positional containment and avoid rash challenges in the box."
       },
       "lineups": {
-        "home": "4-2-3-1 probable XI: GK Alisson; DEF Danilo, Marquinhos, Gabriel Magalhaes, Santos; MID Bruno Guimaraes, Casemiro; FWD Rayan, Paqueta, Vinicius Junior; ST Matheus Cunha (Raphinha out, fresh hamstring)",
-        "away": "3-4-2-1 probable XI: GK Zion Suzuki; DEF Hiroki Ito, Ko Itakura, Takehiro Tomiyasu; MID Ritsu Doan, Ao Tanaka, Kaishu Sano, Keito Nakamura; AM Junya Ito, Daichi Kamada; ST Ayase Ueda (Kubo out knee)",
-        "status": "probable"
+        "home": "Brazil (4-3-3): Alisson; Danilo, Marquinhos (C), Gabriel Magalhães, Douglas Santos; Casemiro, Bruno Guimarães, Lucas Paquetá; Rayan, Matheus Cunha, Vinícius Júnior. (Raphinha OUT injured.)",
+        "away": "Japan: Zion Suzuki; Takehiro Tomiyasu, Shogo Taniguchi, Hiroki Ito; Kaishu Sano, Daichi Kamada, Junya Ito, Keito Nakamura; Ritsu Doan (C), Daizen Maeda, Ayase Ueda. (Itakura & Ao Tanaka NOT starting; Kubo OUT.)",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Raphinha",
+          "player": "Vinícius Júnior",
           "team": "Brazil",
-          "note": "Expected to miss again with a fresh hamstring picked up vs Haiti; primary free-kick taker, so set-piece threat downgraded."
-        },
-        {
-          "player": "Vinicius Junior",
-          "team": "Brazil",
-          "note": "In red-hot form, scored in all three group games; Japan will likely double up on him via the right wing-back."
+          "note": "In the form of the tournament — scored in all three group matches (4 goals). Primary creator and finisher and now a key set-piece/corner option with Raphinha out. The match's single biggest edge for Brazil."
         },
         {
           "player": "Matheus Cunha",
           "team": "Brazil",
-          "note": "Leads the line with 3 goals; effective vs deep blocks but service may be limited."
+          "note": "Operating as the mobile nine with 3 goals (brace vs Haiti). Drops between lines, which against Japan's compact mid-block could either unlock space or get crowded out — do not bank him as an anytime scorer."
         },
         {
           "player": "Rayan",
           "team": "Brazil",
-          "note": "19-year-old deputising for Raphinha; assist vs Scotland, adds pace but is unproven over a knockout 90."
+          "note": "Teenage Bournemouth/Vasco right winger deputising for the injured Raphinha; started vs Scotland. Fast and direct but raw on a knockout stage — Brazil's least proven attacking lane and a reason the Brazil attack is slightly downgraded from full strength."
         },
         {
-          "player": "Takefusa Kubo",
-          "team": "Japan",
-          "note": "Knee injury, not training fully; appearance highly unlikely, a significant loss to Japan's creativity."
+          "player": "Lucas Paquetá",
+          "team": "Brazil",
+          "note": "Reported penalty taker now that Raphinha is absent; a left-sided eight who arrives late in the box. Carries the spot-kick and secondary-scorer equity."
         },
         {
-          "player": "Ko Itakura",
+          "player": "Ritsu Doan",
           "team": "Japan",
-          "note": "New captain, came off injured vs Sweden but not thought serious; expected to start and anchor the back three."
+          "note": "Captain and the player Brazil must plan around (64 caps, 11 intl goals). Drifts between lines as Japan's chief creative outlet on the break; Japan's organisation runs through him with Itakura absent."
+        },
+        {
+          "player": "Ayase Ueda / Shogo Taniguchi",
+          "team": "Japan",
+          "note": "Ueda is red-hot (brace vs Tunisia, Eredivisie top scorer) and the most likely Japan scorer on the counter. With linchpin Ko Itakura NOT in the XI, Taniguchi anchors a reshuffled back three — a real defensive question mark Brazil will target, but also why Japan may sit deeper and make this a tight, low-event game."
         }
       ],
       "confidence": "medium",
       "strength": 4,
       "sources": [
-        "https://www.si.com/soccer/brazil-predicted-lineup-vs-japan-world-cup-6-29-26",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/japan/squad",
+        "https://www.espn.com/soccer/story/_/id/49194679/brazil-vs-japan-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
         "https://www.rotowire.com/soccer/article/brazil-vs-japan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120069",
-        "https://theanalyst.com/articles/brazil-vs-japan-prediction-world-cup-2026-match-preview",
-        "https://www.fanduel.com/research/brazil-vs-japan-prediction-picks-lineups-preview-and-best-bets-world-cup-2026-knockout-round-of-32",
-        "https://www.cbssports.com/soccer/news/brazil-japan-odds-prediction-time-2026-world-cup-round-32-picks/"
+        "https://www.si.com/soccer/brazil-vs-japan-world-cup-preview-predictions-lineups-6-29-26",
+        "https://worldsoccertalk.com/world-cup/is-vinicius-junior-playing-brazil-vs-japan-projected-lineups-for-the-2026-world-cup-match/",
+        "https://theanalyst.com/articles/brazil-vs-japan-prediction-world-cup-2026-match-preview"
       ],
       "pitchReport": {
         "facts": [
@@ -13182,7 +13183,7 @@
           "Model projects Brazil to carry more of the ball and the better chances (higher attack rating); Japan to sit compact and play on the break.",
           "Goal expectancy 1.8–0.9 (Brazil–Japan) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "CONFIRMED XIs out. Brazil name strongest available (Vinícius/Cunha start; Rayan in for injured Raphinha). Japan reshuffle: linchpin Itakura & Tanaka NOT starting — Taniguchi + Sano in. Lineup props now firm.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Brazil shade the chance-creation (1.8 vs 0.9 xG) — they should make the running.",
         "drawRisk": "Moderate — 23.1% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -13197,7 +13198,7 @@
           "Group goal-rates are a tiny sample; Brazil's number may be inflated by one result."
         ],
         "verdict": "Lean",
-        "changeMind": "A confirmed XI resting Vinícius Júnior, or news the underdog is missing a defensive linchpin."
+        "changeMind": "Already triggered partly — Japan without Itakura is a defensive question; but Vinícius starting keeps the Brazil edge intact."
       },
       "valueSpot": {
         "source": "1xBet (PC)",
@@ -13282,8 +13283,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs now CONFIRMED — Vinícius & Cunha start for Brazil; Japan without Itakura/Tanaka. Lineup-dependent props are firm."
           },
           {
             "name": "Ignoring the draw",
@@ -13296,7 +13297,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 2,
+        "trapsTripped": 1,
         "edge": "edge-leaning",
         "verdict": "LEAN",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
