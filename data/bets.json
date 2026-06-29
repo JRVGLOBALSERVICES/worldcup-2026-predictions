@@ -843,6 +843,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "bra-jpn-2026-06-29": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
+      "ft90": {
+        "home": 2,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3254,6 +3270,68 @@
           "team": "away",
           "player": "Niko Sigur",
           "minute": 67,
+          "type": "yellow"
+        }
+      ]
+    },
+    "bra-jpn-2026-06-29": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Kaishu Sano",
+          "minute": 29,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Casemiro",
+          "minute": 55,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Gabriel Martinelli",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Kaishu Sano",
+          "minute": 11,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Casemiro",
+          "minute": 14,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Daichi Kamada",
+          "minute": 45,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Danilo",
+          "minute": 48,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Junnosuke Suzuki",
+          "minute": 83,
           "type": "yellow"
         }
       ]
@@ -14560,20 +14638,20 @@
     },
     "bra-jpn-2026-06-29": {
       "corners": {
-        "home": 2,
+        "home": 6,
         "away": 2
       },
       "sot": {
-        "home": 5,
-        "away": 1
+        "home": 7,
+        "away": 2
       },
       "shots": {
-        "home": 13,
-        "away": 4
+        "home": 19,
+        "away": 5
       },
       "yellow": {
         "home": 2,
-        "away": 2
+        "away": 3
       },
       "red": {
         "home": 0,
@@ -14581,12 +14659,12 @@
       },
       "cards": {
         "home": 2,
-        "away": 2
+        "away": 3
       },
       "cornersByHalf": {
         "home": [
           2,
-          0
+          4
         ],
         "away": [
           2,
@@ -14596,17 +14674,18 @@
       "sotByHalf": {
         "home": [
           2,
-          1
+          2
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
       "playerSot": {
-        "Vinícius Júnior": 1,
+        "Vinícius Júnior": 2,
         "Matheus Cunha": 1,
-        "Bruno Guimarães": 1
+        "Bruno Guimarães": 1,
+        "Ayase Ueda": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -14620,6 +14699,16 @@
           "firstActionMinute": 26,
           "isCorner": true,
           "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 71,
+          "isCorner": false,
+          "reliable": true
         }
       }
     }

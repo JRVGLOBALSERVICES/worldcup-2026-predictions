@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T18:20:22.117Z",
+    "generatedAt": "2026-06-29T19:20:17.038Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 53,
-    "live": 1
+    "finished": 54,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -7128,19 +7128,25 @@
       }
     },
     "bra-jpn-2026-06-29": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
-      "score": {
-        "home": 1,
+      "ft": {
+        "home": 2,
         "away": 1
       },
-      "advanced": null,
+      "ft90": {
+        "home": 2,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "advanced": "home",
       "goals": [
         {
           "team": "away",
@@ -7155,6 +7161,14 @@
           "team": "home",
           "scorer": "Casemiro",
           "minute": 55,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Gabriel Martinelli",
+          "minute": 90,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -7184,25 +7198,31 @@
           "player": "Danilo",
           "minute": 48,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Junnosuke Suzuki",
+          "minute": 83,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-06-29T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 6,
           "away": 2
         },
         "sot": {
-          "home": 5,
-          "away": 1
+          "home": 7,
+          "away": 2
         },
         "shots": {
-          "home": 13,
-          "away": 4
+          "home": 19,
+          "away": 5
         },
         "yellow": {
           "home": 2,
-          "away": 2
+          "away": 3
         },
         "red": {
           "home": 0,
@@ -7210,12 +7230,12 @@
         },
         "cards": {
           "home": 2,
-          "away": 2
+          "away": 3
         },
         "cornersByHalf": {
           "home": [
             2,
-            0
+            4
           ],
           "away": [
             2,
@@ -7225,17 +7245,18 @@
         "sotByHalf": {
           "home": [
             2,
-            1
+            2
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "playerSot": {
-          "Vinícius Júnior": 1,
+          "Vinícius Júnior": 2,
           "Matheus Cunha": 1,
-          "Bruno Guimarães": 1
+          "Bruno Guimarães": 1,
+          "Ayase Ueda": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -7249,6 +7270,16 @@
             "firstActionMinute": 26,
             "isCorner": true,
             "reliable": false
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
