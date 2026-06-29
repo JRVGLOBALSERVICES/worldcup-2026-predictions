@@ -377,11 +377,14 @@ function AccaCard({
   );
 }
 
-/** Day-level parlay roll-up. Every multi-leg acca anchored in this day is shown
- *  ONCE here with its overall verdict + live leg grid — instead of being mirrored
- *  onto every game card it touches (the old behaviour, which repeated a 6-leg acca
- *  across 6 cards). Sorted live-first so what's still in play floats to the top. */
-function DayParlays({
+/** Whole-slate parlay roll-up. EVERY multi-leg acca across all days is shown ONCE
+ *  here, at the top of the tracker — not scattered per day by which day its first
+ *  leg happens to fall on (the old behaviour, which split the R16 "to qualify"
+ *  parlays across two days so only the 4 starting today were visible together).
+ *  Still-running parlays (winning / still-on / not-started) lead; settled ones
+ *  (won / lost / refunded) collapse into a togglable drawer below so the live
+ *  picture isn't buried under concluded group-stage slips. */
+function GlobalParlays({
   parlays,
   live,
   currency,
@@ -390,10 +393,16 @@ function DayParlays({
   live: Record<string, LiveMatch | undefined>;
   currency: string;
 }) {
+  const [showSettled, setShowSettled] = useState(false);
   if (parlays.length === 0) return null;
   const graded = parlays
     .map((p) => ({ ...p, verdict: gradeSpecial(p.special, live[p.anchorMatchId], live) }))
     .sort((a, b) => VERDICT_ORDER[a.verdict.verdict] - VERDICT_ORDER[b.verdict.verdict]);
+  // Running = not yet decided: winning now, still mathematically on, or not kicked
+  // off. Settled = the book is closed (won / refunded / can't-win / lost).
+  const isRunning = (v: LiveVerdict) => v === "winning" || v === "alive" || v === "scheduled";
+  const running = graded.filter((p) => isRunning(p.verdict.verdict));
+  const settled = graded.filter((p) => !isRunning(p.verdict.verdict));
   const stake = parlays.reduce((s, p) => s + p.special.stake, 0);
   const secured = graded.reduce((s, p) => {
     if (p.verdict.verdict === "won") return s + p.special.potential;
@@ -404,32 +413,67 @@ function DayParlays({
   const won = graded.filter((p) => p.verdict.verdict === "won").length;
   const lost = graded.filter((p) => p.verdict.verdict === "lost" || p.verdict.verdict === "dead").length;
   return (
-    <div className="mb-5 rounded-3xl border border-acid-dim/40 bg-pitch-2/40 p-4 sm:p-5">
-      <div className="mb-3.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3">
+    <section className="rounded-3xl border border-acid-dim/40 bg-pitch-2/40 p-4 sm:p-6">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3.5">
         <div className="flex flex-wrap items-center gap-2.5">
-          <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-acid">Parlays</span>
-          <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+          <span className="font-mono text-[0.66rem] uppercase tracking-[0.2em] text-acid">All parlays</span>
+          <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-acid">
             {graded.length}
           </span>
           {(liveCount > 0 || won > 0 || lost > 0) && (
-            <span className="flex items-center gap-1.5 font-mono text-[0.6rem] uppercase tracking-wider">
+            <span className="flex items-center gap-1.5 font-mono text-[0.62rem] uppercase tracking-wider">
               {liveCount > 0 && <span className="text-acid">{liveCount} live</span>}
               {won > 0 && <span className="text-acid">{won}W</span>}
               {lost > 0 && <span className="text-rose">{lost}L</span>}
             </span>
           )}
         </div>
-        <span className="tnum font-mono text-[0.66rem] text-faint/70">
+        <span className="tnum font-mono text-[0.68rem] text-faint/70">
           {money(stake, currency)} staked
           {secured > 0 && <> · <span className="font-semibold text-acid">{money(secured, currency)} secured</span></>}
         </span>
       </div>
-      <div className="space-y-3">
-        {graded.map((p) => (
-          <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
-        ))}
-      </div>
-    </div>
+
+      {running.length > 0 ? (
+        <div className="space-y-3">
+          <p className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-faint/70">
+            Running · {running.length}
+          </p>
+          {running.map((p) => (
+            <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
+          ))}
+        </div>
+      ) : (
+        <p className="font-mono text-[0.7rem] text-faint/70">No parlays still running — all settled below.</p>
+      )}
+
+      {settled.length > 0 && (
+        <div className={running.length > 0 ? "mt-5 border-t border-line/60 pt-4" : "mt-1"}>
+          <button
+            type="button"
+            onClick={() => setShowSettled((v) => !v)}
+            aria-expanded={showSettled}
+            className="flex w-full items-center justify-between gap-3 rounded-xl border border-line/70 bg-card/30 px-4 py-2.5 text-left transition-colors hover:border-line hover:bg-card/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid/60"
+          >
+            <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-faint">
+              Settled · {settled.length}
+            </span>
+            <span className="flex items-center gap-2.5 font-mono text-[0.62rem] uppercase tracking-wider">
+              {won > 0 && <span className="text-acid">{won}W</span>}
+              {lost > 0 && <span className="text-rose">{lost}L</span>}
+              <span className="text-faint/70">{showSettled ? "Hide" : "Show"}</span>
+            </span>
+          </button>
+          {showSettled && (
+            <div className="mt-3 space-y-3">
+              {settled.map((p) => (
+                <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -645,6 +689,16 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   const totalSeason = base.season.counts.score + base.season.counts.props;
   const empty = totalSeason === 0;
 
+  // Every multi-leg parlay across ALL days, surfaced ONCE in a single top-level
+  // roll-up (GlobalParlays). `isParlayRow` keeps the real copy only (drops the
+  // cross-match mirrors) and excludes lone 1-leg "accas", which stay inline on
+  // their own game card. Anchored to the match the real copy lives on.
+  const allParlays = base.days.flatMap((d) =>
+    d.matches.flatMap((m) =>
+      m.specials.filter((s) => isParlayRow(s)).map((s) => ({ special: s, anchorMatchId: m.matchId })),
+    ),
+  );
+
   // Live "if it ended now" P&L — scoped to today's featured slate, matching the
   // staked / max-return figures in the hero (season roll-up lives below).
   const heroDays = base.days.filter((d) => d.isFeatured);
@@ -766,19 +820,22 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         </section>
       )}
 
+      {!empty && allParlays.length > 0 && (
+        <div className="mt-10">
+          <GlobalParlays parlays={allParlays} live={live} currency={cur} />
+        </div>
+      )}
+
       <div className="mt-10 space-y-12">
         {(() => {
           const renderDay = (day: DayRow) => {
           const sorted = [...day.matches].sort((a, b) => rank(live[a.matchId]) - rank(live[b.matchId]));
-          // Multi-leg parlays anchored in this day — surfaced ONCE at the top of the
-          // day (see DayParlays) instead of mirrored across every game card they
-          // touch. `!mirror` keeps only the single real copy; `legs >= 2` leaves
-          // 1-leg "accas" (e.g. a lone correct-score) inside their own game card.
-          const dayParlays = day.matches.flatMap((m) =>
-            m.specials
-              .filter((s) => isParlayRow(s))
-              .map((s) => ({ special: s, anchorMatchId: m.matchId })),
-          );
+          // Multi-leg parlays are no longer rolled up per day — they all live in the
+          // single top-level GlobalParlays section, so a parlay whose legs span
+          // several days (e.g. the R16 "to qualify" accas) shows up ONCE rather
+          // than only on whichever day its first leg falls. Each day now renders
+          // only its own games + singles. `legParlays` (below) still points a pure
+          // parlay-leg game back to that global section.
           const singleCount = day.matches.reduce(
             (n, m) => n + m.bets.length + m.specials.filter((s) => !s.mirror && !isParlayRow(s)).length,
             0,
@@ -793,11 +850,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   {day.label}
                 </h2>
                 <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
-                  {singleCount} bets{dayParlays.length > 0 && ` · ${dayParlays.length} parlays`}
+                  {singleCount} bets
                 </span>
               </div>
-
-              <DayParlays parlays={dayParlays} live={live} currency={cur} />
 
               <div className="space-y-4">
                 {sorted.map((m, mi) => {
@@ -833,8 +888,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   const hasOwnBets =
                     orderedBets.rows.length > 0 || accaRows.length > 0 || propRows.length > 0;
                   const liveNow = lm?.state === "live" || lm?.state === "halftime";
-                  // Which day-parlays use this match as a leg (for the pointer note).
-                  const legParlays = dayParlays.filter((p) =>
+                  // Which parlays use this match as a leg (for the pointer note) —
+                  // checked against the whole-slate list now, not just this day's.
+                  const legParlays = allParlays.filter((p) =>
                     ((p.special.grade as { legs?: { matchId?: string }[] }).legs ?? []).some(
                       (l) => l.matchId === m.matchId,
                     ),
