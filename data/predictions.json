@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T16:24:16.377Z",
+    "generatedAt": "2026-06-29T19:43:04.398Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-29T09:00:38.188Z"
@@ -13331,120 +13331,121 @@
     "ger-par-2026-06-29": {
       "win": {
         "pick": "Germany",
-        "fairOdds": "1.62",
-        "reason": "Germany topped Group E with superior individual quality across Sane, Musiala and Wirtz, but Paraguay's disciplined deep block and Diego Gomez ban-weakened press still make a clean win-to-nil far from guaranteed."
+        "fairOdds": "1.80",
+        "reason": "Germany's confirmed 4-2-3-1 with Undav (19 BL goals, a goal contribution every ~14 min at this WC) starting as a second striker behind Havertz, plus Wirtz and Sané, gives them the clear edge at home favorite status. But Paraguay's switch from a 5-4-1 to an open 4-3-3 commits Almirón, Enciso and Avalos forward, leaving Enciso real space to run at Rüdiger/Tah on the counter — that genuinely raises draw and over risk, so this is ~55% win probability, not a near-certainty."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.30",
+        "fairOdds": "2.90",
         "alt": "1-0",
-        "altOdds": "3.20"
+        "altOdds": "3.40"
       },
       "htft": {
         "pick": "Draw/Germany",
-        "fairOdds": "4.00"
+        "fairOdds": "4.20"
       },
       "fullTime": {
-        "score": "1-0",
-        "fairOdds": "5.50"
+        "score": "2-1",
+        "fairOdds": "9.00"
       },
       "scorers": [
         {
-          "player": "Florian Wirtz",
-          "fairOdds": "3.40",
+          "player": "Deniz Undav",
+          "fairOdds": "2.40",
           "banker": false,
-          "note": "Germany's chief creator and arriving midfield runner; most likely to unlock a packed Paraguay block"
+          "note": "Confirmed to start as the second striker/10 with Musiala benched; Bundesliga's top German scorer (19) and already 3 goals at this WC — Germany's sharpest in-form finisher, but Paraguay sit deep so not a lock."
         },
         {
           "player": "Kai Havertz",
-          "fairOdds": "3.20",
+          "fairOdds": "2.80",
           "banker": false,
-          "note": "Starting striker and primary penalty taker, but service may be limited against a deep five-man back line - not a banker"
+          "note": "Confirmed lone striker in the 4-2-3-1 and a penalty option (converted vs Curaçao); main aerial/box presence but service must break a packed Paraguay block."
         },
         {
-          "player": "Leroy Sane",
-          "fairOdds": "3.80",
+          "player": "Florian Wirtz",
+          "fairOdds": "3.30",
           "banker": false,
-          "note": "Preferred right-sided width all group stage; scored vs Ecuador, key for stretching the block"
+          "note": "Starts as the creative 10/left of the front three and is on free-kick and corner duty with Raum benched — a scoring and set-piece threat."
         },
         {
-          "player": "Jamal Musiala",
-          "fairOdds": "3.90",
+          "player": "Julio Enciso",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "Carrying and dribbling threat between the lines; can manufacture a goal in tight space"
+          "note": "Paraguay's confirmed forward in the new 4-3-3 and their best break threat; if isolated against Rüdiger/Tah with space he is their realest goal path, which keeps Paraguay live."
         }
       ],
       "assists": [
         {
-          "player": "Joshua Kimmich",
-          "fairOdds": "4.50",
+          "player": "Florian Wirtz",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "Captain and primary deep delivery/corner source against a side that will defend set pieces deep"
+          "note": "Primary chance-creator and set-piece deliverer in the confirmed XI; most likely to set up Undav or Havertz."
         },
         {
-          "player": "Florian Wirtz",
+          "player": "Joshua Kimmich",
           "fairOdds": "4.20",
           "banker": false,
-          "note": "Final-third orchestrator; highest chance-creation volume in the side"
+          "note": "Confirmed right-back/deep playmaker and corner taker; his switches and deliveries are a key supply line against a deep block."
         },
         {
-          "player": "Leroy Sane",
-          "fairOdds": "5.50",
+          "player": "Leroy Sané",
+          "fairOdds": "4.80",
           "banker": false,
-          "note": "Wide pull-backs from the right channel against a compact block"
+          "note": "Starts wide right; his cutbacks and crosses are a route to assists if he gets at Junior Alonso one-on-one."
         }
       ],
       "penalty": {
         "likelihood": "Medium",
-        "taker": "Kai Havertz",
-        "backup": "Joshua Kimmich",
-        "note": "Germany sustain heavy pressure on deep blocks that concede penalties; Havertz converted both Euro 2024 spot-kicks, Kimmich second in order"
+        "taker": "Kimmich",
+        "backup": "Havertz",
+        "note": "Germany pressing a deep, now-stretched 4-3-3 raises spot-kick chances; latest reports list Kimmich as first-choice taker with Havertz next (Havertz scored from the spot vs Curaçao). For Paraguay, Enciso/Almirón would take any pen now Diego Gómez is suspended."
       },
       "lineups": {
-        "home": "4-2-3-1 probable XI: GK Neuer; DEF Kimmich, Tah, Rudiger, Brown; MID Nmecha, Pavlovic; Sane, Musiala, Wirtz; FWD Havertz",
-        "away": "5-4-1 probable XI: GK Gill; DEF Caceres, Gomez, Alderete, Alonso; MID Cubas, Galarza, Bobadilla, Almiron; FWD Enciso, Sanabria",
-        "status": "probable"
+        "home": "4-2-3-1 confirmed XI: GK Neuer; DEF Kimmich, Tah, Rudiger, Brown; MID Nmecha, Pavlovic; Sane, Undav, Wirtz; FWD Havertz",
+        "away": "4-3-3 confirmed XI: GK Gill; DEF Junior Alonso, Canale, Gustavo Gomez, Caceres; MID Bobadilla, Galarza, Cubas; FWD Almiron, Enciso, Avalos",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
-          "player": "Nico Schlotterbeck",
+          "player": "Deniz Undav",
           "team": "Germany",
-          "note": "Out for the rest of the tournament with an ankle injury; Rudiger deputises at centre-back"
+          "note": "Promoted into the start as the second striker/10; in red-hot form (19 BL goals, 3 at this WC) and now carries Germany's chief goal threat with Musiala benched."
+        },
+        {
+          "player": "Jamal Musiala",
+          "team": "Germany",
+          "note": "BENCHED — one of Nagelsmann's two changes after the Ecuador defeat. Remains a major late-game impact sub and Germany's most dangerous super-sub to break a tiring block."
         },
         {
           "player": "Nathaniel Brown",
           "team": "Germany",
-          "note": "Minor muscular doubt at left-back; Raum the cover if he fails to start"
+          "note": "Comes in at left-back for David Raum (benched); less established at this level, a side Enciso/Almirón may target on the counter."
         },
         {
-          "player": "Kai Havertz",
-          "team": "Germany",
-          "note": "Starting striker and No.1 penalty taker; service may be choked by Paraguay's block"
-        },
-        {
-          "player": "Diego Gomez",
+          "player": "Gabriel Avalos",
           "team": "Paraguay",
-          "note": "Suspended after two group-stage yellows; loss weakens both Paraguay's press structure and primary corner/free-kick delivery"
+          "note": "Starts up top in place of Sanabria in the new 4-3-3; a 34-year-old target man with a thin scoring record (2 in 25 caps) — more of a hold-up/link reference than a clinical threat."
         },
         {
           "player": "Omar Alderete",
           "team": "Paraguay",
-          "note": "Starting centre-back doubtful with a knee injury picked up late vs Australia; key to the five-man block if fit"
+          "note": "OUT injured; Canale comes into central defence, a downgrade on aerial/organisation that Havertz and German set-pieces can exploit."
         },
         {
           "player": "Miguel Almiron",
           "team": "Paraguay",
-          "note": "Available after serving a one-game ban; main counter-attacking outlet and set-piece taker alongside Enciso"
+          "note": "Back from a red-card suspension and a confirmed front-three starter; shares penalty, free-kick and corner duty with Enciso now Diego Gómez is suspended — Paraguay's main delivery in the more open 4-3-3."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 4,
       "sources": [
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/germany-paraguay-live-stream-team-news-tickets",
-        "https://www.bundesliga.com/en/bundesliga/news/how-will-germany-line-up-havertz-musiala-wirtz-nagelsmann-world-cup-2026-28807",
-        "https://worldsoccertalk.com/world-cup/paraguay-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
+        "https://bulinews.com/confirmed-lineups-germany-paraguay",
+        "https://theanalyst.com/articles/germany-vs-paraguay-prediction-world-cup-2026-match-preview",
+        "https://theanalyst.com/articles/deniz-undav-staking-claim-germany-world-cup-2026",
+        "https://www.rotowire.com/soccer/article/germany-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120070",
         "https://bulinews.com/who-takes-penalties-for-germany-havertz-gives-update",
-        "https://www.fanduel.com/research/germany-vs-paraguay-prediction-picks-lineups-preview-and-best-bets-world-cup-round-of-32"
+        "https://allaboutfpl.com/2026/06/fifa-world-cup-2026-penalty-and-set-piece-takers-of-all-48-teams/"
       ],
       "pitchReport": {
         "facts": [
