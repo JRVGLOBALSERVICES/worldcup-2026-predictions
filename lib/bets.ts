@@ -435,6 +435,8 @@ export type Special = {
   grade?: SpecialGrade;
   /** Manual safety valve: overrides the auto-grade if a scrape was wrong. */
   statusOverride?: BetStatus;
+  /** Optional co-punter badge for a shared slip (absent = owner's own bet). */
+  punter?: string;
 };
 
 export type BetSlipFile = {
