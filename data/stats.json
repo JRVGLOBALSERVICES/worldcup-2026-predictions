@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T21:40:05.943Z",
+    "generatedAt": "2026-06-30T21:50:06.318Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 61
   },
@@ -23,15 +23,15 @@
         "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
-        "value": 4,
+        "value": 5,
         "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -39,7 +39,7 @@
         "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Vinícius Júnior",
         "team": "Brazil",
         "flag": "🇧🇷",
@@ -518,19 +518,19 @@
       },
       {
         "rank": 9,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 88.3,
-        "display": "88.3%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 88.3,
         "display": "88.3%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 88,
+        "display": "88.0%",
+        "matches": 4
       }
     ],
     "possession": [
@@ -634,19 +634,19 @@
       },
       {
         "rank": 3,
-        "team": "Sweden",
-        "flag": "🇸🇪",
-        "value": 48.3,
-        "display": "48.3%",
-        "matches": 3
-      },
-      {
-        "rank": 4,
         "team": "Mexico",
         "flag": "🇲🇽",
         "value": 47.4,
         "display": "47.4%",
         "matches": 2
+      },
+      {
+        "rank": 4,
+        "team": "Sweden",
+        "flag": "🇸🇪",
+        "value": 46.7,
+        "display": "46.7%",
+        "matches": 3
       },
       {
         "rank": 5,
@@ -674,6 +674,14 @@
       },
       {
         "rank": 8,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 44.4,
+        "display": "44.4%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -681,20 +689,12 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 43.1,
-        "display": "43.1%",
-        "matches": 4
       }
     ],
     "tackleSuccess": [
@@ -724,6 +724,14 @@
       },
       {
         "rank": 4,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 70.4,
+        "display": "70.4%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 69.7,
@@ -731,20 +739,12 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Egypt",
         "flag": "🇪🇬",
         "value": 69.7,
         "display": "69.7%",
         "matches": 2
-      },
-      {
-        "rank": 6,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 69.2,
-        "display": "69.2%",
-        "matches": 4
       },
       {
         "rank": 7,
@@ -951,7 +951,7 @@
       "scorers": [
         {
           "name": "Kylian Mbappé",
-          "value": 4,
+          "value": 5,
           "matches": 3
         },
         {
@@ -982,17 +982,17 @@
           "matches": 3
         },
         {
+          "name": "Ousmane Dembélé",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Adrien Rabiot",
           "value": 1,
           "matches": 1
         },
         {
           "name": "Aurélien Tchouaméni",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Bradley Barcola",
           "value": 1,
           "matches": 1
         }
@@ -5946,35 +5946,40 @@
       },
       "760492": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Ousmane Dembélé",
+            "team": "France"
+          }
+        ],
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 73.6,
-            "accuratePasses": 218,
-            "totalPasses": 242,
-            "shotsOnTarget": 3,
-            "totalShots": 10,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
+            "possessionPct": 71.3,
+            "accuratePasses": 249,
+            "totalPasses": 284,
+            "shotsOnTarget": 6,
+            "totalShots": 15,
+            "effectiveTackles": 3,
+            "totalTackles": 4,
             "accurateCrosses": 3,
-            "totalCrosses": 10,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 10
+            "totalCrosses": 11,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 14
           },
           {
             "team": "Sweden",
-            "possessionPct": 26.4,
-            "accuratePasses": 59,
-            "totalPasses": 87,
+            "possessionPct": 28.7,
+            "accuratePasses": 77,
+            "totalPasses": 114,
             "shotsOnTarget": 1,
-            "totalShots": 2,
-            "effectiveTackles": 4,
-            "totalTackles": 6,
+            "totalShots": 3,
+            "effectiveTackles": 5,
+            "totalTackles": 8,
             "accurateCrosses": 1,
-            "totalCrosses": 4,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 22
+            "totalCrosses": 6,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 30
           }
         ]
       }
