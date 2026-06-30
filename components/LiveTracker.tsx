@@ -558,15 +558,31 @@ function RoundGames({
   );
   if (fixtures.length === 0) return null;
 
-  // Bets the slip carries on each match: own singles + multi-leg parlays touching it.
+  // Everything in this round-grid is scoped to Rj's LATEST placement batch — the
+  // set of (non-mirror) specials sharing the most-recent placedAt date. Per-match
+  // badges therefore reconcile with the "latest batch · N parlays · M singles"
+  // chip below, instead of summing every slip ever placed. (placedAt is
+  // "DD/MM HH:MM"; rank by MM*100+DD so 01/07 sorts after 30/06.)
+  const dateRank = (p: string) => {
+    const [dd, mm] = (p.split(" ")[0] ?? "").split("/").map(Number);
+    return (mm || 0) * 100 + (dd || 0);
+  };
+  const allSpecials = days.flatMap((d) => d.matches.flatMap((m) => m.specials)).filter((s) => !s.mirror);
+  const latest = allSpecials.length ? Math.max(...allSpecials.map((s) => dateRank(s.placedAt))) : -1;
+  const inBatch = (s: SpecialRow) => dateRank(s.placedAt) === latest;
+
+  // Singles per match: this match's own non-parlay specials from the latest batch.
+  // (Regular score bets are an earlier, undated slip — out of batch, not counted.)
   const singlesByMatch = new Map<string, number>();
   for (const d of days)
     for (const m of d.matches) {
-      const n = m.bets.length + m.specials.filter((s) => !s.mirror && !isParlayRow(s)).length;
+      const n = m.specials.filter((s) => !s.mirror && !isParlayRow(s) && inBatch(s)).length;
       if (n > 0) singlesByMatch.set(m.matchId, (singlesByMatch.get(m.matchId) ?? 0) + n);
     }
+  // Parlays per match: only latest-batch parlays that use the tie as a leg.
   const parlaysByMatch = new Map<string, number>();
   for (const p of parlays) {
+    if (!inBatch(p.special)) continue;
     const legs = (p.special.grade as { legs?: { matchId?: string }[] }).legs ?? [];
     const touched = new Set(legs.map((l) => l.matchId).filter(Boolean) as string[]);
     for (const id of touched) parlaysByMatch.set(id, (parlaysByMatch.get(id) ?? 0) + 1);
@@ -574,23 +590,13 @@ function RoundGames({
 
   const withAction = fixtures.filter((f) => singlesByMatch.has(f.id) || parlaysByMatch.has(f.id)).length;
 
-  // Reconciliation: the per-match badges above are LIFETIME — every slip that
-  // ever used a tie as a leg. Rj reads the round in terms of his latest
-  // placement batch, so surface that batch's own parlay/single split too. A
-  // "batch" = all (non-mirror) specials sharing the latest placement date
-  // (placedAt is "DD/MM HH:MM"; rank by MM*100+DD so 01/07 sorts after 30/06).
-  const dateRank = (p: string) => {
-    const [dd, mm] = (p.split(" ")[0] ?? "").split("/").map(Number);
-    return (mm || 0) * 100 + (dd || 0);
-  };
-  const allSpecials = days.flatMap((d) => d.matches.flatMap((m) => m.specials)).filter((s) => !s.mirror);
+  // Header chip split for the latest batch (de-duped by slip).
   let batchParlays = 0;
   let batchSingles = 0;
-  if (allSpecials.length > 0) {
-    const latest = Math.max(...allSpecials.map((s) => dateRank(s.placedAt)));
+  if (latest >= 0) {
     const seen = new Set<string>();
     for (const s of allSpecials) {
-      if (dateRank(s.placedAt) !== latest || seen.has(s.slipNo)) continue;
+      if (!inBatch(s) || seen.has(s.slipNo)) continue;
       seen.add(s.slipNo);
       if (isParlayRow(s)) batchParlays++;
       else batchSingles++;
@@ -617,7 +623,8 @@ function RoundGames({
         </span>
       </div>
       <p className="mb-4 font-mono text-[0.6rem] leading-relaxed text-faint/60">
-        Per-match badges are lifetime — every slip that ever used the tie as a leg, not just the latest batch.
+        Per-match badges show your latest batch only — the parlays and singles you just placed. Earlier slips and
+        standalone score bets aren&apos;t counted here.
       </p>
 
       <ul className="divide-y divide-line/50">
