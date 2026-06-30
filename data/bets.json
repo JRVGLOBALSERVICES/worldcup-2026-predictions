@@ -11321,6 +11321,79 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83770448911",
+      "slipNo": "83770448911",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Acca · 12 legs",
+      "label": "Acca (R32/R16) — Norway win · France-Sweden U3.5 · Mexico-Ecuador BTTS · England qualify · USA-Bosnia O0.5 · Spain-Austria U4 · Portugal-Croatia U3.5 · Egypt qualify · Argentina-CapeVerde U3.5 · Colombia-Ghana BTTS · Belgium-Senegal U3.5 · Switzerland-Algeria BTTS (12 legs)",
+      "odds": 178.822,
+      "stake": 60,
+      "placedAt": "30/06 13:55",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "btts"
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 4
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "btts"
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "btts"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
