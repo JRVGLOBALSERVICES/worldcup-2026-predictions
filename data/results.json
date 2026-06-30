@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T18:30:04.480Z",
+    "generatedAt": "2026-06-30T18:40:03.947Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 56,
     "live": 1
@@ -7573,7 +7573,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "advanced": null,
@@ -7582,6 +7582,14 @@
           "team": "away",
           "scorer": "Antonio Nusa",
           "minute": 39,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Amad Diallo",
+          "minute": 74,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -7602,12 +7610,12 @@
           "away": 3
         },
         "sot": {
-          "home": 3,
+          "home": 4,
           "away": 3
         },
         "shots": {
-          "home": 10,
-          "away": 8
+          "home": 12,
+          "away": 7
         },
         "yellow": {
           "home": 0,
@@ -7663,10 +7671,10 @@
           "h2": {
             "half": 2,
             "anchorMinute": 67,
-            "source": "anchor",
-            "breakEndMinute": null,
-            "firstActionType": "Offside",
-            "firstActionMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot Off Target",
+            "firstActionMinute": 72,
             "isCorner": false,
             "reliable": true
           }

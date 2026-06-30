@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T18:30:07.686Z",
+    "generatedAt": "2026-06-30T18:40:08.059Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 60
   },
@@ -673,20 +673,20 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 45.2,
+        "display": "45.2%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
         "display": "44.4%",
         "matches": 3
-      },
-      {
-        "rank": 9,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 44.2,
-        "display": "44.2%",
-        "matches": 4
       },
       {
         "rank": 10,
@@ -784,8 +784,8 @@
         "rank": 1,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 41.9,
-        "display": "41.9%",
+        "value": 40,
+        "display": "40.0%",
         "matches": 4
       },
       {
@@ -2377,6 +2377,11 @@
           "matches": 3
         },
         {
+          "name": "Amad Diallo",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Franck Kessié",
           "value": 1,
           "matches": 1
@@ -2385,6 +2390,11 @@
       "assists": [
         {
           "name": "Ibrahim Sangaré",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Nicolas Pépé",
           "value": 1,
           "matches": 1
         },
@@ -5893,36 +5903,40 @@
           {
             "name": "Martin Ødegaard",
             "team": "Norway"
+          },
+          {
+            "name": "Nicolas Pépé",
+            "team": "Ivory Coast"
           }
         ],
         "teamBox": [
           {
             "team": "Ivory Coast",
-            "possessionPct": 50.2,
-            "accuratePasses": 266,
-            "totalPasses": 315,
-            "shotsOnTarget": 3,
-            "totalShots": 10,
+            "possessionPct": 48.4,
+            "accuratePasses": 296,
+            "totalPasses": 347,
+            "shotsOnTarget": 4,
+            "totalShots": 12,
             "effectiveTackles": 14,
             "totalTackles": 18,
             "accurateCrosses": 6,
             "totalCrosses": 24,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 30
+            "accurateLongBalls": 14,
+            "totalLongBalls": 31
           },
           {
             "team": "Norway",
-            "possessionPct": 49.8,
-            "accuratePasses": 279,
-            "totalPasses": 328,
+            "possessionPct": 51.6,
+            "accuratePasses": 335,
+            "totalPasses": 387,
             "shotsOnTarget": 3,
-            "totalShots": 8,
+            "totalShots": 7,
             "effectiveTackles": 9,
             "totalTackles": 16,
             "accurateCrosses": 5,
-            "totalCrosses": 7,
+            "totalCrosses": 9,
             "accurateLongBalls": 14,
-            "totalLongBalls": 28
+            "totalLongBalls": 29
           }
         ]
       }
