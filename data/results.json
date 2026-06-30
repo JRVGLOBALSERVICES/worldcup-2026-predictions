@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T21:20:18.140Z",
+    "generatedAt": "2026-06-30T21:30:03.047Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 57,
     "live": 1
@@ -7712,16 +7712,16 @@
       "updatedAt": "2026-06-30T21:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "sot": {
           "home": 2,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 3,
-          "away": 1
+          "home": 4,
+          "away": 2
         },
         "yellow": {
           "home": 0,
@@ -7737,7 +7737,7 @@
         },
         "cornersByHalf": {
           "home": [
-            1,
+            2,
             0
           ],
           "away": [
@@ -7751,18 +7751,29 @@
             0
           ],
           "away": [
-            1,
+            2,
             0
           ]
         },
         "playerSot": {
-          "Alexander Isak": 1,
+          "Alexander Isak": 2,
           "Lucas Digne": 1,
           "Kylian Mbappé": 1
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Foul",
+            "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
