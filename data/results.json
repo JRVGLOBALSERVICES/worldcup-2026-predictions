@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T17:30:04.354Z",
+    "generatedAt": "2026-06-30T17:40:03.856Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 56,
     "live": 1
@@ -7579,16 +7579,16 @@
       "updatedAt": "2026-06-30T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
+          "home": 7,
           "away": 1
         },
         "sot": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 1
         },
         "shots": {
-          "home": 2,
-          "away": 1
+          "home": 4,
+          "away": 3
         },
         "yellow": {
           "home": 0,
@@ -7604,7 +7604,7 @@
         },
         "cornersByHalf": {
           "home": [
-            3,
+            7,
             0
           ],
           "away": [
@@ -7614,15 +7614,18 @@
         },
         "sotByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Emmanuel Agbadou": 1,
+          "Erling Haaland": 1
+        },
         "firstGoalMethod": null,
         "firstPenalty": null,
         "waterBreak": {
@@ -7631,10 +7634,10 @@
             "anchorMinute": 22,
             "source": "delay",
             "breakEndMinute": 26,
-            "firstActionType": "Corner Awarded",
+            "firstActionType": "Shot Off Target",
             "firstActionMinute": 28,
-            "isCorner": true,
-            "reliable": false
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
