@@ -11646,6 +11646,158 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-rj-r32-acca-safe-1",
+      "slipNo": "TBC-1xbet-safe",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Acca · 12 legs (safest)",
+      "label": "SAFEST 12-fold (R32) — every leg Under 4.5 goals, survives any 0-0/1-0 (only loses at 5+ goals): Ivory Coast/Norway, France/Sweden, Mexico/Ecuador, England/DR Congo, Belgium/Senegal, USA/Bosnia, Spain/Austria, Portugal/Croatia, Switzerland/Algeria, Australia/Egypt, Argentina/Cape Verde, Colombia/Ghana",
+      "odds": 1.9911,
+      "stake": 100,
+      "placedAt": "30/06 23:05",
+      "punter": "Rj · Safest",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalUnder",
+            "line": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83785747001",
+      "slipNo": "83785747001",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Accumulator (12)",
+      "label": "REAL placed slip (R32) — 12-fold @ 105.27, RM50 → RM5,263.47: Ivory Coast/Norway O1.5 · France/Sweden O2.5 · Mexico/Ecuador 2X · England/DR Congo U3 · Belgium/Senegal BTTS · USA/Bosnia O1.5 · Spain/Austria U3.25 · Portugal/Croatia O1.5 · Switzerland/Algeria O2.5 · Australia/Egypt U3 · Argentina/Cape Verde U3 · Colombia/Ghana O1.5 (12 legs)",
+      "odds": 105.2694,
+      "stake": 50,
+      "placedAt": "30/06 23:08",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "doubleChance",
+            "outcome": "X2"
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "btts"
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.25
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalOver",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
