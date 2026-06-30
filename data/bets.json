@@ -11648,83 +11648,6 @@
       }
     },
     {
-      "id": "sp-rj-r32-acca-safe-1",
-      "slipNo": "TBC-1xbet-safe",
-      "matchId": "civ-nor-2026-06-30",
-      "player": "—",
-      "market": "Acca · 12 legs (safest)",
-      "label": "SAFEST 12-fold (R32) — every leg Under 4.5 goals, survives any 0-0/1-0 (only loses at 5+ goals): Ivory Coast/Norway, France/Sweden, Mexico/Ecuador, England/DR Congo, Belgium/Senegal, USA/Bosnia, Spain/Austria, Portugal/Croatia, Switzerland/Algeria, Australia/Egypt, Argentina/Cape Verde, Colombia/Ghana",
-      "odds": 1.9911,
-      "stake": 100,
-      "placedAt": "30/06 23:05",
-      "punter": "Rj · Safest",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "civ-nor-2026-06-30",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "fra-swe-2026-06-30",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "mex-ecu-2026-07-01",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "eng-cod-2026-07-01",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "bel-sen-2026-07-01",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "usa-bih-2026-07-02",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "esp-aut-2026-07-02",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "por-cro-2026-07-02",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "sui-alg-2026-07-03",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "aus-egy-2026-07-03",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "arg-cpv-2026-07-03",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "col-gha-2026-07-04",
-            "kind": "totalUnder",
-            "line": 4.5
-          }
-        ]
-      }
-    },
-    {
       "id": "sp-83785747001",
       "slipNo": "83785747001",
       "matchId": "civ-nor-2026-06-30",
@@ -15758,6 +15681,56 @@
           "reliable": true
         }
       }
+    },
+    "civ-nor-2026-06-30": {
+      "corners": {
+        "home": 2,
+        "away": 0
+      },
+      "sot": {
+        "home": 0,
+        "away": 0
+      },
+      "shots": {
+        "home": 1,
+        "away": 1
+      },
+      "yellow": {
+        "home": 0,
+        "away": 0
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 0,
+        "away": 0
+      },
+      "cornersByHalf": {
+        "home": [
+          2,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {},
+      "firstGoalMethod": null,
+      "firstPenalty": null,
+      "waterBreak": {}
     }
   }
 }
