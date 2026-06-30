@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T22:40:08.112Z",
+    "generatedAt": "2026-06-30T22:50:07.274Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 61
   },
@@ -644,12 +644,12 @@
         "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 46.5,
-        "display": "46.5%",
+        "value": 47.2,
+        "display": "47.2%",
         "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -666,16 +666,16 @@
       },
       {
         "rank": 7,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 45.2,
-        "display": "45.2%",
+        "team": "Sweden",
+        "flag": "🇸🇪",
+        "value": 45.5,
+        "display": "45.5%",
         "matches": 3
       },
       {
-        "rank": 7,
-        "team": "Sweden",
-        "flag": "🇸🇪",
+        "rank": 8,
+        "team": "Brazil",
+        "flag": "🇧🇷",
         "value": 45.2,
         "display": "45.2%",
         "matches": 3
@@ -740,14 +740,6 @@
       },
       {
         "rank": 6,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 69,
-        "display": "69.0%",
-        "matches": 4
-      },
-      {
-        "rank": 7,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
@@ -755,7 +747,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -763,7 +755,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 66.7,
@@ -771,12 +763,20 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
         "display": "66.7%",
         "matches": 2
+      },
+      {
+        "rank": 7,
+        "team": "Uzbekistan",
+        "flag": "🇺🇿",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 3
       }
     ],
     "crossCompletion": [
@@ -5963,31 +5963,31 @@
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 64.4,
-            "accuratePasses": 433,
-            "totalPasses": 493,
-            "shotsOnTarget": 11,
-            "totalShots": 23,
-            "effectiveTackles": 5,
-            "totalTackles": 8,
+            "possessionPct": 63.6,
+            "accuratePasses": 476,
+            "totalPasses": 540,
+            "shotsOnTarget": 12,
+            "totalShots": 24,
+            "effectiveTackles": 6,
+            "totalTackles": 12,
             "accurateCrosses": 3,
-            "totalCrosses": 14,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 33
+            "totalCrosses": 15,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 37
           },
           {
             "team": "Sweden",
-            "possessionPct": 35.6,
-            "accuratePasses": 208,
-            "totalPasses": 270,
-            "shotsOnTarget": 1,
-            "totalShots": 4,
-            "effectiveTackles": 5,
-            "totalTackles": 10,
+            "possessionPct": 36.4,
+            "accuratePasses": 240,
+            "totalPasses": 307,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 7,
+            "totalTackles": 13,
             "accurateCrosses": 2,
-            "totalCrosses": 8,
+            "totalCrosses": 9,
             "accurateLongBalls": 11,
-            "totalLongBalls": 42
+            "totalLongBalls": 43
           }
         ]
       }
