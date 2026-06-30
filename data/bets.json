@@ -15684,20 +15684,20 @@
     },
     "civ-nor-2026-06-30": {
       "corners": {
-        "home": 2,
-        "away": 0
+        "home": 11,
+        "away": 2
       },
       "sot": {
-        "home": 0,
-        "away": 0
+        "home": 3,
+        "away": 2
       },
       "shots": {
-        "home": 1,
-        "away": 1
+        "home": 9,
+        "away": 6
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -15705,32 +15705,48 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
-          2,
-          0
+          9,
+          2
         ],
         "away": [
-          0,
+          2,
           0
         ]
       },
       "sotByHalf": {
         "home": [
-          0,
-          0
+          1,
+          2
         ],
         "away": [
-          0,
+          1,
           0
         ]
       },
-      "playerSot": {},
-      "firstGoalMethod": null,
+      "playerSot": {
+        "Emmanuel Agbadou": 1,
+        "Erling Haaland": 1,
+        "Nicolas Pépé": 1,
+        "Franck Kessié": 1
+      },
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 26,
+          "firstActionType": "Shot Off Target",
+          "firstActionMinute": 28,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
