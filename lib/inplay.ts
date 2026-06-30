@@ -14,6 +14,51 @@ function legTeams(id: string): { home: string; away: string } {
   return { home: (h ?? "").toUpperCase(), away: (a ?? "").toUpperCase() };
 }
 
+// Spell a total line out as the concrete goal count it needs, so the slip never
+// shows a bare "under 1.5" — it shows what that actually means:
+//   Under 1.5 → "1 goal or fewer"      Over 1.5 → "2 goals or more"
+// Whole lines can land EXACTLY on the number (a stake refund), so we say so:
+//   Under 4   → "3 goals or fewer (exactly 4 goals = refund)"
+//   Over 4    → "5 goals or more (exactly 4 goals = refund)"
+function goalWord(n: number): string {
+  return `${n} goal${n === 1 ? "" : "s"}`;
+}
+function totalThreshold(line: number, dir: "under" | "over"): string {
+  const whole = Number.isInteger(line);
+  if (dir === "under") {
+    const max = whole ? line - 1 : Math.floor(line); // highest total that still wins
+    return whole
+      ? `${goalWord(max)} or fewer (exactly ${goalWord(line)} = refund)`
+      : `${goalWord(max)} or fewer`;
+  }
+  const min = whole ? line + 1 : Math.ceil(line); // lowest total that wins
+  return whole
+    ? `${goalWord(min)} or more (exactly ${goalWord(line)} = refund)`
+    : `${goalWord(min)} or more`;
+}
+
+// Spell out what a handicap line demands of `team`, instead of a bare
+// "Argentina −2". Mirrors the grader (diff = teamGoals + line − oppGoals;
+// >0 covers, =0 refunds, <0 loses):
+//   Argentina −2  → "must win by 3+ goals (win by exactly 2 = refund)"
+//   Brazil +1.5   → "covers if they win, draw, or lose by up to 1"
+function handicapPhrase(team: string, line: number): string {
+  if (line === 0) return `${team} level handicap — must win the match outright (a draw refunds the stake)`;
+  const signed = `${line >= 0 ? "+" : ""}${line}`;
+  const base = `${team} ${signed} handicap`;
+  const whole = Number.isInteger(line);
+  if (line < 0) {
+    const k = -line;
+    const need = Math.floor(k) + 1; // must win by this many goals or more
+    const refund = whole ? ` (win by exactly ${k} = refund)` : "";
+    return `${base} — must win by ${need}+ goals${refund}`;
+  }
+  const tol = whole ? line - 1 : Math.floor(line); // largest losing margin still safe
+  const cushion = tol <= 0 ? "win or draw" : `win, draw, or lose by up to ${tol}`;
+  const refund = whole ? ` (lose by exactly ${line} = refund)` : "";
+  return `${base} — covers if they ${cushion}${refund}`;
+}
+
 /**
  * Plain-English label for one acca leg — what the slip grid shows.
  * No bookmaker shorthand ("o2.5", "W1+BTTS", "U3"): every leg reads as a
@@ -41,15 +86,17 @@ export function legLabelFor(leg: MultiLegCond): string {
     case "cleanSheet":
       return `${side(leg.side)} to keep a clean sheet`;
     case "resultBtts": {
-      const r = leg.outcome === "1" ? `${h} win` : leg.outcome === "2" ? `${a} win` : "draw";
-      return `${m} — ${r} + both teams score${leg.negate ? " (no)" : ""}`;
+      // One combined selection — result AND both-teams-score on the SAME line,
+      // never split into two legs.
+      const r = leg.outcome === "1" ? `${h} to win` : leg.outcome === "2" ? `${a} to win` : "draw";
+      return `${m} — ${r} + both teams to score${leg.negate ? " (no)" : ""}`;
     }
     case "bttsEachOver":
       return `${m} — each team ${leg.line + 1}+ goals${leg.negate ? " (no)" : ""}`;
     case "totalUnder":
-      return `${m} — under ${leg.line} goals`;
+      return `${m} — under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
     case "totalOver":
-      return `${m} — over ${leg.line} goals`;
+      return `${m} — over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "doubleChance": {
       const dc =
         leg.outcome === "1X"
@@ -64,13 +111,13 @@ export function legLabelFor(leg: MultiLegCond): string {
         ? `${m} — level at half-time`
         : `${leg.outcome === "1" ? h : a} to lead at half-time`;
     case "resultAndTotalUnder":
-      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} win`} + under ${leg.line} goals`;
+      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
     case "resultAndTotalOver":
-      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} win`} + over ${leg.line} goals`;
+      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "individualTotalUnder":
-      return `${side(leg.side)} to score under ${leg.line}`;
+      return `${side(leg.side)} to score ${totalThreshold(leg.line, "under")}`;
     case "individualTotalOver":
-      return `${side(leg.side)} to score over ${leg.line}`;
+      return `${side(leg.side)} to score ${totalThreshold(leg.line, "over")}`;
     case "winsAtLeastOneHalf":
       return `${side(leg.side)} to win a half`;
     case "brace":
@@ -82,7 +129,7 @@ export function legLabelFor(leg: MultiLegCond): string {
     case "winByMargin":
       return `${m} — win by ${leg.line}+ goals`;
     case "handicap":
-      return `${side(leg.side)} ${leg.line >= 0 ? "+" : ""}${leg.line} handicap`;
+      return handicapPhrase(side(leg.side), leg.line);
     case "firstPenalty":
       return `${side(leg.side)} — first penalty of the match`;
     case "goalsAssistsOver":
@@ -103,7 +150,7 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — ${dc} + both teams score${leg.negate ? " (no)" : ""}`;
     }
     case "notBttsAndTotalOver":
-      return `${m} — a team to blank + over ${leg.line} goals`;
+      return `${m} — a team to blank + over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "scored":
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
     case "scoredAndScoreOneOf":
