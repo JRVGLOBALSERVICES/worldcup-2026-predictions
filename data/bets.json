@@ -11467,6 +11467,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83775487837",
+      "slipNo": "83775487837",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Acca · 3 legs",
+      "label": "Acca (3 legs) — Ivory Coast W1 · France-Sweden Ind.Total2 (Sweden) U1.5 · Mexico-Ecuador goal in 1st 15min (Over 0.5)",
+      "odds": 18.285,
+      "stake": 10,
+      "placedAt": "30/06 17:58",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "individualTotalUnder",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "totalOverByMinute",
+            "minute": 15,
+            "line": 0.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

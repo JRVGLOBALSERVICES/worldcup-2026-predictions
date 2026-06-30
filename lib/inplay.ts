@@ -1074,6 +1074,25 @@ export function inPlayMultiLeg(
       continue;
     }
 
+    if (leg.kind === "totalOverByMinute") {
+      // Goals (any team, own goals included) on or before `minute`, over `line`.
+      // Locks WON the instant a goal lands in the window; while it's still empty
+      // it's currently losing (neutral —); dead at FT if the window stayed empty.
+      const inWindow = lm.goals.filter(
+        (gl) => !gl.et && gl.minute != null && gl.minute <= leg.minute,
+      ).length;
+      if (inWindow > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
     if (leg.kind === "doubleChance") {
       // FT in the covered pair — like `result`, only locks at FT, never dead
       // mid-match (any current standing can still swing into the pair).

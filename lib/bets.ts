@@ -343,6 +343,12 @@ export type MultiLegCond =
   // Individual Total — one side's own goals under `line` ("Individual Total 2
   // Under (3.5)" → side:"away", line:3.5).
   | { matchId: string; kind: "individualTotalUnder"; side: "home" | "away"; line: number }
+  // Total goals scored on or before minute `minute`, over `line` ("Total Over
+  // 0.5 In 15 Minute" → minute:15, line:0.5 → won the moment any goal lands by
+  // min 15). Counts EVERY goal in the window (own goals included — it's a match
+  // total), regulation only since the window is < 90. Clinches mid-match; holds
+  // pending until finished, then loses if the window stayed empty.
+  | { matchId: string; kind: "totalOverByMinute"; minute: number; line: number }
   // Side wins AT LEAST ONE half ("Team 1/2 To Win At Least One Half — Yes").
   // A half is won when that side outscores the opponent in it: H1 off the HT
   // score, H2 off FT−HT. Wins iff the side takes H1 OR H2. Needs ht + ft.
@@ -916,6 +922,19 @@ export function gradeSpecial(special: Special): BetStatus {
         // Named player's GOALS only (no assists) over the line — clinches
         // mid-match like `scored`; dies only when the match ends short.
         if (goalsBy(ev.goals, leg.player).length > leg.line) continue; // leg won
+        if (finished) return "lost";
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "totalOverByMinute") {
+        // Goals (any team, own goals included) on or before `minute`, over `line`.
+        // Clinches the instant the window fills; otherwise pending until finished,
+        // then lost if it stayed empty.
+        const inWindow = ev.goals.filter(
+          (gl) => !gl.et && gl.minute != null && gl.minute <= leg.minute,
+        ).length;
+        if (inWindow > leg.line) continue; // leg won
         if (finished) return "lost";
         pending = true;
         continue;
