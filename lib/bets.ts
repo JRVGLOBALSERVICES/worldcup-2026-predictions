@@ -396,6 +396,11 @@ export type MultiLegCond =
   // blanks) AND the match total is over `line` ("At Least One Team Will Not Score
   // + Total Over (2.5) — Yes" → line:2.5). Decided off the FT score.
   | { matchId: string; kind: "notBttsAndTotalOver"; line: number }
+  // Asian/European handicap applied to `side` — that side's FT goals get `line`
+  // added, then compared to the opponent ("Handicap 1 (-2)" → side:"home",
+  // line:-2 → home must win by 3+; an exact 2-goal home win is a PUSH → VOIDs).
+  // 90-minute score; a void leg passes through a fixed-odds acca (won't reprice).
+  | { matchId: string; kind: "handicap"; side: "home" | "away"; line: number }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -1157,6 +1162,18 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!ft) return "lost";
         if (Math.abs(ft.home - ft.away) < leg.line) return "lost";
         continue;
+      }
+
+      if (leg.kind === "handicap") {
+        // Handicap on `side`: add `line` to that side's FT goals, compare to the
+        // opponent. Ahead → covered (won); exactly level → push (voids, passes
+        // through the fixed-odds acca); behind → lost. 90-minute score.
+        if (!ft) return "lost";
+        const mine = leg.side === "home" ? ft.home : ft.away;
+        const opp = leg.side === "home" ? ft.away : ft.home;
+        const diff = mine + leg.line - opp;
+        if (diff < 0) return "lost"; // failed to cover
+        continue; // diff > 0 won, diff === 0 push — both pass through
       }
 
       // Unrecognised leg kind — never blind-win; hold the acca pending so a

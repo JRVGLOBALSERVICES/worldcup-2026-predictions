@@ -79,6 +79,8 @@ export function legLabelFor(leg: MultiLegCond): string {
     }
     case "winByMargin":
       return `${m} — win by ${leg.line}+ goals`;
+    case "handicap":
+      return `${side(leg.side)} ${leg.line >= 0 ? "+" : ""}${leg.line} handicap`;
     case "firstPenalty":
       return `${side(leg.side)} — first penalty of the match`;
     case "goalsAssistsOver":
@@ -1303,6 +1305,30 @@ export function inPlayMultiLeg(
           parts.push(`${legLabel} ✗`);
         }
       } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "handicap") {
+      // Handicap on `side`: add `line` to that side's running goals, compare to
+      // the opponent. The adjusted margin swings both ways until FT, so it never
+      // dies early; locks at FT (exact push voids → passes through as neutral).
+      const mine = leg.side === "home" ? cur.home : cur.away;
+      const opp = leg.side === "home" ? cur.away : cur.home;
+      const covered = mine + leg.line >= opp; // ahead or level (push) = not dead
+      if (done) {
+        if (covered) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (mine + leg.line > opp) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
       } else {
