@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T16:26:38.519Z",
+    "generatedAt": "2026-06-30T16:30:08.991Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-06-30T16:26:38.519Z"
+    "modelUpdatedAt": "2026-06-30T16:30:08.989Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -14132,159 +14132,158 @@
       ],
       "pitchReport": {
         "facts": [
-          "Norway named their STRONGEST XI — Haaland AND Ødegaard both start (both rested in the 1-4 loss to France).",
-          "Ivory Coast benched Amad Diallo for an extra midfielder (Christ Inao Oulai) — a controlled, defensive 4-2-3-1 with Bonny as lone striker.",
-          "Norway group: 8 scored / 7 conceded, 0 clean sheets — high-event, leaky.",
-          "Ivory Coast group: 3 scored / 2 conceded, 2 clean sheets — low-event, defensively tight.",
-          "Haaland leads Norway with 4 goals in 2 starts; Pépé leads CIV with 2."
+          "Ivory Coast: 6 pts, +2 GD across 3 group games (4 for / 2 against).",
+          "Norway: 6 pts, +1 GD across 3 group games (8 for / 7 against).",
+          "Ivory Coast's Nicolas Pépé leads them with 2 goals in 3 games.",
+          "Norway's Erling Haaland leads them with 4 goals in 2 games."
         ],
         "assumptions": [
-          "Opta full-strength: Norway 56% / draw 22% / CIV 22% (90 min) — Norway should win territory and the shot battle.",
-          "CIV set up to contain and counter, not chase; Texas afternoon heat suppresses tempo and favours the deeper block."
+          "Model projects Norway to carry more of the ball and the better chances (higher attack rating); Ivory Coast to sit compact and play on the break.",
+          "Goal expectancy 2.0–1.4 (Ivory Coast–Norway) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "CONFIRMED. CIV (4-2-3-1): Y. Fofana; Doué, Kossounou, Agbadou, Konan; Sangaré, Kessié; Pépé, Oulai, Y. Diomandé; Bonny. NOR (4-3-3): Nyland; Pedersen, Ajer, Heggem, Møller Wolfe; Berge, Berg, Ødegaard; Nusa, Haaland, Sørloth.",
-        "motivation": "Knockout — win or out. Norway go full strength; CIV pack the midfield and sit. Expect a cagey, low-risk start that can open up late via Norway's deep attacking bench (Bobb, Strand Larsen, Schjelderup).",
-        "xgRead": "Norway shade the chance creation with the stars back in; CIV's threat is reactive — Pépé/Diomandé pace + set pieces into Bonny.",
-        "drawRisk": "Genuine — 22% modelled draw, and a possession-favourite-vs-deep-block profile in heat is exactly where favourites drop points. Give draw / DNB / under weight; downgrade Norway win-to-nil.",
-        "travel": "Arlington, TX afternoon heat/humidity — slows tempo, helps the patient lower block (Ivory Coast).",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Ivory Coast shade the chance-creation (2.0 vs 1.4 xG) — they should make the running.",
+        "drawRisk": "Moderate — 21.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
         "caseFor": [
-          "Norway at full strength (Haaland + Ødegaard + Sørloth) are the 56% Opta favourite and the form attack.",
-          "Haaland is in elite scoring form (4 in 2) — the cleanest anytime route on the card.",
-          "Norway's set-piece edge grows with Ødegaard taking nearly all dead balls (Ryerson out)."
+          "Norway are the model's 27.2% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Erling Haaland carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Norway can manage."
         ],
         "caseAgainst": [
-          "CIV's deep block + 2 group clean sheets + Texas heat = a real draw / low-event trap for a possession favourite.",
-          "Norway's defence is leaky (0 clean sheets, 7 conceded) — BTTS and a CIV goal are live, so win-to-nil is fragile."
+          "21.9% draw + Ivory Coast's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Norway's number may be inflated by one result."
         ],
-        "verdict": "Lean",
-        "changeMind": "A Norway collapse to CIV's counter, or the heat producing the stalemate the deep block is built for."
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": {
-        "source": "FanDuel / oddschecker (aggregated) — 1xBet board geo-blocked from US egress (fail-soft).",
-        "overroundPct": 6.8,
+        "source": "1xBet (PC)",
+        "overroundPct": 1.5,
         "legs": [
           {
             "market": "Match result",
-            "side": "Norway",
-            "price": "2.05",
-            "impliedPct": 48.8,
-            "fairPct": 45.7,
-            "modelPct": 52,
-            "edgePts": 6.3,
+            "side": "Ivory Coast",
+            "price": "3.77",
+            "impliedPct": 26.5,
+            "fairPct": 26.1,
+            "modelPct": 50.7,
+            "edgePts": 24.6,
             "verdict": "good"
           },
           {
             "market": "Match result",
             "side": "Draw",
-            "price": "3.35",
-            "impliedPct": 29.9,
-            "fairPct": 27.9,
-            "modelPct": 24,
-            "edgePts": -3.9,
+            "price": "3.75",
+            "impliedPct": 26.7,
+            "fairPct": 26.3,
+            "modelPct": 21.9,
+            "edgePts": -4.3,
             "verdict": "bad"
           },
           {
             "market": "Match result",
-            "side": "Ivory Coast",
-            "price": "3.55",
-            "impliedPct": 28.2,
-            "fairPct": 26.4,
-            "modelPct": 24,
-            "edgePts": -2.4,
+            "side": "Norway",
+            "price": "2.069",
+            "impliedPct": 48.3,
+            "fairPct": 47.6,
+            "modelPct": 27.2,
+            "edgePts": -20.4,
             "verdict": "bad"
           },
           {
             "market": "Over 2.5",
             "side": "Over 2.5",
-            "price": "1.88",
-            "impliedPct": 53.2,
-            "fairPct": 50.2,
-            "modelPct": 60,
-            "edgePts": 9.8,
+            "price": "1.795",
+            "impliedPct": 55.7,
+            "fairPct": 53.8,
+            "modelPct": 65,
+            "edgePts": 11.2,
             "verdict": "good"
           },
           {
             "market": "Under 2.5",
             "side": "Under 2.5",
-            "price": "1.95",
-            "impliedPct": 51.3,
-            "fairPct": 48.3,
-            "modelPct": 40,
-            "edgePts": -8.3,
+            "price": "2.087",
+            "impliedPct": 47.9,
+            "fairPct": 46.2,
+            "modelPct": 35,
+            "edgePts": -11.2,
             "verdict": "bad"
           }
         ],
-        "bestSide": "Norway",
-        "headline": "Norway at full strength is the value side (+6.3 pts over fair); Over 2.5 also edges (+9.8) but respect CIV's block.",
-        "capturedAt": "2026-06-30T16:26:38.519Z"
+        "bestSide": "Ivory Coast",
+        "headline": "Ivory Coast is the one number with positive value (+24.6 pts over fair).",
+        "capturedAt": "2026-06-29T08:48:01.733Z"
       },
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
-            "tripped": false,
-            "why": "Norway ~fair-to-slight-value (48.8% implied vs 52% model)."
+            "tripped": true,
+            "why": "You're paying 48.3% for a 27.2% thing — negative value on the favourite."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both confirmed strongest XIs, no rotation."
+            "why": "Knockout — both name strongest XI, no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
-            "tripped": false,
-            "why": "Norway's form spans two wins; Haaland's 4 goals across two games, not one rout."
+            "tripped": true,
+            "why": "Erling Haaland's 4 goals lean on ~1 big game — strip it and the attack looks ordinary."
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": true,
-            "why": "CIV's deep block + extra midfielder + Texas heat can throttle a possession favourite into a low-event game."
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs are CONFIRMED — Norway full strength, CIV bench Diallo. Scorer/lineup props now grounded."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
-            "tripped": true,
-            "why": "22% draw in a possession-fav-vs-block profile is the classic spot favourites drop points — give draw/DNB weight, downgrade win-to-nil."
+            "tripped": false,
+            "why": "Draw chance (21.9%) is low enough to discount."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model + confirmed-XI call, no tilt."
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
         "trapsTripped": 2,
-        "edge": "real edge",
-        "verdict": "PLAYABLE",
-        "discipline": "Norway are the better, full-strength side and the value pick — but being better isn't the same as a safe bet. Respect the draw against CIV's block, don't pay for a win-to-nil against a leaky Norway defence, and don't force goals in heat that suits the lower block."
+        "edge": "narrative-leaning",
+        "verdict": "LEAN",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
-        "verdict": "PLAYABLE",
-        "call": "Norway at full strength (Haaland + Ødegaard back in) to win — with the draw genuinely respected against CIV's deep block.",
+        "verdict": "LEAN",
+        "call": "Norway to win is a lean, not a lock — but the better value sits on Ivory Coast.",
         "read": {
-          "tag": "Lean",
-          "line": "Norway are ~56% full-strength favourites (Opta)."
+          "tag": "Pass",
+          "line": "Norway are the model's 27% pick."
         },
         "price": {
-          "tag": "Slight value on Norway",
-          "line": "Norway edge fair by about +6.3 points; Over 2.5 also edges but CIV's block is the offset."
+          "tag": "Value: Ivory Coast",
+          "line": "The real value is on Ivory Coast, not the pick — and Norway is a poor price."
         },
         "trap": {
           "tag": "2 warnings",
-          "line": "Cagey-knockout + draw risk vs CIV's block and the heat — lineups are now CONFIRMED, so scorer picks are solid."
+          "line": "You're paying over the odds for the favourite."
         }
       },
       "resolution": {
-        "ninety": 78.4,
-        "extraTime": 12.3,
-        "penalties": 9.3,
+        "ninety": 78.1,
+        "extraTime": 12.4,
+        "penalties": 9.5,
         "mostLikely": "Regulation",
-        "etWinner": "Norway",
-        "shootout": "Near coin-flip with the marginal nerve edge to Norway (Haaland from the spot).",
-        "note": "Most likely settled inside 90 (78.4%). But a 22% level 90 keeps extra time (12.3%) and penalties (9.3%) live — the bit a straight Norway win bet ignores, and CIV's block raises it."
+        "etWinner": "Ivory Coast",
+        "shootout": "Near coin-flip, with the marginal nerve edge to Norway.",
+        "note": "Most likely settled inside 90 (78.1%). But a 21.9% level 90 keeps extra time (12.4%) and penalties (9.5%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "fra-swe-2026-06-30": {
