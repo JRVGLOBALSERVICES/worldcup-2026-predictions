@@ -693,6 +693,22 @@ const FIRST_SCORER_VOID_TYPES = new Set<SpecialGrade["type"]>([
 
 /** Bookings for a player — accent-safe, same matcher as goals/assists. */
 const cardsBy = (cards: Card[], player: string) => cards.filter((c) => nameMatch(c.player, player));
+
+/**
+ * Whole-line Asian total push. A WHOLE (integer) Over/Under line that the
+ * integer goal total lands exactly on — Under 4 / Over 4 in a 4-goal game —
+ * voids: the stake is returned, exactly as a bookmaker (1xBet etc.) settles a
+ * whole-line Asian total. A void leg neither wins nor loses, so it passes
+ * through a fixed-odds acca unchanged.
+ *
+ * Half lines (3.5) and quarter lines (4.25) can NEVER be hit exactly by an
+ * integer total, so this only ever fires on whole lines — which is precisely
+ * the edge that used to read "Lost" where a book would refund. Returns true
+ * when the leg should PUSH. Mirrors the same logic already used by
+ * `individualTotalOver` and `handicap`.
+ */
+export const wholeLinePush = (total: number, line: number): boolean =>
+  Number.isInteger(line) && total === line;
 const isFinalScore = (ft: Score, home: number, away: number) =>
   !!ft && ft.home === home && ft.away === away;
 const isDraw = (ft: Score) => !!ft && ft.home === ft.away;
@@ -1057,10 +1073,15 @@ export function gradeSpecial(special: Special): BetStatus {
 
       if (leg.kind === "notBttsAndTotalOver") {
         // At least one team failed to score (NOT btts) AND total over `line`.
+        // NOT-btts fails → lost; else over → won, whole-line exact total → combo
+        // voids, under → lost.
         if (!ft) return "lost";
         const oneBlank = ft.home === 0 || ft.away === 0;
-        if (!(oneBlank && ft.home + ft.away > leg.line)) return "lost";
-        continue;
+        if (!oneBlank) return "lost";
+        const total = ft.home + ft.away;
+        if (total > leg.line) continue; // both parts hit → won
+        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        return "lost"; // total under → lost
       }
 
       if (leg.kind === "bttsEachOver") {
@@ -1072,19 +1093,25 @@ export function gradeSpecial(special: Special): BetStatus {
       }
 
       if (leg.kind === "totalUnder") {
-        // Total match goals under `line` (integer goals → exact for whole &
-        // quarter lines; directionally correct for the .25 push-leg).
+        // Total match goals under `line`. Under → won; a whole-line exact total
+        // (Under 4 in a 4-goal game) is a push → voids and passes through the
+        // fixed-odds acca; strictly over loses. Half/quarter lines never hit ===.
         if (!ft) return "lost";
-        if (!(ft.home + ft.away < leg.line)) return "lost";
-        continue;
+        const total = ft.home + ft.away;
+        if (total < leg.line) continue; // under → won
+        if (wholeLinePush(total, leg.line)) continue; // exact whole line → push
+        return "lost"; // over → lost
       }
 
       if (leg.kind === "totalOver") {
-        // Total match goals over `line` (integer goals → exact for whole & half
-        // lines; mirror of totalUnder).
+        // Total match goals over `line` (mirror of totalUnder). Over → won; a
+        // whole-line exact total (Over 4 in a 4-goal game) is a push → voids;
+        // strictly under loses.
         if (!ft) return "lost";
-        if (!(ft.home + ft.away > leg.line)) return "lost";
-        continue;
+        const total = ft.home + ft.away;
+        if (total > leg.line) continue; // over → won
+        if (wholeLinePush(total, leg.line)) continue; // exact whole line → push
+        return "lost"; // under → lost
       }
 
       if (leg.kind === "doubleChance") {
@@ -1105,19 +1132,27 @@ export function gradeSpecial(special: Special): BetStatus {
       }
 
       if (leg.kind === "resultAndTotalUnder") {
-        // 1X2 outcome AND total goals under `line`.
+        // 1X2 outcome AND total goals under `line`. Result part fails → lost. If
+        // it holds, the total decides: under → won; whole-line exact total →
+        // the total component pushes so the combined market voids; over → lost.
         if (!ft) return "lost";
         const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
-        if (!(outcome === leg.outcome && ft.home + ft.away < leg.line)) return "lost";
-        continue;
+        if (outcome !== leg.outcome) return "lost";
+        const total = ft.home + ft.away;
+        if (total < leg.line) continue; // both parts hit → won
+        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        return "lost"; // total over → lost
       }
 
       if (leg.kind === "individualTotalUnder") {
-        // One side's own goals under `line`.
+        // One side's own goals under `line`. Under → won; a whole-line exact
+        // tally (line 2, scored 2) is a push → voids and passes through; over
+        // loses. Mirror of individualTotalOver. (Half lines never hit ===.)
         if (!ft) return "lost";
         const scored = leg.side === "home" ? ft.home : ft.away;
-        if (!(scored < leg.line)) return "lost";
-        continue;
+        if (scored < leg.line) continue; // under → won
+        if (wholeLinePush(scored, leg.line)) continue; // exact whole line → push
+        return "lost"; // over → lost
       }
 
       if (leg.kind === "individualTotalOver") {
@@ -1165,11 +1200,15 @@ export function gradeSpecial(special: Special): BetStatus {
 
       if (leg.kind === "resultAndTotalOver") {
         // 1X2 outcome AND total goals over `line` (over-mirror of
-        // resultAndTotalUnder).
+        // resultAndTotalUnder). Result fails → lost; else over → won, whole-line
+        // exact total → combo voids, under → lost.
         if (!ft) return "lost";
         const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
-        if (!(outcome === leg.outcome && ft.home + ft.away > leg.line)) return "lost";
-        continue;
+        if (outcome !== leg.outcome) return "lost";
+        const total = ft.home + ft.away;
+        if (total > leg.line) continue; // both parts hit → won
+        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        return "lost"; // total under → lost
       }
 
       if (leg.kind === "winByMargin") {

@@ -1,5 +1,5 @@
 import type { Goal, Card, Score, SpecialGrade, BetStatus, MultiLegCond } from "./bets";
-import { comboDead, evalCombo, playerSotCount, playerStarted } from "./bets";
+import { comboDead, evalCombo, playerSotCount, playerStarted, wholeLinePush } from "./bets";
 import type { LiveMatch } from "./live";
 import fixturesJson from "@/data/fixtures.json";
 import type { Fixture } from "./types";
@@ -998,11 +998,15 @@ export function inPlayMultiLeg(
         parts.push(`${legLabel} ✗`);
         continue;
       }
-      const hitting = cur.home + cur.away > leg.line; // one side is on 0 here
+      const total = cur.home + cur.away; // one side is on 0 here
+      const hitting = total > leg.line;
       if (done) {
         if (hitting) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
+        } else if (wholeLinePush(total, leg.line)) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // total pushes → combo voids, passes through
         } else {
           dead = true;
           parts.push(`${legLabel} ✗`);
@@ -1045,15 +1049,18 @@ export function inPlayMultiLeg(
     }
 
     if (leg.kind === "totalUnder") {
-      // Total goals under line. Goals only accrue → dies the moment the running
-      // total reaches the line; locks WON at FT if still under.
+      // Total goals under line. Dies only when the running total goes STRICTLY
+      // OVER the line — a whole-line exact total (4 goals on Under 4) is a push
+      // that voids and passes through the fixed-odds acca (same as handicap), so
+      // it stays alive at 4 and only dies on a 5th goal. Locks at FT.
       const total = cur.home + cur.away;
-      if (!(total < leg.line)) {
+      if (total > leg.line) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else if (done) {
+        // total <= line at FT: under → won; exact whole line → push (passes through)
         wonCount++;
-        parts.push(`${legLabel} ✓`);
+        parts.push(`${legLabel} ${wholeLinePush(total, leg.line) ? "↺" : "✓"}`);
       } else {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
@@ -1063,15 +1070,21 @@ export function inPlayMultiLeg(
 
     if (leg.kind === "totalOver") {
       // Total goals over line. Goals only accrue → locks WON the moment the
-      // running total clears the line; dead at FT if it never got there. While
-      // still short it's currently losing, so it shows neutral pending, not "on track".
+      // running total clears the line; while still short it shows neutral. At FT
+      // a whole-line exact total (4 goals on Over 4) is a push → voids and passes
+      // through the fixed-odds acca; strictly under is dead.
       const total = cur.home + cur.away;
       if (total > leg.line) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (done) {
-        dead = true;
-        parts.push(`${legLabel} ✗`);
+        if (wholeLinePush(total, leg.line)) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // push → void, passes through
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
       } else {
         parts.push(`${legLabel} —`);
       }
@@ -1144,22 +1157,27 @@ export function inPlayMultiLeg(
       // 1X2 AND total under line. The total can only die early (goals accrue);
       // the result swings until FT, so the combo locks only at FT.
       const total = cur.home + cur.away;
-      if (!(total < leg.line)) {
+      if (total > leg.line) {
+        // Strictly over — the under-part can't come back, so the combo is dead.
         dead = true;
         parts.push(`${legLabel} ✗`);
         continue;
       }
       const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
       const hitting = outcome === leg.outcome;
+      const totalPush = wholeLinePush(total, leg.line); // exact whole line → total voids
       if (done) {
-        if (hitting) {
+        if (hitting && total < leg.line) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
+        } else if (hitting && totalPush) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // total component pushes → combo voids
         } else {
           dead = true;
           parts.push(`${legLabel} ✗`);
         }
-      } else if (hitting) {
+      } else if (hitting && total < leg.line) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
       } else {
@@ -1169,15 +1187,16 @@ export function inPlayMultiLeg(
     }
 
     if (leg.kind === "individualTotalUnder") {
-      // One side's goals under line. Goals only accrue → dies the moment that
-      // side reaches the line; locks WON at FT if still under.
+      // One side's goals under line. Dies only when that side goes STRICTLY OVER
+      // the line — a whole-line exact tally (2 goals on Under 2) is a push that
+      // voids and passes through. Locks at FT.
       const sideGoals = leg.side === "home" ? cur.home : cur.away;
-      if (!(sideGoals < leg.line)) {
+      if (sideGoals > leg.line) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else if (done) {
         wonCount++;
-        parts.push(`${legLabel} ✓`);
+        parts.push(`${legLabel} ${wholeLinePush(sideGoals, leg.line) ? "↺" : "✓"}`);
       } else {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
@@ -1195,8 +1214,9 @@ export function inPlayMultiLeg(
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (done) {
-        if (sideGoals === leg.line) {
-          parts.push(`${legLabel} —`); // push → void, passes through
+        if (wholeLinePush(sideGoals, leg.line)) {
+          wonCount++; // push → void, passes through (must count so the acca can settle)
+          parts.push(`${legLabel} ↺`);
         } else {
           dead = true;
           parts.push(`${legLabel} ✗`);
@@ -1298,11 +1318,16 @@ export function inPlayMultiLeg(
       // is banked), but the result swings until FT, so the combo locks only at FT.
       const total = cur.home + cur.away;
       const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
-      const hitting = total > leg.line && outcome === leg.outcome;
+      const resultOk = outcome === leg.outcome;
+      const hitting = total > leg.line && resultOk;
+      const totalPush = wholeLinePush(total, leg.line); // exact whole line → total voids
       if (done) {
         if (hitting) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
+        } else if (resultOk && totalPush) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // total component pushes → combo voids
         } else {
           dead = true;
           parts.push(`${legLabel} ✗`);
