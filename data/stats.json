@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T18:40:08.059Z",
+    "generatedAt": "2026-06-30T18:50:06.527Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 60
   },
@@ -19,11 +19,11 @@
         "name": "Erling Haaland",
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 4,
-        "matches": 2
+        "value": 5,
+        "matches": 3
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
@@ -31,7 +31,7 @@
         "matches": 3
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -39,7 +39,7 @@
         "matches": 3
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Vinícius Júnior",
         "team": "Brazil",
         "flag": "🇧🇷",
@@ -650,6 +650,14 @@
       },
       {
         "rank": 5,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 46.5,
+        "display": "46.5%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 45.8,
@@ -657,7 +665,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "France",
         "flag": "🇫🇷",
         "value": 45.8,
@@ -665,20 +673,12 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
         "display": "45.2%",
         "matches": 3
-      },
-      {
-        "rank": 7,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 45.2,
-        "display": "45.2%",
-        "matches": 4
       },
       {
         "rank": 9,
@@ -756,14 +756,6 @@
       },
       {
         "rank": 8,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 67.2,
-        "display": "67.2%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -771,7 +763,15 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
@@ -784,8 +784,8 @@
         "rank": 1,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 40,
-        "display": "40.0%",
+        "value": 39.1,
+        "display": "39.1%",
         "matches": 4
       },
       {
@@ -1080,8 +1080,8 @@
       "scorers": [
         {
           "name": "Erling Haaland",
-          "value": 4,
-          "matches": 2
+          "value": 5,
+          "matches": 3
         },
         {
           "name": "Antonio Nusa",
@@ -1111,17 +1111,17 @@
           "matches": 3
         },
         {
+          "name": "Patrick Berg",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Andreas Schjelderup",
           "value": 1,
           "matches": 1
         },
         {
           "name": "David Møller Wolfe",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Patrick Berg",
           "value": 1,
           "matches": 1
         }
@@ -5907,36 +5907,40 @@
           {
             "name": "Nicolas Pépé",
             "team": "Ivory Coast"
+          },
+          {
+            "name": "Patrick Berg",
+            "team": "Norway"
           }
         ],
         "teamBox": [
           {
             "team": "Ivory Coast",
-            "possessionPct": 48.4,
-            "accuratePasses": 296,
-            "totalPasses": 347,
+            "possessionPct": 46.1,
+            "accuratePasses": 315,
+            "totalPasses": 371,
             "shotsOnTarget": 4,
             "totalShots": 12,
-            "effectiveTackles": 14,
-            "totalTackles": 18,
+            "effectiveTackles": 16,
+            "totalTackles": 22,
             "accurateCrosses": 6,
             "totalCrosses": 24,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 31
+            "accurateLongBalls": 15,
+            "totalLongBalls": 35
           },
           {
             "team": "Norway",
-            "possessionPct": 51.6,
-            "accuratePasses": 335,
-            "totalPasses": 387,
-            "shotsOnTarget": 3,
-            "totalShots": 7,
-            "effectiveTackles": 9,
-            "totalTackles": 16,
+            "possessionPct": 53.9,
+            "accuratePasses": 395,
+            "totalPasses": 451,
+            "shotsOnTarget": 4,
+            "totalShots": 8,
+            "effectiveTackles": 10,
+            "totalTackles": 18,
             "accurateCrosses": 5,
-            "totalCrosses": 9,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 29
+            "totalCrosses": 10,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 32
           }
         ]
       }

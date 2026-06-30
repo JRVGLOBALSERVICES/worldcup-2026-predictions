@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T18:40:03.947Z",
+    "generatedAt": "2026-06-30T18:50:02.623Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 56,
     "live": 1
@@ -7574,7 +7574,7 @@
       "finishPhase": null,
       "score": {
         "home": 1,
-        "away": 1
+        "away": 2
       },
       "advanced": null,
       "goals": [
@@ -7590,6 +7590,14 @@
           "team": "home",
           "scorer": "Amad Diallo",
           "minute": 74,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Erling Haaland",
+          "minute": 85,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -7611,11 +7619,11 @@
         },
         "sot": {
           "home": 4,
-          "away": 3
+          "away": 4
         },
         "shots": {
           "home": 12,
-          "away": 7
+          "away": 8
         },
         "yellow": {
           "home": 0,
