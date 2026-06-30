@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T22:50:02.930Z",
+    "generatedAt": "2026-06-30T23:00:04.971Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 57,
-    "live": 1
+    "finished": 58,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -7697,19 +7697,25 @@
       }
     },
     "fra-swe-2026-06-30": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 3,
+        "away": 0
+      },
+      "ft90": {
+        "home": 3,
+        "away": 0
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 3,
         "away": 0
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "home",
@@ -7745,11 +7751,11 @@
         },
         "sot": {
           "home": 12,
-          "away": 2
+          "away": 3
         },
         "shots": {
-          "home": 24,
-          "away": 6
+          "home": 25,
+          "away": 8
         },
         "yellow": {
           "home": 0,
@@ -7780,7 +7786,7 @@
           ],
           "away": [
             1,
-            1
+            2
           ]
         },
         "playerSot": {
@@ -7791,7 +7797,8 @@
           "Michael Olise": 3,
           "Désiré Doué": 1,
           "Bradley Barcola": 1,
-          "Viktor Gyökeres": 1
+          "Viktor Gyökeres": 1,
+          "Mattias Svanberg": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -7810,7 +7817,7 @@
             "half": 2,
             "anchorMinute": 67,
             "source": "delay",
-            "breakEndMinute": 71,
+            "breakEndMinute": 70,
             "firstActionType": "Shot On Target",
             "firstActionMinute": 71,
             "isCorner": false,
