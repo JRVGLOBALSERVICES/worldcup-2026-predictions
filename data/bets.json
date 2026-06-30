@@ -5096,6 +5096,67 @@
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
   "specials": [
     {
+      "id": "sp-83768754725",
+      "slipNo": "83768754725",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Acca · 9 legs",
+      "label": "Acca (R32) — Norway/Ecuador/Senegal to qualify · England/USA/Portugal/Argentina/Colombia to qualify · Dembélé to score (9 legs)",
+      "odds": 49.54,
+      "stake": 50,
+      "placedAt": "30/06 12:03",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "scored",
+            "player": "Ousmane Dembele"
+          }
+        ]
+      }
+    },
+    {
       "id": "sp-83769094143",
       "slipNo": "83769094143",
       "matchId": "fra-swe-2026-06-30",
