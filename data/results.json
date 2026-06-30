@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T17:40:03.856Z",
+    "generatedAt": "2026-06-30T17:50:02.869Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 56,
     "live": 1
@@ -7571,28 +7571,44 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
-      "cards": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Antonio Nusa",
+          "minute": 39,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Antonio Nusa",
+          "minute": 45,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-06-30T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 7,
-          "away": 1
+          "home": 9,
+          "away": 2
         },
         "sot": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 4,
-          "away": 3
+          "home": 5,
+          "away": 6
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -7600,15 +7616,15 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
-            7,
+            9,
             0
           ],
           "away": [
-            1,
+            2,
             0
           ]
         },
@@ -7626,7 +7642,7 @@
           "Emmanuel Agbadou": 1,
           "Erling Haaland": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {

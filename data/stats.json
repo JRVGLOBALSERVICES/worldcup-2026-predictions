@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T17:40:06.333Z",
+    "generatedAt": "2026-06-30T17:50:06.558Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 60
   },
@@ -114,6 +114,14 @@
       },
       {
         "rank": 2,
+        "name": "Martin Ødegaard",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 3,
+        "matches": 3
+      },
+      {
+        "rank": 2,
         "name": "Michael Olise",
         "team": "France",
         "flag": "🇫🇷",
@@ -121,7 +129,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Brahim Díaz",
         "team": "Morocco",
         "flag": "🇲🇦",
@@ -129,7 +137,7 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Breel Embolo",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -137,7 +145,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -145,7 +153,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Chris Wood",
         "team": "New Zealand",
         "flag": "🇳🇿",
@@ -153,18 +161,10 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Crysencio Summerville",
         "team": "Netherlands",
         "flag": "🇳🇱",
-        "value": 2,
-        "matches": 4
-      },
-      {
-        "rank": 5,
-        "name": "Deniz Undav",
-        "team": "Germany",
-        "flag": "🇩🇪",
         "value": 2,
         "matches": 4
       }
@@ -674,14 +674,6 @@
       },
       {
         "rank": 8,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 44.7,
-        "display": "44.7%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -689,12 +681,20 @@
         "matches": 3
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 43.9,
+        "display": "43.9%",
+        "matches": 4
       }
     ],
     "tackleSuccess": [
@@ -764,19 +764,19 @@
       },
       {
         "rank": 8,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
         "display": "66.7%",
         "matches": 2
-      },
-      {
-        "rank": 8,
-        "team": "Uzbekistan",
-        "flag": "🇺🇿",
-        "value": 66.7,
-        "display": "66.7%",
-        "matches": 3
       }
     ],
     "crossCompletion": [
@@ -784,8 +784,8 @@
         "rank": 1,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 38.5,
-        "display": "38.5%",
+        "value": 41.5,
+        "display": "41.5%",
         "matches": 4
       },
       {
@@ -832,8 +832,8 @@
         "rank": 7,
         "team": "Ivory Coast",
         "flag": "🇨🇮",
-        "value": 31.6,
-        "display": "31.6%",
+        "value": 31.7,
+        "display": "31.7%",
         "matches": 3
       },
       {
@@ -1107,8 +1107,8 @@
       "assists": [
         {
           "name": "Martin Ødegaard",
-          "value": 2,
-          "matches": 2
+          "value": 3,
+          "matches": 3
         },
         {
           "name": "Andreas Schjelderup",
@@ -1127,6 +1127,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Antonio Nusa",
+          "value": 1
+        },
         {
           "name": "Patrick Berg",
           "value": 1
@@ -5885,35 +5889,40 @@
       },
       "760490": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Martin Ødegaard",
+            "team": "Norway"
+          }
+        ],
         "teamBox": [
           {
             "team": "Ivory Coast",
-            "possessionPct": 43.9,
-            "accuratePasses": 136,
-            "totalPasses": 161,
+            "possessionPct": 43.8,
+            "accuratePasses": 153,
+            "totalPasses": 188,
             "shotsOnTarget": 1,
-            "totalShots": 4,
-            "effectiveTackles": 9,
-            "totalTackles": 11,
-            "accurateCrosses": 4,
-            "totalCrosses": 13,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 14
+            "totalShots": 5,
+            "effectiveTackles": 10,
+            "totalTackles": 13,
+            "accurateCrosses": 5,
+            "totalCrosses": 16,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 18
           },
           {
             "team": "Norway",
-            "possessionPct": 56.1,
-            "accuratePasses": 195,
-            "totalPasses": 219,
-            "shotsOnTarget": 1,
-            "totalShots": 3,
-            "effectiveTackles": 4,
-            "totalTackles": 11,
-            "accurateCrosses": 2,
-            "totalCrosses": 3,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 16
+            "possessionPct": 56.2,
+            "accuratePasses": 223,
+            "totalPasses": 256,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 6,
+            "totalTackles": 12,
+            "accurateCrosses": 4,
+            "totalCrosses": 5,
+            "accurateLongBalls": 11,
+            "totalLongBalls": 18
           }
         ]
       }
