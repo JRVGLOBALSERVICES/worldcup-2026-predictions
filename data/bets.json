@@ -859,6 +859,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
+    },
+    "ger-par-2026-06-29": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 1
+      },
+      "ft90": {
+        "home": 1,
+        "away": 1
+      },
+      "finishPhase": "penalties",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3332,6 +3348,65 @@
           "team": "away",
           "player": "Junnosuke Suzuki",
           "minute": 83,
+          "type": "yellow"
+        }
+      ]
+    },
+    "ger-par-2026-06-29": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Julio Enciso",
+          "minute": 41,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Kai Havertz",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Andrés Cubas",
+          "minute": 64,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Unknown",
+          "minute": 105,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Unknown",
+          "minute": 105,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Kai Havertz",
+          "minute": 106,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Jamal Musiala",
+          "minute": 115,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Matías Galarza",
+          "minute": 117,
           "type": "yellow"
         }
       ]
