@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T19:10:05.980Z",
+    "generatedAt": "2026-06-30T20:22:00.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-06-30T19:10:05.980Z"
+    "modelUpdatedAt": "2026-06-30T20:22:00.000Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -14289,63 +14289,55 @@
     "fra-swe-2026-06-30": {
       "win": {
         "pick": "France",
-        "fairOdds": "1.22",
-        "reason": "Model: France to win at 82% (France 82% / draw 7% / Sweden 5%). Expected goals 4.2–1.1 from group-stage attack/defence rates (France 2.6 for / 1.0 against per game, Sweden 2.0 / 2.0). Most likely score 4-1.",
-        "strength": 5
+        "fairOdds": "1.55",
+        "reason": "France won all three group games with a 100% record (Mbappé and Dembélé four goals each, Olise the tournament's leading assist-maker), fielding a full-strength 4-2-3-1 with Mbappé, Dembélé, Olise and Barcola ahead of Tchouaméni–Rabiot. But Graham Potter's Sweden are a genuine deep-block counter side who out-xG'd both playoff opponents on sub-33% possession, so the lopsided-scoreline risk is real — France should win, but not as comfortably as a 4-1 implies.",
+        "strength": 4
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "5.53",
+        "fairOdds": "3.10",
         "alt": "0-0",
-        "altOdds": "9.84"
+        "altOdds": "2.90"
       },
       "htft": {
         "pick": "France/France",
-        "fairOdds": "1.53"
+        "fairOdds": "2.30"
       },
       "fullTime": {
-        "score": "4-1",
-        "fairOdds": "14.03"
+        "score": "2-0",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "fairOdds": "1.52",
+          "fairOdds": "1.75",
           "banker": true,
-          "note": "4 goals in 3 group games; 66% modelled anytime chance on 4.2 team xG.",
-          "strength": 5
+          "note": "Four group-stage goals, France captain and primary penalty taker; gets the most high-quality chances against a back three now missing Hien.",
+          "strength": 4
         },
         {
           "player": "Ousmane Dembélé",
           "team": "France",
-          "fairOdds": "1.52",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "4 goals in 3 group games; 66% modelled anytime chance on 4.2 team xG.",
-          "strength": 5
+          "note": "Also four group goals; isolates Gudmundsson on the right and cuts inside onto his left — repeat threat all night.",
+          "strength": 4
         },
         {
           "player": "Bradley Barcola",
           "team": "France",
-          "fairOdds": "2.44",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "1 goal in 1 group game; 41% modelled anytime chance on 4.2 team xG.",
+          "note": "Starts ahead of the benched Désiré Doué; pace down the left targets Sweden's wing-back channel on the overload side.",
           "strength": 3
         },
         {
-          "player": "Désiré Doué",
-          "team": "France",
-          "fairOdds": "2.44",
-          "banker": false,
-          "note": "1 goal in 1 group game; 41% modelled anytime chance on 4.2 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Anthony Elanga",
+          "player": "Viktor Gyökeres",
           "team": "Sweden",
-          "fairOdds": "2.77",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "2 goals in 3 group games; 36% modelled anytime chance on 1.1 team xG.",
+          "note": "Sweden's penalty taker and best in-behind runner; France's high line under Saliba/Upamecano is exactly the space he hunts on the counter.",
           "strength": 3
         }
       ],
@@ -14353,42 +14345,35 @@
         {
           "player": "Michael Olise",
           "team": "France",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "3 assists in the group stage; 58% modelled chance to set one up."
-        },
-        {
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "fairOdds": "1.72",
+          "fairOdds": "3.00",
           "banker": false,
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Leads the tournament assist chart; chief creator and on free-kick/corner duty."
         },
         {
-          "player": "Adrien Rabiot",
+          "player": "Ousmane Dembélé",
           "team": "France",
-          "fairOdds": "2.24",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "1 assist in the group stage; 45% modelled chance to set one up."
+          "note": "Creator as well as scorer; his cutbacks from the right byline feed Mbappé and Barcola."
         },
         {
-          "player": "Alexander Isak",
+          "player": "Anthony Elanga",
           "team": "Sweden",
-          "fairOdds": "2.46",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "3 assists in the group stage; 41% modelled chance to set one up."
+          "note": "Two goals this tournament and Sweden's quickest transition outlet; most likely to spring Gyökeres/Isak on the break."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Kylian Mbappé",
         "backup": "Ousmane Dembélé",
-        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
+        "note": "Mbappé is France's go-to and a reliable converter; Dembélé next if the order shifts. Sweden's taker is Gyökeres. Medium likelihood given France's volume of box entries against a back three."
       },
       "lineups": {
-        "home": "Mike Maignan, Maxence Lacroix, Dayot Upamecano, Theo Hernández, Jules Koundé, Michael Olise, Manu Koné, Aurélien Tchouaméni, Kylian Mbappé, Désiré Doué, Ousmane Dembélé",
-        "away": "Jacob Widell Zetterström, Isak Hien, Gabriel Gudmundsson, Gustaf Lagerbielke, Yasin Ayari, Victor Lindelöf, Elliot Stroud, Alexander Bernhardsson, Viktor Gyökeres, Alexander Isak, Anthony Elanga",
-        "status": "unconfirmed",
+        "home": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Aurélien Tchouaméni, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Bradley Barcola, Kylian Mbappé",
+        "away": "Jacob Widell Zetterström, Gustaf Lagerbielke, Victor Nilsson Lindelöf, Gabriel Gudmundsson, Daniel Svensson, Yasin Ayari, Lucas Bergvall, Elliot Stroud, Anthony Elanga, Alexander Isak, Viktor Gyökeres",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -14398,9 +14383,9 @@
               "pos": "G"
             },
             {
-              "num": 26,
-              "name": "Maxence Lacroix",
-              "pos": "CD-L"
+              "num": 5,
+              "name": "Jules Koundé",
+              "pos": "RB"
             },
             {
               "num": 4,
@@ -14408,14 +14393,29 @@
               "pos": "CD-R"
             },
             {
-              "num": 19,
-              "name": "Theo Hernández",
+              "num": 17,
+              "name": "William Saliba",
+              "pos": "CD-L"
+            },
+            {
+              "num": 21,
+              "name": "Lucas Digne",
               "pos": "LB"
             },
             {
-              "num": 5,
-              "name": "Jules Koundé",
-              "pos": "RB"
+              "num": 8,
+              "name": "Aurélien Tchouaméni",
+              "pos": "DM-R"
+            },
+            {
+              "num": 14,
+              "name": "Adrien Rabiot",
+              "pos": "DM-L"
+            },
+            {
+              "num": 7,
+              "name": "Ousmane Dembélé",
+              "pos": "AM-R"
             },
             {
               "num": 11,
@@ -14423,29 +14423,14 @@
               "pos": "AM"
             },
             {
-              "num": 6,
-              "name": "Manu Koné",
-              "pos": "LM"
-            },
-            {
-              "num": 8,
-              "name": "Aurélien Tchouaméni",
-              "pos": "RM"
+              "num": 20,
+              "name": "Bradley Barcola",
+              "pos": "AM-L"
             },
             {
               "num": 10,
               "name": "Kylian Mbappé",
               "pos": "F"
-            },
-            {
-              "num": 20,
-              "name": "Désiré Doué",
-              "pos": "AM-L"
-            },
-            {
-              "num": 7,
-              "name": "Ousmane Dembélé",
-              "pos": "AM-R"
             }
           ]
         },
@@ -14458,8 +14443,13 @@
               "pos": "G"
             },
             {
-              "num": 4,
-              "name": "Isak Hien",
+              "num": 2,
+              "name": "Gustaf Lagerbielke",
+              "pos": "CD-R"
+            },
+            {
+              "num": 3,
+              "name": "Victor Nilsson Lindelöf",
               "pos": "CD"
             },
             {
@@ -14468,19 +14458,19 @@
               "pos": "CD-L"
             },
             {
-              "num": 2,
-              "name": "Gustaf Lagerbielke",
-              "pos": "CD-R"
+              "num": 22,
+              "name": "Daniel Svensson",
+              "pos": "RM"
             },
             {
               "num": 18,
               "name": "Yasin Ayari",
-              "pos": "CM-L"
+              "pos": "CM-R"
             },
             {
-              "num": 3,
-              "name": "Victor Lindelöf",
-              "pos": "CM-R"
+              "num": 16,
+              "name": "Lucas Bergvall",
+              "pos": "CM-L"
             },
             {
               "num": 24,
@@ -14488,24 +14478,19 @@
               "pos": "LM"
             },
             {
-              "num": 21,
-              "name": "Alexander Bernhardsson",
-              "pos": "RM"
-            },
-            {
-              "num": 17,
-              "name": "Viktor Gyökeres",
-              "pos": "F"
+              "num": 11,
+              "name": "Anthony Elanga",
+              "pos": "F-R"
             },
             {
               "num": 9,
               "name": "Alexander Isak",
-              "pos": "CF-L"
+              "pos": "CF"
             },
             {
-              "num": 11,
-              "name": "Anthony Elanga",
-              "pos": "CF-R"
+              "num": 17,
+              "name": "Viktor Gyökeres",
+              "pos": "F-L"
             }
           ]
         }
@@ -14514,25 +14499,42 @@
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "note": "4 goals in 3 group games; 66% modelled anytime chance on 4.2 team xG."
-        },
-        {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "note": "4 goals in 3 group games; 66% modelled anytime chance on 4.2 team xG."
+          "note": "Captain, four group goals, penalty taker — strongest scorer on the pitch but a cautious banker, not a lock, in a knockout with cagey-low-scoring risk."
         },
         {
           "player": "Michael Olise",
           "team": "France",
-          "note": "3 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Tournament's leading assist provider operating as the central No.10; also takes France's corners and free kicks."
+        },
+        {
+          "player": "Aurélien Tchouaméni",
+          "team": "France",
+          "note": "Sits as the deepest pivot shielding the back four; his screening is the key insurance against Isak/Gyökeres breaks behind the high line."
+        },
+        {
+          "player": "Viktor Gyökeres",
+          "team": "Sweden",
+          "note": "Penalty taker and elite in-behind runner; the principal reason France's high line is a genuine vulnerability on the counter."
+        },
+        {
+          "player": "Anthony Elanga",
+          "team": "Sweden",
+          "note": "Two goals already; wide-of-the-front-three pace is Sweden's main transition weapon against Digne/Koundé."
+        },
+        {
+          "player": "Victor Nilsson Lindelöf",
+          "team": "Sweden",
+          "note": "Captain marshalling a back three that now misses the injured Isak Hien — Lagerbielke steps in, a downgrade against Mbappé/Dembélé."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed starting XIs (official team-sheets), 2026-06-30",
+        "https://www.aljazeera.com/sports/2026/6/30/france-sweden-fifa-world-cup-round-of-32-prediction-schedule-lineups-mbappe-dembele",
+        "https://www.espn.com/soccer/story/_/id/49204105/france-vs-sweden-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.goal.com/en-us/news/france-sweden-world-cup-preview/bltfb049a9f4a28d059"
       ],
       "pitchReport": {
         "facts": [
