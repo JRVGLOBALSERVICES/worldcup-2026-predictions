@@ -574,19 +574,51 @@ function RoundGames({
 
   const withAction = fixtures.filter((f) => singlesByMatch.has(f.id) || parlaysByMatch.has(f.id)).length;
 
+  // Reconciliation: the per-match badges above are LIFETIME — every slip that
+  // ever used a tie as a leg. Rj reads the round in terms of his latest
+  // placement batch, so surface that batch's own parlay/single split too. A
+  // "batch" = all (non-mirror) specials sharing the latest placement date
+  // (placedAt is "DD/MM HH:MM"; rank by MM*100+DD so 01/07 sorts after 30/06).
+  const dateRank = (p: string) => {
+    const [dd, mm] = (p.split(" ")[0] ?? "").split("/").map(Number);
+    return (mm || 0) * 100 + (dd || 0);
+  };
+  const allSpecials = days.flatMap((d) => d.matches.flatMap((m) => m.specials)).filter((s) => !s.mirror);
+  let batchParlays = 0;
+  let batchSingles = 0;
+  if (allSpecials.length > 0) {
+    const latest = Math.max(...allSpecials.map((s) => dateRank(s.placedAt)));
+    const seen = new Set<string>();
+    for (const s of allSpecials) {
+      if (dateRank(s.placedAt) !== latest || seen.has(s.slipNo)) continue;
+      seen.add(s.slipNo);
+      if (isParlayRow(s)) batchParlays++;
+      else batchSingles++;
+    }
+  }
+
   return (
     <section className="rounded-3xl border border-line bg-pitch-2/40 p-4 sm:p-6">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3.5">
+      <div className="mb-1.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3.5">
         <div className="flex flex-wrap items-center gap-2.5">
           <span className="font-mono text-[0.66rem] uppercase tracking-[0.2em] text-acid">{round}</span>
           <span className="rounded-full border border-line bg-card/40 px-2 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-faint">
             {fixtures.length} games
           </span>
+          {(batchParlays > 0 || batchSingles > 0) && (
+            <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.58rem] font-semibold uppercase tracking-wider text-acid">
+              latest batch · {batchParlays} parlay{batchParlays !== 1 ? "s" : ""} · {batchSingles} single
+              {batchSingles !== 1 ? "s" : ""}
+            </span>
+          )}
         </div>
         <span className="font-mono text-[0.66rem] tracking-wider text-faint/70 tnum">
           {withAction} with a bet on
         </span>
       </div>
+      <p className="mb-4 font-mono text-[0.6rem] leading-relaxed text-faint/60">
+        Per-match badges are lifetime — every slip that ever used the tie as a leg, not just the latest batch.
+      </p>
 
       <ul className="divide-y divide-line/50">
         {fixtures.map((f) => {
