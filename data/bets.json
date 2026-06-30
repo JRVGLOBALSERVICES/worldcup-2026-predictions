@@ -11570,6 +11570,82 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-thasyan-r32-acca-1",
+      "slipNo": "TBC-1xbet",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Acca · 12 legs",
+      "label": "1xBet 12-fold (R32) — split 50/50 Rj + Thasyan. Over 1.5: Ivory Coast/Norway, USA/Bosnia, Portugal/Croatia, Colombia/Ghana · Over 2.5: France/Sweden, Switzerland/Algeria · Mexico 1X · BTTS: Belgium/Senegal · Under 3: England/DR Congo, Australia/Egypt, Argentina/Cape Verde · Under 3.25: Spain/Austria",
+      "odds": 81.0478,
+      "stake": 100,
+      "placedAt": "30/06 22:50",
+      "punter": "Rj + Thasyan · 50/50",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "btts"
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.25
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalOver",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
