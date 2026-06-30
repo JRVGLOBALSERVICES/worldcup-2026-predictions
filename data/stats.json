@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T17:10:05.767Z",
+    "generatedAt": "2026-06-30T17:20:07.580Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 60
   },
@@ -756,6 +756,14 @@
       },
       {
         "rank": 8,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 68.1,
+        "display": "68.1%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -763,15 +771,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 66.7,
-        "display": "66.7%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
@@ -832,8 +832,8 @@
         "rank": 7,
         "team": "Ivory Coast",
         "flag": "🇨🇮",
-        "value": 32.1,
-        "display": "32.1%",
+        "value": 32.3,
+        "display": "32.3%",
         "matches": 3
       },
       {
@@ -5884,31 +5884,31 @@
         "teamBox": [
           {
             "team": "Ivory Coast",
-            "possessionPct": 39.4,
-            "accuratePasses": 28,
-            "totalPasses": 38,
+            "possessionPct": 47.7,
+            "accuratePasses": 74,
+            "totalPasses": 89,
             "shotsOnTarget": 0,
-            "totalShots": 2,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
-            "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 4
+            "totalShots": 1,
+            "effectiveTackles": 2,
+            "totalTackles": 2,
+            "accurateCrosses": 2,
+            "totalCrosses": 6,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 6
           },
           {
             "team": "Norway",
-            "possessionPct": 60.6,
-            "accuratePasses": 50,
-            "totalPasses": 62,
+            "possessionPct": 52.3,
+            "accuratePasses": 86,
+            "totalPasses": 102,
             "shotsOnTarget": 0,
             "totalShots": 1,
-            "effectiveTackles": 0,
-            "totalTackles": 3,
+            "effectiveTackles": 2,
+            "totalTackles": 5,
             "accurateCrosses": 1,
             "totalCrosses": 1,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 3
+            "accurateLongBalls": 4,
+            "totalLongBalls": 8
           }
         ]
       }
