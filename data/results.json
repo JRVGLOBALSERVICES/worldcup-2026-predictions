@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T17:50:02.869Z",
+    "generatedAt": "2026-06-30T18:10:04.158Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 56,
     "live": 1
@@ -7565,7 +7565,10 @@
     },
     "civ-nor-2026-06-30": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -7595,7 +7598,7 @@
       "updatedAt": "2026-06-30T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 9,
+          "home": 10,
           "away": 2
         },
         "sot": {
@@ -7621,7 +7624,7 @@
         "cornersByHalf": {
           "home": [
             9,
-            0
+            1
           ],
           "away": [
             2,
