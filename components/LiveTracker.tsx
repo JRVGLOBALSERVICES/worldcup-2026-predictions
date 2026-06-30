@@ -380,11 +380,11 @@ function AccaCard({
             return (
               <li
                 key={i}
-                className="flex items-center gap-2.5 rounded-lg border border-line/70 bg-card/40 px-3 py-2"
+                className="flex items-start gap-2.5 rounded-lg border border-line/70 bg-card/40 px-3 py-2"
               >
-                <span className={`size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
-                <span className="min-w-0 flex-1 truncate text-[0.8rem] text-ink">{l.label}</span>
-                <span className={`shrink-0 font-mono text-xs font-bold ${g.cls}`}>{l.glyph}</span>
+                <span className={`mt-[0.4rem] size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
+                <span className="min-w-0 flex-1 break-words text-[0.8rem] leading-snug text-ink">{l.label}</span>
+                <span className={`mt-px shrink-0 font-mono text-xs font-bold ${g.cls}`}>{l.glyph}</span>
               </li>
             );
           })}
