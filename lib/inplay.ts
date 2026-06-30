@@ -69,6 +69,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} win`} + over ${leg.line} goals`;
     case "individualTotalUnder":
       return `${side(leg.side)} to score under ${leg.line}`;
+    case "individualTotalOver":
+      return `${side(leg.side)} to score over ${leg.line}`;
     case "winsAtLeastOneHalf":
       return `${side(leg.side)} to win a half`;
     case "brace":
@@ -1179,6 +1181,28 @@ export function inPlayMultiLeg(
       } else {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "individualTotalOver") {
+      // One side's goals over line. Goals only accrue → locks WON the moment
+      // that side clears the line; while still short it's currently losing
+      // (neutral —). At FT a whole-line exact tally is a push → voids and
+      // passes through as neutral; strictly under is dead.
+      const sideGoals = leg.side === "home" ? cur.home : cur.away;
+      if (sideGoals > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (done) {
+        if (sideGoals === leg.line) {
+          parts.push(`${legLabel} —`); // push → void, passes through
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else {
+        parts.push(`${legLabel} —`);
       }
       continue;
     }

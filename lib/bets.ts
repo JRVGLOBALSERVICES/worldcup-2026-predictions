@@ -343,6 +343,10 @@ export type MultiLegCond =
   // Individual Total — one side's own goals under `line` ("Individual Total 2
   // Under (3.5)" → side:"away", line:3.5).
   | { matchId: string; kind: "individualTotalUnder"; side: "home" | "away"; line: number }
+  // Individual Total — one side's own goals OVER `line` ("Individual Total 1
+  // Over (2)" → side:"home", line:2 → won at 3+; a whole-line exact tally is a
+  // push → voids and passes through the fixed-odds acca). Mirror of the Under.
+  | { matchId: string; kind: "individualTotalOver"; side: "home" | "away"; line: number }
   // Total goals scored on or before minute `minute`, over `line` ("Total Over
   // 0.5 In 15 Minute" → minute:15, line:0.5 → won the moment any goal lands by
   // min 15). Counts EVERY goal in the window (own goals included — it's a match
@@ -1114,6 +1118,17 @@ export function gradeSpecial(special: Special): BetStatus {
         const scored = leg.side === "home" ? ft.home : ft.away;
         if (!(scored < leg.line)) return "lost";
         continue;
+      }
+
+      if (leg.kind === "individualTotalOver") {
+        // One side's own goals over `line`. Cleared → won; a whole-line exact
+        // tally (line 2, scored 2) is a push → voids and passes through the
+        // fixed-odds acca; strictly under loses. (Half lines never hit ===.)
+        if (!ft) return "lost";
+        const scored = leg.side === "home" ? ft.home : ft.away;
+        if (scored > leg.line) continue; // covered → won
+        if (scored === leg.line) continue; // push → void, passes through
+        return "lost"; // under
       }
 
       if (leg.kind === "winsAtLeastOneHalf") {

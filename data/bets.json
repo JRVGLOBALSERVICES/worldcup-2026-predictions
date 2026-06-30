@@ -11532,6 +11532,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83775938759",
+      "slipNo": "83775938759",
+      "matchId": "eng-cod-2026-07-01",
+      "player": "—",
+      "market": "Acca · 4 legs",
+      "label": "Acca (4 legs) — England-Congo DR Ind.Total1 Over 2 · Belgium-Senegal X · USA-Bosnia Handicap1 (-1) · France-Sweden Total Under 3.5",
+      "odds": 17.51,
+      "stake": 30,
+      "placedAt": "30/06 18:14",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 2
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "handicap",
+            "side": "home",
+            "line": -1
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "totalUnder",
+            "line": 3.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
