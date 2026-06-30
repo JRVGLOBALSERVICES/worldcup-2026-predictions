@@ -845,18 +845,21 @@ export function inPlayMultiLeg(
       // Advancement — can't lock from the live score alone (ET/pens decide a
       // level tie), so this never goes "dead" mid-match: a side level or behind
       // can still go through. Leading → on track. At FINAL, a decisive score
-      // implies who advanced; a level final waits for the captured `advanced`
-      // (the static settle), shown here as still pending (⋯).
+      // implies who advanced; a level final reads the captured `advanced`
+      // (penalty/AET winner from build-results.mjs). Only when advancement is
+      // genuinely not yet captured does it stay pending (⋯).
       const ours = leg.side === "home" ? curFull.home : curFull.away;
       const theirs = leg.side === "home" ? curFull.away : curFull.home;
+      const adv = lm.advanced ?? null;
       if (doneFull) {
-        if (ours > theirs) {
+        if (ours > theirs || (ours === theirs && adv === leg.side)) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
-        } else if (ours < theirs) {
+        } else if (ours < theirs || (ours === theirs && adv != null && adv !== leg.side)) {
           dead = true;
           parts.push(`${legLabel} ✗`);
         } else {
+          // Level final, advancement not captured yet — defer to the static settle.
           onTrack = true;
           parts.push(`${legLabel} ⋯`);
         }

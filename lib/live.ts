@@ -9,6 +9,11 @@ type PersistedResult = {
   ft: { home: number; away: number } | null;
   ft90?: { home: number; away: number } | null;
   finishPhase?: "regulation" | "extra_time" | "penalties" | null;
+  /** Knockout: which side PROGRESSED (set by build-results.mjs once the tie,
+   * incl. ET/pens, is final). This is the only signal that resolves a level
+   * final — a 1–1 decided on penalties leaves the score tied, so a "to qualify"
+   * leg can only settle off `advanced`, never the scoreline. */
+  advanced?: "home" | "away" | null;
   score: { home: number; away: number };
   goals: {
     team: "home" | "away";
@@ -141,6 +146,7 @@ function persistedToLiveMatch(matchId: string, r: PersistedResult): LiveMatch {
     htScore: r.ht,
     ftScore: r.ft ?? (r.state === "finished" ? score : null),
     finishPhase: r.finishPhase ?? null,
+    advanced: r.advanced ?? null,
     goals: r.goals.map((g) => ({
       team: g.team,
       scorer: g.scorer,
@@ -188,6 +194,9 @@ export type LiveMatch = {
   ftScore: { home: number; away: number } | null;
   /** ESPN-verified match-end phase (knockout only). Absent until finished. */
   finishPhase?: "regulation" | "extra_time" | "penalties" | null;
+  /** Knockout: which side advanced (ET/pens aware). Carries the persisted
+   * `advanced` so the live grader can settle a level final's "to qualify" leg. */
+  advanced?: "home" | "away" | null;
   goals: Goal[];
   cards: Card[];
   /** Verified corner/SOT/card counts — present once the summary endpoint has data. */
@@ -753,6 +762,13 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
     for (const ev of b.value) {
       const m = normaliseEvent(ev);
       if (m && wantIds.has(m.matchId)) {
+        // The live scoreboard never reports the shootout winner, so keep the
+        // persisted `advanced` (written by build-results.mjs) when the fresh
+        // ESPN event lacks it — otherwise a just-decided level tie loses its
+        // advancement and its "to qualify" legs revert to pending.
+        if (m.advanced == null && persistedResults[m.matchId]?.advanced) {
+          m.advanced = persistedResults[m.matchId].advanced;
+        }
         out[m.matchId] = m;
         if (ev.id) eventIdByMatch[m.matchId] = ev.id;
       }
