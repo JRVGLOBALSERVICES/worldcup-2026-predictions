@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T21:10:05.513Z",
+    "generatedAt": "2026-06-30T21:20:07.386Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 61
   },
@@ -528,8 +528,8 @@
         "rank": 10,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 88,
-        "display": "88.0%",
+        "value": 88.2,
+        "display": "88.2%",
         "matches": 4
       }
     ],
@@ -650,6 +650,14 @@
       },
       {
         "rank": 5,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 47.1,
+        "display": "47.1%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -657,20 +665,12 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 45.8,
         "display": "45.8%",
         "matches": 3
-      },
-      {
-        "rank": 6,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 45.8,
-        "display": "45.8%",
-        "matches": 4
       },
       {
         "rank": 8,
@@ -938,8 +938,8 @@
         "rank": 10,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 50.8,
-        "display": "50.8%",
+        "value": 50,
+        "display": "50.0%",
         "matches": 4
       }
     ]
@@ -5950,31 +5950,31 @@
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 71.9,
-            "accuratePasses": 55,
-            "totalPasses": 62,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
+            "possessionPct": 65,
+            "accuratePasses": 117,
+            "totalPasses": 128,
+            "shotsOnTarget": 2,
+            "totalShots": 3,
             "effectiveTackles": 1,
             "totalTackles": 1,
             "accurateCrosses": 1,
-            "totalCrosses": 1,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 3
+            "totalCrosses": 3,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 7
           },
           {
             "team": "Sweden",
-            "possessionPct": 28.1,
-            "accuratePasses": 19,
-            "totalPasses": 25,
+            "possessionPct": 35,
+            "accuratePasses": 51,
+            "totalPasses": 67,
             "shotsOnTarget": 1,
             "totalShots": 1,
-            "effectiveTackles": 2,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 2,
-            "totalLongBalls": 7
+            "effectiveTackles": 4,
+            "totalTackles": 5,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 14
           }
         ]
       }
