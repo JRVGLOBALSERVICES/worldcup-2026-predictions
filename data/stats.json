@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T03:20:27.748Z",
+    "generatedAt": "2026-06-30T04:20:17.945Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 59
+    "finished": 60
   },
   "categories": {
     "scorers": [
@@ -357,6 +357,13 @@
     "penaltyScored": [
       {
         "rank": 1,
+        "name": "Chemsdine Talbi",
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Granit Xhaka",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -374,6 +381,13 @@
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 1
+      },
+      {
+        "rank": 1,
+        "name": "Ismael Saibari",
+        "team": "Morocco",
+        "flag": "🇲🇦",
         "value": 1
       },
       {
@@ -409,20 +423,6 @@
         "name": "Marko Arnautovic",
         "team": "Austria",
         "flag": "🇦🇹",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "Matías Galarza",
-        "team": "Paraguay",
-        "flag": "🇵🇾",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "Maurício",
-        "team": "Paraguay",
-        "flag": "🇵🇾",
         "value": 1
       }
     ],
@@ -2067,22 +2067,22 @@
           "matches": 3
         },
         {
+          "name": "Soufiane Rahimi",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Achraf Hakimi",
           "value": 1,
           "matches": 3
         },
         {
+          "name": "Chemsdine Talbi",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Gessime Yassine",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Issa Diop",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Soufiane Rahimi",
           "value": 1,
           "matches": 1
         }
@@ -2282,9 +2282,9 @@
           "matches": 3
         },
         {
-          "name": "Virgil van Dijk",
+          "name": "Teun Koopmeiners",
           "value": 1,
-          "matches": 3
+          "matches": 1
         }
       ],
       "assists": [

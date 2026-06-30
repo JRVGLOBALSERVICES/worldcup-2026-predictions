@@ -875,6 +875,22 @@
       },
       "finishPhase": "penalties",
       "advanced": "away"
+    },
+    "ned-mar-2026-06-30": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 1
+      },
+      "ft90": {
+        "home": 1,
+        "away": 1
+      },
+      "finishPhase": "penalties",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3407,6 +3423,35 @@
           "team": "away",
           "player": "Matías Galarza",
           "minute": 117,
+          "type": "yellow"
+        }
+      ]
+    },
+    "ned-mar-2026-06-30": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Cody Gakpo",
+          "minute": 71,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Issa Diop",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Issa Diop",
+          "minute": 46,
           "type": "yellow"
         }
       ]

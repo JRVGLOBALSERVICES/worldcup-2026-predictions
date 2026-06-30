@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T03:20:28.867Z",
+    "generatedAt": "2026-06-30T04:20:19.419Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -171,11 +171,11 @@
           ],
           "next": {
             "round": "Round of 16",
-            "opponent": "R32-3 Winner",
-            "opponentFlag": null,
+            "opponent": "Morocco",
+            "opponentFlag": "🇲🇦",
             "kickoffUTC": "2026-07-04T17:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -286,11 +286,19 @@
             "color": "#81D6AC"
           },
           "form": [
+            "D",
             "W",
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 16",
+            "opponent": "Canada",
+            "opponentFlag": "🇨🇦",
+            "kickoffUTC": "2026-07-04T17:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Scotland",
@@ -597,6 +605,7 @@
             "color": "#81D6AC"
           },
           "form": [
+            "D",
             "W",
             "W",
             "D"
