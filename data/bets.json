@@ -5051,6 +5051,48 @@
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
   "specials": [
     {
+      "id": "sp-83769094143",
+      "slipNo": "83769094143",
+      "matchId": "fra-swe-2026-06-30",
+      "player": "—",
+      "market": "Acca · 3 legs (combos)",
+      "label": "Acca (R32) — Dembélé score + France win + BTTS · Quiñones goals+assists O0.5 · Haaland score + Norway win + BTTS (3 legs)",
+      "odds": 63.391,
+      "stake": 10,
+      "placedAt": "30/06 12:13",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "scored",
+            "player": "Ousmane Dembélé"
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "resultBtts",
+            "outcome": "1"
+          },
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "goalsAssistsOver",
+            "player": "Julián Quiñones",
+            "line": 0.5
+          },
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "scored",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "resultBtts",
+            "outcome": "2"
+          }
+        ]
+      }
+    },
+    {
       "id": "sp-83768998503",
       "slipNo": "83768998503",
       "matchId": "civ-nor-2026-06-30",
