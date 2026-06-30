@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T15:37:58.475Z",
+    "generatedAt": "2026-06-30T16:26:38.519Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-06-30T15:37:58.474Z"
+    "modelUpdatedAt": "2026-06-30T16:26:38.519Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -13881,129 +13881,99 @@
     },
     "civ-nor-2026-06-30": {
       "win": {
-        "pick": "Ivory Coast",
-        "fairOdds": "1.97",
-        "reason": "Model: Ivory Coast to win at 51% (Ivory Coast 51% / draw 22% / Norway 27%). Expected goals 2.0–1.4 from group-stage attack/defence rates (Ivory Coast 1.4 for / 1.0 against per game, Norway 2.2 / 2.0). Most likely score 1-1.",
+        "pick": "Norway",
+        "fairOdds": "1.85",
+        "reason": "Confirmed XIs flip the read: Norway named their STRONGEST side — Haaland AND Ødegaard both start (both were rested in the 1-4 group loss to France). Opta full-strength: Norway 56% / draw 22% / Ivory Coast 22% in 90 min. But ~56% is not certainty (draw+CIV ≈ 44%): Faé benched Amad Diallo for an extra midfielder (Oulai) and CIV kept 2 clean sheets in the group — a deep-block counter side that can out-grind a possession favourite. Texas afternoon heat suppresses tempo and helps the lower block. Classic possession-fav-vs-block draw risk.",
         "strength": 4
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "4.36",
-        "alt": "1-0",
-        "altOdds": "5.45"
+        "fairOdds": "3.10",
+        "alt": "0-1",
+        "altOdds": "4.80"
       },
       "htft": {
-        "pick": "Draw/Ivory Coast",
-        "fairOdds": "4.93"
+        "pick": "Draw/Norway",
+        "fairOdds": "4.40"
       },
       "fullTime": {
-        "score": "1-1",
-        "fairOdds": "10.45"
+        "score": "1-2",
+        "fairOdds": "9.00"
       },
       "scorers": [
         {
-          "player": "Nicolas Pépé",
-          "team": "Ivory Coast",
-          "fairOdds": "1.60",
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "fairOdds": "1.71",
           "banker": true,
-          "note": "2 goals in 3 group games; 62% modelled anytime chance on 2.0 team xG.",
+          "note": "4 goals in 2 WC starts (braces vs Iraq & Senegal); back to full power after the France rest. ~-140 anytime, ~-900 to register a shot on target. Norway's designated penalty taker.",
           "strength": 5
         },
         {
-          "player": "Erling Haaland",
+          "player": "Alexander Sørloth",
           "team": "Norway",
-          "fairOdds": "2.00",
+          "fairOdds": "2.75",
           "banker": false,
-          "note": "4 goals in 2 group games; 50% modelled anytime chance on 1.4 team xG.",
+          "note": "Norway's secondary striker threat — aerial + box presence on the left of the front three. ~+175 anytime.",
           "strength": 4
         },
         {
-          "player": "Franck Kessié",
+          "player": "Nicolas Pépé",
           "team": "Ivory Coast",
-          "fairOdds": "2.25",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "1 goal in 1 group game; 44% modelled anytime chance on 2.0 team xG.",
+          "note": "CIV's main outlet and set-piece taker (team-leading 56 kicks / 31% share); 2 WC goals already. ~+320 anytime — a scorer route via shots + dead balls, not a banker.",
           "strength": 3
         },
         {
-          "player": "Leo Østigard",
-          "team": "Norway",
-          "fairOdds": "4.84",
+          "player": "Ange-Yoan Bonny",
+          "team": "Ivory Coast",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "1 goal in 1 group game; 21% modelled anytime chance on 1.4 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Marcus Holmgren Pedersen",
-          "team": "Norway",
-          "fairOdds": "4.84",
-          "banker": false,
-          "note": "1 goal in 1 group game; 21% modelled anytime chance on 1.4 team xG.",
-          "strength": 1
+          "note": "Lone striker in CIV's 4-2-3-1 — gets the central box touches. ~+280 anytime.",
+          "strength": 3
         }
       ],
       "assists": [
         {
-          "player": "Ibrahim Sangaré",
-          "team": "Ivory Coast",
-          "fairOdds": "2.02",
-          "banker": true,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
-        },
-        {
-          "player": "Yan Diomande",
-          "team": "Ivory Coast",
-          "fairOdds": "2.02",
-          "banker": false,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
-        },
-        {
           "player": "Martin Ødegaard",
           "team": "Norway",
-          "fairOdds": "2.64",
-          "banker": false,
-          "note": "2 assists in the group stage; 38% modelled chance to set one up."
+          "fairOdds": "2.40",
+          "banker": true,
+          "note": "Captain and Norway's primary creator + on every corner and most free-kicks. With RB Ryerson out, Ødegaard absorbs even more set-piece load — a real dead-ball assist edge."
         },
         {
-          "player": "Andreas Schjelderup",
-          "team": "Norway",
-          "fairOdds": "4.12",
+          "player": "Nicolas Pépé",
+          "team": "Ivory Coast",
+          "fairOdds": "3.10",
           "banker": false,
-          "note": "1 assist in the group stage; 24% modelled chance to set one up."
+          "note": "CIV's set-piece deliveries (31% share); chief supply line into Bonny."
+        },
+        {
+          "player": "Antonio Nusa",
+          "team": "Norway",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Direct wide dribbler feeding Haaland/Sørloth from the right."
         }
       ],
       "penalty": {
         "likelihood": "low",
-        "taker": "Nicolas Pépé",
-        "backup": "Franck Kessié",
-        "note": "Ivory Coast favoured to control the game, so a penalty is less pivotal; Nicolas Pépé would take one if awarded."
+        "taker": "Erling Haaland",
+        "backup": "Martin Ødegaard",
+        "note": "Norway are the side likelier to win a spot-kick given more territory; Haaland is their designated taker, Ødegaard the backup. If Ivory Coast win one, Franck Kessié is their primary taker (Amad Diallo, an associated CIV taker, is benched)."
       },
       "lineups": {
-        "home": "Yahia Fofana, Ousmane Diomande, Odilon Kossounou, Christopher Operi, Guela Doué, Nicolas Pépé, Franck Kessié, Ibrahim Sangaré, Ange-Yoan Bonny, Yan Diomande, Amad Diallo",
-        "away": "Egil Selvik, Leo Østigard, Henrik Falchener, Fredrik André Bjørkan, Fredrik Aursnes, Patrick Berg, Thelo Aasgaard, Kristian Thorstvedt, Jørgen Strand Larsen, Andreas Schjelderup, Oscar Bobb",
-        "status": "unconfirmed",
+        "home": "Yahia Fofana, Guela Doué, Odilon Kossounou, Emmanuel Agbadou, Ghislain Konan, Ibrahim Sangaré, Franck Kessié, Nicolas Pépé, Christ Inao Oulai, Yan Diomandé, Ange-Yoan Bonny",
+        "away": "Ørjan Nyland, Marcus Holmgren Pedersen, Kristoffer Ajer, Torbjørn Heggem, David Møller Wolfe, Sander Berge, Patrick Berg, Martin Ødegaard, Antonio Nusa, Erling Haaland, Alexander Sørloth",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
             {
-              "num": 1,
+              "num": 16,
               "name": "Yahia Fofana",
               "pos": "G"
-            },
-            {
-              "num": 2,
-              "name": "Ousmane Diomande",
-              "pos": "CD-L"
-            },
-            {
-              "num": 7,
-              "name": "Odilon Kossounou",
-              "pos": "CD-R"
-            },
-            {
-              "num": 13,
-              "name": "Christopher Operi",
-              "pos": "LB"
             },
             {
               "num": 17,
@@ -14011,34 +13981,49 @@
               "pos": "RB"
             },
             {
-              "num": 19,
-              "name": "Nicolas Pépé",
-              "pos": "AM"
+              "num": 4,
+              "name": "Odilon Kossounou",
+              "pos": "CD-R"
             },
             {
-              "num": 8,
-              "name": "Franck Kessié",
-              "pos": "LM"
+              "num": 22,
+              "name": "Emmanuel Agbadou",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Ghislain Konan",
+              "pos": "LB"
             },
             {
               "num": 18,
               "name": "Ibrahim Sangaré",
-              "pos": "RM"
+              "pos": "DM-R"
+            },
+            {
+              "num": 8,
+              "name": "Franck Kessié",
+              "pos": "DM-L"
+            },
+            {
+              "num": 19,
+              "name": "Nicolas Pépé",
+              "pos": "AM-R"
+            },
+            {
+              "num": 14,
+              "name": "Christ Inao Oulai",
+              "pos": "AM-C"
+            },
+            {
+              "num": 11,
+              "name": "Yan Diomandé",
+              "pos": "AM-L"
             },
             {
               "num": 9,
               "name": "Ange-Yoan Bonny",
               "pos": "F"
-            },
-            {
-              "num": 11,
-              "name": "Yan Diomande",
-              "pos": "AM-L"
-            },
-            {
-              "num": 15,
-              "name": "Amad Diallo",
-              "pos": "AM-R"
             }
           ]
         },
@@ -14046,241 +14031,260 @@
           "formation": "4-3-3",
           "players": [
             {
-              "num": 13,
-              "name": "Egil Selvik",
+              "num": 12,
+              "name": "Ørjan Nyland",
               "pos": "G"
             },
             {
-              "num": 4,
-              "name": "Leo Østigard",
-              "pos": "CD-L"
-            },
-            {
-              "num": 25,
-              "name": "Henrik Falchener",
-              "pos": "CD-R"
-            },
-            {
-              "num": 15,
-              "name": "Fredrik André Bjørkan",
-              "pos": "LB"
-            },
-            {
-              "num": 14,
-              "name": "Fredrik Aursnes",
+              "num": 2,
+              "name": "Marcus Holmgren Pedersen",
               "pos": "RB"
             },
             {
-              "num": 6,
-              "name": "Patrick Berg",
-              "pos": "CM"
+              "num": 5,
+              "name": "Kristoffer Ajer",
+              "pos": "CD-R"
             },
             {
-              "num": 19,
-              "name": "Thelo Aasgaard",
-              "pos": "LM"
+              "num": 4,
+              "name": "Torbjørn Heggem",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "David Møller Wolfe",
+              "pos": "LB"
+            },
+            {
+              "num": 6,
+              "name": "Sander Berge",
+              "pos": "CM-R"
             },
             {
               "num": 18,
-              "name": "Kristian Thorstvedt",
-              "pos": "RM"
+              "name": "Patrick Berg",
+              "pos": "CM-L"
             },
             {
-              "num": 11,
-              "name": "Jørgen Strand Larsen",
+              "num": 10,
+              "name": "Martin Ødegaard",
+              "pos": "AM"
+            },
+            {
+              "num": 20,
+              "name": "Antonio Nusa",
+              "pos": "RW"
+            },
+            {
+              "num": 9,
+              "name": "Erling Haaland",
               "pos": "F"
             },
             {
-              "num": 21,
-              "name": "Andreas Schjelderup",
-              "pos": "LF"
-            },
-            {
-              "num": 22,
-              "name": "Oscar Bobb",
-              "pos": "RF"
+              "num": 11,
+              "name": "Alexander Sørloth",
+              "pos": "LW"
             }
           ]
         }
       },
       "playerNotes": [
         {
-          "player": "Nicolas Pépé",
-          "team": "Ivory Coast",
-          "note": "2 goals in 3 group games; 62% modelled anytime chance on 2.0 team xG."
-        },
-        {
           "player": "Erling Haaland",
           "team": "Norway",
-          "note": "4 goals in 2 group games; 50% modelled anytime chance on 1.4 team xG."
+          "note": "Starts — 4 goals in 2 WC starts; full-power Norway after resting him vs France. The standout anytime scorer and penalty taker."
         },
         {
-          "player": "Ibrahim Sangaré",
+          "player": "Martin Ødegaard",
+          "team": "Norway",
+          "note": "Captain back in the XI; Norway's creator and set-piece engine, dead-ball load up further with Ryerson out at RB."
+        },
+        {
+          "player": "Alexander Sørloth",
+          "team": "Norway",
+          "note": "Starts alongside Haaland — aerial secondary scorer, +175 anytime."
+        },
+        {
+          "player": "Nicolas Pépé",
           "team": "Ivory Coast",
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "note": "CIV's main threat and set-piece taker (31% share), 2 WC goals; carries the counter + dead-ball plan."
+        },
+        {
+          "player": "Ange-Yoan Bonny",
+          "team": "Ivory Coast",
+          "note": "Confirmed lone striker — all of CIV's central box presence funnels through him."
+        },
+        {
+          "player": "Christ Inao Oulai",
+          "team": "Ivory Coast",
+          "note": "The extra midfielder Faé added in place of Amad Diallo — signals a controlled, defensive, counter-oriented CIV setup."
         }
       ],
       "confidence": "medium",
       "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "CONFIRMED XIs (official) — Norway full strength (Haaland + Ødegaard start); CIV bench Amad Diallo for Oulai (4-2-3-1).",
+        "Opta supercomputer: Norway 56.1% / draw 22.3% / Ivory Coast 21.6% (90 min).",
+        "https://www.fanduel.com/research/ivory-coast-vs-norway-prediction-best-anytime-goalscorer-bets-and-odds-today-world-cup-2026",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://theanalyst.com/articles/ivory-coast-vs-norway-prediction-world-cup-2026-match-preview",
+        "https://www.aljazeera.com/news/2026/6/30/ivory-coast-norway-fifa-world-cup-round-of-32-prediction-haaland-diomande-lineups"
       ],
       "pitchReport": {
         "facts": [
-          "Ivory Coast: 6 pts, +2 GD across 3 group games (4 for / 2 against).",
-          "Norway: 6 pts, +1 GD across 3 group games (8 for / 7 against).",
-          "Ivory Coast's Nicolas Pépé leads them with 2 goals in 3 games.",
-          "Norway's Erling Haaland leads them with 4 goals in 2 games."
+          "Norway named their STRONGEST XI — Haaland AND Ødegaard both start (both rested in the 1-4 loss to France).",
+          "Ivory Coast benched Amad Diallo for an extra midfielder (Christ Inao Oulai) — a controlled, defensive 4-2-3-1 with Bonny as lone striker.",
+          "Norway group: 8 scored / 7 conceded, 0 clean sheets — high-event, leaky.",
+          "Ivory Coast group: 3 scored / 2 conceded, 2 clean sheets — low-event, defensively tight.",
+          "Haaland leads Norway with 4 goals in 2 starts; Pépé leads CIV with 2."
         ],
         "assumptions": [
-          "Model projects Ivory Coast to carry more of the ball and the better chances (higher attack rating); Norway to sit compact and play on the break.",
-          "Goal expectancy 2.0–1.4 (Ivory Coast–Norway) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+          "Opta full-strength: Norway 56% / draw 22% / CIV 22% (90 min) — Norway should win territory and the shot battle.",
+          "CIV set up to contain and counter, not chase; Texas afternoon heat suppresses tempo and favours the deeper block."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "Ivory Coast shade the chance-creation (2.0 vs 1.4 xG) — they should make the running.",
-        "drawRisk": "Moderate — 21.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
-        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "lineups": "CONFIRMED. CIV (4-2-3-1): Y. Fofana; Doué, Kossounou, Agbadou, Konan; Sangaré, Kessié; Pépé, Oulai, Y. Diomandé; Bonny. NOR (4-3-3): Nyland; Pedersen, Ajer, Heggem, Møller Wolfe; Berge, Berg, Ødegaard; Nusa, Haaland, Sørloth.",
+        "motivation": "Knockout — win or out. Norway go full strength; CIV pack the midfield and sit. Expect a cagey, low-risk start that can open up late via Norway's deep attacking bench (Bobb, Strand Larsen, Schjelderup).",
+        "xgRead": "Norway shade the chance creation with the stars back in; CIV's threat is reactive — Pépé/Diomandé pace + set pieces into Bonny.",
+        "drawRisk": "Genuine — 22% modelled draw, and a possession-favourite-vs-deep-block profile in heat is exactly where favourites drop points. Give draw / DNB / under weight; downgrade Norway win-to-nil.",
+        "travel": "Arlington, TX afternoon heat/humidity — slows tempo, helps the patient lower block (Ivory Coast).",
         "caseFor": [
-          "Ivory Coast are the model's 50.7% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Nicolas Pépé carrying the scoring load.",
-          "Conditions (heat) suit a controlled game Ivory Coast can manage."
+          "Norway at full strength (Haaland + Ødegaard + Sørloth) are the 56% Opta favourite and the form attack.",
+          "Haaland is in elite scoring form (4 in 2) — the cleanest anytime route on the card.",
+          "Norway's set-piece edge grows with Ødegaard taking nearly all dead balls (Ryerson out)."
         ],
         "caseAgainst": [
-          "21.9% draw + Norway's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Ivory Coast's number may be inflated by one result."
+          "CIV's deep block + 2 group clean sheets + Texas heat = a real draw / low-event trap for a possession favourite.",
+          "Norway's defence is leaky (0 clean sheets, 7 conceded) — BTTS and a CIV goal are live, so win-to-nil is fragile."
         ],
         "verdict": "Lean",
-        "changeMind": "A confirmed XI resting Nicolas Pépé, or news the underdog is missing a defensive linchpin."
+        "changeMind": "A Norway collapse to CIV's counter, or the heat producing the stalemate the deep block is built for."
       },
       "valueSpot": {
-        "source": "1xBet (PC)",
-        "overroundPct": 1.5,
+        "source": "FanDuel / oddschecker (aggregated) — 1xBet board geo-blocked from US egress (fail-soft).",
+        "overroundPct": 6.8,
         "legs": [
           {
             "market": "Match result",
-            "side": "Ivory Coast",
-            "price": "3.77",
-            "impliedPct": 26.5,
-            "fairPct": 26.1,
-            "modelPct": 50.7,
-            "edgePts": 24.6,
+            "side": "Norway",
+            "price": "2.05",
+            "impliedPct": 48.8,
+            "fairPct": 45.7,
+            "modelPct": 52,
+            "edgePts": 6.3,
             "verdict": "good"
           },
           {
             "market": "Match result",
             "side": "Draw",
-            "price": "3.75",
-            "impliedPct": 26.7,
-            "fairPct": 26.3,
-            "modelPct": 21.9,
-            "edgePts": -4.3,
+            "price": "3.35",
+            "impliedPct": 29.9,
+            "fairPct": 27.9,
+            "modelPct": 24,
+            "edgePts": -3.9,
             "verdict": "bad"
           },
           {
             "market": "Match result",
-            "side": "Norway",
-            "price": "2.069",
-            "impliedPct": 48.3,
-            "fairPct": 47.6,
-            "modelPct": 27.2,
-            "edgePts": -20.4,
+            "side": "Ivory Coast",
+            "price": "3.55",
+            "impliedPct": 28.2,
+            "fairPct": 26.4,
+            "modelPct": 24,
+            "edgePts": -2.4,
             "verdict": "bad"
           },
           {
             "market": "Over 2.5",
             "side": "Over 2.5",
-            "price": "1.795",
-            "impliedPct": 55.7,
-            "fairPct": 53.8,
-            "modelPct": 65,
-            "edgePts": 11.2,
+            "price": "1.88",
+            "impliedPct": 53.2,
+            "fairPct": 50.2,
+            "modelPct": 60,
+            "edgePts": 9.8,
             "verdict": "good"
           },
           {
             "market": "Under 2.5",
             "side": "Under 2.5",
-            "price": "2.087",
-            "impliedPct": 47.9,
-            "fairPct": 46.2,
-            "modelPct": 35,
-            "edgePts": -11.2,
+            "price": "1.95",
+            "impliedPct": 51.3,
+            "fairPct": 48.3,
+            "modelPct": 40,
+            "edgePts": -8.3,
             "verdict": "bad"
           }
         ],
-        "bestSide": "Ivory Coast",
-        "headline": "Ivory Coast is the one number with positive value (+24.6 pts over fair).",
-        "capturedAt": "2026-06-29T08:48:01.733Z"
+        "bestSide": "Norway",
+        "headline": "Norway at full strength is the value side (+6.3 pts over fair); Over 2.5 also edges (+9.8) but respect CIV's block.",
+        "capturedAt": "2026-06-30T16:26:38.519Z"
       },
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
             "tripped": false,
-            "why": "Price broadly fair (26.5% implied vs 50.7% model)."
+            "why": "Norway ~fair-to-slight-value (48.8% implied vs 52% model)."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name strongest XI, no rotation."
+            "why": "Knockout — both confirmed strongest XIs, no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
             "tripped": false,
-            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+            "why": "Norway's form spans two wins; Haaland's 4 goals across two games, not one rout."
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
+            "tripped": true,
+            "why": "CIV's deep block + extra midfielder + Texas heat can throttle a possession favourite into a low-event game."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs are CONFIRMED — Norway full strength, CIV bench Diallo. Scorer/lineup props now grounded."
           },
           {
             "name": "Ignoring the draw",
-            "tripped": false,
-            "why": "Draw chance (21.9%) is low enough to discount."
+            "tripped": true,
+            "why": "22% draw in a possession-fav-vs-block profile is the classic spot favourites drop points — give draw/DNB weight, downgrade win-to-nil."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+            "why": "Model + confirmed-XI call, no tilt."
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 2,
         "edge": "real edge",
         "verdict": "PLAYABLE",
-        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+        "discipline": "Norway are the better, full-strength side and the value pick — but being better isn't the same as a safe bet. Respect the draw against CIV's block, don't pay for a win-to-nil against a leaky Norway defence, and don't force goals in heat that suits the lower block."
       },
       "brainSummary": {
         "verdict": "PLAYABLE",
-        "call": "Ivory Coast to win is a clean call and you're getting value on it.",
+        "call": "Norway at full strength (Haaland + Ødegaard back in) to win — with the draw genuinely respected against CIV's deep block.",
         "read": {
           "tag": "Lean",
-          "line": "Ivory Coast are the model's 51% pick."
+          "line": "Norway are ~56% full-strength favourites (Opta)."
         },
         "price": {
-          "tag": "Good price on Ivory Coast",
-          "line": "You're getting genuine value on the pick — about +24.6 points better than fair."
+          "tag": "Slight value on Norway",
+          "line": "Norway edge fair by about +6.3 points; Over 2.5 also edges but CIV's block is the offset."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+          "tag": "2 warnings",
+          "line": "Cagey-knockout + draw risk vs CIV's block and the heat — lineups are now CONFIRMED, so scorer picks are solid."
         }
       },
       "resolution": {
-        "ninety": 78.1,
-        "extraTime": 12.4,
-        "penalties": 9.5,
+        "ninety": 78.4,
+        "extraTime": 12.3,
+        "penalties": 9.3,
         "mostLikely": "Regulation",
-        "etWinner": "Ivory Coast",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Ivory Coast.",
-        "note": "Most likely settled inside 90 (78.1%). But a 21.9% level 90 keeps extra time (12.4%) and penalties (9.5%) live — in a knockout, that's the bit a straight win bet ignores."
+        "etWinner": "Norway",
+        "shootout": "Near coin-flip with the marginal nerve edge to Norway (Haaland from the spot).",
+        "note": "Most likely settled inside 90 (78.4%). But a 22% level 90 keeps extra time (12.3%) and penalties (9.3%) live — the bit a straight Norway win bet ignores, and CIV's block raises it."
       }
     },
     "fra-swe-2026-06-30": {
