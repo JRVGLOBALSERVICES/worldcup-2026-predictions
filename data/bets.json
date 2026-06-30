@@ -5096,6 +5096,23 @@
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
   "specials": [
     {
+      "id": "sp-83768054357",
+      "slipNo": "83768054357",
+      "matchId": "fra-swe-2026-06-30",
+      "player": "Ousmane Dembélé",
+      "market": "First goal + correct score",
+      "label": "Single (R32) — Dembélé to score the 1st goal + France win 2-1",
+      "odds": 41,
+      "stake": 10,
+      "placedAt": "30/06 11:17",
+      "grade": {
+        "type": "firstScorerAndScore",
+        "player": "Ousmane Dembélé",
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
       "id": "sp-83768754725",
       "slipNo": "83768754725",
       "matchId": "civ-nor-2026-06-30",
