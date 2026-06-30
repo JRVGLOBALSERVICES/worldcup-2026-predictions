@@ -162,6 +162,30 @@ const assistsBy = (g: Goal[], p: string) => g.filter((x) => x.assist && nameMatc
 const firstScorer = (g: Goal[]): string | null => realGoals(g)[0]?.scorer ?? null;
 const cardsBy = (c: Card[], p: string) => c.filter((x) => nameMatch(x.player, p));
 
+/**
+ * Live equivalent of bets.ts `ft90` — the 90-MINUTE scoreline of a match, with
+ * extra-time goals (minute > 90, or the `et` flag once finished) stripped off.
+ * Equals the live score for any match that hasn't gone past 90, so it's safe to
+ * call unconditionally. Every 90-minute market (1X2, BTTS, totals, correct score,
+ * double chance, margins, HT-FT) settles on THIS, not the AET score — so a tie
+ * that wins in extra time still grades the 90-min "to win" leg as lost.
+ */
+function ft90Of(lm: LiveMatch): { home: number; away: number } {
+  let home = lm.score.home;
+  let away = lm.score.away;
+  for (const g of lm.goals) {
+    if (g.et === true || (g.minute ?? 0) > 90) {
+      if (g.team === "home") home -= 1;
+      else away -= 1;
+    }
+  }
+  return { home: Math.max(0, home), away: Math.max(0, away) };
+}
+
+/** A knockout tie has crossed into extra time (ESPN period 3/4) or penalties (5):
+ *  no further 90-minute goals are possible, so every 90-minute market is decided. */
+const inExtraTimeNow = (lm: LiveMatch): boolean => lm.state === "live" && lm.period >= 3;
+
 // ── correct-score bets ────────────────────────────────────────────────────────
 export function inPlayBet(bet: BetLike, live: LiveMatch | undefined): InPlay {
   if (!live || live.state === "scheduled") return { verdict: "scheduled", note: "Not started" };
@@ -181,9 +205,10 @@ export function inPlayBet(bet: BetLike, live: LiveMatch | undefined): InPlay {
     return { verdict: "dead", note: `Out of reach — ${cur.home}–${cur.away}` };
   }
 
-  // FT correct-score bet.
-  if (live.state === "finished") {
-    const ft = live.ftScore ?? cur;
+  // FT correct-score bet — a 90-minute market: settles on the 90-min line the
+  // instant the match ends OR crosses into extra time (ET goals never count).
+  if (live.state === "finished" || inExtraTimeNow(live)) {
+    const ft = ft90Of(live);
     return eq(ft, bet.home, bet.away)
       ? { verdict: "won", note: `Won — FT ${ft.home}–${ft.away}` }
       : { verdict: "lost", note: `Lost — FT ${ft.home}–${ft.away}` };
@@ -221,6 +246,11 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
   const cards = live.cards;
   const done = live.state === "finished";
   const cur = live.score;
+  // 90-minute view for the score-based specials (1X2, BTTS, totals, combos): a
+  // knockout tie that goes to extra time settles them now, on the ET-stripped
+  // line. `cur90` == `cur` in regulation, so it's safe to use throughout.
+  const done90 = done || inExtraTimeNow(live);
+  const cur90 = ft90Of(live);
   const player = "player" in g ? g.player : "";
   const scored = goalsBy(goals, player).length;
   const assists = assistsBy(goals, player).length;
@@ -405,12 +435,12 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       // locked until FT, so before the whistle it only swings winning/alive.
       const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
       const sideLabel = g.outcome === "1" ? "home win" : g.outcome === "2" ? "away win" : "draw";
-      const btts = cur.home >= 1 && cur.away >= 1;
-      const onTrack = out(cur.home, cur.away) === g.outcome && btts;
-      if (done) {
+      const btts = cur90.home >= 1 && cur90.away >= 1;
+      const onTrack = out(cur90.home, cur90.away) === g.outcome && btts;
+      if (done90) {
         return onTrack
-          ? { verdict: "won", note: `${sideLabel} + both scored ✓ (${cur.home}–${cur.away})` }
-          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+          ? { verdict: "won", note: `${sideLabel} + both scored ✓ (${cur90.home}–${cur90.away})` }
+          : { verdict: "lost", note: `FT ${cur90.home}–${cur90.away}` };
       }
       return onTrack
         ? { verdict: "winning", note: `${sideLabel} + BTTS on track · ${cur.home}–${cur.away}` }
@@ -525,12 +555,14 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
     }
 
     case "bttsEachOver": {
-      // Both teams strictly over `line` each (line 1 → 2+ each). Locked once met.
-      const home = goals.filter((gl) => gl.team === "home" && !gl.ownGoal).length;
-      const away = goals.filter((gl) => gl.team === "away" && !gl.ownGoal).length;
+      // Both teams strictly over `line` each (line 1 → 2+ each). 90-minute market —
+      // extra-time goals (minute > 90) don't count. Locked once both clear it.
+      const reg = (gl: Goal) => !gl.ownGoal && (gl.minute ?? 0) <= 90;
+      const home = goals.filter((gl) => gl.team === "home" && reg(gl)).length;
+      const away = goals.filter((gl) => gl.team === "away" && reg(gl)).length;
       const need = Math.ceil(g.line + 0.5);
       if (home > g.line && away > g.line) return { verdict: "won", note: `Both ${need}+ ✓ (${home}–${away})` };
-      return done
+      return done90
         ? { verdict: "lost", note: `Ended ${home}–${away} (need ${need} each)` }
         : { verdict: "alive", note: `${home}–${away} · need ${need} each` };
     }
@@ -566,10 +598,10 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       // between "winning" (current 1X2 matches) and "alive", never "dead".
       const out = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
       const sideLabel = g.outcome === "1" ? "home win" : g.outcome === "2" ? "away win" : "draw";
-      if (done) {
-        return out(cur.home, cur.away) === g.outcome
-          ? { verdict: "won", note: `${sideLabel} ✓ (${cur.home}–${cur.away})` }
-          : { verdict: "lost", note: `FT ${cur.home}–${cur.away}` };
+      if (done90) {
+        return out(cur90.home, cur90.away) === g.outcome
+          ? { verdict: "won", note: `${sideLabel} ✓ (${cur90.home}–${cur90.away})` }
+          : { verdict: "lost", note: `FT ${cur90.home}–${cur90.away}` };
       }
       return out(cur.home, cur.away) === g.outcome
         ? { verdict: "winning", note: `Need ${sideLabel} · live ${cur.home}–${cur.away}` }
@@ -599,14 +631,14 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
     }
 
     case "matchGoalsOver": {
-      // Total goals (both teams) over the line. Goals only accrue, so once the
-      // line is cleared it's a locked win; until then it climbs winning/alive.
-      const total = cur.home + cur.away;
+      // Total goals (both teams) over the line — a 90-minute market: extra-time
+      // goals don't count. Once the 90-min line is cleared it's a locked win.
+      const total = cur90.home + cur90.away;
       const need = Math.ceil(g.line + 0.5);
-      if (total > g.line) return { verdict: "won", note: `${total} goals ✓ (${cur.home}–${cur.away})` };
-      return done
-        ? { verdict: "lost", note: `Ended ${cur.home}–${cur.away} · ${total} goals (need ${need})` }
-        : { verdict: "alive", note: `${total}/${need} goals · ${cur.home}–${cur.away}` };
+      if (total > g.line) return { verdict: "won", note: `${total} goals ✓ (${cur90.home}–${cur90.away})` };
+      return done90
+        ? { verdict: "lost", note: `Ended ${cur90.home}–${cur90.away} · ${total} goals (need ${need})` }
+        : { verdict: "alive", note: `${total}/${need} goals · ${cur90.home}–${cur90.away}` };
     }
 
     case "combo": {
@@ -614,12 +646,12 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
       // Accruing legs (goals/corners/cards over) can only improve, but result /
       // most-corners / most-cards legs can still flip, so a not-yet-true combo
       // stays "alive" rather than dying before the whistle.
-      const r = evalCombo(g.conds, cur, live.htScore, live.stats ?? null);
+      const r = evalCombo(g.conds, cur90, live.htScore, live.stats ?? null);
       const st = live.stats;
       const note = st
-        ? `${cur.home}–${cur.away} · cnr ${st.corners.home}-${st.corners.away} · sot ${st.sot.home}-${st.sot.away} · crd ${st.cards.home}-${st.cards.away}`
-        : `${cur.home}–${cur.away} · stats pending`;
-      if (done) {
+        ? `${cur90.home}–${cur90.away} · cnr ${st.corners.home}-${st.corners.away} · sot ${st.sot.home}-${st.sot.away} · crd ${st.cards.home}-${st.cards.away}`
+        : `${cur90.home}–${cur90.away} · stats pending`;
+      if (done90) {
         if (r === true) return { verdict: "won", note: `All legs ✓ · ${note}` };
         if (r === false) return { verdict: "lost", note };
         return { verdict: "alive", note: `Awaiting ESPN stats · ${note}` };
@@ -636,14 +668,15 @@ export function inPlaySpecial(special: SpecialLike, live: LiveMatch | undefined)
     case "comboWithScorer": {
       // Build-a-bet with an extra "named player scores anytime" leg. Stat legs
       // can still flip and stats lag, so a not-yet-complete bet stays alive.
-      const r = evalCombo(g.conds, cur, live.htScore, live.stats ?? null);
-      const sc = scored > 0;
+      const r = evalCombo(g.conds, cur90, live.htScore, live.stats ?? null);
+      // Anytime-scorer is a 90-minute leg too — an extra-time goal doesn't count.
+      const sc = goalsBy(goals, player).some((gl) => (gl.minute ?? 0) <= 90);
       const st = live.stats;
       const legNote = st
-        ? `${cur.home}–${cur.away} · cnr ${st.corners.home}-${st.corners.away}`
-        : `${cur.home}–${cur.away} · stats pending`;
+        ? `${cur90.home}–${cur90.away} · cnr ${st.corners.home}-${st.corners.away}`
+        : `${cur90.home}–${cur90.away} · stats pending`;
       const note = `${player} ${sc ? "scored ✓" : "yet to score"} · ${legNote}`;
-      if (done) {
+      if (done90) {
         if (r === true && sc) return { verdict: "won", note: `All legs ✓ · ${note}` };
         if (r === false || (r === true && !sc)) return { verdict: "lost", note };
         return { verdict: "alive", note: `Awaiting ESPN stats · ${note}` };
@@ -776,8 +809,15 @@ export function inPlayMultiLeg(
       continue;
     }
     anyLive = true;
-    const done = lm.state === "finished";
-    const cur = lm.score;
+    // Full-time view (incl. extra time / penalties): advancement + scorer legs,
+    // which only resolve at the true match end.
+    const doneFull = lm.state === "finished";
+    const curFull = lm.score;
+    // 90-minute view — the DEFAULT for this loop, since most leg kinds are
+    // 90-minute markets. A knockout tie crossing into extra time settles them all
+    // immediately on the ET-stripped scoreline; `cur` == `curFull` in regulation.
+    const done = doneFull || inExtraTimeNow(lm);
+    const cur = ft90Of(lm);
 
     if (leg.kind === "result") {
       // 1X2 oriented to our fixture home/away — only locks at FT, never "dead"
@@ -807,9 +847,9 @@ export function inPlayMultiLeg(
       // can still go through. Leading → on track. At FINAL, a decisive score
       // implies who advanced; a level final waits for the captured `advanced`
       // (the static settle), shown here as still pending (⋯).
-      const ours = leg.side === "home" ? cur.home : cur.away;
-      const theirs = leg.side === "home" ? cur.away : cur.home;
-      if (done) {
+      const ours = leg.side === "home" ? curFull.home : curFull.away;
+      const theirs = leg.side === "home" ? curFull.away : curFull.home;
+      if (doneFull) {
         if (ours > theirs) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
@@ -1163,7 +1203,7 @@ export function inPlayMultiLeg(
       if (max >= 2) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
-      } else if (done) {
+      } else if (doneFull) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else if (max === 1) {
@@ -1282,7 +1322,7 @@ export function inPlayMultiLeg(
       if (tally > leg.line) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
-      } else if (done) {
+      } else if (doneFull) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
@@ -1297,7 +1337,7 @@ export function inPlayMultiLeg(
       if (goalsBy(lm.goals, leg.player).length > leg.line) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
-      } else if (done) {
+      } else if (doneFull) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
@@ -1314,7 +1354,7 @@ export function inPlayMultiLeg(
       if (involved > 0) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
-      } else if (done) {
+      } else if (doneFull) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
@@ -1331,7 +1371,7 @@ export function inPlayMultiLeg(
         if (assisted) {
           dead = true;
           parts.push(`${legLabel} ✗`);
-        } else if (done) {
+        } else if (doneFull) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
         } else {
@@ -1343,7 +1383,7 @@ export function inPlayMultiLeg(
       if (assisted) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
-      } else if (done) {
+      } else if (doneFull) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
@@ -1360,7 +1400,7 @@ export function inPlayMultiLeg(
         if (scored) {
           dead = true;
           parts.push(`${legLabel} ✗`);
-        } else if (done) {
+        } else if (doneFull) {
           wonCount++;
           parts.push(`${legLabel} ✓`);
         } else {
@@ -1372,7 +1412,7 @@ export function inPlayMultiLeg(
       if (scored) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
-      } else if (done) {
+      } else if (doneFull) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
@@ -1380,10 +1420,11 @@ export function inPlayMultiLeg(
       }
       continue;
     }
-    // scoredAndScoreOneOf
+    // scoredAndScoreOneOf — score grid is a 90-minute market (uses `cur`), but the
+    // scorer half resolves only at the true whistle, so gate on `doneFull`.
     const onGrid = leg.scores.some((s) => eq(cur, s.home, s.away));
     const anyReach = leg.scores.some((s) => reachable(cur, s.home, s.away));
-    if (done) {
+    if (doneFull) {
       if (scored && onGrid) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
