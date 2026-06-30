@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T18:50:02.623Z",
+    "generatedAt": "2026-06-30T19:00:03.783Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 56,
-    "live": 1
+    "finished": 57,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -7564,19 +7564,25 @@
       }
     },
     "civ-nor-2026-06-30": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 1,
+        "away": 2
+      },
+      "ft90": {
+        "home": 1,
+        "away": 2
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 1,
         "away": 2
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -7614,16 +7620,16 @@
       "updatedAt": "2026-06-30T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 12,
+          "home": 14,
           "away": 3
         },
         "sot": {
-          "home": 4,
+          "home": 5,
           "away": 4
         },
         "shots": {
-          "home": 12,
-          "away": 8
+          "home": 14,
+          "away": 9
         },
         "yellow": {
           "home": 0,
@@ -7640,7 +7646,7 @@
         "cornersByHalf": {
           "home": [
             9,
-            3
+            5
           ],
           "away": [
             2,
@@ -7650,7 +7656,7 @@
         "sotByHalf": {
           "home": [
             1,
-            2
+            3
           ],
           "away": [
             1,
@@ -7661,7 +7667,8 @@
           "Emmanuel Agbadou": 1,
           "Erling Haaland": 1,
           "Nicolas Pépé": 1,
-          "Franck Kessié": 1
+          "Franck Kessié": 1,
+          "Amad Diallo": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
