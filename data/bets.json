@@ -5051,6 +5051,68 @@
   "specialsNote": "Real 1xBet single bets across both batches. Most auto-grade off matchEvents (goals/assists/first scorer/free-kicks) + the final score; the Kane first-goal + any-other-score special is settled manually (statusOverride). Set statusOverride only to correct a bad scrape.",
   "specials": [
     {
+      "id": "sp-83768998503",
+      "slipNo": "83768998503",
+      "matchId": "civ-nor-2026-06-30",
+      "player": "—",
+      "market": "Acca · 9 legs",
+      "label": "Acca (R32) — Mexico/England/USA/Portugal/Argentina/Colombia to qualify · Senegal to qualify · Mbappe to score · Haaland over 1.5 (9 legs)",
+      "odds": 60.972,
+      "stake": 40,
+      "placedAt": "30/06 12:06",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "mex-ecu-2026-07-01",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "eng-cod-2026-07-01",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-swe-2026-06-30",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "civ-nor-2026-06-30",
+            "kind": "goalsOver",
+            "player": "Erling Haaland",
+            "line": 1.5
+          }
+        ]
+      }
+    },
+    {
       "id": "sp-83207394547",
       "slipNo": "83207394547",
       "matchId": "por-drc-2026-06-17",
