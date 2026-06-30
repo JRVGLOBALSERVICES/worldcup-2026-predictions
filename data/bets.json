@@ -14866,16 +14866,16 @@
     },
     "ned-mar-2026-06-30": {
       "corners": {
-        "home": 4,
-        "away": 2
+        "home": 5,
+        "away": 8
       },
       "sot": {
-        "home": 1,
-        "away": 2
+        "home": 2,
+        "away": 5
       },
       "shots": {
-        "home": 4,
-        "away": 7
+        "home": 6,
+        "away": 11
       },
       "yellow": {
         "home": 0,
@@ -14892,11 +14892,11 @@
       "cornersByHalf": {
         "home": [
           4,
-          0
+          1
         ],
         "away": [
           2,
-          0
+          6
         ]
       },
       "sotByHalf": {
@@ -14906,15 +14906,17 @@
         ],
         "away": [
           2,
-          0
+          2
         ]
       },
       "playerSot": {
         "Neil El Aynaoui": 1,
         "Achraf Hakimi": 1,
-        "Micky van de Ven": 1
+        "Micky van de Ven": 1,
+        "Bilal El Khannouss": 1,
+        "Soufiane Rahimi": 1
       },
-      "firstGoalMethod": null,
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
       "waterBreak": {
         "h1": {
@@ -14924,6 +14926,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Foul",
           "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Goal",
+          "firstActionMinute": 71,
           "isCorner": false,
           "reliable": true
         }

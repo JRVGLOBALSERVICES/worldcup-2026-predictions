@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T02:20:22.847Z",
+    "generatedAt": "2026-06-30T03:20:27.748Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 59
   },
@@ -56,6 +56,14 @@
       },
       {
         "rank": 6,
+        "name": "Cody Gakpo",
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 3,
+        "matches": 3
+      },
+      {
+        "rank": 6,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -75,14 +83,6 @@
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 3,
-        "matches": 3
-      },
-      {
-        "rank": 6,
-        "name": "Ismael Saibari",
-        "team": "Morocco",
-        "flag": "🇲🇦",
         "value": 3,
         "matches": 3
       }
@@ -146,6 +146,14 @@
       },
       {
         "rank": 4,
+        "name": "Crysencio Summerville",
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 4,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -157,14 +165,6 @@
         "name": "Denzel Dumfries",
         "team": "Netherlands",
         "flag": "🇳🇱",
-        "value": 2,
-        "matches": 3
-      },
-      {
-        "rank": 4,
-        "name": "Florian Wirtz",
-        "team": "Germany",
-        "flag": "🇩🇪",
         "value": 2,
         "matches": 3
       }
@@ -494,22 +494,14 @@
       },
       {
         "rank": 6,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 89.8,
-        "display": "89.8%",
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 89.6,
+        "display": "89.6%",
         "matches": 3
       },
       {
         "rank": 7,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 89.3,
-        "display": "89.3%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 89,
@@ -517,11 +509,19 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 88.9,
         "display": "88.9%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 88.3,
+        "display": "88.3%",
         "matches": 3
       },
       {
@@ -559,7 +559,15 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 3,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 65.3,
+        "display": "65.3%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
@@ -567,7 +575,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -575,20 +583,12 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
         "display": "63.0%",
         "matches": 2
-      },
-      {
-        "rank": 7,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 62.7,
-        "display": "62.7%",
-        "matches": 3
       },
       {
         "rank": 8,
@@ -682,16 +682,16 @@
       },
       {
         "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 44.1,
-        "display": "44.1%",
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 44.4,
+        "display": "44.4%",
         "matches": 3
       },
       {
-        "rank": 9,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
+        "rank": 10,
+        "team": "Argentina",
+        "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
@@ -928,16 +928,16 @@
       },
       {
         "rank": 9,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 51.8,
-        "display": "51.8%",
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 51.2,
+        "display": "51.2%",
         "matches": 3
       },
       {
-        "rank": 10,
-        "team": "Colombia",
-        "flag": "🇨🇴",
+        "rank": 9,
+        "team": "France",
+        "flag": "🇫🇷",
         "value": 51.2,
         "display": "51.2%",
         "matches": 3
@@ -2077,6 +2077,11 @@
           "matches": 1
         },
         {
+          "name": "Issa Diop",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Soufiane Rahimi",
           "value": 1,
           "matches": 1
@@ -2097,6 +2102,11 @@
           "name": "Chadi Riad",
           "value": 1,
           "matches": 3
+        },
+        {
+          "name": "Chemsdine Talbi",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "Soufiane Rahimi",
@@ -2258,7 +2268,7 @@
         },
         {
           "name": "Cody Gakpo",
-          "value": 2,
+          "value": 3,
           "matches": 3
         },
         {
@@ -2279,6 +2289,11 @@
       ],
       "assists": [
         {
+          "name": "Crysencio Summerville",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Denzel Dumfries",
           "value": 2,
           "matches": 3
@@ -2292,11 +2307,6 @@
           "name": "Cody Gakpo",
           "value": 1,
           "matches": 3
-        },
-        {
-          "name": "Crysencio Summerville",
-          "value": 1,
-          "matches": 1
         },
         {
           "name": "Memphis Depay",
@@ -5804,35 +5814,44 @@
       },
       "760488": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Crysencio Summerville",
+            "team": "Netherlands"
+          },
+          {
+            "name": "Chemsdine Talbi",
+            "team": "Morocco"
+          }
+        ],
         "teamBox": [
           {
             "team": "Netherlands",
-            "possessionPct": 39.9,
-            "accuratePasses": 200,
-            "totalPasses": 240,
-            "shotsOnTarget": 1,
-            "totalShots": 4,
-            "effectiveTackles": 4,
-            "totalTackles": 7,
-            "accurateCrosses": 1,
-            "totalCrosses": 7,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 26
+            "possessionPct": 32.1,
+            "accuratePasses": 272,
+            "totalPasses": 344,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 8,
+            "totalTackles": 15,
+            "accurateCrosses": 3,
+            "totalCrosses": 10,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 41
           },
           {
             "team": "Morocco",
-            "possessionPct": 60.1,
-            "accuratePasses": 330,
-            "totalPasses": 365,
-            "shotsOnTarget": 2,
-            "totalShots": 7,
-            "effectiveTackles": 6,
-            "totalTackles": 9,
-            "accurateCrosses": 1,
-            "totalCrosses": 7,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 24
+            "possessionPct": 67.9,
+            "accuratePasses": 665,
+            "totalPasses": 733,
+            "shotsOnTarget": 5,
+            "totalShots": 11,
+            "effectiveTackles": 12,
+            "totalTackles": 17,
+            "accurateCrosses": 4,
+            "totalCrosses": 16,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 41
           }
         ]
       },
