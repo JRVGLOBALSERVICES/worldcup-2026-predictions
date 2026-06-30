@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T01:20:21.153Z",
+    "generatedAt": "2026-06-30T02:20:22.847Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 59
   },
@@ -269,6 +269,13 @@
       },
       {
         "rank": 1,
+        "name": "Issa Diop",
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Juninho Bacuna",
         "team": "Curacao",
         "flag": "🇨🇼",
@@ -294,13 +301,6 @@
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 2
-      },
-      {
-        "rank": 10,
-        "name": "Abdoulaye Seck",
-        "team": "Senegal",
-        "flag": "🇸🇳",
-        "value": 1
       }
     ],
     "redCards": [
@@ -478,14 +478,6 @@
       },
       {
         "rank": 4,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 90.8,
-        "display": "90.8%",
-        "matches": 3
-      },
-      {
-        "rank": 5,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 90.6,
@@ -493,7 +485,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 90.6,
@@ -501,17 +493,25 @@
         "matches": 2
       },
       {
-        "rank": 7,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 89,
-        "display": "89.0%",
+        "rank": 6,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 89.8,
+        "display": "89.8%",
         "matches": 3
       },
       {
         "rank": 7,
         "team": "Morocco",
         "flag": "🇲🇦",
+        "value": 89.3,
+        "display": "89.3%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 89,
         "display": "89.0%",
         "matches": 3
@@ -584,6 +584,14 @@
       },
       {
         "rank": 7,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 62.7,
+        "display": "62.7%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
         "team": "Belgium",
         "flag": "🇧🇪",
         "value": 62.3,
@@ -591,7 +599,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.2,
@@ -599,19 +607,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
-        "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 59,
-        "display": "59.0%",
         "matches": 3
       }
     ],
@@ -681,17 +681,17 @@
         "matches": 3
       },
       {
-        "rank": 8,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 45.2,
-        "display": "45.2%",
+        "rank": 9,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 44.1,
+        "display": "44.1%",
         "matches": 3
       },
       {
-        "rank": 10,
-        "team": "Argentina",
-        "flag": "🇦🇷",
+        "rank": 9,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
@@ -903,15 +903,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 53.1,
-        "display": "53.1%",
-        "matches": 3
-      },
-      {
-        "rank": 7,
+        "rank": 6,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 52.4,
@@ -919,7 +911,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -927,11 +919,19 @@
         "matches": 2
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 51.8,
+        "display": "51.8%",
         "matches": 3
       },
       {
@@ -2107,7 +2107,7 @@
       "yellowCards": [
         {
           "name": "Issa Diop",
-          "value": 1
+          "value": 2
         }
       ],
       "redCards": []
@@ -5808,31 +5808,31 @@
         "teamBox": [
           {
             "team": "Netherlands",
-            "possessionPct": 51,
-            "accuratePasses": 82,
-            "totalPasses": 96,
-            "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 3,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 7
+            "possessionPct": 39.9,
+            "accuratePasses": 200,
+            "totalPasses": 240,
+            "shotsOnTarget": 1,
+            "totalShots": 4,
+            "effectiveTackles": 4,
+            "totalTackles": 7,
+            "accurateCrosses": 1,
+            "totalCrosses": 7,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 26
           },
           {
             "team": "Morocco",
-            "possessionPct": 49,
-            "accuratePasses": 83,
-            "totalPasses": 92,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 1,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 8
+            "possessionPct": 60.1,
+            "accuratePasses": 330,
+            "totalPasses": 365,
+            "shotsOnTarget": 2,
+            "totalShots": 7,
+            "effectiveTackles": 6,
+            "totalTackles": 9,
+            "accurateCrosses": 1,
+            "totalCrosses": 7,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 24
           }
         ]
       },
