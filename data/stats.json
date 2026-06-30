@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T22:10:06.349Z",
+    "generatedAt": "2026-06-30T22:20:06.671Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 61
   },
@@ -97,7 +97,15 @@
         "matches": 4
       },
       {
-        "rank": 2,
+        "rank": 1,
+        "name": "Michael Olise",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 4,
+        "matches": 3
+      },
+      {
+        "rank": 3,
         "name": "Alexander Isak",
         "team": "Sweden",
         "flag": "🇸🇪",
@@ -105,7 +113,7 @@
         "matches": 3
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Florian Wirtz",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -113,18 +121,10 @@
         "matches": 4
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Martin Ødegaard",
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 3,
-        "matches": 3
-      },
-      {
-        "rank": 2,
-        "name": "Michael Olise",
-        "team": "France",
-        "flag": "🇫🇷",
         "value": 3,
         "matches": 3
       },
@@ -528,8 +528,8 @@
         "rank": 10,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 87.9,
-        "display": "87.9%",
+        "value": 87.8,
+        "display": "87.8%",
         "matches": 4
       }
     ],
@@ -642,14 +642,6 @@
       },
       {
         "rank": 4,
-        "team": "Sweden",
-        "flag": "🇸🇪",
-        "value": 46.7,
-        "display": "46.7%",
-        "matches": 3
-      },
-      {
-        "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -657,7 +649,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 45.8,
@@ -665,7 +657,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -673,7 +665,23 @@
         "matches": 3
       },
       {
+        "rank": 6,
+        "team": "Sweden",
+        "flag": "🇸🇪",
+        "value": 45.2,
+        "display": "45.2%",
+        "matches": 3
+      },
+      {
         "rank": 8,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 44.6,
+        "display": "44.6%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -681,20 +689,12 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 43.8,
-        "display": "43.8%",
-        "matches": 4
       }
     ],
     "tackleSuccess": [
@@ -938,8 +938,8 @@
         "rank": 10,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 50.7,
-        "display": "50.7%",
+        "value": 50.3,
+        "display": "50.3%",
         "matches": 4
       }
     ]
@@ -961,8 +961,8 @@
         },
         {
           "name": "Bradley Barcola",
-          "value": 1,
-          "matches": 1
+          "value": 2,
+          "matches": 2
         },
         {
           "name": "Désiré Doué",
@@ -973,7 +973,7 @@
       "assists": [
         {
           "name": "Michael Olise",
-          "value": 3,
+          "value": 4,
           "matches": 3
         },
         {
@@ -5950,36 +5950,40 @@
           {
             "name": "Ousmane Dembélé",
             "team": "France"
+          },
+          {
+            "name": "Michael Olise",
+            "team": "France"
           }
         ],
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 71,
-            "accuratePasses": 277,
-            "totalPasses": 317,
-            "shotsOnTarget": 6,
-            "totalShots": 16,
+            "possessionPct": 66.8,
+            "accuratePasses": 325,
+            "totalPasses": 374,
+            "shotsOnTarget": 7,
+            "totalShots": 17,
             "effectiveTackles": 3,
             "totalTackles": 4,
             "accurateCrosses": 3,
             "totalCrosses": 11,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 19
+            "accurateLongBalls": 12,
+            "totalLongBalls": 26
           },
           {
             "team": "Sweden",
-            "possessionPct": 29,
-            "accuratePasses": 87,
-            "totalPasses": 129,
+            "possessionPct": 33.2,
+            "accuratePasses": 130,
+            "totalPasses": 184,
             "shotsOnTarget": 1,
-            "totalShots": 3,
+            "totalShots": 4,
             "effectiveTackles": 5,
             "totalTackles": 9,
-            "accurateCrosses": 1,
-            "totalCrosses": 6,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 31
+            "accurateCrosses": 2,
+            "totalCrosses": 8,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 38
           }
         ]
       }
