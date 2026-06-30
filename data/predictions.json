@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-29T19:43:04.398Z",
+    "generatedAt": "2026-06-30T00:04:50.881Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-29T09:00:38.188Z"
@@ -13606,18 +13606,18 @@
     "ned-mar-2026-06-30": {
       "win": {
         "pick": "Netherlands",
-        "fairOdds": "2.15",
-        "reason": "Netherlands' superior attacking firepower (10 group goals) just tips a tight tie, but Morocco's elite organisation makes this no banker - closer to 46% than a lock."
+        "fairOdds": "2.05",
+        "reason": "Netherlands carry more attacking firepower (10 group goals, +6 GD) and Brobbey is in red-hot form, but this is no certainty. The Dutch back line conceded in all three group games, has no clean sheet since November, and pushes full-backs high - exactly the transition space Morocco's counter and Hakimi's pace punish. Morocco sit deep behind a Diop/Riad block. Model ~52% NED / ~20% draw / ~28% MAR; draw+underdog ~48% means this is a lean, not a lock. Extra time is live."
       },
       "halfTime": {
         "score": "0-0",
         "fairOdds": "2.30",
         "alt": "1-0",
-        "altOdds": "3.60"
+        "altOdds": "4.20"
       },
       "htft": {
         "pick": "Draw/Netherlands",
-        "fairOdds": "4.50"
+        "fairOdds": "4.80"
       },
       "fullTime": {
         "score": "1-1",
@@ -13625,101 +13625,103 @@
       },
       "scorers": [
         {
-          "player": "Cody Gakpo",
-          "fairOdds": "3.00",
+          "player": "Brian Brobbey",
+          "fairOdds": "3.10",
           "banker": false,
-          "note": "Dutch penalty option, set-piece taker and central scoring threat; most reliable multi-market pick but not nailed-on vs a disciplined Morocco block."
+          "note": "Dutch top scorer with 3 group goals (brace v Sweden, opener v Tunisia); leads the line and finishes inside the box. Powerful hold-up plus runs in behind, but Diop/Riad are a physical CB pairing sitting deep, so not a banker."
         },
         {
-          "player": "Tijjani Reijnders",
+          "player": "Cody Gakpo",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Starts wide-left/inside-left and is on Dutch penalty duty, giving him a spot-kick route to a goal on top of open play. Productive group stage; the high left side is where he can isolate Mazraoui."
+        },
+        {
+          "player": "Ismael Saibari",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "Morocco's lone 9 and joint top scorer (3 goals incl. fastest of WC2026 v Scotland, plus Brazil and Haiti). Isolated up top against Van Dijk so service is limited, but he scores from minimal chances on the counter - never bank a single striker."
+        },
+        {
+          "player": "Donyell Malen",
           "fairOdds": "4.50",
           "banker": false,
-          "note": "Arriving midfield runner and free-kick taker, in fine form through the group stage."
-        },
-        {
-          "player": "Achraf Hakimi",
-          "fairOdds": "6.00",
-          "banker": false,
-          "note": "Morocco's penalty taker and attacking right-back who carries a real goal/assist threat from open play and set pieces."
-        },
-        {
-          "player": "Ayoub El Kaabi",
-          "fairOdds": "5.00",
-          "banker": false,
-          "note": "First-choice Morocco No.9 and qualifying top-scorer, but service may be limited against a deep-lying game-state - value, not a banker."
+          "note": "Starts on the right ahead of the benched Summerville; direct runner who can attack Mazraoui's flank in transition. Lower volume than Brobbey/Gakpo, so a value scorer rather than a probable one."
         }
       ],
       "assists": [
         {
           "player": "Achraf Hakimi",
-          "fairOdds": "5.50",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "Morocco's primary creator from right wing-back and dead-ball deliveries."
+          "note": "Morocco's primary creative outlet from right-back; one of the quickest attacking full-backs in the world, drives the counter and delivers set pieces (corners/free-kicks). Most of Morocco's danger flows through him."
         },
         {
           "player": "Denzel Dumfries",
-          "fairOdds": "6.00",
+          "fairOdds": "4.60",
           "banker": false,
-          "note": "Dutch right-back overlaps and crosses are a key chance-creation route."
+          "note": "Dutch right-back who bombs forward and supplies crosses for Brobbey; one of the full-backs pushing high. High delivery volume makes him a live assist source, though Morocco's deep block crowds the box."
         },
         {
-          "player": "Frenkie de Jong",
-          "fairOdds": "7.00",
+          "player": "Cody Gakpo",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "Outstanding so far (recoveries/interceptions leader); progresses play and can pick the final pass."
+          "note": "Carries the ball into the final third from the left and combines with Brobbey; chips in assists alongside his goal threat. Morocco's compact shape can cut off the final pass."
         }
       ],
       "penalty": {
         "likelihood": "Medium",
-        "taker": "Brahim Diaz",
-        "backup": "Achraf Hakimi",
-        "note": "Tight knockout games often turn on a single spot-kick; Diaz is Morocco's likely taker with Hakimi (2022 Panenka v Spain) the trusted backup, and Depay/Gakpo for the Dutch."
+        "taker": "Brahim Diaz (Morocco) / Cody Gakpo (Netherlands)",
+        "backup": "Achraf Hakimi (Morocco) / Memphis Depay if introduced (Netherlands)",
+        "note": "If Morocco win a spot-kick Brahim Diaz is first choice with Hakimi as backup; for the Netherlands Gakpo takes penalties (Depay an option off the bench). Probability medium, not low: Dutch full-backs push high and concede transition fouls, while Morocco defend deep and can give away spot-kicks under pressure."
       },
       "lineups": {
-        "home": "4-3-3 probable XI: GK Verbruggen; DEF Dumfries, Van Dijk, Van Hecke, Van de Ven; MID Gravenberch, Frenkie de Jong, Reijnders; FWD Malen, Brobbey, Gakpo",
-        "away": "4-3-3 probable XI: GK Bounou; DEF Hakimi, Aguerd, Masina, Mazraoui; MID Amrabat, El Khannous, El Aynaoui; FWD Brahim Diaz, El Kaabi, Ezzalzouli",
-        "status": "probable"
+        "home": "4-3-3 confirmed XI: GK Verbruggen; DEF Dumfries, Van Dijk, Van Hecke, Van de Ven; MID Gravenberch, Frenkie de Jong, Reijnders; FWD Malen, Brobbey, Gakpo",
+        "away": "4-2-3-1 confirmed XI: GK Bounou; DEF Hakimi, Diop, Riad, Mazraoui; DM Bouaddi, El Aynaoui; AM Brahim Diaz, Ounahi, El Khannouss; FW Saibari",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "note": "Lone striker with Ayoub El Kaabi benched. Joint tournament-form star: scored in each of his first three WC appearances (Brazil, Scotland - fastest goal of WC2026 at 71s - and Haiti). Isolated against Van Dijk and feeds off counters, so chances scarce but lethal."
+        },
+        {
+          "player": "Ayyoub Bouaddi",
+          "team": "Morocco",
+          "note": "Young defensive midfielder forming the double pivot with El Aynaoui in place of the absent Sofyan Amrabat. A less experienced screen in front of the back four - a pressure point if Reijnders and De Jong run at him; key to whether Morocco's deep block holds."
+        },
+        {
+          "player": "Issa Diop & Chadi Riad",
+          "team": "Morocco",
+          "note": "Centre-back pairing (NOT Aguerd/Masina). Physical, deep-sitting duo tasked with containing Brobbey's power and Dutch box runs; their aerial duels and recovery in transition decide whether Morocco keep a clean sheet."
+        },
+        {
+          "player": "Brian Brobbey",
+          "team": "Netherlands",
+          "note": "Dutch top scorer (3 goals), starts at striker. Combines raw strength to hold off Diop/Riad with runs in behind. Morocco's deep line gives him less space than open Sweden/Tunisia defences did."
+        },
+        {
           "player": "Virgil van Dijk",
           "team": "Netherlands",
-          "note": "Captain and defensive anchor; Dutch conceded in every group game, so his back-line organisation is the key question vs Morocco's counters."
-        },
-        {
-          "player": "Cody Gakpo",
-          "team": "Netherlands",
-          "note": "Penalty, set-piece and open-play scoring threat - the Dutch's most plausible match-winner."
-        },
-        {
-          "player": "Xavi Simons",
-          "team": "Netherlands",
-          "note": "Most creative player ruled OUT (ACL rupture in April); a real downgrade to Dutch creativity."
-        },
-        {
-          "player": "Frenkie de Jong",
-          "team": "Netherlands",
-          "note": "Excellent group stage; controls tempo and could decide a tight midfield battle."
+          "note": "Captain and anchor, played every minute of the group stage, but the back line conceded in all three games with no clean sheet since November. His command in transition is the biggest question against Hakimi's pace and Morocco's break."
         },
         {
           "player": "Achraf Hakimi",
           "team": "Morocco",
-          "note": "Talisman: attacking right-back, penalty/free-kick threat and Morocco's biggest individual-moment risk to the Dutch."
-        },
-        {
-          "player": "Sofyan Amrabat",
-          "team": "Morocco",
-          "note": "Sitting midfielder who screens the defence - central to the 2022-style organisation that makes Morocco hard to break down and a genuine draw risk."
+          "note": "Right-back and Morocco's main attacking and set-piece outlet; among the fastest full-backs in the world. The space behind the high-pushing Dutch full-backs is exactly where he is most dangerous, plus penalty/free-kick/corner duty."
         }
       ],
       "confidence": "medium",
-      "strength": 4,
+      "strength": 3,
       "sources": [
-        "https://www.101greatgoals.com/match-previews/world-cup-matches/netherlands-v-morocco-world-cup-2026-line-ups-stats-and-preview/",
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/netherlands/team-news",
-        "https://www.squawka.com/en/news/world-cup/morocco-world-cup-2026-fixtures-squad-analysis/",
-        "https://www.covers.com/world-cup/netherlands-vs-morocco-prediction-picks-odds-monday-6-29-2026",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/preview/netherlands-vs-morocco-prediction-team-news-lineups_600222.html",
+        "https://www.goal.com/en-us/news/netherlands-morocco-world-cup-preview/blt3172427e299982cd",
+        "https://www.aljazeera.com/sports/2026/6/29/netherlands-vs-morocco-fifa-world-cup-round-of-32-prediction-team-news",
+        "https://www.rotowire.com/soccer/article/netherlands-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120071",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://en.wikipedia.org/wiki/Ismael_Saibari",
+        "https://en.wikipedia.org/wiki/Brian_Brobbey"
       ],
       "pitchReport": {
         "facts": [
