@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T00:20:19.318Z",
+    "generatedAt": "2026-06-30T01:20:17.426Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 55,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -7436,6 +7436,71 @@
             "reliable": true
           }
         }
+      }
+    },
+    "ned-mar-2026-06-30": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "ft90": null,
+      "finishPhase": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "advanced": null,
+      "goals": [],
+      "cards": [],
+      "updatedAt": "2026-06-30T01:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 1
+        },
+        "sot": {
+          "home": 0,
+          "away": 0
+        },
+        "shots": {
+          "home": 1,
+          "away": 0
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {},
+        "firstGoalMethod": null,
+        "firstPenalty": null,
+        "waterBreak": {}
       }
     }
   }
