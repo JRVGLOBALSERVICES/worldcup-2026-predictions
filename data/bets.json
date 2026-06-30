@@ -907,6 +907,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "fra-swe-2026-06-30": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 3,
+        "away": 0
+      },
+      "ft90": {
+        "home": 3,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3508,6 +3524,36 @@
           "type": "yellow"
         }
       ]
+    },
+    "fra-swe-2026-06-30": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 45,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Bradley Barcola",
+          "minute": 52,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 73,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": []
     }
   },
   "bets": [
@@ -15814,16 +15860,16 @@
     },
     "fra-swe-2026-06-30": {
       "corners": {
-        "home": 6,
+        "home": 9,
         "away": 1
       },
       "sot": {
-        "home": 7,
-        "away": 1
+        "home": 12,
+        "away": 3
       },
       "shots": {
-        "home": 17,
-        "away": 4
+        "home": 25,
+        "away": 8
       },
       "yellow": {
         "home": 0,
@@ -15840,7 +15886,7 @@
       "cornersByHalf": {
         "home": [
           6,
-          0
+          3
         ],
         "away": [
           0,
@@ -15850,11 +15896,11 @@
       "sotByHalf": {
         "home": [
           5,
-          0
+          4
         ],
         "away": [
           1,
-          0
+          2
         ]
       },
       "playerSot": {
@@ -15862,7 +15908,11 @@
         "Lucas Digne": 1,
         "Kylian Mbappé": 2,
         "Adrien Rabiot": 1,
-        "Michael Olise": 1
+        "Michael Olise": 3,
+        "Désiré Doué": 1,
+        "Bradley Barcola": 1,
+        "Viktor Gyökeres": 1,
+        "Mattias Svanberg": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -15874,6 +15924,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Foul",
           "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Shot On Target",
+          "firstActionMinute": 71,
           "isCorner": false,
           "reliable": true
         }
