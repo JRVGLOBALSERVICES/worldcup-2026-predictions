@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T18:20:23.610Z",
+    "generatedAt": "2026-06-30T18:30:04.480Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 56,
     "live": 1
@@ -7598,16 +7598,16 @@
       "updatedAt": "2026-06-30T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 11,
-          "away": 2
+          "home": 12,
+          "away": 3
         },
         "sot": {
           "home": 3,
-          "away": 2
+          "away": 3
         },
         "shots": {
-          "home": 9,
-          "away": 6
+          "home": 10,
+          "away": 8
         },
         "yellow": {
           "home": 0,
@@ -7624,11 +7624,11 @@
         "cornersByHalf": {
           "home": [
             9,
-            2
+            3
           ],
           "away": [
             2,
-            0
+            1
           ]
         },
         "sotByHalf": {
@@ -7657,6 +7657,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Shot Off Target",
             "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "Offside",
+            "firstActionMinute": 67,
             "isCorner": false,
             "reliable": true
           }
