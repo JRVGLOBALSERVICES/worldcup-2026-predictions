@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T16:30:08.396Z",
+    "generatedAt": "2026-06-30T17:10:05.767Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 60
   },
@@ -666,14 +666,6 @@
       },
       {
         "rank": 7,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 45.7,
-        "display": "45.7%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -681,12 +673,20 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
         "display": "44.4%",
         "matches": 3
+      },
+      {
+        "rank": 8,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 44.4,
+        "display": "44.4%",
+        "matches": 4
       },
       {
         "rank": 10,
@@ -716,14 +716,6 @@
       },
       {
         "rank": 3,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 71.4,
-        "display": "71.4%",
-        "matches": 3
-      },
-      {
-        "rank": 3,
         "team": "Tunisia",
         "flag": "🇹🇳",
         "value": 71.4,
@@ -731,7 +723,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
         "value": 70,
@@ -739,7 +731,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 69.7,
@@ -747,7 +739,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Egypt",
         "flag": "🇪🇬",
         "value": 69.7,
@@ -755,7 +747,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
@@ -763,7 +755,7 @@
         "matches": 2
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -771,7 +763,15 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
@@ -782,19 +782,19 @@
     "crossCompletion": [
       {
         "rank": 1,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 37.8,
+        "display": "37.8%",
+        "matches": 4
+      },
+      {
+        "rank": 2,
         "team": "Curacao",
         "flag": "🇨🇼",
         "value": 37.5,
         "display": "37.5%",
         "matches": 2
-      },
-      {
-        "rank": 2,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 36.1,
-        "display": "36.1%",
-        "matches": 3
       },
       {
         "rank": 3,
@@ -832,9 +832,9 @@
         "rank": 7,
         "team": "Ivory Coast",
         "flag": "🇨🇮",
-        "value": 32,
-        "display": "32.0%",
-        "matches": 2
+        "value": 32.1,
+        "display": "32.1%",
+        "matches": 3
       },
       {
         "rank": 8,
@@ -5875,6 +5875,40 @@
             "totalCrosses": 21,
             "accurateLongBalls": 20,
             "totalLongBalls": 78
+          }
+        ]
+      },
+      "760490": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Ivory Coast",
+            "possessionPct": 39.4,
+            "accuratePasses": 28,
+            "totalPasses": 38,
+            "shotsOnTarget": 0,
+            "totalShots": 2,
+            "effectiveTackles": 1,
+            "totalTackles": 1,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 4
+          },
+          {
+            "team": "Norway",
+            "possessionPct": 60.6,
+            "accuratePasses": 50,
+            "totalPasses": 62,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 0,
+            "totalTackles": 3,
+            "accurateCrosses": 1,
+            "totalCrosses": 1,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 3
           }
         ]
       }
