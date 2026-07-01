@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T16:20:31.190Z",
+    "generatedAt": "2026-07-01T16:30:08.264Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 63
   },
@@ -567,19 +567,19 @@
       },
       {
         "rank": 4,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 63.5,
+        "display": "63.5%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
         "display": "63.1%",
         "matches": 3
-      },
-      {
-        "rank": 4,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 63.1,
-        "display": "63.1%",
-        "matches": 4
       },
       {
         "rank": 6,
@@ -717,8 +717,8 @@
         "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 75.6,
-        "display": "75.6%",
+        "value": 73.9,
+        "display": "73.9%",
         "matches": 4
       },
       {
@@ -1457,6 +1457,10 @@
       ],
       "yellowCards": [
         {
+          "name": "Noah Sadiki",
+          "value": 2
+        },
+        {
           "name": "Chancel Mbemba",
           "value": 1
         },
@@ -1466,10 +1470,6 @@
         },
         {
           "name": "Nathanaël Mbuku",
-          "value": 1
-        },
-        {
-          "name": "Noah Sadiki",
           "value": 1
         },
         {
@@ -6083,31 +6083,31 @@
         "teamBox": [
           {
             "team": "England",
-            "possessionPct": 54.8,
-            "accuratePasses": 89,
-            "totalPasses": 101,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
+            "possessionPct": 56.3,
+            "accuratePasses": 122,
+            "totalPasses": 138,
+            "shotsOnTarget": 1,
+            "totalShots": 1,
             "effectiveTackles": 3,
-            "totalTackles": 4,
-            "accurateCrosses": 1,
-            "totalCrosses": 7,
+            "totalTackles": 5,
+            "accurateCrosses": 3,
+            "totalCrosses": 10,
             "accurateLongBalls": 5,
-            "totalLongBalls": 8
+            "totalLongBalls": 11
           },
           {
             "team": "Congo DR",
-            "possessionPct": 45.2,
-            "accuratePasses": 78,
-            "totalPasses": 88,
+            "possessionPct": 43.7,
+            "accuratePasses": 97,
+            "totalPasses": 113,
             "shotsOnTarget": 1,
             "totalShots": 1,
             "effectiveTackles": 1,
             "totalTackles": 2,
             "accurateCrosses": 0,
-            "totalCrosses": 0,
+            "totalCrosses": 1,
             "accurateLongBalls": 4,
-            "totalLongBalls": 9
+            "totalLongBalls": 11
           }
         ]
       }
