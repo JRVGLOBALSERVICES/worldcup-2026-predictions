@@ -390,37 +390,46 @@ function liveStatus(lm: LiveMatch): { label: string; cls: string; pulse: boolean
   return { label: "Not started", cls: "text-faint", pulse: false };
 }
 
-/** Small stat cell for the game-stat strip (home-acid / away-warm). */
+/** Upper-case the first alphabetical character of a leg label so a market word
+ *  reads as a proper sentence start once the "Home v Away — " prefix is stripped
+ *  ("both teams to score" → "Both teams to score", "under 2.5 goals" → "Under
+ *  2.5 goals"). One place, every market — not per-case in the label builder. */
+function sentenceCase(s: string): string {
+  const i = s.search(/[a-z]/i);
+  return i < 0 ? s : s.slice(0, i) + s.charAt(i).toUpperCase() + s.slice(i + 1);
+}
+
+/** Small stat cell for the live stat strip (home-acid / away-warm). */
 function MiniStat({ label, h, a }: { label: string; h: number; a: number }) {
   return (
     <span className="inline-flex items-baseline gap-1">
-      <span className="uppercase tracking-wider text-faint/70">{label}</span>
-      <span className="tnum text-acid">{h}</span>
-      <span className="text-faint/60">-</span>
-      <span className="tnum text-mint">{a}</span>
+      <span className="uppercase tracking-wider text-faint/60">{label}</span>
+      <span className="tnum font-semibold text-acid">{h}</span>
+      <span className="text-faint/50">·</span>
+      <span className="tnum font-semibold text-mint">{a}</span>
     </span>
   );
 }
 
-/** The live game-stat strip that sits on top of a slip: current score, total
- *  goals, match minute and (once ESPN populates them) verified shot/corner
- *  counts. Reads muted "Not started" with the kickoff time before the game is on;
- *  tints amber while live so a running match is obvious at a glance. */
-function GameStatHeader({ matchId, live }: { matchId: string; live: Record<string, LiveMatch | undefined> }) {
+/** The score header row that opens a match panel — NOT a boxed strip, but the
+ *  top row of one cohesive panel whose legs sit beneath it. Score dominates
+ *  (the live number is the point), team codes are quiet, no emoji flags. Reads
+ *  the kickoff time before the match is on; the whole panel tints amber live. */
+function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<string, LiveMatch | undefined> }) {
   const meta = matchMeta(matchId);
   if (!meta) return null;
   const lm = live[matchId];
   const on = lm && lm.state !== "scheduled";
   if (!on) {
     return (
-      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3 py-2 font-mono text-[0.66rem]">
-        <span className="flex items-center gap-1.5 text-ink">
-          <span aria-hidden>{meta.home.flag}</span><span className="tnum font-semibold">{meta.home.code}</span>
-          <span className="text-faint/70">v</span>
-          <span aria-hidden>{meta.away.flag}</span><span className="tnum font-semibold">{meta.away.code}</span>
+      <div className="match-scoreline flex items-center gap-2.5 px-3.5 py-2.5">
+        <span className="tnum text-sm font-bold tracking-tight text-muted">{meta.home.code}</span>
+        <span className="text-[0.6rem] uppercase tracking-[0.2em] text-faint/50">v</span>
+        <span className="tnum text-sm font-bold tracking-tight text-muted">{meta.away.code}</span>
+        <span className="ml-2 font-mono text-[0.62rem] text-faint/70">{meta.kickoffLabel}</span>
+        <span className="ml-auto rounded-full border border-line px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-faint">
+          Not started
         </span>
-        <span className="text-faint/70">{meta.kickoffLabel}</span>
-        <span className="ml-auto rounded-full border border-line px-2 py-0.5 uppercase tracking-wider text-faint">Not started</span>
       </div>
     );
   }
@@ -428,29 +437,24 @@ function GameStatHeader({ matchId, live }: { matchId: string; live: Record<strin
   const total = s.home + s.away;
   const st = liveStatus(lm!);
   const stats = lm!.stats;
-  const hot = lm!.state === "live" || lm!.state === "halftime";
   return (
-    <div className={`rounded-xl border px-3 py-2 ${hot ? "border-amber/35 bg-amber/[0.09] shadow-[inset_0_0_20px_-8px_rgb(232_183_58/0.5)]" : "border-white/[0.09] bg-white/[0.035]"}`}>
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-        <span className="flex items-center gap-1.5 font-mono text-[0.7rem]">
-          <span aria-hidden>{meta.home.flag}</span>
-          <span className="tnum font-semibold text-muted">{meta.home.code}</span>
-          <span className="tnum px-0.5 text-[1.05rem] font-bold leading-none text-ink">
-            {s.home}<span className="px-1 text-faint/70">–</span>{s.away}
-          </span>
-          <span className="tnum font-semibold text-muted">{meta.away.code}</span>
-          <span aria-hidden>{meta.away.flag}</span>
+    <div className="match-scoreline px-3.5 py-2.5">
+      <div className="flex items-center gap-x-2.5 gap-y-1">
+        <span className="tnum text-[0.7rem] font-bold uppercase tracking-wider text-muted">{meta.home.code}</span>
+        <span className="tnum text-xl font-extrabold leading-none tracking-tight text-ink">
+          {s.home}<span className="px-1.5 text-base font-semibold text-faint/60">–</span>{s.away}
         </span>
-        <span className={`inline-flex items-center gap-1 font-mono text-[0.62rem] font-semibold uppercase tracking-wider ${st.cls}`}>
+        <span className="tnum text-[0.7rem] font-bold uppercase tracking-wider text-muted">{meta.away.code}</span>
+        <span className={`ml-1 inline-flex items-center gap-1 font-mono text-[0.6rem] font-semibold uppercase tracking-wider ${st.cls}`}>
           {st.pulse && <span className="size-1.5 animate-pulse rounded-full bg-amber motion-reduce:animate-none" />}
           {st.label}
         </span>
-        <span className="ml-auto rounded-full border border-line bg-card/50 px-2 py-0.5 font-mono text-[0.6rem] font-semibold uppercase tracking-wider text-muted tnum">
+        <span className="ml-auto rounded-full border border-line bg-card/40 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-muted tnum">
           {total} goal{total === 1 ? "" : "s"}
         </span>
       </div>
       {stats && (
-        <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-0.5 border-t border-line/40 pt-1.5 font-mono text-[0.6rem]">
+        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-0.5 font-mono text-[0.58rem]">
           <MiniStat label="On tgt" h={stats.sot.home} a={stats.sot.away} />
           <MiniStat label="Corners" h={stats.corners.home} a={stats.corners.away} />
           <MiniStat label="Shots" h={stats.shots.home} a={stats.shots.away} />
@@ -460,25 +464,56 @@ function GameStatHeader({ matchId, live }: { matchId: string; live: Record<strin
   );
 }
 
-/** One acca leg line: status dot + plain-English selection + glyph. A player leg
- *  ("Mbappé — 2+ goals") also carries that player's live goal/assist tally, so a
- *  scorer bet reads its own match involvement inline. */
-function LegRow({ leg, lm }: { leg: { label: string; glyph: string; player?: string }; lm: LiveMatch | undefined }) {
+/** One acca leg — a single tight row (status dot · the pick · optional player
+ *  tally · verdict glyph), living inside its match panel beneath the score line.
+ *  A player leg ("Mbappé — 2+ goals") carries that player's live goal/assist
+ *  tally so a scorer bet reads its own match involvement inline. */
+function LegLine({ leg, lm }: { leg: { label: string; glyph: string; player?: string }; lm: LiveMatch | undefined }) {
   const g = LEG_GLYPH[leg.glyph] ?? LEG_GLYPH["—"];
   const tally = leg.player && lm && lm.state !== "scheduled" ? playerTally(lm, leg.player) : null;
   return (
-    <li className="flex items-start gap-2.5 rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 transition-colors hover:border-white/15 hover:bg-white/[0.055]">
-      <span className={`mt-[0.4rem] size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
-      <span className="min-w-0 flex-1 break-words text-[0.8rem] leading-snug text-ink">
-        {leg.label}
-        {tally && (
-          <span className="ml-2 whitespace-nowrap font-mono text-[0.62rem] font-semibold text-faint/80">
-            {tally.goals}G{tally.assists > 0 ? ` · ${tally.assists}A` : ""}
-          </span>
-        )}
+    <li className="leg-line flex items-center gap-2.5 px-3.5 py-2 transition-colors hover:bg-white/[0.03]">
+      <span className={`size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
+      <span className="min-w-0 flex-1 break-words text-[0.82rem] leading-snug text-ink">
+        {sentenceCase(leg.label)}
       </span>
-      <span className={`mt-px shrink-0 font-mono text-xs font-bold ${g.cls}`}>{leg.glyph}</span>
+      {tally && (
+        <span className="shrink-0 whitespace-nowrap rounded border border-mint/25 bg-mint/[0.06] px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold text-mint tnum">
+          {tally.goals}G{tally.assists > 0 ? ` ${tally.assists}A` : ""}
+        </span>
+      )}
+      <span className={`shrink-0 font-mono text-sm font-bold leading-none ${g.cls}`}>{leg.glyph}</span>
     </li>
+  );
+}
+
+/** A single game inside an accumulator, as ONE cohesive panel: the score line on
+ *  top, that game's leg(s) beneath a hairline — so a leg visibly belongs to its
+ *  match instead of floating as a disconnected bar. `withHeader` is false for a
+ *  lone inline acca inside a day match-card (which already shows the score above). */
+function MatchGroup({
+  matchId,
+  legs,
+  live,
+  withHeader,
+}: {
+  matchId: string;
+  legs: { label: string; glyph: string; player?: string }[];
+  live: Record<string, LiveMatch | undefined>;
+  withHeader: boolean;
+}) {
+  const meta = matchMeta(matchId);
+  const lm = live[matchId];
+  const hot = lm?.state === "live" || lm?.state === "halftime";
+  return (
+    <div className={`match-panel ${hot ? "match-panel--hot" : ""}`}>
+      {withHeader && <MatchScoreLine matchId={matchId} live={live} />}
+      <ul>
+        {legs.map((l, i) => (
+          <LegLine key={i} leg={{ ...l, label: withHeader ? stripMatchPrefix(l.label, meta) : l.label }} lm={lm} />
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -564,25 +599,17 @@ function AccaCard({
         </div>
       )}
       {groups.length > 0 ? (
-        <div className="space-y-3.5 border-t border-white/[0.07] px-4 py-3.5 pl-5 sm:px-5 sm:pl-6">
-          {groups.map((grp) => {
-            const meta = matchMeta(grp.matchId);
-            return (
-              <div key={grp.matchId} className="space-y-2">
-                {withGameHeader && <GameStatHeader matchId={grp.matchId} live={live} />}
-                <ul className="space-y-1.5">
-                  {grp.legs.map((l, i) => (
-                    <LegRow key={i} leg={{ ...l, label: withGameHeader ? stripMatchPrefix(l.label, meta) : l.label }} lm={live[grp.matchId]} />
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+        <div className="space-y-2.5 border-t border-white/[0.07] px-4 py-3.5 pl-5 sm:px-5 sm:pl-6">
+          {groups.map((grp) => (
+            <MatchGroup key={grp.matchId} matchId={grp.matchId} legs={grp.legs} live={live} withHeader={withGameHeader} />
+          ))}
         </div>
       ) : parsed ? (
-        <ul className="grid grid-cols-1 gap-2 border-t border-white/[0.07] px-4 py-3.5 pl-5 sm:grid-cols-2 sm:px-5 sm:pl-6">
-          {parsed.map((l, i) => <LegRow key={i} leg={l} lm={undefined} />)}
-        </ul>
+        <div className="border-t border-white/[0.07] px-4 py-3.5 pl-5 sm:px-5 sm:pl-6">
+          <ul className="match-panel">
+            {parsed.map((l, i) => <LegLine key={i} leg={l} lm={undefined} />)}
+          </ul>
+        </div>
       ) : (
         verdict.note && <p className="border-t border-white/[0.07] px-4 py-3 pl-5 font-mono text-[0.7rem] text-faint/70 sm:px-5 sm:pl-6">{verdict.note}</p>
       )}
