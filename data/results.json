@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T22:40:05.002Z",
+    "generatedAt": "2026-07-01T22:50:03.451Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8113,7 +8113,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 2
       },
       "advanced": null,
@@ -8149,6 +8149,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Youri Tielemans",
+          "minute": 120,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -8178,12 +8186,12 @@
           "away": 2
         },
         "sot": {
-          "home": 4,
+          "home": 5,
           "away": 5
         },
         "shots": {
-          "home": 18,
-          "away": 15
+          "home": 19,
+          "away": 18
         },
         "yellow": {
           "home": 1,
