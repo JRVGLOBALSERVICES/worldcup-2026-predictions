@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T03:30:04.238Z",
+    "generatedAt": "2026-07-01T03:40:03.728Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 58,
     "live": 1
@@ -7870,15 +7870,15 @@
       "stats": {
         "corners": {
           "home": 3,
-          "away": 6
+          "away": 7
         },
         "sot": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "shots": {
-          "home": 12,
-          "away": 3
+          "home": 14,
+          "away": 4
         },
         "yellow": {
           "home": 0,
@@ -7899,13 +7899,13 @@
           ],
           "away": [
             5,
-            1
+            2
           ]
         },
         "sotByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             1,
@@ -7913,7 +7913,8 @@
           ]
         },
         "playerSot": {
-          "John Yeboah": 1
+          "John Yeboah": 1,
+          "César Montes": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -7927,6 +7928,16 @@
             "firstActionMinute": 29,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 72,
+            "isCorner": true,
+            "reliable": false
           }
         }
       }

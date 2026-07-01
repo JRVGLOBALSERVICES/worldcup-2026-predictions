@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T03:30:07.978Z",
+    "generatedAt": "2026-07-01T03:40:06.423Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -628,8 +628,8 @@
         "rank": 2,
         "team": "Ecuador",
         "flag": "🇪🇨",
-        "value": 51.4,
-        "display": "51.4%",
+        "value": 50,
+        "display": "50.0%",
         "matches": 3
       },
       {
@@ -798,6 +798,14 @@
       },
       {
         "rank": 3,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 36,
+        "display": "36.0%",
+        "matches": 3
+      },
+      {
+        "rank": 4,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -805,7 +813,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
@@ -813,7 +821,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 33.3,
@@ -821,15 +829,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 33.3,
-        "display": "33.3%",
-        "matches": 3
-      },
-      {
-        "rank": 5,
+        "rank": 6,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -5969,31 +5969,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 45.8,
-            "accuratePasses": 216,
-            "totalPasses": 261,
-            "shotsOnTarget": 2,
-            "totalShots": 12,
+            "possessionPct": 44.5,
+            "accuratePasses": 220,
+            "totalPasses": 268,
+            "shotsOnTarget": 3,
+            "totalShots": 14,
             "effectiveTackles": 4,
             "totalTackles": 7,
-            "accurateCrosses": 3,
-            "totalCrosses": 6,
-            "accurateLongBalls": 22,
-            "totalLongBalls": 38
+            "accurateCrosses": 4,
+            "totalCrosses": 7,
+            "accurateLongBalls": 24,
+            "totalLongBalls": 40
           },
           {
             "team": "Ecuador",
-            "possessionPct": 54.2,
-            "accuratePasses": 258,
-            "totalPasses": 304,
+            "possessionPct": 55.5,
+            "accuratePasses": 280,
+            "totalPasses": 330,
             "shotsOnTarget": 1,
-            "totalShots": 3,
+            "totalShots": 4,
             "effectiveTackles": 4,
-            "totalTackles": 6,
+            "totalTackles": 7,
             "accurateCrosses": 2,
-            "totalCrosses": 14,
-            "accurateLongBalls": 12,
-            "totalLongBalls": 35
+            "totalCrosses": 16,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 41
           }
         ]
       },
