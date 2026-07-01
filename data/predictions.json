@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-30T23:00:09.718Z",
+    "generatedAt": "2026-07-01T00:22:56.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-06-30T23:00:09.718Z"
@@ -14675,106 +14675,91 @@
     "mex-ecu-2026-07-01": {
       "win": {
         "pick": "Mexico",
-        "fairOdds": "1.49",
-        "reason": "Model: Mexico to win at 67% (Mexico 67% / draw 25% / Ecuador 8%). Expected goals 1.5–0.3 from group-stage attack/defence rates (Mexico 1.8 for / 0.6 against per game, Ecuador 1.0 / 1.0). Most likely score 1-0.",
-        "strength": 5
+        "fairOdds": "1.95",
+        "reason": "Mexico kept clean sheets all group stage and have home advantage at Estadio Ciudad de México, but Ecuador's elite defensive spine (Caicedo, Pacho, Hincapié) is built to defend deep and counter, capping Mexico's ceiling. ~55% model edge — not certainty (draw + Ecuador ≈ 45%).",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.20",
+        "fairOdds": "2.30",
         "alt": "1-0",
-        "altOdds": "4.03"
+        "altOdds": "3.60"
       },
       "htft": {
         "pick": "Draw/Mexico",
-        "fairOdds": "3.73"
+        "fairOdds": "4.20"
       },
       "fullTime": {
         "score": "1-0",
-        "fairOdds": "4.07"
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Julián Quiñones",
           "team": "Mexico",
-          "fairOdds": "2.44",
-          "banker": true,
-          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.5 team xG.",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Mobile forward, Mexico's most in-form attacking starter; best chance to break a deep Ecuador block off movement.",
           "strength": 3
         },
         {
-          "player": "Álvaro Fidalgo",
+          "player": "Raúl Jiménez",
           "team": "Mexico",
-          "fairOdds": "3.69",
+          "fairOdds": "3.70",
           "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
+          "note": "Returns to the XI (rested vs Czechia) as Mexico's penalty taker, but 34yo vs a top CB pair (Pacho/Hincapié) — genuine chance, NOT a banker.",
+          "strength": 3
         },
         {
-          "player": "Luis Romo",
+          "player": "Roberto Alvarado",
           "team": "Mexico",
-          "fairOdds": "3.69",
+          "fairOdds": "4.80",
           "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Mateo Chávez",
-          "team": "Mexico",
-          "fairOdds": "3.69",
-          "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 1.5 team xG.",
+          "note": "Set-piece/corner taker and wide creator; can arrive late in the box.",
           "strength": 2
         },
         {
           "player": "Gonzalo Plata",
           "team": "Ecuador",
-          "fairOdds": "8.93",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "1 goal in 1 group game; 11% modelled anytime chance on 0.3 team xG.",
-          "strength": 1
+          "note": "Ecuador's tournament star — winner vs Germany, takes free-kicks/corners; prime counter and set-piece threat.",
+          "strength": 3
         }
       ],
       "assists": [
         {
           "player": "Roberto Alvarado",
           "team": "Mexico",
-          "fairOdds": "2.24",
-          "banker": true,
-          "note": "2 assists in the group stage; 45% modelled chance to set one up."
-        },
-        {
-          "player": "Jorge Sánchez",
-          "team": "Mexico",
-          "fairOdds": "3.43",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "1 assist in the group stage; 29% modelled chance to set one up."
+          "note": "Primary set-piece and corner delivery; back-post cross threat."
         },
         {
-          "player": "Luis Romo",
+          "player": "Gilberto Mora",
           "team": "Mexico",
-          "fairOdds": "3.43",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "1 assist in the group stage; 29% modelled chance to set one up."
+          "note": "17yo starting in midfield; progressive passer feeding the front three between the lines."
         },
         {
-          "player": "Kevin Rodríguez",
+          "player": "Moisés Caicedo",
           "team": "Ecuador",
-          "fairOdds": "9.53",
+          "fairOdds": "8.00",
           "banker": false,
-          "note": "1 assist in the group stage; 10% modelled chance to set one up."
+          "note": "Ecuador's engine — wins it and springs counters with long diagonals to Plata/Angulo."
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Julián Quiñones",
-        "backup": "Álvaro Fidalgo",
-        "note": "Mexico favoured to control the game, so a penalty is less pivotal; Julián Quiñones would take one if awarded."
+        "likelihood": "medium",
+        "taker": "Raúl Jiménez",
+        "backup": "Enner Valencia",
+        "note": "Jiménez is Mexico's designated taker; Valencia takes Ecuador's. Ecuador's deep low block can concede spot-kicks but also limits open-play pens."
       },
       "lineups": {
-        "home": "Raúl Rangel, Israel Reyes, César Montes, Mateo Chávez, Jorge Sánchez, Edson Álvarez, Luis Romo, Gilberto Mora, Guillermo Martínez, Julián Quiñones, Roberto Alvarado",
-        "away": "Hernán Galíndez, Willian Pacho, Joel Ordóñez, Piero Hincapié, Alan Franco, Pedro Vite, Moisés Caicedo, Nilson Angulo, John Yeboah, Enner Valencia, Gonzalo Plata",
-        "status": "unconfirmed",
+        "home": "Raúl Rangel, Jorge Sánchez, César Montes, Johan Vásquez, Jesús Gallardo, Erik Lira, Luis Romo, Gilberto Mora, Raúl Jiménez, Julián Quiñones, Roberto Alvarado",
+        "away": "Hernán Galíndez, Joel Ordóñez, Willian Pacho, Piero Hincapié, Alan Franco, Pedro Vite, Moisés Caicedo, John Yeboah, Enner Valencia, Gonzalo Plata, Nilson Angulo",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-3-3",
           "players": [
@@ -14784,9 +14769,9 @@
               "pos": "G"
             },
             {
-              "num": 15,
-              "name": "Israel Reyes",
-              "pos": "CD-L"
+              "num": 2,
+              "name": "Jorge Sánchez",
+              "pos": "RB"
             },
             {
               "num": 3,
@@ -14794,33 +14779,33 @@
               "pos": "CD-R"
             },
             {
-              "num": 20,
-              "name": "Mateo Chávez",
+              "num": 5,
+              "name": "Johan Vásquez",
+              "pos": "CD-L"
+            },
+            {
+              "num": 23,
+              "name": "Jesús Gallardo",
               "pos": "LB"
             },
             {
-              "num": 2,
-              "name": "Jorge Sánchez",
-              "pos": "RB"
-            },
-            {
-              "num": 4,
-              "name": "Edson Álvarez",
+              "num": 6,
+              "name": "Erik Lira",
               "pos": "CM"
             },
             {
               "num": 7,
               "name": "Luis Romo",
-              "pos": "LM"
+              "pos": "CM"
             },
             {
               "num": 19,
               "name": "Gilberto Mora",
-              "pos": "RM"
+              "pos": "CM"
             },
             {
-              "num": 22,
-              "name": "Guillermo Martínez",
+              "num": 9,
+              "name": "Raúl Jiménez",
               "pos": "F"
             },
             {
@@ -14844,14 +14829,14 @@
               "pos": "G"
             },
             {
-              "num": 6,
-              "name": "Willian Pacho",
-              "pos": "CD-L"
-            },
-            {
               "num": 4,
               "name": "Joel Ordóñez",
               "pos": "CD-R"
+            },
+            {
+              "num": 6,
+              "name": "Willian Pacho",
+              "pos": "CD-L"
             },
             {
               "num": 3,
@@ -14874,11 +14859,6 @@
               "pos": "CM-R"
             },
             {
-              "num": 20,
-              "name": "Nilson Angulo",
-              "pos": "LM"
-            },
-            {
               "num": 9,
               "name": "John Yeboah",
               "pos": "RM"
@@ -14892,33 +14872,55 @@
               "num": 19,
               "name": "Gonzalo Plata",
               "pos": "CF-R"
+            },
+            {
+              "num": 20,
+              "name": "Nilson Angulo",
+              "pos": "LM"
             }
           ]
         }
       },
       "playerNotes": [
         {
-          "player": "Julián Quiñones",
-          "team": "Mexico",
-          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.5 team xG."
+          "player": "Willian Pacho & Piero Hincapié",
+          "team": "Ecuador",
+          "note": "Elite CB pair among the best in the world — Mexico's correct-score and win-to-nil confidence is downgraded accordingly."
         },
         {
-          "player": "Álvaro Fidalgo",
+          "player": "Moisés Caicedo",
+          "team": "Ecuador",
+          "note": "Anchors midfield; Ecuador recovers and counters with long diagonals — a genuine low-scoring/draw risk despite Mexico's territorial edge."
+        },
+        {
+          "player": "Raúl Jiménez",
           "team": "Mexico",
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 1.5 team xG."
+          "note": "(34) starts after being rested vs Czechia — Mexico's penalty taker but a NON-banker scorer against elite CBs."
+        },
+        {
+          "player": "Gilberto Mora",
+          "team": "Mexico",
+          "note": "(17) starts in central midfield as a progressive passer, not a set-piece taker."
         },
         {
           "player": "Roberto Alvarado",
           "team": "Mexico",
-          "note": "2 assists in the group stage; 45% modelled chance to set one up."
+          "note": "Handles Mexico's corners and free-kicks — the key set-piece route to unlock a packed Ecuador box."
+        },
+        {
+          "player": "Gonzalo Plata",
+          "team": "Ecuador",
+          "note": "Ecuador's most dangerous attacker (winner vs Germany); Enner Valencia (36) leads the line but is a non-banker at his age."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://ca.sports.yahoo.com/news/mexico-vs-ecuador-lineups-confirmed-112014312.html",
+        "https://khelnow.com/football/mexico-starting-lineup-vs-ecuador-fifa-world-cup-2026",
+        "https://worldsoccertalk.com/world-cup/is-raul-jimenez-playing-mexico-vs-ecuador-projected-lineups-for-the-2026-world-cup-match/",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.espn.com/espn/story/_/id/49183795/fifa-world-cup-2026-moment-day-gonzalo-plata-desire-puts-ecuador-cloud-nine-round-32"
       ],
       "pitchReport": {
         "facts": [
