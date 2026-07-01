@@ -305,8 +305,16 @@ export type SpecialGrade =
  * `negate:true` (on "scored", "resultBtts" or "bttsEachOver") inverts the leg — the bookmaker's
  * "- No" pick. A negated "scored" leg WINS iff the player does NOT score (dies
  * the instant he does); a negated "resultBtts" WINS iff NOT(outcome AND btts).
+ *
+ * `odds` (optional) = this individual leg's decimal price AT PLACEMENT, as shown
+ * on the slip before any settlement. CAPTURE IT for every leg when entering a
+ * slip — it's the only way to reconcile a refund/void: when a leg voids, 1xBet
+ * replaces its price with 1.00 in the acca (new total = placement odds ÷ this
+ * leg's `odds`), and without the original per-leg price that recalculation can't
+ * be reproduced from stored data. Absent on legacy legs entered before this field
+ * existed (their prices were never recorded); present going forward.
  */
-export type MultiLegCond =
+export type MultiLegCond = { odds?: number } & (
   | { matchId: string; kind: "scored"; player: string; negate?: boolean }
   | {
       matchId: string;
@@ -415,7 +423,8 @@ export type MultiLegCond =
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
-  | { matchId: string; kind: "manual" };
+  | { matchId: string; kind: "manual" }
+);
 
 /**
  * One leg of a `combo` build-a-bet. `side`/`outcome` are oriented to the
