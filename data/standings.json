@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T04:00:05.804Z",
+    "generatedAt": "2026-07-01T04:10:06.096Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -29,9 +29,17 @@
           "form": [
             "W",
             "W",
+            "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 16",
+            "opponent": "R32-8 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-06T00:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "South Africa",
@@ -532,6 +540,7 @@
             "color": "#B5E7CE"
           },
           "form": [
+            "L",
             "W",
             "D",
             "L"
