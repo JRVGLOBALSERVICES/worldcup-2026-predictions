@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T20:20:24.630Z",
+    "generatedAt": "2026-07-01T20:30:04.367Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8111,10 +8111,19 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Habib Diarra",
+          "minute": 24,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-01T20:00:00.000Z",
       "stats": {
@@ -8124,11 +8133,11 @@
         },
         "sot": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "shots": {
           "home": 2,
-          "away": 3
+          "away": 5
         },
         "yellow": {
           "home": 0,
@@ -8166,9 +8175,20 @@
           "Leandro Trossard": 1,
           "Idrissa Gueye": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "Shot Hit Woodwork",
+            "firstActionMinute": 24,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
