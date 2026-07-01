@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T02:40:03.924Z",
+    "generatedAt": "2026-07-01T02:50:04.422Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 58,
     "live": 1
@@ -7855,24 +7855,31 @@
           "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Alan Franco",
+          "minute": 45,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-01T02:00:00.000Z",
       "stats": {
         "corners": {
           "home": 1,
-          "away": 1
+          "away": 4
         },
         "sot": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "shots": {
-          "home": 8,
-          "away": 1
+          "home": 10,
+          "away": 2
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -7880,7 +7887,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -7888,7 +7895,7 @@
             0
           ],
           "away": [
-            1,
+            4,
             0
           ]
         },
@@ -7898,11 +7905,13 @@
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "John Yeboah": 1
+        },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T02:40:06.572Z",
+    "generatedAt": "2026-07-01T02:50:08.230Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -248,6 +248,13 @@
       },
       {
         "rank": 1,
+        "name": "Alan Franco",
+        "team": "Ecuador",
+        "flag": "🇪🇨",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Amir Al-Ammari",
         "team": "Iraq",
         "flag": "🇮🇶",
@@ -293,13 +300,6 @@
         "name": "Mohanad Lashin",
         "team": "Egypt",
         "flag": "🇪🇬",
-        "value": 2
-      },
-      {
-        "rank": 1,
-        "name": "Saeid Ezatolahi",
-        "team": "Iran",
-        "flag": "🇮🇷",
         "value": 2
       }
     ],
@@ -628,8 +628,8 @@
         "rank": 2,
         "team": "Ecuador",
         "flag": "🇪🇨",
-        "value": 51.4,
-        "display": "51.4%",
+        "value": 52.8,
+        "display": "52.8%",
         "matches": 3
       },
       {
@@ -838,6 +838,14 @@
       },
       {
         "rank": 8,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 30.4,
+        "display": "30.4%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
@@ -845,19 +853,11 @@
         "matches": 2
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Egypt",
         "flag": "🇪🇬",
         "value": 29.7,
         "display": "29.7%",
-        "matches": 2
-      },
-      {
-        "rank": 10,
-        "team": "Czechia",
-        "flag": "🇨🇿",
-        "value": 28.6,
-        "display": "28.6%",
         "matches": 2
       }
     ],
@@ -2965,7 +2965,7 @@
       "yellowCards": [
         {
           "name": "Alan Franco",
-          "value": 1
+          "value": 2
         },
         {
           "name": "Gonzalo Plata",
@@ -5969,31 +5969,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 60.1,
-            "accuratePasses": 150,
-            "totalPasses": 168,
+            "possessionPct": 57.3,
+            "accuratePasses": 168,
+            "totalPasses": 195,
             "shotsOnTarget": 2,
-            "totalShots": 8,
-            "effectiveTackles": 2,
-            "totalTackles": 3,
-            "accurateCrosses": 1,
-            "totalCrosses": 4,
-            "accurateLongBalls": 15,
-            "totalLongBalls": 18
+            "totalShots": 10,
+            "effectiveTackles": 3,
+            "totalTackles": 4,
+            "accurateCrosses": 2,
+            "totalCrosses": 5,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 28
           },
           {
             "team": "Ecuador",
-            "possessionPct": 39.9,
-            "accuratePasses": 86,
-            "totalPasses": 109,
-            "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 3,
-            "totalTackles": 5,
-            "accurateCrosses": 0,
-            "totalCrosses": 5,
-            "accurateLongBalls": 7,
-            "totalLongBalls": 21
+            "possessionPct": 42.7,
+            "accuratePasses": 110,
+            "totalPasses": 139,
+            "shotsOnTarget": 1,
+            "totalShots": 2,
+            "effectiveTackles": 4,
+            "totalTackles": 6,
+            "accurateCrosses": 1,
+            "totalCrosses": 10,
+            "accurateLongBalls": 9,
+            "totalLongBalls": 26
           }
         ]
       },
