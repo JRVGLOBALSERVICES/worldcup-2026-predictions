@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T03:20:44.832Z",
+    "generatedAt": "2026-07-01T03:30:07.978Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -822,6 +822,14 @@
       },
       {
         "rank": 5,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 33.3,
+        "display": "33.3%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -829,19 +837,11 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 30.8,
         "display": "30.8%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 30.4,
-        "display": "30.4%",
         "matches": 3
       },
       {
@@ -5969,31 +5969,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 47.3,
-            "accuratePasses": 197,
-            "totalPasses": 237,
+            "possessionPct": 45.8,
+            "accuratePasses": 216,
+            "totalPasses": 261,
             "shotsOnTarget": 2,
             "totalShots": 12,
             "effectiveTackles": 4,
-            "totalTackles": 6,
-            "accurateCrosses": 2,
-            "totalCrosses": 5,
-            "accurateLongBalls": 20,
-            "totalLongBalls": 34
+            "totalTackles": 7,
+            "accurateCrosses": 3,
+            "totalCrosses": 6,
+            "accurateLongBalls": 22,
+            "totalLongBalls": 38
           },
           {
             "team": "Ecuador",
-            "possessionPct": 52.7,
-            "accuratePasses": 222,
-            "totalPasses": 259,
+            "possessionPct": 54.2,
+            "accuratePasses": 258,
+            "totalPasses": 304,
             "shotsOnTarget": 1,
             "totalShots": 3,
             "effectiveTackles": 4,
             "totalTackles": 6,
             "accurateCrosses": 2,
-            "totalCrosses": 12,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 30
+            "totalCrosses": 14,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 35
           }
         ]
       },
