@@ -9,6 +9,16 @@ import fixturesJson from "@/data/fixtures.json";
 import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, realisedLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { SiteNav, type NavKey } from "./SiteNav";
+import { SpotlightCard, type SpotTone } from "./SpotlightCard";
+
+/** Map a live verdict to the glass card's glow + edge tone: green when it's
+ *  winning/won, amber while it's still alive / not started / refunded, red once
+ *  it can't land. Keeps the spotlight telling the same story as the pill. */
+function verdictTone(v: LiveVerdict): SpotTone {
+  if (v === "won" || v === "winning") return "acid";
+  if (v === "lost" || v === "dead") return "rose";
+  return "amber";
+}
 
 // ── round lookup, shared by the round-grouped parlay roll-up and the all-games
 //    knockout section. A parlay's "headline round" = the round of its anchor
@@ -221,7 +231,7 @@ function VerdictPill({ verdict }: { verdict: LiveVerdict }) {
   const s = map[verdict];
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-mono text-[0.62rem] font-semibold uppercase tracking-wider ${s.cls}`}
+      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-mono text-[0.62rem] font-semibold uppercase tracking-wider ring-1 ring-inset ring-white/10 ${s.cls}`}
     >
       <span className={`size-1.5 rounded-full ${s.dot} ${s.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} /> {s.label}
     </span>
@@ -403,7 +413,7 @@ function GameStatHeader({ matchId, live }: { matchId: string; live: Record<strin
   const on = lm && lm.state !== "scheduled";
   if (!on) {
     return (
-      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-xl border border-line/60 bg-pitch/50 px-3 py-2 font-mono text-[0.66rem]">
+      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3 py-2 font-mono text-[0.66rem]">
         <span className="flex items-center gap-1.5 text-ink">
           <span aria-hidden>{meta.home.flag}</span><span className="tnum font-semibold">{meta.home.code}</span>
           <span className="text-faint/70">v</span>
@@ -420,7 +430,7 @@ function GameStatHeader({ matchId, live }: { matchId: string; live: Record<strin
   const stats = lm!.stats;
   const hot = lm!.state === "live" || lm!.state === "halftime";
   return (
-    <div className={`rounded-xl border px-3 py-2 ${hot ? "border-amber/35 bg-amber/[0.07]" : "border-line/70 bg-pitch/55"}`}>
+    <div className={`rounded-xl border px-3 py-2 ${hot ? "border-amber/35 bg-amber/[0.09] shadow-[inset_0_0_20px_-8px_rgb(232_183_58/0.5)]" : "border-white/[0.09] bg-white/[0.035]"}`}>
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
         <span className="flex items-center gap-1.5 font-mono text-[0.7rem]">
           <span aria-hidden>{meta.home.flag}</span>
@@ -457,7 +467,7 @@ function LegRow({ leg, lm }: { leg: { label: string; glyph: string; player?: str
   const g = LEG_GLYPH[leg.glyph] ?? LEG_GLYPH["—"];
   const tally = leg.player && lm && lm.state !== "scheduled" ? playerTally(lm, leg.player) : null;
   return (
-    <li className="flex items-start gap-2.5 rounded-lg border border-line/70 bg-card/40 px-3 py-2">
+    <li className="flex items-start gap-2.5 rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 transition-colors hover:border-white/15 hover:bg-white/[0.055]">
       <span className={`mt-[0.4rem] size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
       <span className="min-w-0 flex-1 break-words text-[0.8rem] leading-snug text-ink">
         {leg.label}
@@ -520,9 +530,13 @@ function AccaCard({
     }
   }
 
+  // How many legs are already home vs still to play — a tiny progress read on the
+  // header so a part-played acca shows "2/4 legs in" at a glance.
+  const landed = (parsed ?? []).filter((l) => l.glyph === "✓").length;
+
   return (
-    <div className="overflow-hidden rounded-2xl border border-line bg-pitch-2/50">
-      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-3.5 sm:px-5">
+    <SpotlightCard tone={verdictTone(verdict.verdict)} className="overflow-hidden rounded-2xl">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-3.5 pl-5 sm:px-5 sm:pl-6">
         <div className="flex items-center gap-2.5">
           <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
             {legCount} legs
@@ -538,8 +552,19 @@ function AccaCard({
           <VerdictPill verdict={verdict.verdict} />
         </div>
       </div>
+      {legCount > 1 && (parsed?.length ?? 0) > 0 && (
+        <div className="flex items-center gap-2 px-4 pb-3 pl-5 sm:px-5 sm:pl-6">
+          <span className="h-1 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
+            <span
+              className="block h-full rounded-full bg-gradient-to-r from-acid-dim to-acid transition-[width] duration-500"
+              style={{ width: `${Math.round((landed / legCount) * 100)}%` }}
+            />
+          </span>
+          <span className="tnum font-mono text-[0.56rem] uppercase tracking-wider text-faint/60">{landed}/{legCount} in</span>
+        </div>
+      )}
       {groups.length > 0 ? (
-        <div className="space-y-3.5 border-t border-line/70 px-4 py-3.5 sm:px-5">
+        <div className="space-y-3.5 border-t border-white/[0.07] px-4 py-3.5 pl-5 sm:px-5 sm:pl-6">
           {groups.map((grp) => {
             const meta = matchMeta(grp.matchId);
             return (
@@ -555,13 +580,13 @@ function AccaCard({
           })}
         </div>
       ) : parsed ? (
-        <ul className="grid grid-cols-1 gap-2 border-t border-line/70 px-4 py-3.5 sm:grid-cols-2 sm:px-5">
+        <ul className="grid grid-cols-1 gap-2 border-t border-white/[0.07] px-4 py-3.5 pl-5 sm:grid-cols-2 sm:px-5 sm:pl-6">
           {parsed.map((l, i) => <LegRow key={i} leg={l} lm={undefined} />)}
         </ul>
       ) : (
-        verdict.note && <p className="border-t border-line/70 px-4 py-3 font-mono text-[0.7rem] text-faint/70 sm:px-5">{verdict.note}</p>
+        verdict.note && <p className="border-t border-white/[0.07] px-4 py-3 pl-5 font-mono text-[0.7rem] text-faint/70 sm:px-5 sm:pl-6">{verdict.note}</p>
       )}
-    </div>
+    </SpotlightCard>
   );
 }
 
@@ -879,7 +904,7 @@ function PropCard({
   const player = special.grade && "player" in special.grade ? special.grade.player : undefined;
   const tally = player && lm && lm.state !== "scheduled" ? playerTally(lm, player) : null;
   return (
-    <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
+    <SpotlightCard tone={verdictTone(verdict.verdict)} className="rounded-2xl p-4 pl-5 sm:p-5 sm:pl-6">
       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
         <div className="flex items-center gap-2.5">
           <span className="rounded-full border border-mint/40 bg-mint/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-mint">
@@ -908,7 +933,7 @@ function PropCard({
           <span className="font-mono text-[0.66rem] text-faint/70">{verdict.note}</span>
         )}
       </div>
-    </div>
+    </SpotlightCard>
   );
 }
 
@@ -927,7 +952,7 @@ function BetCard({
   const dim = verdict.verdict === "lost" || verdict.verdict === "dead";
   const periodCls = bet.period === "HT" ? "border-mint/40 bg-mint/10 text-mint" : "border-acid-dim/50 bg-acid/10 text-acid";
   return (
-    <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
+    <SpotlightCard tone={verdictTone(verdict.verdict)} className="rounded-2xl p-4 pl-5 sm:p-5 sm:pl-6">
       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
         <div className="flex items-center gap-2.5">
           <span className={`rounded-full border px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider ${periodCls}`}>
@@ -951,7 +976,7 @@ function BetCard({
       {verdict.note && (
         <p className="mt-2 font-mono text-[0.66rem] text-faint/70">{verdict.note}</p>
       )}
-    </div>
+    </SpotlightCard>
   );
 }
 

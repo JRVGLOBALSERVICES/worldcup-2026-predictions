@@ -94,9 +94,9 @@ export function legLabelFor(leg: MultiLegCond): string {
     case "bttsEachOver":
       return `${m} — each team ${leg.line + 1}+ goals${leg.negate ? " (no)" : ""}`;
     case "totalUnder":
-      return `${m} — under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
+      return `${m} — Under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
     case "totalOver":
-      return `${m} — over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
+      return `${m} — Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "doubleChance": {
       const dc =
         leg.outcome === "1X"
@@ -111,9 +111,9 @@ export function legLabelFor(leg: MultiLegCond): string {
         ? `${m} — level at half-time`
         : `${leg.outcome === "1" ? h : a} to lead at half-time`;
     case "resultAndTotalUnder":
-      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
+      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + Under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
     case "resultAndTotalOver":
-      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
+      return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "individualTotalUnder":
       return `${side(leg.side)} to score ${totalThreshold(leg.line, "under")}`;
     case "individualTotalOver":
@@ -150,7 +150,7 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — ${dc} + both teams score${leg.negate ? " (no)" : ""}`;
     }
     case "notBttsAndTotalOver":
-      return `${m} — a team to blank + over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
+      return `${m} — a team to blank + Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "scored":
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
     case "scoredAndScoreOneOf":
