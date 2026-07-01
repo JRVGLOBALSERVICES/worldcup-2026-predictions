@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T18:00:04.422Z",
+    "generatedAt": "2026-07-01T18:10:04.474Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 59,
-    "live": 1
+    "finished": 60,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -7967,19 +7967,25 @@
       }
     },
     "eng-cod-2026-07-01": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
+      "ft90": {
+        "home": 2,
+        "away": 1
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 2,
         "away": 1
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "away",
@@ -8032,7 +8038,7 @@
         },
         "shots": {
           "home": 16,
-          "away": 6
+          "away": 7
         },
         "yellow": {
           "home": 1,
