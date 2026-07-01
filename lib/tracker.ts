@@ -1,4 +1,5 @@
 import { mytTime, etTime, mytDayKey, mytDayLabel, getFixture, getResearch } from "@/lib/data";
+import { isMatchFinished } from "@/lib/live";
 import {
   settleAll,
   settleSpecials,
@@ -147,18 +148,30 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
   // Featured day = the live/upcoming slate the owner is actively betting on, NOT
   // the calendar date. Bets placed late at night (MYT) for matches that kick off
   // after midnight bucket into the NEXT MYT day, so "today's bets" = the next
-  // active matchday. Mirror the home page: earliest dated day whose last match
-  // hasn't finished yet (115-min live window); else the most recent dated day.
+  // active matchday: the earliest dated day that hasn't actually ended yet.
+  //
+  // A day is over only once its matches are ACTUALLY finished per the official
+  // feed (results.json via isMatchFinished) — never a blind kickoff+N-minutes
+  // window. The scheduled kickoff can be ~an hour before the real one, and a
+  // knockout runs ~3 h with extra time + penalties, so any fixed window fires
+  // while a match is still live and wrongly bumps a live day out of "featured"
+  // into the past section. Fallback: 3.5 h past the last kickoff, an upper bound
+  // that can't be reached mid-match, for any fixture the feed never persisted.
+  // Mirrors app/page.tsx dayHasEnded.
   const now = Date.now();
-  const liveWindow = 115 * 60 * 1000;
+  const finishedFallback = 3.5 * 60 * 60 * 1000;
   const lastKickoff = (k: string) =>
     dayMap.get(k)!.matches.reduce((mx, m) => {
       const t = m.kickoffUTC ? new Date(m.kickoffUTC).getTime() : 0;
       return t > mx ? t : mx;
     }, 0);
+  const dayEnded = (k: string) => {
+    const fallbackElapsed = lastKickoff(k) + finishedFallback <= now;
+    return fallbackElapsed || dayMap.get(k)!.matches.every((m) => isMatchFinished(m.matchId));
+  };
   const datedKeys = dayOrder.filter((k) => k !== "tbd").sort(); // ascending
   const featuredKey =
-    datedKeys.find((k) => lastKickoff(k) + liveWindow > now) ??
+    datedKeys.find((k) => !dayEnded(k)) ??
     datedKeys[datedKeys.length - 1] ??
     "tbd";
 
