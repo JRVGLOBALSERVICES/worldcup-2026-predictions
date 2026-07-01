@@ -35,6 +35,18 @@ type PersistedResult = {
 };
 const persistedResults = (resultsFile as { results: Record<string, PersistedResult> }).results;
 
+/**
+ * Static (build-time) check against the official feed: is this match persisted
+ * as FINISHED in results.json? Lets server components decide a day/match is over
+ * from real final state instead of a blind "kickoff + N minutes" guess. The time
+ * guess is wrong by construction — a match runs 90' + ~15' HT + stoppage (~130'
+ * wall-clock for a group game) and a knockout can reach ~3 h with extra time and
+ * penalties — so any fixed window fires while the match is still being played.
+ */
+export function isMatchFinished(matchId: string): boolean {
+  return persistedResults[matchId]?.state === "finished";
+}
+
 const ESPN_SUMMARY =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 

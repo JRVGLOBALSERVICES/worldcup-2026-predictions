@@ -3,6 +3,7 @@ import { LiveProvider } from "@/components/LiveProvider";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 import { SiteNav } from "@/components/SiteNav";
 import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
+import { isMatchFinished } from "@/lib/live";
 
 export const revalidate = 1800; // re-pick "today" every 30 min on Vercel
 
@@ -26,19 +27,22 @@ function Chevron() {
 export default function Home() {
   const days = fixturesByMytDay();
   const now = Date.now();
-  const liveWindow = 115 * 60 * 1000;
 
-  // Featured day = earliest MYT day whose last match hasn't finished yet.
-  const featured =
-    days.find((d) => {
-      const last = d.fixtures[d.fixtures.length - 1];
-      return new Date(last.kickoffUTC).getTime() + liveWindow > now;
-    }) ?? days[days.length - 1];
-
+  // A day is over only once its matches are ACTUALLY finished per the official
+  // feed — never a blind kickoff+N-minutes window, which fires mid-match (a
+  // knockout can run ~3 h with extra time + penalties, so a live game would get
+  // wrongly collapsed as "finished"). Fallback: 3.5 h past the last kickoff, an
+  // upper bound that can't be reached while a match is still being played, for
+  // any fixture the feed never persisted.
+  const finishedFallback = 3.5 * 60 * 60 * 1000;
   const dayHasEnded = (d: (typeof days)[number]) => {
     const last = d.fixtures[d.fixtures.length - 1];
-    return new Date(last.kickoffUTC).getTime() + liveWindow <= now;
+    const fallbackElapsed = new Date(last.kickoffUTC).getTime() + finishedFallback <= now;
+    return fallbackElapsed || d.fixtures.every((f) => isMatchFinished(f.id));
   };
+
+  // Featured day = earliest MYT day that hasn't ended yet.
+  const featured = days.find((d) => !dayHasEnded(d)) ?? days[days.length - 1];
   // Ended days drop to the bottom of the schedule; live/upcoming days stay on
   // top in kickoff order, finished ones trail after (also in kickoff order).
   const rest = days.filter((d) => d.key !== featured.key);
