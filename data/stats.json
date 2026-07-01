@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:10:05.740Z",
+    "generatedAt": "2026-07-01T21:20:07.967Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 64
   },
@@ -40,6 +40,14 @@
       },
       {
         "rank": 5,
+        "name": "Ismaïla Sarr",
+        "team": "Senegal",
+        "flag": "🇸🇳",
+        "value": 4,
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -55,7 +63,7 @@
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -63,7 +71,7 @@
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -71,20 +79,12 @@
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 3,
         "matches": 4
-      },
-      {
-        "rank": 7,
-        "name": "Elijah Just",
-        "team": "New Zealand",
-        "flag": "🇳🇿",
-        "value": 3,
-        "matches": 3
       }
     ],
     "assists": [
@@ -615,8 +615,8 @@
       },
       {
         "rank": 10,
-        "team": "Brazil",
-        "flag": "🇧🇷",
+        "team": "Belgium",
+        "flag": "🇧🇪",
         "value": 58.8,
         "display": "58.8%",
         "matches": 3
@@ -897,8 +897,8 @@
         "rank": 4,
         "team": "Senegal",
         "flag": "🇸🇳",
-        "value": 54,
-        "display": "54.0%",
+        "value": 54.4,
+        "display": "54.4%",
         "matches": 4
       },
       {
@@ -1018,7 +1018,7 @@
       "scorers": [
         {
           "name": "Ismaïla Sarr",
-          "value": 3,
+          "value": 4,
           "matches": 3
         },
         {
@@ -1064,7 +1064,7 @@
           "matches": 1
         },
         {
-          "name": "Nicolas Jackson",
+          "name": "Moussa Niakhaté",
           "value": 1,
           "matches": 1
         }
@@ -6079,35 +6079,40 @@
       },
       "760493": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Moussa Niakhaté",
+            "team": "Senegal"
+          }
+        ],
         "teamBox": [
           {
             "team": "Belgium",
-            "possessionPct": 50.4,
-            "accuratePasses": 241,
-            "totalPasses": 275,
+            "possessionPct": 51.9,
+            "accuratePasses": 291,
+            "totalPasses": 333,
             "shotsOnTarget": 2,
             "totalShots": 5,
-            "effectiveTackles": 2,
-            "totalTackles": 6,
+            "effectiveTackles": 3,
+            "totalTackles": 7,
             "accurateCrosses": 2,
-            "totalCrosses": 10,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 18
+            "totalCrosses": 11,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 22
           },
           {
             "team": "Senegal",
-            "possessionPct": 49.6,
-            "accuratePasses": 232,
-            "totalPasses": 266,
-            "shotsOnTarget": 3,
-            "totalShots": 8,
+            "possessionPct": 48.1,
+            "accuratePasses": 266,
+            "totalPasses": 303,
+            "shotsOnTarget": 4,
+            "totalShots": 11,
             "effectiveTackles": 2,
             "totalTackles": 5,
             "accurateCrosses": 3,
-            "totalCrosses": 12,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 26
+            "totalCrosses": 13,
+            "accurateLongBalls": 13,
+            "totalLongBalls": 30
           }
         ]
       },

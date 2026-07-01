@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:10:03.248Z",
+    "generatedAt": "2026-07-01T21:20:03.542Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8114,7 +8114,7 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "advanced": null,
       "goals": [
@@ -8122,6 +8122,14 @@
           "team": "away",
           "scorer": "Habib Diarra",
           "minute": 24,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ismaïla Sarr",
+          "minute": 51,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -8136,11 +8144,11 @@
         },
         "sot": {
           "home": 2,
-          "away": 3
+          "away": 4
         },
         "shots": {
           "home": 5,
-          "away": 8
+          "away": 11
         },
         "yellow": {
           "home": 0,
