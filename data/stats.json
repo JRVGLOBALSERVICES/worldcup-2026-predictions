@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:40:06.798Z",
+    "generatedAt": "2026-07-01T21:50:06.621Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 64
   },
@@ -607,18 +607,18 @@
       },
       {
         "rank": 9,
-        "team": "Belgium",
-        "flag": "🇧🇪",
+        "team": "Colombia",
+        "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
         "matches": 3
       },
       {
-        "rank": 9,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 59.8,
-        "display": "59.8%",
+        "rank": 10,
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 59.6,
+        "display": "59.6%",
         "matches": 3
       }
     ],
@@ -897,8 +897,8 @@
         "rank": 4,
         "team": "Senegal",
         "flag": "🇸🇳",
-        "value": 54.5,
-        "display": "54.5%",
+        "value": 53.3,
+        "display": "53.3%",
         "matches": 4
       },
       {
@@ -3132,17 +3132,17 @@
           "matches": 3
         },
         {
+          "name": "Romelu Lukaku",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Alexis Saelemaekers",
           "value": 1,
           "matches": 1
         },
         {
           "name": "Kevin De Bruyne",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Romelu Lukaku",
           "value": 1,
           "matches": 1
         }
@@ -3160,6 +3160,11 @@
         },
         {
           "name": "Romelu Lukaku",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Thomas Meunier",
           "value": 1,
           "matches": 1
         }
@@ -6091,36 +6096,40 @@
           {
             "name": "Moussa Niakhaté",
             "team": "Senegal"
+          },
+          {
+            "name": "Thomas Meunier",
+            "team": "Belgium"
           }
         ],
         "teamBox": [
           {
             "team": "Belgium",
-            "possessionPct": 54.7,
-            "accuratePasses": 403,
-            "totalPasses": 455,
-            "shotsOnTarget": 2,
-            "totalShots": 10,
+            "possessionPct": 54.2,
+            "accuratePasses": 430,
+            "totalPasses": 491,
+            "shotsOnTarget": 3,
+            "totalShots": 14,
             "effectiveTackles": 3,
             "totalTackles": 7,
-            "accurateCrosses": 2,
-            "totalCrosses": 15,
+            "accurateCrosses": 5,
+            "totalCrosses": 18,
             "accurateLongBalls": 15,
-            "totalLongBalls": 28
+            "totalLongBalls": 29
           },
           {
             "team": "Senegal",
-            "possessionPct": 45.3,
-            "accuratePasses": 324,
-            "totalPasses": 372,
+            "possessionPct": 45.8,
+            "accuratePasses": 354,
+            "totalPasses": 411,
             "shotsOnTarget": 4,
             "totalShots": 11,
             "effectiveTackles": 3,
             "totalTackles": 8,
             "accurateCrosses": 3,
-            "totalCrosses": 14,
-            "accurateLongBalls": 19,
-            "totalLongBalls": 41
+            "totalCrosses": 15,
+            "accurateLongBalls": 21,
+            "totalLongBalls": 49
           }
         ]
       },

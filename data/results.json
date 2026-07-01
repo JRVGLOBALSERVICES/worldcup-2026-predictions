@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:40:03.306Z",
+    "generatedAt": "2026-07-01T21:50:03.518Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8113,7 +8113,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 2
       },
       "advanced": null,
@@ -8130,6 +8130,14 @@
           "team": "away",
           "scorer": "Ismaïla Sarr",
           "minute": 51,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Romelu Lukaku",
+          "minute": 86,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -8156,11 +8164,11 @@
           "away": 1
         },
         "sot": {
-          "home": 2,
+          "home": 3,
           "away": 4
         },
         "shots": {
-          "home": 10,
+          "home": 14,
           "away": 11
         },
         "yellow": {
