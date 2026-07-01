@@ -11995,6 +11995,40 @@
    }
   },
   {
+   "id": "sp-83812500173",
+   "slipNo": "83812500173",
+   "matchId": "esp-aut-2026-07-02",
+   "player": "-",
+   "market": "Accumulator (3)",
+   "label": "REAL placed slip (R32) — 3-fold @ 57.879, RM10 → RM578.79: Austria Individual Total Over 1 (Spain/Austria) · HT-FT Portugal/Portugal (Portugal/Croatia) · HT-FT Draw/Switzerland (Switzerland/Algeria) (3 legs, incl. 1.1 acca bonus)",
+   "odds": 57.879,
+   "stake": 10,
+   "placedAt": "01/07 12:39",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "esp-aut-2026-07-02",
+      "kind": "individualTotalOver",
+      "side": "away",
+      "line": 1
+     },
+     {
+      "matchId": "por-cro-2026-07-02",
+      "kind": "htft",
+      "ht": "1",
+      "ft": "1"
+     },
+     {
+      "matchId": "sui-alg-2026-07-03",
+      "kind": "htft",
+      "ht": "X",
+      "ft": "1"
+     }
+    ]
+   }
+  },
+  {
    "id": "sp-83812793069",
    "slipNo": "83812793069",
    "matchId": "eng-cod-2026-07-01",
