@@ -473,6 +473,17 @@ export type Special = {
   statusOverride?: BetStatus;
   /** Optional co-punter badge for a shared slip (absent = owner's own bet). */
   punter?: string;
+  /**
+   * Set when a leg voided (whole-line push / refund) and the acca was repriced.
+   * `odds`/`stake`→`potential` already reflect the NEW price; this carries the
+   * BEFORE figures so the card can show previous → current on every device.
+   */
+  reprice?: {
+    prevOdds: number;
+    prevReturn: number;
+    voidLegs: number;
+    note: string;
+  };
 };
 
 export type BetSlipFile = {

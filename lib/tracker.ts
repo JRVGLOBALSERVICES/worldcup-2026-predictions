@@ -130,6 +130,7 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
         statusOverride: s.statusOverride,
         punter: s.punter,
         mirror: s.mirror ?? false,
+        reprice: s.reprice,
       })),
     };
   });
