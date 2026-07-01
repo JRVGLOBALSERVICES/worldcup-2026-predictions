@@ -343,21 +343,186 @@ function PunterTag({ name }: { name: string }) {
   );
 }
 
-/** Accumulator card — the slip-card leg grid, live-graded. One per non-mirror acca. */
+// ── live game-stat header — the score/total/minute context Rj wants on top of
+//    every slip. Keyed off a match a slip is tied to, so a multi-game acca shows
+//    each leg's live game state (current score, total goals, minute, verified
+//    stats) directly above that leg's line. ────────────────────────────────────
+type TeamMeta = { name: string; flag: string; code: string };
+type MatchMeta = { home: TeamMeta; away: TeamMeta; kickoffLabel: string };
+
+function matchMeta(matchId: string): MatchMeta | null {
+  const fx = FIXTURES.find((f) => f.id === matchId);
+  if (!fx) return null;
+  return {
+    home: { name: fx.home.name, flag: fx.home.flag, code: teamCode(fx.home.name) },
+    away: { name: fx.away.name, flag: fx.away.flag, code: teamCode(fx.away.name) },
+    kickoffLabel: `${mytKick(fx.kickoffUTC)} MYT`,
+  };
+}
+
+// Light name matcher for the per-player tally on player legs — mirrors lib/inplay
+// deburr+includes so the count shown never disagrees with settlement.
+const deburrLite = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
+function nameHit(a: string, b: string): boolean {
+  const x = deburrLite(a), y = deburrLite(b);
+  return x === y || x.includes(y) || y.includes(x);
+}
+function playerTally(lm: LiveMatch, player: string): { goals: number; assists: number } {
+  const goals = lm.goals.filter((gl) => !gl.ownGoal && nameHit(gl.scorer, player)).length;
+  const assists = lm.goals.filter((gl) => gl.assist && nameHit(gl.assist, player)).length;
+  return { goals, assists };
+}
+
+function liveStatus(lm: LiveMatch): { label: string; cls: string; pulse: boolean } {
+  if (lm.state === "live") return { label: lm.minute != null ? `${lm.minute}'` : "LIVE", cls: "text-amber", pulse: true };
+  if (lm.state === "halftime") return { label: "HALF-TIME", cls: "text-mint", pulse: false };
+  if (lm.state === "finished") return { label: lm.statusDetail || "FULL-TIME", cls: "text-faint", pulse: false };
+  return { label: "Not started", cls: "text-faint", pulse: false };
+}
+
+/** Small stat cell for the game-stat strip (home-acid / away-warm). */
+function MiniStat({ label, h, a }: { label: string; h: number; a: number }) {
+  return (
+    <span className="inline-flex items-baseline gap-1">
+      <span className="uppercase tracking-wider text-faint/70">{label}</span>
+      <span className="tnum text-acid">{h}</span>
+      <span className="text-faint/60">-</span>
+      <span className="tnum text-mint">{a}</span>
+    </span>
+  );
+}
+
+/** The live game-stat strip that sits on top of a slip: current score, total
+ *  goals, match minute and (once ESPN populates them) verified shot/corner
+ *  counts. Reads muted "Not started" with the kickoff time before the game is on;
+ *  tints amber while live so a running match is obvious at a glance. */
+function GameStatHeader({ matchId, live }: { matchId: string; live: Record<string, LiveMatch | undefined> }) {
+  const meta = matchMeta(matchId);
+  if (!meta) return null;
+  const lm = live[matchId];
+  const on = lm && lm.state !== "scheduled";
+  if (!on) {
+    return (
+      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-xl border border-line/60 bg-pitch/50 px-3 py-2 font-mono text-[0.66rem]">
+        <span className="flex items-center gap-1.5 text-ink">
+          <span aria-hidden>{meta.home.flag}</span><span className="tnum font-semibold">{meta.home.code}</span>
+          <span className="text-faint/70">v</span>
+          <span aria-hidden>{meta.away.flag}</span><span className="tnum font-semibold">{meta.away.code}</span>
+        </span>
+        <span className="text-faint/70">{meta.kickoffLabel}</span>
+        <span className="ml-auto rounded-full border border-line px-2 py-0.5 uppercase tracking-wider text-faint">Not started</span>
+      </div>
+    );
+  }
+  const s = lm!.score;
+  const total = s.home + s.away;
+  const st = liveStatus(lm!);
+  const stats = lm!.stats;
+  const hot = lm!.state === "live" || lm!.state === "halftime";
+  return (
+    <div className={`rounded-xl border px-3 py-2 ${hot ? "border-amber/35 bg-amber/[0.07]" : "border-line/70 bg-pitch/55"}`}>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+        <span className="flex items-center gap-1.5 font-mono text-[0.7rem]">
+          <span aria-hidden>{meta.home.flag}</span>
+          <span className="tnum font-semibold text-muted">{meta.home.code}</span>
+          <span className="tnum px-0.5 text-[1.05rem] font-bold leading-none text-ink">
+            {s.home}<span className="px-1 text-faint/70">–</span>{s.away}
+          </span>
+          <span className="tnum font-semibold text-muted">{meta.away.code}</span>
+          <span aria-hidden>{meta.away.flag}</span>
+        </span>
+        <span className={`inline-flex items-center gap-1 font-mono text-[0.62rem] font-semibold uppercase tracking-wider ${st.cls}`}>
+          {st.pulse && <span className="size-1.5 animate-pulse rounded-full bg-amber motion-reduce:animate-none" />}
+          {st.label}
+        </span>
+        <span className="ml-auto rounded-full border border-line bg-card/50 px-2 py-0.5 font-mono text-[0.6rem] font-semibold uppercase tracking-wider text-muted tnum">
+          {total} goal{total === 1 ? "" : "s"}
+        </span>
+      </div>
+      {stats && (
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-0.5 border-t border-line/40 pt-1.5 font-mono text-[0.6rem]">
+          <MiniStat label="On tgt" h={stats.sot.home} a={stats.sot.away} />
+          <MiniStat label="Corners" h={stats.corners.home} a={stats.corners.away} />
+          <MiniStat label="Shots" h={stats.shots.home} a={stats.shots.away} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** One acca leg line: status dot + plain-English selection + glyph. A player leg
+ *  ("Mbappé — 2+ goals") also carries that player's live goal/assist tally, so a
+ *  scorer bet reads its own match involvement inline. */
+function LegRow({ leg, lm }: { leg: { label: string; glyph: string; player?: string }; lm: LiveMatch | undefined }) {
+  const g = LEG_GLYPH[leg.glyph] ?? LEG_GLYPH["—"];
+  const tally = leg.player && lm && lm.state !== "scheduled" ? playerTally(lm, leg.player) : null;
+  return (
+    <li className="flex items-start gap-2.5 rounded-lg border border-line/70 bg-card/40 px-3 py-2">
+      <span className={`mt-[0.4rem] size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
+      <span className="min-w-0 flex-1 break-words text-[0.8rem] leading-snug text-ink">
+        {leg.label}
+        {tally && (
+          <span className="ml-2 whitespace-nowrap font-mono text-[0.62rem] font-semibold text-faint/80">
+            {tally.goals}G{tally.assists > 0 ? ` · ${tally.assists}A` : ""}
+          </span>
+        )}
+      </span>
+      <span className={`mt-px shrink-0 font-mono text-xs font-bold ${g.cls}`}>{leg.glyph}</span>
+    </li>
+  );
+}
+
+/** Strip the "Home v Away — " (or "Home v Away ") prefix off a leg label when
+ *  it's shown under a game-stat header that already names the teams, so the leg
+ *  reads "under 2.5 goals" not "England v Congo — under 2.5 goals". */
+function stripMatchPrefix(label: string, meta: MatchMeta | null): string {
+  if (!meta) return label;
+  const p = `${meta.home.name} v ${meta.away.name}`;
+  if (label.startsWith(p)) return label.slice(p.length).replace(/^\s*(—\s*)?/, "").trim() || label;
+  return label;
+}
+
+/** Accumulator card — grouped by the match each leg is tied to. Each match gets
+ *  ONE live game-stat header (score / total goals / minute / verified stats) with
+ *  its legs beneath, so a cross-game acca reads game-by-game. `withGameHeader` is
+ *  false for a lone inline acca inside a day match-card (the card already shows
+ *  the match's live header right above it). */
 function AccaCard({
   special,
   verdict,
   currency,
+  live,
+  withGameHeader = true,
 }: {
   special: SpecialRow;
   verdict: InPlay;
   currency: string;
+  live: Record<string, LiveMatch | undefined>;
+  withGameHeader?: boolean;
 }) {
-  const legs = parseLegs(verdict.note);
-  const legCount = special.grade && "legs" in special.grade ? special.grade.legs.length : legs?.length ?? 0;
+  const parsed = parseLegs(verdict.note);
+  const rawLegs = (
+    special.grade && "legs" in special.grade ? (special.grade.legs as unknown[]) : []
+  ) as { matchId?: string; player?: string }[];
+  const legCount = rawLegs.length || parsed?.length || 0;
+
+  // Zip the raw legs (which carry matchId + optional player) with the parsed
+  // display legs (label + glyph, same order) and group by match. Only possible
+  // when both lists line up and every leg names a match.
+  const canGroup = !!parsed && rawLegs.length === parsed.length && rawLegs.every((l) => l.matchId);
+  const groups: { matchId: string; legs: { label: string; glyph: string; player?: string }[] }[] = [];
+  if (canGroup && parsed) {
+    for (let i = 0; i < rawLegs.length; i++) {
+      const mid = rawLegs[i].matchId!;
+      let grp = groups.find((x) => x.matchId === mid);
+      if (!grp) { grp = { matchId: mid, legs: [] }; groups.push(grp); }
+      grp.legs.push({ label: parsed[i].label, glyph: parsed[i].glyph, player: rawLegs[i].player });
+    }
+  }
+
   return (
-    <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
-      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+    <div className="overflow-hidden rounded-2xl border border-line bg-pitch-2/50">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-3.5 sm:px-5">
         <div className="flex items-center gap-2.5">
           <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
             {legCount} legs
@@ -373,24 +538,28 @@ function AccaCard({
           <VerdictPill verdict={verdict.verdict} />
         </div>
       </div>
-      {legs ? (
-        <ul className="mt-3.5 grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {legs.map((l, i) => {
-            const g = LEG_GLYPH[l.glyph] ?? LEG_GLYPH["—"];
+      {groups.length > 0 ? (
+        <div className="space-y-3.5 border-t border-line/70 px-4 py-3.5 sm:px-5">
+          {groups.map((grp) => {
+            const meta = matchMeta(grp.matchId);
             return (
-              <li
-                key={i}
-                className="flex items-start gap-2.5 rounded-lg border border-line/70 bg-card/40 px-3 py-2"
-              >
-                <span className={`mt-[0.4rem] size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
-                <span className="min-w-0 flex-1 break-words text-[0.8rem] leading-snug text-ink">{l.label}</span>
-                <span className={`mt-px shrink-0 font-mono text-xs font-bold ${g.cls}`}>{l.glyph}</span>
-              </li>
+              <div key={grp.matchId} className="space-y-2">
+                {withGameHeader && <GameStatHeader matchId={grp.matchId} live={live} />}
+                <ul className="space-y-1.5">
+                  {grp.legs.map((l, i) => (
+                    <LegRow key={i} leg={{ ...l, label: withGameHeader ? stripMatchPrefix(l.label, meta) : l.label }} lm={live[grp.matchId]} />
+                  ))}
+                </ul>
+              </div>
             );
           })}
+        </div>
+      ) : parsed ? (
+        <ul className="grid grid-cols-1 gap-2 border-t border-line/70 px-4 py-3.5 sm:grid-cols-2 sm:px-5">
+          {parsed.map((l, i) => <LegRow key={i} leg={l} lm={undefined} />)}
         </ul>
       ) : (
-        verdict.note && <p className="mt-3 font-mono text-[0.7rem] text-faint/70">{verdict.note}</p>
+        verdict.note && <p className="border-t border-line/70 px-4 py-3 font-mono text-[0.7rem] text-faint/70 sm:px-5">{verdict.note}</p>
       )}
     </div>
   );
@@ -478,7 +647,7 @@ function GlobalParlays({
                   </span>
                 </p>
                 {ps.map((p) => (
-                  <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
+                  <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} live={live} />
                 ))}
               </div>
             ));
@@ -508,7 +677,7 @@ function GlobalParlays({
           {showSettled && (
             <div className="mt-3 space-y-3">
               {settled.map((p) => (
-                <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} />
+                <AccaCard key={p.special.id} special={p.special} verdict={p.verdict} currency={currency} live={live} />
               ))}
             </div>
           )}
@@ -696,12 +865,19 @@ function PropCard({
   special,
   verdict,
   currency,
+  lm,
 }: {
   special: SpecialRow;
   verdict: InPlay;
   currency: string;
+  lm?: LiveMatch | undefined;
 }) {
   const dim = verdict.verdict === "lost" || verdict.verdict === "dead";
+  // Player-prop live involvement — for a scorer/assist prop, show the named
+  // player's goal + assist tally straight off the match feed, so the slip
+  // carries its own "how's my player doing" line, not just the verdict note.
+  const player = special.grade && "player" in special.grade ? special.grade.player : undefined;
+  const tally = player && lm && lm.state !== "scheduled" ? playerTally(lm, player) : null;
   return (
     <div className="rounded-2xl border border-line bg-pitch-2/50 p-4 sm:p-5">
       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
@@ -722,9 +898,16 @@ function PropCard({
         </div>
       </div>
       <p className="mt-3 text-sm text-ink">{special.label}</p>
-      {verdict.note && (
-        <p className="mt-2 font-mono text-[0.66rem] text-faint/70">{verdict.note}</p>
-      )}
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+        {tally && (
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-mint/30 bg-mint/[0.07] px-2 py-0.5 font-mono text-[0.62rem] font-semibold text-mint tnum">
+            {player}: {tally.goals} G · {tally.assists} A
+          </span>
+        )}
+        {verdict.note && (
+          <span className="font-mono text-[0.66rem] text-faint/70">{verdict.note}</span>
+        )}
+      </div>
     </div>
   );
 }
@@ -1246,7 +1429,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                             </div>
                             <div className="space-y-3 px-5 py-4">
                               {accaRows.map((r, i) => (
-                                <AccaCard key={r.id} special={r} verdict={accaVerdicts[i]} currency={cur} />
+                                <AccaCard key={r.id} special={r} verdict={accaVerdicts[i]} currency={cur} live={live} withGameHeader={false} />
                               ))}
                             </div>
                           </div>
@@ -1260,7 +1443,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                             </div>
                             <div className="space-y-3 px-5 py-4">
                               {propRows.map((r, i) => (
-                                <PropCard key={r.id} special={r as SpecialRow} verdict={propVerdicts[i]} currency={cur} />
+                                <PropCard key={r.id} special={r as SpecialRow} verdict={propVerdicts[i]} currency={cur} lm={lm} />
                               ))}
                             </div>
                           </div>
