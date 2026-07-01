@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T20:30:04.367Z",
+    "generatedAt": "2026-07-01T20:40:03.998Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8133,11 +8133,11 @@
         },
         "sot": {
           "home": 1,
-          "away": 2
+          "away": 3
         },
         "shots": {
           "home": 2,
-          "away": 5
+          "away": 6
         },
         "yellow": {
           "home": 0,
@@ -8167,13 +8167,14 @@
             0
           ],
           "away": [
-            1,
+            2,
             0
           ]
         },
         "playerSot": {
           "Leandro Trossard": 1,
-          "Idrissa Gueye": 1
+          "Idrissa Gueye": 1,
+          "Sadio Mané": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -8181,10 +8182,10 @@
           "h1": {
             "half": 1,
             "anchorMinute": 22,
-            "source": "anchor",
-            "breakEndMinute": null,
-            "firstActionType": "Shot Hit Woodwork",
-            "firstActionMinute": 24,
+            "source": "delay",
+            "breakEndMinute": 30,
+            "firstActionType": "Shot On Target",
+            "firstActionMinute": 36,
             "isCorner": false,
             "reliable": true
           }
