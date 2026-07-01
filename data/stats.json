@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T03:50:06.908Z",
+    "generatedAt": "2026-07-01T04:00:07.969Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -341,6 +341,13 @@
       },
       {
         "rank": 1,
+        "name": "Piero Hincapié",
+        "team": "Ecuador",
+        "flag": "🇪🇨",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Rebin Sulaka",
         "team": "Iraq",
         "flag": "🇮🇶",
@@ -626,14 +633,6 @@
       },
       {
         "rank": 2,
-        "team": "Ecuador",
-        "flag": "🇪🇨",
-        "value": 48.7,
-        "display": "48.7%",
-        "matches": 3
-      },
-      {
-        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
         "value": 47.2,
@@ -641,12 +640,20 @@
         "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
         "display": "46.5%",
         "matches": 4
+      },
+      {
+        "rank": 4,
+        "team": "Ecuador",
+        "flag": "🇪🇨",
+        "value": 46.3,
+        "display": "46.3%",
+        "matches": 3
       },
       {
         "rank": 5,
@@ -2976,11 +2983,20 @@
           "value": 1
         },
         {
+          "name": "Kendry Páez",
+          "value": 1
+        },
+        {
           "name": "Piero Hincapié",
           "value": 1
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "name": "Piero Hincapié",
+          "value": 1
+        }
+      ]
     },
     "tunisia": {
       "team": "Tunisia",
@@ -5969,31 +5985,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 44.5,
-            "accuratePasses": 241,
-            "totalPasses": 301,
+            "possessionPct": 43.2,
+            "accuratePasses": 245,
+            "totalPasses": 312,
             "shotsOnTarget": 3,
-            "totalShots": 14,
+            "totalShots": 15,
             "effectiveTackles": 5,
             "totalTackles": 10,
             "accurateCrosses": 4,
             "totalCrosses": 7,
             "accurateLongBalls": 26,
-            "totalLongBalls": 50
+            "totalLongBalls": 55
           },
           {
             "team": "Ecuador",
-            "possessionPct": 55.5,
-            "accuratePasses": 313,
-            "totalPasses": 367,
+            "possessionPct": 56.8,
+            "accuratePasses": 336,
+            "totalPasses": 399,
             "shotsOnTarget": 1,
-            "totalShots": 5,
-            "effectiveTackles": 5,
-            "totalTackles": 8,
-            "accurateCrosses": 2,
-            "totalCrosses": 21,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 43
+            "totalShots": 7,
+            "effectiveTackles": 8,
+            "totalTackles": 11,
+            "accurateCrosses": 3,
+            "totalCrosses": 25,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 49
           }
         ]
       },
