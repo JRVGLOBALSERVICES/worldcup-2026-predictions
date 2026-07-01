@@ -2,26 +2,27 @@
 
 import { useCallback, useRef, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
 
-/** Verdict-keyed tints. `spot` = cursor-fill glow, `edge` = left status bar +
- *  conic border sweep, `glow` = the ambient corner light behind the glass (so the
- *  blur has real depth to refract). Green = winning, amber = still-on, red = lost. */
+/** Verdict-keyed tints, matched to the ink+lime token system. `spot` = cursor-fill
+ *  glow, `edge` = left status bar + conic border sweep, `glow` = the ambient corner
+ *  light behind the card. Electric lime = winning, amber = still-on, coral = lost.
+ *  Values are the OKLCH accent tokens expressed as alpha tints. */
 const SPOT: Record<string, string> = {
-  acid: "rgb(57 217 138 / 0.16)",
-  amber: "rgb(232 183 58 / 0.15)",
-  rose: "rgb(196 77 88 / 0.15)",
-  none: "rgb(255 255 255 / 0.07)",
+  acid: "oklch(0.88 0.205 123 / 0.16)",
+  amber: "oklch(0.80 0.125 78 / 0.15)",
+  rose: "oklch(0.64 0.165 22 / 0.15)",
+  none: "rgb(255 255 255 / 0.06)",
 };
 const EDGE: Record<string, string> = {
-  acid: "rgb(57 217 138 / 0.9)",
-  amber: "rgb(232 183 58 / 0.85)",
-  rose: "rgb(196 77 88 / 0.85)",
-  none: "rgb(255 255 255 / 0.35)",
+  acid: "oklch(0.88 0.205 123 / 0.95)",
+  amber: "oklch(0.80 0.125 78 / 0.9)",
+  rose: "oklch(0.64 0.165 22 / 0.9)",
+  none: "rgb(255 255 255 / 0.3)",
 };
 const GLOW: Record<string, string> = {
-  acid: "rgb(57 217 138 / 0.15)",
-  amber: "rgb(232 183 58 / 0.14)",
-  rose: "rgb(196 77 88 / 0.13)",
-  none: "rgb(120 140 170 / 0.10)",
+  acid: "oklch(0.88 0.19 123 / 0.14)",
+  amber: "oklch(0.80 0.125 78 / 0.13)",
+  rose: "oklch(0.64 0.165 22 / 0.12)",
+  none: "oklch(0.78 0.06 265 / 0.09)",
 };
 
 export type SpotTone = keyof typeof SPOT;
