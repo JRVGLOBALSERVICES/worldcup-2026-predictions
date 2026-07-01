@@ -1600,3 +1600,15 @@ export function liveLeans(v: LiveVerdict): "win" | "lose" | "neutral" {
   if (v === "scheduled" || v === "void") return "neutral"; // void = stake back, no P&L
   return "lose"; // lost, dead, alive all lose if the whistle goes now
 }
+
+/** Realised-only lean — used for the hero P&L when NO match is live, so the
+ *  headline reflects money actually settled rather than an optimistic
+ *  "if it ended now" projection. Only terminal verdicts move the number:
+ *  a bet still in play (winning / alive / scheduled) counts as 0 until every
+ *  one of its legs has finished. Prevents a partially-played acca whose one
+ *  finished leg won from booking its full best-case profit into "Net P&L". */
+export function realisedLeans(v: LiveVerdict): "win" | "lose" | "neutral" {
+  if (v === "won") return "win";
+  if (v === "lost" || v === "dead") return "lose"; // locked losses (can't land)
+  return "neutral"; // winning / alive / scheduled → unrealised; void → stake back
+}

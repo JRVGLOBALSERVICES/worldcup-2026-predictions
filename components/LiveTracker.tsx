@@ -6,7 +6,7 @@ import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
 import type { Fixture } from "@/lib/types";
 import fixturesJson from "@/data/fixtures.json";
-import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
+import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, realisedLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { SiteNav, type NavKey } from "./SiteNav";
 
@@ -914,16 +914,31 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   // Live "if it ended now" P&L — scoped to today's featured slate, matching the
   // staked / max-return figures in the hero (season roll-up lives below).
   const heroDays = base.days.filter((d) => d.isFeatured);
-  let livePnl = 0;
-  let securedReturns = 0;
+  // Liveness drives the P&L basis, so determine it FIRST (before accumulating).
+  // Doing it inline meant a late-slate live match couldn't retroactively fix the
+  // basis of earlier bets already summed in the same pass.
   let anyMatchLive = false;
   for (const d of heroDays) {
     for (const m of d.matches) {
       const lm = live[m.matchId];
-      if (lm && (lm.state === "live" || lm.state === "halftime")) anyMatchLive = true;
+      if (lm && (lm.state === "live" || lm.state === "halftime")) { anyMatchLive = true; break; }
+    }
+    if (anyMatchLive) break;
+  }
+  // • A match is live → strict "if it ended now" projection (liveLeans): alive
+  //   legs count as losing, on-track legs as winning — the whistle-blows-now view.
+  // • Nothing live → realised-only (realisedLeans): a partially-played acca books
+  //   0 until every leg finishes, so the "Net P&L" headline is money settled, not
+  //   an optimistic best-case from one finished leg of a not-started parlay.
+  const leanFn = anyMatchLive ? liveLeans : realisedLeans;
+  let livePnl = 0;
+  let securedReturns = 0;
+  for (const d of heroDays) {
+    for (const m of d.matches) {
+      const lm = live[m.matchId];
       for (const b of m.bets) {
         const v = gradeBet(b, lm).verdict;
-        const lean = liveLeans(v);
+        const lean = leanFn(v);
         if (lean === "win") livePnl += b.potential - b.stake;
         else if (lean === "lose") livePnl -= b.stake;
         if (v === "won") securedReturns += b.potential;
@@ -932,7 +947,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       for (const s of m.specials) {
         if (s.mirror) continue; // counted on its home card only
         const v = gradeSpecial(s, lm, live).verdict;
-        const lean = liveLeans(v);
+        const lean = leanFn(v);
         if (lean === "win") livePnl += s.potential - s.stake;
         else if (lean === "lose") livePnl -= s.stake;
         if (v === "won") securedReturns += s.potential;
