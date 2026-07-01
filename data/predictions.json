@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T09:10:11.847Z",
+    "generatedAt": "2026-07-01T15:22:00.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-01T09:10:11.847Z"
+    "modelUpdatedAt": "2026-07-01T15:22:00.000Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -15061,108 +15061,93 @@
     "eng-cod-2026-07-01": {
       "win": {
         "pick": "England",
-        "fairOdds": "1.69",
-        "reason": "Model: England to win at 59% (England 59% / draw 24% / Congo DR 17%). Expected goals 1.7–0.8 from group-stage attack/defence rates (England 1.8 for / 1.0 against per game, Congo DR 1.4 / 1.2). Most likely score 1-0.",
+        "fairOdds": "1.74",
+        "reason": "Model: England ~57% (England 57% / draw 25% / Congo DR 18%). Confirmed XIs sharpen it both ways: England field Rice + Anderson in a controlling double pivot behind Bellingham and Kane, but Saka is BENCHED and natural-LB Djed Spence deputises at right-back — the exact seam Congo will attack with Cipenga and Masuaku. Congo sit deep and spring Wissa (75% of their WC goals) on the counter, and England just drew Ghana 0-0 against a low block. England to win, but ~55-57% is not certainty — draw + Congo ≈ 43%.",
         "strength": 4
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.98",
+        "fairOdds": "2.85",
         "alt": "1-0",
-        "altOdds": "4.67"
+        "altOdds": "4.40"
       },
       "htft": {
         "pick": "Draw/England",
-        "fairOdds": "4.23"
+        "fairOdds": "3.90"
       },
       "fullTime": {
-        "score": "1-0",
-        "fairOdds": "7.04"
+        "score": "2-0",
+        "fairOdds": "7.10"
       },
       "scorers": [
         {
           "player": "Harry Kane",
           "team": "England",
-          "fairOdds": "1.91",
-          "banker": true,
-          "note": "3 goals in 3 group games; 52% modelled anytime chance on 1.7 team xG.",
-          "strength": 4
+          "fairOdds": "1.98",
+          "banker": false,
+          "strength": 4,
+          "note": "England's all-time WC top scorer (11); penalty taker and the aerial target off Rice's corners — but a 32-y-o marquee striker vs a packed low block is a strong price, NOT a banker (see Ronaldo blanking as named banker vs DR Congo)."
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "2.43",
+          "fairOdds": "2.55",
           "banker": false,
-          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.7 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Yoane Wissa",
-          "team": "Congo DR",
-          "fairOdds": "2.72",
-          "banker": false,
-          "note": "3 goals in 3 group games; 37% modelled anytime chance on 0.8 team xG.",
-          "strength": 3
+          "strength": 3,
+          "note": "Scored vs Croatia; arrives late into the box from the 10 behind Kane — England's most likely combined creator-and-scorer."
         },
         {
           "player": "Marcus Rashford",
           "team": "England",
-          "fairOdds": "3.67",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 1.7 team xG.",
-          "strength": 2
+          "strength": 3,
+          "note": "Scored vs Croatia; pace and directness from the left at Wan-Bissaka / a makeshift Congo right side is a real edge."
         },
         {
-          "player": "Fiston Mayele",
+          "player": "Yoane Wissa",
           "team": "Congo DR",
-          "fairOdds": "5.61",
+          "fairOdds": "2.75",
           "banker": false,
-          "note": "1 goal in 1 group game; 18% modelled anytime chance on 0.8 team xG.",
-          "strength": 1
+          "strength": 3,
+          "note": "3 of Congo's 4 WC goals (75%) and now their penalty taker with Bakambu benched — the differential scorer if one transition springs him in behind."
         }
       ],
       "assists": [
         {
-          "player": "Bukayo Saka",
-          "team": "England",
-          "fairOdds": "2.27",
-          "banker": true,
-          "note": "2 assists in the group stage; 44% modelled chance to set one up."
-        },
-        {
           "player": "Declan Rice",
           "team": "England",
-          "fairOdds": "3.48",
-          "banker": false,
-          "note": "1 assist in the group stage; 29% modelled chance to set one up."
+          "fairOdds": "3.10",
+          "banker": true,
+          "note": "Primary corner + set-piece taker; top-4 in Europe's big five for set-piece chances created in 25/26 — the single biggest assist route vs a low block, feeding Kane."
         },
         {
-          "player": "Elliot Anderson",
+          "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "3.48",
+          "fairOdds": "3.45",
           "banker": false,
-          "note": "1 assist in the group stage; 29% modelled chance to set one up."
+          "note": "Chief open-play creator operating behind Kane; the man to thread the final ball if England unlock the block in open play."
         },
         {
-          "player": "Arthur Masuaku",
-          "team": "Congo DR",
-          "fairOdds": "4.16",
+          "player": "Nico O'Reilly",
+          "team": "England",
+          "fairOdds": "4.30",
           "banker": false,
-          "note": "1 assist in the group stage; 24% modelled chance to set one up."
+          "note": "Overlapping left-back; cut-backs and crosses into Kane as England overload Congo's right with Rashford."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Harry Kane",
         "backup": "Jude Bellingham",
-        "note": "England favoured to control the game, so a penalty is less pivotal; Harry Kane would take one if awarded."
+        "note": "Sustained box pressure on a deep block over 90' makes a spot-kick a live route — Kane takes it, Bellingham the backup. If Congo win one on the counter it's Wissa (backup Kakuta off the bench) now Bakambu is benched."
       },
       "lineups": {
-        "home": "Jordan Pickford, Marc Guéhi, Ezri Konsa, Elliot Anderson, Nico O'Reilly, Jarell Quansah, Jude Bellingham, Morgan Rogers, Marcus Rashford, Bukayo Saka, Harry Kane",
-        "away": "Lionel Mpasi, Chancel Mbemba, Arthur Masuaku, Aaron Wan-Bissaka, Axel Tuanzebe, Noah Sadiki, Brian Cipenga, Nathanaël Mbuku, Samuel Moutoussamy, Cédric Bakambu, Yoane Wissa",
-        "status": "unconfirmed",
+        "home": "Jordan Pickford, Djed Spence, Ezri Konsa, Marc Guéhi, Nico O'Reilly, Declan Rice, Elliot Anderson, Noni Madueke, Jude Bellingham, Marcus Rashford, Harry Kane",
+        "away": "Lionel Mpasi, Aaron Wan-Bissaka, Axel Tuanzebe, Chancel Mbemba, Arthur Masuaku, Ngal'ayel Mukau, Samuel Moutoussamy, Noah Sadiki, Nathanaël Mbuku, Yoane Wissa, Brian Cipenga",
+        "status": "confirmed",
         "homeXI": {
-          "formation": "4-1-4-1",
+          "formation": "4-2-3-1",
           "players": [
             {
               "num": 1,
@@ -15170,9 +15155,9 @@
               "pos": "G"
             },
             {
-              "num": 6,
-              "name": "Marc Guéhi",
-              "pos": "CD-L"
+              "num": 25,
+              "name": "Djed Spence",
+              "pos": "RB"
             },
             {
               "num": 2,
@@ -15180,9 +15165,9 @@
               "pos": "CD-R"
             },
             {
-              "num": 8,
-              "name": "Elliot Anderson",
-              "pos": "DM"
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "CD-L"
             },
             {
               "num": 3,
@@ -15190,29 +15175,29 @@
               "pos": "LB"
             },
             {
-              "num": 26,
-              "name": "Jarell Quansah",
-              "pos": "RB"
+              "num": 4,
+              "name": "Declan Rice",
+              "pos": "DM-R"
+            },
+            {
+              "num": 8,
+              "name": "Elliot Anderson",
+              "pos": "DM-L"
+            },
+            {
+              "num": 20,
+              "name": "Noni Madueke",
+              "pos": "RM"
             },
             {
               "num": 10,
               "name": "Jude Bellingham",
-              "pos": "CM-L"
-            },
-            {
-              "num": 17,
-              "name": "Morgan Rogers",
-              "pos": "CM-R"
+              "pos": "AM"
             },
             {
               "num": 11,
               "name": "Marcus Rashford",
               "pos": "LM"
-            },
-            {
-              "num": 7,
-              "name": "Bukayo Saka",
-              "pos": "RM"
             },
             {
               "num": 9,
@@ -15222,7 +15207,7 @@
           ]
         },
         "awayXI": {
-          "formation": "4-4-2",
+          "formation": "4-3-3",
           "players": [
             {
               "num": 1,
@@ -15230,54 +15215,54 @@
               "pos": "G"
             },
             {
-              "num": 22,
-              "name": "Chancel Mbemba",
-              "pos": "D"
-            },
-            {
-              "num": 26,
-              "name": "Arthur Masuaku",
-              "pos": "D"
-            },
-            {
               "num": 2,
               "name": "Aaron Wan-Bissaka",
-              "pos": "D"
+              "pos": "RB"
             },
             {
               "num": 4,
               "name": "Axel Tuanzebe",
-              "pos": "D"
+              "pos": "CD-R"
             },
             {
-              "num": 14,
-              "name": "Noah Sadiki",
-              "pos": "M"
+              "num": 22,
+              "name": "Chancel Mbemba",
+              "pos": "CD-L"
             },
             {
-              "num": 9,
-              "name": "Brian Cipenga",
-              "pos": "M"
+              "num": 26,
+              "name": "Arthur Masuaku",
+              "pos": "LB"
             },
             {
-              "num": 7,
-              "name": "Nathanaël Mbuku",
-              "pos": "M"
+              "num": 6,
+              "name": "Ngal'ayel Mukau",
+              "pos": "CM-R"
             },
             {
               "num": 8,
               "name": "Samuel Moutoussamy",
-              "pos": "M"
+              "pos": "CM"
             },
             {
-              "num": 17,
-              "name": "Cédric Bakambu",
-              "pos": "F"
+              "num": 14,
+              "name": "Noah Sadiki",
+              "pos": "CM-L"
+            },
+            {
+              "num": 7,
+              "name": "Nathanaël Mbuku",
+              "pos": "RM"
             },
             {
               "num": 20,
               "name": "Yoane Wissa",
               "pos": "F"
+            },
+            {
+              "num": 9,
+              "name": "Brian Cipenga",
+              "pos": "LM"
             }
           ]
         }
@@ -15286,25 +15271,42 @@
         {
           "player": "Harry Kane",
           "team": "England",
-          "note": "3 goals in 3 group games; 52% modelled anytime chance on 1.7 team xG."
+          "note": "All-time England WC top scorer (11 career WC goals); penalty taker and the target off Rice corners. Not a blind banker vs a packed low block."
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.7 team xG."
+          "note": "Scored vs Croatia; plays the 10 behind Kane — the pivot of England's best chances, both creating and arriving."
         },
         {
-          "player": "Bukayo Saka",
+          "player": "Marcus Rashford",
           "team": "England",
-          "note": "2 assists in the group stage; 44% modelled chance to set one up."
+          "note": "Scored vs Croatia; starts left and attacks Congo's makeshift right side with pace — a shared free-kick option with Bellingham."
+        },
+        {
+          "player": "Noni Madueke",
+          "team": "England",
+          "note": "In for the benched Saka; 1v1 threat cutting in from the right at Masuaku, though thinner goal pedigree than the man he replaces."
+        },
+        {
+          "player": "Yoane Wissa",
+          "team": "Congo DR",
+          "note": "Carries Congo's whole attack — 3 of their 4 WC goals, genuine pace on the break, and now the designated penalty taker with Bakambu on the bench."
+        },
+        {
+          "player": "Djed Spence",
+          "team": "England",
+          "note": "Natural left-back deputising at RB with no fit specialist right-back — Congo's designed pressure point via Cipenga and overlapping Masuaku."
         }
       ],
       "confidence": "medium",
       "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed XIs: https://www.oddschecker.com/insight/football/20260701-england-vs-dr-congo-confirmed-lineups",
+        "Confirmed XIs: https://www.whoscored.com/news/db6CN6Gz-0KUmosedU-X3w/show/20260701-england-vs-dr-congo-confirmed-lineup-1782916729",
+        "Set-piece / penalty takers: https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "Tactical preview: https://www.skysports.com/football/news/12098/13558773/world-cup-2026-why-england-and-thomas-tuchel-should-be-worried-about-dr-congo",
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form"
       ],
       "pitchReport": {
         "facts": [
@@ -15317,7 +15319,7 @@
           "Model projects England to carry more of the ball and the better chances (higher attack rating); Congo DR to sit compact and play on the break.",
           "Goal expectancy 1.7–0.8 (England–Congo DR) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "XIs CONFIRMED (~1h pre-kickoff): England start Rice + Anderson as a double pivot with Madueke right and Rashford left — Saka is BENCHED and natural-LB Djed Spence fills in at RB. Congo confirm Wissa up top with Cipenga + Mbuku wide; Bakambu benched. Lineup-dependent props now firm.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "England shade the chance-creation (1.7 vs 0.8 xG) — they should make the running.",
         "drawRisk": "Moderate — 23.8% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -15332,7 +15334,7 @@
           "Group goal-rates are a tiny sample; England's number may be inflated by one result."
         ],
         "verdict": "Lean",
-        "changeMind": "A confirmed XI resting Harry Kane, or news the underdog is missing a defensive linchpin."
+        "changeMind": "A very early Congo goal that forces England to chase and open up (raising over/BTTS), or Wissa going off injured (removing Congo's only real scoring outlet)."
       },
       "valueSpot": {
         "source": "1xBet (PC)",
@@ -15417,8 +15419,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs now CONFIRMED — scorer/assist angles are firm (Saka benched, Kane penalty taker, Wissa Congo's taker)."
           },
           {
             "name": "Ignoring the draw",
@@ -15431,7 +15433,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 3,
+        "trapsTripped": 2,
         "edge": "narrative-leaning",
         "verdict": "PASS",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
