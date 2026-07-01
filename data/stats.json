@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T19:30:08.174Z",
+    "generatedAt": "2026-07-01T20:10:05.882Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 64
   },
@@ -599,14 +599,6 @@
       },
       {
         "rank": 8,
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 62.3,
-        "display": "62.3%",
-        "matches": 2
-      },
-      {
-        "rank": 9,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.2,
@@ -614,11 +606,19 @@
         "matches": 3
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
+        "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 58.8,
+        "display": "58.8%",
         "matches": 3
       }
     ],
@@ -897,9 +897,9 @@
         "rank": 4,
         "team": "Senegal",
         "flag": "🇸🇳",
-        "value": 56.7,
-        "display": "56.7%",
-        "matches": 3
+        "value": 55.8,
+        "display": "55.8%",
+        "matches": 4
       },
       {
         "rank": 5,
@@ -6074,6 +6074,40 @@
             "totalCrosses": 9,
             "accurateLongBalls": 11,
             "totalLongBalls": 43
+          }
+        ]
+      },
+      "760493": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Belgium",
+            "possessionPct": 40.9,
+            "accuratePasses": 35,
+            "totalPasses": 44,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 3,
+            "totalLongBalls": 5
+          },
+          {
+            "team": "Senegal",
+            "possessionPct": 59.1,
+            "accuratePasses": 53,
+            "totalPasses": 63,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 6
           }
         ]
       },
