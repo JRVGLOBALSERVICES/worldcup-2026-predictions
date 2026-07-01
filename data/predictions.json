@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T23:08:19.412Z",
+    "generatedAt": "2026-07-01T23:10:07.010Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-01T23:08:19.412Z"
+    "modelUpdatedAt": "2026-07-01T23:10:07.008Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -16122,100 +16122,99 @@
       ],
       "pitchReport": {
         "facts": [
-          "USA name their strongest XI (4-2-3-1) — same side as the 4-1 Paraguay opener; Pulisic returns to start, Balogun leads the line.",
-          "Bosnia set up 4-4-2 with Dzeko (~40) captaining alongside Demirovic; Muharemovic returns from suspension at CB.",
-          "Bosnia produced just 1.87 xG across three group games — a genuinely toothless attack; they leaked 4 to Switzerland.",
-          "USA were clinical in the group (6.21 xGOT); Balogun + Pulisic are co-favourite anytime scorers (~+120)."
+          "United States: 6 pts, +4 GD across 3 group games (8 for / 4 against).",
+          "Bosnia-Herzegovina: 4 pts, -1 GD across 3 group games (5 for / 6 against).",
+          "United States's Folarin Balogun leads them with 2 goals in 2 games.",
+          "Bosnia-Herzegovina's Ermin Mahmic leads them with 2 goals in 2 games."
         ],
         "assumptions": [
-          "Bosnia cede possession, defend deep and look to nick one on the counter (Demirovic/Bajraktarevic) or from a set piece — their proven route (the Canada opener came from a Basic corner).",
-          "USA break through via the left (Robinson overlaps + Pulisic isolation) against a compromised Bosnia right (Dedic carrying a thigh knock); Balogun runs the channels."
+          "Model projects United States to carry more of the ball and the better chances (higher attack rating); Bosnia-Herzegovina to sit compact and play on the break.",
+          "Goal expectancy 3.0–1.3 (United States–Bosnia-Herzegovina) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "CONFIRMED. USA (4-2-3-1): Matt Freese, Alex Freeman, Chris Richards, Tim Ream, Antonee Robinson, Tyler Adams, Weston McKennie, Sergino Dest, Malik Tillman, Christian Pulisic, Folarin Balogun. Bosnia (4-4-2): Nikola Vasilj, Sead Kolasinac, Tarik Muharemovic, Nikola Katic, Amar Dedic, Kerim Alajbegovic, Ivan Sunjic, Ivan Basic, Esmir Bajraktarevic, Ermedin Demirovic, Edin Dzeko. Watch: Amar Dedic (RB) passed fit from a thigh injury — fit-but-fragile, an early change would widen USA’s left-side edge; Pulisic on a stamina watch (penalty duty shifts to Tillman if he’s subbed).",
-        "motivation": "Knockout — win or go home. Neither side rotates; Bosnia will accept a cagey, low-risk game, which compresses goals and lifts the draw/extra-time risk.",
-        "xgRead": "USA dominate chance-creation; Bosnia’s 1.87 group xG says their only realistic goal is a set piece or a transition, not sustained pressure.",
-        "drawRisk": "Real — ~22% modelled. Classic possession-favourite-vs-low-block out-xG trap: if USA don’t convert early and Bosnia land one dead ball, the xG story can flip. Minority outcome, but respect it.",
-        "travel": "Temperate, controlled venue — climate neutral; the football decides it.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "United States shade the chance-creation (3.0 vs 1.3 xG) — they should make the running.",
+        "drawRisk": "Moderate — 14.7% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
         "caseFor": [
-          "USA name their strongest, in-form XI with Pulisic back and Balogun firing.",
-          "Bosnia’s attack is feeble by the numbers (1.87 xG) and their defence leaked 4 to Switzerland — wide personnel gap.",
-          "USA’s left (Robinson + Pulisic) directly targets a fit-but-fragile Dedic / aging Kolasinac."
+          "United States are the model's 70.5% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Folarin Balogun carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
         ],
         "caseAgainst": [
-          "~22% draw + Bosnia’s deep block — the out-xG trap is live; their set-piece goal route (Basic corners, aerial CBs) is proven.",
-          "Market prices USA around -270 in regulation (~73%) — richer than the model’s ~60%, so the favourite is slightly overpriced."
+          "14.7% draw + Bosnia-Herzegovina's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; United States's number may be inflated by one result."
         ],
         "verdict": "Bet",
-        "changeMind": "A late Dedic withdrawal actually helps USA; the real mind-changer would be Pulisic pulled early (kills the penalty edge) or Bosnia scoring first and USA failing to break the block."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
-            "tripped": true,
-            "why": "Market ~-270 regulation (~73%) vs model ~60% — USA slightly overpriced; the win is right but not at any price."
+            "why": "Not priced — can't confirm the favourite is good value."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name strongest XI (confirmed), no rotation."
+            "why": "Knockout — both name strongest XI, no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
             "tripped": false,
-            "why": "USA’s clinical numbers span the group, not one rout; Bosnia’s weakness is also consistent."
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
           },
           {
-            "name": "Cagey knockout / possession-favourite vs low block",
-            "tripped": true,
-            "why": "Bosnia sit deep and counter; genuine out-xG draw risk if USA don’t score early."
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs now CONFIRMED — Pulisic + Balogun both start, so scorer/penalty angles are locked (bar a Pulisic stamina sub)."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
             "tripped": false,
-            "why": "Draw (~22%) is explicitly weighted — not dismissed."
+            "why": "Draw chance (14.7%) is low enough to discount."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model call — no tilt. (Only you can answer this for your own stake.)"
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 2,
+        "trapsTripped": 0,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
-        "discipline": "Being the better team and being a good bet are two different things. USA should win, but respect the ~22% draw, don’t overpay a ~-270 favourite, and don’t bank a win-to-nil against a side whose one goal usually comes from a set piece."
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "PLAYABLE",
-        "call": "United States to win — confirmed strongest XI, Pulisic back, Balogun firing.",
+        "call": "United States to win is a clean call.",
         "read": {
           "tag": "Bet",
-          "line": "Model ~60% USA; most likely 2-1."
+          "line": "United States are the model's 71% pick."
         },
         "price": {
-          "tag": "Market ~-270 USA",
-          "line": "USA ~-270 regulation / ~-650 to advance; Balogun & Pulisic co-favourite scorers (~+120). Slightly rich vs model."
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "2 warnings",
-          "line": "Deep-block out-xG draw risk (~22%) and a slightly overpriced favourite — don’t bank a win-to-nil."
+          "tag": "Clean",
+          "line": "Nothing trips the filter — about as solid as a call gets."
         }
       },
       "resolution": {
-        "ninety": 80,
-        "extraTime": 13,
-        "penalties": 7,
+        "ninety": 85.3,
+        "extraTime": 9.5,
+        "penalties": 5.2,
         "mostLikely": "Regulation",
         "etWinner": "United States",
-        "shootout": "Near coin-flip, with the marginal nerve edge to the United States.",
-        "note": "Most likely settled in 90 (80%), but a low-block knockout keeps extra time (13%) and penalties (7%) live — the bit a straight win bet ignores."
+        "shootout": "Near coin-flip, with the marginal nerve edge to United States.",
+        "note": "Most likely settled inside 90 (85.3%). But a 14.7% level 90 keeps extra time (9.5%) and penalties (5.2%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "esp-aut-2026-07-02": {
