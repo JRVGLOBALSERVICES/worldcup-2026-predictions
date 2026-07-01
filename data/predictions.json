@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T18:10:08.956Z",
+    "generatedAt": "2026-07-01T18:20:07.945Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-01T18:10:08.955Z"
+    "modelUpdatedAt": "2026-07-01T18:20:07.944Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -18585,6 +18585,1386 @@
         "etWinner": "Colombia",
         "shootout": "Near coin-flip, with the marginal nerve edge to Colombia.",
         "note": "Most likely settled inside 90 (66.7%). But a 33.3% level 90 keeps extra time (12.3%) and penalties (21.1%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "can-mar-2026-07-04": {
+      "win": {
+        "pick": "Canada",
+        "fairOdds": "2.27",
+        "reason": "Model: Canada to win at 44% (Canada 44% / draw 23% / Morocco 33%). Expected goals 1.7–1.5 from group-stage attack/defence rates (Canada 2.2 for / 1.2 against per game, Morocco 1.8 / 1.2). Most likely score 1-1.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "4.06",
+        "alt": "1-0",
+        "altOdds": "5.24"
+      },
+      "htft": {
+        "pick": "Draw/Canada",
+        "fairOdds": "5.68"
+      },
+      "fullTime": {
+        "score": "1-1",
+        "fairOdds": "9.59"
+      },
+      "scorers": [
+        {
+          "player": "Jonathan David",
+          "team": "Canada",
+          "fairOdds": "2.21",
+          "banker": true,
+          "note": "3 goals in 4 group games; 45% modelled anytime chance on 1.7 team xG.",
+          "strength": 4
+        },
+        {
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "fairOdds": "2.50",
+          "banker": false,
+          "note": "3 goals in 4 group games; 40% modelled anytime chance on 1.5 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Cyle Larin",
+          "team": "Canada",
+          "fairOdds": "2.85",
+          "banker": false,
+          "note": "2 goals in 3 group games; 35% modelled anytime chance on 1.7 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Soufiane Rahimi",
+          "team": "Morocco",
+          "fairOdds": "3.27",
+          "banker": false,
+          "note": "2 goals in 2 group games; 31% modelled anytime chance on 1.5 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Nathan Saliba",
+          "team": "Canada",
+          "fairOdds": "4.39",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 1.7 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Nathan Saliba",
+          "team": "Canada",
+          "fairOdds": "1.72",
+          "banker": true,
+          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+        },
+        {
+          "player": "Brahim Díaz",
+          "team": "Morocco",
+          "fairOdds": "2.82",
+          "banker": false,
+          "note": "2 assists in the group stage; 35% modelled chance to set one up."
+        },
+        {
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "fairOdds": "4.44",
+          "banker": false,
+          "note": "1 assist in the group stage; 23% modelled chance to set one up."
+        },
+        {
+          "player": "Chadi Riad",
+          "team": "Morocco",
+          "fairOdds": "4.44",
+          "banker": false,
+          "note": "1 assist in the group stage; 23% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Jonathan David",
+        "backup": "Cyle Larin",
+        "note": "Tight model margin (11 pts) raises the odds a spot-kick decides it; Jonathan David is Canada's group-stage top scorer and likely taker."
+      },
+      "lineups": {
+        "home": "Maxime Crépeau, Derek Cornelius, Luc de Fougerolles, Richie Laryea, Alistair Johnston, Mathieu Choinière, Nathan Saliba, Ali Ahmed, Tajon Buchanan, Cyle Larin, Jonathan David",
+        "away": "Yassine Bounou, Chadi Riad, Redouane Halhal, Anass Salah-Eddine, Achraf Hakimi, Ismael Saibari, Sofyan Amrabat, Neil El Aynaoui, Ayoub El Kaabi, Bilal El Khannouss, Brahim Díaz",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-4-2",
+          "players": [
+            {
+              "num": 16,
+              "name": "Maxime Crépeau",
+              "pos": "G"
+            },
+            {
+              "num": 13,
+              "name": "Derek Cornelius",
+              "pos": "CD-L"
+            },
+            {
+              "num": 4,
+              "name": "Luc de Fougerolles",
+              "pos": "CD-R"
+            },
+            {
+              "num": 22,
+              "name": "Richie Laryea",
+              "pos": "LB"
+            },
+            {
+              "num": 2,
+              "name": "Alistair Johnston",
+              "pos": "RB"
+            },
+            {
+              "num": 6,
+              "name": "Mathieu Choinière",
+              "pos": "CM-L"
+            },
+            {
+              "num": 25,
+              "name": "Nathan Saliba",
+              "pos": "CM-R"
+            },
+            {
+              "num": 20,
+              "name": "Ali Ahmed",
+              "pos": "LM"
+            },
+            {
+              "num": 17,
+              "name": "Tajon Buchanan",
+              "pos": "RM"
+            },
+            {
+              "num": 9,
+              "name": "Cyle Larin",
+              "pos": "CF-L"
+            },
+            {
+              "num": 10,
+              "name": "Jonathan David",
+              "pos": "CF-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Yassine Bounou",
+              "pos": "G"
+            },
+            {
+              "num": 18,
+              "name": "Chadi Riad",
+              "pos": "CD-L"
+            },
+            {
+              "num": 25,
+              "name": "Redouane Halhal",
+              "pos": "CD-R"
+            },
+            {
+              "num": 26,
+              "name": "Anass Salah-Eddine",
+              "pos": "LB"
+            },
+            {
+              "num": 2,
+              "name": "Achraf Hakimi",
+              "pos": "RB"
+            },
+            {
+              "num": 11,
+              "name": "Ismael Saibari",
+              "pos": "AM"
+            },
+            {
+              "num": 4,
+              "name": "Sofyan Amrabat",
+              "pos": "LM"
+            },
+            {
+              "num": 24,
+              "name": "Neil El Aynaoui",
+              "pos": "RM"
+            },
+            {
+              "num": 20,
+              "name": "Ayoub El Kaabi",
+              "pos": "F"
+            },
+            {
+              "num": 23,
+              "name": "Bilal El Khannouss",
+              "pos": "AM-L"
+            },
+            {
+              "num": 10,
+              "name": "Brahim Díaz",
+              "pos": "AM-R"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Jonathan David",
+          "team": "Canada",
+          "note": "3 goals in 4 group games; 45% modelled anytime chance on 1.7 team xG."
+        },
+        {
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "note": "3 goals in 4 group games; 40% modelled anytime chance on 1.5 team xG."
+        },
+        {
+          "player": "Nathan Saliba",
+          "team": "Canada",
+          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 3,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Canada: 4 pts, +5 GD across 3 group games (8 for / 3 against).",
+          "Morocco: 7 pts, +3 GD across 3 group games (6 for / 3 against).",
+          "Canada's Jonathan David leads them with 3 goals in 4 games.",
+          "Morocco's Ismael Saibari leads them with 3 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Canada to carry more of the ball and the better chances (higher attack rating); Morocco to sit compact and play on the break.",
+          "Goal expectancy 1.7–1.5 (Canada–Morocco) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Canada shade the chance-creation (1.7 vs 1.5 xG) — they should make the running.",
+        "drawRisk": "Moderate — 23.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "caseFor": [
+          "Canada are the model's 44% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Jonathan David carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Canada can manage."
+        ],
+        "caseAgainst": [
+          "23.3% draw + Morocco's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Canada's number may be inflated by one result."
+        ],
+        "verdict": "Pass",
+        "changeMind": "A confirmed XI resting Jonathan David, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": true,
+            "why": "23.3% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 2,
+        "edge": "edge-leaning",
+        "verdict": "LEAN",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "Canada to win is a lean, not a lock. Respect the live draw.",
+        "read": {
+          "tag": "Pass",
+          "line": "Canada are the model's 44% pick, but a 23.3% draw is very much alive."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "2 warnings",
+          "line": "The draw is live and a level game kills a straight win bet."
+        }
+      },
+      "resolution": {
+        "ninety": 76.7,
+        "extraTime": 12.8,
+        "penalties": 10.5,
+        "mostLikely": "Regulation",
+        "etWinner": "Canada",
+        "shootout": "Near coin-flip, with the marginal nerve edge to Canada.",
+        "note": "Most likely settled inside 90 (76.7%). But a 23.3% level 90 keeps extra time (12.8%) and penalties (10.5%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "par-fra-2026-07-04": {
+      "win": {
+        "pick": "France",
+        "fairOdds": "1.24",
+        "reason": "Model: France to win at 80% (Paraguay 6% / draw 13% / France 80%). Expected goals 0.6–2.7 from group-stage attack/defence rates (Paraguay 1.0 for / 1.4 against per game, France 2.6 / 1.0). Most likely score 0-2.",
+        "strength": 5
+      },
+      "halfTime": {
+        "score": "0-1",
+        "fairOdds": "3.58",
+        "alt": "0-0",
+        "altOdds": "6.27"
+      },
+      "htft": {
+        "pick": "France/France",
+        "fairOdds": "1.56"
+      },
+      "fullTime": {
+        "score": "0-2",
+        "fairOdds": "7.32"
+      },
+      "scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "fairOdds": "1.52",
+          "banker": true,
+          "note": "6 goals in 4 group games; 66% modelled anytime chance on 2.7 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "fairOdds": "1.82",
+          "banker": false,
+          "note": "4 goals in 4 group games; 55% modelled anytime chance on 2.7 team xG.",
+          "strength": 4
+        },
+        {
+          "player": "Bradley Barcola",
+          "team": "France",
+          "fairOdds": "2.80",
+          "banker": false,
+          "note": "2 goals in 4 group games; 36% modelled anytime chance on 2.7 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Désiré Doué",
+          "team": "France",
+          "fairOdds": "4.30",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.7 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Matías Galarza",
+          "team": "Paraguay",
+          "fairOdds": "5.87",
+          "banker": false,
+          "note": "2 goals in 2 group games; 17% modelled anytime chance on 0.6 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Michael Olise",
+          "team": "France",
+          "fairOdds": "1.72",
+          "banker": true,
+          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+        },
+        {
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "fairOdds": "2.58",
+          "banker": false,
+          "note": "2 assists in the group stage; 39% modelled chance to set one up."
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "fairOdds": "2.58",
+          "banker": false,
+          "note": "2 assists in the group stage; 39% modelled chance to set one up."
+        },
+        {
+          "player": "Julio Enciso",
+          "team": "Paraguay",
+          "fairOdds": "4.01",
+          "banker": false,
+          "note": "2 assists in the group stage; 25% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Kylian Mbappé",
+        "backup": "Ousmane Dembélé",
+        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
+      },
+      "lineups": {
+        "home": "Orlando Gil, Gustavo Gómez, Omar Alderete, Gustavo Velázquez, Alexandro Maidana, Juan Jose Cáceres, Andrés Cubas, Matías Galarza, Diego Gómez, Julio Enciso, Gabriel Ávalos",
+        "away": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Aurélien Tchouaméni, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Bradley Barcola, Kylian Mbappé",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "5-3-2",
+          "players": [
+            {
+              "num": 12,
+              "name": "Orlando Gil",
+              "pos": "G"
+            },
+            {
+              "num": 15,
+              "name": "Gustavo Gómez",
+              "pos": "CD"
+            },
+            {
+              "num": 3,
+              "name": "Omar Alderete",
+              "pos": "CD-L"
+            },
+            {
+              "num": 2,
+              "name": "Gustavo Velázquez",
+              "pos": "CD-R"
+            },
+            {
+              "num": 26,
+              "name": "Alexandro Maidana",
+              "pos": "LB"
+            },
+            {
+              "num": 4,
+              "name": "Juan Jose Cáceres",
+              "pos": "RB"
+            },
+            {
+              "num": 14,
+              "name": "Andrés Cubas",
+              "pos": "CM"
+            },
+            {
+              "num": 23,
+              "name": "Matías Galarza",
+              "pos": "CM-L"
+            },
+            {
+              "num": 8,
+              "name": "Diego Gómez",
+              "pos": "CM-R"
+            },
+            {
+              "num": 19,
+              "name": "Julio Enciso",
+              "pos": "CF-L"
+            },
+            {
+              "num": 21,
+              "name": "Gabriel Ávalos",
+              "pos": "CF-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 16,
+              "name": "Mike Maignan",
+              "pos": "G"
+            },
+            {
+              "num": 5,
+              "name": "Jules Koundé",
+              "pos": "RB"
+            },
+            {
+              "num": 4,
+              "name": "Dayot Upamecano",
+              "pos": "CD-R"
+            },
+            {
+              "num": 17,
+              "name": "William Saliba",
+              "pos": "CD-L"
+            },
+            {
+              "num": 21,
+              "name": "Lucas Digne",
+              "pos": "LB"
+            },
+            {
+              "num": 8,
+              "name": "Aurélien Tchouaméni",
+              "pos": "DM-R"
+            },
+            {
+              "num": 14,
+              "name": "Adrien Rabiot",
+              "pos": "DM-L"
+            },
+            {
+              "num": 7,
+              "name": "Ousmane Dembélé",
+              "pos": "AM-R"
+            },
+            {
+              "num": 11,
+              "name": "Michael Olise",
+              "pos": "AM"
+            },
+            {
+              "num": 20,
+              "name": "Bradley Barcola",
+              "pos": "AM-L"
+            },
+            {
+              "num": 10,
+              "name": "Kylian Mbappé",
+              "pos": "F"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "note": "6 goals in 4 group games; 66% modelled anytime chance on 2.7 team xG."
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "note": "4 goals in 4 group games; 55% modelled anytime chance on 2.7 team xG."
+        },
+        {
+          "player": "Michael Olise",
+          "team": "France",
+          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 5,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Paraguay: 4 pts, -2 GD across 3 group games (2 for / 4 against).",
+          "France: 9 pts, +8 GD across 3 group games (10 for / 2 against).",
+          "Paraguay's Matías Galarza leads them with 2 goals in 2 games.",
+          "France's Kylian Mbappé leads them with 6 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects France to carry more of the ball and the better chances (higher attack rating); Paraguay to sit compact and play on the break.",
+          "Goal expectancy 0.6–2.7 (Paraguay–France) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "France shade the chance-creation (2.7 vs 0.6 xG) — they should make the running.",
+        "drawRisk": "Moderate — 12.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "France are the model's 80.4% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Kylian Mbappé carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "12.9% draw + Paraguay's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; France's number may be inflated by one result."
+        ],
+        "verdict": "Bet",
+        "changeMind": "A confirmed XI resting Kylian Mbappé, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (12.9%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "France to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "France are the model's 80% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+        }
+      },
+      "resolution": {
+        "ninety": 87.1,
+        "extraTime": 7.8,
+        "penalties": 5.2,
+        "mostLikely": "Regulation",
+        "etWinner": "France",
+        "shootout": "Near coin-flip, with the marginal nerve edge to France.",
+        "note": "Most likely settled inside 90 (87.1%). But a 12.9% level 90 keeps extra time (7.8%) and penalties (5.2%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "bra-nor-2026-07-05": {
+      "win": {
+        "pick": "Brazil",
+        "fairOdds": "1.36",
+        "reason": "Model: Brazil to win at 74% (Brazil 74% / draw 14% / Norway 11%). Expected goals 2.9–1.1 from group-stage attack/defence rates (Brazil 2.0 for / 0.8 against per game, Norway 2.2 / 2.0). Most likely score 2-1.",
+        "strength": 5
+      },
+      "halfTime": {
+        "score": "1-0",
+        "fairOdds": "4.48",
+        "alt": "0-0",
+        "altOdds": "6.74"
+      },
+      "htft": {
+        "pick": "Brazil/Brazil",
+        "fairOdds": "1.69"
+      },
+      "fullTime": {
+        "score": "2-1",
+        "fairOdds": "11.74"
+      },
+      "scorers": [
+        {
+          "player": "Vinícius Júnior",
+          "team": "Brazil",
+          "fairOdds": "1.52",
+          "banker": true,
+          "note": "4 goals in 4 group games; 66% modelled anytime chance on 2.9 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "fairOdds": "1.66",
+          "banker": false,
+          "note": "3 goals in 4 group games; 60% modelled anytime chance on 2.9 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "fairOdds": "2.42",
+          "banker": false,
+          "note": "5 goals in 3 group games; 41% modelled anytime chance on 1.1 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Casemiro",
+          "team": "Brazil",
+          "fairOdds": "3.07",
+          "banker": false,
+          "note": "1 goal in 1 group game; 33% modelled anytime chance on 2.9 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Gabriel Martinelli",
+          "team": "Brazil",
+          "fairOdds": "3.07",
+          "banker": false,
+          "note": "1 goal in 1 group game; 33% modelled anytime chance on 2.9 team xG.",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Bruno Guimarães",
+          "team": "Brazil",
+          "fairOdds": "1.72",
+          "banker": true,
+          "note": "4 assists in the group stage; 58% modelled chance to set one up."
+        },
+        {
+          "player": "Gabriel Magalhães",
+          "team": "Brazil",
+          "fairOdds": "3.00",
+          "banker": false,
+          "note": "1 assist in the group stage; 33% modelled chance to set one up."
+        },
+        {
+          "player": "Lucas Paquetá",
+          "team": "Brazil",
+          "fairOdds": "3.00",
+          "banker": false,
+          "note": "1 assist in the group stage; 33% modelled chance to set one up."
+        },
+        {
+          "player": "Martin Ødegaard",
+          "team": "Norway",
+          "fairOdds": "3.02",
+          "banker": false,
+          "note": "3 assists in the group stage; 33% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Vinícius Júnior",
+        "backup": "Matheus Cunha",
+        "note": "Brazil favoured to control the game, so a penalty is less pivotal; Vinícius Júnior would take one if awarded."
+      },
+      "lineups": {
+        "home": "Alisson Becker, Gabriel Magalhães, Marquinhos, Douglas Santos, Danilo, Casemiro, Lucas Paquetá, Bruno Guimarães, Matheus Cunha, Vinícius Júnior, Rayan",
+        "away": "Ørjan Nyland, Marcus Holmgren Pedersen, Kristoffer Ajer, Torbjørn Heggem, David Møller Wolfe, Sander Berge, Patrick Berg, Martin Ødegaard, Antonio Nusa, Erling Haaland, Alexander Sørloth",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 1,
+              "name": "Alisson Becker",
+              "pos": "G"
+            },
+            {
+              "num": 3,
+              "name": "Gabriel Magalhães",
+              "pos": "CD-L"
+            },
+            {
+              "num": 4,
+              "name": "Marquinhos",
+              "pos": "CD-R"
+            },
+            {
+              "num": 16,
+              "name": "Douglas Santos",
+              "pos": "LB"
+            },
+            {
+              "num": 13,
+              "name": "Danilo",
+              "pos": "RB"
+            },
+            {
+              "num": 5,
+              "name": "Casemiro",
+              "pos": "CM"
+            },
+            {
+              "num": 20,
+              "name": "Lucas Paquetá",
+              "pos": "LM"
+            },
+            {
+              "num": 8,
+              "name": "Bruno Guimarães",
+              "pos": "RM"
+            },
+            {
+              "num": 9,
+              "name": "Matheus Cunha",
+              "pos": "F"
+            },
+            {
+              "num": 7,
+              "name": "Vinícius Júnior",
+              "pos": "LF"
+            },
+            {
+              "num": 26,
+              "name": "Rayan",
+              "pos": "RF"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 12,
+              "name": "Ørjan Nyland",
+              "pos": "G"
+            },
+            {
+              "num": 2,
+              "name": "Marcus Holmgren Pedersen",
+              "pos": "RB"
+            },
+            {
+              "num": 5,
+              "name": "Kristoffer Ajer",
+              "pos": "CD-R"
+            },
+            {
+              "num": 4,
+              "name": "Torbjørn Heggem",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "David Møller Wolfe",
+              "pos": "LB"
+            },
+            {
+              "num": 6,
+              "name": "Sander Berge",
+              "pos": "CM-R"
+            },
+            {
+              "num": 18,
+              "name": "Patrick Berg",
+              "pos": "CM-L"
+            },
+            {
+              "num": 10,
+              "name": "Martin Ødegaard",
+              "pos": "AM"
+            },
+            {
+              "num": 20,
+              "name": "Antonio Nusa",
+              "pos": "RW"
+            },
+            {
+              "num": 9,
+              "name": "Erling Haaland",
+              "pos": "F"
+            },
+            {
+              "num": 11,
+              "name": "Alexander Sørloth",
+              "pos": "LW"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Vinícius Júnior",
+          "team": "Brazil",
+          "note": "4 goals in 4 group games; 66% modelled anytime chance on 2.9 team xG."
+        },
+        {
+          "player": "Matheus Cunha",
+          "team": "Brazil",
+          "note": "3 goals in 4 group games; 60% modelled anytime chance on 2.9 team xG."
+        },
+        {
+          "player": "Bruno Guimarães",
+          "team": "Brazil",
+          "note": "4 assists in the group stage; 58% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 5,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Brazil: 7 pts, +6 GD across 3 group games (7 for / 1 against).",
+          "Norway: 6 pts, +1 GD across 3 group games (8 for / 7 against).",
+          "Brazil's Vinícius Júnior leads them with 4 goals in 4 games.",
+          "Norway's Erling Haaland leads them with 5 goals in 3 games."
+        ],
+        "assumptions": [
+          "Model projects Brazil to carry more of the ball and the better chances (higher attack rating); Norway to sit compact and play on the break.",
+          "Goal expectancy 2.9–1.1 (Brazil–Norway) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Brazil shade the chance-creation (2.9 vs 1.1 xG) — they should make the running.",
+        "drawRisk": "Moderate — 14.2% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Brazil are the model's 73.8% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Vinícius Júnior carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "14.2% draw + Norway's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Brazil's number may be inflated by one result."
+        ],
+        "verdict": "Bet",
+        "changeMind": "A confirmed XI resting Vinícius Júnior, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (14.2%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Brazil to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Brazil are the model's 74% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+        }
+      },
+      "resolution": {
+        "ninety": 85.8,
+        "extraTime": 9,
+        "penalties": 5.2,
+        "mostLikely": "Regulation",
+        "etWinner": "Brazil",
+        "shootout": "Near coin-flip, with the marginal nerve edge to Brazil.",
+        "note": "Most likely settled inside 90 (85.8%). But a 14.2% level 90 keeps extra time (9%) and penalties (5.2%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "mex-eng-2026-07-06": {
+      "win": {
+        "pick": "Mexico",
+        "fairOdds": "1.89",
+        "reason": "Model: Mexico to win at 53% (Mexico 53% / draw 29% / England 18%). Expected goals 1.3–0.6 from group-stage attack/defence rates (Mexico 1.8 for / 0.6 against per game, England 1.8 / 1.0). Most likely score 1-0.",
+        "strength": 4
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.36",
+        "alt": "1-0",
+        "altOdds": "4.03"
+      },
+      "htft": {
+        "pick": "Draw/Mexico",
+        "fairOdds": "4.71"
+      },
+      "fullTime": {
+        "score": "1-0",
+        "fairOdds": "5.35"
+      },
+      "scorers": [
+        {
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "fairOdds": "2.72",
+          "banker": true,
+          "note": "3 goals in 4 group games; 37% modelled anytime chance on 1.3 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "fairOdds": "3.39",
+          "banker": false,
+          "note": "5 goals in 3 group games; 30% modelled anytime chance on 0.6 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Raúl Jiménez",
+          "team": "Mexico",
+          "fairOdds": "3.58",
+          "banker": false,
+          "note": "2 goals in 3 group games; 28% modelled anytime chance on 1.3 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Álvaro Fidalgo",
+          "team": "Mexico",
+          "fairOdds": "5.60",
+          "banker": false,
+          "note": "1 goal in 1 group game; 18% modelled anytime chance on 1.3 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Luis Romo",
+          "team": "Mexico",
+          "fairOdds": "5.60",
+          "banker": false,
+          "note": "1 goal in 1 group game; 18% modelled anytime chance on 1.3 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Roberto Alvarado",
+          "team": "Mexico",
+          "fairOdds": "2.34",
+          "banker": true,
+          "note": "3 assists in the group stage; 43% modelled chance to set one up."
+        },
+        {
+          "player": "Jorge Sánchez",
+          "team": "Mexico",
+          "fairOdds": "4.88",
+          "banker": false,
+          "note": "1 assist in the group stage; 21% modelled chance to set one up."
+        },
+        {
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "fairOdds": "4.88",
+          "banker": false,
+          "note": "1 assist in the group stage; 21% modelled chance to set one up."
+        },
+        {
+          "player": "Anthony Gordon",
+          "team": "England",
+          "fairOdds": "6.41",
+          "banker": false,
+          "note": "2 assists in the group stage; 16% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Julián Quiñones",
+        "backup": "Raúl Jiménez",
+        "note": "Mexico favoured to control the game, so a penalty is less pivotal; Julián Quiñones would take one if awarded."
+      },
+      "lineups": {
+        "home": "Raúl Rangel, Jorge Sánchez, César Montes, Johan Vásquez, Jesús Gallardo, Erik Lira, Luis Romo, Gilberto Mora, Raúl Jiménez, Julián Quiñones, Roberto Alvarado",
+        "away": "Jordan Pickford, Djed Spence, Ezri Konsa, Marc Guéhi, Nico O'Reilly, Declan Rice, Elliot Anderson, Noni Madueke, Jude Bellingham, Marcus Rashford, Harry Kane",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 1,
+              "name": "Raúl Rangel",
+              "pos": "G"
+            },
+            {
+              "num": 2,
+              "name": "Jorge Sánchez",
+              "pos": "RB"
+            },
+            {
+              "num": 3,
+              "name": "César Montes",
+              "pos": "CD-R"
+            },
+            {
+              "num": 5,
+              "name": "Johan Vásquez",
+              "pos": "CD-L"
+            },
+            {
+              "num": 23,
+              "name": "Jesús Gallardo",
+              "pos": "LB"
+            },
+            {
+              "num": 6,
+              "name": "Erik Lira",
+              "pos": "CM"
+            },
+            {
+              "num": 7,
+              "name": "Luis Romo",
+              "pos": "CM"
+            },
+            {
+              "num": 19,
+              "name": "Gilberto Mora",
+              "pos": "CM"
+            },
+            {
+              "num": 9,
+              "name": "Raúl Jiménez",
+              "pos": "F"
+            },
+            {
+              "num": 16,
+              "name": "Julián Quiñones",
+              "pos": "LF"
+            },
+            {
+              "num": 25,
+              "name": "Roberto Alvarado",
+              "pos": "RF"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Jordan Pickford",
+              "pos": "G"
+            },
+            {
+              "num": 25,
+              "name": "Djed Spence",
+              "pos": "RB"
+            },
+            {
+              "num": 2,
+              "name": "Ezri Konsa",
+              "pos": "CD-R"
+            },
+            {
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Nico O'Reilly",
+              "pos": "LB"
+            },
+            {
+              "num": 4,
+              "name": "Declan Rice",
+              "pos": "DM-R"
+            },
+            {
+              "num": 8,
+              "name": "Elliot Anderson",
+              "pos": "DM-L"
+            },
+            {
+              "num": 20,
+              "name": "Noni Madueke",
+              "pos": "RM"
+            },
+            {
+              "num": 10,
+              "name": "Jude Bellingham",
+              "pos": "AM"
+            },
+            {
+              "num": 11,
+              "name": "Marcus Rashford",
+              "pos": "LM"
+            },
+            {
+              "num": 9,
+              "name": "Harry Kane",
+              "pos": "F"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Julián Quiñones",
+          "team": "Mexico",
+          "note": "3 goals in 4 group games; 37% modelled anytime chance on 1.3 team xG."
+        },
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "note": "5 goals in 3 group games; 30% modelled anytime chance on 0.6 team xG."
+        },
+        {
+          "player": "Roberto Alvarado",
+          "team": "Mexico",
+          "note": "3 assists in the group stage; 43% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 4,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Mexico: 9 pts, +6 GD across 3 group games (6 for / 0 against).",
+          "England: 7 pts, +4 GD across 3 group games (6 for / 2 against).",
+          "Mexico's Julián Quiñones leads them with 3 goals in 4 games.",
+          "England's Harry Kane leads them with 5 goals in 3 games."
+        ],
+        "assumptions": [
+          "Model projects Mexico to carry more of the ball and the better chances (higher attack rating); England to sit compact and play on the break.",
+          "Goal expectancy 1.3–0.6 (Mexico–England) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Mexico shade the chance-creation (1.3 vs 0.6 xG) — they should make the running.",
+        "drawRisk": "High. Low combined xG (1.9) and a 28.9% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Mexico City sits at ~2,240m — thin air saps high-press legs after the hour; the deeper-block side tires less.",
+        "caseFor": [
+          "Mexico are the model's 53% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Julián Quiñones carrying the scoring load.",
+          "Conditions (altitude) suit a controlled game Mexico can manage."
+        ],
+        "caseAgainst": [
+          "28.9% draw + England's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Mexico's number may be inflated by one result."
+        ],
+        "verdict": "Lean",
+        "changeMind": "A confirmed XI resting Julián Quiñones, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": true,
+            "why": "28.9% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 2,
+        "edge": "edge-leaning",
+        "verdict": "LEAN",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "Mexico to win is a lean, not a lock. Respect the live draw.",
+        "read": {
+          "tag": "Lean",
+          "line": "Mexico are the model's 53% pick, but a 28.9% draw is very much alive."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "2 warnings",
+          "line": "The draw is live and a level game kills a straight win bet."
+        }
+      },
+      "resolution": {
+        "ninety": 71.1,
+        "extraTime": 12.4,
+        "penalties": 16.5,
+        "mostLikely": "Regulation",
+        "etWinner": "Mexico",
+        "shootout": "Near coin-flip, with the marginal nerve edge to Mexico.",
+        "note": "Most likely settled inside 90 (71.1%). But a 28.9% level 90 keeps extra time (12.4%) and penalties (16.5%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
   }
