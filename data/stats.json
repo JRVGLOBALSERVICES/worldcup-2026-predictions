@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T22:00:09.290Z",
+    "generatedAt": "2026-07-01T22:10:06.717Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 64
   },
@@ -617,8 +617,8 @@
         "rank": 10,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 59.1,
-        "display": "59.1%",
+        "value": 59,
+        "display": "59.0%",
         "matches": 3
       }
     ],
@@ -903,14 +903,6 @@
       },
       {
         "rank": 5,
-        "team": "Senegal",
-        "flag": "🇸🇳",
-        "value": 52.7,
-        "display": "52.7%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 52.4,
@@ -918,7 +910,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -926,12 +918,20 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
         "matches": 3
+      },
+      {
+        "rank": 7,
+        "team": "Senegal",
+        "flag": "🇸🇳",
+        "value": 51.9,
+        "display": "51.9%",
+        "matches": 4
       },
       {
         "rank": 9,
@@ -6119,31 +6119,31 @@
         "teamBox": [
           {
             "team": "Belgium",
-            "possessionPct": 52.8,
-            "accuratePasses": 452,
-            "totalPasses": 519,
+            "possessionPct": 52.5,
+            "accuratePasses": 472,
+            "totalPasses": 543,
             "shotsOnTarget": 4,
             "totalShots": 16,
             "effectiveTackles": 3,
             "totalTackles": 8,
             "accurateCrosses": 5,
             "totalCrosses": 20,
-            "accurateLongBalls": 17,
-            "totalLongBalls": 33
+            "accurateLongBalls": 19,
+            "totalLongBalls": 37
           },
           {
             "team": "Senegal",
-            "possessionPct": 47.2,
-            "accuratePasses": 400,
-            "totalPasses": 465,
+            "possessionPct": 47.5,
+            "accuratePasses": 419,
+            "totalPasses": 490,
             "shotsOnTarget": 4,
             "totalShots": 13,
-            "effectiveTackles": 3,
-            "totalTackles": 8,
+            "effectiveTackles": 4,
+            "totalTackles": 10,
             "accurateCrosses": 3,
-            "totalCrosses": 15,
-            "accurateLongBalls": 23,
-            "totalLongBalls": 55
+            "totalCrosses": 16,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 62
           }
         ]
       },
