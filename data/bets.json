@@ -11734,6 +11734,41 @@
    }
   },
   {
+   "id": "sp-tharma-r32-acca-1",
+   "slipNo": "TBC-1xbet",
+   "matchId": "eng-cod-2026-07-01",
+   "player": "—",
+   "market": "Acca · 3 legs",
+   "label": "1xBet 3-fold (R32) — shared Rj + Tharma. England/DR Congo: 1X (Eng win or draw) + Over 1.5 · Belgium/Senegal: 2X (Senegal win or draw) + Under 3.5 · USA/Bosnia: W1 (USA win) + Over 1.5",
+   "odds": 5.299,
+   "stake": 150,
+   "placedAt": "01/07 11:47",
+   "punter": "Rj + Tharma · RM100 / RM50",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "eng-cod-2026-07-01",
+      "kind": "doubleChanceAndTotalOver",
+      "outcome": "1X",
+      "line": 1.5
+     },
+     {
+      "matchId": "bel-sen-2026-07-01",
+      "kind": "doubleChanceAndTotalUnder",
+      "outcome": "X2",
+      "line": 3.5
+     },
+     {
+      "matchId": "usa-bih-2026-07-02",
+      "kind": "resultAndTotalOver",
+      "outcome": "1",
+      "line": 1.5
+     }
+    ]
+   }
+  },
+  {
    "id": "sp-thasyan-r32-acca-1",
    "slipNo": "TBC-1xbet",
    "matchId": "civ-nor-2026-06-30",

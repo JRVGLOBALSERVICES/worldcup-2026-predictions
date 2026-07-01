@@ -379,6 +379,13 @@ export type MultiLegCond =
   // Win And Total > (3.5)" → outcome:"2", line:3.5). Over-mirror of
   // resultAndTotalUnder.
   | { matchId: string; kind: "resultAndTotalOver"; outcome: "1" | "X" | "2"; line: number }
+  // Double Chance + Total OVER: a DC outcome ("1X"/"12"/"X2") AND the match total
+  // is over `line` ("1X And TO(1.5)" → outcome:"1X", line:1.5). DC-mirror of
+  // resultAndTotalOver — the result part covers two outcomes, not one.
+  | { matchId: string; kind: "doubleChanceAndTotalOver"; outcome: "1X" | "12" | "X2"; line: number }
+  // Double Chance + Total UNDER ("2X And TU(3.5)" → outcome:"X2", line:3.5).
+  // DC-mirror of resultAndTotalUnder.
+  | { matchId: string; kind: "doubleChanceAndTotalUnder"; outcome: "1X" | "12" | "X2"; line: number }
   // Any team to win by a margin of `line` or more ("Win With Difference Of (3)
   // Or More Goals — Yes" → line:3). Decided off the absolute FT goal difference.
   | { matchId: string; kind: "winByMargin"; line: number }
@@ -1209,6 +1216,31 @@ export function gradeSpecial(special: Special): BetStatus {
         if (total > leg.line) continue; // both parts hit → won
         if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
         return "lost"; // total under → lost
+      }
+
+      if (leg.kind === "doubleChanceAndTotalOver") {
+        // Double chance (one of the covered pair) AND total over `line`. Result
+        // part fails → lost; else over → won, whole-line exact total → combo
+        // voids, under → lost. DC-mirror of resultAndTotalOver.
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        if (!leg.outcome.includes(outcome)) return "lost";
+        const total = ft.home + ft.away;
+        if (total > leg.line) continue; // both parts hit → won
+        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        return "lost"; // total under → lost
+      }
+
+      if (leg.kind === "doubleChanceAndTotalUnder") {
+        // Double chance (one of the covered pair) AND total under `line`.
+        // DC-mirror of resultAndTotalUnder.
+        if (!ft) return "lost";
+        const outcome = ft.home > ft.away ? "1" : ft.home < ft.away ? "2" : "X";
+        if (!leg.outcome.includes(outcome)) return "lost";
+        const total = ft.home + ft.away;
+        if (total < leg.line) continue; // both parts hit → won
+        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        return "lost"; // total over → lost
       }
 
       if (leg.kind === "winByMargin") {

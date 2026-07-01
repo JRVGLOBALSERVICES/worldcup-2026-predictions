@@ -114,6 +114,24 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + Under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
     case "resultAndTotalOver":
       return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
+    case "doubleChanceAndTotalOver": {
+      const dc =
+        leg.outcome === "1X"
+          ? `${h} win or draw`
+          : leg.outcome === "X2"
+            ? `${a} win or draw`
+            : `${h} or ${a} to win`;
+      return `${m} — ${dc} + Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
+    }
+    case "doubleChanceAndTotalUnder": {
+      const dc =
+        leg.outcome === "1X"
+          ? `${h} win or draw`
+          : leg.outcome === "X2"
+            ? `${a} win or draw`
+            : `${h} or ${a} to win`;
+      return `${m} — ${dc} + Under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
+    }
     case "individualTotalUnder":
       return `${side(leg.side)} to score ${totalThreshold(leg.line, "under")}`;
     case "individualTotalOver":
@@ -1380,6 +1398,67 @@ export function inPlayMultiLeg(
           parts.push(`${legLabel} ✗`);
         }
       } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "doubleChanceAndTotalOver") {
+      // Double chance AND total over line. Total only accrues; the result swings
+      // until FT, so the combo locks only at FT. DC-mirror of resultAndTotalOver.
+      const total = cur.home + cur.away;
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const resultOk = leg.outcome.includes(outcome);
+      const hitting = total > leg.line && resultOk;
+      const totalPush = wholeLinePush(total, leg.line); // exact whole line → total voids
+      if (done) {
+        if (hitting) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (resultOk && totalPush) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // total component pushes → combo voids
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "doubleChanceAndTotalUnder") {
+      // Double chance AND total under line. The total can only die early (goals
+      // accrue); the result swings until FT. DC-mirror of resultAndTotalUnder.
+      const total = cur.home + cur.away;
+      if (total > leg.line) {
+        // Strictly over — the under-part can't come back, so the combo is dead.
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+        continue;
+      }
+      const outcome = cur.home > cur.away ? "1" : cur.home < cur.away ? "2" : "X";
+      const hitting = leg.outcome.includes(outcome);
+      const totalPush = wholeLinePush(total, leg.line); // exact whole line → total voids
+      if (done) {
+        if (hitting && total < leg.line) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (hitting && totalPush) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // total component pushes → combo voids
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (hitting && total < leg.line) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
       } else {
