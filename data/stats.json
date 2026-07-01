@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:20:20.142Z",
+    "generatedAt": "2026-07-01T21:30:06.561Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 64
   },
@@ -617,8 +617,8 @@
         "rank": 10,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 58.8,
-        "display": "58.8%",
+        "value": 59.4,
+        "display": "59.4%",
         "matches": 3
       }
     ],
@@ -897,8 +897,8 @@
         "rank": 4,
         "team": "Senegal",
         "flag": "🇸🇳",
-        "value": 54.4,
-        "display": "54.4%",
+        "value": 54.3,
+        "display": "54.3%",
         "matches": 4
       },
       {
@@ -1072,6 +1072,10 @@
       "yellowCards": [
         {
           "name": "Abdoulaye Seck",
+          "value": 1
+        },
+        {
+          "name": "Lamine Camara",
           "value": 1
         },
         {
@@ -3161,6 +3165,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Brandon Mechele",
+          "value": 1
+        },
         {
           "name": "Romelu Lukaku",
           "value": 1
@@ -6088,31 +6096,31 @@
         "teamBox": [
           {
             "team": "Belgium",
-            "possessionPct": 51.9,
-            "accuratePasses": 291,
-            "totalPasses": 333,
+            "possessionPct": 53.6,
+            "accuratePasses": 350,
+            "totalPasses": 399,
             "shotsOnTarget": 2,
-            "totalShots": 5,
-            "effectiveTackles": 3,
-            "totalTackles": 7,
+            "totalShots": 9,
+            "effectiveTackles": 2,
+            "totalTackles": 6,
             "accurateCrosses": 2,
-            "totalCrosses": 11,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 22
+            "totalCrosses": 12,
+            "accurateLongBalls": 13,
+            "totalLongBalls": 25
           },
           {
             "team": "Senegal",
-            "possessionPct": 48.1,
-            "accuratePasses": 266,
-            "totalPasses": 303,
+            "possessionPct": 46.4,
+            "accuratePasses": 295,
+            "totalPasses": 340,
             "shotsOnTarget": 4,
             "totalShots": 11,
             "effectiveTackles": 2,
-            "totalTackles": 5,
+            "totalTackles": 6,
             "accurateCrosses": 3,
-            "totalCrosses": 13,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 30
+            "totalCrosses": 14,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 36
           }
         ]
       },

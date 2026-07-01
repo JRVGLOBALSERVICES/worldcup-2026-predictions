@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:20:18.879Z",
+    "generatedAt": "2026-07-01T21:30:03.401Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8135,11 +8135,24 @@
           "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Brandon Mechele",
+          "minute": 63,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Lamine Camara",
+          "minute": 67,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-01T20:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "sot": {
@@ -8147,11 +8160,11 @@
           "away": 4
         },
         "shots": {
-          "home": 5,
+          "home": 9,
           "away": 11
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -8159,13 +8172,13 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             1,
