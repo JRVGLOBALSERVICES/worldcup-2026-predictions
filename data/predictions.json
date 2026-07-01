@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T08:20:10.030Z",
+    "generatedAt": "2026-07-01T09:03:32.549Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-01T08:20:10.029Z"
+    "modelUpdatedAt": "2026-07-01T09:02:25.062Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -15061,250 +15061,128 @@
     "eng-cod-2026-07-01": {
       "win": {
         "pick": "England",
-        "fairOdds": "1.69",
-        "reason": "Model: England to win at 59% (England 59% / draw 24% / Congo DR 17%). Expected goals 1.7–0.8 from group-stage attack/defence rates (England 1.8 for / 1.0 against per game, Congo DR 1.4 / 1.2). Most likely score 1-0.",
-        "strength": 4
+        "fairOdds": "1.62",
+        "reason": "England carry clearly superior quality across the pitch, but their 0-0 with Ghana shows they labour against a disciplined deep block — exactly what DR Congo's 5-3-2/3-5-2 will present, keeping this well short of a formality."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.98",
-        "alt": "1-0",
-        "altOdds": "4.67"
+        "fairOdds": "2.55",
+        "alt": "1-0 England",
+        "altOdds": "2.90"
       },
       "htft": {
         "pick": "Draw/England",
-        "fairOdds": "4.23"
+        "fairOdds": "5.50"
       },
       "fullTime": {
         "score": "1-0",
-        "fairOdds": "7.04"
+        "fairOdds": "6.50"
+      },
+      "resolution": {
+        "ninety": 68,
+        "extraTime": 20,
+        "penalties": 12,
+        "mostLikely": "Regulation",
+        "etWinner": "England",
+        "shootout": "England edge it — Pickford is an elite shootout keeper and Kane/Rice/Bellingham are reliable, but Congo defend deep and could drag it there",
+        "note": "Deep-block underdog raises real ET/pens risk despite England favouritism"
       },
       "scorers": [
         {
           "player": "Harry Kane",
-          "team": "England",
-          "fairOdds": "1.91",
-          "banker": true,
-          "note": "3 goals in 3 group games; 52% modelled anytime chance on 1.7 team xG.",
-          "strength": 4
+          "fairOdds": "2.30",
+          "banker": false,
+          "note": "Primary threat and penalty taker, but aging marquee striker vs a packed box — non-banker"
         },
         {
           "player": "Jude Bellingham",
-          "team": "England",
-          "fairOdds": "2.43",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.7 team xG.",
-          "strength": 3
+          "note": "Arrives late in the box; England's best mover to unpick a low block"
+        },
+        {
+          "player": "Bukayo Saka",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Width and cut-ins from the right; managing an Achilles issue, fitness a small flag"
         },
         {
           "player": "Yoane Wissa",
-          "team": "Congo DR",
-          "fairOdds": "2.72",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "3 goals in 3 group games; 37% modelled anytime chance on 0.8 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Marcus Rashford",
-          "team": "England",
-          "fairOdds": "3.67",
-          "banker": false,
-          "note": "1 goal in 1 group game; 27% modelled anytime chance on 1.7 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Fiston Mayele",
-          "team": "Congo DR",
-          "fairOdds": "5.61",
-          "banker": false,
-          "note": "1 goal in 1 group game; 18% modelled anytime chance on 0.8 team xG.",
-          "strength": 1
+          "note": "Congo's in-form danger — 3 goals this WC incl. a brace vs Uzbekistan; lives on the counter"
         }
       ],
       "assists": [
         {
           "player": "Bukayo Saka",
-          "team": "England",
-          "fairOdds": "2.27",
-          "banker": true,
-          "note": "2 assists in the group stage; 44% modelled chance to set one up."
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Chief creator from the right flank"
         },
         {
           "player": "Declan Rice",
-          "team": "England",
-          "fairOdds": "3.48",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "1 assist in the group stage; 29% modelled chance to set one up."
-        },
-        {
-          "player": "Elliot Anderson",
-          "team": "England",
-          "fairOdds": "3.48",
-          "banker": false,
-          "note": "1 assist in the group stage; 29% modelled chance to set one up."
-        },
-        {
-          "player": "Arthur Masuaku",
-          "team": "Congo DR",
-          "fairOdds": "4.16",
-          "banker": false,
-          "note": "1 assist in the group stage; 24% modelled chance to set one up."
-        }
-      ],
-      "penalty": {
-        "likelihood": "low",
-        "taker": "Harry Kane",
-        "backup": "Jude Bellingham",
-        "note": "England favoured to control the game, so a penalty is less pivotal; Harry Kane would take one if awarded."
-      },
-      "lineups": {
-        "home": "Jordan Pickford, Marc Guéhi, Ezri Konsa, Elliot Anderson, Nico O'Reilly, Jarell Quansah, Jude Bellingham, Morgan Rogers, Marcus Rashford, Bukayo Saka, Harry Kane",
-        "away": "Lionel Mpasi, Chancel Mbemba, Arthur Masuaku, Aaron Wan-Bissaka, Axel Tuanzebe, Noah Sadiki, Brian Cipenga, Nathanaël Mbuku, Samuel Moutoussamy, Cédric Bakambu, Yoane Wissa",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-1-4-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Jordan Pickford",
-              "pos": "G"
-            },
-            {
-              "num": 6,
-              "name": "Marc Guéhi",
-              "pos": "CD-L"
-            },
-            {
-              "num": 2,
-              "name": "Ezri Konsa",
-              "pos": "CD-R"
-            },
-            {
-              "num": 8,
-              "name": "Elliot Anderson",
-              "pos": "DM"
-            },
-            {
-              "num": 3,
-              "name": "Nico O'Reilly",
-              "pos": "LB"
-            },
-            {
-              "num": 26,
-              "name": "Jarell Quansah",
-              "pos": "RB"
-            },
-            {
-              "num": 10,
-              "name": "Jude Bellingham",
-              "pos": "CM-L"
-            },
-            {
-              "num": 17,
-              "name": "Morgan Rogers",
-              "pos": "CM-R"
-            },
-            {
-              "num": 11,
-              "name": "Marcus Rashford",
-              "pos": "LM"
-            },
-            {
-              "num": 7,
-              "name": "Bukayo Saka",
-              "pos": "RM"
-            },
-            {
-              "num": 9,
-              "name": "Harry Kane",
-              "pos": "F"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-4-2",
-          "players": [
-            {
-              "num": 1,
-              "name": "Lionel Mpasi",
-              "pos": "G"
-            },
-            {
-              "num": 22,
-              "name": "Chancel Mbemba",
-              "pos": "D"
-            },
-            {
-              "num": 26,
-              "name": "Arthur Masuaku",
-              "pos": "D"
-            },
-            {
-              "num": 2,
-              "name": "Aaron Wan-Bissaka",
-              "pos": "D"
-            },
-            {
-              "num": 4,
-              "name": "Axel Tuanzebe",
-              "pos": "D"
-            },
-            {
-              "num": 14,
-              "name": "Noah Sadiki",
-              "pos": "M"
-            },
-            {
-              "num": 9,
-              "name": "Brian Cipenga",
-              "pos": "M"
-            },
-            {
-              "num": 7,
-              "name": "Nathanaël Mbuku",
-              "pos": "M"
-            },
-            {
-              "num": 8,
-              "name": "Samuel Moutoussamy",
-              "pos": "M"
-            },
-            {
-              "num": 17,
-              "name": "Cédric Bakambu",
-              "pos": "F"
-            },
-            {
-              "num": 20,
-              "name": "Yoane Wissa",
-              "pos": "F"
-            }
-          ]
-        }
-      },
-      "playerNotes": [
-        {
-          "player": "Harry Kane",
-          "team": "England",
-          "note": "3 goals in 3 group games; 52% modelled anytime chance on 1.7 team xG."
+          "note": "Set-piece deliverer (17 taken) — a corner/free-kick is a likely goal route vs a deep block"
         },
         {
           "player": "Jude Bellingham",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Link play in the final third"
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Harry Kane",
+        "backup": "Marcus Rashford",
+        "note": "Congo defend deep and concede fouls/box contact; a spot-kick is a realistic England path to the opener"
+      },
+      "lineups": {
+        "home": "4-2-3-1: Pickford; Spence, Konsa, Guehi, O'Reilly; Rice, Anderson; Saka, Bellingham, Rashford; Kane",
+        "away": "3-5-2/5-3-2: Mpasi; Kapuadi, Mbemba, Tuanzebe; Wan-Bissaka, Mukau, Moutoussamy, Sadiki, Masuaku; Wissa, Bakambu",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Djed Spence",
           "team": "England",
-          "note": "2 goals in 3 group games; 41% modelled anytime chance on 1.7 team xG."
+          "note": "Starts at RB with Reece James out and after returning from hamstring/jaw issues"
         },
         {
           "player": "Bukayo Saka",
           "team": "England",
-          "note": "2 assists in the group stage; 44% modelled chance to set one up."
+          "note": "Nursing an Achilles problem — managed but expected to start"
+        },
+        {
+          "player": "Declan Rice",
+          "team": "England",
+          "note": "Back in XI; key set-piece taker (corners/FKs)"
+        },
+        {
+          "player": "Yoane Wissa",
+          "team": "Congo DR",
+          "note": "Leopards' talisman, 3 WC goals, deadly on the break"
+        },
+        {
+          "player": "Cedric Bakambu",
+          "team": "Congo DR",
+          "note": "Second striker, penalty/FK alternative, aerial and counter threat"
+        },
+        {
+          "player": "Arthur Masuaku",
+          "team": "Congo DR",
+          "note": "Left wing-back and primary set-piece deliverer; assisted the Portugal goal"
         }
       ],
       "confidence": "medium",
-      "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.aljazeera.com/sports/2026/6/30/england-vs-dr-congo-world-cup-round-of-32-kane-match-prediction-lineups",
+        "https://www.rotowire.com/soccer/article/england-vs-dr-congo-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120375",
+        "https://www.espn.com/soccer/story/_/id/49225222/england-vs-congo-dr-line-ups-world-cup-2026-predicted-team",
+        "https://www.skysports.com/football/news/12309/13556707/world-cup-2026-dr-congo-3-1-uzbekistan-yoane-wissa-stars",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K"
       ],
       "pitchReport": {
         "facts": [
@@ -15451,264 +15329,133 @@
           "tag": "3 warnings",
           "line": "You're paying over the odds for the favourite."
         }
-      },
-      "resolution": {
-        "ninety": 76.2,
-        "extraTime": 11.8,
-        "penalties": 12,
-        "mostLikely": "Regulation",
-        "etWinner": "England",
-        "shootout": "Near coin-flip, with the marginal nerve edge to England.",
-        "note": "Most likely settled inside 90 (76.2%). But a 23.8% level 90 keeps extra time (11.8%) and penalties (12%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "bel-sen-2026-07-01": {
       "win": {
         "pick": "Belgium",
-        "fairOdds": "1.56",
-        "reason": "Model: Belgium to win at 64% (Belgium 64% / draw 18% / Senegal 18%). Expected goals 2.5–1.3 from group-stage attack/defence rates (Belgium 1.8 for / 1.0 against per game, Senegal 2.2 / 1.8). Most likely score 2-1.",
-        "strength": 5
+        "fairOdds": "2.10",
+        "reason": "Belgium are marginal favourites on quality and De Bruyne's creativity, but two group-stage draws (Egypt, Iran) and an aging defense against Senegal's pace make this near a coin-flip."
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "4.76",
-        "alt": "0-0",
-        "altOdds": "6.13"
+        "score": "0-0",
+        "fairOdds": "2.30",
+        "alt": "1-0",
+        "altOdds": "4.20"
       },
       "htft": {
-        "pick": "Belgium/Belgium",
-        "fairOdds": "1.95"
+        "pick": "Draw/Belgium",
+        "fairOdds": "5.00"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "10.92"
+        "score": "1-1",
+        "fairOdds": "7.00"
+      },
+      "resolution": {
+        "ninety": 52,
+        "extraTime": 30,
+        "penalties": 18,
+        "mostLikely": "Regulation",
+        "etWinner": "Belgium",
+        "shootout": "Senegal's keeper crisis (Mendy out, Diaw untested) tilts a shootout slightly to Belgium, but De Bruyne aside their takers are streaky",
+        "note": "Tight, low-block game with real extra-time risk given Under 2.5 lean."
       },
       "scorers": [
         {
+          "player": "Jeremy Doku",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Belgium's sharpest carrier vs an aging-legs matchup out wide"
+        },
+        {
+          "player": "Ismaila Sarr",
+          "fairOdds": "4.75",
+          "banker": false,
+          "note": "Senegal's most dangerous attacker, 3 goals already, thrives on the counter"
+        },
+        {
+          "player": "Charles De Ketelaere",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Likely central striker; involved but not a lock"
+        },
+        {
           "player": "Leandro Trossard",
-          "team": "Belgium",
-          "fairOdds": "1.69",
-          "banker": true,
-          "note": "2 goals in 3 group games; 59% modelled anytime chance on 2.5 team xG.",
-          "strength": 5
-        },
-        {
-          "player": "Alexis Saelemaekers",
-          "team": "Belgium",
-          "fairOdds": "2.41",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "fairOdds": "2.41",
-          "banker": false,
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "fairOdds": "2.41",
-          "banker": false,
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Ismaïla Sarr",
-          "team": "Senegal",
-          "fairOdds": "2.80",
-          "banker": false,
-          "note": "3 goals in 3 group games; 36% modelled anytime chance on 1.3 team xG.",
-          "strength": 3
+          "note": "Two vs NZ; live from the left but rotation risk"
         }
       ],
       "assists": [
         {
-          "player": "Hans Vanaken",
-          "team": "Belgium",
-          "fairOdds": "1.98",
-          "banker": true,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "player": "Kevin De Bruyne",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Primary creator and set-piece supplier; assist most likely route to output"
         },
         {
-          "player": "Nicolas Raskin",
-          "team": "Belgium",
-          "fairOdds": "1.98",
+          "player": "Sadio Mane",
+          "fairOdds": "7.00",
           "banker": false,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "note": "Senegal's set-piece and link man on transitions"
+        },
+        {
+          "player": "Jeremy Doku",
+          "fairOdds": "6.50",
+          "banker": false,
+          "note": "Cut-backs from the byline his signature"
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Kevin De Bruyne",
+        "backup": "Youri Tielemans",
+        "note": "De Bruyne primary; Mane takes any Senegal spot-kick with Jackson backup."
+      },
+      "lineups": {
+        "home": "Courtois; Castagne, Mechele, Theate, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere (4-2-3-1)",
+        "away": "Diaw; Diatta, Seck, Niakhate, Jakobs; Diarra, Gueye, Camara; Mbaye, Sarr, Mane (4-3-3)",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Zeno Debast",
+          "team": "Belgium",
+          "note": "Leg injury, returned to training Sunday but a doubt for the XI"
+        },
+        {
+          "player": "Edouard Mendy",
+          "team": "Senegal",
+          "note": "Knee injury vs Norway, left camp for club assessment; likely out, Diaw to start"
+        },
+        {
+          "player": "Kalidou Koulibaly",
+          "team": "Senegal",
+          "note": "May stay benched after shaky Norway showing; Seck impressed vs Iraq"
+        },
+        {
+          "player": "Ismaila Sarr",
+          "team": "Senegal",
+          "note": "Red-hot, 3 tournament goals, key counter threat"
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "team": "Belgium",
+          "note": "Free-kicks, primary penalty, chief creator"
         },
         {
           "player": "Romelu Lukaku",
           "team": "Belgium",
-          "fairOdds": "1.98",
-          "banker": false,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
-        },
-        {
-          "player": "Iliman Ndiaye",
-          "team": "Senegal",
-          "fairOdds": "3.17",
-          "banker": false,
-          "note": "2 assists in the group stage; 32% modelled chance to set one up."
-        }
-      ],
-      "penalty": {
-        "likelihood": "low",
-        "taker": "Leandro Trossard",
-        "backup": "Alexis Saelemaekers",
-        "note": "Belgium favoured to control the game, so a penalty is less pivotal; Leandro Trossard would take one if awarded."
-      },
-      "lineups": {
-        "home": "Thibaut Courtois, Arthur Theate, Brandon Mechele, Maxim De Cuyper, Timothy Castagne, Kevin De Bruyne, Hans Vanaken, Youri Tielemans, Charles De Ketelaere, Leandro Trossard, Jérémy Doku",
-        "away": "Mory Diaw, Moussa Niakhaté, Abdoulaye Seck, Ismail Jakobs, Krépin Diatta, Idrissa Gueye, Lamine Camara, Habib Diarra, Ismaïla Sarr, Sadio Mané, Ibrahim Mbaye",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Thibaut Courtois",
-              "pos": "G"
-            },
-            {
-              "num": 3,
-              "name": "Arthur Theate",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Brandon Mechele",
-              "pos": "CD-R"
-            },
-            {
-              "num": 5,
-              "name": "Maxim De Cuyper",
-              "pos": "LB"
-            },
-            {
-              "num": 21,
-              "name": "Timothy Castagne",
-              "pos": "RB"
-            },
-            {
-              "num": 7,
-              "name": "Kevin De Bruyne",
-              "pos": "AM"
-            },
-            {
-              "num": 20,
-              "name": "Hans Vanaken",
-              "pos": "LM"
-            },
-            {
-              "num": 8,
-              "name": "Youri Tielemans",
-              "pos": "RM"
-            },
-            {
-              "num": 17,
-              "name": "Charles De Ketelaere",
-              "pos": "F"
-            },
-            {
-              "num": 10,
-              "name": "Leandro Trossard",
-              "pos": "AM-L"
-            },
-            {
-              "num": 11,
-              "name": "Jérémy Doku",
-              "pos": "AM-R"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 23,
-              "name": "Mory Diaw",
-              "pos": "G"
-            },
-            {
-              "num": 19,
-              "name": "Moussa Niakhaté",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Abdoulaye Seck",
-              "pos": "CD-R"
-            },
-            {
-              "num": 14,
-              "name": "Ismail Jakobs",
-              "pos": "LB"
-            },
-            {
-              "num": 15,
-              "name": "Krépin Diatta",
-              "pos": "RB"
-            },
-            {
-              "num": 5,
-              "name": "Idrissa Gueye",
-              "pos": "CM"
-            },
-            {
-              "num": 8,
-              "name": "Lamine Camara",
-              "pos": "LM"
-            },
-            {
-              "num": 21,
-              "name": "Habib Diarra",
-              "pos": "RM"
-            },
-            {
-              "num": 18,
-              "name": "Ismaïla Sarr",
-              "pos": "F"
-            },
-            {
-              "num": 10,
-              "name": "Sadio Mané",
-              "pos": "LF"
-            },
-            {
-              "num": 20,
-              "name": "Ibrahim Mbaye",
-              "pos": "RF"
-            }
-          ]
-        }
-      },
-      "playerNotes": [
-        {
-          "player": "Leandro Trossard",
-          "team": "Belgium",
-          "note": "2 goals in 3 group games; 59% modelled anytime chance on 2.5 team xG."
-        },
-        {
-          "player": "Alexis Saelemaekers",
-          "team": "Belgium",
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG."
-        },
-        {
-          "player": "Hans Vanaken",
-          "team": "Belgium",
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "note": "Veteran striker, sub option vs NZ; non-banker if he starts"
         }
       ],
       "confidence": "medium",
-      "strength": 5,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/predicted-lineups/is-debast-back-for-the-knockouts-predicted-belgium-xi-vs-senegal_600367.html",
+        "https://www.sportsmole.co.uk/football/senegal/world-cup-2026/predicted-lineups/can-senegal-build-on-iraq-romp-predicted-senegal-xi-vs-belgium_600368.html",
+        "https://sports.yahoo.com/articles/world-cup-2026-r32-belgium-130500423.html",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I"
       ],
       "pitchReport": {
         "facts": [
@@ -15855,257 +15602,133 @@
           "tag": "1 warning",
           "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
         }
-      },
-      "resolution": {
-        "ninety": 82.1,
-        "extraTime": 10.8,
-        "penalties": 7,
-        "mostLikely": "Regulation",
-        "etWinner": "Belgium",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Belgium.",
-        "note": "Most likely settled inside 90 (82.1%). But a 17.9% level 90 keeps extra time (10.8%) and penalties (7%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "usa-bih-2026-07-02": {
       "win": {
         "pick": "United States",
-        "fairOdds": "1.42",
-        "reason": "Model: United States to win at 71% (United States 71% / draw 15% / Bosnia-Herzegovina 14%). Expected goals 3.0–1.3 from group-stage attack/defence rates (United States 2.2 for / 1.4 against per game, Bosnia-Herzegovina 1.6 / 1.8). Most likely score 3-1.",
-        "strength": 5
+        "fairOdds": "1.62",
+        "reason": "Opta sims USA through in 67.5% of runs at home at Levi's with Pulisic back, but Bosnia's tall deep-block and counter (Dzeko/Demirovic) make a low-scoring frustration and real draw-in-90 risk (~18%)."
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "5.05",
-        "alt": "0-0",
-        "altOdds": "6.96"
+        "score": "0-0",
+        "fairOdds": "2.6",
+        "alt": "1-0",
+        "altOdds": "3.1"
       },
       "htft": {
-        "pick": "United States/United States",
-        "fairOdds": "1.77"
+        "pick": "Draw/USA",
+        "fairOdds": "4.2"
       },
       "fullTime": {
-        "score": "3-1",
-        "fairOdds": "12.62"
+        "score": "2-1",
+        "fairOdds": "8.0"
+      },
+      "resolution": {
+        "ninety": 66,
+        "extraTime": 22,
+        "penalties": 12,
+        "mostLikely": "Regulation",
+        "etWinner": "United States",
+        "shootout": "USA edge on depth and home crowd but Bosnia keeper Vasilj can drag it out; coin-flip lean USA",
+        "note": "Bosnia set up to defend deep and counter — genuine chance they push USA past 90."
       },
       "scorers": [
         {
           "player": "Folarin Balogun",
-          "team": "United States",
-          "fairOdds": "1.52",
-          "banker": true,
-          "note": "2 goals in 2 group games; 66% modelled anytime chance on 3.0 team xG.",
-          "strength": 5
+          "fairOdds": "2.8",
+          "banker": false,
+          "note": "Two vs Paraguay; USA's focal point but faces tournament's tallest defence"
         },
         {
-          "player": "Ermin Mahmic",
-          "team": "Bosnia-Herzegovina",
-          "fairOdds": "2.08",
+          "player": "Christian Pulisic",
+          "fairOdds": "3.4",
           "banker": false,
-          "note": "2 goals in 2 group games; 48% modelled anytime chance on 1.3 team xG.",
-          "strength": 4
+          "note": "Back from calf, main creator and can score cutting inside"
         },
         {
-          "player": "Alex Freeman",
-          "team": "United States",
-          "fairOdds": "2.10",
+          "player": "Edin Dzeko",
+          "fairOdds": "4.5",
           "banker": false,
-          "note": "1 goal in 1 group game; 48% modelled anytime chance on 3.0 team xG.",
-          "strength": 4
+          "note": "Veteran marquee striker at 40 — non-banker; dangerous on set pieces/counter"
         },
         {
-          "player": "Auston Trusty",
-          "team": "United States",
-          "fairOdds": "2.10",
+          "player": "Ermedin Demirovic",
+          "fairOdds": "5.0",
           "banker": false,
-          "note": "1 goal in 1 group game; 48% modelled anytime chance on 3.0 team xG.",
-          "strength": 4
-        },
-        {
-          "player": "Sebastian Berhalter",
-          "team": "United States",
-          "fairOdds": "2.10",
-          "banker": false,
-          "note": "1 goal in 1 group game; 48% modelled anytime chance on 3.0 team xG.",
-          "strength": 4
+          "note": "Bosnia's qualifying top scorer, does the running to free Dzeko"
         }
       ],
       "assists": [
         {
-          "player": "Sebastian Berhalter",
-          "team": "United States",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+          "player": "Christian Pulisic",
+          "fairOdds": "4.0",
+          "banker": false,
+          "note": "Primary chance creator for USA"
         },
         {
-          "player": "Dennis Hadzikadunic",
-          "team": "Bosnia-Herzegovina",
-          "fairOdds": "2.72",
+          "player": "Sergino Dest",
+          "fairOdds": "5.5",
           "banker": false,
-          "note": "1 assist in the group stage; 37% modelled chance to set one up."
+          "note": "Overlap and deliveries from the right"
         },
         {
-          "player": "Ivan Basic",
-          "team": "Bosnia-Herzegovina",
-          "fairOdds": "2.72",
+          "player": "Esmir Bajraktarevic",
+          "fairOdds": "6.5",
           "banker": false,
-          "note": "1 assist in the group stage; 37% modelled chance to set one up."
+          "note": "Pacy Bosnia winger feeding Dzeko on breaks"
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Folarin Balogun",
-        "backup": "Alex Freeman",
-        "note": "United States favoured to control the game, so a penalty is less pivotal; Folarin Balogun would take one if awarded."
+        "likelihood": "Medium",
+        "taker": "Christian Pulisic",
+        "backup": "Folarin Balogun",
+        "note": "Pulisic is USA's designated taker when on pitch; Bosnia would go Dzeko"
       },
       "lineups": {
-        "home": "Matt Turner, Mark McKenzie, Miles Robinson, Auston Trusty, Joe Scally, Sebastian Berhalter, Giovanni Reyna, Weston McKennie, Ricardo Pepi, Timothy Weah, Brenden Aaronson",
-        "away": "Nikola Vasilj, Stjepan Radeljic, Nikola Katic, Sead Kolasinac, Arjan Malic, Ivan Sunjic, Ivan Basic, Kerim Alajbegovic, Esmir Bajraktarevic, Edin Dzeko, Ermedin Demirovic",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 1,
-              "name": "Matt Turner",
-              "pos": "G"
-            },
-            {
-              "num": 22,
-              "name": "Mark McKenzie",
-              "pos": "CD-L"
-            },
-            {
-              "num": 12,
-              "name": "Miles Robinson",
-              "pos": "CD-R"
-            },
-            {
-              "num": 6,
-              "name": "Auston Trusty",
-              "pos": "LB"
-            },
-            {
-              "num": 23,
-              "name": "Joe Scally",
-              "pos": "RB"
-            },
-            {
-              "num": 14,
-              "name": "Sebastian Berhalter",
-              "pos": "CM"
-            },
-            {
-              "num": 7,
-              "name": "Giovanni Reyna",
-              "pos": "LM"
-            },
-            {
-              "num": 8,
-              "name": "Weston McKennie",
-              "pos": "RM"
-            },
-            {
-              "num": 9,
-              "name": "Ricardo Pepi",
-              "pos": "F"
-            },
-            {
-              "num": 21,
-              "name": "Timothy Weah",
-              "pos": "LF"
-            },
-            {
-              "num": 11,
-              "name": "Brenden Aaronson",
-              "pos": "RF"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-4-2",
-          "players": [
-            {
-              "num": 1,
-              "name": "Nikola Vasilj",
-              "pos": "G"
-            },
-            {
-              "num": 21,
-              "name": "Stjepan Radeljic",
-              "pos": "CD-L"
-            },
-            {
-              "num": 18,
-              "name": "Nikola Katic",
-              "pos": "CD-R"
-            },
-            {
-              "num": 5,
-              "name": "Sead Kolasinac",
-              "pos": "LB"
-            },
-            {
-              "num": 24,
-              "name": "Arjan Malic",
-              "pos": "RB"
-            },
-            {
-              "num": 14,
-              "name": "Ivan Sunjic",
-              "pos": "CM-L"
-            },
-            {
-              "num": 13,
-              "name": "Ivan Basic",
-              "pos": "CM-R"
-            },
-            {
-              "num": 19,
-              "name": "Kerim Alajbegovic",
-              "pos": "LM"
-            },
-            {
-              "num": 20,
-              "name": "Esmir Bajraktarevic",
-              "pos": "RM"
-            },
-            {
-              "num": 11,
-              "name": "Edin Dzeko",
-              "pos": "CF-L"
-            },
-            {
-              "num": 10,
-              "name": "Ermedin Demirovic",
-              "pos": "CF-R"
-            }
-          ]
-        }
+        "home": "USA 4-2-3-1 (probable): Freese; Freeman, Richards, Ream, Robinson; Adams, Tillman; Dest, McKennie, Pulisic; Balogun",
+        "away": "Bosnia 4-4-2 (probable): Vasilj; Dedic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Tahirovic, Sunjic, Memic; Demirovic, Dzeko",
+        "status": "probable"
       },
       "playerNotes": [
         {
+          "player": "Christian Pulisic",
+          "team": "United States",
+          "note": "Recovered from calf knock, expected near 100%, key man and likely pen taker"
+        },
+        {
           "player": "Folarin Balogun",
           "team": "United States",
-          "note": "2 goals in 2 group games; 66% modelled anytime chance on 3.0 team xG."
+          "note": "Chasing Golden Boot; rested MD3, leads line"
         },
         {
-          "player": "Ermin Mahmic",
-          "team": "Bosnia-Herzegovina",
-          "note": "2 goals in 2 group games; 48% modelled anytime chance on 1.3 team xG."
-        },
-        {
-          "player": "Sebastian Berhalter",
+          "player": "Chris Richards",
           "team": "United States",
-          "note": "1 assist in the group stage; 58% modelled chance to set one up."
+          "note": "Back from suspension; recovered from May ankle ligament tears"
+        },
+        {
+          "player": "Edin Dzeko",
+          "team": "Bosnia-Herzegovina",
+          "note": "40yo captain, record scorer; guaranteed starter but non-banker"
+        },
+        {
+          "player": "Ermedin Demirovic",
+          "team": "Bosnia-Herzegovina",
+          "note": "Qualifying top scorer, partners Dzeko up front"
+        },
+        {
+          "player": "Nikola Vasilj",
+          "team": "Bosnia-Herzegovina",
+          "note": "Keeper who could keep it tight; Bosnia never kept a WC clean sheet though"
         }
       ],
       "confidence": "medium",
-      "strength": 5,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://theanalyst.com/articles/usa-vs-bosnia-herzegovina-prediction-world-cup-2026-match-preview",
+        "https://www.si.com/soccer/usmnt-predicted-lineup-vs-bosnia-herzegovina-world-cup-7-1-26",
+        "https://www.goal.com/en-om/news/usa-bosnia-herzegovina-world-cup-preview/blt1c2973efdd46fc73",
+        "https://sports.yahoo.com/articles/bosnia-herzegovina-world-cup-2026-181443978.html",
+        "https://www.espn.com/soccer/story/_/id/49118064/christian-pulisic-calf-usmnt-world-cup-clash-australia"
       ],
       "pitchReport": {
         "facts": [
@@ -16193,15 +15816,6 @@
           "tag": "1 warning",
           "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
         }
-      },
-      "resolution": {
-        "ninety": 85.3,
-        "extraTime": 9.5,
-        "penalties": 5.2,
-        "mostLikely": "Regulation",
-        "etWinner": "United States",
-        "shootout": "Near coin-flip, with the marginal nerve edge to United States.",
-        "note": "Most likely settled inside 90 (85.3%). But a 14.7% level 90 keeps extra time (9.5%) and penalties (5.2%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "esp-aut-2026-07-02": {
