@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T17:00:03.779Z",
+    "generatedAt": "2026-07-01T17:10:03.573Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 59,
     "live": 1
@@ -7968,7 +7968,10 @@
     },
     "eng-cod-2026-07-01": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
