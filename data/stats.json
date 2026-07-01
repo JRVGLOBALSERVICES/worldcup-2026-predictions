@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T02:30:05.753Z",
+    "generatedAt": "2026-07-01T02:40:06.572Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -1977,6 +1977,11 @@
           "name": "Mateo Chávez",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Raúl Jiménez",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
@@ -1987,6 +1992,11 @@
         },
         {
           "name": "Jorge Sánchez",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Julián Quiñones",
           "value": 1,
           "matches": 1
         },
@@ -5950,36 +5960,40 @@
           {
             "name": "Roberto Alvarado",
             "team": "Mexico"
+          },
+          {
+            "name": "Julián Quiñones",
+            "team": "Mexico"
           }
         ],
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 59.3,
-            "accuratePasses": 111,
-            "totalPasses": 125,
-            "shotsOnTarget": 1,
-            "totalShots": 7,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
+            "possessionPct": 60.1,
+            "accuratePasses": 150,
+            "totalPasses": 168,
+            "shotsOnTarget": 2,
+            "totalShots": 8,
+            "effectiveTackles": 2,
+            "totalTackles": 3,
             "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 13
+            "totalCrosses": 4,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 18
           },
           {
             "team": "Ecuador",
-            "possessionPct": 40.7,
-            "accuratePasses": 65,
-            "totalPasses": 85,
+            "possessionPct": 39.9,
+            "accuratePasses": 86,
+            "totalPasses": 109,
             "shotsOnTarget": 0,
             "totalShots": 1,
             "effectiveTackles": 3,
-            "totalTackles": 4,
+            "totalTackles": 5,
             "accurateCrosses": 0,
-            "totalCrosses": 3,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 18
+            "totalCrosses": 5,
+            "accurateLongBalls": 7,
+            "totalLongBalls": 21
           }
         ]
       },

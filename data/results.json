@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T02:30:02.279Z",
+    "generatedAt": "2026-07-01T02:40:03.924Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 58,
     "live": 1
@@ -7833,7 +7833,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "advanced": null,
@@ -7845,6 +7845,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Raúl Jiménez",
+          "minute": 30,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [],
@@ -7852,14 +7860,14 @@
       "stats": {
         "corners": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "sot": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "shots": {
-          "home": 7,
+          "home": 8,
           "away": 1
         },
         "yellow": {
@@ -7880,7 +7888,7 @@
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
@@ -7897,7 +7905,18 @@
         "playerSot": {},
         "firstGoalMethod": "shot",
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 27,
+            "firstActionType": "Foul",
+            "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
