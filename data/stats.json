@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T16:10:05.737Z",
+    "generatedAt": "2026-07-01T16:20:09.671Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 63
   },
@@ -509,19 +509,19 @@
       },
       {
         "rank": 7,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 89,
+        "display": "89.0%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 88.9,
         "display": "88.9%",
         "matches": 3
-      },
-      {
-        "rank": 8,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 88.8,
-        "display": "88.8%",
-        "matches": 4
       },
       {
         "rank": 9,
@@ -574,7 +574,15 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 4,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 63.1,
+        "display": "63.1%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -582,7 +590,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -590,7 +598,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Belgium",
         "flag": "🇧🇪",
         "value": 62.3,
@@ -598,7 +606,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.2,
@@ -606,19 +614,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
-        "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 58.8,
-        "display": "58.8%",
         "matches": 3
       }
     ],
@@ -717,8 +717,8 @@
         "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 75,
-        "display": "75.0%",
+        "value": 75.6,
+        "display": "75.6%",
         "matches": 4
       },
       {
@@ -1528,6 +1528,10 @@
         },
         {
           "name": "Jarell Quansah",
+          "value": 1
+        },
+        {
+          "name": "Jude Bellingham",
           "value": 1
         }
       ],
@@ -6079,31 +6083,31 @@
         "teamBox": [
           {
             "team": "England",
-            "possessionPct": 26.2,
-            "accuratePasses": 16,
-            "totalPasses": 21,
+            "possessionPct": 54.8,
+            "accuratePasses": 89,
+            "totalPasses": 101,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 2,
-            "totalTackles": 3,
-            "accurateCrosses": 0,
-            "totalCrosses": 1,
-            "accurateLongBalls": 2,
-            "totalLongBalls": 4
+            "effectiveTackles": 3,
+            "totalTackles": 4,
+            "accurateCrosses": 1,
+            "totalCrosses": 7,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 8
           },
           {
             "team": "Congo DR",
-            "possessionPct": 73.8,
-            "accuratePasses": 57,
-            "totalPasses": 62,
+            "possessionPct": 45.2,
+            "accuratePasses": 78,
+            "totalPasses": 88,
             "shotsOnTarget": 1,
             "totalShots": 1,
             "effectiveTackles": 1,
-            "totalTackles": 1,
+            "totalTackles": 2,
             "accurateCrosses": 0,
             "totalCrosses": 0,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 5
+            "accurateLongBalls": 4,
+            "totalLongBalls": 9
           }
         ]
       }
