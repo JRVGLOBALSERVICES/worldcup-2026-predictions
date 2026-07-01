@@ -330,7 +330,10 @@ function parseLegs(note: string): { label: string; glyph: string }[] | null {
     return { label, glyph };
   });
   // Only treat as a leg grid when every part ends in a known status glyph.
-  const known = new Set(["✓", "✗", "⋯", "—"]);
+  // ↺ = whole-line push → the leg voids and its odds drop out of the acca
+  // (stake portion returns); it must be recognised or one refunded leg
+  // collapses the entire slip to a raw-text fallback.
+  const known = new Set(["✓", "✗", "⋯", "—", "↺"]);
   return legs.every((l) => known.has(l.glyph)) && legs.length > 0 ? legs : null;
 }
 
@@ -339,6 +342,7 @@ const LEG_GLYPH: Record<string, { cls: string; dot: string; pulse?: boolean }> =
   "✗": { cls: "text-rose", dot: "bg-rose" },
   "⋯": { cls: "text-acid", dot: "bg-acid", pulse: true },
   "—": { cls: "text-faint/60", dot: "bg-faint/40" },
+  "↺": { cls: "text-amber", dot: "bg-amber" },
 };
 
 /** Collection tag — whose bet this slip is, so it's clear who to collect from /
@@ -571,7 +575,7 @@ function AccaCard({
 
   // How many legs are already home vs still to play — a tiny progress read on the
   // header so a part-played acca shows "2/4 legs in" at a glance.
-  const landed = (parsed ?? []).filter((l) => l.glyph === "✓").length;
+  const landed = (parsed ?? []).filter((l) => l.glyph === "✓" || l.glyph === "↺").length;
 
   return (
     <SpotlightCard tone={verdictTone(verdict.verdict)} className="overflow-hidden rounded-2xl">
