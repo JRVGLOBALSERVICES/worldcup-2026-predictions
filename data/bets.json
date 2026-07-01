@@ -16447,33 +16447,33 @@
     },
     "bel-sen-2026-07-01": {
       "corners": {
-        "home": 2,
+        "home": 4,
         "away": 1
       },
       "sot": {
-        "home": 2,
+        "home": 4,
         "away": 4
       },
       "shots": {
-        "home": 5,
-        "away": 11
+        "home": 16,
+        "away": 13
       },
       "yellow": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
           2,
-          0
+          2
         ],
         "away": [
           1,
@@ -16506,6 +16506,16 @@
           "breakEndMinute": 30,
           "firstActionType": "Shot On Target",
           "firstActionMinute": 36,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 72,
+          "firstActionType": "Foul",
+          "firstActionMinute": 76,
           "isCorner": false,
           "reliable": true
         }
