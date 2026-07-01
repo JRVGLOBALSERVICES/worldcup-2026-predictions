@@ -413,7 +413,7 @@ function MiniStat({ label, h, a }: { label: string; h: number; a: number }) {
 
 /** The score header row that opens a match panel — NOT a boxed strip, but the
  *  top row of one cohesive panel whose legs sit beneath it. Score dominates
- *  (the live number is the point), team codes are quiet, no emoji flags. Reads
+ *  (the live number is the point); a flag + quiet team code flanks each side. Reads
  *  the kickoff time before the match is on; the whole panel tints amber live. */
 function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<string, LiveMatch | undefined> }) {
   const meta = matchMeta(matchId);
@@ -423,8 +423,10 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
   if (!on) {
     return (
       <div className="match-scoreline flex items-center gap-2.5 px-3.5 py-2.5">
+        <span aria-hidden className="text-sm leading-none">{meta.home.flag}</span>
         <span className="tnum text-sm font-bold tracking-tight text-muted">{meta.home.code}</span>
         <span className="text-[0.6rem] uppercase tracking-[0.2em] text-faint/50">v</span>
+        <span aria-hidden className="text-sm leading-none">{meta.away.flag}</span>
         <span className="tnum text-sm font-bold tracking-tight text-muted">{meta.away.code}</span>
         <span className="ml-2 font-mono text-[0.62rem] text-faint/70">{meta.kickoffLabel}</span>
         <span className="ml-auto rounded-full border border-line px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-faint">
@@ -440,11 +442,13 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
   return (
     <div className="match-scoreline px-3.5 py-2.5">
       <div className="flex items-center gap-x-2.5 gap-y-1">
+        <span aria-hidden className="text-base leading-none">{meta.home.flag}</span>
         <span className="tnum text-[0.7rem] font-bold uppercase tracking-wider text-muted">{meta.home.code}</span>
         <span className="tnum text-xl font-extrabold leading-none tracking-tight text-ink">
           {s.home}<span className="px-1.5 text-base font-semibold text-faint/60">–</span>{s.away}
         </span>
         <span className="tnum text-[0.7rem] font-bold uppercase tracking-wider text-muted">{meta.away.code}</span>
+        <span aria-hidden className="text-base leading-none">{meta.away.flag}</span>
         <span className={`ml-1 inline-flex items-center gap-1 font-mono text-[0.6rem] font-semibold uppercase tracking-wider ${st.cls}`}>
           {st.pulse && <span className="size-1.5 animate-pulse rounded-full bg-amber motion-reduce:animate-none" />}
           {st.label}
