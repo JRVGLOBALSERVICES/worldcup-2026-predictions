@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T01:00:09.463Z",
+    "generatedAt": "2026-07-01T02:10:06.479Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -630,18 +630,10 @@
         "flag": "🇪🇨",
         "value": 52.9,
         "display": "52.9%",
-        "matches": 2
+        "matches": 3
       },
       {
         "rank": 3,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 47.4,
-        "display": "47.4%",
-        "matches": 2
-      },
-      {
-        "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
         "value": 47.2,
@@ -649,7 +641,7 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -657,7 +649,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 45.8,
@@ -665,7 +657,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -673,7 +665,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -681,7 +673,7 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -689,12 +681,20 @@
         "matches": 3
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Bosnia-Herzegovina",
+        "flag": "🇧🇦",
+        "value": 42.1,
+        "display": "42.1%",
+        "matches": 2
       }
     ],
     "tackleSuccess": [
@@ -830,6 +830,14 @@
       },
       {
         "rank": 7,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 31.6,
+        "display": "31.6%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 30.8,
@@ -837,27 +845,19 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 30.4,
         "display": "30.4%",
-        "matches": 2
+        "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
         "display": "30.0%",
-        "matches": 2
-      },
-      {
-        "rank": 10,
-        "team": "Egypt",
-        "flag": "🇪🇬",
-        "value": 29.7,
-        "display": "29.7%",
         "matches": 2
       }
     ],
@@ -5941,6 +5941,40 @@
             "totalCrosses": 10,
             "accurateLongBalls": 17,
             "totalLongBalls": 32
+          }
+        ]
+      },
+      "760491": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Mexico",
+            "possessionPct": 81.5,
+            "accuratePasses": 70,
+            "totalPasses": 74,
+            "shotsOnTarget": 0,
+            "totalShots": 4,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 1,
+            "totalCrosses": 1,
+            "accurateLongBalls": 7,
+            "totalLongBalls": 8
+          },
+          {
+            "team": "Ecuador",
+            "possessionPct": 18.5,
+            "accuratePasses": 9,
+            "totalPasses": 17,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 2,
+            "totalTackles": 2,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 8
           }
         ]
       },
