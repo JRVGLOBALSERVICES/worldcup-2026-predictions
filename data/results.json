@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:50:03.518Z",
+    "generatedAt": "2026-07-01T22:00:04.888Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8113,7 +8113,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 2
       },
       "advanced": null,
@@ -8141,6 +8141,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Youri Tielemans",
+          "minute": 88,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -8155,21 +8163,27 @@
           "player": "Lamine Camara",
           "minute": 67,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Unknown",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-01T20:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
+          "home": 4,
           "away": 1
         },
         "sot": {
-          "home": 3,
+          "home": 4,
           "away": 4
         },
         "shots": {
-          "home": 14,
-          "away": 11
+          "home": 16,
+          "away": 13
         },
         "yellow": {
           "home": 1,
@@ -8186,7 +8200,7 @@
         "cornersByHalf": {
           "home": [
             2,
-            1
+            2
           ],
           "away": [
             1,
