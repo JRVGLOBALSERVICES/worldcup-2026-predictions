@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T17:40:03.393Z",
+    "generatedAt": "2026-07-01T17:50:02.958Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 59,
     "live": 1
@@ -7976,7 +7976,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "advanced": null,
@@ -7993,6 +7993,14 @@
           "team": "home",
           "scorer": "Harry Kane",
           "minute": 74,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Harry Kane",
+          "minute": 86,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -8019,12 +8027,12 @@
           "away": 3
         },
         "sot": {
-          "home": 5,
-          "away": 1
+          "home": 6,
+          "away": 2
         },
         "shots": {
-          "home": 11,
-          "away": 5
+          "home": 14,
+          "away": 6
         },
         "yellow": {
           "home": 1,
@@ -8051,16 +8059,17 @@
         "sotByHalf": {
           "home": [
             3,
-            0
+            1
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "playerSot": {
-          "Jude Bellingham": 2,
-          "Harry Kane": 1
+          "Jude Bellingham": 3,
+          "Harry Kane": 1,
+          "Meschack Elia": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,

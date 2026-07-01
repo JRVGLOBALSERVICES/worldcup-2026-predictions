@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T17:40:07.415Z",
+    "generatedAt": "2026-07-01T17:50:06.702Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 63
   },
@@ -31,15 +31,15 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 4,
+        "value": 5,
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -47,7 +47,7 @@
         "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Vinícius Júnior",
         "team": "Brazil",
         "flag": "🇧🇷",
@@ -501,19 +501,19 @@
       },
       {
         "rank": 6,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 89.6,
+        "display": "89.6%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 89.6,
         "display": "89.6%",
         "matches": 3
-      },
-      {
-        "rank": 7,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 89.5,
-        "display": "89.5%",
-        "matches": 4
       },
       {
         "rank": 8,
@@ -717,8 +717,8 @@
         "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 72.5,
-        "display": "72.5%",
+        "value": 73.1,
+        "display": "73.1%",
         "matches": 4
       },
       {
@@ -942,11 +942,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 51.2,
-        "display": "51.2%",
+        "value": 50.8,
+        "display": "50.8%",
         "matches": 4
       }
     ]
@@ -1485,7 +1485,7 @@
       "scorers": [
         {
           "name": "Harry Kane",
-          "value": 4,
+          "value": 5,
           "matches": 3
         },
         {
@@ -6092,31 +6092,31 @@
         "teamBox": [
           {
             "team": "England",
-            "possessionPct": 60.7,
-            "accuratePasses": 388,
-            "totalPasses": 425,
-            "shotsOnTarget": 5,
-            "totalShots": 11,
-            "effectiveTackles": 6,
-            "totalTackles": 10,
-            "accurateCrosses": 8,
-            "totalCrosses": 37,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 24
+            "possessionPct": 60.8,
+            "accuratePasses": 446,
+            "totalPasses": 487,
+            "shotsOnTarget": 6,
+            "totalShots": 14,
+            "effectiveTackles": 7,
+            "totalTackles": 11,
+            "accurateCrosses": 9,
+            "totalCrosses": 43,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 27
           },
           {
             "team": "Congo DR",
-            "possessionPct": 39.3,
-            "accuratePasses": 236,
-            "totalPasses": 288,
-            "shotsOnTarget": 1,
-            "totalShots": 5,
+            "possessionPct": 39.2,
+            "accuratePasses": 271,
+            "totalPasses": 330,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
             "effectiveTackles": 6,
-            "totalTackles": 13,
+            "totalTackles": 17,
             "accurateCrosses": 1,
-            "totalCrosses": 9,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 33
+            "totalCrosses": 10,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 39
           }
         ]
       }
