@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T15:22:00.000Z",
+    "generatedAt": "2026-07-01T15:30:08.663Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-01T15:22:00.000Z"
+    "modelUpdatedAt": "2026-07-01T15:30:08.661Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -15319,7 +15319,7 @@
           "Model projects England to carry more of the ball and the better chances (higher attack rating); Congo DR to sit compact and play on the break.",
           "Goal expectancy 1.7–0.8 (England–Congo DR) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs CONFIRMED (~1h pre-kickoff): England start Rice + Anderson as a double pivot with Madueke right and Rashford left — Saka is BENCHED and natural-LB Djed Spence fills in at RB. Congo confirm Wissa up top with Cipenga + Mbuku wide; Bakambu benched. Lineup-dependent props now firm.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "England shade the chance-creation (1.7 vs 0.8 xG) — they should make the running.",
         "drawRisk": "Moderate — 23.8% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -15334,7 +15334,7 @@
           "Group goal-rates are a tiny sample; England's number may be inflated by one result."
         ],
         "verdict": "Lean",
-        "changeMind": "A very early Congo goal that forces England to chase and open up (raising over/BTTS), or Wissa going off injured (removing Congo's only real scoring outlet)."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": {
         "source": "1xBet (PC)",
@@ -15420,7 +15420,7 @@
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs now CONFIRMED — scorer/assist angles are firm (Saka benched, Kane penalty taker, Wissa Congo's taker)."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
@@ -15435,12 +15435,12 @@
         ],
         "trapsTripped": 2,
         "edge": "narrative-leaning",
-        "verdict": "PASS",
+        "verdict": "LEAN",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
-        "verdict": "PASS",
-        "call": "England to win doesn't clear the filter — pass it — but the better value sits on Congo DR. Respect the live draw.",
+        "verdict": "LEAN",
+        "call": "England to win is a lean, not a lock — but the better value sits on Congo DR. Respect the live draw.",
         "read": {
           "tag": "Lean",
           "line": "England are the model's 59% pick, but a 23.8% draw is very much alive."
@@ -15450,7 +15450,7 @@
           "line": "The real value is on Congo DR, not the pick — and England is a poor price."
         },
         "trap": {
-          "tag": "3 warnings",
+          "tag": "2 warnings",
           "line": "You're paying over the odds for the favourite."
         }
       },
