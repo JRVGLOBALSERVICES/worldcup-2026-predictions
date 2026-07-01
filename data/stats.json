@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T02:20:27.673Z",
+    "generatedAt": "2026-07-01T02:30:05.753Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 62
   },
@@ -854,11 +854,11 @@
       },
       {
         "rank": 10,
-        "team": "Ecuador",
-        "flag": "🇪🇨",
-        "value": 29.2,
-        "display": "29.2%",
-        "matches": 3
+        "team": "Czechia",
+        "flag": "🇨🇿",
+        "value": 28.6,
+        "display": "28.6%",
+        "matches": 2
       }
     ],
     "longBallAccuracy": [
@@ -5946,35 +5946,40 @@
       },
       "760491": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Roberto Alvarado",
+            "team": "Mexico"
+          }
+        ],
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 62.1,
-            "accuratePasses": 89,
-            "totalPasses": 102,
-            "shotsOnTarget": 0,
-            "totalShots": 6,
+            "possessionPct": 59.3,
+            "accuratePasses": 111,
+            "totalPasses": 125,
+            "shotsOnTarget": 1,
+            "totalShots": 7,
             "effectiveTackles": 1,
             "totalTackles": 1,
             "accurateCrosses": 1,
             "totalCrosses": 3,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 11
+            "accurateLongBalls": 10,
+            "totalLongBalls": 13
           },
           {
             "team": "Ecuador",
-            "possessionPct": 37.9,
-            "accuratePasses": 46,
-            "totalPasses": 62,
+            "possessionPct": 40.7,
+            "accuratePasses": 65,
+            "totalPasses": 85,
             "shotsOnTarget": 0,
             "totalShots": 1,
             "effectiveTackles": 3,
             "totalTackles": 4,
             "accurateCrosses": 0,
-            "totalCrosses": 2,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 15
+            "totalCrosses": 3,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 18
           }
         ]
       },
