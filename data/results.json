@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T17:30:04.847Z",
+    "generatedAt": "2026-07-01T17:40:03.393Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 59,
     "live": 1
@@ -7976,7 +7976,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "advanced": null,
@@ -7985,6 +7985,14 @@
           "team": "away",
           "scorer": "Brian Cipenga",
           "minute": 6,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Harry Kane",
+          "minute": 74,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -8007,15 +8015,15 @@
       "updatedAt": "2026-07-01T16:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 4,
+          "home": 5,
           "away": 3
         },
         "sot": {
-          "home": 4,
+          "home": 5,
           "away": 1
         },
         "shots": {
-          "home": 10,
+          "home": 11,
           "away": 5
         },
         "yellow": {
@@ -8033,7 +8041,7 @@
         "cornersByHalf": {
           "home": [
             2,
-            2
+            3
           ],
           "away": [
             1,
@@ -8066,6 +8074,16 @@
             "firstActionMinute": 27,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 71,
+            "isCorner": true,
+            "reliable": false
           }
         }
       }

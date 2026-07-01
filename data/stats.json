@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T17:30:09.356Z",
+    "generatedAt": "2026-07-01T17:40:07.415Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 63
   },
@@ -32,6 +32,14 @@
       },
       {
         "rank": 4,
+        "name": "Harry Kane",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 4,
+        "matches": 3
+      },
+      {
+        "rank": 4,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -47,7 +55,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -55,7 +63,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -63,7 +71,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Deniz Undav",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -71,18 +79,10 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Elijah Just",
         "team": "New Zealand",
         "flag": "🇳🇿",
-        "value": 3,
-        "matches": 3
-      },
-      {
-        "rank": 6,
-        "name": "Harry Kane",
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 3,
         "matches": 3
       }
@@ -569,8 +569,8 @@
         "rank": 4,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 64.3,
-        "display": "64.3%",
+        "value": 64.6,
+        "display": "64.6%",
         "matches": 4
       },
       {
@@ -717,8 +717,8 @@
         "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 72,
-        "display": "72.0%",
+        "value": 72.5,
+        "display": "72.5%",
         "matches": 4
       },
       {
@@ -942,11 +942,11 @@
         "matches": 3
       },
       {
-        "rank": 10,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 50.6,
-        "display": "50.6%",
+        "rank": 9,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 51.2,
+        "display": "51.2%",
         "matches": 4
       }
     ]
@@ -1485,7 +1485,7 @@
       "scorers": [
         {
           "name": "Harry Kane",
-          "value": 3,
+          "value": 4,
           "matches": 3
         },
         {
@@ -1504,6 +1504,11 @@
           "name": "Bukayo Saka",
           "value": 2,
           "matches": 3
+        },
+        {
+          "name": "Anthony Gordon",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "Declan Rice",
@@ -6078,28 +6083,32 @@
           {
             "name": "Chancel Mbemba",
             "team": "Congo DR"
+          },
+          {
+            "name": "Anthony Gordon",
+            "team": "England"
           }
         ],
         "teamBox": [
           {
             "team": "England",
-            "possessionPct": 59.5,
-            "accuratePasses": 365,
-            "totalPasses": 399,
-            "shotsOnTarget": 4,
-            "totalShots": 10,
-            "effectiveTackles": 5,
-            "totalTackles": 9,
-            "accurateCrosses": 6,
-            "totalCrosses": 31,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 22
+            "possessionPct": 60.7,
+            "accuratePasses": 388,
+            "totalPasses": 425,
+            "shotsOnTarget": 5,
+            "totalShots": 11,
+            "effectiveTackles": 6,
+            "totalTackles": 10,
+            "accurateCrosses": 8,
+            "totalCrosses": 37,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 24
           },
           {
             "team": "Congo DR",
-            "possessionPct": 40.5,
-            "accuratePasses": 233,
-            "totalPasses": 281,
+            "possessionPct": 39.3,
+            "accuratePasses": 236,
+            "totalPasses": 288,
             "shotsOnTarget": 1,
             "totalShots": 5,
             "effectiveTackles": 6,
@@ -6107,7 +6116,7 @@
             "accurateCrosses": 1,
             "totalCrosses": 9,
             "accurateLongBalls": 13,
-            "totalLongBalls": 30
+            "totalLongBalls": 33
           }
         ]
       }
