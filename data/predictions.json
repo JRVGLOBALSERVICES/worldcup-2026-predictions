@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T18:20:07.945Z",
+    "generatedAt": "2026-07-01T19:22:00.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-01T18:20:07.944Z"
+    "modelUpdatedAt": "2026-07-01T19:22:00.000Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -15467,108 +15467,93 @@
     "bel-sen-2026-07-01": {
       "win": {
         "pick": "Belgium",
-        "fairOdds": "1.56",
-        "reason": "Model: Belgium to win at 64% (Belgium 64% / draw 18% / Senegal 18%). Expected goals 2.5–1.3 from group-stage attack/defence rates (Belgium 1.8 for / 1.0 against per game, Senegal 2.2 / 1.8). Most likely score 2-1.",
-        "strength": 5
+        "fairOdds": "1.70",
+        "reason": "Confirmed XI has De Bruyne pulling strings behind a De Ketelaere false-9 with Doku and Trossard flanking; Belgium will dominate possession and Trossard (2 group goals, 9 chances created) is in career-best form. But Senegal sit in a deep block and counter with Sarr/Mane pace, so this is ~58-60% not a lock - draw+underdog carry real 40% weight.",
+        "strength": 3
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "4.76",
-        "alt": "0-0",
-        "altOdds": "6.13"
+        "score": "0-0",
+        "fairOdds": "2.40",
+        "alt": "1-0",
+        "altOdds": "2.90"
       },
       "htft": {
-        "pick": "Belgium/Belgium",
-        "fairOdds": "1.95"
+        "pick": "Draw/Belgium",
+        "fairOdds": "4.20"
       },
       "fullTime": {
         "score": "2-1",
-        "fairOdds": "10.92"
+        "fairOdds": "8.00"
       },
       "scorers": [
         {
           "player": "Leandro Trossard",
           "team": "Belgium",
-          "fairOdds": "1.69",
-          "banker": true,
-          "note": "2 goals in 3 group games; 59% modelled anytime chance on 2.5 team xG.",
-          "strength": 5
+          "fairOdds": "3.10",
+          "banker": false,
+          "note": "Belgium's in-form outlet: 2 goals vs New Zealand, most chances created (9) of any group-stage player; cutting in off the left onto his right foot is the primary Belgium goal route.",
+          "strength": 4
         },
         {
-          "player": "Alexis Saelemaekers",
+          "player": "Jeremy Doku",
           "team": "Belgium",
-          "fairOdds": "2.41",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG.",
+          "note": "Back from paternity leave and match-sharp; direct dribble threat who torments Jakobs 1v1 down the right, most-fouled player in Belgium's opener. Beats his man to cut back or finish near post.",
           "strength": 3
         },
         {
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "fairOdds": "2.41",
-          "banker": false,
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "fairOdds": "2.41",
-          "banker": false,
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Ismaïla Sarr",
+          "player": "Ismaila Sarr",
           "team": "Senegal",
-          "fairOdds": "2.80",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "3 goals in 3 group games; 36% modelled anytime chance on 1.3 team xG.",
+          "note": "Senegal's leading WC scorer with 3 group goals and lethal on the transition; the main counter-attack finish if Senegal spring Belgium's high line. Genuine underdog scorer weight.",
+          "strength": 3
+        },
+        {
+          "player": "Sadio Mane",
+          "team": "Senegal",
+          "fairOdds": "4.80",
+          "banker": false,
+          "note": "Primary counter outlet and Senegal's penalty + free-kick taker; pace and directness make him the break-away danger against Castagne/De Cuyper pushing up. Not a banker but a real threat.",
           "strength": 3
         }
       ],
       "assists": [
         {
-          "player": "Hans Vanaken",
+          "player": "Kevin De Bruyne",
           "team": "Belgium",
-          "fairOdds": "1.98",
-          "banker": true,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Belgium's chief creator and set-piece taker; the through-ball and cutback supply for Trossard/De Ketelaere runs. Struck the post from a free kick vs Egypt, 2 assists vs New Zealand."
         },
         {
-          "player": "Nicolas Raskin",
+          "player": "Leandro Trossard",
           "team": "Belgium",
-          "fairOdds": "1.98",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
-        },
-        {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "fairOdds": "1.98",
-          "banker": false,
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "note": "Doubles as creator (9 chances created in group); cutbacks from the left for De Ketelaere arriving late or Doku at the far post."
         },
         {
           "player": "Iliman Ndiaye",
           "team": "Senegal",
-          "fairOdds": "3.17",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+          "note": "Senegal's designated between-the-lines creator, 2 group assists; the man who unlocks Belgium if the counter needs craft rather than pure pace, feeding Sarr/Mane."
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Leandro Trossard",
-        "backup": "Alexis Saelemaekers",
-        "note": "Belgium favoured to control the game, so a penalty is less pivotal; Leandro Trossard would take one if awarded."
+        "likelihood": "medium",
+        "taker": "Kevin De Bruyne (Belgium)",
+        "backup": "Sadio Mane (Senegal)",
+        "note": "If Belgium win a spot-kick, De Bruyne is Belgium's elite set-piece taker. For Senegal, Mane is the primary penalty and free-kick taker (Sarr backup). Doku drawing fouls in the box raises Belgium's penalty odds to medium."
       },
       "lineups": {
-        "home": "Thibaut Courtois, Arthur Theate, Brandon Mechele, Maxim De Cuyper, Timothy Castagne, Kevin De Bruyne, Hans Vanaken, Youri Tielemans, Charles De Ketelaere, Leandro Trossard, Jérémy Doku",
-        "away": "Mory Diaw, Moussa Niakhaté, Abdoulaye Seck, Ismail Jakobs, Krépin Diatta, Idrissa Gueye, Lamine Camara, Habib Diarra, Ismaïla Sarr, Sadio Mané, Ibrahim Mbaye",
-        "status": "unconfirmed",
+        "home": "Thibaut Courtois, Timothy Castagne, Brandon Mechele, Arthur Theate, Maxim De Cuyper, Hans Vanaken, Kevin De Bruyne, Youri Tielemans, Leandro Trossard, Charles De Ketelaere, Jeremy Doku",
+        "away": "Mory Diaw, Krepin Diatta, Pathe Ciss, Moussa Niakhate, Ismail Jakobs, Idrissa Gana Gueye, Pape Gueye, Habib Diarra, Iliman Ndiaye, Ismaila Sarr, Sadio Mane",
+        "status": "confirmed",
         "homeXI": {
-          "formation": "4-2-3-1",
+          "formation": "4-3-3",
           "players": [
             {
               "num": 1,
@@ -15576,141 +15561,160 @@
               "pos": "G"
             },
             {
-              "num": 3,
-              "name": "Arthur Theate",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Brandon Mechele",
-              "pos": "CD-R"
-            },
-            {
-              "num": 5,
-              "name": "Maxim De Cuyper",
-              "pos": "LB"
-            },
-            {
               "num": 21,
               "name": "Timothy Castagne",
               "pos": "RB"
             },
             {
-              "num": 7,
-              "name": "Kevin De Bruyne",
-              "pos": "AM"
-            },
-            {
-              "num": 20,
-              "name": "Hans Vanaken",
-              "pos": "LM"
-            },
-            {
-              "num": 8,
-              "name": "Youri Tielemans",
-              "pos": "RM"
-            },
-            {
-              "num": 17,
-              "name": "Charles De Ketelaere",
-              "pos": "F"
-            },
-            {
-              "num": 10,
-              "name": "Leandro Trossard",
-              "pos": "AM-L"
-            },
-            {
-              "num": 11,
-              "name": "Jérémy Doku",
-              "pos": "AM-R"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 23,
-              "name": "Mory Diaw",
-              "pos": "G"
-            },
-            {
-              "num": 19,
-              "name": "Moussa Niakhaté",
-              "pos": "CD-L"
-            },
-            {
               "num": 4,
-              "name": "Abdoulaye Seck",
-              "pos": "CD-R"
-            },
-            {
-              "num": 14,
-              "name": "Ismail Jakobs",
-              "pos": "LB"
-            },
-            {
-              "num": 15,
-              "name": "Krépin Diatta",
-              "pos": "RB"
+              "name": "Brandon Mechele",
+              "pos": "CB"
             },
             {
               "num": 5,
-              "name": "Idrissa Gueye",
+              "name": "Arthur Theate",
+              "pos": "CB"
+            },
+            {
+              "num": 15,
+              "name": "Maxim De Cuyper",
+              "pos": "LB"
+            },
+            {
+              "num": 6,
+              "name": "Hans Vanaken",
+              "pos": "CM"
+            },
+            {
+              "num": 7,
+              "name": "Kevin De Bruyne",
               "pos": "CM"
             },
             {
               "num": 8,
-              "name": "Lamine Camara",
-              "pos": "LM"
+              "name": "Youri Tielemans",
+              "pos": "CM"
             },
             {
-              "num": 21,
-              "name": "Habib Diarra",
-              "pos": "RM"
-            },
-            {
-              "num": 18,
-              "name": "Ismaïla Sarr",
-              "pos": "F"
+              "num": 11,
+              "name": "Leandro Trossard",
+              "pos": "LW"
             },
             {
               "num": 10,
-              "name": "Sadio Mané",
-              "pos": "LF"
+              "name": "Charles De Ketelaere",
+              "pos": "ST"
+            },
+            {
+              "num": 22,
+              "name": "Jeremy Doku",
+              "pos": "RW"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 16,
+              "name": "Mory Diaw",
+              "pos": "G"
+            },
+            {
+              "num": 21,
+              "name": "Krepin Diatta",
+              "pos": "RB"
+            },
+            {
+              "num": 3,
+              "name": "Pathe Ciss",
+              "pos": "CB"
+            },
+            {
+              "num": 22,
+              "name": "Moussa Niakhate",
+              "pos": "CB"
+            },
+            {
+              "num": 12,
+              "name": "Ismail Jakobs",
+              "pos": "LB"
+            },
+            {
+              "num": 5,
+              "name": "Idrissa Gana Gueye",
+              "pos": "DM"
+            },
+            {
+              "num": 6,
+              "name": "Pape Gueye",
+              "pos": "DM"
+            },
+            {
+              "num": 17,
+              "name": "Habib Diarra",
+              "pos": "AM"
             },
             {
               "num": 20,
-              "name": "Ibrahim Mbaye",
-              "pos": "RF"
+              "name": "Iliman Ndiaye",
+              "pos": "RW"
+            },
+            {
+              "num": 18,
+              "name": "Ismaila Sarr",
+              "pos": "LW"
+            },
+            {
+              "num": 10,
+              "name": "Sadio Mane",
+              "pos": "ST"
             }
           ]
         }
       },
       "playerNotes": [
         {
-          "player": "Leandro Trossard",
+          "player": "Charles De Ketelaere",
           "team": "Belgium",
-          "note": "2 goals in 3 group games; 59% modelled anytime chance on 2.5 team xG."
+          "note": "Deployed as a false-9 with Lukaku benched; drops to link midfield to attack and arrives late in the box rather than playing off the shoulder - less of a fixed-scorer, more a connector for Trossard/Doku."
         },
         {
-          "player": "Alexis Saelemaekers",
+          "player": "Jeremy Doku",
           "team": "Belgium",
-          "note": "1 goal in 1 group game; 42% modelled anytime chance on 2.5 team xG."
+          "note": "Back from paternity leave and sharp after New Zealand; the key 1v1 mismatch vs Jakobs down the right - direct dribbling that draws fouls and cutbacks, Belgium's most-fouled threat."
         },
         {
-          "player": "Hans Vanaken",
+          "player": "Kevin De Bruyne",
           "team": "Belgium",
-          "note": "1 assist in the group stage; 50% modelled chance to set one up."
+          "note": "The creative and set-piece hub; oldest Belgian to score at a World Cup (vs New Zealand) with 2 assists there. Everything Belgium builds runs through him against Senegal's compact double pivot."
+        },
+        {
+          "player": "Ismaila Sarr",
+          "team": "Senegal",
+          "note": "Senegal's leading World Cup scorer (3 group goals) and the sharpest transition finisher; the biggest reason Belgium's clean sheet should be downgraded - one break can punish the high line."
+        },
+        {
+          "player": "Sadio Mane",
+          "team": "Senegal",
+          "note": "Main counter outlet plus penalty and free-kick duty; AFCON-winning captain whose pace stretches Castagne/De Cuyper when they push forward - the break-away danger man."
+        },
+        {
+          "player": "Iliman Ndiaye",
+          "team": "Senegal",
+          "note": "The between-the-lines creator (2 group assists) who provides the craft in Senegal's counters, picking the lock for Sarr and Mane when raw pace alone isn't enough."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://worldsoccertalk.com/world-cup/is-jeremy-doku-playing-belgium-vs-senegal-confirmed-lineups-for-the-2026-world-cup-game/",
+        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/belgium-vs-senegal-prediction-team-news-lineups_600358.html",
+        "https://www.si.com/soccer/belgium-vs-senegal-world-cup-preview-predictions-lineups-7-1-26",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.skysports.com/football/news/12098/13556680/world-cup-2026-senegal-5-0-iraq-ismaila-sarr-iliman-ndiaye-score",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/sadio-mane-superstars",
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form, adjusted to confirmed XIs"
       ],
       "pitchReport": {
         "facts": [
@@ -15723,10 +15727,10 @@
           "Model projects Belgium to carry more of the ball and the better chances (higher attack rating); Senegal to sit compact and play on the break.",
           "Goal expectancy 2.5–1.3 (Belgium–Senegal) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "XIs CONFIRMED. Belgium (4-3-3): Courtois; Castagne, Mechele, Theate, De Cuyper; Vanaken, De Bruyne, Tielemans; Trossard, De Ketelaere (false-9), Doku. Lukaku & Saelemaekers benched. Senegal (4-2-3-1): Diaw; Diatta, Ciss, Niakhate, Jakobs; I.Gueye, P.Gueye; Ndiaye, Diarra, Sarr; Mane. Scorer/lineup props now firm.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Belgium shade the chance-creation (2.5 vs 1.3 xG) — they should make the running.",
-        "drawRisk": "Moderate — 17.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "drawRisk": "Genuine - possession-favourite vs deep-block/counter is the profile that produces draws; Senegal can nick a break through Sarr/Mane.",
         "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
         "caseFor": [
           "Belgium are the model's 64.1% favourite — higher attack rating and the better recent goal-rate.",
@@ -15734,11 +15738,11 @@
           "Neutral conditions let the better side's quality tell."
         ],
         "caseAgainst": [
-          "17.9% draw + Senegal's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Belgium's number may be inflated by one result."
+          "Senegal set up as a deep-block, fast-transition side - Sarr (3 group goals) and Mane are real counter threats, a classic out-xG-the-favourite trap.",
+          "De Ketelaere as a false-9 (Lukaku benched) is a linker not a poacher, so Belgium lack a fixed centre-forward finisher."
         ],
         "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Leandro Trossard, or news the underdog is missing a defensive linchpin."
+        "changeMind": "Already have confirmed XIs. An early Senegal goal that forces Belgium to chase into the counter would flip this."
       },
       "valueSpot": {
         "source": "1xBet (PC)",
@@ -15818,18 +15822,18 @@
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
+            "tripped": true,
+            "why": "Senegal deep block + Belgium false-9 (no Lukaku) can compress goals - draw/under has real weight."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs CONFIRMED - scorer/lineup props are now firm."
           },
           {
             "name": "Ignoring the draw",
-            "tripped": false,
-            "why": "Draw chance (17.9%) is low enough to discount."
+            "tripped": true,
+            "why": "Draw risk genuine vs a counter side - respect it."
           },
           {
             "name": "Emotional / a chase / just for action",
@@ -15837,7 +15841,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 2,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
@@ -15854,8 +15858,8 @@
           "line": "The real value is on Over 2.5, not the pick."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+          "tag": "lineups confirmed",
+          "line": "XIs out: Lukaku benched, De Ketelaere false-9; Senegal counter via Sarr/Mane keeps draw live."
         }
       },
       "resolution": {
