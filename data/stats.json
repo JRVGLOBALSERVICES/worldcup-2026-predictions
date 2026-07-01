@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T17:50:06.702Z",
+    "generatedAt": "2026-07-01T18:00:11.491Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 63
   },
@@ -138,6 +138,14 @@
       },
       {
         "rank": 7,
+        "name": "Anthony Gordon",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 2,
+        "matches": 1
+      },
+      {
+        "rank": 7,
         "name": "Brahim Díaz",
         "team": "Morocco",
         "flag": "🇲🇦",
@@ -157,14 +165,6 @@
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 2,
-        "matches": 3
-      },
-      {
-        "rank": 7,
-        "name": "Chris Wood",
-        "team": "New Zealand",
-        "flag": "🇳🇿",
         "value": 2,
         "matches": 3
       }
@@ -501,19 +501,19 @@
       },
       {
         "rank": 6,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 89.6,
-        "display": "89.6%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 89.6,
         "display": "89.6%",
         "matches": 3
+      },
+      {
+        "rank": 7,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 89.4,
+        "display": "89.4%",
+        "matches": 4
       },
       {
         "rank": 8,
@@ -569,8 +569,8 @@
         "rank": 4,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 64.6,
-        "display": "64.6%",
+        "value": 64.3,
+        "display": "64.3%",
         "matches": 4
       },
       {
@@ -943,10 +943,10 @@
       },
       {
         "rank": 10,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 50.8,
-        "display": "50.8%",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 50.6,
+        "display": "50.6%",
         "matches": 4
       }
     ]
@@ -1501,14 +1501,14 @@
       ],
       "assists": [
         {
+          "name": "Anthony Gordon",
+          "value": 2,
+          "matches": 1
+        },
+        {
           "name": "Bukayo Saka",
           "value": 2,
           "matches": 3
-        },
-        {
-          "name": "Anthony Gordon",
-          "value": 1,
-          "matches": 1
         },
         {
           "name": "Declan Rice",
@@ -6087,36 +6087,40 @@
           {
             "name": "Anthony Gordon",
             "team": "England"
+          },
+          {
+            "name": "Anthony Gordon",
+            "team": "England"
           }
         ],
         "teamBox": [
           {
             "team": "England",
-            "possessionPct": 60.8,
-            "accuratePasses": 446,
-            "totalPasses": 487,
-            "shotsOnTarget": 6,
-            "totalShots": 14,
+            "possessionPct": 59.6,
+            "accuratePasses": 467,
+            "totalPasses": 515,
+            "shotsOnTarget": 7,
+            "totalShots": 16,
             "effectiveTackles": 7,
             "totalTackles": 11,
             "accurateCrosses": 9,
             "totalCrosses": 43,
-            "accurateLongBalls": 17,
-            "totalLongBalls": 27
+            "accurateLongBalls": 18,
+            "totalLongBalls": 31
           },
           {
             "team": "Congo DR",
-            "possessionPct": 39.2,
-            "accuratePasses": 271,
-            "totalPasses": 330,
+            "possessionPct": 40.4,
+            "accuratePasses": 299,
+            "totalPasses": 365,
             "shotsOnTarget": 2,
             "totalShots": 6,
-            "effectiveTackles": 6,
-            "totalTackles": 17,
-            "accurateCrosses": 1,
-            "totalCrosses": 10,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 39
+            "effectiveTackles": 7,
+            "totalTackles": 20,
+            "accurateCrosses": 2,
+            "totalCrosses": 13,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 46
           }
         ]
       }
