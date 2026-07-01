@@ -939,6 +939,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
+    },
+    "eng-cod-2026-07-01": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
+      "ft90": {
+        "home": 2,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3614,6 +3630,49 @@
           "team": "away",
           "player": "Moisés Caicedo",
           "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "eng-cod-2026-07-01": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Brian Cipenga",
+          "minute": 6,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Harry Kane",
+          "minute": 74,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Harry Kane",
+          "minute": 86,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Jude Bellingham",
+          "minute": 19,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Noah Sadiki",
+          "minute": 27,
           "type": "yellow"
         }
       ]
@@ -11734,6 +11793,74 @@
       }
     },
     {
+      "id": "sp-83841001647",
+      "slipNo": "83841001647",
+      "matchId": "usa-bih-2026-07-02",
+      "player": "—",
+      "market": "Accumulator (10)",
+      "label": "REAL placed slip (R32→R16) — 10-fold @ 286.732, RM50 → RM14,336.64: USA/Bosnia U3.5 · Spain/Austria U3 · Portugal/Croatia U3.5 · Switzerland/Algeria O2.5 · Argentina/Cape Verde O2.5 · Colombia/Ghana O1.5 · Canada/Morocco 1X · Paraguay/France W2 + O2.5 · Brazil/Norway U3.5 · Ismaila Sarr (Senegal) to score anytime vs Belgium (10 legs)",
+      "odds": 286.732,
+      "stake": 50,
+      "placedAt": "01/07 18:20",
+      "punter": "Rj",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "usa-bih-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "can-mar-2026-07-04",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "par-fra-2026-07-04",
+            "kind": "resultAndTotalOver",
+            "outcome": "2",
+            "line": 2.5
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "bel-sen-2026-07-01",
+            "kind": "scored",
+            "player": "Ismaila Sarr"
+          }
+        ]
+      }
+    },
+    {
       "id": "sp-tharma-r32-acca-1",
       "slipNo": "TBC-1xbet",
       "matchId": "eng-cod-2026-07-01",
@@ -16217,16 +16344,16 @@
     },
     "eng-cod-2026-07-01": {
       "corners": {
-        "home": 4,
-        "away": 1
+        "home": 5,
+        "away": 3
       },
       "sot": {
-        "home": 4,
-        "away": 1
+        "home": 7,
+        "away": 2
       },
       "shots": {
-        "home": 10,
-        "away": 3
+        "home": 16,
+        "away": 7
       },
       "yellow": {
         "home": 1,
@@ -16243,26 +16370,27 @@
       "cornersByHalf": {
         "home": [
           2,
-          2
+          3
         ],
         "away": [
           1,
-          0
+          2
         ]
       },
       "sotByHalf": {
         "home": [
           3,
-          0
+          1
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
       "playerSot": {
-        "Jude Bellingham": 2,
-        "Harry Kane": 1
+        "Jude Bellingham": 3,
+        "Harry Kane": 1,
+        "Meschack Elia": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -16276,6 +16404,16 @@
           "firstActionMinute": 27,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 71,
+          "isCorner": true,
+          "reliable": false
         }
       }
     }
