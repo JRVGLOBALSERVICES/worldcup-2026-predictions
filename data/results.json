@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T21:00:03.583Z",
+    "generatedAt": "2026-07-01T21:10:03.248Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 60,
     "live": 1
@@ -8105,7 +8105,10 @@
     },
     "bel-sen-2026-07-01": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -8137,7 +8140,7 @@
         },
         "shots": {
           "home": 5,
-          "away": 7
+          "away": 8
         },
         "yellow": {
           "home": 0,
