@@ -12433,6 +12433,37 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83858917059",
+      "slipNo": "83858917059",
+      "matchId": "esp-aut-2026-07-02",
+      "player": "Yamal / Ronaldo / Manzambi",
+      "market": "Accumulator (3)",
+      "label": "REAL placed slip (R32) — 3-fold @ 19.796, RM50 → RM989.83: Lamine Yamal to score anytime vs Austria (@2.12) · Cristiano Ronaldo to score anytime vs Croatia (@2.03) · Johan Manzambi to score anytime vs Algeria (@4.6) (3 legs)",
+      "odds": 19.796,
+      "stake": 50,
+      "placedAt": "02/07 11:11",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "scored",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "scored",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "scored",
+            "player": "Johan Manzambi"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
