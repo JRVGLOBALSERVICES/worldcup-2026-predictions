@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T20:50:05.272Z",
+    "generatedAt": "2026-07-02T21:00:05.024Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 62,
-    "live": 1
+    "finished": 63,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -8400,19 +8400,25 @@
       }
     },
     "esp-aut-2026-07-02": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
-      "score": {
-        "home": 2,
+      "ft": {
+        "home": 3,
         "away": 0
       },
-      "advanced": null,
+      "ft90": {
+        "home": 3,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "advanced": "home",
       "goals": [
         {
           "team": "home",
@@ -8426,6 +8432,14 @@
           "team": "home",
           "scorer": "Pedro Porro",
           "minute": 65,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 88,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -8446,11 +8460,11 @@
           "away": 0
         },
         "sot": {
-          "home": 9,
+          "home": 10,
           "away": 0
         },
         "shots": {
-          "home": 21,
+          "home": 23,
           "away": 5
         },
         "yellow": {

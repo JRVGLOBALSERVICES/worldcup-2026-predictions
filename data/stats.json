@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T20:50:07.753Z",
+    "generatedAt": "2026-07-02T21:00:09.326Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 66
+    "finished": 67
   },
   "categories": {
     "scorers": [
@@ -48,6 +48,14 @@
       },
       {
         "rank": 5,
+        "name": "Mikel Oyarzabal",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 4,
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -63,7 +71,7 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Brian Brobbey",
         "team": "Netherlands",
         "flag": "🇳🇱",
@@ -71,18 +79,10 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
-        "value": 3,
-        "matches": 4
-      },
-      {
-        "rank": 8,
-        "name": "Deniz Undav",
-        "team": "Germany",
-        "flag": "🇩🇪",
         "value": 3,
         "matches": 4
       }
@@ -177,57 +177,57 @@
         "value": 3
       },
       {
-        "rank": 2,
+        "rank": 1,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 3
+      },
+      {
+        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Ghana",
         "flag": "🇬🇭",
         "value": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Paraguay",
         "flag": "🇵🇾",
-        "value": 2
-      },
-      {
-        "rank": 2,
-        "team": "Portugal",
-        "flag": "🇵🇹",
         "value": 2
       }
     ],
@@ -2644,7 +2644,7 @@
       "scorers": [
         {
           "name": "Mikel Oyarzabal",
-          "value": 3,
+          "value": 4,
           "matches": 3
         },
         {
