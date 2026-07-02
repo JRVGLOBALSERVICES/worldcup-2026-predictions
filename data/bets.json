@@ -12775,6 +12775,47 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83866961601",
+      "slipNo": "83866961601",
+      "matchId": "por-cro-2026-07-02",
+      "player": "Portugal/Spain/Switzerland/Australia/Argentina",
+      "market": "Accumulator (5)",
+      "label": "REAL 1xBet acca (slip 83866961601, accepted 02/07 18:10) — 5 legs @ 27.783, RM30 → RM833.51. Por/Cro 1X & BTTS · Esp/Aut Under 3.5 · Swi/Alg Over 2.5 · Aus/Egy 2X & BTTS · Arg/CPV any team win-to-nil.",
+      "odds": 27.783,
+      "stake": 30,
+      "placedAt": "02/07 18:10",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "doubleChanceBtts",
+            "outcome": "X2"
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "notBttsAndTotalOver",
+            "line": 0.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
