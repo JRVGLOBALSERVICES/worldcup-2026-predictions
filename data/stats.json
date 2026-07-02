@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T23:30:11.792Z",
+    "generatedAt": "2026-07-02T23:40:08.330Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 67
   },
@@ -468,19 +468,19 @@
     "passCompletion": [
       {
         "rank": 1,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 91.6,
+        "display": "91.6%",
+        "matches": 4
+      },
+      {
+        "rank": 2,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 91.3,
         "display": "91.3%",
         "matches": 3
-      },
-      {
-        "rank": 1,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 91.3,
-        "display": "91.3%",
-        "matches": 4
       },
       {
         "rank": 3,
@@ -574,6 +574,14 @@
       },
       {
         "rank": 4,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 64.5,
+        "display": "64.5%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
@@ -581,7 +589,7 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
@@ -589,7 +597,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -597,20 +605,12 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
         "display": "63.0%",
         "matches": 2
-      },
-      {
-        "rank": 8,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 62.4,
-        "display": "62.4%",
-        "matches": 4
       },
       {
         "rank": 9,
@@ -888,8 +888,8 @@
         "rank": 2,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 62.9,
-        "display": "62.9%",
+        "value": 62.6,
+        "display": "62.6%",
         "matches": 4
       },
       {
@@ -6274,31 +6274,31 @@
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 62.8,
-            "accuratePasses": 143,
-            "totalPasses": 155,
+            "possessionPct": 71.3,
+            "accuratePasses": 250,
+            "totalPasses": 266,
             "shotsOnTarget": 1,
-            "totalShots": 7,
-            "effectiveTackles": 0,
-            "totalTackles": 2,
+            "totalShots": 8,
+            "effectiveTackles": 1,
+            "totalTackles": 4,
             "accurateCrosses": 2,
-            "totalCrosses": 8,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 7
+            "totalCrosses": 11,
+            "accurateLongBalls": 9,
+            "totalLongBalls": 14
           },
           {
             "team": "Croatia",
-            "possessionPct": 37.2,
-            "accuratePasses": 80,
-            "totalPasses": 94,
+            "possessionPct": 30.2,
+            "accuratePasses": 89,
+            "totalPasses": 108,
             "shotsOnTarget": 1,
             "totalShots": 3,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
+            "effectiveTackles": 2,
+            "totalTackles": 6,
             "accurateCrosses": 1,
             "totalCrosses": 3,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 14
+            "accurateLongBalls": 4,
+            "totalLongBalls": 16
           }
         ]
       },
