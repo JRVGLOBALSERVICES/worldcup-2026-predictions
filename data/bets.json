@@ -16606,15 +16606,15 @@
     },
     "usa-bih-2026-07-02": {
       "corners": {
-        "home": 2,
+        "home": 4,
         "away": 2
       },
       "sot": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "shots": {
-        "home": 3,
+        "home": 5,
         "away": 1
       },
       "yellow": {
@@ -16631,8 +16631,8 @@
       },
       "cornersByHalf": {
         "home": [
-          2,
-          0
+          3,
+          1
         ],
         "away": [
           2,
@@ -16652,9 +16652,20 @@
       "playerSot": {
         "Ermedin Demirovic": 1
       },
-      "firstGoalMethod": null,
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 25,
+          "firstActionType": "Foul",
+          "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
