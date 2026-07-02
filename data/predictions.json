@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T09:04:01.934Z",
+    "generatedAt": "2026-07-02T09:10:08.498Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-02T08:20:12.754Z"
+    "modelUpdatedAt": "2026-07-02T09:10:08.497Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -16220,123 +16220,250 @@
     "esp-aut-2026-07-02": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "1.42",
-        "reason": "Spain topped Group H (Cabo Verde 0-0, Saudi 4-0, Uruguay 1-0), scoring 9 and conceding 2 with two clean sheets, and hold vast talent superiority through Pedri, Rodri and Yamal against a deep, defensive Austria under Rangnick. But the Williams/Pino wing injuries blunt Spain's fastest outlet, and Austria's disciplined 3-4-2-1 low block is exactly the profile that has frustrated Spain into low-scoring games (see the 0-0 vs Cabo Verde). As a knockout, this can drift to extra time or penalties if Austria stay compact and set-piece dangerous via Alaba/Sabitzer, so Spain to advance is the call, not a comfortable regulation blowout."
+        "fairOdds": "1.35",
+        "reason": "Model: Spain to win at 74% (Spain 74% / draw 17% / Austria 9%). Expected goals 2.2–0.6 from group-stage attack/defence rates (Spain 1.6 for / 0.6 against per game, Austria 1.8 / 1.8). Most likely score 2-0.",
+        "strength": 5
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "2.90",
-        "alt": "0-0",
-        "altOdds": "2.30"
+        "score": "0-0",
+        "fairOdds": "3.50",
+        "alt": "1-0",
+        "altOdds": "5.45"
       },
       "htft": {
-        "pick": "Spain/Spain",
-        "fairOdds": "2.40"
+        "pick": "Draw/Spain",
+        "fairOdds": "3.37"
       },
       "fullTime": {
-        "score": "1-0",
-        "fairOdds": "5.80"
+        "score": "2-0",
+        "fairOdds": "6.90"
       },
       "scorers": [
         {
           "player": "Mikel Oyarzabal",
-          "fairOdds": "2.90",
+          "team": "Spain",
+          "fairOdds": "1.65",
+          "banker": true,
+          "note": "2 goals in 3 group games; 61% modelled anytime chance on 2.2 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "fairOdds": "2.34",
           "banker": false,
-          "note": "Spain's No.9 and primary penalty taker; Euro 2024 final match-winner and in-form, but against a packed Austria box even he is not a banker."
+          "note": "1 goal in 1 group game; 43% modelled anytime chance on 2.2 team xG.",
+          "strength": 3
         },
         {
           "player": "Lamine Yamal",
-          "fairOdds": "3.20",
+          "team": "Spain",
+          "fairOdds": "2.34",
           "banker": false,
-          "note": "Spain's creative talisman and secondary pen/set-piece threat; more likely to assist than finish against a low block, cuts inside onto his left."
-        },
-        {
-          "player": "Dani Olmo",
-          "fairOdds": "4.00",
-          "banker": false,
-          "note": "Arrives late into the box from midfield; useful vs deep blocks, likely starter with wings depleted."
+          "note": "1 goal in 1 group game; 43% modelled anytime chance on 2.2 team xG.",
+          "strength": 3
         },
         {
           "player": "Marko Arnautovic",
-          "fairOdds": "6.50",
+          "team": "Austria",
+          "fairOdds": "5.09",
           "banker": false,
-          "note": "Austria's record scorer and penalty taker (converted vs Jordan); their main outlet on counters/set-pieces, but 37 and isolated as a lone-ish front man."
+          "note": "2 goals in 3 group games; 20% modelled anytime chance on 0.6 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "team": "Austria",
+          "fairOdds": "8.13",
+          "banker": false,
+          "note": "1 goal in 1 group game; 12% modelled anytime chance on 0.6 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Lamine Yamal",
-          "fairOdds": "3.80",
+          "player": "Aymeric Laporte",
+          "team": "Spain",
+          "fairOdds": "2.46",
+          "banker": true,
+          "note": "1 assist in the group stage; 41% modelled chance to set one up."
+        },
+        {
+          "player": "Dani Olmo",
+          "team": "Spain",
+          "fairOdds": "2.46",
           "banker": false,
-          "note": "Chief chance-creator and corner taker; most probable Spain assist source against a compact block."
+          "note": "1 assist in the group stage; 41% modelled chance to set one up."
         },
         {
-          "player": "Pedri",
-          "fairOdds": "5.00",
+          "player": "Marcos Llorente",
+          "team": "Spain",
+          "fairOdds": "2.46",
           "banker": false,
-          "note": "Controls tempo and threads final passes; also a free-kick option, key to unlocking Austria."
-        },
-        {
-          "player": "Marcel Sabitzer",
-          "fairOdds": "7.50",
-          "banker": false,
-          "note": "Austria's free-kick and set-piece deliverer; their likeliest assist via a dead ball to Arnautovic/Gregoritsch."
-        }
-      ],
-      "penalty": {
-        "likelihood": "Medium — deep Austrian block invites box contact and VAR reviews; knockout also raises shootout odds",
-        "taker": "Mikel Oyarzabal (Spain) / Marko Arnautovic (Austria)",
-        "backup": "Lamine Yamal (Spain) / Marcel Sabitzer (Austria)",
-        "note": "In a shootout, Spain lean on Oyarzabal, Yamal, Pedri, Olmo; Austria on Arnautovic, Sabitzer, Alaba, Laimer. Oyarzabal and Arnautovic are proven from the spot."
-      },
-      "lineups": {
-        "home": "4-3-3 (probable): Simón; Porro, Cubarsí, Laporte, Cucurella; Pedri, Rodri, Olmo; Yamal, Oyarzabal, Ferran Torres/Baena — Nico Williams (groin) and Yeremy Pino (collarbone) both doubtful/out, forcing a reshuffle on the wings.",
-        "away": "3-4-2-1 (probable): A. Schlager; Posch, Lienhart, Alaba; Laimer, Seiwald, X. Schlager, Mwene; Sabitzer, Schmid; Arnautovic — Rangnick's compact low block; Baumgartner withdrew pre-tournament.",
-        "status": "probable"
-      },
-      "playerNotes": [
-        {
-          "player": "Nico Williams",
-          "team": "Spain",
-          "note": "Groin injury from Uruguay game; availability for knockouts in serious doubt — removes Spain's fastest wide runner."
-        },
-        {
-          "player": "Yeremy Pino",
-          "team": "Spain",
-          "note": "Collarbone injury; De la Fuente indicated he may miss rest of tournament — depletes Spain's wing depth."
-        },
-        {
-          "player": "Lamine Yamal",
-          "team": "Spain",
-          "note": "Fit and starting; Spain's key creator, corner taker and No.2 penalty option — the main match-winner threat."
-        },
-        {
-          "player": "Mikel Oyarzabal",
-          "team": "Spain",
-          "note": "First-choice striker and penalty taker; Euro 2024 final scorer, in-form and clutch — but not a banker vs a packed box."
-        },
-        {
-          "player": "Marko Arnautovic",
-          "team": "Austria",
-          "note": "37-year-old captain-in-attack, record scorer and penalty taker (scored vs Jordan) — aging marquee, treat as outsider scorer only."
+          "note": "1 assist in the group stage; 41% modelled chance to set one up."
         },
         {
           "player": "David Alaba",
           "team": "Austria",
-          "note": "33-year-old captain anchoring a back three plus corner deliverer; leadership and set-piece value but pace a liability vs Yamal."
+          "fairOdds": "7.51",
+          "banker": false,
+          "note": "1 assist in the group stage; 13% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Mikel Oyarzabal",
+        "backup": "Álex Baena",
+        "note": "Spain favoured to control the game, so a penalty is less pivotal; Mikel Oyarzabal would take one if awarded."
+      },
+      "lineups": {
+        "home": "Unai Simón, Aymeric Laporte, Pau Cubarsí, Marc Cucurella, Marcos Llorente, Mikel Merino, Rodri, Pedri , Mikel Oyarzabal, Álex Baena, Lamine Yamal",
+        "away": "Alexander Schlager, Stefan Posch, Philipp Lienhart, David Alaba, Phillipp Mwene, Nicolas Seiwald, Xaver Schlager, Romano Schmid, Konrad Laimer, Marcel Sabitzer, Marko Arnautovic",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 23,
+              "name": "Unai Simón",
+              "pos": "G"
+            },
+            {
+              "num": 14,
+              "name": "Aymeric Laporte",
+              "pos": "CD-L"
+            },
+            {
+              "num": 22,
+              "name": "Pau Cubarsí",
+              "pos": "CD-R"
+            },
+            {
+              "num": 24,
+              "name": "Marc Cucurella",
+              "pos": "LB"
+            },
+            {
+              "num": 5,
+              "name": "Marcos Llorente",
+              "pos": "RB"
+            },
+            {
+              "num": 6,
+              "name": "Mikel Merino",
+              "pos": "AM"
+            },
+            {
+              "num": 16,
+              "name": "Rodri",
+              "pos": "LM"
+            },
+            {
+              "num": 20,
+              "name": "Pedri ",
+              "pos": "RM"
+            },
+            {
+              "num": 21,
+              "name": "Mikel Oyarzabal",
+              "pos": "F"
+            },
+            {
+              "num": 15,
+              "name": "Álex Baena",
+              "pos": "AM-L"
+            },
+            {
+              "num": 19,
+              "name": "Lamine Yamal",
+              "pos": "AM-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": null,
+              "name": "Alexander Schlager",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Stefan Posch",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Philipp Lienhart",
+              "pos": "CB"
+            },
+            {
+              "num": null,
+              "name": "David Alaba",
+              "pos": "CB"
+            },
+            {
+              "num": null,
+              "name": "Phillipp Mwene",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Nicolas Seiwald",
+              "pos": "DM"
+            },
+            {
+              "num": null,
+              "name": "Xaver Schlager",
+              "pos": "DM"
+            },
+            {
+              "num": null,
+              "name": "Romano Schmid",
+              "pos": "RM"
+            },
+            {
+              "num": null,
+              "name": "Konrad Laimer",
+              "pos": "AM"
+            },
+            {
+              "num": null,
+              "name": "Marcel Sabitzer",
+              "pos": "LM"
+            },
+            {
+              "num": null,
+              "name": "Marko Arnautovic",
+              "pos": "F"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "note": "2 goals in 3 group games; 61% modelled anytime chance on 2.2 team xG."
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "note": "1 goal in 1 group game; 43% modelled anytime chance on 2.2 team xG."
+        },
+        {
+          "player": "Aymeric Laporte",
+          "team": "Spain",
+          "note": "1 assist in the group stage; 41% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
       "strength": 5,
       "sources": [
-        "https://www.fourfourtwo.com/team/spain-world-cup-2026-squad",
-        "https://www.skysports.com/football/news/12098/13543070",
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
-        "https://sports.yahoo.com/articles/spain-xi-vs-uruguay-predicted-070500524.html",
-        "https://www.aljazeera.com/sports/2026/6/25/world-cup-2026-uruguay-vs-spain-knockouts-prediction-lineups",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://www.aiscore.com/head-to-head/soccer-austria-vs-spain",
-        "https://theanalyst.com/articles/mikel-oyarzabal-spain-world-cup-2026-preview"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
@@ -16497,122 +16624,250 @@
     "por-cro-2026-07-02": {
       "win": {
         "pick": "Portugal",
-        "fairOdds": "1.95",
-        "reason": "Portugal edge it on individual quality — Vitinha, Bruno Fernandes and Nuno Mendes give them the higher ceiling, and they hit 5-0 vs Uzbekistan. But Croatia's Modric-Kovacic axis controls tempo and drags heavyweights into low-scoring, cagey knockouts, and Portugal drew DR Congo and blanked in a 0-0 vs Colombia. Genuine draw / extra-time risk: Croatia are 4-for-4 in World Cup shootouts and thrive when a game goes the distance, so 'Portugal advance' is far from 'Portugal in 90'. Call it ~52% Portugal progression, coin-flip in normal time."
+        "fairOdds": "1.53",
+        "reason": "Model: Portugal to win at 65% (Portugal 65% / draw 20% / Croatia 14%). Expected goals 2.0–0.8 from group-stage attack/defence rates (Portugal 1.8 for / 0.8 against per game, Croatia 1.6 / 1.6). Most likely score 2-0.",
+        "strength": 5
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.10",
+        "fairOdds": "3.46",
         "alt": "1-0",
-        "altOdds": "3.20"
+        "altOdds": "5.16"
       },
       "htft": {
         "pick": "Draw/Portugal",
-        "fairOdds": "4.20"
+        "fairOdds": "3.83"
       },
       "fullTime": {
-        "score": "1-1",
-        "fairOdds": "6.00"
+        "score": "2-0",
+        "fairOdds": "8.31"
       },
       "scorers": [
         {
-          "player": "Bruno Fernandes",
-          "fairOdds": "3.40",
-          "banker": false,
-          "note": "Portugal's penalty taker and No.10; primary set-piece + spot-kick threat, arrives late in the box."
-        },
-        {
           "player": "Cristiano Ronaldo",
-          "fairOdds": "3.30",
-          "banker": false,
-          "note": "NON-banker — 41yo, scored vs DR Congo but blanked/misfired in the 0-0 vs Colombia; veteran star, not a reliable knockout scorer."
+          "team": "Portugal",
+          "fairOdds": "1.95",
+          "banker": true,
+          "note": "2 goals in 3 group games; 51% modelled anytime chance on 2.0 team xG.",
+          "strength": 4
         },
         {
-          "player": "Andrej Kramaric",
-          "fairOdds": "4.20",
+          "player": "João Neves",
+          "team": "Portugal",
+          "fairOdds": "2.85",
           "banker": false,
-          "note": "Croatia's leading in-form forward (114 caps, 36 intl goals); poacher who reads knockout half-chances."
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Nuno Mendes",
+          "team": "Portugal",
+          "fairOdds": "2.85",
+          "banker": false,
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Rafael Leão",
+          "team": "Portugal",
+          "fairOdds": "2.85",
+          "banker": false,
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG.",
+          "strength": 3
         },
         {
           "player": "Ante Budimir",
-          "fairOdds": "4.75",
+          "team": "Croatia",
+          "fairOdds": "6.27",
           "banker": false,
-          "note": "Scored the winner vs Panama, target-man finisher on crosses; likely No.9 if Dalic goes direct."
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
           "player": "Bruno Fernandes",
-          "fairOdds": "4.50",
-          "banker": false,
-          "note": "Chief creator and dead-ball deliverer for Portugal; most assists likely to flow through him."
+          "team": "Portugal",
+          "fairOdds": "2.32",
+          "banker": true,
+          "note": "1 assist in the group stage; 43% modelled chance to set one up."
         },
         {
-          "player": "Nuno Mendes",
-          "fairOdds": "5.50",
+          "player": "João Cancelo",
+          "team": "Portugal",
+          "fairOdds": "2.32",
           "banker": false,
-          "note": "Overlapping left-back, Portugal's main width and cut-back supply from the left flank."
+          "note": "1 assist in the group stage; 43% modelled chance to set one up."
+        },
+        {
+          "player": "Pedro Neto",
+          "team": "Portugal",
+          "fairOdds": "2.32",
+          "banker": false,
+          "note": "1 assist in the group stage; 43% modelled chance to set one up."
         },
         {
           "player": "Ivan Perisic",
-          "fairOdds": "6.00",
+          "team": "Croatia",
+          "fairOdds": "6.68",
           "banker": false,
-          "note": "Assisted vs England (header to Musa); Croatia's key wide creator and set-piece presence at 37."
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
         }
       ],
       "penalty": {
-        "likelihood": "Medium — two disciplined defensive sides plus VAR make a spot-kick plausible in a tight knockout; also real chance the tie goes to a shootout",
-        "taker": "Bruno Fernandes",
-        "backup": "Cristiano Ronaldo",
-        "note": "In-play penalty: Fernandes is Portugal's designated taker, Ronaldo backup. If it reaches a shootout, Croatia hold a perfect 4-for-4 World Cup shootout record and are the side you want in the lottery — Modric, Kovacic, Perisic and Kramaric are seasoned takers; Portugal's shootout pedigree is thinner, so ET/pens strongly favours Croatia."
+        "likelihood": "low",
+        "taker": "Cristiano Ronaldo",
+        "backup": "João Neves",
+        "note": "Portugal favoured to control the game, so a penalty is less pivotal; Cristiano Ronaldo would take one if awarded."
       },
       "lineups": {
-        "home": "Portugal (4-3-3 / 4-2-3-1): Diogo Costa; Joao Cancelo, Ruben Dias, Renato Veiga, Nuno Mendes; Vitinha, Joao Neves; Bruno Fernandes; Bernardo Silva/Neto, Cristiano Ronaldo, Rafael Leao/Joao Felix. Martinez expected to recall Joao Neves to midfield.",
-        "away": "Croatia (4-2-3-1): Dominik Livakovic; Josip Stanisic, Josip Sutalo, Josko Gvardiol, Marin Pongracic; Mateo Kovacic, Luka Modric (c); Nikola Vlasic, Mario Pasalic/Andrej Kramaric, Ivan Perisic; Ante Budimir/Andrej Kramaric.",
-        "status": "probable"
+        "home": "Diogo Costa, Nuno Mendes, Rúben Dias, Renato Veiga, João Cancelo, Vitinha , Rúben Neves, Pedro Neto, Bruno Fernandes, João Félix, Cristiano Ronaldo",
+        "away": "Dominik Livakovic, Marin Pongracic, Josip Sutalo, Ivan Perisic, Josip Stanisic, Petar Sucic, Mateo Kovacic, Luka Modric, Ante Budimir, Martin Baturina, Nikola Vlasic",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Diogo Costa",
+              "pos": "G"
+            },
+            {
+              "num": 25,
+              "name": "Nuno Mendes",
+              "pos": "D"
+            },
+            {
+              "num": 3,
+              "name": "Rúben Dias",
+              "pos": "D"
+            },
+            {
+              "num": 13,
+              "name": "Renato Veiga",
+              "pos": "D"
+            },
+            {
+              "num": 20,
+              "name": "João Cancelo",
+              "pos": "D"
+            },
+            {
+              "num": 23,
+              "name": "Vitinha ",
+              "pos": "M"
+            },
+            {
+              "num": 21,
+              "name": "Rúben Neves",
+              "pos": "M"
+            },
+            {
+              "num": 18,
+              "name": "Pedro Neto",
+              "pos": "M"
+            },
+            {
+              "num": 8,
+              "name": "Bruno Fernandes",
+              "pos": "M"
+            },
+            {
+              "num": 11,
+              "name": "João Félix",
+              "pos": "M"
+            },
+            {
+              "num": 7,
+              "name": "Cristiano Ronaldo",
+              "pos": "F"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Dominik Livakovic",
+              "pos": "G"
+            },
+            {
+              "num": 3,
+              "name": "Marin Pongracic",
+              "pos": "CD-L"
+            },
+            {
+              "num": 6,
+              "name": "Josip Sutalo",
+              "pos": "CD-R"
+            },
+            {
+              "num": 14,
+              "name": "Ivan Perisic",
+              "pos": "LB"
+            },
+            {
+              "num": 2,
+              "name": "Josip Stanisic",
+              "pos": "RB"
+            },
+            {
+              "num": 17,
+              "name": "Petar Sucic",
+              "pos": "AM"
+            },
+            {
+              "num": 8,
+              "name": "Mateo Kovacic",
+              "pos": "LM"
+            },
+            {
+              "num": 10,
+              "name": "Luka Modric",
+              "pos": "RM"
+            },
+            {
+              "num": 11,
+              "name": "Ante Budimir",
+              "pos": "F"
+            },
+            {
+              "num": 16,
+              "name": "Martin Baturina",
+              "pos": "AM-L"
+            },
+            {
+              "num": 13,
+              "name": "Nikola Vlasic",
+              "pos": "AM-R"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "note": "41yo captain, oldest outfield starter in WC history; scored twice vs DR Congo but misfired in 0-0 vs Colombia — dangerous but no longer a banker."
+          "note": "2 goals in 3 group games; 51% modelled anytime chance on 2.0 team xG."
+        },
+        {
+          "player": "João Neves",
+          "team": "Portugal",
+          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG."
         },
         {
           "player": "Bruno Fernandes",
           "team": "Portugal",
-          "note": "No.10 engine, penalty + set-piece taker; Portugal's most reliable goal/assist involvement."
-        },
-        {
-          "player": "Ruben Dias",
-          "team": "Portugal",
-          "note": "Fitness watch — injury issues late in the City season, only started from the 2nd group game; key to Portugal's defensive solidity."
-        },
-        {
-          "player": "Luka Modric",
-          "team": "Croatia",
-          "note": "40yo captain at his 5th World Cup (196 caps); recovered from an April fractured cheekbone, still conducts tempo — the metronome that can slow Portugal."
-        },
-        {
-          "player": "Josko Gvardiol",
-          "team": "Croatia",
-          "note": "24yo Man City defender, back from a fractured-shin surgery; Croatia's best defender and ball-carrier from the back."
-        },
-        {
-          "player": "Mateo Kovacic",
-          "team": "Croatia",
-          "note": "32yo, 111 caps; recovered from injury, central to Dalic's possession game — pairs with Modric to control midfield."
+          "note": "1 assist in the group stage; 43% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
       "strength": 5,
       "sources": [
-        "https://www.si.com/soccer/portugal-predicted-lineup-vs-croatia-world-cup-7-2-26",
-        "https://www.goal.com/en/news/portugal-croatia-world-cup-preview",
-        "https://www.rotowire.com/soccer/article/portugal-vs-croatia-preview-2026-world-cup-round-of-32-120534",
-        "https://www.espn.com/soccer/story/_/id/49221788",
-        "https://www.sportsmole.co.uk/football/world-cup-2026/predicted-lineups/predicted-portugal-xi-vs-croatia_600436.html",
-        "https://www.planetfootball.com/stats-tables/countries-never-lost-world-cup-penalty-shootout",
-        "https://worldcuppass.com/croatia-world-cup-squad-2026/"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
@@ -16773,121 +17028,250 @@
     "sui-alg-2026-07-03": {
       "win": {
         "pick": "Switzerland",
-        "fairOdds": "2.20",
-        "reason": "Murat Yakin's Switzerland topped Group B (beating co-hosts Canada) with a disciplined structured 4-2-3-1 and tournament experience through Xhaka, Akanji, Rodriguez and Kobel — edges they carry into a knockout. But Algeria are pacey and dangerous with a red-hot Mahrez (2 goals already) and a Marseille-quality front line, and this reads as a genuine coin-flip. Expect a tight, low-scoring tie with real extra-time and penalty-shootout risk; the pick reflects Swiss game-management and set-piece edge, not certainty."
+        "fairOdds": "1.31",
+        "reason": "Model: Switzerland to win at 76% (Switzerland 76% / draw 13% / Algeria 10%). Expected goals 3.1–1.1 from group-stage attack/defence rates (Switzerland 2.0 for / 1.2 against per game, Algeria 1.6 / 2.0). Most likely score 3-1.",
+        "strength": 5
       },
       "halfTime": {
-        "score": "0-0",
-        "fairOdds": "2.05",
-        "alt": "1-0",
-        "altOdds": "3.40"
+        "score": "1-0",
+        "fairOdds": "4.63",
+        "alt": "0-0",
+        "altOdds": "7.21"
       },
       "htft": {
-        "pick": "Draw/Switzerland",
-        "fairOdds": "4.60"
+        "pick": "Switzerland/Switzerland",
+        "fairOdds": "1.64"
       },
       "fullTime": {
-        "score": "1-1",
-        "fairOdds": "6.00"
+        "score": "3-1",
+        "fairOdds": "12.21"
       },
       "scorers": [
         {
-          "player": "Breel Embolo",
-          "fairOdds": "3.60",
-          "banker": false,
-          "note": "Swiss No.9 and a group-stage penalty scorer vs Qatar; leads the line but pace of chances against a compact Algeria back line is uncertain — not a lock."
-        },
-        {
-          "player": "Riyad Mahrez",
-          "fairOdds": "3.40",
-          "banker": false,
-          "note": "Algeria's talisman and penalty/free-kick taker, already 2 goals this tournament; 35 and can drift out of games, so danger is real but not a banker."
-        },
-        {
-          "player": "Amine Gouiri",
-          "fairOdds": "4.20",
-          "banker": false,
-          "note": "Marseille striker leading Algeria's line with Amoura injured; scored from a corner vs Jordan, aerial and box threat."
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "fairOdds": "1.52",
+          "banker": true,
+          "note": "3 goals in 3 group games; 66% modelled anytime chance on 3.1 team xG.",
+          "strength": 5
         },
         {
           "player": "Rubén Vargas",
-          "fairOdds": "4.80",
+          "team": "Switzerland",
+          "fairOdds": "1.60",
           "banker": false,
-          "note": "Scored vs Bosnia; direct wide runner who cuts inside, one of Switzerland's most likely open-play scorers."
+          "note": "2 goals in 3 group games; 62% modelled anytime chance on 3.1 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Granit Xhaka",
+          "team": "Switzerland",
+          "fairOdds": "2.25",
+          "banker": false,
+          "note": "1 goal in 1 group game; 44% modelled anytime chance on 3.1 team xG.",
+          "strength": 3
+        },
+        {
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "fairOdds": "3.12",
+          "banker": false,
+          "note": "2 goals in 3 group games; 32% modelled anytime chance on 1.1 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Amine Gouiri",
+          "team": "Algeria",
+          "fairOdds": "4.83",
+          "banker": false,
+          "note": "1 goal in 1 group game; 21% modelled anytime chance on 1.1 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Riyad Mahrez",
-          "fairOdds": "5.00",
-          "banker": false,
-          "note": "Algeria's chief creator and set-piece supplier; corners/free-kicks feed Gouiri and Mandi aerially."
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "fairOdds": "1.72",
+          "banker": true,
+          "note": "2 assists in the group stage; 58% modelled chance to set one up."
         },
         {
-          "player": "Granit Xhaka",
-          "fairOdds": "5.50",
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "fairOdds": "1.93",
           "banker": false,
-          "note": "Swiss captain and deep-lying playmaker; dictates tempo and delivers set-pieces, prime assist source."
+          "note": "1 assist in the group stage; 52% modelled chance to set one up."
         },
         {
-          "player": "Rayan Aït-Nouri",
-          "fairOdds": "6.50",
+          "player": "Rubén Vargas",
+          "team": "Switzerland",
+          "fairOdds": "1.93",
           "banker": false,
-          "note": "Attacking left-back who overlaps and crosses; Algeria's width down the left creates chances for Gouiri."
+          "note": "1 assist in the group stage; 52% modelled chance to set one up."
+        },
+        {
+          "player": "Houssem Aouar",
+          "team": "Algeria",
+          "fairOdds": "2.47",
+          "banker": false,
+          "note": "2 assists in the group stage; 41% modelled chance to set one up."
         }
       ],
       "penalty": {
-        "likelihood": "Medium — tight knockout with box congestion at set-pieces and two pacey attacks drawing fouls; a shootout is a live possibility if level after 120.",
-        "taker": "Granit Xhaka (Switzerland) / Riyad Mahrez (Algeria)",
-        "backup": "Breel Embolo (Switzerland) / Farès Chaïbi (Algeria)",
-        "note": "In-game pen: Xhaka converted vs Bosnia, Embolo vs Qatar — Xhaka is lead taker; Mahrez is Algeria's designated penalty and free-kick taker. Shootout: expect Xhaka, Rodriguez, Freuler, Embolo, Vargas for Switzerland; Mahrez, Chaïbi, Bentaleb, Bensebaini, Gouiri for Algeria."
+        "likelihood": "low",
+        "taker": "Johan Manzambi",
+        "backup": "Rubén Vargas",
+        "note": "Switzerland favoured to control the game, so a penalty is less pivotal; Johan Manzambi would take one if awarded."
       },
       "lineups": {
-        "home": "Switzerland (4-2-3-1): Kobel (GK); Jaquez, Elvedi, Akanji, Rodríguez; Freuler, Xhaka; Sow, Manzambi, Vargas; Embolo. (Widmer a right-back doubt with hip discomfort — Jaquez retains after impressing vs Bosnia.)",
-        "away": "Algeria (4-2-3-1): Zidane Iqamane (GK); Belghali, Mandi, Bensebaini, Aït-Nouri; Boudaoui, Bentaleb; Mahrez, Maza, Chaïbi; Gouiri. (Amoura out — hamstring; Gouiri leads the line.)",
-        "status": "probable"
+        "home": "Gregor Kobel, Manuel Akanji, Nico Elvedi, Ricardo Rodríguez, Luca Jaquez, Johan Manzambi, Granit Xhaka, Remo Freuler, Breel Embolo, Rubén Vargas, Djibril Sow",
+        "away": "Oussama Benbot, Rafik Belghali, Aïssa Mandi, Ramy Bensebaini, Jaouen Hadjam, Ibrahim Maza, Nabil Bentaleb, Houssem Aouar, Riyad Mahrez, Amine Gouiri, Farès Chaïbi",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Gregor Kobel",
+              "pos": "G"
+            },
+            {
+              "num": 5,
+              "name": "Manuel Akanji",
+              "pos": "CD-L"
+            },
+            {
+              "num": 4,
+              "name": "Nico Elvedi",
+              "pos": "CD-R"
+            },
+            {
+              "num": 13,
+              "name": "Ricardo Rodríguez",
+              "pos": "LB"
+            },
+            {
+              "num": 25,
+              "name": "Luca Jaquez",
+              "pos": "RB"
+            },
+            {
+              "num": 9,
+              "name": "Johan Manzambi",
+              "pos": "AM"
+            },
+            {
+              "num": 10,
+              "name": "Granit Xhaka",
+              "pos": "LM"
+            },
+            {
+              "num": 8,
+              "name": "Remo Freuler",
+              "pos": "RM"
+            },
+            {
+              "num": 7,
+              "name": "Breel Embolo",
+              "pos": "F"
+            },
+            {
+              "num": 17,
+              "name": "Rubén Vargas",
+              "pos": "AM-L"
+            },
+            {
+              "num": 15,
+              "name": "Djibril Sow",
+              "pos": "AM-R"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": null,
+              "name": "Oussama Benbot",
+              "pos": "G"
+            },
+            {
+              "num": null,
+              "name": "Rafik Belghali",
+              "pos": "RB"
+            },
+            {
+              "num": null,
+              "name": "Aïssa Mandi",
+              "pos": "CB"
+            },
+            {
+              "num": null,
+              "name": "Ramy Bensebaini",
+              "pos": "CB"
+            },
+            {
+              "num": null,
+              "name": "Jaouen Hadjam",
+              "pos": "LB"
+            },
+            {
+              "num": null,
+              "name": "Ibrahim Maza",
+              "pos": "CM"
+            },
+            {
+              "num": null,
+              "name": "Nabil Bentaleb",
+              "pos": "CM"
+            },
+            {
+              "num": null,
+              "name": "Houssem Aouar",
+              "pos": "CM"
+            },
+            {
+              "num": null,
+              "name": "Riyad Mahrez",
+              "pos": "RW"
+            },
+            {
+              "num": null,
+              "name": "Amine Gouiri",
+              "pos": "F"
+            },
+            {
+              "num": null,
+              "name": "Farès Chaïbi",
+              "pos": "LW"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
-          "player": "Granit Xhaka",
+          "player": "Johan Manzambi",
           "team": "Switzerland",
-          "note": "Captain, metronome in midfield and lead penalty taker; converted vs Bosnia. Controls tempo — key to Swiss game-management in a knockout."
+          "note": "3 goals in 3 group games; 66% modelled anytime chance on 3.1 team xG."
         },
         {
-          "player": "Manuel Akanji",
+          "player": "Rubén Vargas",
           "team": "Switzerland",
-          "note": "Elite ball-playing centre-back; pace to cover Algeria's counters and Mahrez's runs. Anchor of the Swiss defensive structure."
+          "note": "2 goals in 3 group games; 62% modelled anytime chance on 3.1 team xG."
         },
         {
           "player": "Breel Embolo",
           "team": "Switzerland",
-          "note": "Starting striker; scored a group-stage penalty vs Qatar but must convert limited open-play chances against a compact block."
-        },
-        {
-          "player": "Christian Manzambi",
-          "team": "Switzerland",
-          "note": "Emerging attacking mid, scored a brace vs Bosnia; providing fresh creativity behind Embolo."
-        },
-        {
-          "player": "Riyad Mahrez",
-          "team": "Algeria",
-          "note": "Captain, talisman, penalty and free-kick taker; 2 goals this tournament including a double vs Austria. At 35 the game-defining but streaky threat."
-        },
-        {
-          "player": "Amine Gouiri",
-          "team": "Algeria",
-          "note": "Marseille striker leading the line with Amoura (hamstring) out; scored from a corner vs Jordan, main aerial/box outlet."
+          "note": "2 assists in the group stage; 58% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
       "strength": 5,
       "sources": [
-        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/predicted-lineups/predicted-switzerland-xi-vs-algeria_600426.html",
-        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/predicted-algeria-xi-vs-switzerland_600427.html",
-        "https://www.rotowire.com/soccer/article/switzerland-vs-algeria-preview-2026-world-cup-round-of-32-120535",
-        "https://khelnow.com/football/switzerland-vs-algeria-head-to-head-fifa-world-cup-2026",
-        "https://www.vavel.com/en/international-football/2026/07/01/1264874-switzerland-vs-algeria-2026-world-cup-round-of-32-preview.html",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
