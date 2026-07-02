@@ -987,6 +987,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
+    },
+    "esp-aut-2026-07-02": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 3,
+        "away": 0
+      },
+      "ft90": {
+        "home": 3,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3812,6 +3828,43 @@
           "team": "away",
           "player": "Stjepan Radeljic",
           "minute": 80,
+          "type": "yellow"
+        }
+      ]
+    },
+    "esp-aut-2026-07-02": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Pedro Porro",
+          "minute": 65,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 88,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Stefan Posch",
+          "minute": 83,
           "type": "yellow"
         }
       ]
@@ -17161,20 +17214,20 @@
     },
     "esp-aut-2026-07-02": {
       "corners": {
-        "home": 8,
+        "home": 9,
         "away": 0
       },
       "sot": {
-        "home": 7,
+        "home": 10,
         "away": 0
       },
       "shots": {
-        "home": 14,
-        "away": 2
+        "home": 23,
+        "away": 5
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -17182,12 +17235,12 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
           6,
-          2
+          3
         ],
         "away": [
           0,
@@ -17221,6 +17274,16 @@
           "firstActionMinute": 28,
           "isCorner": true,
           "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 71,
+          "isCorner": false,
+          "reliable": true
         }
       }
     }
