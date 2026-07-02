@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T19:20:29.443Z",
+    "generatedAt": "2026-07-02T19:30:03.851Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 62,
     "live": 1
@@ -8415,7 +8415,7 @@
       "updatedAt": "2026-07-02T19:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
+          "home": 4,
           "away": 0
         },
         "sot": {
@@ -8440,7 +8440,7 @@
         },
         "cornersByHalf": {
           "home": [
-            3,
+            4,
             0
           ],
           "away": [
@@ -8463,7 +8463,18 @@
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 27,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 28,
+            "isCorner": true,
+            "reliable": false
+          }
+        }
       }
     }
   }
