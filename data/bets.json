@@ -12464,6 +12464,47 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83859080239",
+      "slipNo": "83859080239",
+      "matchId": "esp-aut-2026-07-02",
+      "player": "Oyarzabal / Ronaldo / Switzerland",
+      "market": "Accumulator (3)",
+      "label": "REAL placed slip (R32) — 3-fold @ 33.356, RM50 → RM1667.81: Mikel Oyarzabal to score + Spain/Austria U3.5 (@3.72) · Cristiano Ronaldo to score + Portugal/Croatia U3.5 (@3.69) · Switzerland 1X + BTTS yes vs Algeria (@2.43) (3 legs)",
+      "odds": 33.356,
+      "stake": 50,
+      "placedAt": "02/07 11:23",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "scored",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "scored",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
