@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T01:20:24.617Z",
+    "generatedAt": "2026-07-02T01:30:09.154Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 65
   },
@@ -681,14 +681,6 @@
       },
       {
         "rank": 8,
-        "team": "Bosnia-Herzegovina",
-        "flag": "🇧🇦",
-        "value": 45,
-        "display": "45.0%",
-        "matches": 3
-      },
-      {
-        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -696,11 +688,19 @@
         "matches": 3
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
+        "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Bosnia-Herzegovina",
+        "flag": "🇧🇦",
+        "value": 42.9,
+        "display": "42.9%",
         "matches": 3
       }
     ],
@@ -6153,31 +6153,31 @@
         "teamBox": [
           {
             "team": "United States",
-            "possessionPct": 61.9,
-            "accuratePasses": 252,
-            "totalPasses": 288,
+            "possessionPct": 57.8,
+            "accuratePasses": 286,
+            "totalPasses": 336,
             "shotsOnTarget": 1,
             "totalShots": 5,
             "effectiveTackles": 5,
             "totalTackles": 8,
             "accurateCrosses": 3,
             "totalCrosses": 14,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 22
+            "accurateLongBalls": 13,
+            "totalLongBalls": 30
           },
           {
             "team": "Bosnia-Herzegovina",
-            "possessionPct": 38.1,
-            "accuratePasses": 132,
-            "totalPasses": 184,
+            "possessionPct": 42.2,
+            "accuratePasses": 192,
+            "totalPasses": 253,
             "shotsOnTarget": 1,
-            "totalShots": 1,
-            "effectiveTackles": 7,
-            "totalTackles": 10,
+            "totalShots": 2,
+            "effectiveTackles": 9,
+            "totalTackles": 12,
             "accurateCrosses": 0,
-            "totalCrosses": 2,
+            "totalCrosses": 3,
             "accurateLongBalls": 8,
-            "totalLongBalls": 36
+            "totalLongBalls": 42
           }
         ]
       },
