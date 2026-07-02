@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T23:10:04.154Z",
+    "generatedAt": "2026-07-02T23:20:03.820Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 63,
     "live": 1
@@ -8542,11 +8542,18 @@
       },
       "advanced": null,
       "goals": [],
-      "cards": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Rúben Dias",
+          "minute": 16,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-02T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "sot": {
@@ -8554,11 +8561,11 @@
           "away": 1
         },
         "shots": {
-          "home": 4,
-          "away": 1
+          "home": 6,
+          "away": 2
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -8566,12 +8573,12 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
           "home": [
-            1,
+            2,
             0
           ],
           "away": [

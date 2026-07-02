@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T23:10:07.416Z",
+    "generatedAt": "2026-07-02T23:20:07.741Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 67
   },
@@ -582,14 +582,6 @@
       },
       {
         "rank": 5,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 63.5,
-        "display": "63.5%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
@@ -597,7 +589,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -605,12 +597,20 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
         "display": "63.0%",
         "matches": 2
+      },
+      {
+        "rank": 8,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 60.7,
+        "display": "60.7%",
+        "matches": 4
       },
       {
         "rank": 9,
@@ -640,14 +640,6 @@
       },
       {
         "rank": 2,
-        "team": "Croatia",
-        "flag": "🇭🇷",
-        "value": 48,
-        "display": "48.0%",
-        "matches": 4
-      },
-      {
-        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
         "value": 47.2,
@@ -655,7 +647,7 @@
         "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -663,12 +655,20 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
         "display": "46.3%",
         "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Croatia",
+        "flag": "🇭🇷",
+        "value": 46.2,
+        "display": "46.2%",
+        "matches": 4
       },
       {
         "rank": 6,
@@ -888,8 +888,8 @@
         "rank": 2,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 63.2,
-        "display": "63.2%",
+        "value": 62.8,
+        "display": "62.8%",
         "matches": 4
       },
       {
@@ -1420,6 +1420,10 @@
         },
         {
           "name": "Renato Veiga",
+          "value": 1
+        },
+        {
+          "name": "Rúben Dias",
           "value": 1
         },
         {
@@ -6270,31 +6274,31 @@
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 67.4,
-            "accuratePasses": 49,
-            "totalPasses": 56,
+            "possessionPct": 56,
+            "accuratePasses": 74,
+            "totalPasses": 83,
             "shotsOnTarget": 1,
-            "totalShots": 4,
+            "totalShots": 6,
             "effectiveTackles": 0,
-            "totalTackles": 0,
-            "accurateCrosses": 0,
-            "totalCrosses": 3,
+            "totalTackles": 1,
+            "accurateCrosses": 1,
+            "totalCrosses": 5,
             "accurateLongBalls": 3,
-            "totalLongBalls": 3
+            "totalLongBalls": 4
           },
           {
             "team": "Croatia",
-            "possessionPct": 32.6,
-            "accuratePasses": 21,
-            "totalPasses": 29,
+            "possessionPct": 44,
+            "accuratePasses": 58,
+            "totalPasses": 68,
             "shotsOnTarget": 1,
-            "totalShots": 1,
+            "totalShots": 2,
             "effectiveTackles": 1,
             "totalTackles": 1,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 7
+            "accurateCrosses": 1,
+            "totalCrosses": 2,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 10
           }
         ]
       },
