@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T01:30:04.808Z",
+    "generatedAt": "2026-07-02T01:40:04.529Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 61,
     "live": 1
@@ -8289,31 +8289,38 @@
           "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Folarin Balogun",
+          "minute": 64,
+          "type": "red"
+        }
+      ],
       "updatedAt": "2026-07-02T00:00:00.000Z",
       "stats": {
         "corners": {
           "home": 4,
-          "away": 2
+          "away": 3
         },
         "sot": {
           "home": 1,
-          "away": 1
+          "away": 3
         },
         "shots": {
           "home": 5,
-          "away": 2
+          "away": 4
         },
         "yellow": {
           "home": 0,
           "away": 0
         },
         "red": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
@@ -8323,7 +8330,7 @@
           ],
           "away": [
             2,
-            0
+            1
           ]
         },
         "sotByHalf": {
@@ -8333,11 +8340,12 @@
           ],
           "away": [
             1,
-            0
+            2
           ]
         },
         "playerSot": {
-          "Ermedin Demirovic": 1
+          "Ermedin Demirovic": 2,
+          "Esmir Bajraktarevic": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -8351,6 +8359,16 @@
             "firstActionMinute": 26,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 73,
+            "isCorner": true,
+            "reliable": false
           }
         }
       }
