@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T01:40:07.029Z",
+    "generatedAt": "2026-07-02T01:50:06.566Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 65
   },
@@ -640,14 +640,6 @@
       },
       {
         "rank": 2,
-        "team": "Bosnia-Herzegovina",
-        "flag": "🇧🇦",
-        "value": 47.8,
-        "display": "47.8%",
-        "matches": 3
-      },
-      {
-        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
         "value": 47.2,
@@ -655,7 +647,7 @@
         "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -663,7 +655,7 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
@@ -671,7 +663,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 45.8,
@@ -679,7 +671,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -687,7 +679,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -695,7 +687,7 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -703,11 +695,19 @@
         "matches": 3
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
+        "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Bosnia-Herzegovina",
+        "flag": "🇧🇦",
+        "value": 44,
+        "display": "44.0%",
         "matches": 3
       }
     ],
@@ -1916,6 +1916,10 @@
         {
           "name": "Ermin Mahmic",
           "value": 1
+        },
+        {
+          "name": "Stjepan Radeljic",
+          "value": 1
         }
       ],
       "redCards": [
@@ -2062,6 +2066,11 @@
         },
         {
           "name": "Auston Trusty",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Malik Tillman",
           "value": 1,
           "matches": 1
         },
@@ -6165,31 +6174,31 @@
         "teamBox": [
           {
             "team": "United States",
-            "possessionPct": 53.7,
-            "accuratePasses": 295,
-            "totalPasses": 348,
-            "shotsOnTarget": 1,
-            "totalShots": 5,
+            "possessionPct": 52.1,
+            "accuratePasses": 307,
+            "totalPasses": 362,
+            "shotsOnTarget": 2,
+            "totalShots": 7,
             "effectiveTackles": 6,
             "totalTackles": 9,
             "accurateCrosses": 3,
             "totalCrosses": 14,
             "accurateLongBalls": 13,
-            "totalLongBalls": 33
+            "totalLongBalls": 34
           },
           {
             "team": "Bosnia-Herzegovina",
-            "possessionPct": 46.3,
-            "accuratePasses": 242,
-            "totalPasses": 308,
+            "possessionPct": 47.9,
+            "accuratePasses": 274,
+            "totalPasses": 342,
             "shotsOnTarget": 3,
-            "totalShots": 4,
-            "effectiveTackles": 11,
-            "totalTackles": 14,
+            "totalShots": 6,
+            "effectiveTackles": 12,
+            "totalTackles": 15,
             "accurateCrosses": 0,
-            "totalCrosses": 4,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 43
+            "totalCrosses": 5,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 44
           }
         ]
       },

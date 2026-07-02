@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T01:40:04.529Z",
+    "generatedAt": "2026-07-02T01:50:03.062Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 61,
     "live": 1
@@ -8275,7 +8275,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "advanced": null,
@@ -8287,6 +8287,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Malik Tillman",
+          "minute": 82,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -8295,6 +8303,18 @@
           "player": "Folarin Balogun",
           "minute": 64,
           "type": "red"
+        },
+        {
+          "team": "away",
+          "player": "Unknown",
+          "minute": 79,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Stjepan Radeljic",
+          "minute": 80,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-02T00:00:00.000Z",
@@ -8304,16 +8324,16 @@
           "away": 3
         },
         "sot": {
-          "home": 1,
+          "home": 2,
           "away": 3
         },
         "shots": {
-          "home": 5,
-          "away": 4
+          "home": 7,
+          "away": 6
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 1,
@@ -8321,7 +8341,7 @@
         },
         "cards": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
