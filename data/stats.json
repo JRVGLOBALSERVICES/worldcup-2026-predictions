@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T00:10:06.741Z",
+    "generatedAt": "2026-07-02T00:20:07.629Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 65
   },
@@ -567,19 +567,19 @@
       },
       {
         "rank": 4,
-        "team": "United States",
-        "flag": "🇺🇸",
-        "value": 65.2,
-        "display": "65.2%",
-        "matches": 3
-      },
-      {
-        "rank": 5,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
         "display": "64.3%",
         "matches": 4
+      },
+      {
+        "rank": 5,
+        "team": "United States",
+        "flag": "🇺🇸",
+        "value": 63.9,
+        "display": "63.9%",
+        "matches": 3
       },
       {
         "rank": 6,
@@ -681,6 +681,14 @@
       },
       {
         "rank": 8,
+        "team": "Bosnia-Herzegovina",
+        "flag": "🇧🇦",
+        "value": 45,
+        "display": "45.0%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -688,19 +696,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
-        "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Bosnia-Herzegovina",
-        "flag": "🇧🇦",
-        "value": 42.1,
-        "display": "42.1%",
         "matches": 3
       }
     ],
@@ -6153,31 +6153,31 @@
         "teamBox": [
           {
             "team": "United States",
-            "possessionPct": 81.2,
-            "accuratePasses": 62,
-            "totalPasses": 66,
+            "possessionPct": 77.1,
+            "accuratePasses": 113,
+            "totalPasses": 125,
             "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
-            "accurateCrosses": 0,
-            "totalCrosses": 3,
-            "accurateLongBalls": 2,
-            "totalLongBalls": 4
-          },
-          {
-            "team": "Bosnia-Herzegovina",
-            "possessionPct": 18.8,
-            "accuratePasses": 9,
-            "totalPasses": 15,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
+            "totalShots": 3,
             "effectiveTackles": 2,
             "totalTackles": 3,
             "accurateCrosses": 0,
-            "totalCrosses": 1,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 4
+            "totalCrosses": 5,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 9
+          },
+          {
+            "team": "Bosnia-Herzegovina",
+            "possessionPct": 22.9,
+            "accuratePasses": 21,
+            "totalPasses": 36,
+            "shotsOnTarget": 1,
+            "totalShots": 1,
+            "effectiveTackles": 2,
+            "totalTackles": 4,
+            "accurateCrosses": 0,
+            "totalCrosses": 2,
+            "accurateLongBalls": 3,
+            "totalLongBalls": 13
           }
         ]
       },

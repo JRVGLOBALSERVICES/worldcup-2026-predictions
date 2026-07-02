@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T00:10:03.104Z",
+    "generatedAt": "2026-07-02T00:20:03.348Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 61,
     "live": 1
@@ -8282,15 +8282,15 @@
       "stats": {
         "corners": {
           "home": 2,
-          "away": 1
+          "away": 2
         },
         "sot": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "shots": {
-          "home": 1,
-          "away": 0
+          "home": 3,
+          "away": 1
         },
         "yellow": {
           "home": 0,
@@ -8310,7 +8310,7 @@
             0
           ],
           "away": [
-            1,
+            2,
             0
           ]
         },
@@ -8320,11 +8320,13 @@
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Ermedin Demirovic": 1
+        },
         "firstGoalMethod": null,
         "firstPenalty": null,
         "waterBreak": {}
