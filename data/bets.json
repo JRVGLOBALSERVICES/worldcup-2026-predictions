@@ -12673,6 +12673,69 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83860189147",
+      "slipNo": "83860189147",
+      "matchId": "esp-aut-2026-07-02",
+      "player": "Spain/Portugal/Switzerland/Australia/Colombia/Canada/Brazil/Mexico/Paraguay/Argentina",
+      "market": "Accumulator (10)",
+      "label": "REAL 1xBet acca (slip 83860189147, 02/07) — 10 legs @ 65.025, RM50 → RM3,251.25. Spain 1X · Por/Cro BTTS · Swi/Alg O1.5 · Aus/Egy O1.5 · Col/Gha U2.5 · Can/Mar BTTS · Bra/Nor BTTS · Mex/Eng O1.5 · Par/Fra O2.0 · Messi to score anytime. (Sibling of 83860211343; leg 10 is Messi anytime @1.52 only, no U4.5.)",
+      "odds": 65.025,
+      "stake": 50,
+      "placedAt": "02/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "btts"
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalUnder",
+            "line": 2.5
+          },
+          {
+            "matchId": "can-mar-2026-07-04",
+            "kind": "btts"
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "btts"
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "par-fra-2026-07-04",
+            "kind": "totalOver",
+            "line": 2
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
