@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T19:10:06.579Z",
+    "generatedAt": "2026-07-02T19:20:08.128Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 66
   },
@@ -502,8 +502,8 @@
         "rank": 5,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 90.3,
-        "display": "90.3%",
+        "value": 90.2,
+        "display": "90.2%",
         "matches": 3
       },
       {
@@ -574,6 +574,14 @@
       },
       {
         "rank": 4,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 63.4,
+        "display": "63.4%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
@@ -581,7 +589,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -589,7 +597,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -597,19 +605,11 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.2,
         "display": "62.2%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 60.3,
-        "display": "60.3%",
         "matches": 3
       },
       {
@@ -762,14 +762,6 @@
       },
       {
         "rank": 7,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 67.9,
-        "display": "67.9%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -777,7 +769,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 66.7,
@@ -785,12 +777,20 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Uzbekistan",
         "flag": "🇺🇿",
         "value": 66.7,
         "display": "66.7%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 66.1,
+        "display": "66.1%",
+        "matches": 4
       }
     ],
     "crossCompletion": [
@@ -880,8 +880,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 63,
-        "display": "63.0%",
+        "value": 63.2,
+        "display": "63.2%",
         "matches": 3
       },
       {
@@ -6260,31 +6260,31 @@
         "teamBox": [
           {
             "team": "Spain",
-            "possessionPct": 46.8,
-            "accuratePasses": 39,
-            "totalPasses": 48,
+            "possessionPct": 56.1,
+            "accuratePasses": 100,
+            "totalPasses": 117,
             "shotsOnTarget": 1,
             "totalShots": 3,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
-            "accurateCrosses": 2,
-            "totalCrosses": 4,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 1
+            "effectiveTackles": 2,
+            "totalTackles": 4,
+            "accurateCrosses": 3,
+            "totalCrosses": 8,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 4
           },
           {
             "team": "Austria",
-            "possessionPct": 53.2,
-            "accuratePasses": 48,
-            "totalPasses": 58,
+            "possessionPct": 43.9,
+            "accuratePasses": 81,
+            "totalPasses": 96,
             "shotsOnTarget": 0,
             "totalShots": 0,
             "effectiveTackles": 2,
             "totalTackles": 3,
             "accurateCrosses": 0,
-            "totalCrosses": 1,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 5
+            "totalCrosses": 2,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 6
           }
         ]
       }
