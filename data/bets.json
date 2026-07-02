@@ -12392,6 +12392,47 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83859113897",
+      "slipNo": "83859113897",
+      "matchId": "esp-aut-2026-07-02",
+      "player": "Yamal / Ronaldo / Switzerland",
+      "market": "Accumulator (3)",
+      "label": "REAL placed slip (R32) — 3-fold @ 35.552, RM14.23 → RM505.92: Lamine Yamal to score + Spain/Austria U3.5 (@3.965) · Cristiano Ronaldo to score + Portugal/Croatia U3.5 (@3.69) · Switzerland 1X + BTTS yes vs Algeria (@2.43) (3 legs)",
+      "odds": 35.552,
+      "stake": 14.23,
+      "placedAt": "02/07 11:25",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "scored",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "scored",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
