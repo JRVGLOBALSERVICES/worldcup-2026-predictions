@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T01:00:04.783Z",
+    "generatedAt": "2026-07-02T01:20:04.105Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 61,
     "live": 1
@@ -8267,7 +8267,10 @@
     },
     "usa-bih-2026-07-02": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -8290,7 +8293,7 @@
       "updatedAt": "2026-07-02T00:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
+          "home": 4,
           "away": 2
         },
         "sot": {
@@ -8316,7 +8319,7 @@
         "cornersByHalf": {
           "home": [
             3,
-            0
+            1
           ],
           "away": [
             2,
