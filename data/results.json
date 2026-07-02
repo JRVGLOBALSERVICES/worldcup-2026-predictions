@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T00:40:04.242Z",
+    "generatedAt": "2026-07-02T00:50:03.404Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 61,
     "live": 1
@@ -8272,11 +8272,20 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Folarin Balogun",
+          "minute": 44,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-02T00:00:00.000Z",
       "stats": {
@@ -8285,11 +8294,11 @@
           "away": 2
         },
         "sot": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "shots": {
-          "home": 2,
+          "home": 4,
           "away": 1
         },
         "yellow": {
@@ -8327,7 +8336,7 @@
         "playerSot": {
           "Ermedin Demirovic": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
