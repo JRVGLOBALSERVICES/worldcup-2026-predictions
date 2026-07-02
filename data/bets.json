@@ -12736,6 +12736,45 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83866867543",
+      "slipNo": "83866867543",
+      "matchId": "por-cro-2026-07-02",
+      "player": "Portugal/Spain/Switzerland",
+      "market": "Accumulator (3)",
+      "label": "REAL 1xBet acca (slip 83866867543, accepted 02/07 18:07) — 3 legs @ 7.158, RM70 → RM501.08. Por/Cro 1X & BTTS · Esp/Aut Under 3.5 · Swi/Alg 1X & BTTS.",
+      "odds": 7.158,
+      "stake": 70,
+      "placedAt": "02/07 18:07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "btts"
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "btts"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
