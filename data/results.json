@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T19:30:03.851Z",
+    "generatedAt": "2026-07-02T19:40:05.010Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 62,
     "live": 1
@@ -8406,25 +8406,34 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-02T19:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 4,
+          "home": 5,
           "away": 0
         },
         "sot": {
-          "home": 1,
+          "home": 5,
           "away": 0
         },
         "shots": {
-          "home": 3,
-          "away": 0
+          "home": 7,
+          "away": 1
         },
         "yellow": {
           "home": 0,
@@ -8440,7 +8449,7 @@
         },
         "cornersByHalf": {
           "home": [
-            4,
+            5,
             0
           ],
           "away": [
@@ -8450,7 +8459,7 @@
         },
         "sotByHalf": {
           "home": [
-            1,
+            4,
             0
           ],
           "away": [
@@ -8459,9 +8468,10 @@
           ]
         },
         "playerSot": {
-          "Lamine Yamal": 1
+          "Lamine Yamal": 3,
+          "Mikel Oyarzabal": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {

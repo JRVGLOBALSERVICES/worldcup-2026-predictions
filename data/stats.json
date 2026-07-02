@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T19:30:06.542Z",
+    "generatedAt": "2026-07-02T19:40:08.451Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 66
   },
@@ -550,6 +550,14 @@
     "possession": [
       {
         "rank": 1,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 65.4,
+        "display": "65.4%",
+        "matches": 3
+      },
+      {
+        "rank": 2,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 65.3,
@@ -557,7 +565,7 @@
         "matches": 3
       },
       {
-        "rank": 1,
+        "rank": 2,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 65.3,
@@ -565,20 +573,12 @@
         "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
         "display": "64.3%",
         "matches": 4
-      },
-      {
-        "rank": 4,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 64.1,
-        "display": "64.1%",
-        "matches": 3
       },
       {
         "rank": 5,
@@ -880,8 +880,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 63.3,
-        "display": "63.3%",
+        "value": 65.5,
+        "display": "65.5%",
         "matches": 3
       },
       {
@@ -2644,7 +2644,7 @@
       "scorers": [
         {
           "name": "Mikel Oyarzabal",
-          "value": 2,
+          "value": 3,
           "matches": 3
         },
         {
@@ -2666,6 +2666,11 @@
         },
         {
           "name": "Dani Olmo",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Marc Cucurella",
           "value": 1,
           "matches": 1
         },
@@ -6256,35 +6261,40 @@
       },
       "760497": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Marc Cucurella",
+            "team": "Spain"
+          }
+        ],
         "teamBox": [
           {
             "team": "Spain",
-            "possessionPct": 58.4,
-            "accuratePasses": 134,
-            "totalPasses": 155,
-            "shotsOnTarget": 1,
-            "totalShots": 3,
+            "possessionPct": 62.2,
+            "accuratePasses": 204,
+            "totalPasses": 232,
+            "shotsOnTarget": 5,
+            "totalShots": 7,
             "effectiveTackles": 2,
-            "totalTackles": 4,
-            "accurateCrosses": 3,
-            "totalCrosses": 9,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 7
+            "totalTackles": 5,
+            "accurateCrosses": 4,
+            "totalCrosses": 12,
+            "accurateLongBalls": 9,
+            "totalLongBalls": 12
           },
           {
             "team": "Austria",
-            "possessionPct": 41.6,
-            "accuratePasses": 95,
-            "totalPasses": 115,
+            "possessionPct": 37.8,
+            "accuratePasses": 114,
+            "totalPasses": 145,
             "shotsOnTarget": 0,
-            "totalShots": 0,
-            "effectiveTackles": 2,
-            "totalTackles": 3,
+            "totalShots": 1,
+            "effectiveTackles": 3,
+            "totalTackles": 4,
             "accurateCrosses": 0,
-            "totalCrosses": 2,
+            "totalCrosses": 3,
             "accurateLongBalls": 6,
-            "totalLongBalls": 8
+            "totalLongBalls": 13
           }
         ]
       }
