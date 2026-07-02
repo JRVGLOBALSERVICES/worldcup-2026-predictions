@@ -12505,6 +12505,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83859508053",
+      "slipNo": "83859508053",
+      "matchId": "sui-alg-2026-07-03",
+      "player": "Switzerland / Spain / Portugal",
+      "market": "Accumulator (3)",
+      "label": "REAL placed slip (R32) — 3-fold @ 11.151, RM50 → RM557.57: Switzerland/Algeria Over 2.5 (@2.182) · Spain to win + Spain/Austria Over 2.5 (@2.02) · Portugal to win + Portugal/Croatia Under 3.5 (@2.53) (3 legs)",
+      "odds": 11.151,
+      "stake": 50,
+      "placedAt": "02/07 11:54",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "sui-alg-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "esp-aut-2026-07-02",
+            "kind": "resultAndTotalOver",
+            "outcome": "1",
+            "line": 2.5
+          },
+          {
+            "matchId": "por-cro-2026-07-02",
+            "kind": "resultAndTotalUnder",
+            "outcome": "1",
+            "line": 3.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
