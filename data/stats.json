@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-01T23:10:06.460Z",
+    "generatedAt": "2026-07-02T00:10:06.741Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 65
   },
@@ -567,6 +567,14 @@
       },
       {
         "rank": 4,
+        "team": "United States",
+        "flag": "🇺🇸",
+        "value": 65.2,
+        "display": "65.2%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
@@ -574,7 +582,7 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
@@ -582,7 +590,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -590,7 +598,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -598,7 +606,7 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.2,
@@ -606,19 +614,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
-        "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 58.9,
-        "display": "58.9%",
         "matches": 3
       }
     ],
@@ -701,7 +701,7 @@
         "flag": "🇧🇦",
         "value": 42.1,
         "display": "42.1%",
-        "matches": 2
+        "matches": 3
       }
     ],
     "tackleSuccess": [
@@ -6144,6 +6144,40 @@
             "totalCrosses": 22,
             "accurateLongBalls": 33,
             "totalLongBalls": 83
+          }
+        ]
+      },
+      "760494": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "United States",
+            "possessionPct": 81.2,
+            "accuratePasses": 62,
+            "totalPasses": 66,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 1,
+            "totalTackles": 1,
+            "accurateCrosses": 0,
+            "totalCrosses": 3,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 4
+          },
+          {
+            "team": "Bosnia-Herzegovina",
+            "possessionPct": 18.8,
+            "accuratePasses": 9,
+            "totalPasses": 15,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 2,
+            "totalTackles": 3,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 4
           }
         ]
       },
