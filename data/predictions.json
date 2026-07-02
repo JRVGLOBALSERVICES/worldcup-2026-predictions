@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T21:00:10.447Z",
+    "generatedAt": "2026-07-02T22:05:24.278Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-02T21:00:10.447Z"
@@ -16626,106 +16626,91 @@
     "por-cro-2026-07-02": {
       "win": {
         "pick": "Portugal",
-        "fairOdds": "1.53",
-        "reason": "Model: Portugal to win at 65% (Portugal 65% / draw 20% / Croatia 14%). Expected goals 2.0–0.8 from group-stage attack/defence rates (Portugal 1.8 for / 0.8 against per game, Croatia 1.6 / 1.6). Most likely score 2-0.",
-        "strength": 5
+        "fairOdds": "1.78",
+        "reason": "Confirmed XIs in. Portugal ~56% (Opta 56.2 / draw 24 / Croatia 19.5) — NOT a lock, ~44% for draw-or-Croatia. Leão + João Neves start (Félix, Rúben Neves benched): more pace and legs. Key edge: Rafael Leão isolated 1v1 on the left vs 40-yr-old Perišić at LB, with Nuno Mendes overlapping. But Croatia will sit deep, slow tempo through Modrić–Kovačić and threaten set-pieces — a genuine draw / low-scoring trap.",
+        "strength": 4
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "3.46",
+        "fairOdds": "2.35",
         "alt": "1-0",
-        "altOdds": "5.16"
+        "altOdds": "3.60"
       },
       "htft": {
         "pick": "Draw/Portugal",
-        "fairOdds": "3.83"
+        "fairOdds": "4.10"
       },
       "fullTime": {
-        "score": "2-0",
-        "fairOdds": "8.31"
+        "score": "1-0",
+        "fairOdds": "6.50"
       },
       "scorers": [
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "fairOdds": "1.95",
-          "banker": true,
-          "note": "2 goals in 3 group games; 51% modelled anytime chance on 2.0 team xG.",
-          "strength": 4
-        },
-        {
-          "player": "João Neves",
-          "team": "Portugal",
-          "fairOdds": "2.85",
+          "fairOdds": "2.35",
           "banker": false,
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Nuno Mendes",
-          "team": "Portugal",
-          "fairOdds": "2.85",
-          "banker": false,
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG.",
+          "note": "Striker + primary penalty taker, but 41 and feast-or-famine: brace vs Uzbekistan then BLANKED vs Colombia. Non-banker anytime scorer vs a deep, physical, dribble-defending block.",
           "strength": 3
         },
         {
           "player": "Rafael Leão",
           "team": "Portugal",
-          "fairOdds": "2.85",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG.",
+          "note": "The matchup edge — isolated 1v1 vs 40-yr-old Perišić with Mendes overlapping. High shot/goal-involvement expectation on the left.",
+          "strength": 3
+        },
+        {
+          "player": "Bruno Fernandes",
+          "team": "Portugal",
+          "fairOdds": "3.00",
+          "banker": false,
+          "note": "Arriving runs, set-piece routines, penalty backup — multiple ways to score. Highest chance volume in the side.",
           "strength": 3
         },
         {
           "player": "Ante Budimir",
           "team": "Croatia",
-          "fairOdds": "6.27",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "1 goal in 1 group game; 16% modelled anytime chance on 0.8 team xG.",
-          "strength": 1
+          "note": "Croatia lone striker + set-piece focal point; scored the 1-0 winner vs Panama. Their likeliest scorer if they nick one.",
+          "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Bruno Fernandes",
           "team": "Portugal",
-          "fairOdds": "2.32",
-          "banker": true,
-          "note": "1 assist in the group stage; 43% modelled chance to set one up."
-        },
-        {
-          "player": "João Cancelo",
-          "team": "Portugal",
-          "fairOdds": "2.32",
+          "fairOdds": "2.40",
           "banker": false,
-          "note": "1 assist in the group stage; 43% modelled chance to set one up."
+          "note": "Chief creator and primary set-piece deliverer (corners/free-kicks)."
         },
         {
-          "player": "Pedro Neto",
+          "player": "Nuno Mendes",
           "team": "Portugal",
-          "fairOdds": "2.32",
+          "fairOdds": "3.10",
           "banker": false,
-          "note": "1 assist in the group stage; 43% modelled chance to set one up."
+          "note": "Overlapping LB feeding Leão, plus direct free-kicks — doubled-up left side vs Perišić."
         },
         {
-          "player": "Ivan Perisic",
+          "player": "Luka Modric",
           "team": "Croatia",
-          "fairOdds": "6.68",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "1 assist in the group stage; 15% modelled chance to set one up."
+          "note": "Croatia creator + corner/FK deliverer (assisted Vlašić winner vs Ghana); source of any Croatia set-piece goal."
         }
       ],
       "penalty": {
         "likelihood": "low",
         "taker": "Cristiano Ronaldo",
-        "backup": "João Neves",
-        "note": "Portugal favoured to control the game, so a penalty is less pivotal; Cristiano Ronaldo would take one if awarded."
+        "backup": "Bruno Fernandes",
+        "note": "Ronaldo stays primary penalty taker for his final World Cup, Bruno Fernandes co/backup. Croatia sit deep so a spot-kick is less likely; Modrić the senior taker if Croatia win one."
       },
       "lineups": {
-        "home": "Diogo Costa, Nuno Mendes, Rúben Dias, Renato Veiga, João Cancelo, Vitinha , Rúben Neves, Pedro Neto, Bruno Fernandes, João Félix, Cristiano Ronaldo",
-        "away": "Dominik Livakovic, Marin Pongracic, Josip Sutalo, Ivan Perisic, Josip Stanisic, Petar Sucic, Mateo Kovacic, Luka Modric, Ante Budimir, Martin Baturina, Nikola Vlasic",
-        "status": "unconfirmed",
+        "home": "Diogo Costa, João Cancelo, Rúben Dias, Renato Veiga, Nuno Mendes, João Neves, Vitinha, Pedro Neto, Bruno Fernandes, Rafael Leão, Cristiano Ronaldo",
+        "away": "Dominik Livakovic, Josip Stanisic, Josip Sutalo, Marin Pongracic, Ivan Perisic, Mateo Kovacic, Luka Modric, Nikola Vlasic, Petar Sucic, Martin Baturina, Ante Budimir",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -16735,49 +16720,49 @@
               "pos": "G"
             },
             {
-              "num": 25,
-              "name": "Nuno Mendes",
-              "pos": "D"
+              "num": 20,
+              "name": "João Cancelo",
+              "pos": "RB"
             },
             {
               "num": 3,
               "name": "Rúben Dias",
-              "pos": "D"
+              "pos": "CD-R"
             },
             {
               "num": 13,
               "name": "Renato Veiga",
-              "pos": "D"
+              "pos": "CD-L"
             },
             {
-              "num": 20,
-              "name": "João Cancelo",
-              "pos": "D"
-            },
-            {
-              "num": 23,
-              "name": "Vitinha ",
-              "pos": "M"
+              "num": 25,
+              "name": "Nuno Mendes",
+              "pos": "LB"
             },
             {
               "num": 21,
-              "name": "Rúben Neves",
-              "pos": "M"
+              "name": "João Neves",
+              "pos": "DM-R"
+            },
+            {
+              "num": 23,
+              "name": "Vitinha",
+              "pos": "DM-L"
             },
             {
               "num": 18,
               "name": "Pedro Neto",
-              "pos": "M"
+              "pos": "AM-R"
             },
             {
               "num": 8,
               "name": "Bruno Fernandes",
-              "pos": "M"
+              "pos": "AM"
             },
             {
-              "num": 11,
-              "name": "João Félix",
-              "pos": "M"
+              "num": 15,
+              "name": "Rafael Leão",
+              "pos": "AM-L"
             },
             {
               "num": 7,
@@ -16849,27 +16834,44 @@
       },
       "playerNotes": [
         {
-          "player": "Cristiano Ronaldo",
+          "player": "Rafael Leão",
           "team": "Portugal",
-          "note": "2 goals in 3 group games; 51% modelled anytime chance on 2.0 team xG."
+          "note": "Starts ahead of João Félix — pace and isolated 1v1 threat down the left directly at 40-yr-old Perišić. THE tactical lever of the match."
         },
         {
           "player": "João Neves",
           "team": "Portugal",
-          "note": "1 goal in 1 group game; 35% modelled anytime chance on 2.0 team xG."
+          "note": "In for Rúben Neves — younger, higher-energy ball-winner in the pivot with Vitinha; more legs to press and screen Croatia counters. Headed a goal vs DR Congo."
         },
         {
-          "player": "Bruno Fernandes",
+          "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "note": "1 assist in the group stage; 43% modelled chance to set one up."
+          "note": "41 — oldest to start a WC match; primary pen taker. Volatile: brace vs Uzbekistan, blank vs Colombia. Not a banker."
+        },
+        {
+          "player": "Nuno Mendes",
+          "team": "Portugal",
+          "note": "Attacking LB overlapping behind Leão; direct free-kick threat (curled one in vs Uzbekistan)."
+        },
+        {
+          "player": "Luka Modric",
+          "team": "Croatia",
+          "note": "40, fifth World Cup — Croatia's tempo-setter and set-piece deliverer. Needs the game slowed to suit older legs alongside Kovačić."
+        },
+        {
+          "player": "Ante Budimir",
+          "team": "Croatia",
+          "note": "34, lone striker and aerial target; scored the Panama winner. Threat comes from set-pieces and knock-downs, not runs in behind."
         }
       ],
       "confidence": "medium",
       "strength": 5,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed XIs — Squawka / PrizePicks / RotoWire (2026-07-02)",
+        "Opta supercomputer: Portugal 56.2% / draw 24% / Croatia 19.5% — theanalyst.com",
+        "Set-piece/penalty duties — RotoWire 2026 WC takers-by-team; Tribuna Portugal set-pieces",
+        "Group form — ESPN MD16 recap; Wikipedia 2026 WC Group K/L",
+        "https://www.rotowire.com/soccer/article/portugal-vs-croatia-picks-odds-best-bets-2026-world-cup-round-of-32-120682"
       ],
       "pitchReport": {
         "facts": [
