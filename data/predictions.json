@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T09:10:08.498Z",
+    "generatedAt": "2026-07-02T18:25:13.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-02T09:10:08.497Z"
@@ -16220,108 +16220,93 @@
     "esp-aut-2026-07-02": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "1.35",
-        "reason": "Model: Spain to win at 74% (Spain 74% / draw 17% / Austria 9%). Expected goals 2.2–0.6 from group-stage attack/defence rates (Spain 1.6 for / 0.6 against per game, Austria 1.8 / 1.8). Most likely score 2-0.",
-        "strength": 5
+        "fairOdds": "1.40",
+        "reason": "Spain start their strongest XI (Yamal, Oyarzabal, Baena front; Rodri-Pedri-Olmo). Model ~70% Spain / 18% draw / 12% Austria. Austria (Gregoritsch leads line, Arnautovic benched) will sit in a mid/low block and counter — a real draw/low-scoring risk, so win-to-nil and 2+ margin lines are downgraded. Draw-no-bet is the safer route.",
+        "strength": 4
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "3.50",
+        "fairOdds": "3.30",
         "alt": "1-0",
-        "altOdds": "5.45"
+        "altOdds": "3.90"
       },
       "htft": {
         "pick": "Draw/Spain",
-        "fairOdds": "3.37"
+        "fairOdds": "3.10"
       },
       "fullTime": {
-        "score": "2-0",
-        "fairOdds": "6.90"
+        "score": "1-0",
+        "fairOdds": "6.20"
       },
       "scorers": [
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "fairOdds": "1.65",
+          "fairOdds": "1.85",
           "banker": true,
-          "note": "2 goals in 3 group games; 61% modelled anytime chance on 2.2 team xG.",
+          "note": "Spain's form striker + confirmed penalty taker; 2 goals in the group. Cleanest Spain anytime pick from the confirmed XI.",
           "strength": 5
-        },
-        {
-          "player": "Álex Baena",
-          "team": "Spain",
-          "fairOdds": "2.34",
-          "banker": false,
-          "note": "1 goal in 1 group game; 43% modelled anytime chance on 2.2 team xG.",
-          "strength": 3
         },
         {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "2.34",
+          "fairOdds": "2.30",
           "banker": false,
-          "note": "1 goal in 1 group game; 43% modelled anytime chance on 2.2 team xG.",
+          "note": "On the mark this tournament and Spain's chief threat — but Rangnick's plan is explicitly to double-team him, capping the anytime value.",
+          "strength": 4
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "fairOdds": "2.55",
+          "banker": false,
+          "note": "Scored the 1-0 winner vs Uruguay and now carries the width + set-piece load with Williams/Pino injured. In form.",
           "strength": 3
         },
         {
-          "player": "Marko Arnautovic",
+          "player": "Michael Gregoritsch",
           "team": "Austria",
-          "fairOdds": "5.09",
+          "fairOdds": "5.80",
           "banker": false,
-          "note": "2 goals in 3 group games; 20% modelled anytime chance on 0.6 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Marcel Sabitzer",
-          "team": "Austria",
-          "fairOdds": "8.13",
-          "banker": false,
-          "note": "1 goal in 1 group game; 12% modelled anytime chance on 0.6 team xG.",
+          "note": "Starts up front with Arnautovic benched, but he's a link/target man who assists more than he finishes; low anytime chance vs Spain's 0-conceded group.",
           "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Aymeric Laporte",
+          "player": "Álex Baena",
           "team": "Spain",
-          "fairOdds": "2.46",
+          "fairOdds": "2.60",
           "banker": true,
-          "note": "1 assist in the group stage; 41% modelled chance to set one up."
+          "note": "On free kicks, corners and open-play creation with Williams out — Spain's primary supply line tonight."
         },
         {
-          "player": "Dani Olmo",
+          "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "2.46",
+          "fairOdds": "2.70",
           "banker": false,
-          "note": "1 assist in the group stage; 41% modelled chance to set one up."
-        },
-        {
-          "player": "Marcos Llorente",
-          "team": "Spain",
-          "fairOdds": "2.46",
-          "banker": false,
-          "note": "1 assist in the group stage; 41% modelled chance to set one up."
+          "note": "Volume creator from the right; assisted twice in the group stage."
         },
         {
           "player": "David Alaba",
           "team": "Austria",
-          "fairOdds": "7.51",
+          "fairOdds": "7.20",
           "banker": false,
-          "note": "1 assist in the group stage; 13% modelled chance to set one up."
+          "note": "Austria's dead-ball delivery onto Danso/Posch — their most credible set-piece assist route."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "low-medium",
         "taker": "Mikel Oyarzabal",
-        "backup": "Álex Baena",
-        "note": "Spain favoured to control the game, so a penalty is less pivotal; Mikel Oyarzabal would take one if awarded."
+        "backup": "Lamine Yamal",
+        "note": "Spain's Oyarzabal takes spot-kicks; Yamal the backup. Yamal/Baena dribbling draws box fouls. For Austria, with Arnautovic benched the penalty duty shifts to Marcel Sabitzer."
       },
       "lineups": {
-        "home": "Unai Simón, Aymeric Laporte, Pau Cubarsí, Marc Cucurella, Marcos Llorente, Mikel Merino, Rodri, Pedri , Mikel Oyarzabal, Álex Baena, Lamine Yamal",
-        "away": "Alexander Schlager, Stefan Posch, Philipp Lienhart, David Alaba, Phillipp Mwene, Nicolas Seiwald, Xaver Schlager, Romano Schmid, Konrad Laimer, Marcel Sabitzer, Marko Arnautovic",
-        "status": "unconfirmed",
+        "home": "Unai Simón, Pedro Porro, Pau Cubarsí, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Dani Olmo, Lamine Yamal, Mikel Oyarzabal, Álex Baena",
+        "away": "Alexander Schlager, Stefan Posch, Kevin Danso, David Alaba, Konrad Laimer, Nicolas Seiwald, Xaver Schlager, Paul Wanner, Romano Schmid, Marcel Sabitzer, Michael Gregoritsch",
+        "status": "confirmed",
         "homeXI": {
-          "formation": "4-2-3-1",
+          "formation": "4-3-3",
           "players": [
             {
               "num": 23,
@@ -16329,14 +16314,19 @@
               "pos": "G"
             },
             {
-              "num": 14,
-              "name": "Aymeric Laporte",
-              "pos": "CD-L"
+              "num": 2,
+              "name": "Pedro Porro",
+              "pos": "RB"
             },
             {
               "num": 22,
               "name": "Pau Cubarsí",
-              "pos": "CD-R"
+              "pos": "CB-R"
+            },
+            {
+              "num": 14,
+              "name": "Aymeric Laporte",
+              "pos": "CB-L"
             },
             {
               "num": 24,
@@ -16344,99 +16334,94 @@
               "pos": "LB"
             },
             {
-              "num": 5,
-              "name": "Marcos Llorente",
-              "pos": "RB"
-            },
-            {
-              "num": 6,
-              "name": "Mikel Merino",
-              "pos": "AM"
-            },
-            {
               "num": 16,
               "name": "Rodri",
-              "pos": "LM"
+              "pos": "DM"
             },
             {
               "num": 20,
-              "name": "Pedri ",
-              "pos": "RM"
+              "name": "Pedri",
+              "pos": "CM-R"
             },
             {
-              "num": 21,
-              "name": "Mikel Oyarzabal",
-              "pos": "F"
-            },
-            {
-              "num": 15,
-              "name": "Álex Baena",
-              "pos": "AM-L"
+              "num": 10,
+              "name": "Dani Olmo",
+              "pos": "CM-L"
             },
             {
               "num": 19,
               "name": "Lamine Yamal",
-              "pos": "AM-R"
+              "pos": "RW"
+            },
+            {
+              "num": 21,
+              "name": "Mikel Oyarzabal",
+              "pos": "ST"
+            },
+            {
+              "num": 15,
+              "name": "Álex Baena",
+              "pos": "LW"
             }
           ]
         },
         "awayXI": {
-          "formation": "4-2-3-1",
+          "formation": "4-3-2-1",
           "players": [
             {
-              "num": null,
+              "num": 1,
               "name": "Alexander Schlager",
               "pos": "G"
             },
             {
-              "num": null,
+              "num": 4,
               "name": "Stefan Posch",
               "pos": "RB"
             },
             {
-              "num": null,
-              "name": "Philipp Lienhart",
-              "pos": "CB"
+              "num": 3,
+              "name": "Kevin Danso",
+              "pos": "CB-R"
             },
             {
-              "num": null,
+              "num": 15,
               "name": "David Alaba",
-              "pos": "CB"
+              "pos": "CB-L"
             },
             {
-              "num": null,
-              "name": "Phillipp Mwene",
+              "num": 22,
+              "name": "Konrad Laimer",
               "pos": "LB"
             },
             {
-              "num": null,
+              "num": 6,
               "name": "Nicolas Seiwald",
-              "pos": "DM"
+              "pos": "CM"
             },
             {
-              "num": null,
+              "num": 8,
               "name": "Xaver Schlager",
-              "pos": "DM"
+              "pos": "CM"
             },
             {
-              "num": null,
+              "num": 19,
+              "name": "Paul Wanner",
+              "pos": "CM"
+            },
+            {
+              "num": 20,
               "name": "Romano Schmid",
-              "pos": "RM"
+              "pos": "AM-R"
             },
             {
-              "num": null,
-              "name": "Konrad Laimer",
-              "pos": "AM"
-            },
-            {
-              "num": null,
+              "num": 7,
               "name": "Marcel Sabitzer",
-              "pos": "LM"
+              "pos": "AM-L"
             },
             {
-              "num": null,
-              "name": "Marko Arnautovic",
-              "pos": "F"
+              "num": 9,
+              "name": "Michael Gregoritsch",
+              "pos": "ST"
             }
           ]
         }
@@ -16445,38 +16430,55 @@
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "note": "2 goals in 3 group games; 61% modelled anytime chance on 2.2 team xG."
+          "note": "Starts as the No.9 and takes penalties; 2 goals in the group — Spain's likeliest scorer."
+        },
+        {
+          "player": "Lamine Yamal",
+          "team": "Spain",
+          "note": "Starts right wing; Austria's game-plan is built specifically to double him up, so expect him crowded."
         },
         {
           "player": "Álex Baena",
           "team": "Spain",
-          "note": "1 goal in 1 group game; 43% modelled anytime chance on 2.2 team xG."
+          "note": "Starts left with Williams & Pino injured — on all set pieces and Spain's main creator/second scorer threat."
         },
         {
-          "player": "Aymeric Laporte",
+          "player": "Dani Olmo",
           "team": "Spain",
-          "note": "1 assist in the group stage; 41% modelled chance to set one up."
+          "note": "Starts in the left-8 role (in for Merino); a passing/arriving threat between the lines."
+        },
+        {
+          "player": "Michael Gregoritsch",
+          "team": "Austria",
+          "note": "Leads the line with Arnautovic on the bench — a link/target forward, more creator than finisher."
+        },
+        {
+          "player": "Marcel Sabitzer",
+          "team": "Austria",
+          "note": "Austria's set-piece shooter and — with Arnautovic benched — the penalty taker; their most likely goal via a dead ball or arriving shot."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed official lineups (both XIs) — FIFA match centre / Yahoo Sports / SI, July 2 2026",
+        "https://sports.yahoo.com/articles/spain-vs-austria-projected-lineups-110722520.html",
+        "https://www.rotowire.com/soccer/article/spain-vs-austria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120533",
+        "Set-piece/penalty takers: RotoWire WC2026 takers-by-team",
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form"
       ],
       "pitchReport": {
         "facts": [
           "Spain: 7 pts, +5 GD across 3 group games (5 for / 0 against).",
           "Austria: 4 pts, +0 GD across 3 group games (6 for / 6 against).",
           "Spain's Mikel Oyarzabal leads them with 2 goals in 3 games.",
-          "Austria's Marko Arnautovic leads them with 2 goals in 3 games."
+          "Austria bench top scorer Arnautovic (knock) — Gregoritsch, a link forward, leads the line."
         ],
         "assumptions": [
           "Model projects Spain to carry more of the ball and the better chances (higher attack rating); Austria to sit compact and play on the break.",
           "Goal expectancy 2.2–0.6 (Spain–Austria) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "XIs CONFIRMED. Spain name their strongest side (Yamal-Oyarzabal-Baena; Olmo in for Merino). Austria bench Arnautovic — Gregoritsch leads the line, Sabitzer on set pieces/pens. Lineup props now firm, not provisional.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Spain shade the chance-creation (2.2 vs 0.6 xG) — they should make the running.",
         "drawRisk": "Moderate — 16.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -16576,8 +16578,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs confirmed — scorer/lineup props now grounded in the actual starters."
           },
           {
             "name": "Ignoring the draw",
@@ -16590,7 +16592,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 0,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
@@ -16607,8 +16609,8 @@
           "line": "The real value is on Over 2.5, not the pick."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+          "tag": "0 warnings",
+          "line": "XIs confirmed — Arnautovic benched, Gregoritsch starts for Austria."
         }
       },
       "resolution": {
