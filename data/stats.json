@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T20:20:33.620Z",
+    "generatedAt": "2026-07-02T20:30:07.754Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 66
   },
@@ -552,8 +552,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 66.9,
-        "display": "66.9%",
+        "value": 67,
+        "display": "67.0%",
         "matches": 3
       },
       {
@@ -762,14 +762,6 @@
       },
       {
         "rank": 7,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 67.5,
-        "display": "67.5%",
-        "matches": 3
-      },
-      {
-        "rank": 8,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -777,7 +769,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 66.7,
@@ -785,12 +777,20 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Uzbekistan",
         "flag": "🇺🇿",
         "value": 66.7,
         "display": "66.7%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 66.1,
+        "display": "66.1%",
+        "matches": 4
       }
     ],
     "crossCompletion": [
@@ -880,8 +880,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 66.3,
-        "display": "66.3%",
+        "value": 65.6,
+        "display": "65.6%",
         "matches": 3
       },
       {
@@ -2656,9 +2656,19 @@
           "name": "Lamine Yamal",
           "value": 1,
           "matches": 1
+        },
+        {
+          "name": "Pedro Porro",
+          "value": 1,
+          "matches": 1
         }
       ],
       "assists": [
+        {
+          "name": "Álex Baena",
+          "value": 1,
+          "matches": 1
+        },
         {
           "name": "Aymeric Laporte",
           "value": 1,
@@ -2676,11 +2686,6 @@
         },
         {
           "name": "Marcos Llorente",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Mikel Oyarzabal",
           "value": 1,
           "matches": 1
         }
@@ -6265,36 +6270,40 @@
           {
             "name": "Marc Cucurella",
             "team": "Spain"
+          },
+          {
+            "name": "Álex Baena",
+            "team": "Spain"
           }
         ],
         "teamBox": [
           {
             "team": "Spain",
-            "possessionPct": 66.6,
-            "accuratePasses": 376,
-            "totalPasses": 411,
-            "shotsOnTarget": 7,
-            "totalShots": 14,
+            "possessionPct": 67,
+            "accuratePasses": 434,
+            "totalPasses": 475,
+            "shotsOnTarget": 8,
+            "totalShots": 19,
             "effectiveTackles": 9,
-            "totalTackles": 13,
+            "totalTackles": 14,
             "accurateCrosses": 5,
             "totalCrosses": 18,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 17
+            "accurateLongBalls": 15,
+            "totalLongBalls": 21
           },
           {
             "team": "Austria",
-            "possessionPct": 33.4,
-            "accuratePasses": 166,
-            "totalPasses": 211,
+            "possessionPct": 33,
+            "accuratePasses": 188,
+            "totalPasses": 238,
             "shotsOnTarget": 0,
-            "totalShots": 2,
+            "totalShots": 3,
             "effectiveTackles": 8,
-            "totalTackles": 10,
-            "accurateCrosses": 1,
-            "totalCrosses": 5,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 21
+            "totalTackles": 11,
+            "accurateCrosses": 2,
+            "totalCrosses": 6,
+            "accurateLongBalls": 10,
+            "totalLongBalls": 25
           }
         ]
       }
