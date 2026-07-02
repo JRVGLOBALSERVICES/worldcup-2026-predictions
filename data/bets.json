@@ -17161,16 +17161,16 @@
     },
     "esp-aut-2026-07-02": {
       "corners": {
-        "home": 3,
+        "home": 8,
         "away": 0
       },
       "sot": {
-        "home": 1,
+        "home": 7,
         "away": 0
       },
       "shots": {
-        "home": 3,
-        "away": 0
+        "home": 14,
+        "away": 2
       },
       "yellow": {
         "home": 0,
@@ -17186,8 +17186,8 @@
       },
       "cornersByHalf": {
         "home": [
-          3,
-          0
+          6,
+          2
         ],
         "away": [
           0,
@@ -17196,8 +17196,8 @@
       },
       "sotByHalf": {
         "home": [
-          1,
-          0
+          5,
+          1
         ],
         "away": [
           0,
@@ -17205,11 +17205,24 @@
         ]
       },
       "playerSot": {
-        "Lamine Yamal": 1
+        "Lamine Yamal": 3,
+        "Mikel Oyarzabal": 2,
+        "Álex Baena": 1
       },
-      "firstGoalMethod": null,
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 27,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 28,
+          "isCorner": true,
+          "reliable": false
+        }
+      }
     }
   }
 }
