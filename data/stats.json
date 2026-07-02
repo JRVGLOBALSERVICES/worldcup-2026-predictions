@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T20:40:10.168Z",
+    "generatedAt": "2026-07-02T20:50:07.753Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 66
   },
@@ -499,11 +499,11 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 90.6,
-        "display": "90.6%",
+        "value": 90.5,
+        "display": "90.5%",
         "matches": 3
       },
       {
@@ -552,8 +552,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 67.1,
-        "display": "67.1%",
+        "value": 66.5,
+        "display": "66.5%",
         "matches": 3
       },
       {
@@ -778,19 +778,19 @@
       },
       {
         "rank": 7,
-        "team": "Uzbekistan",
-        "flag": "🇺🇿",
+        "team": "Spain",
+        "flag": "🇪🇸",
         "value": 66.7,
         "display": "66.7%",
         "matches": 3
       },
       {
-        "rank": 10,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 66.1,
-        "display": "66.1%",
-        "matches": 4
+        "rank": 7,
+        "team": "Uzbekistan",
+        "flag": "🇺🇿",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 3
       }
     ],
     "crossCompletion": [
@@ -880,8 +880,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 64.9,
-        "display": "64.9%",
+        "value": 65,
+        "display": "65.0%",
         "matches": 3
       },
       {
@@ -1292,6 +1292,10 @@
       ],
       "yellowCards": [
         {
+          "name": "Stefan Posch",
+          "value": 2
+        },
+        {
           "name": "Konrad Laimer",
           "value": 1
         },
@@ -1301,10 +1305,6 @@
         },
         {
           "name": "Marko Arnautovic",
-          "value": 1
-        },
-        {
-          "name": "Stefan Posch",
           "value": 1
         }
       ],
@@ -6279,31 +6279,31 @@
         "teamBox": [
           {
             "team": "Spain",
-            "possessionPct": 67.4,
-            "accuratePasses": 468,
-            "totalPasses": 516,
-            "shotsOnTarget": 8,
-            "totalShots": 19,
-            "effectiveTackles": 11,
-            "totalTackles": 17,
-            "accurateCrosses": 5,
-            "totalCrosses": 19,
-            "accurateLongBalls": 17,
-            "totalLongBalls": 25
+            "possessionPct": 65.6,
+            "accuratePasses": 522,
+            "totalPasses": 577,
+            "shotsOnTarget": 9,
+            "totalShots": 21,
+            "effectiveTackles": 12,
+            "totalTackles": 18,
+            "accurateCrosses": 7,
+            "totalCrosses": 22,
+            "accurateLongBalls": 21,
+            "totalLongBalls": 31
           },
           {
             "team": "Austria",
-            "possessionPct": 32.6,
-            "accuratePasses": 200,
-            "totalPasses": 254,
+            "possessionPct": 34.4,
+            "accuratePasses": 247,
+            "totalPasses": 305,
             "shotsOnTarget": 0,
-            "totalShots": 3,
+            "totalShots": 5,
             "effectiveTackles": 8,
-            "totalTackles": 12,
-            "accurateCrosses": 2,
-            "totalCrosses": 6,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 29
+            "totalTackles": 14,
+            "accurateCrosses": 3,
+            "totalCrosses": 10,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 34
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T20:40:05.516Z",
+    "generatedAt": "2026-07-02T20:50:05.272Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 62,
     "live": 1
@@ -8431,24 +8431,31 @@
           "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Stefan Posch",
+          "minute": 83,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-02T19:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 8,
+          "home": 9,
           "away": 0
         },
         "sot": {
-          "home": 8,
+          "home": 9,
           "away": 0
         },
         "shots": {
-          "home": 19,
-          "away": 3
+          "home": 21,
+          "away": 5
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -8456,12 +8463,12 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             6,
-            2
+            3
           ],
           "away": [
             0,
