@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-02T18:25:13.000Z",
+    "generatedAt": "2026-07-02T18:30:09.436Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-02T09:10:08.497Z"
+    "modelUpdatedAt": "2026-07-02T18:30:09.434Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -16472,13 +16472,13 @@
           "Spain: 7 pts, +5 GD across 3 group games (5 for / 0 against).",
           "Austria: 4 pts, +0 GD across 3 group games (6 for / 6 against).",
           "Spain's Mikel Oyarzabal leads them with 2 goals in 3 games.",
-          "Austria bench top scorer Arnautovic (knock) — Gregoritsch, a link forward, leads the line."
+          "Austria's Marko Arnautovic leads them with 2 goals in 3 games."
         ],
         "assumptions": [
           "Model projects Spain to carry more of the ball and the better chances (higher attack rating); Austria to sit compact and play on the break.",
           "Goal expectancy 2.2–0.6 (Spain–Austria) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs CONFIRMED. Spain name their strongest side (Yamal-Oyarzabal-Baena; Olmo in for Merino). Austria bench Arnautovic — Gregoritsch leads the line, Sabitzer on set pieces/pens. Lineup props now firm, not provisional.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Spain shade the chance-creation (2.2 vs 0.6 xG) — they should make the running.",
         "drawRisk": "Moderate — 16.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -16493,7 +16493,7 @@
           "Group goal-rates are a tiny sample; Spain's number may be inflated by one result."
         ],
         "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Mikel Oyarzabal, or news the underdog is missing a defensive linchpin."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": {
         "source": "1xBet (PC)",
@@ -16579,7 +16579,7 @@
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs confirmed — scorer/lineup props now grounded in the actual starters."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
@@ -16609,8 +16609,8 @@
           "line": "The real value is on Over 2.5, not the pick."
         },
         "trap": {
-          "tag": "0 warnings",
-          "line": "XIs confirmed — Arnautovic benched, Gregoritsch starts for Austria."
+          "tag": "Clean",
+          "line": "Nothing trips the filter — about as solid as a call gets."
         }
       },
       "resolution": {
