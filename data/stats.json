@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T04:30:07.409Z",
+    "generatedAt": "2026-07-03T04:40:08.806Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 68
   },
@@ -502,8 +502,8 @@
         "rank": 5,
         "team": "Algeria",
         "flag": "🇩🇿",
-        "value": 90.1,
-        "display": "90.1%",
+        "value": 89.9,
+        "display": "89.9%",
         "matches": 4
       },
       {
@@ -608,8 +608,8 @@
         "rank": 8,
         "team": "Algeria",
         "flag": "🇩🇿",
-        "value": 61.5,
-        "display": "61.5%",
+        "value": 61.1,
+        "display": "61.1%",
         "matches": 4
       },
       {
@@ -634,8 +634,8 @@
         "rank": 1,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 56,
-        "display": "56.0%",
+        "value": 53.8,
+        "display": "53.8%",
         "matches": 3
       },
       {
@@ -2959,6 +2959,10 @@
       "yellowCards": [
         {
           "name": "Farès Chaïbi",
+          "value": 1
+        },
+        {
+          "name": "Hicham Boudaoui",
           "value": 1
         },
         {
@@ -6389,31 +6393,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 43.4,
-            "accuratePasses": 268,
-            "totalPasses": 328,
+            "possessionPct": 44.9,
+            "accuratePasses": 303,
+            "totalPasses": 372,
             "shotsOnTarget": 3,
-            "totalShots": 6,
-            "effectiveTackles": 5,
-            "totalTackles": 9,
+            "totalShots": 7,
+            "effectiveTackles": 8,
+            "totalTackles": 13,
             "accurateCrosses": 3,
-            "totalCrosses": 12,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 31
+            "totalCrosses": 13,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 38
           },
           {
             "team": "Algeria",
-            "possessionPct": 56.6,
-            "accuratePasses": 374,
-            "totalPasses": 443,
+            "possessionPct": 55.1,
+            "accuratePasses": 397,
+            "totalPasses": 472,
             "shotsOnTarget": 2,
-            "totalShots": 6,
+            "totalShots": 7,
             "effectiveTackles": 7,
-            "totalTackles": 13,
+            "totalTackles": 14,
             "accurateCrosses": 1,
-            "totalCrosses": 5,
+            "totalCrosses": 6,
             "accurateLongBalls": 20,
-            "totalLongBalls": 49
+            "totalLongBalls": 52
           }
         ]
       }
