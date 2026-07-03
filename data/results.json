@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T19:00:05.210Z",
+    "generatedAt": "2026-07-03T19:10:03.092Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 65,
     "live": 1
@@ -8806,7 +8806,10 @@
     },
     "aus-egy-2026-07-03": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -8838,7 +8841,7 @@
         },
         "shots": {
           "home": 6,
-          "away": 3
+          "away": 4
         },
         "yellow": {
           "home": 0,
@@ -8883,7 +8886,7 @@
             "anchorMinute": 22,
             "source": "delay",
             "breakEndMinute": 26,
-            "firstActionType": "Ball touch",
+            "firstActionType": "Foul",
             "firstActionMinute": 31,
             "isCorner": false,
             "reliable": true
