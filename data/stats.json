@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T23:20:21.374Z",
+    "generatedAt": "2026-07-03T23:30:06.659Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -614,19 +614,19 @@
       },
       {
         "rank": 9,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 59.8,
+        "display": "59.8%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
         "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 59.5,
-        "display": "59.5%",
-        "matches": 4
       }
     ],
     "shotAccuracy": [
@@ -642,8 +642,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 47.4,
-        "display": "47.4%",
+        "value": 47.5,
+        "display": "47.5%",
         "matches": 4
       },
       {
@@ -716,8 +716,8 @@
         "rank": 1,
         "team": "Cape Verde",
         "flag": "🇨🇻",
-        "value": 78.6,
-        "display": "78.6%",
+        "value": 76.7,
+        "display": "76.7%",
         "matches": 3
       },
       {
@@ -860,19 +860,19 @@
       },
       {
         "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 29.4,
-        "display": "29.4%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 28.8,
         "display": "28.8%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Czechia",
+        "flag": "🇨🇿",
+        "value": 28.6,
+        "display": "28.6%",
+        "matches": 2
       }
     ],
     "longBallAccuracy": [
@@ -904,8 +904,8 @@
         "rank": 4,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 53.4,
-        "display": "53.4%",
+        "value": 55.1,
+        "display": "55.1%",
         "matches": 4
       },
       {
@@ -2726,6 +2726,11 @@
       "flag": "🇨🇻",
       "scorers": [
         {
+          "name": "Deroy Duarte",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Hélio Varela",
           "value": 1,
           "matches": 1
@@ -2736,10 +2741,20 @@
           "matches": 1
         }
       ],
-      "assists": [],
+      "assists": [
+        {
+          "name": "Ryan Mendes",
+          "value": 1,
+          "matches": 1
+        }
+      ],
       "yellowCards": [
         {
           "name": "Diney Borges",
+          "value": 1
+        },
+        {
+          "name": "Kevin Pina",
           "value": 1
         },
         {
@@ -6486,36 +6501,40 @@
           {
             "name": "Lisandro Martínez",
             "team": "Argentina"
+          },
+          {
+            "name": "Ryan Mendes",
+            "team": "Cape Verde"
           }
         ],
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 63.1,
-            "accuratePasses": 449,
-            "totalPasses": 481,
-            "shotsOnTarget": 3,
-            "totalShots": 4,
+            "possessionPct": 64.4,
+            "accuratePasses": 505,
+            "totalPasses": 542,
+            "shotsOnTarget": 4,
+            "totalShots": 6,
             "effectiveTackles": 6,
             "totalTackles": 10,
             "accurateCrosses": 0,
-            "totalCrosses": 2,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 19
+            "totalCrosses": 3,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 23
           },
           {
             "team": "Cape Verde",
-            "possessionPct": 36.9,
-            "accuratePasses": 239,
-            "totalPasses": 275,
-            "shotsOnTarget": 1,
-            "totalShots": 4,
+            "possessionPct": 35.6,
+            "accuratePasses": 252,
+            "totalPasses": 293,
+            "shotsOnTarget": 2,
+            "totalShots": 5,
             "effectiveTackles": 6,
-            "totalTackles": 11,
+            "totalTackles": 12,
             "accurateCrosses": 3,
             "totalCrosses": 9,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 28
+            "accurateLongBalls": 12,
+            "totalLongBalls": 31
           }
         ]
       }
