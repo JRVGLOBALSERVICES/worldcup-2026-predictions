@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T01:20:08.719Z",
+    "generatedAt": "2026-07-03T02:24:53.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-03T01:20:08.718Z"
@@ -17032,106 +17032,114 @@
     "sui-alg-2026-07-03": {
       "win": {
         "pick": "Switzerland",
-        "fairOdds": "1.31",
-        "reason": "Model: Switzerland to win at 76% (Switzerland 76% / draw 13% / Algeria 10%). Expected goals 3.1–1.1 from group-stage attack/defence rates (Switzerland 2.0 for / 1.2 against per game, Algeria 1.6 / 2.0). Most likely score 3-1.",
-        "strength": 5
+        "fairOdds": "1.72",
+        "reason": "Confirmed XIs: Switzerland field their in-form group-winning side (Ndoye-Manzambi-Vargas behind Embolo, Xhaka+Freuler pivot). Solid favourite, NOT a banker — model ~Switzerland 57% / draw 24% / Algeria 19%. Algeria conceded 7 in 3 group games (5 from outside the box) and play attacking full-backs, so this leans open, not a shut-out. Most likely 2-1.",
+        "strength": 4
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "4.63",
-        "alt": "0-0",
-        "altOdds": "7.21"
+        "score": "0-0",
+        "fairOdds": "3.05",
+        "alt": "1-0",
+        "altOdds": "3.80"
       },
       "htft": {
-        "pick": "Switzerland/Switzerland",
-        "fairOdds": "1.64"
+        "pick": "Draw/Switzerland",
+        "fairOdds": "3.40"
       },
       "fullTime": {
-        "score": "3-1",
-        "fairOdds": "12.21"
+        "score": "2-1",
+        "fairOdds": "8.50"
       },
       "scorers": [
         {
           "player": "Johan Manzambi",
           "team": "Switzerland",
-          "fairOdds": "1.52",
+          "fairOdds": "2.30",
           "banker": true,
-          "note": "3 goals in 3 group games; 66% modelled anytime chance on 3.1 team xG.",
+          "note": "3 goals in the group stage; scored + assisted the 2-1 win over Canada. The No.10 and creative engine of the confirmed XI.",
           "strength": 5
+        },
+        {
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "fairOdds": "2.20",
+          "banker": false,
+          "note": "Confirmed lone striker; scored vs Qatar. Focal point and secondary penalty option.",
+          "strength": 4
+        },
+        {
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "fairOdds": "2.80",
+          "banker": false,
+          "note": "Forest winger, direct runner — starts wide-right and targets the space behind Algeria's high full-backs.",
+          "strength": 4
         },
         {
           "player": "Rubén Vargas",
           "team": "Switzerland",
-          "fairOdds": "1.60",
+          "fairOdds": "3.00",
           "banker": false,
-          "note": "2 goals in 3 group games; 62% modelled anytime chance on 3.1 team xG.",
-          "strength": 5
-        },
-        {
-          "player": "Granit Xhaka",
-          "team": "Switzerland",
-          "fairOdds": "2.25",
-          "banker": false,
-          "note": "1 goal in 1 group game; 44% modelled anytime chance on 3.1 team xG.",
+          "note": "Scored vs Canada; consistent left-side output in the confirmed band.",
           "strength": 3
         },
         {
           "player": "Riyad Mahrez",
           "team": "Algeria",
-          "fairOdds": "3.12",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "2 goals in 3 group games; 32% modelled anytime chance on 1.1 team xG.",
+          "note": "Captain (35); 2 goals vs Austria and takes all Algeria set pieces. Effective in bursts — NOT a 90-minute banker.",
           "strength": 2
         },
         {
-          "player": "Amine Gouiri",
+          "player": "Ramy Bensebaini",
           "team": "Algeria",
-          "fairOdds": "4.83",
+          "fairOdds": "6.50",
           "banker": false,
-          "note": "1 goal in 1 group game; 21% modelled anytime chance on 1.1 team xG.",
+          "note": "CB with set-piece and penalty pedigree (Gladbach); aerial threat off Mahrez deliveries. Backup pen taker.",
           "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Breel Embolo",
-          "team": "Switzerland",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "fairOdds": "3.20",
+          "banker": false,
+          "note": "All Algeria set pieces run through him; primary creator despite age."
         },
         {
           "player": "Johan Manzambi",
           "team": "Switzerland",
-          "fairOdds": "1.93",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "1 assist in the group stage; 52% modelled chance to set one up."
+          "note": "1 assist in the group; links the attacking band."
         },
         {
-          "player": "Rubén Vargas",
+          "player": "Dan Ndoye",
           "team": "Switzerland",
-          "fairOdds": "1.93",
+          "fairOdds": "2.70",
           "banker": false,
-          "note": "1 assist in the group stage; 52% modelled chance to set one up."
+          "note": "Cut-backs from the right after beating the full-back."
         },
         {
           "player": "Houssem Aouar",
           "team": "Algeria",
-          "fairOdds": "2.47",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "2 assists in the group stage; 41% modelled chance to set one up."
+          "note": "Confirmed No.10; shares free-kick duty and links transitions."
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Johan Manzambi",
-        "backup": "Rubén Vargas",
-        "note": "Switzerland favoured to control the game, so a penalty is less pivotal; Johan Manzambi would take one if awarded."
+        "likelihood": "medium",
+        "taker": "Granit Xhaka",
+        "backup": "Breel Embolo",
+        "note": "Switzerland's spot-kicks go to captain Xhaka (Embolo took the Qatar penalty as backup). For Algeria, all dead balls are Mahrez with Bensebaini as penalty backup."
       },
       "lineups": {
-        "home": "Gregor Kobel, Manuel Akanji, Nico Elvedi, Ricardo Rodríguez, Luca Jaquez, Johan Manzambi, Granit Xhaka, Remo Freuler, Breel Embolo, Rubén Vargas, Djibril Sow",
-        "away": "Oussama Benbot, Rafik Belghali, Aïssa Mandi, Ramy Bensebaini, Jaouen Hadjam, Ibrahim Maza, Nabil Bentaleb, Houssem Aouar, Riyad Mahrez, Amine Gouiri, Farès Chaïbi",
-        "status": "unconfirmed",
+        "home": "Gregor Kobel, Silvan Widmer, Manuel Akanji, Nico Elvedi, Ricardo Rodríguez, Remo Freuler, Granit Xhaka, Dan Ndoye, Johan Manzambi, Rubén Vargas, Breel Embolo",
+        "away": "Luca Zidane, Rafik Belghali, Aïssa Mandi, Ramy Bensebaini, Rayan Aït-Nouri, Ramiz Zerrouki, Nabil Bentaleb, Riyad Mahrez, Houssem Aouar, Farès Chaïbi, Ibrahim Maza",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -17141,14 +17149,19 @@
               "pos": "G"
             },
             {
+              "num": 2,
+              "name": "Silvan Widmer",
+              "pos": "RB"
+            },
+            {
               "num": 5,
               "name": "Manuel Akanji",
-              "pos": "CD-L"
+              "pos": "CD-R"
             },
             {
               "num": 4,
               "name": "Nico Elvedi",
-              "pos": "CD-R"
+              "pos": "CD-L"
             },
             {
               "num": 13,
@@ -17156,9 +17169,19 @@
               "pos": "LB"
             },
             {
-              "num": 25,
-              "name": "Luca Jaquez",
-              "pos": "RB"
+              "num": 8,
+              "name": "Remo Freuler",
+              "pos": "DM-R"
+            },
+            {
+              "num": 10,
+              "name": "Granit Xhaka",
+              "pos": "DM-L"
+            },
+            {
+              "num": 20,
+              "name": "Dan Ndoye",
+              "pos": "AM-R"
             },
             {
               "num": 9,
@@ -17166,89 +17189,74 @@
               "pos": "AM"
             },
             {
-              "num": 10,
-              "name": "Granit Xhaka",
-              "pos": "LM"
-            },
-            {
-              "num": 8,
-              "name": "Remo Freuler",
-              "pos": "RM"
-            },
-            {
-              "num": 7,
-              "name": "Breel Embolo",
-              "pos": "F"
-            },
-            {
               "num": 17,
               "name": "Rubén Vargas",
               "pos": "AM-L"
             },
             {
-              "num": 15,
-              "name": "Djibril Sow",
-              "pos": "AM-R"
+              "num": 7,
+              "name": "Breel Embolo",
+              "pos": "F"
             }
           ]
         },
         "awayXI": {
-          "formation": "4-3-3",
+          "formation": "4-2-3-1",
           "players": [
             {
-              "num": null,
-              "name": "Oussama Benbot",
+              "num": 23,
+              "name": "Luca Zidane",
               "pos": "G"
             },
             {
-              "num": null,
+              "num": 2,
               "name": "Rafik Belghali",
               "pos": "RB"
             },
             {
-              "num": null,
+              "num": 16,
               "name": "Aïssa Mandi",
-              "pos": "CB"
+              "pos": "CD-R"
             },
             {
-              "num": null,
+              "num": 5,
               "name": "Ramy Bensebaini",
-              "pos": "CB"
+              "pos": "CD-L"
             },
             {
-              "num": null,
-              "name": "Jaouen Hadjam",
+              "num": 12,
+              "name": "Rayan Aït-Nouri",
               "pos": "LB"
             },
             {
-              "num": null,
-              "name": "Ibrahim Maza",
-              "pos": "CM"
+              "num": 6,
+              "name": "Ramiz Zerrouki",
+              "pos": "DM-R"
             },
             {
-              "num": null,
+              "num": 8,
               "name": "Nabil Bentaleb",
-              "pos": "CM"
+              "pos": "DM-L"
             },
             {
-              "num": null,
-              "name": "Houssem Aouar",
-              "pos": "CM"
-            },
-            {
-              "num": null,
+              "num": 7,
               "name": "Riyad Mahrez",
-              "pos": "RW"
+              "pos": "AM-R"
             },
             {
-              "num": null,
-              "name": "Amine Gouiri",
-              "pos": "F"
+              "num": 10,
+              "name": "Houssem Aouar",
+              "pos": "AM"
             },
             {
-              "num": null,
+              "num": 11,
               "name": "Farès Chaïbi",
-              "pos": "LW"
+              "pos": "AM-L"
+            },
+            {
+              "num": 19,
+              "name": "Ibrahim Maza",
+              "pos": "F"
             }
           ]
         }
@@ -17257,25 +17265,42 @@
         {
           "player": "Johan Manzambi",
           "team": "Switzerland",
-          "note": "3 goals in 3 group games; 66% modelled anytime chance on 3.1 team xG."
-        },
-        {
-          "player": "Rubén Vargas",
-          "team": "Switzerland",
-          "note": "2 goals in 3 group games; 62% modelled anytime chance on 3.1 team xG."
+          "note": "No.10: 3 group-stage goals, scored + assisted the decisive 2-1 win over Canada. Switzerland's creative engine and top goal threat."
         },
         {
           "player": "Breel Embolo",
           "team": "Switzerland",
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Confirmed lone striker, scored vs Qatar; focal point and secondary penalty option behind Xhaka."
+        },
+        {
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "note": "Starts wide-right ahead of Djibril Sow; Forest winger whose pace targets the channels Algeria's high full-backs vacate — the key mismatch."
+        },
+        {
+          "player": "Riyad Mahrez",
+          "team": "Algeria",
+          "note": "Captain (35): 2 goals vs Austria and takes every Algeria set piece, but a burst threat — not a 90-minute banker."
+        },
+        {
+          "player": "Ibrahim Maza",
+          "team": "Algeria",
+          "note": "20yo Leverkusen prospect leading the line with Gouiri benched — out of position, more assist-shaped than a natural finisher."
+        },
+        {
+          "player": "Rayan Aït-Nouri",
+          "team": "Algeria",
+          "note": "Attacking LB pushing high behind a leaky back line (7 conceded in 3, 5 from outside the box) — invites Swiss transitions, though Bensebaini/Mahrez dead balls keep an upset 2-1 live."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://khelnow.com/football/algeria-starting-lineup-vs-switzerland-fifa-world-cup-2026",
+        "https://www.whoscored.com/news/k27rIAoSE0aBADqcyskKEg/show/20260703-switzerland-vs-algeria-confirmed-lineup-1783043512",
+        "https://www.espn.com/soccer/story/_/id/49223711/fifa-world-cup-2026-switzerland-vs-algeria-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+        "https://www.covers.com/world-cup/set-piece-takers-2026",
+        "https://www.thenationalnews.com/sport/world-cup-2026/2026/06/28/riyad-mahrez-goals-send-algeria-through-to-world-cup-round-of-32/"
       ],
       "pitchReport": {
         "facts": [
