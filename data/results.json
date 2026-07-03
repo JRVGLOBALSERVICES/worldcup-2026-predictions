@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T19:30:03.059Z",
+    "generatedAt": "2026-07-03T19:40:03.945Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 65,
     "live": 1
@@ -8896,6 +8896,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Foul",
             "firstActionMinute": 31,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Shot Off Target",
+            "firstActionMinute": 73,
             "isCorner": false,
             "reliable": true
           }

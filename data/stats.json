@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T19:30:05.977Z",
+    "generatedAt": "2026-07-03T19:40:06.570Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 69
   },
@@ -730,19 +730,19 @@
       },
       {
         "rank": 3,
+        "team": "Australia",
+        "flag": "🇦🇺",
+        "value": 71.4,
+        "display": "71.4%",
+        "matches": 3
+      },
+      {
+        "rank": 3,
         "team": "Tunisia",
         "flag": "🇹🇳",
         "value": 71.4,
         "display": "71.4%",
         "matches": 2
-      },
-      {
-        "rank": 4,
-        "team": "Australia",
-        "flag": "🇦🇺",
-        "value": 70.7,
-        "display": "70.7%",
-        "matches": 3
       },
       {
         "rank": 5,
@@ -860,19 +860,19 @@
       },
       {
         "rank": 9,
-        "team": "Egypt",
-        "flag": "🇪🇬",
-        "value": 30,
-        "display": "30.0%",
-        "matches": 3
-      },
-      {
-        "rank": 9,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
         "display": "30.0%",
         "matches": 2
+      },
+      {
+        "rank": 10,
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 29.3,
+        "display": "29.3%",
+        "matches": 3
       }
     ],
     "longBallAccuracy": [
@@ -6432,31 +6432,31 @@
         "teamBox": [
           {
             "team": "Australia",
-            "possessionPct": 44.2,
-            "accuratePasses": 241,
-            "totalPasses": 298,
+            "possessionPct": 47.4,
+            "accuratePasses": 305,
+            "totalPasses": 367,
             "shotsOnTarget": 1,
             "totalShots": 7,
-            "effectiveTackles": 6,
-            "totalTackles": 8,
+            "effectiveTackles": 7,
+            "totalTackles": 9,
             "accurateCrosses": 5,
-            "totalCrosses": 14,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 28
+            "totalCrosses": 16,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 35
           },
           {
             "team": "Egypt",
-            "possessionPct": 55.8,
-            "accuratePasses": 339,
-            "totalPasses": 394,
+            "possessionPct": 52.6,
+            "accuratePasses": 361,
+            "totalPasses": 424,
             "shotsOnTarget": 1,
             "totalShots": 5,
             "effectiveTackles": 5,
-            "totalTackles": 11,
+            "totalTackles": 12,
             "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 18,
-            "totalLongBalls": 44
+            "totalCrosses": 4,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 50
           }
         ]
       }
