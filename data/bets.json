@@ -13171,6 +13171,56 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83910863597",
+      "slipNo": "83910863597",
+      "matchId": "arg-cpv-2026-07-03",
+      "player": "3-game acca",
+      "market": "Accumulator (3) — scorer combos",
+      "label": "REAL 1xBet slip 83910863597 (03/07 16:21) — 3-fold @ 28.061, RM50 -> RM1,403.08. Arg/CpV Messi to score + Total Under 4.5 (2.053) · Col/Gha Luis Diaz to score + Colombia not to lose 1X (2.398) · Aus/Egy Australia win + Australia over 1.5 goals (5.7).",
+      "odds": 28.061,
+      "stake": 50,
+      "placedAt": "03/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "scored",
+            "player": "Lionel Messi",
+            "odds": 2.053
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "scored",
+            "player": "Luis Diaz",
+            "odds": 2.398
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "result",
+            "outcome": "1",
+            "odds": 5.7
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
