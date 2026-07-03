@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T03:20:28.708Z",
+    "generatedAt": "2026-07-03T03:30:07.376Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 68
   },
@@ -478,12 +478,12 @@
         "rank": 2,
         "team": "Algeria",
         "flag": "🇩🇿",
-        "value": 91.2,
-        "display": "91.2%",
+        "value": 91.1,
+        "display": "91.1%",
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 91.1,
@@ -574,14 +574,6 @@
       },
       {
         "rank": 4,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 64.4,
-        "display": "64.4%",
-        "matches": 4
-      },
-      {
-        "rank": 5,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
@@ -589,7 +581,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -597,7 +589,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -605,11 +597,19 @@
         "matches": 2
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
         "display": "62.1%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 62,
+        "display": "62.0%",
         "matches": 4
       },
       {
@@ -634,8 +634,8 @@
         "rank": 1,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 61.9,
-        "display": "61.9%",
+        "value": 59.1,
+        "display": "59.1%",
         "matches": 3
       },
       {
@@ -902,14 +902,6 @@
       },
       {
         "rank": 4,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 52.7,
-        "display": "52.7%",
-        "matches": 4
-      },
-      {
-        "rank": 5,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 52.4,
@@ -917,7 +909,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -925,7 +917,15 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 6,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 51.9,
+        "display": "51.9%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
@@ -6380,31 +6380,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 31.7,
-            "accuratePasses": 67,
-            "totalPasses": 80,
+            "possessionPct": 41.2,
+            "accuratePasses": 113,
+            "totalPasses": 130,
             "shotsOnTarget": 2,
-            "totalShots": 2,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 2,
-            "totalLongBalls": 9
-          },
-          {
-            "team": "Algeria",
-            "possessionPct": 68.3,
-            "accuratePasses": 157,
-            "totalPasses": 174,
-            "shotsOnTarget": 1,
             "totalShots": 3,
             "effectiveTackles": 1,
             "totalTackles": 2,
             "accurateCrosses": 0,
+            "totalCrosses": 3,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 11
+          },
+          {
+            "team": "Algeria",
+            "possessionPct": 58.8,
+            "accuratePasses": 170,
+            "totalPasses": 191,
+            "shotsOnTarget": 1,
+            "totalShots": 3,
+            "effectiveTackles": 2,
+            "totalTackles": 3,
+            "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 16
+            "accurateLongBalls": 9,
+            "totalLongBalls": 20
           }
         ]
       }
