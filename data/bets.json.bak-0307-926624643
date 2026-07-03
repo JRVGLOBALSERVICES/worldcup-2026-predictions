@@ -1035,22 +1035,6 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
-    },
-    "aus-egy-2026-07-03": {
-      "ht": {
-        "home": 0,
-        "away": 1
-      },
-      "ft": {
-        "home": 1,
-        "away": 1
-      },
-      "ft90": {
-        "home": 1,
-        "away": 1
-      },
-      "finishPhase": "penalties",
-      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3997,41 +3981,6 @@
           "team": "away",
           "player": "Hicham Boudaoui",
           "minute": 72,
-          "type": "yellow"
-        }
-      ]
-    },
-    "aus-egy-2026-07-03": {
-      "status": "finished",
-      "goals": [
-        {
-          "team": "away",
-          "scorer": "Emam Ashour",
-          "minute": 12,
-          "assist": null,
-          "penalty": false,
-          "ownGoal": false
-        },
-        {
-          "team": "home",
-          "scorer": "Mohamed Hany",
-          "minute": 54,
-          "assist": null,
-          "penalty": false,
-          "ownGoal": true
-        }
-      ],
-      "cards": [
-        {
-          "team": "away",
-          "player": "Haissem Hassan",
-          "minute": 104,
-          "type": "yellow"
-        },
-        {
-          "team": "away",
-          "player": "Yasser Ibrahim",
-          "minute": 120,
           "type": "yellow"
         }
       ]
@@ -13163,7 +13112,7 @@
             "odds": 1.59
           },
           {
-            "matchId": "por-esp-2026-07-06",
+            "matchId": "por-esp-2026-07-07",
             "kind": "totalUnder",
             "line": 2.5,
             "odds": 1.89
@@ -13391,45 +13340,6 @@
             "matchId": "col-gha-2026-07-04",
             "kind": "totalOver",
             "line": 1.5
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83926624643",
-      "slipNo": "83926624643",
-      "matchId": "aus-egy-2026-07-03",
-      "player": "3-game acca",
-      "market": "Accumulator (3) — DC+BTTS / scorer combos",
-      "label": "REAL 1xBet slip 83926624643 (03/07 23:20) — 3-fold @ 15.72, RM100 -> RM1,572.00. Aus/Egy Double Chance 1X + Both Teams To Score - Yes (3.2) · Col/Gha Double Chance 1X + Both Teams To Score - Yes (2.5) · Arg/CpV Lionel Messi to score + Match Total Over 2.5 (1.965).",
-      "odds": 15.72,
-      "stake": 100,
-      "placedAt": "03/07",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "aus-egy-2026-07-03",
-            "kind": "doubleChanceBtts",
-            "outcome": "1X",
-            "odds": 3.2
-          },
-          {
-            "matchId": "col-gha-2026-07-04",
-            "kind": "doubleChanceBtts",
-            "outcome": "1X",
-            "odds": 2.5
-          },
-          {
-            "matchId": "arg-cpv-2026-07-03",
-            "kind": "scored",
-            "player": "Lionel Messi",
-            "odds": 1.965
-          },
-          {
-            "matchId": "arg-cpv-2026-07-03",
-            "kind": "totalOver",
-            "line": 2.5
           }
         ]
       }
@@ -18005,20 +17915,20 @@
     },
     "aus-egy-2026-07-03": {
       "corners": {
-        "home": 4,
-        "away": 7
+        "home": 3,
+        "away": 0
       },
       "sot": {
         "home": 1,
-        "away": 4
+        "away": 1
       },
       "shots": {
-        "home": 16,
-        "away": 14
+        "home": 9,
+        "away": 6
       },
       "yellow": {
         "home": 0,
-        "away": 2
+        "away": 0
       },
       "red": {
         "home": 0,
@@ -18026,7 +17936,7 @@
       },
       "cards": {
         "home": 0,
-        "away": 2
+        "away": 0
       },
       "cornersByHalf": {
         "home": [
@@ -18035,7 +17945,7 @@
         ],
         "away": [
           0,
-          7
+          0
         ]
       },
       "sotByHalf": {
@@ -18045,14 +17955,11 @@
         ],
         "away": [
           0,
-          3
+          0
         ]
       },
       "playerSot": {
-        "Aziz Behich": 1,
-        "Ramy Rabia": 1,
-        "Mohamed Salah": 1,
-        "Marawan Attia": 1
+        "Aziz Behich": 1
       },
       "firstGoalMethod": "header",
       "firstPenalty": null,
