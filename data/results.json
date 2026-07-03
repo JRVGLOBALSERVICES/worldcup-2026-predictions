@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T22:10:03.309Z",
+    "generatedAt": "2026-07-03T22:20:03.867Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 66,
     "live": 1
@@ -8954,11 +8954,11 @@
           "away": 0
         },
         "sot": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "shots": {
-          "home": 0,
+          "home": 2,
           "away": 1
         },
         "yellow": {
@@ -8985,7 +8985,7 @@
         },
         "sotByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
@@ -8993,7 +8993,9 @@
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Lionel Messi": 1
+        },
         "firstGoalMethod": null,
         "firstPenalty": null,
         "waterBreak": {}

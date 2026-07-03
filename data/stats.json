@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T22:10:06.323Z",
+    "generatedAt": "2026-07-03T22:20:06.535Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -486,12 +486,12 @@
         "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 90.5,
-        "display": "90.5%",
+        "value": 90.7,
+        "display": "90.7%",
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 90.5,
@@ -606,18 +606,18 @@
       },
       {
         "rank": 8,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 61.2,
-        "display": "61.2%",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 61.5,
+        "display": "61.5%",
         "matches": 4
       },
       {
         "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 60,
-        "display": "60.0%",
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 61.2,
+        "display": "61.2%",
         "matches": 4
       },
       {
@@ -688,19 +688,19 @@
       },
       {
         "rank": 8,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 44.4,
+        "display": "44.4%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
         "display": "44.4%",
         "matches": 3
-      },
-      {
-        "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 44.1,
-        "display": "44.1%",
-        "matches": 4
       },
       {
         "rank": 10,
@@ -716,8 +716,8 @@
         "rank": 1,
         "team": "Cape Verde",
         "flag": "🇨🇻",
-        "value": 82.4,
-        "display": "82.4%",
+        "value": 80,
+        "display": "80.0%",
         "matches": 3
       },
       {
@@ -902,6 +902,14 @@
       },
       {
         "rank": 4,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 52.8,
+        "display": "52.8%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -909,20 +917,12 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
         "matches": 3
-      },
-      {
-        "rank": 6,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 51.8,
-        "display": "51.8%",
-        "matches": 4
       },
       {
         "rank": 7,
@@ -6481,31 +6481,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 65.2,
-            "accuratePasses": 64,
-            "totalPasses": 72,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
+            "possessionPct": 71.4,
+            "accuratePasses": 149,
+            "totalPasses": 162,
+            "shotsOnTarget": 1,
+            "totalShots": 2,
             "effectiveTackles": 2,
-            "totalTackles": 4,
+            "totalTackles": 5,
             "accurateCrosses": 0,
             "totalCrosses": 1,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 1
+            "accurateLongBalls": 3,
+            "totalLongBalls": 5
           },
           {
             "team": "Cape Verde",
-            "possessionPct": 34.8,
-            "accuratePasses": 31,
-            "totalPasses": 38,
+            "possessionPct": 28.6,
+            "accuratePasses": 49,
+            "totalPasses": 64,
             "shotsOnTarget": 0,
             "totalShots": 1,
             "effectiveTackles": 1,
-            "totalTackles": 3,
+            "totalTackles": 4,
             "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 7
+            "accurateLongBalls": 5,
+            "totalLongBalls": 13
           }
         ]
       }
