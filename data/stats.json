@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T23:30:06.659Z",
+    "generatedAt": "2026-07-03T23:40:07.180Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -616,12 +616,12 @@
         "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 59.8,
-        "display": "59.8%",
+        "value": 60,
+        "display": "60.0%",
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
@@ -640,14 +640,6 @@
       },
       {
         "rank": 2,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 47.5,
-        "display": "47.5%",
-        "matches": 4
-      },
-      {
-        "rank": 3,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 47.2,
@@ -655,7 +647,7 @@
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "France",
         "flag": "🇫🇷",
         "value": 47.2,
@@ -663,7 +655,15 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 4,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 46.5,
+        "display": "46.5%",
+        "matches": 4
+      },
+      {
+        "rank": 4,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -844,6 +844,14 @@
       },
       {
         "rank": 7,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 31.6,
+        "display": "31.6%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 30.8,
@@ -851,7 +859,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
@@ -859,20 +867,12 @@
         "matches": 2
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 28.8,
         "display": "28.8%",
         "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Czechia",
-        "flag": "🇨🇿",
-        "value": 28.6,
-        "display": "28.6%",
-        "matches": 2
       }
     ],
     "longBallAccuracy": [
@@ -904,8 +904,8 @@
         "rank": 4,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 55.1,
-        "display": "55.1%",
+        "value": 54.6,
+        "display": "54.6%",
         "matches": 4
       },
       {
@@ -6510,31 +6510,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 64.4,
-            "accuratePasses": 505,
-            "totalPasses": 542,
-            "shotsOnTarget": 4,
-            "totalShots": 6,
-            "effectiveTackles": 6,
-            "totalTackles": 10,
-            "accurateCrosses": 0,
-            "totalCrosses": 3,
+            "possessionPct": 65.4,
+            "accuratePasses": 534,
+            "totalPasses": 576,
+            "shotsOnTarget": 5,
+            "totalShots": 9,
+            "effectiveTackles": 8,
+            "totalTackles": 12,
+            "accurateCrosses": 1,
+            "totalCrosses": 4,
             "accurateLongBalls": 15,
-            "totalLongBalls": 23
+            "totalLongBalls": 24
           },
           {
             "team": "Cape Verde",
-            "possessionPct": 35.6,
-            "accuratePasses": 252,
-            "totalPasses": 293,
+            "possessionPct": 34.6,
+            "accuratePasses": 255,
+            "totalPasses": 298,
             "shotsOnTarget": 2,
-            "totalShots": 5,
+            "totalShots": 6,
             "effectiveTackles": 6,
             "totalTackles": 12,
             "accurateCrosses": 3,
             "totalCrosses": 9,
             "accurateLongBalls": 12,
-            "totalLongBalls": 31
+            "totalLongBalls": 32
           }
         ]
       }

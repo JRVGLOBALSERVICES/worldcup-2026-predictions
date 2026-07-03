@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T23:30:03.451Z",
+    "generatedAt": "2026-07-03T23:40:04.564Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 66,
     "live": 1
@@ -8977,20 +8977,20 @@
       "updatedAt": "2026-07-03T22:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
+          "home": 2,
           "away": 2
         },
         "sot": {
-          "home": 4,
+          "home": 5,
           "away": 2
         },
         "shots": {
-          "home": 6,
-          "away": 5
+          "home": 9,
+          "away": 6
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -8998,12 +8998,12 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             0,
-            1
+            2
           ],
           "away": [
             0,
@@ -9013,7 +9013,7 @@
         "sotByHalf": {
           "home": [
             2,
-            1
+            2
           ],
           "away": [
             0,
@@ -9021,7 +9021,7 @@
           ]
         },
         "playerSot": {
-          "Lionel Messi": 2,
+          "Lionel Messi": 3,
           "Enzo Fernández": 1,
           "Deroy Duarte": 1
         },
@@ -9041,10 +9041,10 @@
           "h2": {
             "half": 2,
             "anchorMinute": 67,
-            "source": "anchor",
-            "breakEndMinute": null,
-            "firstActionType": "Attempted tackle",
-            "firstActionMinute": 68,
+            "source": "delay",
+            "breakEndMinute": 75,
+            "firstActionType": "Foul",
+            "firstActionMinute": 76,
             "isCorner": false,
             "reliable": true
           }
