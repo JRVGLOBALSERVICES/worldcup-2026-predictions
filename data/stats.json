@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T04:00:13.733Z",
+    "generatedAt": "2026-07-03T04:10:06.224Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 68
   },
@@ -484,14 +484,6 @@
       },
       {
         "rank": 3,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 90.6,
-        "display": "90.6%",
-        "matches": 4
-      },
-      {
-        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 90.6,
@@ -499,7 +491,15 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 4,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 90.5,
+        "display": "90.5%",
+        "matches": 4
+      },
+      {
+        "rank": 4,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 90.5,
@@ -598,18 +598,18 @@
       },
       {
         "rank": 7,
-        "team": "Algeria",
-        "flag": "🇩🇿",
+        "team": "Portugal",
+        "flag": "🇵🇹",
         "value": 62.1,
         "display": "62.1%",
         "matches": 4
       },
       {
-        "rank": 7,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 62.1,
-        "display": "62.1%",
+        "rank": 8,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 62,
+        "display": "62.0%",
         "matches": 4
       },
       {
@@ -634,8 +634,8 @@
         "rank": 1,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 56.5,
-        "display": "56.5%",
+        "value": 58.3,
+        "display": "58.3%",
         "matches": 3
       },
       {
@@ -936,8 +936,8 @@
         "rank": 8,
         "team": "Algeria",
         "flag": "🇩🇿",
-        "value": 50.7,
-        "display": "50.7%",
+        "value": 51,
+        "display": "51.0%",
         "matches": 4
       },
       {
@@ -1862,6 +1862,11 @@
         },
         {
           "name": "Breel Embolo",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Dan Ndoye",
           "value": 1,
           "matches": 1
         },
@@ -6384,31 +6389,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 40.8,
-            "accuratePasses": 178,
-            "totalPasses": 217,
-            "shotsOnTarget": 2,
-            "totalShots": 4,
-            "effectiveTackles": 1,
-            "totalTackles": 4,
+            "possessionPct": 41.4,
+            "accuratePasses": 194,
+            "totalPasses": 236,
+            "shotsOnTarget": 3,
+            "totalShots": 5,
+            "effectiveTackles": 2,
+            "totalTackles": 5,
             "accurateCrosses": 2,
-            "totalCrosses": 6,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 21
+            "totalCrosses": 8,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 24
           },
           {
             "team": "Algeria",
-            "possessionPct": 59.2,
-            "accuratePasses": 278,
-            "totalPasses": 323,
+            "possessionPct": 58.6,
+            "accuratePasses": 297,
+            "totalPasses": 345,
             "shotsOnTarget": 2,
             "totalShots": 5,
-            "effectiveTackles": 5,
-            "totalTackles": 10,
+            "effectiveTackles": 7,
+            "totalTackles": 12,
             "accurateCrosses": 1,
             "totalCrosses": 4,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 37
+            "accurateLongBalls": 18,
+            "totalLongBalls": 40
           }
         ]
       }

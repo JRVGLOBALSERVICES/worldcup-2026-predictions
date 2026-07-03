@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T04:00:07.931Z",
+    "generatedAt": "2026-07-03T04:10:03.240Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 64,
     "live": 1
@@ -8676,12 +8676,15 @@
     },
     "sui-alg-2026-07-03": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "advanced": null,
@@ -8690,6 +8693,14 @@
           "team": "home",
           "scorer": "Breel Embolo",
           "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Dan Ndoye",
+          "minute": 46,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -8710,11 +8721,11 @@
           "away": 1
         },
         "sot": {
-          "home": 2,
+          "home": 3,
           "away": 2
         },
         "shots": {
-          "home": 4,
+          "home": 5,
           "away": 5
         },
         "yellow": {
