@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T20:10:06.307Z",
+    "generatedAt": "2026-07-03T20:20:07.150Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 69
   },
@@ -852,18 +852,18 @@
       },
       {
         "rank": 8,
-        "team": "Egypt",
-        "flag": "🇪🇬",
-        "value": 31.4,
-        "display": "31.4%",
-        "matches": 3
-      },
-      {
-        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 30.8,
         "display": "30.8%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 30.2,
+        "display": "30.2%",
         "matches": 3
       },
       {
@@ -2907,6 +2907,10 @@
         {
           "name": "Mohanad Lashin",
           "value": 2
+        },
+        {
+          "name": "Haissem Hassan",
+          "value": 1
         },
         {
           "name": "Mahmoud Saber",
@@ -6432,31 +6436,31 @@
         "teamBox": [
           {
             "team": "Australia",
-            "possessionPct": 43.5,
-            "accuratePasses": 346,
-            "totalPasses": 434,
+            "possessionPct": 42.5,
+            "accuratePasses": 369,
+            "totalPasses": 466,
             "shotsOnTarget": 1,
             "totalShots": 12,
             "effectiveTackles": 7,
             "totalTackles": 9,
             "accurateCrosses": 6,
-            "totalCrosses": 20,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 50
+            "totalCrosses": 21,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 54
           },
           {
             "team": "Egypt",
-            "possessionPct": 56.5,
-            "accuratePasses": 492,
-            "totalPasses": 577,
+            "possessionPct": 57.5,
+            "accuratePasses": 553,
+            "totalPasses": 644,
             "shotsOnTarget": 3,
-            "totalShots": 11,
+            "totalShots": 12,
             "effectiveTackles": 5,
-            "totalTackles": 12,
+            "totalTackles": 13,
             "accurateCrosses": 5,
-            "totalCrosses": 14,
-            "accurateLongBalls": 25,
-            "totalLongBalls": 57
+            "totalCrosses": 16,
+            "accurateLongBalls": 33,
+            "totalLongBalls": 66
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T20:10:03.049Z",
+    "generatedAt": "2026-07-03T20:20:03.705Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 65,
     "live": 1
@@ -8836,7 +8836,14 @@
           "ownGoal": true
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Haissem Hassan",
+          "minute": 104,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-03T18:00:00.000Z",
       "stats": {
         "corners": {
@@ -8849,11 +8856,11 @@
         },
         "shots": {
           "home": 12,
-          "away": 11
+          "away": 12
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -8861,7 +8868,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
