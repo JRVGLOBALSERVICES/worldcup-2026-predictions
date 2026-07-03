@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T03:40:09.149Z",
+    "generatedAt": "2026-07-03T03:50:07.926Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 68
   },
@@ -486,8 +486,8 @@
         "rank": 3,
         "team": "Algeria",
         "flag": "🇩🇿",
-        "value": 90.8,
-        "display": "90.8%",
+        "value": 90.7,
+        "display": "90.7%",
         "matches": 4
       },
       {
@@ -598,18 +598,18 @@
       },
       {
         "rank": 7,
-        "team": "Portugal",
-        "flag": "🇵🇹",
+        "team": "Algeria",
+        "flag": "🇩🇿",
         "value": 62.1,
         "display": "62.1%",
         "matches": 4
       },
       {
-        "rank": 8,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 61.4,
-        "display": "61.4%",
+        "rank": 7,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 62.1,
+        "display": "62.1%",
         "matches": 4
       },
       {
@@ -934,6 +934,14 @@
       },
       {
         "rank": 8,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 51,
+        "display": "51.0%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "France",
         "flag": "🇫🇷",
         "value": 50.6,
@@ -941,19 +949,11 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 50.6,
         "display": "50.6%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 50.4,
-        "display": "50.4%",
         "matches": 4
       }
     ]
@@ -6384,31 +6384,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 43.7,
-            "accuratePasses": 158,
-            "totalPasses": 185,
+            "possessionPct": 40.9,
+            "accuratePasses": 179,
+            "totalPasses": 218,
             "shotsOnTarget": 2,
             "totalShots": 4,
             "effectiveTackles": 1,
-            "totalTackles": 3,
+            "totalTackles": 4,
             "accurateCrosses": 2,
-            "totalCrosses": 5,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 14
+            "totalCrosses": 6,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 21
           },
           {
             "team": "Algeria",
-            "possessionPct": 56.3,
-            "accuratePasses": 213,
-            "totalPasses": 246,
-            "shotsOnTarget": 1,
-            "totalShots": 3,
+            "possessionPct": 59.2,
+            "accuratePasses": 277,
+            "totalPasses": 319,
+            "shotsOnTarget": 2,
+            "totalShots": 5,
             "effectiveTackles": 5,
-            "totalTackles": 7,
-            "accurateCrosses": 0,
-            "totalCrosses": 2,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 28
+            "totalTackles": 10,
+            "accurateCrosses": 1,
+            "totalCrosses": 4,
+            "accurateLongBalls": 16,
+            "totalLongBalls": 36
           }
         ]
       }
