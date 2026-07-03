@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:50:04.297Z",
+    "generatedAt": "2026-07-03T01:00:06.446Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 63,
     "live": 1
@@ -8540,7 +8540,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "advanced": null,
@@ -8560,6 +8560,14 @@
           "assist": null,
           "penalty": true,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Gonçalo Ramos",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -8574,25 +8582,31 @@
           "player": "Luka Modric",
           "minute": 59,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Ivan Perisic",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-02T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 8,
-          "away": 4
+          "home": 9,
+          "away": 5
         },
         "sot": {
-          "home": 2,
+          "home": 3,
           "away": 6
         },
         "shots": {
-          "home": 12,
+          "home": 14,
           "away": 12
         },
         "yellow": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "red": {
           "home": 0,
@@ -8600,16 +8614,16 @@
         },
         "cards": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
             6,
-            2
+            3
           ],
           "away": [
             0,
-            4
+            5
           ]
         },
         "sotByHalf": {
