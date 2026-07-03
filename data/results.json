@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T04:50:10.312Z",
+    "generatedAt": "2026-07-03T05:00:03.970Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 64,
-    "live": 1
+    "finished": 65,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -8675,19 +8675,25 @@
       }
     },
     "sui-alg-2026-07-03": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 2,
+        "away": 0
+      },
+      "ft90": {
+        "home": 2,
+        "away": 0
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 2,
         "away": 0
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "home",
@@ -8727,12 +8733,12 @@
           "away": 2
         },
         "sot": {
-          "home": 4,
+          "home": 5,
           "away": 2
         },
         "shots": {
-          "home": 9,
-          "away": 7
+          "home": 11,
+          "away": 8
         },
         "yellow": {
           "home": 0,
@@ -8759,7 +8765,7 @@
         "sotByHalf": {
           "home": [
             1,
-            0
+            1
           ],
           "away": [
             2,
@@ -8769,7 +8775,8 @@
         "playerSot": {
           "Houssem Aouar": 1,
           "Denis Zakaria": 1,
-          "Farès Chaïbi": 1
+          "Farès Chaïbi": 1,
+          "Remo Freuler": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T04:50:15.655Z",
+    "generatedAt": "2026-07-03T05:00:07.183Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -139,7 +139,14 @@
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 16",
+            "opponent": "R32-15 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-07T20:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "Canada",
