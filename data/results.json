@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:30:03.517Z",
+    "generatedAt": "2026-07-03T00:40:04.534Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 63,
     "live": 1
@@ -8580,15 +8580,15 @@
       "stats": {
         "corners": {
           "home": 7,
-          "away": 2
+          "away": 4
         },
         "sot": {
           "home": 2,
-          "away": 3
+          "away": 6
         },
         "shots": {
           "home": 11,
-          "away": 7
+          "away": 11
         },
         "yellow": {
           "home": 1,
@@ -8609,7 +8609,7 @@
           ],
           "away": [
             0,
-            2
+            4
           ]
         },
         "sotByHalf": {
@@ -8619,13 +8619,14 @@
           ],
           "away": [
             0,
-            2
+            5
           ]
         },
         "playerSot": {
           "Bruno Fernandes": 1,
-          "Mateo Kovacic": 1,
-          "Petar Sucic": 1
+          "Mateo Kovacic": 3,
+          "Petar Sucic": 1,
+          "Igor Matanovic": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -8643,10 +8644,10 @@
           "h2": {
             "half": 2,
             "anchorMinute": 67,
-            "source": "anchor",
-            "breakEndMinute": null,
-            "firstActionType": "Penalty - Scored",
-            "firstActionMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 73,
             "isCorner": false,
             "reliable": true
           }
