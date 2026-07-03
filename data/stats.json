@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T22:30:06.026Z",
+    "generatedAt": "2026-07-03T22:40:10.652Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -486,8 +486,8 @@
         "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 90.7,
-        "display": "90.7%",
+        "value": 90.9,
+        "display": "90.9%",
         "matches": 4
       },
       {
@@ -614,19 +614,19 @@
       },
       {
         "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 60.1,
-        "display": "60.1%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 59.5,
+        "display": "59.5%",
+        "matches": 4
       }
     ],
     "shotAccuracy": [
@@ -716,8 +716,8 @@
         "rank": 1,
         "team": "Cape Verde",
         "flag": "🇨🇻",
-        "value": 78.4,
-        "display": "78.4%",
+        "value": 78.9,
+        "display": "78.9%",
         "matches": 3
       },
       {
@@ -904,8 +904,8 @@
         "rank": 4,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 53.3,
-        "display": "53.3%",
+        "value": 54.3,
+        "display": "54.3%",
         "matches": 4
       },
       {
@@ -6491,31 +6491,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 65.6,
-            "accuratePasses": 195,
-            "totalPasses": 211,
+            "possessionPct": 63.2,
+            "accuratePasses": 246,
+            "totalPasses": 264,
             "shotsOnTarget": 2,
             "totalShots": 3,
-            "effectiveTackles": 2,
-            "totalTackles": 5,
-            "accurateCrosses": 0,
-            "totalCrosses": 2,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 8
-          },
-          {
-            "team": "Cape Verde",
-            "possessionPct": 34.4,
-            "accuratePasses": 92,
-            "totalPasses": 111,
-            "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 2,
-            "totalTackles": 6,
+            "effectiveTackles": 4,
+            "totalTackles": 7,
             "accurateCrosses": 0,
             "totalCrosses": 2,
             "accurateLongBalls": 7,
-            "totalLongBalls": 16
+            "totalLongBalls": 10
+          },
+          {
+            "team": "Cape Verde",
+            "possessionPct": 36.8,
+            "accuratePasses": 130,
+            "totalPasses": 154,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 3,
+            "totalTackles": 7,
+            "accurateCrosses": 0,
+            "totalCrosses": 2,
+            "accurateLongBalls": 7,
+            "totalLongBalls": 20
           }
         ]
       }
