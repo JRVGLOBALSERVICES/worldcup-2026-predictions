@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:00:07.224Z",
+    "generatedAt": "2026-07-03T00:10:03.663Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 63,
     "live": 1
@@ -8532,7 +8532,10 @@
     },
     "por-cro-2026-07-02": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -8554,7 +8557,7 @@
       "stats": {
         "corners": {
           "home": 6,
-          "away": 0
+          "away": 1
         },
         "sot": {
           "home": 1,
@@ -8562,7 +8565,7 @@
         },
         "shots": {
           "home": 9,
-          "away": 3
+          "away": 5
         },
         "yellow": {
           "home": 1,
@@ -8583,7 +8586,7 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "sotByHalf": {
@@ -8593,11 +8596,12 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "playerSot": {
-          "Bruno Fernandes": 1
+          "Bruno Fernandes": 1,
+          "Mateo Kovacic": 1
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
