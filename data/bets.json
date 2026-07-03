@@ -13221,6 +13221,42 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83910897465",
+      "slipNo": "83910897465",
+      "matchId": "aus-egy-2026-07-03",
+      "player": "3-game acca",
+      "market": "Accumulator (3) — totals/handicaps",
+      "label": "REAL 1xBet slip 83910897465 (03/07 16:22) — 3-fold @ 16.733, RM50 -> RM836.70. Aus/Egy Total Over 0.75 (1.122) · Arg/CpV Argentina -3.25 handicap (3.635) · Col/Gha Ghana +0.25 handicap (3.73). Includes 1.1x accumulator bonus.",
+      "odds": 16.733,
+      "stake": 50,
+      "placedAt": "03/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "totalOver",
+            "line": 0.75,
+            "odds": 1.122
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "handicap",
+            "side": "home",
+            "line": -3.25,
+            "odds": 3.635
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "handicap",
+            "side": "away",
+            "line": 0.25,
+            "odds": 3.73
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
