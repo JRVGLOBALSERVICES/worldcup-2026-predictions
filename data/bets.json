@@ -13257,6 +13257,92 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83913364413",
+      "slipNo": "83913364413",
+      "matchId": "aus-egy-2026-07-03",
+      "player": "3-game acca",
+      "market": "Accumulator (3) — DC / brace / totals",
+      "label": "REAL 1xBet slip 83913364413 (03/07 17:44) — 3-fold @ 11.139, RM50 -> RM556.97. Aus/Egy Double Chance 1X — Australia or draw (1.63) · Arg/CpV Lionel Messi to score 2 goals / brace (5.1) · Col/Gha Total Over 1.5 (1.34).",
+      "odds": 11.139,
+      "stake": 50,
+      "placedAt": "03/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "doubleChance",
+            "outcome": "1X",
+            "odds": 1.63
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "goalsOver",
+            "player": "Lionel Messi",
+            "line": 1.5,
+            "odds": 5.1
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalOver",
+            "line": 1.5,
+            "odds": 1.34
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83913283353",
+      "slipNo": "83913283353",
+      "matchId": "aus-egy-2026-07-03",
+      "player": "3-game acca",
+      "market": "Accumulator (3) — scorer combos",
+      "label": "REAL 1xBet slip 83913283353 (03/07 17:42) — 3-fold @ 23.689, RM50 -> RM1,184.47. Aus/Egy Salah to score + Irankunda not to score (3.9) · Arg/CpV Messi to score + Almada not to score (2.2) · Col/Gha Luis Diaz to score + Total Over 1.5 (2.761).",
+      "odds": 23.689,
+      "stake": 50,
+      "placedAt": "03/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "scored",
+            "player": "Mohamed Salah",
+            "odds": 3.9
+          },
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "scored",
+            "player": "Nestory Irankunda",
+            "negate": true
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "scored",
+            "player": "Lionel Messi",
+            "odds": 2.2
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "scored",
+            "player": "Thiago Almada",
+            "negate": true
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "scored",
+            "player": "Luis Diaz",
+            "odds": 2.761
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalOver",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
