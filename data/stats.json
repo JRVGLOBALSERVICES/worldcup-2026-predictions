@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:20:31.004Z",
+    "generatedAt": "2026-07-03T00:30:08.938Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 67
   },
@@ -378,6 +378,13 @@
       },
       {
         "rank": 1,
+        "name": "Cristiano Ronaldo",
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Granit Xhaka",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -430,13 +437,6 @@
         "name": "Lautaro Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "Marko Arnautovic",
-        "team": "Austria",
-        "flag": "🇦🇹",
         "value": 1
       }
     ],
@@ -589,15 +589,15 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 63.1,
-        "display": "63.1%",
+        "value": 63,
+        "display": "63.0%",
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -605,7 +605,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -679,7 +679,15 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
+        "team": "Croatia",
+        "flag": "🇭🇷",
+        "value": 45.2,
+        "display": "45.2%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -687,20 +695,12 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.1,
         "display": "44.1%",
         "matches": 3
-      },
-      {
-        "rank": 9,
-        "team": "Croatia",
-        "flag": "🇭🇷",
-        "value": 43.3,
-        "display": "43.3%",
-        "matches": 4
       },
       {
         "rank": 10,
@@ -888,8 +888,8 @@
         "rank": 2,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 61.2,
-        "display": "61.2%",
+        "value": 60.8,
+        "display": "60.8%",
         "matches": 4
       },
       {
@@ -1373,7 +1373,7 @@
       "scorers": [
         {
           "name": "Cristiano Ronaldo",
-          "value": 2,
+          "value": 3,
           "matches": 3
         },
         {
@@ -6278,31 +6278,31 @@
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 65.7,
-            "accuratePasses": 389,
-            "totalPasses": 421,
-            "shotsOnTarget": 1,
-            "totalShots": 10,
-            "effectiveTackles": 7,
-            "totalTackles": 15,
-            "accurateCrosses": 2,
-            "totalCrosses": 15,
+            "possessionPct": 65.3,
+            "accuratePasses": 399,
+            "totalPasses": 432,
+            "shotsOnTarget": 2,
+            "totalShots": 11,
+            "effectiveTackles": 8,
+            "totalTackles": 16,
+            "accurateCrosses": 3,
+            "totalCrosses": 16,
             "accurateLongBalls": 10,
-            "totalLongBalls": 19
+            "totalLongBalls": 20
           },
           {
             "team": "Croatia",
-            "possessionPct": 34.3,
-            "accuratePasses": 184,
-            "totalPasses": 216,
-            "shotsOnTarget": 2,
-            "totalShots": 6,
+            "possessionPct": 34.7,
+            "accuratePasses": 193,
+            "totalPasses": 226,
+            "shotsOnTarget": 3,
+            "totalShots": 7,
             "effectiveTackles": 7,
             "totalTackles": 13,
             "accurateCrosses": 1,
-            "totalCrosses": 7,
+            "totalCrosses": 8,
             "accurateLongBalls": 8,
-            "totalLongBalls": 24
+            "totalLongBalls": 25
           }
         ]
       },

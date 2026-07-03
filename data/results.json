@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:20:25.950Z",
+    "generatedAt": "2026-07-03T00:30:03.517Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 63,
     "live": 1
@@ -8540,7 +8540,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "advanced": null,
@@ -8551,6 +8551,14 @@
           "minute": 53,
           "assist": null,
           "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cristiano Ronaldo",
+          "minute": 67,
+          "assist": null,
+          "penalty": true,
           "ownGoal": false
         }
       ],
@@ -8571,20 +8579,20 @@
       "updatedAt": "2026-07-02T23:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 6,
+          "home": 7,
           "away": 2
         },
         "sot": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 3
         },
         "shots": {
-          "home": 10,
-          "away": 6
+          "home": 11,
+          "away": 7
         },
         "yellow": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -8592,12 +8600,12 @@
         },
         "cards": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             6,
-            0
+            1
           ],
           "away": [
             0,
@@ -8611,12 +8619,13 @@
           ],
           "away": [
             0,
-            1
+            2
           ]
         },
         "playerSot": {
           "Bruno Fernandes": 1,
-          "Mateo Kovacic": 1
+          "Mateo Kovacic": 1,
+          "Petar Sucic": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -8628,6 +8637,16 @@
             "breakEndMinute": 27,
             "firstActionType": "Shot Blocked",
             "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "Penalty - Scored",
+            "firstActionMinute": 67,
             "isCorner": false,
             "reliable": true
           }
