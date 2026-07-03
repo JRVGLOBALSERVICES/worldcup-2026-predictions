@@ -1003,6 +1003,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
+    },
+    "por-cro-2026-07-02": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
+      "ft90": {
+        "home": 2,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3865,6 +3881,55 @@
           "team": "away",
           "player": "Stefan Posch",
           "minute": 83,
+          "type": "yellow"
+        }
+      ]
+    },
+    "por-cro-2026-07-02": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ivan Perisic",
+          "minute": 53,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cristiano Ronaldo",
+          "minute": 67,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Gonçalo Ramos",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Rúben Dias",
+          "minute": 16,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Luka Modric",
+          "minute": 59,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Ivan Perisic",
+          "minute": 90,
           "type": "yellow"
         }
       ]
@@ -17289,20 +17354,20 @@
     },
     "por-cro-2026-07-02": {
       "corners": {
-        "home": 6,
-        "away": 2
+        "home": 9,
+        "away": 5
       },
       "sot": {
-        "home": 1,
-        "away": 2
+        "home": 3,
+        "away": 6
       },
       "shots": {
-        "home": 10,
-        "away": 6
+        "home": 15,
+        "away": 13
       },
       "yellow": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "red": {
         "home": 0,
@@ -17310,16 +17375,16 @@
       },
       "cards": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
           6,
-          0
+          3
         ],
         "away": [
           0,
-          2
+          5
         ]
       },
       "sotByHalf": {
@@ -17329,12 +17394,14 @@
         ],
         "away": [
           0,
-          1
+          5
         ]
       },
       "playerSot": {
         "Bruno Fernandes": 1,
-        "Mateo Kovacic": 1
+        "Mateo Kovacic": 3,
+        "Petar Sucic": 1,
+        "Igor Matanovic": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -17346,6 +17413,16 @@
           "breakEndMinute": 27,
           "firstActionType": "Shot Blocked",
           "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Foul",
+          "firstActionMinute": 73,
           "isCorner": false,
           "reliable": true
         }
