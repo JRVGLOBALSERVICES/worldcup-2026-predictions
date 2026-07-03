@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T21:10:05.170Z",
+    "generatedAt": "2026-07-03T21:20:07.295Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -371,6 +371,13 @@
     "penaltyScored": [
       {
         "rank": 1,
+        "name": "Awer Mabil",
+        "team": "Australia",
+        "flag": "🇦🇺",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Chemsdine Talbi",
         "team": "Morocco",
         "flag": "🇲🇦",
@@ -406,6 +413,13 @@
       },
       {
         "rank": 1,
+        "name": "Hossam Abdelmaguid",
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Ismael Saibari",
         "team": "Morocco",
         "flag": "🇲🇦",
@@ -413,30 +427,16 @@
       },
       {
         "rank": 1,
+        "name": "Jackson Irvine",
+        "team": "Australia",
+        "flag": "🇦🇺",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Jamal Musiala",
         "team": "Germany",
         "flag": "🇩🇪",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "José Canale",
-        "team": "Paraguay",
-        "flag": "🇵🇾",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "Joshua Kimmich",
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 1
-      },
-      {
-        "rank": 1,
-        "name": "Lautaro Martínez",
-        "team": "Argentina",
-        "flag": "🇦🇷",
         "value": 1
       }
     ],
@@ -2851,27 +2851,27 @@
       "flag": "🇪🇬",
       "scorers": [
         {
+          "name": "Mahmoud Saber",
+          "value": 2,
+          "matches": 2
+        },
+        {
+          "name": "Mohamed Salah",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Emam Ashour",
           "value": 1,
           "matches": 1
         },
         {
-          "name": "Mahmoud Saber",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Mohamed Salah",
+          "name": "Hossam Abdelmaguid",
           "value": 1,
           "matches": 1
         },
         {
           "name": "Mostafa Zico",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Trézéguet",
           "value": 1,
           "matches": 1
         }
@@ -3272,6 +3272,46 @@
         }
       ]
     },
+    "australia": {
+      "team": "Australia",
+      "flag": "🇦🇺",
+      "scorers": [
+        {
+          "name": "Awer Mabil",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Jackson Irvine",
+          "value": 1,
+          "matches": 1
+        }
+      ],
+      "assists": [],
+      "yellowCards": [
+        {
+          "name": "Alessandro Circati",
+          "value": 1
+        },
+        {
+          "name": "Harry Souttar",
+          "value": 1
+        },
+        {
+          "name": "Jackson Irvine",
+          "value": 1
+        },
+        {
+          "name": "Jacob Italiano",
+          "value": 1
+        },
+        {
+          "name": "Jordan Bos",
+          "value": 1
+        }
+      ],
+      "redCards": []
+    },
     "panama": {
       "team": "Panama",
       "flag": "🇵🇦",
@@ -3317,35 +3357,6 @@
         },
         {
           "name": "Paik Seung-Ho",
-          "value": 1
-        }
-      ],
-      "redCards": []
-    },
-    "australia": {
-      "team": "Australia",
-      "flag": "🇦🇺",
-      "scorers": [],
-      "assists": [],
-      "yellowCards": [
-        {
-          "name": "Alessandro Circati",
-          "value": 1
-        },
-        {
-          "name": "Harry Souttar",
-          "value": 1
-        },
-        {
-          "name": "Jackson Irvine",
-          "value": 1
-        },
-        {
-          "name": "Jacob Italiano",
-          "value": 1
-        },
-        {
-          "name": "Jordan Bos",
           "value": 1
         }
       ],
