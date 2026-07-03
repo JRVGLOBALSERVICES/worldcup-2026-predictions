@@ -17430,20 +17430,20 @@
     },
     "sui-alg-2026-07-03": {
       "corners": {
-        "home": 0,
-        "away": 0
-      },
-      "sot": {
         "home": 2,
         "away": 1
       },
+      "sot": {
+        "home": 3,
+        "away": 2
+      },
       "shots": {
-        "home": 2,
-        "away": 3
+        "home": 6,
+        "away": 6
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -17451,15 +17451,15 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
-          0,
+          2,
           0
         ],
         "away": [
-          0,
+          1,
           0
         ]
       },
@@ -17469,17 +17469,29 @@
           0
         ],
         "away": [
-          1,
+          2,
           0
         ]
       },
       "playerSot": {
         "Houssem Aouar": 1,
-        "Denis Zakaria": 1
+        "Denis Zakaria": 1,
+        "Farès Chaïbi": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
-      "waterBreak": {}
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 28,
+          "firstActionType": "Foul",
+          "firstActionMinute": 30,
+          "isCorner": false,
+          "reliable": true
+        }
+      }
     }
   }
 }
