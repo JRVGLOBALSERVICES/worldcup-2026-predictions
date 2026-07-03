@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T20:40:03.855Z",
+    "generatedAt": "2026-07-03T21:00:05.051Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 65,
-    "live": 1
+    "finished": 66,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -8805,19 +8805,25 @@
       }
     },
     "aus-egy-2026-07-03": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 1,
+        "away": 1
+      },
+      "ft90": {
+        "home": 1,
+        "away": 1
+      },
+      "finishPhase": "penalties",
       "score": {
         "home": 1,
         "away": 1
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
