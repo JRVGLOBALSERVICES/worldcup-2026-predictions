@@ -13176,6 +13176,41 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83907036017",
+      "slipNo": "83907036017",
+      "matchId": "aus-egy-2026-07-03",
+      "player": "3-game acca",
+      "market": "Accumulator (3) — totals/scorer",
+      "label": "REAL 1xBet slip 83907036017 (03/07 13:39) — 3-fold @ 20.087, RM60 -> RM1,205.26. Aus/Egy Total Over 2.5 (2.875) · Arg/CpV Messi to score TWO (5.1) · Col/Gha Total Under 3 (1.37).",
+      "odds": 20.087,
+      "stake": 60,
+      "placedAt": "03/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "aus-egy-2026-07-03",
+            "kind": "totalOver",
+            "line": 2.5,
+            "odds": 2.875
+          },
+          {
+            "matchId": "arg-cpv-2026-07-03",
+            "kind": "goalsOver",
+            "player": "Lionel Messi",
+            "line": 1.5,
+            "odds": 5.1
+          },
+          {
+            "matchId": "col-gha-2026-07-04",
+            "kind": "totalUnder",
+            "line": 3,
+            "odds": 1.37
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
