@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T17:10:06.685Z",
+    "generatedAt": "2026-07-03T18:10:07.667Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 69
   },
@@ -582,6 +582,14 @@
       },
       {
         "rank": 5,
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 63.6,
+        "display": "63.6%",
+        "matches": 3
+      },
+      {
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -589,7 +597,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -597,7 +605,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
@@ -605,7 +613,7 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 61.2,
@@ -613,19 +621,11 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
         "display": "59.8%",
-        "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 58.9,
-        "display": "58.9%",
         "matches": 3
       }
     ],
@@ -704,8 +704,8 @@
       },
       {
         "rank": 10,
-        "team": "Australia",
-        "flag": "🇦🇺",
+        "team": "New Zealand",
+        "flag": "🇳🇿",
         "value": 41.2,
         "display": "41.2%",
         "matches": 2
@@ -738,19 +738,19 @@
       },
       {
         "rank": 4,
-        "team": "Australia",
-        "flag": "🇦🇺",
-        "value": 69.7,
-        "display": "69.7%",
-        "matches": 2
-      },
-      {
-        "rank": 4,
         "team": "Egypt",
         "flag": "🇪🇬",
-        "value": 69.7,
-        "display": "69.7%",
-        "matches": 2
+        "value": 70.6,
+        "display": "70.6%",
+        "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Australia",
+        "flag": "🇦🇺",
+        "value": 68.6,
+        "display": "68.6%",
+        "matches": 3
       },
       {
         "rank": 6,
@@ -852,6 +852,14 @@
       },
       {
         "rank": 8,
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 31.6,
+        "display": "31.6%",
+        "matches": 3
+      },
+      {
+        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 30.8,
@@ -859,19 +867,11 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
         "display": "30.0%",
-        "matches": 2
-      },
-      {
-        "rank": 10,
-        "team": "Egypt",
-        "flag": "🇪🇬",
-        "value": 29.7,
-        "display": "29.7%",
         "matches": 2
       }
     ],
@@ -6408,6 +6408,40 @@
             "totalCrosses": 6,
             "accurateLongBalls": 25,
             "totalLongBalls": 60
+          }
+        ]
+      },
+      "760499": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Australia",
+            "possessionPct": 26.3,
+            "accuratePasses": 19,
+            "totalPasses": 29,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 6
+          },
+          {
+            "team": "Egypt",
+            "possessionPct": 73.7,
+            "accuratePasses": 74,
+            "totalPasses": 83,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 1,
+            "accurateCrosses": 1,
+            "totalCrosses": 1,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 8
           }
         ]
       }
