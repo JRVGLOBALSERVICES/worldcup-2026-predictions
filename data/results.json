@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T19:10:03.092Z",
+    "generatedAt": "2026-07-03T19:20:04.057Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 65,
     "live": 1
@@ -8814,7 +8814,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "advanced": null,
@@ -8826,6 +8826,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Mohamed Hany",
+          "minute": 54,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
         }
       ],
       "cards": [],
