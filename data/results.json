@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:10:03.663Z",
+    "generatedAt": "2026-07-03T00:20:04.706Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 63,
     "live": 1
@@ -8541,15 +8541,30 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ivan Perisic",
+          "minute": 53,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [
         {
           "team": "home",
           "player": "Rúben Dias",
           "minute": 16,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Luka Modric",
+          "minute": 59,
           "type": "yellow"
         }
       ],
@@ -8557,15 +8572,15 @@
       "stats": {
         "corners": {
           "home": 6,
-          "away": 1
+          "away": 2
         },
         "sot": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 9,
-          "away": 5
+          "home": 10,
+          "away": 6
         },
         "yellow": {
           "home": 1,
@@ -8586,7 +8601,7 @@
           ],
           "away": [
             0,
-            1
+            2
           ]
         },
         "sotByHalf": {
@@ -8603,7 +8618,7 @@
           "Bruno Fernandes": 1,
           "Mateo Kovacic": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {

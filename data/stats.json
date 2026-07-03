@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T00:10:11.536Z",
+    "generatedAt": "2026-07-03T00:20:10.070Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 67
   },
@@ -470,8 +470,8 @@
         "rank": 1,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 91.5,
-        "display": "91.5%",
+        "value": 91.4,
+        "display": "91.4%",
         "matches": 4
       },
       {
@@ -582,19 +582,19 @@
       },
       {
         "rank": 5,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 63.6,
-        "display": "63.6%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 63.1,
         "display": "63.1%",
         "matches": 3
+      },
+      {
+        "rank": 5,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 63.1,
+        "display": "63.1%",
+        "matches": 4
       },
       {
         "rank": 7,
@@ -698,8 +698,8 @@
         "rank": 9,
         "team": "Croatia",
         "flag": "🇭🇷",
-        "value": 41.4,
-        "display": "41.4%",
+        "value": 43.3,
+        "display": "43.3%",
         "matches": 4
       },
       {
@@ -888,8 +888,8 @@
         "rank": 2,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 62,
-        "display": "62.0%",
+        "value": 61.2,
+        "display": "61.2%",
         "matches": 4
       },
       {
@@ -1567,6 +1567,11 @@
           "matches": 1
         },
         {
+          "name": "Ivan Perisic",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Martin Baturina",
           "value": 1,
           "matches": 1
@@ -1578,11 +1583,6 @@
         },
         {
           "name": "Petar Musa",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Petar Sucic",
           "value": 1,
           "matches": 1
         }
@@ -1617,6 +1617,10 @@
       "yellowCards": [
         {
           "name": "Ivan Perisic",
+          "value": 1
+        },
+        {
+          "name": "Luka Modric",
           "value": 1
         },
         {
@@ -6274,31 +6278,31 @@
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 67.7,
-            "accuratePasses": 336,
-            "totalPasses": 361,
+            "possessionPct": 65.7,
+            "accuratePasses": 389,
+            "totalPasses": 421,
             "shotsOnTarget": 1,
-            "totalShots": 9,
-            "effectiveTackles": 5,
-            "totalTackles": 10,
+            "totalShots": 10,
+            "effectiveTackles": 7,
+            "totalTackles": 15,
             "accurateCrosses": 2,
-            "totalCrosses": 14,
+            "totalCrosses": 15,
             "accurateLongBalls": 10,
-            "totalLongBalls": 17
+            "totalLongBalls": 19
           },
           {
             "team": "Croatia",
-            "possessionPct": 32.3,
-            "accuratePasses": 141,
-            "totalPasses": 170,
-            "shotsOnTarget": 1,
-            "totalShots": 5,
-            "effectiveTackles": 4,
-            "totalTackles": 9,
+            "possessionPct": 34.3,
+            "accuratePasses": 184,
+            "totalPasses": 216,
+            "shotsOnTarget": 2,
+            "totalShots": 6,
+            "effectiveTackles": 7,
+            "totalTackles": 13,
             "accurateCrosses": 1,
-            "totalCrosses": 6,
-            "accurateLongBalls": 7,
-            "totalLongBalls": 23
+            "totalCrosses": 7,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 24
           }
         ]
       },
