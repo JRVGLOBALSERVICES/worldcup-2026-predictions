@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T18:30:03.248Z",
+    "generatedAt": "2026-07-03T18:40:03.071Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 65,
     "live": 1
@@ -8829,15 +8829,15 @@
       "updatedAt": "2026-07-03T18:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "sot": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "shots": {
-          "home": 3,
+          "home": 4,
           "away": 3
         },
         "yellow": {
@@ -8854,7 +8854,7 @@
         },
         "cornersByHalf": {
           "home": [
-            2,
+            3,
             0
           ],
           "away": [
@@ -8864,7 +8864,7 @@
         },
         "sotByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
@@ -8872,10 +8872,23 @@
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Aziz Behich": 1
+        },
         "firstGoalMethod": "header",
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Ball touch",
+            "firstActionMinute": 31,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
