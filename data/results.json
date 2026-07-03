@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T03:30:03.919Z",
+    "generatedAt": "2026-07-03T03:40:05.993Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 64,
     "live": 1
@@ -8695,7 +8695,14 @@
           "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Farès Chaïbi",
+          "minute": 35,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-03T03:00:00.000Z",
       "stats": {
         "corners": {
@@ -8707,12 +8714,12 @@
           "away": 1
         },
         "shots": {
-          "home": 3,
+          "home": 4,
           "away": 3
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -8720,7 +8727,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -8748,7 +8755,18 @@
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 28,
+            "firstActionType": "Foul",
+            "firstActionMinute": 30,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

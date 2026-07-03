@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T03:30:07.376Z",
+    "generatedAt": "2026-07-03T03:40:09.149Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 68
   },
@@ -476,19 +476,19 @@
       },
       {
         "rank": 2,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 91.1,
-        "display": "91.1%",
-        "matches": 4
-      },
-      {
-        "rank": 2,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 91.1,
         "display": "91.1%",
         "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 90.8,
+        "display": "90.8%",
+        "matches": 4
       },
       {
         "rank": 4,
@@ -608,8 +608,8 @@
         "rank": 8,
         "team": "Algeria",
         "flag": "🇩🇿",
-        "value": 62,
-        "display": "62.0%",
+        "value": 61.4,
+        "display": "61.4%",
         "matches": 4
       },
       {
@@ -634,8 +634,8 @@
         "rank": 1,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 59.1,
-        "display": "59.1%",
+        "value": 56.5,
+        "display": "56.5%",
         "matches": 3
       },
       {
@@ -918,14 +918,6 @@
       },
       {
         "rank": 6,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 51.9,
-        "display": "51.9%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
@@ -933,7 +925,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 51.2,
@@ -941,7 +933,7 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
         "value": 50.6,
@@ -949,11 +941,19 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 50.6,
         "display": "50.6%",
+        "matches": 4
+      },
+      {
+        "rank": 10,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 50.4,
+        "display": "50.4%",
         "matches": 4
       }
     ]
@@ -2952,6 +2952,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Farès Chaïbi",
+          "value": 1
+        },
         {
           "name": "Ramiz Zerrouki",
           "value": 1
@@ -6380,31 +6384,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 41.2,
-            "accuratePasses": 113,
-            "totalPasses": 130,
+            "possessionPct": 43.7,
+            "accuratePasses": 158,
+            "totalPasses": 185,
             "shotsOnTarget": 2,
-            "totalShots": 3,
+            "totalShots": 4,
             "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 3,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 11
+            "totalTackles": 3,
+            "accurateCrosses": 2,
+            "totalCrosses": 5,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 14
           },
           {
             "team": "Algeria",
-            "possessionPct": 58.8,
-            "accuratePasses": 170,
-            "totalPasses": 191,
+            "possessionPct": 56.3,
+            "accuratePasses": 213,
+            "totalPasses": 246,
             "shotsOnTarget": 1,
             "totalShots": 3,
-            "effectiveTackles": 2,
-            "totalTackles": 3,
+            "effectiveTackles": 5,
+            "totalTackles": 7,
             "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 20
+            "accurateLongBalls": 11,
+            "totalLongBalls": 28
           }
         ]
       }
