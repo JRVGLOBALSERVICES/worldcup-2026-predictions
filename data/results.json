@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T22:20:18.738Z",
+    "generatedAt": "2026-07-03T22:30:03.829Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 66,
     "live": 1
@@ -8941,11 +8941,20 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Lionel Messi",
+          "minute": 28,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-03T22:00:00.000Z",
       "stats": {
@@ -8954,11 +8963,11 @@
           "away": 0
         },
         "sot": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "shots": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "yellow": {
@@ -8996,9 +9005,20 @@
         "playerSot": {
           "Lionel Messi": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 27,
+            "firstActionType": "Goal",
+            "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

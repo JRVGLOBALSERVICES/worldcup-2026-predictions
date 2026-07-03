@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T22:20:24.051Z",
+    "generatedAt": "2026-07-03T22:30:06.026Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -8,19 +8,19 @@
     "scorers": [
       {
         "rank": 1,
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 7,
+        "matches": 4
+      },
+      {
+        "rank": 2,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
         "value": 6,
         "matches": 4
-      },
-      {
-        "rank": 1,
-        "name": "Lionel Messi",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 6,
-        "matches": 3
       },
       {
         "rank": 3,
@@ -606,18 +606,18 @@
       },
       {
         "rank": 8,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 61.5,
-        "display": "61.5%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 61.2,
         "display": "61.2%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 60.1,
+        "display": "60.1%",
         "matches": 4
       },
       {
@@ -672,6 +672,14 @@
       },
       {
         "rank": 6,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 45.9,
+        "display": "45.9%",
+        "matches": 4
+      },
+      {
+        "rank": 7,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -679,7 +687,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -687,15 +695,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 44.4,
-        "display": "44.4%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -716,8 +716,8 @@
         "rank": 1,
         "team": "Cape Verde",
         "flag": "🇨🇻",
-        "value": 80,
-        "display": "80.0%",
+        "value": 78.4,
+        "display": "78.4%",
         "matches": 3
       },
       {
@@ -844,14 +844,6 @@
       },
       {
         "rank": 7,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 31.3,
-        "display": "31.3%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 30.8,
@@ -859,12 +851,20 @@
         "matches": 3
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
         "display": "30.0%",
         "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 29.4,
+        "display": "29.4%",
+        "matches": 4
       },
       {
         "rank": 10,
@@ -904,8 +904,8 @@
         "rank": 4,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 52.8,
-        "display": "52.8%",
+        "value": 53.3,
+        "display": "53.3%",
         "matches": 4
       },
       {
@@ -1200,8 +1200,8 @@
       "scorers": [
         {
           "name": "Lionel Messi",
-          "value": 6,
-          "matches": 3
+          "value": 7,
+          "matches": 4
         },
         {
           "name": "Giovani Lo Celso",
@@ -1217,6 +1217,11 @@
       "assists": [
         {
           "name": "Facundo Medina",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Lisandro Martínez",
           "value": 1,
           "matches": 1
         },
@@ -6477,35 +6482,40 @@
       },
       "760500": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Lisandro Martínez",
+            "team": "Argentina"
+          }
+        ],
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 71.4,
-            "accuratePasses": 149,
-            "totalPasses": 162,
-            "shotsOnTarget": 1,
-            "totalShots": 2,
+            "possessionPct": 65.6,
+            "accuratePasses": 195,
+            "totalPasses": 211,
+            "shotsOnTarget": 2,
+            "totalShots": 3,
             "effectiveTackles": 2,
             "totalTackles": 5,
             "accurateCrosses": 0,
-            "totalCrosses": 1,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 5
+            "totalCrosses": 2,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 8
           },
           {
             "team": "Cape Verde",
-            "possessionPct": 28.6,
-            "accuratePasses": 49,
-            "totalPasses": 64,
+            "possessionPct": 34.4,
+            "accuratePasses": 92,
+            "totalPasses": 111,
             "shotsOnTarget": 0,
             "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 4,
+            "effectiveTackles": 2,
+            "totalTackles": 6,
             "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 13
+            "accurateLongBalls": 7,
+            "totalLongBalls": 16
           }
         ]
       }
