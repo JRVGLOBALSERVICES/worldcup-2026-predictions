@@ -1019,6 +1019,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
+    },
+    "sui-alg-2026-07-03": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 2,
+        "away": 0
+      },
+      "ft90": {
+        "home": 2,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -3930,6 +3946,41 @@
           "team": "away",
           "player": "Ivan Perisic",
           "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "sui-alg-2026-07-03": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Breel Embolo",
+          "minute": 10,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Dan Ndoye",
+          "minute": 46,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Farès Chaïbi",
+          "minute": 35,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Hicham Boudaoui",
+          "minute": 72,
           "type": "yellow"
         }
       ]
@@ -17430,20 +17481,20 @@
     },
     "sui-alg-2026-07-03": {
       "corners": {
-        "home": 3,
-        "away": 1
+        "home": 4,
+        "away": 2
       },
       "sot": {
-        "home": 3,
+        "home": 5,
         "away": 2
       },
       "shots": {
-        "home": 5,
-        "away": 6
+        "home": 11,
+        "away": 8
       },
       "yellow": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "red": {
         "home": 0,
@@ -17451,22 +17502,22 @@
       },
       "cards": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "cornersByHalf": {
         "home": [
           2,
-          1
+          2
         ],
         "away": [
           1,
-          0
+          1
         ]
       },
       "sotByHalf": {
         "home": [
           1,
-          0
+          1
         ],
         "away": [
           2,
@@ -17476,7 +17527,8 @@
       "playerSot": {
         "Houssem Aouar": 1,
         "Denis Zakaria": 1,
-        "Farès Chaïbi": 1
+        "Farès Chaïbi": 1,
+        "Remo Freuler": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -17488,6 +17540,16 @@
           "breakEndMinute": 28,
           "firstActionType": "Foul",
           "firstActionMinute": 30,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 72,
           "isCorner": false,
           "reliable": true
         }
