@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T03:30:06.274Z",
+    "generatedAt": "2026-07-04T03:40:06.494Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -141,11 +141,11 @@
           ],
           "next": {
             "round": "Round of 16",
-            "opponent": "R32-15 Winner",
-            "opponentFlag": null,
+            "opponent": "Colombia",
+            "opponentFlag": "🇨🇴",
             "kickoffUTC": "2026-07-07T20:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -1126,7 +1126,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Round of 16",
+            "opponent": "Switzerland",
+            "opponentFlag": "🇨🇭",
+            "kickoffUTC": "2026-07-07T20:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Portugal",

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T03:30:04.727Z",
+    "generatedAt": "2026-07-04T03:40:03.737Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 67,
-    "live": 1
+    "finished": 68,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -9094,19 +9094,25 @@
       }
     },
     "col-gha-2026-07-04": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 1,
+        "away": 0
+      },
+      "ft90": {
+        "home": 1,
+        "away": 0
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 1,
         "away": 0
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "home",
@@ -9156,11 +9162,11 @@
           "away": 2
         },
         "sot": {
-          "home": 7,
+          "home": 8,
           "away": 0
         },
         "shots": {
-          "home": 18,
+          "home": 20,
           "away": 8
         },
         "yellow": {
@@ -9188,7 +9194,7 @@
         "sotByHalf": {
           "home": [
             2,
-            4
+            5
           ],
           "away": [
             0,
@@ -9200,7 +9206,8 @@
           "Johan Mojica": 1,
           "Gustavo Puerta": 1,
           "Davinson Sánchez": 1,
-          "Richard Ríos": 1
+          "Richard Ríos": 1,
+          "Jáminton Campaz": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
