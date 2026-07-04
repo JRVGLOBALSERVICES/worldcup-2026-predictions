@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T02:40:04.027Z",
+    "generatedAt": "2026-07-04T02:50:03.549Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 67,
     "live": 1
@@ -9123,25 +9123,31 @@
           "player": "Jhon Arias",
           "minute": 12,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Caleb Yirenkyi",
+          "minute": 49,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-04T01:30:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
+          "home": 2,
           "away": 2
         },
         "sot": {
-          "home": 3,
+          "home": 4,
           "away": 0
         },
         "shots": {
-          "home": 5,
+          "home": 8,
           "away": 6
         },
         "yellow": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -9149,12 +9155,12 @@
         },
         "cards": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
             1,
-            0
+            1
           ],
           "away": [
             2,
@@ -9164,7 +9170,7 @@
         "sotByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             0,
@@ -9173,7 +9179,8 @@
         },
         "playerSot": {
           "Luis Díaz": 1,
-          "Johan Mojica": 1
+          "Johan Mojica": 1,
+          "Gustavo Puerta": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,

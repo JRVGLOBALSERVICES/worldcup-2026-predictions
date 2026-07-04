@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T02:40:06.723Z",
+    "generatedAt": "2026-07-04T02:50:05.912Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 71
   },
@@ -262,6 +262,13 @@
       },
       {
         "rank": 1,
+        "name": "Caleb Yirenkyi",
+        "team": "Ghana",
+        "flag": "🇬🇭",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Danilo",
         "team": "Brazil",
         "flag": "🇧🇷",
@@ -293,13 +300,6 @@
         "name": "Juninho Bacuna",
         "team": "Curacao",
         "flag": "🇨🇼",
-        "value": 2
-      },
-      {
-        "rank": 1,
-        "name": "Matías Galarza",
-        "team": "Paraguay",
-        "flag": "🇵🇾",
         "value": 2
       }
     ],
@@ -532,19 +532,19 @@
       },
       {
         "rank": 9,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 88.4,
-        "display": "88.4%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 88.3,
         "display": "88.3%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 88.2,
+        "display": "88.2%",
+        "matches": 4
       }
     ],
     "possession": [
@@ -606,18 +606,18 @@
       },
       {
         "rank": 8,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 61.6,
-        "display": "61.6%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 61.2,
         "display": "61.2%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 61,
+        "display": "61.0%",
         "matches": 4
       },
       {
@@ -854,8 +854,8 @@
         "rank": 8,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 31.3,
-        "display": "31.3%",
+        "value": 30.6,
+        "display": "30.6%",
         "matches": 4
       },
       {
@@ -912,8 +912,8 @@
         "rank": 5,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 53,
-        "display": "53.0%",
+        "value": 52.1,
+        "display": "52.1%",
         "matches": 4
       },
       {
@@ -1689,7 +1689,7 @@
       "yellowCards": [
         {
           "name": "Caleb Yirenkyi",
-          "value": 1
+          "value": 2
         },
         {
           "name": "Iñaki Williams",
@@ -6595,31 +6595,31 @@
         "teamBox": [
           {
             "team": "Colombia",
-            "possessionPct": 66.8,
-            "accuratePasses": 321,
-            "totalPasses": 344,
-            "shotsOnTarget": 3,
-            "totalShots": 5,
+            "possessionPct": 64.6,
+            "accuratePasses": 360,
+            "totalPasses": 393,
+            "shotsOnTarget": 4,
+            "totalShots": 8,
             "effectiveTackles": 4,
             "totalTackles": 6,
             "accurateCrosses": 3,
-            "totalCrosses": 9,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 21
+            "totalCrosses": 10,
+            "accurateLongBalls": 17,
+            "totalLongBalls": 30
           },
           {
             "team": "Ghana",
-            "possessionPct": 33.2,
-            "accuratePasses": 141,
-            "totalPasses": 168,
+            "possessionPct": 35.4,
+            "accuratePasses": 173,
+            "totalPasses": 211,
             "shotsOnTarget": 0,
             "totalShots": 6,
-            "effectiveTackles": 3,
-            "totalTackles": 5,
+            "effectiveTackles": 5,
+            "totalTackles": 8,
             "accurateCrosses": 1,
-            "totalCrosses": 8,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 21
+            "totalCrosses": 11,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 28
           }
         ]
       }
