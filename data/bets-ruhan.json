@@ -535,6 +535,67 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83979201059",
+      "slipNo": "83979201059",
+      "matchId": "can-mar-2026-07-04",
+      "player": "—",
+      "market": "Acca · 5 legs · Scorer+Team-Not-Lose / Player Over 1.5 / DC+BTTS",
+      "label": "5-fold @ 758.947, SHARED 3-way (RM5 each, RM15 total) — Ruhan share RM5 -> RM3,794.74. Can/Mar Jonathan David to score AND Canada not to lose (5.92) · Par/Fra Kylian Mbappe to score over 1.5 goals / 2+ (3.4) · Bra/Nor Vinicius Junior to score AND Brazil not to lose (2.204) · Mex/Eng Harry Kane to score AND Mexico not to lose (6.11) · Por/Esp 1X + Both Teams To Score Yes (2.8).",
+      "odds": 758.947,
+      "stake": 5,
+      "punter": "3-way split · RM5 each (with Rj)",
+      "placedAt": "04/07 22:57",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "can-mar-2026-07-04",
+            "kind": "scored",
+            "player": "Jonathan David",
+            "odds": 5.92
+          },
+          {
+            "matchId": "can-mar-2026-07-04",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "par-fra-2026-07-04",
+            "kind": "goalsOver",
+            "player": "Kylian Mbappe",
+            "line": 1.5
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "scored",
+            "player": "Vinicius Junior",
+            "odds": 2.204
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "scored",
+            "player": "Harry Kane",
+            "odds": 6.11
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X"
+          }
+        ]
+      }
     }
   ]
 }
