@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T16:10:07.510Z",
+    "generatedAt": "2026-07-04T17:10:06.687Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 72
   },
@@ -510,9 +510,9 @@
         "rank": 6,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 89.6,
-        "display": "89.6%",
-        "matches": 3
+        "value": 89.7,
+        "display": "89.7%",
+        "matches": 4
       },
       {
         "rank": 7,
@@ -558,16 +558,16 @@
       },
       {
         "rank": 2,
-        "team": "Germany",
-        "flag": "🇩🇪",
-        "value": 65.3,
-        "display": "65.3%",
-        "matches": 3
-      },
-      {
-        "rank": 2,
         "team": "Morocco",
         "flag": "🇲🇦",
+        "value": 65.4,
+        "display": "65.4%",
+        "matches": 4
+      },
+      {
+        "rank": 3,
+        "team": "Germany",
+        "flag": "🇩🇪",
         "value": 65.3,
         "display": "65.3%",
         "matches": 3
@@ -704,11 +704,11 @@
       },
       {
         "rank": 10,
-        "team": "New Zealand",
-        "flag": "🇳🇿",
-        "value": 41.2,
-        "display": "41.2%",
-        "matches": 2
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 41.5,
+        "display": "41.5%",
+        "matches": 4
       }
     ],
     "tackleSuccess": [
@@ -930,7 +930,7 @@
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
-        "matches": 3
+        "matches": 4
       },
       {
         "rank": 8,
@@ -6623,6 +6623,40 @@
             "totalCrosses": 15,
             "accurateLongBalls": 9,
             "totalLongBalls": 45
+          }
+        ]
+      },
+      "760502": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Canada",
+            "possessionPct": 34.2,
+            "accuratePasses": 11,
+            "totalPasses": 19,
+            "shotsOnTarget": 1,
+            "totalShots": 1,
+            "effectiveTackles": 0,
+            "totalTackles": 0,
+            "accurateCrosses": 2,
+            "totalCrosses": 6,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 2
+          },
+          {
+            "team": "Morocco",
+            "possessionPct": 65.8,
+            "accuratePasses": 44,
+            "totalPasses": 48,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 0,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 0
           }
         ]
       }

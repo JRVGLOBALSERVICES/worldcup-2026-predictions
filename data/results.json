@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T16:10:03.625Z",
+    "generatedAt": "2026-07-04T17:10:03.451Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 68,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -9233,6 +9233,73 @@
             "reliable": true
           }
         }
+      }
+    },
+    "can-mar-2026-07-04": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "ft90": null,
+      "finishPhase": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "advanced": null,
+      "goals": [],
+      "cards": [],
+      "updatedAt": "2026-07-04T17:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 3,
+          "away": 0
+        },
+        "sot": {
+          "home": 1,
+          "away": 0
+        },
+        "shots": {
+          "home": 1,
+          "away": 0
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "cornersByHalf": {
+          "home": [
+            3,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Jonathan David": 1
+        },
+        "firstGoalMethod": null,
+        "firstPenalty": null,
+        "waterBreak": {}
       }
     }
   }
