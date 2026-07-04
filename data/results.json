@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T03:10:03.778Z",
+    "generatedAt": "2026-07-04T03:20:03.885Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 67,
     "live": 1
@@ -9141,38 +9141,44 @@
           "player": "Alidu Seidu",
           "minute": 76,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Richard Ríos",
+          "minute": 77,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-04T01:30:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 3,
           "away": 2
         },
         "sot": {
-          "home": 5,
+          "home": 6,
           "away": 0
         },
         "shots": {
-          "home": 9,
+          "home": 13,
           "away": 8
         },
         "yellow": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 3
         },
         "red": {
           "home": 0,
           "away": 0
         },
         "cards": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 3
         },
         "cornersByHalf": {
           "home": [
             1,
-            1
+            2
           ],
           "away": [
             2,
@@ -9182,7 +9188,7 @@
         "sotByHalf": {
           "home": [
             2,
-            2
+            3
           ],
           "away": [
             0,
@@ -9192,7 +9198,8 @@
         "playerSot": {
           "Luis Díaz": 2,
           "Johan Mojica": 1,
-          "Gustavo Puerta": 1
+          "Gustavo Puerta": 1,
+          "Davinson Sánchez": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
