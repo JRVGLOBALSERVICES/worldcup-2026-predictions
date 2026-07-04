@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T19:20:08.133Z",
+    "generatedAt": "2026-07-04T20:07:39.902Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-04T19:20:08.132Z"
+    "modelUpdatedAt": "2026-07-04T20:07:39.902Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -19010,63 +19010,55 @@
     "par-fra-2026-07-04": {
       "win": {
         "pick": "France",
-        "fairOdds": "1.24",
-        "reason": "Model: France to win at 80% (Paraguay 6% / draw 13% / France 80%). Expected goals 0.6–2.7 from group-stage attack/defence rates (Paraguay 1.0 for / 1.4 against per game, France 2.6 / 1.0). Most likely score 0-2.",
-        "strength": 5
+        "fairOdds": "1.55",
+        "reason": "France clearly stronger and confirmed near-full strength (Mbappé 6 goals, Dembélé 4, Olise 5 assists). BUT Paraguay's CONFIRMED XI is a deep 5-3-2 block — Ávalos benched, Almirón + Enciso kept for the counter — the exact model that dumped Germany out on penalties (1-1, Gill saved two in the shootout). This is a genuine low-scoring / draw-risk night, not a formality: France ~60-63%, draw ~22%, Paraguay ~15%. Back France to win but respect draw-no-bet, under-2.5 and a France-only-by-one; do NOT overpay their win-to-nil/correct-score.",
+        "strength": 4
       },
       "halfTime": {
-        "score": "0-1",
-        "fairOdds": "3.58",
-        "alt": "0-0",
-        "altOdds": "6.27"
+        "score": "0-0",
+        "fairOdds": "1.95",
+        "alt": "0-1",
+        "altOdds": "3.40"
       },
       "htft": {
-        "pick": "France/France",
-        "fairOdds": "1.56"
+        "pick": "Draw/France",
+        "fairOdds": "3.30"
       },
       "fullTime": {
-        "score": "0-2",
-        "fairOdds": "7.32"
+        "score": "0-1",
+        "fairOdds": "5.20"
       },
       "scorers": [
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "fairOdds": "1.52",
+          "fairOdds": "1.60",
           "banker": true,
-          "note": "6 goals in 4 group games; 66% modelled anytime chance on 2.7 team xG.",
+          "note": "6 goals in 4 games, level for the Golden Boot and in career-best knockout form; stretches Paraguay's five-man line and is on penalties.",
           "strength": 5
         },
         {
           "player": "Ousmane Dembélé",
           "team": "France",
-          "fairOdds": "1.82",
+          "fairOdds": "1.95",
           "banker": false,
-          "note": "4 goals in 4 group games; 55% modelled anytime chance on 2.7 team xG.",
+          "note": "4 goals incl. a hat-trick vs Norway; France's right-side threat, isolates the Paraguay left wing-back.",
           "strength": 4
         },
         {
           "player": "Bradley Barcola",
           "team": "France",
-          "fairOdds": "2.80",
+          "fairOdds": "2.90",
           "banker": false,
-          "note": "2 goals in 4 group games; 36% modelled anytime chance on 2.7 team xG.",
+          "note": "2 goals; pace down the left with Digne overlapping — the channel outside Cáceres is the space to hit.",
           "strength": 3
         },
         {
-          "player": "Désiré Doué",
-          "team": "France",
-          "fairOdds": "4.30",
-          "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.7 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Matías Galarza",
+          "player": "Julio Enciso",
           "team": "Paraguay",
-          "fairOdds": "5.87",
+          "fairOdds": "6.20",
           "banker": false,
-          "note": "2 goals in 2 group games; 17% modelled anytime chance on 0.6 team xG.",
+          "note": "Scored Paraguay's header vs Germany and their main transition outlet — Paraguay's realistic route to a goal is an Enciso/Almirón counter.",
           "strength": 1
         }
       ],
@@ -19074,84 +19066,72 @@
         {
           "player": "Michael Olise",
           "team": "France",
-          "fairOdds": "1.72",
+          "fairOdds": "1.75",
           "banker": true,
-          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+          "note": "5 assists in the group stage; France's free-kick + corner taker and creative hub against a packed box."
         },
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "fairOdds": "2.58",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "2 assists in the group stage; 39% modelled chance to set one up."
+          "note": "2 assists; drops to link when defences sit deep and feeds Dembélé/Barcola."
         },
         {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "fairOdds": "2.58",
-          "banker": false,
-          "note": "2 assists in the group stage; 39% modelled chance to set one up."
-        },
-        {
-          "player": "Julio Enciso",
+          "player": "Miguel Almirón",
           "team": "Paraguay",
-          "fairOdds": "4.01",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "2 assists in the group stage; 25% modelled chance to set one up."
+          "note": "Starts ahead of Ávalos; drifts into the No.10 space and carries Paraguay's counter alongside Enciso."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Kylian Mbappé",
         "backup": "Ousmane Dembélé",
-        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
+        "note": "Against a deep five-man block defending crosses, a France penalty or set-piece is a live route to the opener — Mbappé takes them, Dembélé next. Paraguay's own order runs Enciso, G. Gómez, Almirón."
       },
       "lineups": {
-        "home": "Orlando Gil, Gustavo Gómez, Omar Alderete, Gustavo Velázquez, Alexandro Maidana, Juan Jose Cáceres, Andrés Cubas, Matías Galarza, Diego Gómez, Julio Enciso, Gabriel Ávalos",
-        "away": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Aurélien Tchouaméni, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Bradley Barcola, Kylian Mbappé",
-        "status": "unconfirmed",
+        "home": "Orlando Gill, Juan José Cáceres, Gustavo Gómez, Omar Alderete, Gustavo Velázquez, Junior Alonso, Andrés Cubas, Diego Gómez, Matías Galarza, Miguel Almirón, Julio Enciso",
+        "away": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Manu Koné, Adrien Rabiot, Michael Olise, Ousmane Dembélé, Kylian Mbappé, Bradley Barcola",
+        "status": "confirmed",
         "homeXI": {
           "formation": "5-3-2",
           "players": [
             {
               "num": 12,
-              "name": "Orlando Gil",
+              "name": "Orlando Gill",
               "pos": "G"
+            },
+            {
+              "num": 4,
+              "name": "Juan José Cáceres",
+              "pos": "RWB"
             },
             {
               "num": 15,
               "name": "Gustavo Gómez",
-              "pos": "CD"
+              "pos": "CD-R"
             },
             {
               "num": 3,
               "name": "Omar Alderete",
-              "pos": "CD-L"
+              "pos": "CD"
             },
             {
               "num": 2,
               "name": "Gustavo Velázquez",
-              "pos": "CD-R"
+              "pos": "CD-L"
             },
             {
-              "num": 26,
-              "name": "Alexandro Maidana",
-              "pos": "LB"
-            },
-            {
-              "num": 4,
-              "name": "Juan Jose Cáceres",
-              "pos": "RB"
+              "num": 6,
+              "name": "Junior Alonso",
+              "pos": "LWB"
             },
             {
               "num": 14,
               "name": "Andrés Cubas",
-              "pos": "CM"
-            },
-            {
-              "num": 23,
-              "name": "Matías Galarza",
-              "pos": "CM-L"
+              "pos": "DM"
             },
             {
               "num": 8,
@@ -19159,19 +19139,24 @@
               "pos": "CM-R"
             },
             {
+              "num": 23,
+              "name": "Matías Galarza",
+              "pos": "CM-L"
+            },
+            {
+              "num": 10,
+              "name": "Miguel Almirón",
+              "pos": "CF-R"
+            },
+            {
               "num": 19,
               "name": "Julio Enciso",
               "pos": "CF-L"
-            },
-            {
-              "num": 21,
-              "name": "Gabriel Ávalos",
-              "pos": "CF-R"
             }
           ]
         },
         "awayXI": {
-          "formation": "4-2-3-1",
+          "formation": "4-3-3",
           "players": [
             {
               "num": 16,
@@ -19199,19 +19184,14 @@
               "pos": "LB"
             },
             {
-              "num": 8,
-              "name": "Aurélien Tchouaméni",
-              "pos": "DM-R"
+              "num": 18,
+              "name": "Manu Koné",
+              "pos": "CM-R"
             },
             {
               "num": 14,
               "name": "Adrien Rabiot",
-              "pos": "DM-L"
-            },
-            {
-              "num": 7,
-              "name": "Ousmane Dembélé",
-              "pos": "AM-R"
+              "pos": "CM-L"
             },
             {
               "num": 11,
@@ -19219,14 +19199,19 @@
               "pos": "AM"
             },
             {
-              "num": 20,
-              "name": "Bradley Barcola",
-              "pos": "AM-L"
+              "num": 7,
+              "name": "Ousmane Dembélé",
+              "pos": "RW"
             },
             {
               "num": 10,
               "name": "Kylian Mbappé",
-              "pos": "F"
+              "pos": "CF"
+            },
+            {
+              "num": 20,
+              "name": "Bradley Barcola",
+              "pos": "LW"
             }
           ]
         }
@@ -19235,25 +19220,43 @@
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "note": "6 goals in 4 group games; 66% modelled anytime chance on 2.7 team xG."
+          "note": "Captain, 6 goals in 4 games and level for the Golden Boot; set France's WC knockout-goals record vs Sweden. Takes penalties."
         },
         {
           "player": "Ousmane Dembélé",
           "team": "France",
-          "note": "4 goals in 4 group games; 55% modelled anytime chance on 2.7 team xG."
+          "note": "4 goals incl. a hat-trick vs Norway; right-wing threat who isolates Paraguay's left wing-back and shares corners."
         },
         {
           "player": "Michael Olise",
           "team": "France",
-          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+          "note": "5 group-stage assists — France's free-kick and corner taker and the creator tasked with unlocking a five-man block."
+        },
+        {
+          "player": "Manu Koné",
+          "team": "France",
+          "note": "Starts in place of Tchouaméni (groin/thigh); more ball-carrying progression, slightly less pure shielding in front of the back four."
+        },
+        {
+          "player": "Julio Enciso",
+          "team": "Paraguay",
+          "note": "Scored the header that beat Germany — Paraguay's chief transition outlet and first-choice penalty taker; their goal likely comes on the counter."
+        },
+        {
+          "player": "Orlando Gill",
+          "team": "Paraguay",
+          "note": "Shootout hero vs Germany (saved two); confident and the reason a frustrated France could be dragged toward extra time."
         }
       ],
       "confidence": "medium",
       "strength": 5,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed XIs: https://www.101greatgoals.com/football/world-cup-news/paraguay-vs-france-live-teams-line-ups-tv-channel-online-live-stream/",
+        "France official team sheet (Koné replaces Tchouaméni): https://khelnow.com/football/france-starting-lineup-vs-paraguay-fifa-world-cup-2026",
+        "Set-piece/penalty takers + tactical preview: https://www.rotowire.com/soccer/article/paraguay-vs-france-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120852",
+        "Enciso profile / goal vs Germany: https://sports.yahoo.com/articles/julio-enciso-paraguay-star-stuns-212821642.html",
+        "Germany 1-1 Paraguay (3-4 pens), Gill saves: https://www.skysports.com/football/news/17251/13558815/",
+        "Mbappé on France penalties: https://sports.yahoo.com/articles/takes-france-penalties-why-kylian-170056348.html"
       ],
       "pitchReport": {
         "facts": [
