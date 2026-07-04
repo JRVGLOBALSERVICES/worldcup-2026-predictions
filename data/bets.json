@@ -13779,6 +13779,35 @@
      }
     ]
    }
+  },
+  {
+   "id": "sp-83968595177",
+   "slipNo": "83968595177",
+   "matchId": "par-fra-2026-07-04",
+   "player": "2-game acca",
+   "market": "Accumulator (2) — Player Goals / DC+BTTS",
+   "label": "REAL 1xBet slip 83968595177 (04/07 18:54) — 2-fold @ 14.72, RM100 -> RM1472. Par/Fra Kylian Mbappe to score TWO goals i.e. 2+ (4.0) · Can/Mar Canada 1X + Both Teams To Score Yes (3.68).",
+   "odds": 14.72,
+   "stake": 100,
+   "placedAt": "04/07 18:54",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "par-fra-2026-07-04",
+      "kind": "goalsOver",
+      "player": "Kylian Mbappe",
+      "line": 1.5,
+      "odds": 4.0
+     },
+     {
+      "matchId": "can-mar-2026-07-04",
+      "kind": "doubleChanceBtts",
+      "outcome": "1X",
+      "odds": 3.68
+     }
+    ]
+   }
   }
  ],
  "matchStats": {
