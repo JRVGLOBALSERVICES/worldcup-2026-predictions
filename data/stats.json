@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T01:10:06.350Z",
+    "generatedAt": "2026-07-04T01:40:07.675Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 71
   },
@@ -582,6 +582,14 @@
       },
       {
         "rank": 5,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 63.8,
+        "display": "63.8%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -589,7 +597,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -597,7 +605,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
@@ -605,7 +613,7 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 61.2,
@@ -613,20 +621,12 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 59.8,
         "display": "59.8%",
         "matches": 4
-      },
-      {
-        "rank": 9,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 59.8,
-        "display": "59.8%",
-        "matches": 3
       }
     ],
     "shotAccuracy": [
@@ -856,7 +856,7 @@
         "flag": "🇨🇴",
         "value": 30.8,
         "display": "30.8%",
-        "matches": 3
+        "matches": 4
       },
       {
         "rank": 9,
@@ -930,7 +930,7 @@
         "flag": "🇨🇴",
         "value": 51.2,
         "display": "51.2%",
-        "matches": 3
+        "matches": 4
       },
       {
         "rank": 8,
@@ -6567,6 +6567,40 @@
             "totalCrosses": 15,
             "accurateLongBalls": 21,
             "totalLongBalls": 48
+          }
+        ]
+      },
+      "760501": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Colombia",
+            "possessionPct": 75.8,
+            "accuratePasses": 42,
+            "totalPasses": 47,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 0,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 3,
+            "totalLongBalls": 6
+          },
+          {
+            "team": "Ghana",
+            "possessionPct": 24.2,
+            "accuratePasses": 10,
+            "totalPasses": 13,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 1,
+            "totalTackles": 3,
+            "accurateCrosses": 1,
+            "totalCrosses": 2,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 2
           }
         ]
       }
