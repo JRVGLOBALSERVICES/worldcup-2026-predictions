@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T02:00:09.388Z",
+    "generatedAt": "2026-07-04T02:10:06.869Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 71
   },
@@ -540,10 +540,10 @@
       },
       {
         "rank": 10,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 88,
-        "display": "88.0%",
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 88.2,
+        "display": "88.2%",
         "matches": 4
       }
     ],
@@ -574,14 +574,6 @@
       },
       {
         "rank": 4,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 64.6,
-        "display": "64.6%",
-        "matches": 4
-      },
-      {
-        "rank": 5,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
@@ -589,7 +581,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -597,12 +589,20 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
         "display": "63.0%",
         "matches": 2
+      },
+      {
+        "rank": 7,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 62.7,
+        "display": "62.7%",
+        "matches": 4
       },
       {
         "rank": 8,
@@ -860,19 +860,19 @@
       },
       {
         "rank": 9,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 28.9,
-        "display": "28.9%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 28.8,
         "display": "28.8%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Czechia",
+        "flag": "🇨🇿",
+        "value": 28.6,
+        "display": "28.6%",
+        "matches": 2
       }
     ],
     "longBallAccuracy": [
@@ -912,8 +912,8 @@
         "rank": 5,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 52.9,
-        "display": "52.9%",
+        "value": 53.1,
+        "display": "53.1%",
         "matches": 4
       },
       {
@@ -1729,11 +1729,6 @@
       ],
       "assists": [
         {
-          "name": "Luis Díaz",
-          "value": 2,
-          "matches": 2
-        },
-        {
           "name": "Cucho Hernández",
           "value": 1,
           "matches": 1
@@ -1745,6 +1740,16 @@
         },
         {
           "name": "Juan Fernando Quintero",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Luis Díaz",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Luis Suárez",
           "value": 1,
           "matches": 1
         }
@@ -6583,38 +6588,38 @@
         "penMiss": [],
         "assists": [
           {
-            "name": "Luis Díaz",
+            "name": "Luis Suárez",
             "team": "Colombia"
           }
         ],
         "teamBox": [
           {
             "team": "Colombia",
-            "possessionPct": 78.8,
-            "accuratePasses": 159,
-            "totalPasses": 171,
+            "possessionPct": 71.4,
+            "accuratePasses": 237,
+            "totalPasses": 254,
             "shotsOnTarget": 2,
-            "totalShots": 3,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
+            "totalShots": 2,
+            "effectiveTackles": 2,
+            "totalTackles": 2,
             "accurateCrosses": 1,
-            "totalCrosses": 6,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 14
+            "totalCrosses": 7,
+            "accurateLongBalls": 13,
+            "totalLongBalls": 19
           },
           {
             "team": "Ghana",
-            "possessionPct": 21.2,
-            "accuratePasses": 34,
-            "totalPasses": 46,
+            "possessionPct": 28.6,
+            "accuratePasses": 79,
+            "totalPasses": 99,
             "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 3,
+            "totalShots": 3,
+            "effectiveTackles": 3,
+            "totalTackles": 5,
             "accurateCrosses": 1,
-            "totalCrosses": 2,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 8
+            "totalCrosses": 6,
+            "accurateLongBalls": 3,
+            "totalLongBalls": 14
           }
         ]
       }
