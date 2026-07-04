@@ -18234,6 +18234,70 @@
           "reliable": true
         }
       }
+    },
+    "col-gha-2026-07-04": {
+      "corners": {
+        "home": 1,
+        "away": 2
+      },
+      "sot": {
+        "home": 3,
+        "away": 0
+      },
+      "shots": {
+        "home": 5,
+        "away": 6
+      },
+      "yellow": {
+        "home": 1,
+        "away": 0
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 1,
+        "away": 0
+      },
+      "cornersByHalf": {
+        "home": [
+          1,
+          0
+        ],
+        "away": [
+          2,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          2,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {
+        "Luis Díaz": 1,
+        "Johan Mojica": 1
+      },
+      "firstGoalMethod": "shot",
+      "firstPenalty": null,
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 27,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 33,
+          "isCorner": true,
+          "reliable": false
+        }
+      }
     }
   }
 }
