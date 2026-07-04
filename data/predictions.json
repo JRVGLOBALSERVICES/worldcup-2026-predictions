@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T09:10:07.383Z",
+    "generatedAt": "2026-07-04T16:05:27.238Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-04T09:10:07.383Z"
@@ -18661,107 +18661,92 @@
     },
     "can-mar-2026-07-04": {
       "win": {
-        "pick": "Canada",
-        "fairOdds": "2.27",
-        "reason": "Model: Canada to win at 44% (Canada 44% / draw 23% / Morocco 33%). Expected goals 1.7–1.5 from group-stage attack/defence rates (Canada 2.2 for / 1.2 against per game, Morocco 1.8 / 1.2). Most likely score 1-1.",
+        "pick": "Morocco",
+        "fairOdds": "2.05",
+        "reason": "On the confirmed teamsheets Morocco keep their unchanged, deeper spine — Hakimi and Mazraoui overlapping, a Bouaddi/El Aynaoui double pivot behind a Díaz/Ounahi/El Khannouss trio and in-form Saibari (3 group goals) leading the line. Canada lose scoring pop with Larin, Choinière and Cornelius benched and Koné out, leaning on David and an untested Oluwaseyi with Bombito reshuffled into central defence. Morocco are the higher-seeded, unbeaten side who counter through Hakimi, but Canada's high press keeps this a genuine ~50% game — the draw and a Canada upset both hold real weight.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "4.06",
+        "fairOdds": "2.5",
         "alt": "1-0",
-        "altOdds": "5.24"
+        "altOdds": "4.6"
       },
       "htft": {
-        "pick": "Draw/Canada",
-        "fairOdds": "5.68"
+        "pick": "Draw/Morocco",
+        "fairOdds": "5.0"
       },
       "fullTime": {
         "score": "1-1",
-        "fairOdds": "9.59"
+        "fairOdds": "6.5"
       },
       "scorers": [
         {
-          "player": "Jonathan David",
-          "team": "Canada",
-          "fairOdds": "2.21",
-          "banker": true,
-          "note": "3 goals in 4 group games; 45% modelled anytime chance on 1.7 team xG.",
+          "player": "Ismael Saibari",
+          "team": "Morocco",
+          "fairOdds": "3.4",
+          "banker": false,
+          "note": "Now leads the line with El Kaabi benched; scored in all three group games plus the shootout winner vs Netherlands — Morocco's hottest threat but not a banker.",
           "strength": 4
         },
         {
-          "player": "Ismael Saibari",
-          "team": "Morocco",
-          "fairOdds": "2.50",
+          "player": "Jonathan David",
+          "team": "Canada",
+          "fairOdds": "3.6",
           "banker": false,
-          "note": "3 goals in 4 group games; 40% modelled anytime chance on 1.5 team xG.",
+          "note": "Canada's talisman and penalty taker; hat-trick vs Qatar. With Larin benched he is the clear focal point, but Morocco defend deep and well — non-banker.",
           "strength": 3
-        },
-        {
-          "player": "Cyle Larin",
-          "team": "Canada",
-          "fairOdds": "2.85",
-          "banker": false,
-          "note": "2 goals in 3 group games; 35% modelled anytime chance on 1.7 team xG.",
-          "strength": 3
-        },
-        {
-          "player": "Soufiane Rahimi",
-          "team": "Morocco",
-          "fairOdds": "3.27",
-          "banker": false,
-          "note": "2 goals in 2 group games; 31% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "fairOdds": "4.39",
-          "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 1.7 team xG.",
-          "strength": 1
-        }
-      ],
-      "assists": [
-        {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
         },
         {
           "player": "Brahim Díaz",
           "team": "Morocco",
-          "fairOdds": "2.82",
+          "fairOdds": "4.5",
           "banker": false,
-          "note": "2 assists in the group stage; 35% modelled chance to set one up."
+          "note": "Advanced No.10 in the trio and Morocco's first-choice in-game penalty taker; a live goal route if a spot-kick is awarded.",
+          "strength": 3
         },
+        {
+          "player": "Tani Oluwaseyi",
+          "team": "Canada",
+          "fairOdds": "5.0",
+          "banker": false,
+          "note": "Starts centrally with Larin benched but is yet to score this tournament despite heavy minutes — a transition threat, not reliable.",
+          "strength": 2
+        }
+      ],
+      "assists": [
         {
           "player": "Achraf Hakimi",
           "team": "Morocco",
-          "fairOdds": "4.44",
+          "fairOdds": "4.5",
           "banker": false,
-          "note": "1 assist in the group stage; 23% modelled chance to set one up."
+          "note": "Morocco's chief creator from the overlapping right; box touches leader vs Netherlands and backup set-piece taker to Díaz."
         },
         {
-          "player": "Chadi Riad",
+          "player": "Bilal El Khannouss",
           "team": "Morocco",
-          "fairOdds": "4.44",
+          "fairOdds": "5.0",
           "banker": false,
-          "note": "1 assist in the group stage; 23% modelled chance to set one up."
+          "note": "Controlled midfield vs Netherlands; the line-breaking passer feeding Saibari from the attacking trio."
+        },
+        {
+          "player": "Alistair Johnston",
+          "team": "Canada",
+          "fairOdds": "6.5",
+          "banker": false,
+          "note": "Canada's most consistent attacking fullback down the right; primary crossing outlet with Ahmed/Buchanan ahead."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Jonathan David",
-        "backup": "Cyle Larin",
-        "note": "Tight model margin (11 pts) raises the odds a spot-kick decides it; Jonathan David is Canada's group-stage top scorer and likely taker."
+        "taker": "Brahim Díaz",
+        "backup": "Achraf Hakimi",
+        "note": "Díaz is Morocco's confirmed first-choice in-game penalty taker (Hakimi next in line); for Canada, Jonathan David is the designated taker. Two attack-minded, overlapping-fullback sides plus Canada's press make a spot-kick realistic but not high-probability."
       },
       "lineups": {
-        "home": "Maxime Crépeau, Derek Cornelius, Luc de Fougerolles, Richie Laryea, Alistair Johnston, Mathieu Choinière, Nathan Saliba, Ali Ahmed, Tajon Buchanan, Cyle Larin, Jonathan David",
-        "away": "Yassine Bounou, Chadi Riad, Redouane Halhal, Anass Salah-Eddine, Achraf Hakimi, Ismael Saibari, Sofyan Amrabat, Neil El Aynaoui, Ayoub El Kaabi, Bilal El Khannouss, Brahim Díaz",
-        "status": "unconfirmed",
+        "home": "Maxime Crépeau, Alistair Johnston, Luc de Fougerolles, Moïse Bombito, Richie Laryea, Stephen Eustáquio, Niko Sigur, Tajon Buchanan, Ali Ahmed, Jonathan David, Tani Oluwaseyi",
+        "away": "Yassine Bounou, Achraf Hakimi, Issa Diop, Redouane Halhal, Noussair Mazraoui, Neil El Aynaoui, Ayyoub Bouaddi, Brahim Díaz, Azzedine Ounahi, Bilal El Khannouss, Ismael Saibari",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-4-2",
           "players": [
@@ -18771,9 +18756,9 @@
               "pos": "G"
             },
             {
-              "num": 13,
-              "name": "Derek Cornelius",
-              "pos": "CD-L"
+              "num": 2,
+              "name": "Alistair Johnston",
+              "pos": "RB"
             },
             {
               "num": 4,
@@ -18781,29 +18766,24 @@
               "pos": "CD-R"
             },
             {
+              "num": 5,
+              "name": "Moïse Bombito",
+              "pos": "CD-L"
+            },
+            {
               "num": 22,
               "name": "Richie Laryea",
               "pos": "LB"
             },
             {
-              "num": 2,
-              "name": "Alistair Johnston",
-              "pos": "RB"
-            },
-            {
-              "num": 6,
-              "name": "Mathieu Choinière",
-              "pos": "CM-L"
-            },
-            {
-              "num": 25,
-              "name": "Nathan Saliba",
+              "num": 7,
+              "name": "Stephen Eustáquio",
               "pos": "CM-R"
             },
             {
-              "num": 20,
-              "name": "Ali Ahmed",
-              "pos": "LM"
+              "num": 15,
+              "name": "Niko Sigur",
+              "pos": "CM-L"
             },
             {
               "num": 17,
@@ -18811,14 +18791,19 @@
               "pos": "RM"
             },
             {
-              "num": 9,
-              "name": "Cyle Larin",
-              "pos": "CF-L"
+              "num": 20,
+              "name": "Ali Ahmed",
+              "pos": "LM"
             },
             {
               "num": 10,
               "name": "Jonathan David",
               "pos": "CF-R"
+            },
+            {
+              "num": 14,
+              "name": "Tani Oluwaseyi",
+              "pos": "CF-L"
             }
           ]
         },
@@ -18831,44 +18816,44 @@
               "pos": "G"
             },
             {
-              "num": 18,
-              "name": "Chadi Riad",
-              "pos": "CD-L"
-            },
-            {
-              "num": 25,
-              "name": "Redouane Halhal",
-              "pos": "CD-R"
-            },
-            {
-              "num": 26,
-              "name": "Anass Salah-Eddine",
-              "pos": "LB"
-            },
-            {
               "num": 2,
               "name": "Achraf Hakimi",
               "pos": "RB"
             },
             {
-              "num": 11,
-              "name": "Ismael Saibari",
-              "pos": "AM"
+              "num": 18,
+              "name": "Issa Diop",
+              "pos": "CD-R"
             },
             {
-              "num": 4,
-              "name": "Sofyan Amrabat",
-              "pos": "LM"
+              "num": 25,
+              "name": "Redouane Halhal",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Noussair Mazraoui",
+              "pos": "LB"
             },
             {
               "num": 24,
               "name": "Neil El Aynaoui",
-              "pos": "RM"
+              "pos": "CM-R"
             },
             {
-              "num": 20,
-              "name": "Ayoub El Kaabi",
-              "pos": "F"
+              "num": 15,
+              "name": "Ayyoub Bouaddi",
+              "pos": "CM-L"
+            },
+            {
+              "num": 10,
+              "name": "Brahim Díaz",
+              "pos": "AM-R"
+            },
+            {
+              "num": 8,
+              "name": "Azzedine Ounahi",
+              "pos": "AM"
             },
             {
               "num": 23,
@@ -18876,132 +18861,132 @@
               "pos": "AM-L"
             },
             {
-              "num": 10,
-              "name": "Brahim Díaz",
-              "pos": "AM-R"
+              "num": 11,
+              "name": "Ismael Saibari",
+              "pos": "F"
             }
           ]
         }
       },
       "playerNotes": [
         {
-          "player": "Jonathan David",
-          "team": "Canada",
-          "note": "3 goals in 4 group games; 45% modelled anytime chance on 1.7 team xG."
-        },
-        {
           "player": "Ismael Saibari",
           "team": "Morocco",
-          "note": "3 goals in 4 group games; 40% modelled anytime chance on 1.5 team xG."
+          "note": "Confirmed lone striker in the 4-2-3-1; scored in all three group games and buried the shootout winner vs Netherlands — Morocco's form man."
         },
         {
-          "player": "Nathan Saliba",
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "note": "Overlapping right-back and set-piece hub; will target Canada's left where Laryea sits and Davies is only a bench option returning from injury."
+        },
+        {
+          "player": "Noussair Mazraoui",
+          "team": "Morocco",
+          "note": "Attacking left-back completing the double overlap; his advances pin Buchanan/Ahmed back and open Morocco's counter width."
+        },
+        {
+          "player": "Jonathan David",
           "team": "Canada",
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Canada's all-time top scorer, penalty taker and clearest upset route; must carry the line with Larin and Choinière benched and Koné out injured."
+        },
+        {
+          "player": "Moïse Bombito",
+          "team": "Canada",
+          "note": "Comes in for the benched Cornelius alongside de Fougerolles — a reshuffled centre-back pairing tasked with containing Saibari and the Díaz/Ounahi/El Khannouss movement."
+        },
+        {
+          "player": "Stephen Eustáquio",
+          "team": "Canada",
+          "note": "Captain and deeper pivot with Sigur; must screen Morocco's creative trio and win the battle vs Bouaddi/El Aynaoui to give Canada a platform."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.rotowire.com/soccer/article/canada-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120851",
+        "https://www.oddschecker.com/insight/football/20260704-canada-vs-morocco-confirmed-lineups",
+        "https://au.sports.yahoo.com/canada-vs-morocco-xis-confirmed-165751058.html",
+        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/morocco-s-predicted-lineup-to-face-canada-in-the-world-cup-2026-round-of-16-2026-07-04",
+        "https://www.squawka.com/en/news/world-cup/world-cup-2026-every-teams-set-piece-takers/",
+        "https://www.fanduel.com/research/canada-vs-morocco-prediction-picks-lineups-and-best-bets-today-world-cup-2026-round-of-16"
       ],
       "pitchReport": {
         "facts": [
-          "Canada: 4 pts, +5 GD across 3 group games (8 for / 3 against).",
-          "Morocco: 7 pts, +3 GD across 3 group games (6 for / 3 against).",
-          "Canada's Jonathan David leads them with 3 goals in 4 games.",
-          "Morocco's Ismael Saibari leads them with 3 goals in 4 games."
+          "Confirmed XIs — Canada 4-4-2: Crépeau; Johnston, de Fougerolles, Bombito, Laryea; Eustáquio, Sigur; Buchanan, Ahmed; David, Oluwaseyi.",
+          "Confirmed XIs — Morocco 4-2-3-1: Bounou; Hakimi, Diop, Halhal, Mazraoui; Bouaddi, El Aynaoui; Díaz, Ounahi, El Khannouss; Saibari.",
+          "Canada bench Larin, Saliba, Choinière and Cornelius; Davies only on the bench; Koné out (broken leg).",
+          "Morocco lose Chadi Riad (injured vs Netherlands); Amrabat, El Kaabi and Rahimi start on the bench."
         ],
         "assumptions": [
-          "Model projects Canada to carry more of the ball and the better chances (higher attack rating); Morocco to sit compact and play on the break.",
-          "Goal expectancy 1.7–1.5 (Canada–Morocco) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+          "Morocco keep their stronger, unchanged spine and counter through Hakimi/Mazraoui.",
+          "Canada are weakened up front (Larin out) and reshuffled at the back with Bombito for Cornelius."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "Canada shade the chance-creation (1.7 vs 1.5 xG) — they should make the running.",
-        "drawRisk": "Moderate — 23.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
-        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "lineups": "Both XIs CONFIRMED. Morocco forced into one change (Riad injured → Diop); Canada rotate heavily, resting Larin/Choinière and holding Davies in reserve.",
+        "motivation": "Straight knockout — both sides go for the win, but Morocco carry the cautious-favourite profile and will happily let Canada come onto them.",
+        "xgRead": "Roughly level chance-creation: Morocco's Díaz/Ounahi/El Khannouss trio vs Canada's David-led press. Neither λ dominant — a tight, low-total game.",
+        "drawRisk": "High. Two organised sides, Canada shorn of a second striker — a cagey 1-1 / low-scoring draw is squarely in play.",
+        "travel": "Houston (NRG Stadium) — indoor/roofed, heat neutralised; 1pm local kickoff no major factor.",
         "caseFor": [
-          "Canada are the model's 44% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Jonathan David carrying the scoring load.",
-          "Conditions (heat) suit a controlled game Canada can manage."
+          "Morocco keep their unchanged, deeper spine and elite fullbacks.",
+          "Canada lose scoring pop with Larin, Choinière and Cornelius benched.",
+          "Saibari is in red-hot form leading the line."
         ],
         "caseAgainst": [
-          "23.3% draw + Morocco's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Canada's number may be inflated by one result."
+          "Canada's high press can unsettle Morocco's build-up.",
+          "Bombito-for-Cornelius is a reshuffle, not a downgrade, and David is a live upset route.",
+          "It is ~50/50 — the draw and extra time are very much alive."
         ],
-        "verdict": "Pass",
-        "changeMind": "A confirmed XI resting Jonathan David, or news the underdog is missing a defensive linchpin."
+        "verdict": "Lean",
+        "changeMind": "An early Canada goal forcing Morocco out of their block, or Davies coming on to overload Canada's left, would swing this back toward the hosts."
       },
       "valueSpot": null,
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
-            "why": "Not priced — can't confirm the favourite is good value."
+            "tripped": false,
+            "why": "Not priced — Morocco lean is model + confirmed team-news, not a market read."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name strongest XI, no rotation."
+            "why": "Knockout — both name their strongest available XI bar the forced Riad change."
           },
           {
-            "name": "Built on one result / a short hot streak",
-            "tripped": false,
-            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
-          },
-          {
-            "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
-          },
-          {
-            "name": "Lineups unconfirmed and the bet depends on them",
+            "name": "Live draw ignored",
             "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
-          },
-          {
-            "name": "Ignoring the draw",
-            "tripped": true,
-            "why": "23.3% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
-          },
-          {
-            "name": "Emotional / a chase / just for action",
-            "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+            "why": "Two well-organised sides, Canada weakened up top — the draw and extra time are genuine; downgrade any win-to-nil."
           }
         ],
-        "trapsTripped": 2,
+        "trapsTripped": 1,
         "edge": "edge-leaning",
         "verdict": "LEAN",
-        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+        "discipline": "In a coin-flip knockout, a straight win bet ignores 90 minutes of draw plus extra time — respect the level game."
       },
       "brainSummary": {
         "verdict": "LEAN",
-        "call": "Canada to win is a lean, not a lock. Respect the live draw.",
+        "call": "Morocco to edge it is a lean, not a lock — their unchanged deeper spine over a Canada attack shorn of Larin, but respect the live draw.",
         "read": {
-          "tag": "Pass",
-          "line": "Canada are the model's 44% pick, but a 23.3% draw is very much alive."
+          "tag": "Lean",
+          "line": "Morocco's settled 4-2-3-1 and elite fullbacks vs a rotated Canada; a level knockout keeps the draw alive."
         },
         "price": {
           "tag": "Not priced yet",
-          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+          "line": "No live odds pulled for this tie — model + confirmed team-news call only."
         },
         "trap": {
-          "tag": "2 warnings",
-          "line": "The draw is live and a level game kills a straight win bet."
+          "tag": "1 warning",
+          "line": "The draw is live and this is coin-flip-ish — a straight win bet ignores extra time."
         }
       },
       "resolution": {
-        "ninety": 76.7,
-        "extraTime": 12.8,
-        "penalties": 10.5,
+        "ninety": 76.0,
+        "extraTime": 13.2,
+        "penalties": 10.8,
         "mostLikely": "Regulation",
-        "etWinner": "Canada",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Canada.",
-        "note": "Most likely settled inside 90 (76.7%). But a 23.3% level 90 keeps extra time (12.8%) and penalties (10.5%) live — in a knockout, that's the bit a straight win bet ignores."
+        "etWinner": "Morocco",
+        "shootout": "Near coin-flip; Bounou's shootout pedigree gives Morocco the marginal nerve edge.",
+        "note": "Most likely settled inside 90 (76%), but a live level 90 keeps extra time (13.2%) and penalties (10.8%) firmly in play in this knockout."
       }
     },
     "par-fra-2026-07-04": {
