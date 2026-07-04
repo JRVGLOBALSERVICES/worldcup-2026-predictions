@@ -13716,6 +13716,69 @@
      }
     ]
    }
+  },
+  {
+   "id": "sp-83968026971",
+   "slipNo": "83968026971",
+   "matchId": "par-fra-2026-07-04",
+   "player": "8-game acca",
+   "market": "Accumulator (8) — Scorer / Totals / DC / BTTS",
+   "label": "REAL 1xBet slip 83968026971 (04/07 18:38) — 8-fold @ 17.145, RM50 -> RM857.28. Par/Fra Kylian Mbappe to score anytime (1.5) · Can/Mar Total Over 0.5 (1.026) · Bra/Nor 1X + Both Teams To Score Yes (2.03) · Mex/Eng 2X (1.409) · Por/Esp Total Under 3.25 (1.413) · USA/Bel Both Teams To Score Yes (1.58) · Sui/Col 2X (1.341) · Arg/Egy Total Under 3.25 (1.301).",
+   "odds": 17.145,
+   "stake": 50,
+   "placedAt": "04/07 18:38",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "par-fra-2026-07-04",
+      "kind": "scored",
+      "player": "Kylian Mbappe",
+      "odds": 1.5
+     },
+     {
+      "matchId": "can-mar-2026-07-04",
+      "kind": "totalOver",
+      "line": 0.5,
+      "odds": 1.026
+     },
+     {
+      "matchId": "bra-nor-2026-07-05",
+      "kind": "doubleChanceBtts",
+      "outcome": "1X",
+      "odds": 2.03
+     },
+     {
+      "matchId": "mex-eng-2026-07-06",
+      "kind": "doubleChance",
+      "outcome": "X2",
+      "odds": 1.409
+     },
+     {
+      "matchId": "por-esp-2026-07-06",
+      "kind": "totalUnder",
+      "line": 3.25,
+      "odds": 1.413
+     },
+     {
+      "matchId": "usa-bel-2026-07-07",
+      "kind": "btts",
+      "odds": 1.58
+     },
+     {
+      "matchId": "sui-col-2026-07-07",
+      "kind": "doubleChance",
+      "outcome": "X2",
+      "odds": 1.341
+     },
+     {
+      "matchId": "arg-egy-2026-07-07",
+      "kind": "totalUnder",
+      "line": 3.25,
+      "odds": 1.301
+     }
+    ]
+   }
   }
  ],
  "matchStats": {
