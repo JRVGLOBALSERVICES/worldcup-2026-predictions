@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T22:30:03.370Z",
+    "generatedAt": "2026-07-04T22:40:03.660Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 69,
     "live": 1
@@ -9420,10 +9420,19 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Kylian Mbappé",
+          "minute": 69,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        }
+      ],
       "cards": [
         {
           "team": "away",
@@ -9440,11 +9449,11 @@
         },
         "sot": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "shots": {
           "home": 3,
-          "away": 10
+          "away": 11
         },
         "yellow": {
           "home": 0,
@@ -9481,7 +9490,7 @@
         "playerSot": {
           "Manu Koné": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "penalty",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
@@ -9491,6 +9500,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Shot Off Target",
             "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 66,
+            "firstActionType": "VAR - Referee decision cancelled",
+            "firstActionMinute": 66,
             "isCorner": false,
             "reliable": true
           }
