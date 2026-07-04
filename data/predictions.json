@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T16:05:27.238Z",
+    "generatedAt": "2026-07-04T16:10:08.343Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-04T09:10:07.383Z"
+    "modelUpdatedAt": "2026-07-04T16:10:08.335Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -18912,81 +18912,99 @@
       ],
       "pitchReport": {
         "facts": [
-          "Confirmed XIs — Canada 4-4-2: Crépeau; Johnston, de Fougerolles, Bombito, Laryea; Eustáquio, Sigur; Buchanan, Ahmed; David, Oluwaseyi.",
-          "Confirmed XIs — Morocco 4-2-3-1: Bounou; Hakimi, Diop, Halhal, Mazraoui; Bouaddi, El Aynaoui; Díaz, Ounahi, El Khannouss; Saibari.",
-          "Canada bench Larin, Saliba, Choinière and Cornelius; Davies only on the bench; Koné out (broken leg).",
-          "Morocco lose Chadi Riad (injured vs Netherlands); Amrabat, El Kaabi and Rahimi start on the bench."
+          "Canada: 4 pts, +5 GD across 3 group games (8 for / 3 against).",
+          "Morocco: 7 pts, +3 GD across 3 group games (6 for / 3 against).",
+          "Canada's Jonathan David leads them with 3 goals in 4 games.",
+          "Morocco's Ismael Saibari leads them with 3 goals in 4 games."
         ],
         "assumptions": [
-          "Morocco keep their stronger, unchanged spine and counter through Hakimi/Mazraoui.",
-          "Canada are weakened up front (Larin out) and reshuffled at the back with Bombito for Cornelius."
+          "Model projects Morocco to carry more of the ball and the better chances (higher attack rating); Canada to sit compact and play on the break.",
+          "Goal expectancy 1.7–1.5 (Canada–Morocco) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "Both XIs CONFIRMED. Morocco forced into one change (Riad injured → Diop); Canada rotate heavily, resting Larin/Choinière and holding Davies in reserve.",
-        "motivation": "Straight knockout — both sides go for the win, but Morocco carry the cautious-favourite profile and will happily let Canada come onto them.",
-        "xgRead": "Roughly level chance-creation: Morocco's Díaz/Ounahi/El Khannouss trio vs Canada's David-led press. Neither λ dominant — a tight, low-total game.",
-        "drawRisk": "High. Two organised sides, Canada shorn of a second striker — a cagey 1-1 / low-scoring draw is squarely in play.",
-        "travel": "Houston (NRG Stadium) — indoor/roofed, heat neutralised; 1pm local kickoff no major factor.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Canada shade the chance-creation (1.7 vs 1.5 xG) — they should make the running.",
+        "drawRisk": "Moderate — 23.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
         "caseFor": [
-          "Morocco keep their unchanged, deeper spine and elite fullbacks.",
-          "Canada lose scoring pop with Larin, Choinière and Cornelius benched.",
-          "Saibari is in red-hot form leading the line."
+          "Morocco are the model's 32.7% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Ismael Saibari carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Morocco can manage."
         ],
         "caseAgainst": [
-          "Canada's high press can unsettle Morocco's build-up.",
-          "Bombito-for-Cornelius is a reshuffle, not a downgrade, and David is a live upset route.",
-          "It is ~50/50 — the draw and extra time are very much alive."
+          "23.3% draw + Canada's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Morocco's number may be inflated by one result."
         ],
-        "verdict": "Lean",
-        "changeMind": "An early Canada goal forcing Morocco out of their block, or Davies coming on to overload Canada's left, would swing this back toward the hosts."
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
-            "tripped": false,
-            "why": "Not priced — Morocco lean is model + confirmed team-news, not a market read."
+            "why": "Not priced — can't confirm the favourite is good value."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name their strongest available XI bar the forced Riad change."
+            "why": "Knockout — both name strongest XI, no rotation."
           },
           {
-            "name": "Live draw ignored",
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
             "tripped": true,
-            "why": "Two well-organised sides, Canada weakened up top — the draw and extra time are genuine; downgrade any win-to-nil."
+            "why": "23.3% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
         "trapsTripped": 1,
         "edge": "edge-leaning",
         "verdict": "LEAN",
-        "discipline": "In a coin-flip knockout, a straight win bet ignores 90 minutes of draw plus extra time — respect the level game."
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "LEAN",
-        "call": "Morocco to edge it is a lean, not a lock — their unchanged deeper spine over a Canada attack shorn of Larin, but respect the live draw.",
+        "call": "Morocco to win is a lean, not a lock. Respect the live draw.",
         "read": {
-          "tag": "Lean",
-          "line": "Morocco's settled 4-2-3-1 and elite fullbacks vs a rotated Canada; a level knockout keeps the draw alive."
+          "tag": "Pass",
+          "line": "Morocco are the model's 33% pick, but a 23.3% draw is very much alive."
         },
         "price": {
           "tag": "Not priced yet",
-          "line": "No live odds pulled for this tie — model + confirmed team-news call only."
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
           "tag": "1 warning",
-          "line": "The draw is live and this is coin-flip-ish — a straight win bet ignores extra time."
+          "line": "The draw is live and a level game kills a straight win bet."
         }
       },
       "resolution": {
-        "ninety": 76.0,
-        "extraTime": 13.2,
-        "penalties": 10.8,
+        "ninety": 76.7,
+        "extraTime": 12.8,
+        "penalties": 10.5,
         "mostLikely": "Regulation",
-        "etWinner": "Morocco",
-        "shootout": "Near coin-flip; Bounou's shootout pedigree gives Morocco the marginal nerve edge.",
-        "note": "Most likely settled inside 90 (76%), but a live level 90 keeps extra time (13.2%) and penalties (10.8%) firmly in play in this knockout."
+        "etWinner": "Canada",
+        "shootout": "Near coin-flip, with the marginal nerve edge to Morocco.",
+        "note": "Most likely settled inside 90 (76.7%). But a 23.3% level 90 keeps extra time (12.8%) and penalties (10.5%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "par-fra-2026-07-04": {
