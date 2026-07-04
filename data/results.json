@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T19:00:05.049Z",
+    "generatedAt": "2026-07-04T19:10:03.725Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 68,
-    "live": 1
+    "finished": 69,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -9236,19 +9236,25 @@
       }
     },
     "can-mar-2026-07-04": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 0,
+        "away": 3
+      },
+      "ft90": {
+        "home": 0,
+        "away": 3
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -9263,6 +9269,14 @@
           "team": "away",
           "scorer": "Azzedine Ounahi",
           "minute": 81,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Soufiane Rahimi",
+          "minute": 90,
           "assist": null,
           "penalty": false,
           "ownGoal": false
@@ -9326,11 +9340,11 @@
         },
         "sot": {
           "home": 3,
-          "away": 3
+          "away": 4
         },
         "shots": {
-          "home": 9,
-          "away": 4
+          "home": 10,
+          "away": 5
         },
         "yellow": {
           "home": 4,

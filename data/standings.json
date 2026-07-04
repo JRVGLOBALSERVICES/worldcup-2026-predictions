@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T19:00:08.956Z",
+    "generatedAt": "2026-07-04T19:10:04.831Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -278,7 +278,14 @@
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "R16-1 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-09T20:00Z",
+            "home": false,
+            "placeholder": true
+          }
         },
         {
           "name": "Scotland",
