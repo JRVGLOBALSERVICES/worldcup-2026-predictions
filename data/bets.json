@@ -1083,6 +1083,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "home"
+    },
+    "can-mar-2026-07-04": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 3
+      },
+      "ft90": {
+        "home": 0,
+        "away": 3
+      },
+      "finishPhase": "regulation",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4171,6 +4187,86 @@
           "team": "home",
           "player": "Richard Ríos",
           "minute": 77,
+          "type": "yellow"
+        }
+      ]
+    },
+    "can-mar-2026-07-04": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Azzedine Ounahi",
+          "minute": 49,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "away",
+          "scorer": "Azzedine Ounahi",
+          "minute": 81,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Soufiane Rahimi",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Redouane Halhal",
+          "minute": 19,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Achraf Hakimi",
+          "minute": 39,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Richie Laryea",
+          "minute": 40,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Jonathan David",
+          "minute": 43,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Azzedine Ounahi",
+          "minute": 44,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Bilal El Khannouss",
+          "minute": 45,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Luc de Fougerolles",
+          "minute": 49,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Cyle Larin",
+          "minute": 67,
           "type": "yellow"
         }
       ]
@@ -18984,19 +19080,19 @@
     },
     "can-mar-2026-07-04": {
       "corners": {
-        "home": 6,
+        "home": 11,
         "away": 1
       },
       "sot": {
-        "home": 2,
-        "away": 2
+        "home": 3,
+        "away": 4
       },
       "shots": {
-        "home": 5,
-        "away": 2
+        "home": 10,
+        "away": 5
       },
       "yellow": {
-        "home": 3,
+        "home": 4,
         "away": 4
       },
       "red": {
@@ -19004,13 +19100,13 @@
         "away": 0
       },
       "cards": {
-        "home": 3,
+        "home": 4,
         "away": 4
       },
       "cornersByHalf": {
         "home": [
           5,
-          1
+          6
         ],
         "away": [
           0,
@@ -19020,7 +19116,7 @@
       "sotByHalf": {
         "home": [
           2,
-          0
+          1
         ],
         "away": [
           1,
@@ -19030,7 +19126,8 @@
       "playerSot": {
         "Jonathan David": 1,
         "Tani Oluwaseyi": 1,
-        "Soufiane Rahimi": 1
+        "Soufiane Rahimi": 1,
+        "Tajon Buchanan": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -19042,6 +19139,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Foul",
           "firstActionMinute": 27,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 76,
           "isCorner": false,
           "reliable": true
         }
