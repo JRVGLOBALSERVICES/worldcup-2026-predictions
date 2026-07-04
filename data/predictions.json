@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T03:40:08.296Z",
+    "generatedAt": "2026-07-04T04:37:12.696Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-04T03:40:08.296Z"
+    "modelUpdatedAt": "2026-07-04T04:37:12.695Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -20727,6 +20727,696 @@
         "etWinner": "United States",
         "shootout": "Essentially 50/50 — a true coin-flip from twelve yards.",
         "note": "Most likely settled inside 90 (76.3%). But a 23.7% level 90 keeps extra time (12.9%) and penalties (10.8%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "arg-egy-2026-07-07": {
+      "win": {
+        "pick": "Argentina",
+        "fairOdds": "1.46",
+        "reason": "Model: Argentina to win at 69% (Argentina 69% / draw 19% / Egypt 12%). Expected goals 2.1–0.7 from group-stage attack/defence rates (Argentina 2.2 for / 0.8 against per game, Egypt 1.6 / 1.2). Most likely score 2-0.",
+        "strength": 5
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "3.38",
+        "alt": "1-0",
+        "altOdds": "5.19"
+      },
+      "htft": {
+        "pick": "Draw/Argentina",
+        "fairOdds": "3.64"
+      },
+      "fullTime": {
+        "score": "2-0",
+        "fairOdds": "7.54"
+      },
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "fairOdds": "1.52",
+          "banker": true,
+          "note": "7 goals in 4 group games; 66% modelled anytime chance on 2.1 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "team": "Argentina",
+          "fairOdds": "4.41",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "fairOdds": "4.41",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Lisandro Martínez",
+          "team": "Argentina",
+          "fairOdds": "4.41",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Mahmoud Saber",
+          "team": "Egypt",
+          "fairOdds": "5.57",
+          "banker": false,
+          "note": "2 goals in 2 group games; 18% modelled anytime chance on 0.7 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Alexis Mac Allister",
+          "team": "Argentina",
+          "fairOdds": "2.96",
+          "banker": true,
+          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+        },
+        {
+          "player": "Facundo Medina",
+          "team": "Argentina",
+          "fairOdds": "2.96",
+          "banker": false,
+          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+        },
+        {
+          "player": "Lisandro Martínez",
+          "team": "Argentina",
+          "fairOdds": "2.96",
+          "banker": false,
+          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+        },
+        {
+          "player": "Mohamed Salah",
+          "team": "Egypt",
+          "fairOdds": "5.20",
+          "banker": false,
+          "note": "2 assists in the group stage; 19% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Lionel Messi",
+        "backup": "Giovani Lo Celso",
+        "note": "Argentina favoured to control the game, so a penalty is less pivotal; Lionel Messi would take one if awarded."
+      },
+      "lineups": {
+        "home": "Emiliano Martínez, Nahuel Molina, Cristian Romero, Lisandro Martínez, Facundo Medina, Rodrigo De Paul, Alexis Mac Allister, Enzo Fernández, Thiago Almada, Lionel Messi, Lautaro Martínez",
+        "away": "Mostafa Shobeir, Hany Mohamed, Rami Rabia, Yasser Ibrahim, Karim Hafez, Hamdi Fathy, Marwan Attia, Emam Ashour, Mostafa Zico, Mohamed Salah, Omar Marmoush",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-4-2",
+          "players": [
+            {
+              "num": 23,
+              "name": "Emiliano Martínez",
+              "pos": "G"
+            },
+            {
+              "num": 26,
+              "name": "Nahuel Molina",
+              "pos": "RB"
+            },
+            {
+              "num": 13,
+              "name": "Cristian Romero",
+              "pos": "CD"
+            },
+            {
+              "num": 25,
+              "name": "Lisandro Martínez",
+              "pos": "CD"
+            },
+            {
+              "num": 8,
+              "name": "Facundo Medina",
+              "pos": "LB"
+            },
+            {
+              "num": 7,
+              "name": "Rodrigo De Paul",
+              "pos": "RM"
+            },
+            {
+              "num": 24,
+              "name": "Enzo Fernández",
+              "pos": "CM"
+            },
+            {
+              "num": 20,
+              "name": "Alexis Mac Allister",
+              "pos": "CM"
+            },
+            {
+              "num": 16,
+              "name": "Thiago Almada",
+              "pos": "LM"
+            },
+            {
+              "num": 22,
+              "name": "Lautaro Martínez",
+              "pos": "ST"
+            },
+            {
+              "num": 10,
+              "name": "Lionel Messi",
+              "pos": "ST"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 23,
+              "name": "Mostafa Shobeir",
+              "pos": "G"
+            },
+            {
+              "num": 3,
+              "name": "Hany Mohamed",
+              "pos": "RB"
+            },
+            {
+              "num": 5,
+              "name": "Rami Rabia",
+              "pos": "CD"
+            },
+            {
+              "num": 2,
+              "name": "Yasser Ibrahim",
+              "pos": "CD"
+            },
+            {
+              "num": 30,
+              "name": "Karim Hafez",
+              "pos": "LB"
+            },
+            {
+              "num": 14,
+              "name": "Hamdi Fathy",
+              "pos": "CM"
+            },
+            {
+              "num": 19,
+              "name": "Marwan Attia",
+              "pos": "CM"
+            },
+            {
+              "num": 8,
+              "name": "Emam Ashour",
+              "pos": "AM"
+            },
+            {
+              "num": 11,
+              "name": "Mostafa Zico",
+              "pos": "RW"
+            },
+            {
+              "num": 10,
+              "name": "Mohamed Salah",
+              "pos": "LW"
+            },
+            {
+              "num": 22,
+              "name": "Omar Marmoush",
+              "pos": "CF"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "note": "7 goals in 4 group games; 66% modelled anytime chance on 2.1 team xG."
+        },
+        {
+          "player": "Giovani Lo Celso",
+          "team": "Argentina",
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG."
+        },
+        {
+          "player": "Alexis Mac Allister",
+          "team": "Argentina",
+          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 5,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
+          "Egypt: 5 pts, +2 GD across 3 group games (5 for / 3 against).",
+          "Argentina's Lionel Messi leads them with 7 goals in 4 games.",
+          "Egypt's Mahmoud Saber leads them with 2 goals in 2 games."
+        ],
+        "assumptions": [
+          "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Egypt to sit compact and play on the break.",
+          "Goal expectancy 2.1–0.7 (Argentina–Egypt) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Argentina shade the chance-creation (2.1 vs 0.7 xG) — they should make the running.",
+        "drawRisk": "Moderate — 19.4% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
+        "caseFor": [
+          "Argentina are the model's 68.7% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Lionel Messi carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Argentina can manage."
+        ],
+        "caseAgainst": [
+          "19.4% draw + Egypt's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result."
+        ],
+        "verdict": "Bet",
+        "changeMind": "A confirmed XI resting Lionel Messi, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (19.4%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Argentina to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Argentina are the model's 69% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+        }
+      },
+      "resolution": {
+        "ninety": 80.6,
+        "extraTime": 10.4,
+        "penalties": 9,
+        "mostLikely": "Regulation",
+        "etWinner": "Argentina",
+        "shootout": "Near coin-flip, with the marginal nerve edge to Argentina.",
+        "note": "Most likely settled inside 90 (80.6%). But a 19.4% level 90 keeps extra time (10.4%) and penalties (9%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "sui-col-2026-07-07": {
+      "win": {
+        "pick": "Switzerland",
+        "fairOdds": "2.73",
+        "reason": "Model: Switzerland to win at 37% (Switzerland 37% / draw 29% / Colombia 34%). Expected goals 1.1–1.1 from group-stage attack/defence rates (Switzerland 2.0 for / 1.2 against per game, Colombia 1.4 / 0.8). Most likely score 1-1.",
+        "strength": 2
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.59",
+        "alt": "1-0",
+        "altOdds": "4.18"
+      },
+      "htft": {
+        "pick": "Draw/Switzerland",
+        "fairOdds": "6.81"
+      },
+      "fullTime": {
+        "score": "1-1",
+        "fairOdds": "7.44"
+      },
+      "scorers": [
+        {
+          "player": "Daniel Muñoz",
+          "team": "Colombia",
+          "fairOdds": "3.19",
+          "banker": true,
+          "note": "2 goals in 3 group games; 31% modelled anytime chance on 1.1 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "fairOdds": "3.36",
+          "banker": false,
+          "note": "3 goals in 4 group games; 30% modelled anytime chance on 1.1 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "fairOdds": "4.49",
+          "banker": false,
+          "note": "2 goals in 4 group games; 22% modelled anytime chance on 1.1 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Rubén Vargas",
+          "team": "Switzerland",
+          "fairOdds": "4.49",
+          "banker": false,
+          "note": "2 goals in 4 group games; 22% modelled anytime chance on 1.1 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Jáminton Campaz",
+          "team": "Colombia",
+          "fairOdds": "4.95",
+          "banker": false,
+          "note": "1 goal in 1 group game; 20% modelled anytime chance on 1.1 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "fairOdds": "3.16",
+          "banker": true,
+          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+        },
+        {
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "fairOdds": "3.16",
+          "banker": false,
+          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+        },
+        {
+          "player": "Rubén Vargas",
+          "team": "Switzerland",
+          "fairOdds": "5.03",
+          "banker": false,
+          "note": "1 assist in the group stage; 20% modelled chance to set one up."
+        },
+        {
+          "player": "Cucho Hernández",
+          "team": "Colombia",
+          "fairOdds": "5.26",
+          "banker": false,
+          "note": "1 assist in the group stage; 19% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Johan Manzambi",
+        "backup": "Breel Embolo",
+        "note": "Tight model margin (3 pts) raises the odds a spot-kick decides it; Johan Manzambi is Switzerland's group-stage top scorer and likely taker."
+      },
+      "lineups": {
+        "home": "Gregor Kobel, Silvan Widmer, Manuel Akanji, Nico Elvedi, Ricardo Rodríguez, Remo Freuler, Granit Xhaka, Dan Ndoye, Johan Manzambi, Rubén Vargas, Breel Embolo",
+        "away": "Camilo Vargas, Daniel Muñoz, Davinson Sánchez, Jhon Lucumí, Johan Mojica, Jhon Arias, Jefferson Lerma, Gustavo Puerta, James Rodríguez, Jhon Córdoba, Luis Díaz",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Gregor Kobel",
+              "pos": "G"
+            },
+            {
+              "num": 2,
+              "name": "Silvan Widmer",
+              "pos": "RB"
+            },
+            {
+              "num": 5,
+              "name": "Manuel Akanji",
+              "pos": "CD-R"
+            },
+            {
+              "num": 4,
+              "name": "Nico Elvedi",
+              "pos": "CD-L"
+            },
+            {
+              "num": 13,
+              "name": "Ricardo Rodríguez",
+              "pos": "LB"
+            },
+            {
+              "num": 8,
+              "name": "Remo Freuler",
+              "pos": "DM-R"
+            },
+            {
+              "num": 10,
+              "name": "Granit Xhaka",
+              "pos": "DM-L"
+            },
+            {
+              "num": 20,
+              "name": "Dan Ndoye",
+              "pos": "AM-R"
+            },
+            {
+              "num": 9,
+              "name": "Johan Manzambi",
+              "pos": "AM"
+            },
+            {
+              "num": 17,
+              "name": "Rubén Vargas",
+              "pos": "AM-L"
+            },
+            {
+              "num": 7,
+              "name": "Breel Embolo",
+              "pos": "F"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 1,
+              "name": "Camilo Vargas",
+              "pos": "G"
+            },
+            {
+              "num": 4,
+              "name": "Daniel Muñoz",
+              "pos": "RB"
+            },
+            {
+              "num": 23,
+              "name": "Davinson Sánchez",
+              "pos": "CB"
+            },
+            {
+              "num": 2,
+              "name": "Jhon Lucumí",
+              "pos": "CB"
+            },
+            {
+              "num": 17,
+              "name": "Johan Mojica",
+              "pos": "LB"
+            },
+            {
+              "num": 11,
+              "name": "Jhon Arias",
+              "pos": "RM"
+            },
+            {
+              "num": 16,
+              "name": "Jefferson Lerma",
+              "pos": "DM"
+            },
+            {
+              "num": 15,
+              "name": "Gustavo Puerta",
+              "pos": "CM"
+            },
+            {
+              "num": 10,
+              "name": "James Rodríguez",
+              "pos": "AM"
+            },
+            {
+              "num": 19,
+              "name": "Jhon Córdoba",
+              "pos": "F"
+            },
+            {
+              "num": 7,
+              "name": "Luis Díaz",
+              "pos": "LW"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Daniel Muñoz",
+          "team": "Colombia",
+          "note": "2 goals in 3 group games; 31% modelled anytime chance on 1.1 team xG."
+        },
+        {
+          "player": "Johan Manzambi",
+          "team": "Switzerland",
+          "note": "3 goals in 4 group games; 30% modelled anytime chance on 1.1 team xG."
+        },
+        {
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 2,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Switzerland: 7 pts, +4 GD across 3 group games (7 for / 3 against).",
+          "Colombia: 7 pts, +3 GD across 3 group games (4 for / 1 against).",
+          "Switzerland's Johan Manzambi leads them with 3 goals in 4 games.",
+          "Colombia's Daniel Muñoz leads them with 2 goals in 3 games."
+        ],
+        "assumptions": [
+          "Model projects Switzerland to carry more of the ball and the better chances (higher attack rating); Colombia to sit compact and play on the break.",
+          "Goal expectancy 1.1–1.1 (Switzerland–Colombia) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Chances project close (1.1–1.1 xG) — a true coin-flip for territory; small margins decide it.",
+        "drawRisk": "High. Low combined xG (2.2) and a 29.4% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "caseFor": [
+          "Switzerland are the model's 36.7% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Johan Manzambi carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "29.4% draw + Colombia's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Switzerland's number may be inflated by one result."
+        ],
+        "verdict": "Pass",
+        "changeMind": "A confirmed XI resting Johan Manzambi, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": true,
+            "why": "Low combined xG (2.2) + tight margin in a knockout — this is built for 1-0 / pens, not a comfortable win."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": true,
+            "why": "29.4% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 3,
+        "edge": "edge-leaning",
+        "verdict": "LEAN",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "Switzerland to win is a lean, not a lock. Respect the live draw.",
+        "read": {
+          "tag": "Pass",
+          "line": "Switzerland are the model's 37% pick, but a 29.4% draw is very much alive."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "3 warnings",
+          "line": "This is built for a 1-0 or penalties, not a comfortable win."
+        }
+      },
+      "resolution": {
+        "ninety": 70.6,
+        "extraTime": 13.2,
+        "penalties": 16.2,
+        "mostLikely": "Regulation",
+        "etWinner": "Switzerland",
+        "shootout": "Essentially 50/50 — a true coin-flip from twelve yards.",
+        "note": "Most likely settled inside 90 (70.6%). But a 29.4% level 90 keeps extra time (13.2%) and penalties (16.2%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
   }
