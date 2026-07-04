@@ -1067,6 +1067,22 @@
       },
       "finishPhase": "extra_time",
       "advanced": "home"
+    },
+    "col-gha-2026-07-04": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 1,
+        "away": 0
+      },
+      "ft90": {
+        "home": 1,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4110,6 +4126,51 @@
           "team": "home",
           "player": "Gonzalo Montiel",
           "minute": 115,
+          "type": "yellow"
+        }
+      ]
+    },
+    "col-gha-2026-07-04": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Jhon Arias",
+          "minute": 14,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Jhon Arias",
+          "minute": 12,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Caleb Yirenkyi",
+          "minute": 49,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Fatawu Issahaku",
+          "minute": 66,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Alidu Seidu",
+          "minute": 76,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Richard Ríos",
+          "minute": 77,
           "type": "yellow"
         }
       ]
@@ -18241,11 +18302,11 @@
         "away": 2
       },
       "sot": {
-        "home": 6,
+        "home": 8,
         "away": 0
       },
       "shots": {
-        "home": 13,
+        "home": 20,
         "away": 8
       },
       "yellow": {
@@ -18273,7 +18334,7 @@
       "sotByHalf": {
         "home": [
           2,
-          3
+          5
         ],
         "away": [
           0,
@@ -18284,7 +18345,9 @@
         "Luis Díaz": 2,
         "Johan Mojica": 1,
         "Gustavo Puerta": 1,
-        "Davinson Sánchez": 1
+        "Davinson Sánchez": 1,
+        "Richard Ríos": 1,
+        "Jáminton Campaz": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
