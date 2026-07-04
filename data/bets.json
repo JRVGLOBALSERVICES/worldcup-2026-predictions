@@ -13676,6 +13676,46 @@
      }
     ]
    }
+  },
+  {
+   "id": "sp-83958861217",
+   "slipNo": "83958861217",
+   "matchId": "par-fra-2026-07-04",
+   "player": "4-game acca",
+   "market": "Accumulator (4) — Anytime scorer / DC+BTTS",
+   "label": "REAL 1xBet slip 83958861217 (04/07 12:59) — 4-fold @ 27.886, RM50 -> RM1,394.32. Par/Fra Kylian Mbappe to score anytime (1.58) · Can/Mar 1X + Both Teams To Score Yes (3.52) · Bra/Nor 1X + Both Teams To Score Yes (2.03) · Mex/Eng Harry Kane to score anytime (2.47).",
+   "odds": 27.886,
+   "stake": 50,
+   "placedAt": "04/07 12:59",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "par-fra-2026-07-04",
+      "kind": "scored",
+      "player": "Kylian Mbappe",
+      "odds": 1.58
+     },
+     {
+      "matchId": "can-mar-2026-07-04",
+      "kind": "doubleChanceBtts",
+      "outcome": "1X",
+      "odds": 3.52
+     },
+     {
+      "matchId": "bra-nor-2026-07-05",
+      "kind": "doubleChanceBtts",
+      "outcome": "1X",
+      "odds": 2.03
+     },
+     {
+      "matchId": "mex-eng-2026-07-06",
+      "kind": "scored",
+      "player": "Harry Kane",
+      "odds": 2.47
+     }
+    ]
+   }
   }
  ],
  "matchStats": {
