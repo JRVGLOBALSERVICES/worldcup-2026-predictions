@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T01:40:04.641Z",
+    "generatedAt": "2026-07-04T01:50:05.206Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 67,
     "live": 1
@@ -9100,28 +9100,44 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "advanced": null,
-      "goals": [],
-      "cards": [],
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Jhon Arias",
+          "minute": 14,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Jhon Arias",
+          "minute": 12,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-04T01:30:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "sot": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "shots": {
-          "home": 0,
+          "home": 2,
           "away": 1
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -9129,12 +9145,12 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
@@ -9153,7 +9169,7 @@
           ]
         },
         "playerSot": {},
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {}
       }

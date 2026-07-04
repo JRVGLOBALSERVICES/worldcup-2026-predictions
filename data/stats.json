@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T01:40:07.675Z",
+    "generatedAt": "2026-07-04T01:50:13.107Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 71
   },
@@ -574,18 +574,18 @@
       },
       {
         "rank": 4,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 64.3,
-        "display": "64.3%",
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 65.1,
+        "display": "65.1%",
         "matches": 4
       },
       {
         "rank": 5,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 63.8,
-        "display": "63.8%",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 64.3,
+        "display": "64.3%",
         "matches": 4
       },
       {
@@ -852,19 +852,19 @@
       },
       {
         "rank": 8,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 30.8,
-        "display": "30.8%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
         "display": "30.0%",
         "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 29.5,
+        "display": "29.5%",
+        "matches": 4
       },
       {
         "rank": 10,
@@ -910,6 +910,14 @@
       },
       {
         "rank": 5,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 52.4,
+        "display": "52.4%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -917,20 +925,12 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
         "matches": 3
-      },
-      {
-        "rank": 7,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 51.2,
-        "display": "51.2%",
-        "matches": 4
       },
       {
         "rank": 8,
@@ -1717,12 +1717,22 @@
           "matches": 1
         },
         {
+          "name": "Jhon Arias",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Luis Díaz",
           "value": 1,
           "matches": 1
         }
       ],
       "assists": [
+        {
+          "name": "Luis Díaz",
+          "value": 2,
+          "matches": 2
+        },
         {
           "name": "Cucho Hernández",
           "value": 1,
@@ -1737,11 +1747,6 @@
           "name": "Juan Fernando Quintero",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Luis Díaz",
-          "value": 1,
-          "matches": 1
         }
       ],
       "yellowCards": [
@@ -1751,6 +1756,10 @@
         },
         {
           "name": "Jefferson Lerma",
+          "value": 1
+        },
+        {
+          "name": "Jhon Arias",
           "value": 1
         },
         {
@@ -6572,27 +6581,32 @@
       },
       "760501": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Luis Díaz",
+            "team": "Colombia"
+          }
+        ],
         "teamBox": [
           {
             "team": "Colombia",
-            "possessionPct": 75.8,
-            "accuratePasses": 42,
-            "totalPasses": 47,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
-            "effectiveTackles": 0,
-            "totalTackles": 0,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 6
+            "possessionPct": 81,
+            "accuratePasses": 117,
+            "totalPasses": 126,
+            "shotsOnTarget": 1,
+            "totalShots": 2,
+            "effectiveTackles": 1,
+            "totalTackles": 1,
+            "accurateCrosses": 1,
+            "totalCrosses": 5,
+            "accurateLongBalls": 7,
+            "totalLongBalls": 10
           },
           {
             "team": "Ghana",
-            "possessionPct": 24.2,
-            "accuratePasses": 10,
-            "totalPasses": 13,
+            "possessionPct": 19,
+            "accuratePasses": 23,
+            "totalPasses": 29,
             "shotsOnTarget": 0,
             "totalShots": 1,
             "effectiveTackles": 1,
@@ -6600,7 +6614,7 @@
             "accurateCrosses": 1,
             "totalCrosses": 2,
             "accurateLongBalls": 0,
-            "totalLongBalls": 2
+            "totalLongBalls": 4
           }
         ]
       }
