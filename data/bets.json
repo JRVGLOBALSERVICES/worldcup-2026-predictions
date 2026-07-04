@@ -18081,20 +18081,20 @@
     },
     "arg-cpv-2026-07-03": {
       "corners": {
-        "home": 0,
-        "away": 2
+        "home": 7,
+        "away": 5
       },
       "sot": {
-        "home": 3,
-        "away": 1
+        "home": 9,
+        "away": 3
       },
       "shots": {
-        "home": 4,
-        "away": 4
+        "home": 19,
+        "away": 9
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -18102,22 +18102,22 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "cornersByHalf": {
         "home": [
           0,
-          0
+          7
         ],
         "away": [
           0,
-          2
+          5
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          0
+          5
         ],
         "away": [
           0,
@@ -18125,9 +18125,10 @@
         ]
       },
       "playerSot": {
-        "Lionel Messi": 1,
-        "Enzo Fernández": 1,
-        "Deroy Duarte": 1
+        "Lionel Messi": 4,
+        "Enzo Fernández": 2,
+        "Deroy Duarte": 1,
+        "Leandro Paredes": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -18139,6 +18140,16 @@
           "breakEndMinute": 27,
           "firstActionType": "Goal",
           "firstActionMinute": 28,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 75,
+          "firstActionType": "Foul",
+          "firstActionMinute": 76,
           "isCorner": false,
           "reliable": true
         }
