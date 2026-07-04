@@ -535,6 +535,70 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-83978431777",
+      "slipNo": "83978431777",
+      "matchId": "can-mar-2026-07-04",
+      "player": "—",
+      "market": "Acca · 5 legs · Scorer + Team-Not-Lose / DC+BTTS",
+      "label": "5-fold @ 248.859, SHARED bet (Rj/Thasyan/Ruhan, RM5 each) — Ruhan share RM5 -> RM1,244.3. Can/Mar Jonathan David to score anytime (4.4) · Par/Fra Kylian Mbappe to score anytime (1.5) · Bra/Nor Vinicius Junior to score AND Brazil not to lose (2.204) · Mex/Eng Harry Kane to score AND Mexico not to lose (6.11) · Por/Esp 1X + Both Teams To Score Yes (2.8).",
+      "odds": 248.859,
+      "stake": 5,
+      "placedAt": "04/07 22:40",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "can-mar-2026-07-04",
+            "kind": "scored",
+            "player": "Jonathan David",
+            "odds": 4.4
+          },
+          {
+            "matchId": "par-fra-2026-07-04",
+            "kind": "scored",
+            "player": "Kylian Mbappe",
+            "odds": 1.5
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "scored",
+            "player": "Vinicius Junior",
+            "odds": 2.204
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "scored",
+            "player": "Harry Kane",
+            "odds": 6.11
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X"
+          }
+        ]
+      },
+      "shared": {
+        "with": [
+          "Rj",
+          "Thasyan",
+          "Ruhan"
+        ],
+        "shareStake": 5,
+        "totalStake": 10
+      }
     }
   ]
 }
