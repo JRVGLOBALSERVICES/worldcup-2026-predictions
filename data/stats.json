@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T17:40:06.329Z",
+    "generatedAt": "2026-07-04T17:50:05.724Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 72
   },
@@ -508,16 +508,16 @@
       },
       {
         "rank": 6,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 89.5,
-        "display": "89.5%",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 89.4,
+        "display": "89.4%",
         "matches": 4
       },
       {
-        "rank": 7,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "rank": 6,
+        "team": "Morocco",
+        "flag": "🇲🇦",
         "value": 89.4,
         "display": "89.4%",
         "matches": 4
@@ -558,19 +558,19 @@
       },
       {
         "rank": 2,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 65.5,
+        "display": "65.5%",
+        "matches": 4
+      },
+      {
+        "rank": 3,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 65.3,
         "display": "65.3%",
         "matches": 3
-      },
-      {
-        "rank": 3,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 64.6,
-        "display": "64.6%",
-        "matches": 4
       },
       {
         "rank": 4,
@@ -926,14 +926,6 @@
       },
       {
         "rank": 7,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 51.2,
-        "display": "51.2%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
         "value": 50.6,
@@ -941,7 +933,7 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 50.6,
@@ -949,11 +941,19 @@
         "matches": 4
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 50,
         "display": "50.0%",
+        "matches": 4
+      },
+      {
+        "rank": 10,
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 49.4,
+        "display": "49.4%",
         "matches": 4
       }
     ]
@@ -2050,15 +2050,15 @@
           "value": 1
         },
         {
+          "name": "Jonathan David",
+          "value": 1
+        },
+        {
           "name": "Liam Millar",
           "value": 1
         },
         {
           "name": "Nathan Saliba",
-          "value": 1
-        },
-        {
-          "name": "Niko Sigur",
           "value": 1
         }
       ],
@@ -2247,6 +2247,14 @@
         {
           "name": "Issa Diop",
           "value": 2
+        },
+        {
+          "name": "Achraf Hakimi",
+          "value": 1
+        },
+        {
+          "name": "Azzedine Ounahi",
+          "value": 1
         },
         {
           "name": "Redouane Halhal",
@@ -6636,31 +6644,31 @@
         "teamBox": [
           {
             "team": "Canada",
-            "possessionPct": 37.6,
-            "accuratePasses": 89,
-            "totalPasses": 118,
+            "possessionPct": 34.1,
+            "accuratePasses": 94,
+            "totalPasses": 130,
             "shotsOnTarget": 2,
-            "totalShots": 5,
-            "effectiveTackles": 4,
-            "totalTackles": 5,
+            "totalShots": 4,
+            "effectiveTackles": 6,
+            "totalTackles": 9,
             "accurateCrosses": 4,
             "totalCrosses": 10,
             "accurateLongBalls": 4,
-            "totalLongBalls": 9
+            "totalLongBalls": 12
           },
           {
             "team": "Morocco",
-            "possessionPct": 62.4,
-            "accuratePasses": 188,
-            "totalPasses": 213,
+            "possessionPct": 65.9,
+            "accuratePasses": 239,
+            "totalPasses": 271,
             "shotsOnTarget": 1,
             "totalShots": 1,
-            "effectiveTackles": 2,
-            "totalTackles": 4,
+            "effectiveTackles": 3,
+            "totalTackles": 6,
             "accurateCrosses": 0,
             "totalCrosses": 0,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 13
+            "accurateLongBalls": 6,
+            "totalLongBalls": 17
           }
         ]
       }
