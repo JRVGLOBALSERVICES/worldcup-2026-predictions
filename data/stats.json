@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T21:50:05.581Z",
+    "generatedAt": "2026-07-04T22:00:13.599Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 73
   },
@@ -524,19 +524,19 @@
       },
       {
         "rank": 8,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 88.5,
+        "display": "88.5%",
+        "matches": 5
+      },
+      {
+        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 88.4,
         "display": "88.4%",
         "matches": 4
-      },
-      {
-        "rank": 8,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 88.4,
-        "display": "88.4%",
-        "matches": 5
       },
       {
         "rank": 10,
@@ -608,8 +608,8 @@
         "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 61.7,
-        "display": "61.7%",
+        "value": 62,
+        "display": "62.0%",
         "matches": 5
       },
       {
@@ -754,14 +754,6 @@
       },
       {
         "rank": 6,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 66.7,
-        "display": "66.7%",
-        "matches": 5
-      },
-      {
-        "rank": 6,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -791,6 +783,14 @@
         "value": 66.7,
         "display": "66.7%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 65.7,
+        "display": "65.7%",
+        "matches": 5
       }
     ],
     "crossCompletion": [
@@ -912,8 +912,8 @@
         "rank": 5,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 53.6,
-        "display": "53.6%",
+        "value": 53.8,
+        "display": "53.8%",
         "matches": 5
       },
       {
@@ -6695,9 +6695,9 @@
         "teamBox": [
           {
             "team": "Paraguay",
-            "possessionPct": 20.7,
+            "possessionPct": 19.5,
             "accuratePasses": 43,
-            "totalPasses": 74,
+            "totalPasses": 76,
             "shotsOnTarget": 0,
             "totalShots": 2,
             "effectiveTackles": 6,
@@ -6705,21 +6705,21 @@
             "accurateCrosses": 0,
             "totalCrosses": 0,
             "accurateLongBalls": 7,
-            "totalLongBalls": 23
+            "totalLongBalls": 25
           },
           {
             "team": "France",
-            "possessionPct": 79.3,
-            "accuratePasses": 248,
-            "totalPasses": 270,
+            "possessionPct": 80.5,
+            "accuratePasses": 276,
+            "totalPasses": 300,
             "shotsOnTarget": 1,
             "totalShots": 5,
             "effectiveTackles": 5,
-            "totalTackles": 7,
+            "totalTackles": 8,
             "accurateCrosses": 1,
             "totalCrosses": 20,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 17
+            "accurateLongBalls": 16,
+            "totalLongBalls": 20
           }
         ]
       }
