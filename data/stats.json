@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T22:10:05.802Z",
+    "generatedAt": "2026-07-04T22:20:07.383Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 73
   },
@@ -524,19 +524,19 @@
       },
       {
         "rank": 8,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 88.5,
-        "display": "88.5%",
-        "matches": 5
-      },
-      {
-        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 88.4,
         "display": "88.4%",
         "matches": 4
+      },
+      {
+        "rank": 8,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 88.4,
+        "display": "88.4%",
+        "matches": 5
       },
       {
         "rank": 10,
@@ -608,8 +608,8 @@
         "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 62,
-        "display": "62.0%",
+        "value": 61.8,
+        "display": "61.8%",
         "matches": 5
       },
       {
@@ -664,14 +664,6 @@
       },
       {
         "rank": 5,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 45.5,
-        "display": "45.5%",
-        "matches": 5
-      },
-      {
-        "rank": 5,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -679,7 +671,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -687,7 +679,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 44.6,
@@ -695,12 +687,20 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
         "display": "44.4%",
         "matches": 3
+      },
+      {
+        "rank": 9,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 43.8,
+        "display": "43.8%",
+        "matches": 5
       },
       {
         "rank": 10,
@@ -912,8 +912,8 @@
         "rank": 5,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 53.8,
-        "display": "53.8%",
+        "value": 54,
+        "display": "54.0%",
         "matches": 5
       },
       {
@@ -6695,31 +6695,31 @@
         "teamBox": [
           {
             "team": "Paraguay",
-            "possessionPct": 19.5,
-            "accuratePasses": 43,
-            "totalPasses": 76,
+            "possessionPct": 20.4,
+            "accuratePasses": 49,
+            "totalPasses": 94,
             "shotsOnTarget": 0,
-            "totalShots": 2,
-            "effectiveTackles": 6,
-            "totalTackles": 10,
+            "totalShots": 3,
+            "effectiveTackles": 9,
+            "totalTackles": 14,
             "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 7,
-            "totalLongBalls": 25
+            "totalCrosses": 1,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 32
           },
           {
             "team": "France",
-            "possessionPct": 80.5,
-            "accuratePasses": 276,
-            "totalPasses": 300,
+            "possessionPct": 79.6,
+            "accuratePasses": 324,
+            "totalPasses": 356,
             "shotsOnTarget": 1,
-            "totalShots": 5,
+            "totalShots": 8,
             "effectiveTackles": 5,
             "totalTackles": 8,
             "accurateCrosses": 1,
-            "totalCrosses": 20,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 20
+            "totalCrosses": 21,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 23
           }
         ]
       }

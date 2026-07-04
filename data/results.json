@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T22:10:03.112Z",
+    "generatedAt": "2026-07-04T22:20:03.788Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 69,
     "live": 1
@@ -9435,16 +9435,16 @@
       "updatedAt": "2026-07-04T21:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 0,
-          "away": 7
+          "home": 1,
+          "away": 9
         },
         "sot": {
           "home": 0,
           "away": 1
         },
         "shots": {
-          "home": 2,
-          "away": 5
+          "home": 3,
+          "away": 8
         },
         "yellow": {
           "home": 0,
@@ -9461,11 +9461,11 @@
         "cornersByHalf": {
           "home": [
             0,
-            0
+            1
           ],
           "away": [
             7,
-            0
+            2
           ]
         },
         "sotByHalf": {
@@ -9475,10 +9475,12 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Manu Koné": 1
+        },
         "firstGoalMethod": null,
         "firstPenalty": null,
         "waterBreak": {
