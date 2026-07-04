@@ -13881,6 +13881,7 @@
    "odds": 274.51,
    "stake": 15,
    "placedAt": "04/07 20:57",
+   "statusOverride": "lost",
    "grade": {
     "type": "multiLeg",
     "legs": [
@@ -14032,6 +14033,7 @@
    "odds": 38.386,
    "stake": 15,
    "placedAt": "04/07 22:14",
+   "statusOverride": "lost",
    "grade": {
     "type": "multiLeg",
     "legs": [
@@ -18975,6 +18977,71 @@
      "breakEndMinute": 72,
      "firstActionType": "Foul",
      "firstActionMinute": 74,
+     "isCorner": false,
+     "reliable": true
+    }
+   }
+  },
+  "can-mar-2026-07-04": {
+   "corners": {
+    "home": 5,
+    "away": 0
+   },
+   "sot": {
+    "home": 2,
+    "away": 1
+   },
+   "shots": {
+    "home": 5,
+    "away": 1
+   },
+   "yellow": {
+    "home": 0,
+    "away": 1
+   },
+   "red": {
+    "home": 0,
+    "away": 0
+   },
+   "cards": {
+    "home": 0,
+    "away": 1
+   },
+   "cornersByHalf": {
+    "home": [
+     5,
+     0
+    ],
+    "away": [
+     0,
+     0
+    ]
+   },
+   "sotByHalf": {
+    "home": [
+     2,
+     0
+    ],
+    "away": [
+     1,
+     0
+    ]
+   },
+   "playerSot": {
+    "Jonathan David": 1,
+    "Tani Oluwaseyi": 1,
+    "Soufiane Rahimi": 1
+   },
+   "firstGoalMethod": null,
+   "firstPenalty": null,
+   "waterBreak": {
+    "h1": {
+     "half": 1,
+     "anchorMinute": 22,
+     "source": "delay",
+     "breakEndMinute": 26,
+     "firstActionType": "Foul",
+     "firstActionMinute": 27,
      "isCorner": false,
      "reliable": true
     }
