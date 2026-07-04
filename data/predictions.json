@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T08:10:09.411Z",
+    "generatedAt": "2026-07-04T09:02:59.725Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-04T08:10:09.411Z"
+    "modelUpdatedAt": "2026-07-04T09:00:28.083Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -18661,251 +18661,128 @@
     },
     "can-mar-2026-07-04": {
       "win": {
-        "pick": "Canada",
-        "fairOdds": "2.27",
-        "reason": "Model: Canada to win at 44% (Canada 44% / draw 23% / Morocco 33%). Expected goals 1.7–1.5 from group-stage attack/defence rates (Canada 2.2 for / 1.2 against per game, Morocco 1.8 / 1.2). Most likely score 1-1.",
-        "strength": 3
+        "pick": "Morocco",
+        "fairOdds": "2.35",
+        "reason": "Morocco's possession-based 4-2-3-1 (801 passes vs Netherlands), knockout pedigree and in-form Saibari give them the edge, but Canada's pressing counter and home-continent crowd make this no mismatch — a genuine one-goal or level game."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "4.06",
-        "alt": "1-0",
-        "altOdds": "5.24"
+        "fairOdds": "2.5",
+        "alt": "0-1 Morocco",
+        "altOdds": "4.2"
       },
       "htft": {
-        "pick": "Draw/Canada",
-        "fairOdds": "5.68"
+        "pick": "Draw/Morocco",
+        "fairOdds": "5.0"
       },
       "fullTime": {
         "score": "1-1",
-        "fairOdds": "9.59"
+        "fairOdds": "6.5"
+      },
+      "resolution": {
+        "ninety": 55,
+        "extraTime": 27,
+        "penalties": 18,
+        "mostLikely": "Regulation",
+        "etWinner": "Morocco",
+        "shootout": "Morocco favoured — just won a shootout vs Netherlands with Bono saving and Saibari converting; Canada's shootout experience is thin",
+        "note": "Cagey possession-vs-counter tie carries real extra-time/penalty risk given Morocco's deep control and Canada's willingness to sit and break."
       },
       "scorers": [
         {
-          "player": "Jonathan David",
-          "team": "Canada",
-          "fairOdds": "2.21",
-          "banker": true,
-          "note": "3 goals in 4 group games; 45% modelled anytime chance on 1.7 team xG.",
-          "strength": 4
-        },
-        {
           "player": "Ismael Saibari",
-          "team": "Morocco",
-          "fairOdds": "2.50",
+          "fairOdds": "4.5",
           "banker": false,
-          "note": "3 goals in 4 group games; 40% modelled anytime chance on 1.5 team xG.",
-          "strength": 3
+          "note": "Tournament's form man — 4 goals inc. lob over Alisson and the winning shootout kick; Morocco's chief attacking threat from the 10/false-9 line"
         },
         {
-          "player": "Cyle Larin",
-          "team": "Canada",
-          "fairOdds": "2.85",
+          "player": "Jonathan David",
+          "fairOdds": "4.0",
           "banker": false,
-          "note": "2 goals in 3 group games; 35% modelled anytime chance on 1.7 team xG.",
-          "strength": 3
+          "note": "Canada's talisman and penalty taker, scored a WC hat-trick vs Qatar; main outlet on the counter but faces an organised Bono-marshalled back line"
         },
         {
-          "player": "Soufiane Rahimi",
-          "team": "Morocco",
-          "fairOdds": "3.27",
+          "player": "Youssef En-Nesyri",
+          "fairOdds": "5.5",
           "banker": false,
-          "note": "2 goals in 2 group games; 31% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
+          "note": "Proven WC No.9 aerial threat off Diaz/Hakimi service; rotation risk with Morocco's fluid front line"
         },
         {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "fairOdds": "4.39",
+          "player": "Achraf Hakimi",
+          "fairOdds": "8.0",
           "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 1.7 team xG.",
-          "strength": 1
+          "note": "Overlapping right-back and set-piece/pen candidate; goal threat from wide areas and dead balls"
         }
       ],
       "assists": [
         {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
-        },
-        {
-          "player": "Brahim Díaz",
-          "team": "Morocco",
-          "fairOdds": "2.82",
+          "player": "Brahim Diaz",
+          "fairOdds": "4.5",
           "banker": false,
-          "note": "2 assists in the group stage; 35% modelled chance to set one up."
+          "note": "Created both Saibari group-stage goals with through balls/passes over the top — Morocco's chief creator"
         },
         {
           "player": "Achraf Hakimi",
-          "team": "Morocco",
-          "fairOdds": "4.44",
+          "fairOdds": "5.5",
           "banker": false,
-          "note": "1 assist in the group stage; 23% modelled chance to set one up."
+          "note": "Primary width and cross supply from right-back plus set-piece delivery"
         },
         {
-          "player": "Chadi Riad",
-          "team": "Morocco",
-          "fairOdds": "4.44",
+          "player": "Alphonso Davies",
+          "fairOdds": "7.0",
           "banker": false,
-          "note": "1 assist in the group stage; 23% modelled chance to set one up."
+          "note": "If he starts/enters, his overlaps and crosses are Canada's most dangerous supply line on the break"
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Jonathan David",
-        "backup": "Cyle Larin",
-        "note": "Tight model margin (11 pts) raises the odds a spot-kick decides it; Jonathan David is Canada's group-stage top scorer and likely taker."
+        "taker": "Achraf Hakimi",
+        "backup": "Ismael Saibari",
+        "note": "Hakimi is Morocco's senior spot-kick option; David takes any Canada penalty — knockout tension raises the chance of a decisive spot-kick or a shootout."
       },
       "lineups": {
-        "home": "Maxime Crépeau, Derek Cornelius, Luc de Fougerolles, Richie Laryea, Alistair Johnston, Mathieu Choinière, Nathan Saliba, Ali Ahmed, Tajon Buchanan, Cyle Larin, Jonathan David",
-        "away": "Yassine Bounou, Chadi Riad, Redouane Halhal, Anass Salah-Eddine, Achraf Hakimi, Ismael Saibari, Sofyan Amrabat, Neil El Aynaoui, Ayoub El Kaabi, Bilal El Khannouss, Brahim Díaz",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-4-2",
-          "players": [
-            {
-              "num": 16,
-              "name": "Maxime Crépeau",
-              "pos": "G"
-            },
-            {
-              "num": 13,
-              "name": "Derek Cornelius",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Luc de Fougerolles",
-              "pos": "CD-R"
-            },
-            {
-              "num": 22,
-              "name": "Richie Laryea",
-              "pos": "LB"
-            },
-            {
-              "num": 2,
-              "name": "Alistair Johnston",
-              "pos": "RB"
-            },
-            {
-              "num": 6,
-              "name": "Mathieu Choinière",
-              "pos": "CM-L"
-            },
-            {
-              "num": 25,
-              "name": "Nathan Saliba",
-              "pos": "CM-R"
-            },
-            {
-              "num": 20,
-              "name": "Ali Ahmed",
-              "pos": "LM"
-            },
-            {
-              "num": 17,
-              "name": "Tajon Buchanan",
-              "pos": "RM"
-            },
-            {
-              "num": 9,
-              "name": "Cyle Larin",
-              "pos": "CF-L"
-            },
-            {
-              "num": 10,
-              "name": "Jonathan David",
-              "pos": "CF-R"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Yassine Bounou",
-              "pos": "G"
-            },
-            {
-              "num": 18,
-              "name": "Chadi Riad",
-              "pos": "CD-L"
-            },
-            {
-              "num": 25,
-              "name": "Redouane Halhal",
-              "pos": "CD-R"
-            },
-            {
-              "num": 26,
-              "name": "Anass Salah-Eddine",
-              "pos": "LB"
-            },
-            {
-              "num": 2,
-              "name": "Achraf Hakimi",
-              "pos": "RB"
-            },
-            {
-              "num": 11,
-              "name": "Ismael Saibari",
-              "pos": "AM"
-            },
-            {
-              "num": 4,
-              "name": "Sofyan Amrabat",
-              "pos": "LM"
-            },
-            {
-              "num": 24,
-              "name": "Neil El Aynaoui",
-              "pos": "RM"
-            },
-            {
-              "num": 20,
-              "name": "Ayoub El Kaabi",
-              "pos": "F"
-            },
-            {
-              "num": 23,
-              "name": "Bilal El Khannouss",
-              "pos": "AM-L"
-            },
-            {
-              "num": 10,
-              "name": "Brahim Díaz",
-              "pos": "AM-R"
-            }
-          ]
-        }
+        "home": "Crepeau; Johnston, Bombito, Cornelius, Laryea; Buchanan, Saliba, Eustaquio, Millar; Oluwaseyi, David",
+        "away": "Bono; Hakimi, Diop, Riad, Mazraoui; Bouaddi, El Aynaoui; Diaz, Ounahi, El Khannouss; Saibari",
+        "status": "probable"
       },
       "playerNotes": [
         {
+          "player": "Alphonso Davies",
+          "team": "Canada",
+          "note": "Back from hamstring, 15 mins vs South Africa; reports suggest a possible first start but Marsch may keep reliable Laryea at LB and use Davies off the bench"
+        },
+        {
+          "player": "Ismael Kone",
+          "team": "Canada",
+          "note": "Ruled out — broken ankle; midfield reshuffle for Canada"
+        },
+        {
           "player": "Jonathan David",
           "team": "Canada",
-          "note": "3 goals in 4 group games; 45% modelled anytime chance on 1.7 team xG."
+          "note": "WC hat-trick vs Qatar and primary penalty taker — the counter-attack focal point"
         },
         {
           "player": "Ismael Saibari",
           "team": "Morocco",
-          "note": "3 goals in 4 group games; 40% modelled anytime chance on 1.5 team xG."
+          "note": "Tournament revelation with 4 goals; operating between the lines as Morocco's main goal threat"
         },
         {
-          "player": "Nathan Saliba",
-          "team": "Canada",
-          "note": "2 assists in the group stage; 58% modelled chance to set one up."
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "note": "Record WC appearance-maker for Morocco; two-way right-back driving width, crosses and set pieces"
+        },
+        {
+          "player": "Yassine Bono",
+          "team": "Morocco",
+          "note": "Shootout hero vs Netherlands; big-game keeper underpinning Morocco's clean-sheet threat"
         }
       ],
       "confidence": "medium",
-      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.rotowire.com/soccer/article/canada-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120851",
+        "https://www.si.com/soccer/canada-vs-morocco-world-cup-preview-predictions-lineups-7-4-26",
+        "https://www.aljazeera.com/sports/2026/7/3/canada-morocco-fifa-world-cup-round-of-16-saibari-prediction-schedule",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
       ],
       "pitchReport": {
         "facts": [
@@ -18994,263 +18871,132 @@
           "line": "The draw is live and a level game kills a straight win bet."
         }
       },
-      "resolution": {
-        "ninety": 76.7,
-        "extraTime": 12.8,
-        "penalties": 10.5,
-        "mostLikely": "Regulation",
-        "etWinner": "Canada",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Canada.",
-        "note": "Most likely settled inside 90 (76.7%). But a 23.3% level 90 keeps extra time (12.8%) and penalties (10.5%) live — in a knockout, that's the bit a straight win bet ignores."
-      }
+      "strength": 3
     },
     "par-fra-2026-07-04": {
       "win": {
         "pick": "France",
-        "fairOdds": "1.24",
-        "reason": "Model: France to win at 80% (Paraguay 6% / draw 13% / France 80%). Expected goals 0.6–2.7 from group-stage attack/defence rates (Paraguay 1.0 for / 1.4 against per game, France 2.6 / 1.0). Most likely score 0-2.",
-        "strength": 5
+        "fairOdds": "1.72",
+        "reason": "France scored 3+ in all four matches and have Mbappe, Dembele and Olise firing, but Paraguay's ultra-compact low block that eliminated Germany on penalties keeps this from being a formality — ~55-58% France, not certainty."
       },
       "halfTime": {
-        "score": "0-1",
-        "fairOdds": "3.58",
-        "alt": "0-0",
-        "altOdds": "6.27"
+        "score": "0-0",
+        "fairOdds": "2.60",
+        "alt": "1-0 France",
+        "altOdds": "2.90"
       },
       "htft": {
-        "pick": "France/France",
-        "fairOdds": "1.56"
+        "pick": "Draw/France",
+        "fairOdds": "3.40"
       },
       "fullTime": {
-        "score": "0-2",
-        "fairOdds": "7.32"
+        "score": "0-1",
+        "fairOdds": "6.00"
+      },
+      "resolution": {
+        "ninety": 62,
+        "extraTime": 23,
+        "penalties": 15,
+        "mostLikely": "Regulation",
+        "etWinner": "France",
+        "shootout": "If it reaches penalties Paraguay are dangerous — GK Orlando Gill was their shootout hero vs Germany; France would be slight favourites but far from safe",
+        "note": "France break the block more often than not in 90, but Alfaro's deep block raises real ET/penalty risk given Paraguay already went the distance vs Germany."
       },
       "scorers": [
         {
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "fairOdds": "1.52",
-          "banker": true,
-          "note": "6 goals in 4 group games; 66% modelled anytime chance on 2.7 team xG.",
-          "strength": 5
+          "player": "Kylian Mbappe",
+          "fairOdds": "2.10",
+          "banker": false,
+          "note": "Tournament top scorer (6 goals) and France's penalty/set-piece threat, but a packed low block limits his running lanes — strong, not banker."
         },
         {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "fairOdds": "1.82",
+          "player": "Ousmane Dembele",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "4 goals in 4 group games; 55% modelled anytime chance on 2.7 team xG.",
-          "strength": 4
+          "note": "6 goal involvements; his creativity is the intended block-unlocker but conversion vs a compact defence is streaky."
         },
         {
-          "player": "Bradley Barcola",
-          "team": "France",
-          "fairOdds": "2.80",
+          "player": "Michael Olise",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "2 goals in 4 group games; 36% modelled anytime chance on 2.7 team xG.",
-          "strength": 3
+          "note": "5 goals and starred vs Sweden; arriving from wide/half-space, genuine threat against a narrow block."
         },
         {
-          "player": "Désiré Doué",
-          "team": "France",
-          "fairOdds": "4.30",
+          "player": "Julio Enciso",
+          "fairOdds": "6.50",
           "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.7 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Matías Galarza",
-          "team": "Paraguay",
-          "fairOdds": "5.87",
-          "banker": false,
-          "note": "2 goals in 2 group games; 17% modelled anytime chance on 0.6 team xG.",
-          "strength": 1
+          "note": "Paraguay's creative engine and main counter outlet — their most likely scorer if they nick one on the break."
         }
       ],
       "assists": [
         {
+          "player": "Ousmane Dembele",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "Primary chance-creator tasked with unlocking the deep block from the right."
+        },
+        {
           "player": "Michael Olise",
-          "team": "France",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Cutbacks and deliveries from the left/half-space feed Mbappe."
         },
         {
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "fairOdds": "2.58",
+          "player": "Kylian Mbappe",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "2 assists in the group stage; 39% modelled chance to set one up."
+          "note": "Draws defenders and lays off; France's movement hub can create as well as finish."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Kylian Mbappe",
+        "backup": "Ousmane Dembele",
+        "note": "A deep Paraguay block invites box congestion and possible spot-kicks; Mbappe is France's primary taker."
+      },
+      "lineups": {
+        "home": "Gill; Caceres, G. Gomez, Canale, Alonso; Galarza, Cubas, D. Gomez; Almiron, Avalos, Enciso",
+        "away": "Maignan; Kounde, Upamecano, Saliba, Digne; Tchouameni, Rabiot; Dembele, Olise, Barcola; Mbappe",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "William Saliba",
+          "team": "France",
+          "note": "Was flagged doubtful earlier in the tournament; monitor fitness before kickoff."
         },
         {
-          "player": "Ousmane Dembélé",
+          "player": "Bradley Barcola",
           "team": "France",
-          "fairOdds": "2.58",
-          "banker": false,
-          "note": "2 assists in the group stage; 39% modelled chance to set one up."
+          "note": "Fourth-attacker slot is a toss-up — Desire Doue may start instead for more spontaneity vs a deep block."
+        },
+        {
+          "player": "Kylian Mbappe",
+          "team": "France",
+          "note": "6 goals, tournament leader; primary penalty and set-piece threat."
+        },
+        {
+          "player": "Orlando Gill",
+          "team": "Paraguay",
+          "note": "Shootout hero vs Germany; expect a busy night and a live penalty threat if it goes the distance."
         },
         {
           "player": "Julio Enciso",
           "team": "Paraguay",
-          "fairOdds": "4.01",
-          "banker": false,
-          "note": "2 assists in the group stage; 25% modelled chance to set one up."
-        }
-      ],
-      "penalty": {
-        "likelihood": "low",
-        "taker": "Kylian Mbappé",
-        "backup": "Ousmane Dembélé",
-        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
-      },
-      "lineups": {
-        "home": "Orlando Gil, Gustavo Gómez, Omar Alderete, Gustavo Velázquez, Alexandro Maidana, Juan Jose Cáceres, Andrés Cubas, Matías Galarza, Diego Gómez, Julio Enciso, Gabriel Ávalos",
-        "away": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Aurélien Tchouaméni, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Bradley Barcola, Kylian Mbappé",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "5-3-2",
-          "players": [
-            {
-              "num": 12,
-              "name": "Orlando Gil",
-              "pos": "G"
-            },
-            {
-              "num": 15,
-              "name": "Gustavo Gómez",
-              "pos": "CD"
-            },
-            {
-              "num": 3,
-              "name": "Omar Alderete",
-              "pos": "CD-L"
-            },
-            {
-              "num": 2,
-              "name": "Gustavo Velázquez",
-              "pos": "CD-R"
-            },
-            {
-              "num": 26,
-              "name": "Alexandro Maidana",
-              "pos": "LB"
-            },
-            {
-              "num": 4,
-              "name": "Juan Jose Cáceres",
-              "pos": "RB"
-            },
-            {
-              "num": 14,
-              "name": "Andrés Cubas",
-              "pos": "CM"
-            },
-            {
-              "num": 23,
-              "name": "Matías Galarza",
-              "pos": "CM-L"
-            },
-            {
-              "num": 8,
-              "name": "Diego Gómez",
-              "pos": "CM-R"
-            },
-            {
-              "num": 19,
-              "name": "Julio Enciso",
-              "pos": "CF-L"
-            },
-            {
-              "num": 21,
-              "name": "Gabriel Ávalos",
-              "pos": "CF-R"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 16,
-              "name": "Mike Maignan",
-              "pos": "G"
-            },
-            {
-              "num": 5,
-              "name": "Jules Koundé",
-              "pos": "RB"
-            },
-            {
-              "num": 4,
-              "name": "Dayot Upamecano",
-              "pos": "CD-R"
-            },
-            {
-              "num": 17,
-              "name": "William Saliba",
-              "pos": "CD-L"
-            },
-            {
-              "num": 21,
-              "name": "Lucas Digne",
-              "pos": "LB"
-            },
-            {
-              "num": 8,
-              "name": "Aurélien Tchouaméni",
-              "pos": "DM-R"
-            },
-            {
-              "num": 14,
-              "name": "Adrien Rabiot",
-              "pos": "DM-L"
-            },
-            {
-              "num": 7,
-              "name": "Ousmane Dembélé",
-              "pos": "AM-R"
-            },
-            {
-              "num": 11,
-              "name": "Michael Olise",
-              "pos": "AM"
-            },
-            {
-              "num": 20,
-              "name": "Bradley Barcola",
-              "pos": "AM-L"
-            },
-            {
-              "num": 10,
-              "name": "Kylian Mbappé",
-              "pos": "F"
-            }
-          ]
-        }
-      },
-      "playerNotes": [
-        {
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "note": "6 goals in 4 group games; 66% modelled anytime chance on 2.7 team xG."
+          "note": "Leads Paraguay for goal involvements, shots, chances created and dribbles — the counter-attack outlet."
         },
         {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "note": "4 goals in 4 group games; 55% modelled anytime chance on 2.7 team xG."
-        },
-        {
-          "player": "Michael Olise",
-          "team": "France",
-          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+          "player": "Omar Alderete",
+          "team": "Paraguay",
+          "note": "Still out; Diego Gomez returns to midfield for Paraguay."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.rotowire.com/soccer/article/paraguay-vs-france-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120852",
+        "https://theanalyst.com/articles/paraguay-vs-france-prediction-world-cup-2026-match-preview",
+        "https://www.si.com/soccer/france-predicted-lineup-vs-paraguay-world-cup-7-4-26",
+        "https://www.espn.com/soccer/story/_/id/48572979/2026-fifa-world-cup-injuries-tracker-which-stars-miss-latest-info"
       ],
       "pitchReport": {
         "facts": [
@@ -19339,15 +19085,7 @@
           "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
         }
       },
-      "resolution": {
-        "ninety": 87.1,
-        "extraTime": 7.8,
-        "penalties": 5.2,
-        "mostLikely": "Regulation",
-        "etWinner": "France",
-        "shootout": "Near coin-flip, with the marginal nerve edge to France.",
-        "note": "Most likely settled inside 90 (87.1%). But a 12.9% level 90 keeps extra time (7.8%) and penalties (5.2%) live — in a knockout, that's the bit a straight win bet ignores."
-      }
+      "strength": 5
     },
     "bra-nor-2026-07-05": {
       "win": {
