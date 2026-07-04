@@ -1051,6 +1051,22 @@
       },
       "finishPhase": "penalties",
       "advanced": "away"
+    },
+    "arg-cpv-2026-07-03": {
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 3,
+        "away": 2
+      },
+      "ft90": {
+        "home": 1,
+        "away": 1
+      },
+      "finishPhase": "extra_time",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4032,6 +4048,68 @@
           "team": "away",
           "player": "Yasser Ibrahim",
           "minute": 120,
+          "type": "yellow"
+        }
+      ]
+    },
+    "arg-cpv-2026-07-03": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Lionel Messi",
+          "minute": 28,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Deroy Duarte",
+          "minute": 59,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Lisandro Martínez",
+          "minute": 92,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "et": true
+        },
+        {
+          "team": "away",
+          "scorer": "Sidny Lopes Cabral",
+          "minute": 103,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "et": true
+        },
+        {
+          "team": "home",
+          "scorer": "Diney Borges",
+          "minute": 111,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true,
+          "et": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Kevin Pina",
+          "minute": 68,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Gonzalo Montiel",
+          "minute": 115,
           "type": "yellow"
         }
       ]
@@ -18081,19 +18159,19 @@
     },
     "arg-cpv-2026-07-03": {
       "corners": {
-        "home": 7,
-        "away": 5
+        "home": 8,
+        "away": 8
       },
       "sot": {
-        "home": 9,
-        "away": 3
+        "home": 10,
+        "away": 5
       },
       "shots": {
-        "home": 19,
-        "away": 9
+        "home": 22,
+        "away": 16
       },
       "yellow": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "red": {
@@ -18101,34 +18179,36 @@
         "away": 0
       },
       "cards": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "cornersByHalf": {
         "home": [
           0,
-          7
+          8
         ],
         "away": [
           0,
-          5
+          8
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          5
+          6
         ],
         "away": [
           0,
-          1
+          3
         ]
       },
       "playerSot": {
-        "Lionel Messi": 4,
+        "Lionel Messi": 5,
         "Enzo Fernández": 2,
         "Deroy Duarte": 1,
-        "Leandro Paredes": 1
+        "Leandro Paredes": 1,
+        "Sidny Lopes Cabral": 1,
+        "Diney Borges": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
