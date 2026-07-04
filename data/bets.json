@@ -14308,6 +14308,125 @@
         "player": "Kylian Mbappe",
         "line": 2.5
       }
+    },
+    {
+      "id": "sp-83996257619",
+      "slipNo": "83996257619",
+      "matchId": "par-fra-2026-07-04",
+      "player": "7-game acca",
+      "market": "Accumulator (7) — Scorer / Totals / Player G+A",
+      "label": "REAL 1xBet slip 83996257619 (05/07 04:29) — 7-fold @ 16.205, RM50 -> RM810.23. Par/Fra Mbappe to score anytime (1.45) · Bra/Nor Asian Total Over 2.25 (1.567) · Mex/Eng Asian Total Under 3.25 (1.215) · Por/Esp Total Over 1.5 (1.222) · USA/Bel Total Under 3.5 (1.38) · Arg/Egy Messi Goals+Assists Over 1.5 (3.25) · Sui/Col Total Over 1 (1.071).",
+      "odds": 16.205,
+      "stake": 50,
+      "placedAt": "05/07 04:29",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "par-fra-2026-07-04",
+            "kind": "scored",
+            "player": "Kylian Mbappe",
+            "odds": 1.45
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "totalOver",
+            "line": 2.25,
+            "odds": 1.567
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "totalUnder",
+            "line": 3.25,
+            "odds": 1.215
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalOver",
+            "line": 1.5,
+            "odds": 1.222
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "totalUnder",
+            "line": 3.5,
+            "odds": 1.38
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "goalsAssistsOver",
+            "player": "Lionel Messi",
+            "line": 1.5,
+            "odds": 3.25
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalOver",
+            "line": 1,
+            "odds": 1.071
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-83996182403",
+      "slipNo": "83996182403",
+      "matchId": "par-fra-2026-07-04",
+      "player": "7-game acca",
+      "market": "Accumulator (7) — Player G+A / Totals",
+      "label": "REAL 1xBet slip 83996182403 (05/07 04:27) — 7-fold @ 45.931, RM50 -> RM2296.53. Par/Fra Mbappe Goals+Assists Over 1.5 (2.85) · Bra/Nor Total Over 2 (1.31) · Mex/Eng Asian Total Under 3.25 (1.215) · Por/Esp Total Over 2 (1.36) · USA/Bel Total Under 3.5 (1.38) · Arg/Egy Messi Goals+Assists Over 1.5 (3.25) · Sui/Col Total Over 2 (1.66).",
+      "odds": 45.931,
+      "stake": 50,
+      "placedAt": "05/07 04:27",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "par-fra-2026-07-04",
+            "kind": "goalsAssistsOver",
+            "player": "Kylian Mbappé",
+            "line": 1.5,
+            "odds": 2.85
+          },
+          {
+            "matchId": "bra-nor-2026-07-05",
+            "kind": "totalOver",
+            "line": 2,
+            "odds": 1.31
+          },
+          {
+            "matchId": "mex-eng-2026-07-06",
+            "kind": "totalUnder",
+            "line": 3.25,
+            "odds": 1.215
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalOver",
+            "line": 2,
+            "odds": 1.36
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "totalUnder",
+            "line": 3.5,
+            "odds": 1.38
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "goalsAssistsOver",
+            "player": "Lionel Messi",
+            "line": 1.5,
+            "odds": 3.25
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalOver",
+            "line": 2,
+            "odds": 1.66
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
