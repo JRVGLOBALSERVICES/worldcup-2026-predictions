@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T21:10:06.745Z",
+    "generatedAt": "2026-07-04T21:20:06.843Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 73
   },
@@ -574,6 +574,14 @@
       },
       {
         "rank": 4,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 63.1,
+        "display": "63.1%",
+        "matches": 5
+      },
+      {
+        "rank": 5,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -581,7 +589,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -589,7 +597,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 62.9,
@@ -597,7 +605,7 @@
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
@@ -605,20 +613,12 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 61.2,
         "display": "61.2%",
         "matches": 4
-      },
-      {
-        "rank": 9,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 60.9,
-        "display": "60.9%",
-        "matches": 5
       },
       {
         "rank": 10,
@@ -786,11 +786,11 @@
       },
       {
         "rank": 10,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 66.1,
-        "display": "66.1%",
-        "matches": 5
+        "team": "South Korea",
+        "flag": "🇰🇷",
+        "value": 65.5,
+        "display": "65.5%",
+        "matches": 2
       }
     ],
     "crossCompletion": [
@@ -928,12 +928,12 @@
         "rank": 7,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 50.6,
-        "display": "50.6%",
+        "value": 51.7,
+        "display": "51.7%",
         "matches": 5
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 50.6,
@@ -6691,31 +6691,31 @@
         "teamBox": [
           {
             "team": "Paraguay",
-            "possessionPct": 25,
-            "accuratePasses": 0,
-            "totalPasses": 1,
+            "possessionPct": 14,
+            "accuratePasses": 14,
+            "totalPasses": 24,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 0,
-            "totalTackles": 0,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 0
-          },
-          {
-            "team": "France",
-            "possessionPct": 75,
-            "accuratePasses": 1,
-            "totalPasses": 3,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
-            "effectiveTackles": 0,
-            "totalTackles": 0,
+            "effectiveTackles": 3,
+            "totalTackles": 5,
             "accurateCrosses": 0,
             "totalCrosses": 0,
             "accurateLongBalls": 1,
-            "totalLongBalls": 2
+            "totalLongBalls": 6
+          },
+          {
+            "team": "France",
+            "possessionPct": 86,
+            "accuratePasses": 129,
+            "totalPasses": 142,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 2,
+            "totalTackles": 4,
+            "accurateCrosses": 0,
+            "totalCrosses": 5,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 8
           }
         ]
       }
