@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T02:50:05.912Z",
+    "generatedAt": "2026-07-04T03:00:09.440Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 71
   },
@@ -616,8 +616,8 @@
         "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 61,
-        "display": "61.0%",
+        "value": 60.7,
+        "display": "60.7%",
         "matches": 4
       },
       {
@@ -910,14 +910,6 @@
       },
       {
         "rank": 5,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 52.1,
-        "display": "52.1%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 52,
@@ -925,12 +917,20 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Canada",
         "flag": "🇨🇦",
         "value": 51.9,
         "display": "51.9%",
         "matches": 3
+      },
+      {
+        "rank": 7,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 51.5,
+        "display": "51.5%",
+        "matches": 4
       },
       {
         "rank": 8,
@@ -1690,6 +1690,10 @@
         {
           "name": "Caleb Yirenkyi",
           "value": 2
+        },
+        {
+          "name": "Fatawu Issahaku",
+          "value": 1
         },
         {
           "name": "Iñaki Williams",
@@ -6595,31 +6599,31 @@
         "teamBox": [
           {
             "team": "Colombia",
-            "possessionPct": 64.6,
-            "accuratePasses": 360,
-            "totalPasses": 393,
-            "shotsOnTarget": 4,
-            "totalShots": 8,
-            "effectiveTackles": 4,
-            "totalTackles": 6,
+            "possessionPct": 63.4,
+            "accuratePasses": 403,
+            "totalPasses": 442,
+            "shotsOnTarget": 5,
+            "totalShots": 9,
+            "effectiveTackles": 5,
+            "totalTackles": 7,
             "accurateCrosses": 3,
             "totalCrosses": 10,
-            "accurateLongBalls": 17,
-            "totalLongBalls": 30
+            "accurateLongBalls": 18,
+            "totalLongBalls": 34
           },
           {
             "team": "Ghana",
-            "possessionPct": 35.4,
-            "accuratePasses": 173,
-            "totalPasses": 211,
+            "possessionPct": 36.6,
+            "accuratePasses": 208,
+            "totalPasses": 251,
             "shotsOnTarget": 0,
             "totalShots": 6,
             "effectiveTackles": 5,
-            "totalTackles": 8,
-            "accurateCrosses": 1,
-            "totalCrosses": 11,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 28
+            "totalTackles": 9,
+            "accurateCrosses": 2,
+            "totalCrosses": 12,
+            "accurateLongBalls": 9,
+            "totalLongBalls": 30
           }
         ]
       }
