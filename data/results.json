@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T00:10:03.871Z",
+    "generatedAt": "2026-07-04T00:20:04.127Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 66,
     "live": 1
@@ -8945,7 +8945,7 @@
       "finishPhase": null,
       "score": {
         "home": 2,
-        "away": 1
+        "away": 2
       },
       "advanced": null,
       "goals": [
@@ -8972,6 +8972,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Sidny Lopes Cabral",
+          "minute": 103,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -8985,16 +8993,16 @@
       "updatedAt": "2026-07-03T22:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 6,
-          "away": 2
+          "home": 7,
+          "away": 5
         },
         "sot": {
           "home": 9,
-          "away": 2
+          "away": 3
         },
         "shots": {
-          "home": 16,
-          "away": 6
+          "home": 19,
+          "away": 9
         },
         "yellow": {
           "home": 0,
@@ -9011,11 +9019,11 @@
         "cornersByHalf": {
           "home": [
             0,
-            6
+            7
           ],
           "away": [
             0,
-            2
+            5
           ]
         },
         "sotByHalf": {
