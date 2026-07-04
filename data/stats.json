@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T00:30:07.036Z",
+    "generatedAt": "2026-07-04T00:40:06.531Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -476,19 +476,19 @@
       },
       {
         "rank": 2,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 91.1,
-        "display": "91.1%",
-        "matches": 4
-      },
-      {
-        "rank": 2,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 91.1,
         "display": "91.1%",
         "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 91,
+        "display": "91.0%",
+        "matches": 4
       },
       {
         "rank": 4,
@@ -616,12 +616,12 @@
         "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 59.9,
-        "display": "59.9%",
+        "value": 59.8,
+        "display": "59.8%",
         "matches": 4
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 59.8,
@@ -672,14 +672,6 @@
       },
       {
         "rank": 6,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 45.5,
-        "display": "45.5%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -687,12 +679,20 @@
         "matches": 3
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
         "display": "45.2%",
         "matches": 3
+      },
+      {
+        "rank": 8,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 44.6,
+        "display": "44.6%",
+        "matches": 4
       },
       {
         "rank": 9,
@@ -730,18 +730,18 @@
       },
       {
         "rank": 3,
-        "team": "Cape Verde",
-        "flag": "🇨🇻",
-        "value": 70.8,
-        "display": "70.8%",
-        "matches": 3
-      },
-      {
-        "rank": 4,
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 69.8,
         "display": "69.8%",
+        "matches": 3
+      },
+      {
+        "rank": 4,
+        "team": "Cape Verde",
+        "flag": "🇨🇻",
+        "value": 69.4,
+        "display": "69.4%",
         "matches": 3
       },
       {
@@ -812,6 +812,14 @@
       },
       {
         "rank": 3,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 36.7,
+        "display": "36.7%",
+        "matches": 4
+      },
+      {
+        "rank": 4,
         "team": "Mexico",
         "flag": "🇲🇽",
         "value": 36,
@@ -819,7 +827,7 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -827,20 +835,12 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
         "display": "35.7%",
         "matches": 3
-      },
-      {
-        "rank": 6,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 34.5,
-        "display": "34.5%",
-        "matches": 4
       },
       {
         "rank": 7,
@@ -896,8 +896,8 @@
         "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 57.6,
-        "display": "57.6%",
+        "value": 57.5,
+        "display": "57.5%",
         "matches": 4
       },
       {
@@ -1249,6 +1249,10 @@
       "yellowCards": [
         {
           "name": "Facundo Medina",
+          "value": 1
+        },
+        {
+          "name": "Gonzalo Montiel",
           "value": 1
         },
         {
@@ -6538,31 +6542,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 64.8,
-            "accuratePasses": 751,
-            "totalPasses": 813,
+            "possessionPct": 64.4,
+            "accuratePasses": 776,
+            "totalPasses": 842,
             "shotsOnTarget": 10,
-            "totalShots": 21,
+            "totalShots": 22,
             "effectiveTackles": 12,
-            "totalTackles": 19,
-            "accurateCrosses": 5,
-            "totalCrosses": 14,
-            "accurateLongBalls": 24,
-            "totalLongBalls": 34
+            "totalTackles": 20,
+            "accurateCrosses": 6,
+            "totalCrosses": 15,
+            "accurateLongBalls": 25,
+            "totalLongBalls": 36
           },
           {
             "team": "Cape Verde",
-            "possessionPct": 35.2,
-            "accuratePasses": 375,
-            "totalPasses": 434,
-            "shotsOnTarget": 3,
-            "totalShots": 10,
+            "possessionPct": 35.6,
+            "accuratePasses": 394,
+            "totalPasses": 458,
+            "shotsOnTarget": 4,
+            "totalShots": 12,
             "effectiveTackles": 7,
-            "totalTackles": 17,
+            "totalTackles": 18,
             "accurateCrosses": 4,
             "totalCrosses": 15,
-            "accurateLongBalls": 19,
-            "totalLongBalls": 44
+            "accurateLongBalls": 21,
+            "totalLongBalls": 48
           }
         ]
       }

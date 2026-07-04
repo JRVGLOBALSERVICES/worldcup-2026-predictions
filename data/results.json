@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T00:30:04.493Z",
+    "generatedAt": "2026-07-04T00:40:03.977Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 66,
     "live": 1
@@ -8944,7 +8944,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 2
       },
       "advanced": null,
@@ -8980,6 +8980,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Diney Borges",
+          "minute": 111,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": true
         }
       ],
       "cards": [
@@ -8988,24 +8996,30 @@
           "player": "Kevin Pina",
           "minute": 68,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Gonzalo Montiel",
+          "minute": 115,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-03T22:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 7,
-          "away": 5
+          "home": 8,
+          "away": 6
         },
         "sot": {
           "home": 10,
-          "away": 3
+          "away": 4
         },
         "shots": {
-          "home": 21,
-          "away": 10
+          "home": 22,
+          "away": 12
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "red": {
@@ -9013,17 +9027,17 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "cornersByHalf": {
           "home": [
             0,
-            7
+            8
           ],
           "away": [
             0,
-            5
+            6
           ]
         },
         "sotByHalf": {
@@ -9033,14 +9047,15 @@
           ],
           "away": [
             0,
-            1
+            2
           ]
         },
         "playerSot": {
           "Lionel Messi": 5,
           "Enzo Fernández": 2,
           "Deroy Duarte": 1,
-          "Leandro Paredes": 1
+          "Leandro Paredes": 1,
+          "Sidny Lopes Cabral": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
