@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T21:20:26.252Z",
+    "generatedAt": "2026-07-04T21:30:08.736Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 73
   },
@@ -532,19 +532,19 @@
       },
       {
         "rank": 9,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 88.3,
+        "display": "88.3%",
+        "matches": 5
+      },
+      {
+        "rank": 9,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 88.3,
         "display": "88.3%",
         "matches": 4
-      },
-      {
-        "rank": 9,
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 88.3,
-        "display": "88.3%",
-        "matches": 3
       }
     ],
     "possession": [
@@ -574,14 +574,6 @@
       },
       {
         "rank": 4,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 63.1,
-        "display": "63.1%",
-        "matches": 5
-      },
-      {
-        "rank": 5,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -589,7 +581,7 @@
         "matches": 2
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -597,7 +589,7 @@
         "matches": 2
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 62.9,
@@ -605,12 +597,20 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
         "display": "62.1%",
         "matches": 4
+      },
+      {
+        "rank": 8,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 62,
+        "display": "62.0%",
+        "matches": 5
       },
       {
         "rank": 9,
@@ -647,11 +647,11 @@
         "matches": 4
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 47.2,
-        "display": "47.2%",
+        "value": 46.6,
+        "display": "46.6%",
         "matches": 5
       },
       {
@@ -928,8 +928,8 @@
         "rank": 7,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 51.7,
-        "display": "51.7%",
+        "value": 51.4,
+        "display": "51.4%",
         "matches": 5
       },
       {
@@ -1014,6 +1014,10 @@
       "yellowCards": [
         {
           "name": "Aurélien Tchouaméni",
+          "value": 1
+        },
+        {
+          "name": "Bradley Barcola",
           "value": 1
         }
       ],
@@ -6691,31 +6695,31 @@
         "teamBox": [
           {
             "team": "Paraguay",
-            "possessionPct": 14,
-            "accuratePasses": 14,
-            "totalPasses": 24,
+            "possessionPct": 19.3,
+            "accuratePasses": 30,
+            "totalPasses": 46,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 3,
-            "totalTackles": 5,
+            "effectiveTackles": 4,
+            "totalTackles": 6,
             "accurateCrosses": 0,
             "totalCrosses": 0,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 6
+            "accurateLongBalls": 4,
+            "totalLongBalls": 12
           },
           {
             "team": "France",
-            "possessionPct": 86,
-            "accuratePasses": 129,
-            "totalPasses": 142,
+            "possessionPct": 80.7,
+            "accuratePasses": 170,
+            "totalPasses": 186,
             "shotsOnTarget": 0,
-            "totalShots": 0,
+            "totalShots": 1,
             "effectiveTackles": 2,
             "totalTackles": 4,
-            "accurateCrosses": 0,
-            "totalCrosses": 5,
+            "accurateCrosses": 1,
+            "totalCrosses": 10,
             "accurateLongBalls": 6,
-            "totalLongBalls": 8
+            "totalLongBalls": 9
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T21:20:16.808Z",
+    "generatedAt": "2026-07-04T21:30:03.563Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 69,
     "live": 1
@@ -9421,12 +9421,19 @@
       },
       "advanced": null,
       "goals": [],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Bradley Barcola",
+          "minute": 18,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-04T21:00:00.000Z",
       "stats": {
         "corners": {
           "home": 0,
-          "away": 1
+          "away": 4
         },
         "sot": {
           "home": 0,
@@ -9434,11 +9441,11 @@
         },
         "shots": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -9446,7 +9453,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -9454,7 +9461,7 @@
             0
           ],
           "away": [
-            1,
+            4,
             0
           ]
         },
@@ -9471,7 +9478,18 @@
         "playerSot": {},
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 22,
+            "isCorner": true,
+            "reliable": false
+          }
+        }
       }
     }
   }
