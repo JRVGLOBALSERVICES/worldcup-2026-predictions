@@ -1099,6 +1099,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "par-fra-2026-07-04": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
+      "ft90": {
+        "home": 0,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4267,6 +4283,39 @@
           "team": "home",
           "player": "Cyle Larin",
           "minute": 67,
+          "type": "yellow"
+        }
+      ]
+    },
+    "par-fra-2026-07-04": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Kylian Mbappé",
+          "minute": 69,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Bradley Barcola",
+          "minute": 18,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Manu Koné",
+          "minute": 81,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Michael Olise",
+          "minute": 90,
           "type": "yellow"
         }
       ]
@@ -19307,20 +19356,20 @@
     },
     "par-fra-2026-07-04": {
       "corners": {
-        "home": 1,
-        "away": 9
+        "home": 2,
+        "away": 12
       },
       "sot": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 5
       },
       "shots": {
-        "home": 3,
-        "away": 8
+        "home": 5,
+        "away": 15
       },
       "yellow": {
         "home": 0,
-        "away": 1
+        "away": 3
       },
       "red": {
         "home": 0,
@@ -19328,32 +19377,34 @@
       },
       "cards": {
         "home": 0,
-        "away": 1
+        "away": 3
       },
       "cornersByHalf": {
         "home": [
           0,
-          1
+          2
         ],
         "away": [
           7,
-          2
+          5
         ]
       },
       "sotByHalf": {
         "home": [
           0,
-          0
+          1
         ],
         "away": [
           0,
-          1
+          4
         ]
       },
       "playerSot": {
-        "Manu Koné": 1
+        "Manu Koné": 1,
+        "Kylian Mbappé": 3,
+        "Maurício": 1
       },
-      "firstGoalMethod": null,
+      "firstGoalMethod": "penalty",
       "firstPenalty": null,
       "waterBreak": {
         "h1": {
@@ -19363,6 +19414,16 @@
           "breakEndMinute": 26,
           "firstActionType": "Shot Off Target",
           "firstActionMinute": 28,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 66,
+          "firstActionType": "VAR - Referee decision cancelled",
+          "firstActionMinute": 66,
           "isCorner": false,
           "reliable": true
         }
