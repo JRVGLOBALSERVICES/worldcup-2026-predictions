@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T20:07:39.902Z",
+    "generatedAt": "2026-07-04T20:10:06.770Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-04T20:07:39.902Z"
+    "modelUpdatedAt": "2026-07-04T20:10:06.768Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -19269,7 +19269,7 @@
           "Model projects France to carry more of the ball and the better chances (higher attack rating); Paraguay to sit compact and play on the break.",
           "Goal expectancy 0.6–2.7 (Paraguay–France) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "France shade the chance-creation (2.7 vs 0.6 xG) — they should make the running.",
         "drawRisk": "Moderate — 12.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -19284,7 +19284,7 @@
           "Group goal-rates are a tiny sample; France's number may be inflated by one result."
         ],
         "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Kylian Mbappé, or news the underdog is missing a defensive linchpin."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -19310,8 +19310,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
@@ -19324,7 +19324,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 0,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
@@ -19341,8 +19341,8 @@
           "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+          "tag": "Clean",
+          "line": "Nothing trips the filter — about as solid as a call gets."
         }
       },
       "resolution": {
