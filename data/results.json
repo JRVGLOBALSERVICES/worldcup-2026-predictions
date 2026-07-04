@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T17:20:04.392Z",
+    "generatedAt": "2026-07-04T17:30:03.531Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 68,
     "live": 1
@@ -9247,7 +9247,14 @@
       },
       "advanced": null,
       "goals": [],
-      "cards": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Redouane Halhal",
+          "minute": 19,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-04T17:00:00.000Z",
       "stats": {
         "corners": {
@@ -9259,12 +9266,12 @@
           "away": 0
         },
         "shots": {
-          "home": 3,
+          "home": 4,
           "away": 0
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -9272,7 +9279,7 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -9290,17 +9297,29 @@
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
         "playerSot": {
           "Jonathan David": 1,
-          "Tani Oluwaseyi": 1
+          "Tani Oluwaseyi": 1,
+          "Soufiane Rahimi": 1
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }

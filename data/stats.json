@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T17:20:07.624Z",
+    "generatedAt": "2026-07-04T17:30:06.649Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 72
   },
@@ -558,19 +558,19 @@
       },
       {
         "rank": 2,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 66.1,
-        "display": "66.1%",
-        "matches": 4
-      },
-      {
-        "rank": 3,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 65.3,
         "display": "65.3%",
         "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 64.5,
+        "display": "64.5%",
+        "matches": 4
       },
       {
         "rank": 4,
@@ -704,11 +704,11 @@
       },
       {
         "rank": 10,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 41.8,
-        "display": "41.8%",
-        "matches": 4
+        "team": "New Zealand",
+        "flag": "🇳🇿",
+        "value": 41.2,
+        "display": "41.2%",
+        "matches": 2
       }
     ],
     "tackleSuccess": [
@@ -926,14 +926,6 @@
       },
       {
         "rank": 7,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 50.6,
-        "display": "50.6%",
-        "matches": 4
-      },
-      {
-        "rank": 7,
         "team": "France",
         "flag": "🇫🇷",
         "value": 50.6,
@@ -949,7 +941,15 @@
         "matches": 4
       },
       {
-        "rank": 10,
+        "rank": 9,
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 50,
+        "display": "50.0%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 50,
@@ -2247,6 +2247,10 @@
         {
           "name": "Issa Diop",
           "value": 2
+        },
+        {
+          "name": "Redouane Halhal",
+          "value": 1
         }
       ],
       "redCards": []
@@ -6632,31 +6636,31 @@
         "teamBox": [
           {
             "team": "Canada",
-            "possessionPct": 31.4,
-            "accuratePasses": 35,
-            "totalPasses": 52,
+            "possessionPct": 37.8,
+            "accuratePasses": 65,
+            "totalPasses": 85,
             "shotsOnTarget": 2,
-            "totalShots": 3,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
+            "totalShots": 4,
+            "effectiveTackles": 2,
+            "totalTackles": 2,
             "accurateCrosses": 3,
-            "totalCrosses": 8,
+            "totalCrosses": 9,
             "accurateLongBalls": 2,
-            "totalLongBalls": 6
+            "totalLongBalls": 7
           },
           {
             "team": "Morocco",
-            "possessionPct": 68.6,
-            "accuratePasses": 116,
-            "totalPasses": 131,
+            "possessionPct": 62.2,
+            "accuratePasses": 136,
+            "totalPasses": 154,
             "shotsOnTarget": 0,
             "totalShots": 0,
             "effectiveTackles": 1,
             "totalTackles": 1,
             "accurateCrosses": 0,
             "totalCrosses": 0,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 6
+            "accurateLongBalls": 4,
+            "totalLongBalls": 9
           }
         ]
       }
