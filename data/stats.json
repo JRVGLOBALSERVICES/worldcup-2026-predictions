@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T23:50:06.180Z",
+    "generatedAt": "2026-07-04T00:00:09.665Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 70
   },
@@ -476,19 +476,19 @@
       },
       {
         "rank": 2,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 91.1,
+        "display": "91.1%",
+        "matches": 4
+      },
+      {
+        "rank": 2,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 91.1,
         "display": "91.1%",
         "matches": 3
-      },
-      {
-        "rank": 3,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 91,
-        "display": "91.0%",
-        "matches": 4
       },
       {
         "rank": 4,
@@ -656,6 +656,14 @@
       },
       {
         "rank": 4,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 46.9,
+        "display": "46.9%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 46.5,
@@ -663,7 +671,7 @@
         "matches": 4
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
@@ -671,7 +679,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -679,7 +687,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 45.2,
@@ -687,15 +695,7 @@
         "matches": 3
       },
       {
-        "rank": 8,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 44.4,
-        "display": "44.4%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -714,19 +714,19 @@
     "tackleSuccess": [
       {
         "rank": 1,
-        "team": "Cape Verde",
-        "flag": "🇨🇻",
-        "value": 73.3,
-        "display": "73.3%",
-        "matches": 3
-      },
-      {
-        "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 73.1,
         "display": "73.1%",
         "matches": 4
+      },
+      {
+        "rank": 2,
+        "team": "Cape Verde",
+        "flag": "🇨🇻",
+        "value": 72.3,
+        "display": "72.3%",
+        "matches": 3
       },
       {
         "rank": 3,
@@ -812,6 +812,14 @@
       },
       {
         "rank": 3,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 36,
+        "display": "36.0%",
+        "matches": 4
+      },
+      {
+        "rank": 3,
         "team": "Mexico",
         "flag": "🇲🇽",
         "value": 36,
@@ -819,7 +827,7 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -827,7 +835,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
@@ -835,15 +843,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 33.3,
-        "display": "33.3%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -6511,30 +6511,30 @@
           {
             "team": "Argentina",
             "possessionPct": 67.5,
-            "accuratePasses": 602,
-            "totalPasses": 652,
-            "shotsOnTarget": 5,
-            "totalShots": 11,
-            "effectiveTackles": 8,
-            "totalTackles": 13,
-            "accurateCrosses": 3,
-            "totalCrosses": 9,
+            "accuratePasses": 658,
+            "totalPasses": 712,
+            "shotsOnTarget": 8,
+            "totalShots": 15,
+            "effectiveTackles": 9,
+            "totalTackles": 15,
+            "accurateCrosses": 4,
+            "totalCrosses": 10,
             "accurateLongBalls": 20,
             "totalLongBalls": 29
           },
           {
             "team": "Cape Verde",
             "possessionPct": 32.5,
-            "accuratePasses": 262,
-            "totalPasses": 308,
+            "accuratePasses": 284,
+            "totalPasses": 336,
             "shotsOnTarget": 2,
             "totalShots": 6,
-            "effectiveTackles": 6,
-            "totalTackles": 14,
+            "effectiveTackles": 7,
+            "totalTackles": 16,
             "accurateCrosses": 3,
-            "totalCrosses": 10,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 34
+            "totalCrosses": 11,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 36
           }
         ]
       }
