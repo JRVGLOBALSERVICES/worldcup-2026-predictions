@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T00:40:03.977Z",
+    "generatedAt": "2026-07-04T00:50:02.934Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 66,
-    "live": 1
+    "finished": 67,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -8935,19 +8935,25 @@
       }
     },
     "arg-cpv-2026-07-03": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 3,
+        "away": 2
+      },
+      "ft90": {
+        "home": 1,
+        "away": 1
+      },
+      "finishPhase": "extra_time",
       "score": {
         "home": 3,
         "away": 2
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "home",
@@ -8971,7 +8977,8 @@
           "minute": 92,
           "assist": null,
           "penalty": false,
-          "ownGoal": false
+          "ownGoal": false,
+          "et": true
         },
         {
           "team": "away",
@@ -8979,7 +8986,8 @@
           "minute": 103,
           "assist": null,
           "penalty": false,
-          "ownGoal": false
+          "ownGoal": false,
+          "et": true
         },
         {
           "team": "home",
@@ -8987,7 +8995,8 @@
           "minute": 111,
           "assist": null,
           "penalty": false,
-          "ownGoal": true
+          "ownGoal": true,
+          "et": true
         }
       ],
       "cards": [
@@ -9008,15 +9017,15 @@
       "stats": {
         "corners": {
           "home": 8,
-          "away": 6
+          "away": 8
         },
         "sot": {
           "home": 10,
-          "away": 4
+          "away": 5
         },
         "shots": {
           "home": 22,
-          "away": 12
+          "away": 16
         },
         "yellow": {
           "home": 1,
@@ -9037,7 +9046,7 @@
           ],
           "away": [
             0,
-            6
+            8
           ]
         },
         "sotByHalf": {
@@ -9047,7 +9056,7 @@
           ],
           "away": [
             0,
-            2
+            3
           ]
         },
         "playerSot": {
@@ -9055,7 +9064,8 @@
           "Enzo Fernández": 2,
           "Deroy Duarte": 1,
           "Leandro Paredes": 1,
-          "Sidny Lopes Cabral": 1
+          "Sidny Lopes Cabral": 1,
+          "Diney Borges": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
