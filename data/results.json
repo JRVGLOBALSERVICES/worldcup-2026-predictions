@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T18:10:02.497Z",
+    "generatedAt": "2026-07-04T18:20:04.066Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 68,
     "live": 1
@@ -9237,16 +9237,29 @@
     },
     "can-mar-2026-07-04": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Azzedine Ounahi",
+          "minute": 49,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        }
+      ],
       "cards": [
         {
           "team": "away",
@@ -9283,24 +9296,30 @@
           "player": "Bilal El Khannouss",
           "minute": 45,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Luc de Fougerolles",
+          "minute": 49,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-04T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 5,
-          "away": 0
+          "home": 6,
+          "away": 1
         },
         "sot": {
           "home": 2,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 4,
-          "away": 1
+          "home": 5,
+          "away": 2
         },
         "yellow": {
-          "home": 2,
+          "home": 3,
           "away": 4
         },
         "red": {
@@ -9308,17 +9327,17 @@
           "away": 0
         },
         "cards": {
-          "home": 2,
+          "home": 3,
           "away": 4
         },
         "cornersByHalf": {
           "home": [
             5,
-            0
+            1
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "sotByHalf": {
@@ -9336,7 +9355,7 @@
           "Tani Oluwaseyi": 1,
           "Soufiane Rahimi": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
