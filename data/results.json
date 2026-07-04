@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T18:40:03.969Z",
+    "generatedAt": "2026-07-04T18:50:02.764Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 68,
     "live": 1
@@ -9246,7 +9246,7 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "advanced": null,
       "goals": [
@@ -9258,6 +9258,14 @@
           "penalty": false,
           "ownGoal": false,
           "outsideBox": true
+        },
+        {
+          "team": "away",
+          "scorer": "Azzedine Ounahi",
+          "minute": 81,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -9313,16 +9321,16 @@
       "updatedAt": "2026-07-04T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 7,
+          "home": 9,
           "away": 1
         },
         "sot": {
-          "home": 2,
-          "away": 2
+          "home": 3,
+          "away": 3
         },
         "shots": {
-          "home": 5,
-          "away": 2
+          "home": 8,
+          "away": 4
         },
         "yellow": {
           "home": 4,
@@ -9339,7 +9347,7 @@
         "cornersByHalf": {
           "home": [
             5,
-            2
+            3
           ],
           "away": [
             0,
@@ -9349,7 +9357,7 @@
         "sotByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             1,
@@ -9359,7 +9367,8 @@
         "playerSot": {
           "Jonathan David": 1,
           "Tani Oluwaseyi": 1,
-          "Soufiane Rahimi": 1
+          "Soufiane Rahimi": 1,
+          "Tajon Buchanan": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -9371,6 +9380,16 @@
             "breakEndMinute": 26,
             "firstActionType": "Foul",
             "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Foul",
+            "firstActionMinute": 76,
             "isCorner": false,
             "reliable": true
           }

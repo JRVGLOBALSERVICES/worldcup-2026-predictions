@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T18:40:06.213Z",
+    "generatedAt": "2026-07-04T18:50:05.608Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 72
   },
@@ -516,19 +516,19 @@
       },
       {
         "rank": 7,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 89,
-        "display": "89.0%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 88.9,
         "display": "88.9%",
         "matches": 3
+      },
+      {
+        "rank": 8,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 88.6,
+        "display": "88.6%",
+        "matches": 4
       },
       {
         "rank": 9,
@@ -566,18 +566,18 @@
       },
       {
         "rank": 3,
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 64.7,
-        "display": "64.7%",
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.3,
         "display": "64.3%",
+        "matches": 4
+      },
+      {
+        "rank": 4,
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 63.8,
+        "display": "63.8%",
         "matches": 4
       },
       {
@@ -706,8 +706,8 @@
         "rank": 10,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 42.6,
-        "display": "42.6%",
+        "value": 42.9,
+        "display": "42.9%",
         "matches": 4
       }
     ],
@@ -868,11 +868,11 @@
       },
       {
         "rank": 10,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 29,
-        "display": "29.0%",
-        "matches": 4
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 28.8,
+        "display": "28.8%",
+        "matches": 3
       }
     ],
     "longBallAccuracy": [
@@ -2196,6 +2196,11 @@
           "matches": 4
         },
         {
+          "name": "Azzedine Ounahi",
+          "value": 2,
+          "matches": 1
+        },
+        {
           "name": "Soufiane Rahimi",
           "value": 2,
           "matches": 2
@@ -2204,11 +2209,6 @@
           "name": "Achraf Hakimi",
           "value": 1,
           "matches": 4
-        },
-        {
-          "name": "Azzedine Ounahi",
-          "value": 1,
-          "matches": 1
         },
         {
           "name": "Chemsdine Talbi",
@@ -6648,36 +6648,40 @@
           {
             "name": "Achraf Hakimi",
             "team": "Morocco"
+          },
+          {
+            "name": "Brahim Díaz",
+            "team": "Morocco"
           }
         ],
         "teamBox": [
           {
             "team": "Canada",
-            "possessionPct": 37.1,
-            "accuratePasses": 184,
-            "totalPasses": 246,
-            "shotsOnTarget": 2,
-            "totalShots": 5,
+            "possessionPct": 40.9,
+            "accuratePasses": 224,
+            "totalPasses": 296,
+            "shotsOnTarget": 3,
+            "totalShots": 8,
             "effectiveTackles": 10,
             "totalTackles": 18,
             "accurateCrosses": 6,
-            "totalCrosses": 12,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 21
+            "totalCrosses": 21,
+            "accurateLongBalls": 11,
+            "totalLongBalls": 28
           },
           {
             "team": "Morocco",
-            "possessionPct": 62.9,
-            "accuratePasses": 374,
-            "totalPasses": 433,
-            "shotsOnTarget": 2,
-            "totalShots": 2,
-            "effectiveTackles": 6,
-            "totalTackles": 9,
+            "possessionPct": 59.1,
+            "accuratePasses": 379,
+            "totalPasses": 451,
+            "shotsOnTarget": 3,
+            "totalShots": 4,
+            "effectiveTackles": 7,
+            "totalTackles": 10,
             "accurateCrosses": 0,
             "totalCrosses": 4,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 34
+            "accurateLongBalls": 16,
+            "totalLongBalls": 40
           }
         ]
       }
