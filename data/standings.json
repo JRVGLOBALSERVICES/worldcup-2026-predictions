@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T23:00:06.650Z",
+    "generatedAt": "2026-07-04T23:10:04.818Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -280,11 +280,11 @@
           ],
           "next": {
             "round": "Quarter-final",
-            "opponent": "R16-1 Winner",
-            "opponentFlag": null,
+            "opponent": "France",
+            "opponentFlag": "🇫🇷",
             "kickoffUTC": "2026-07-09T20:00Z",
             "home": false,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -892,7 +892,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "Morocco",
+            "opponentFlag": "🇲🇦",
+            "kickoffUTC": "2026-07-09T20:00Z",
+            "home": true,
+            "placeholder": false
+          }
         },
         {
           "name": "Norway",

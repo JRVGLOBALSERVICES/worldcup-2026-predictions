@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T23:00:04.405Z",
+    "generatedAt": "2026-07-04T23:10:02.993Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 69,
-    "live": 1
+    "finished": 70,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -9410,19 +9410,25 @@
       }
     },
     "par-fra-2026-07-04": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
+      "ft90": {
+        "home": 0,
+        "away": 1
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 0,
         "away": 1
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -9445,25 +9451,31 @@
           "player": "Manu Koné",
           "minute": 81,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Michael Olise",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-04T21:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
-          "away": 11
+          "home": 2,
+          "away": 12
         },
         "sot": {
           "home": 1,
-          "away": 3
+          "away": 5
         },
         "shots": {
           "home": 5,
-          "away": 13
+          "away": 15
         },
         "yellow": {
           "home": 0,
-          "away": 2
+          "away": 3
         },
         "red": {
           "home": 0,
@@ -9471,16 +9483,16 @@
         },
         "cards": {
           "home": 0,
-          "away": 2
+          "away": 3
         },
         "cornersByHalf": {
           "home": [
             0,
-            1
+            2
           ],
           "away": [
             7,
-            4
+            5
           ]
         },
         "sotByHalf": {
@@ -9490,12 +9502,12 @@
           ],
           "away": [
             0,
-            2
+            4
           ]
         },
         "playerSot": {
           "Manu Koné": 1,
-          "Kylian Mbappé": 1,
+          "Kylian Mbappé": 3,
           "Maurício": 1
         },
         "firstGoalMethod": "penalty",
