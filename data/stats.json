@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T18:30:06.961Z",
+    "generatedAt": "2026-07-04T18:40:06.213Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 72
   },
@@ -269,6 +269,13 @@
       },
       {
         "rank": 1,
+        "name": "Cyle Larin",
+        "team": "Canada",
+        "flag": "🇨🇦",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Danilo",
         "team": "Brazil",
         "flag": "🇧🇷",
@@ -293,13 +300,6 @@
         "name": "Ivan Perisic",
         "team": "Croatia",
         "flag": "🇭🇷",
-        "value": 2
-      },
-      {
-        "rank": 1,
-        "name": "Juninho Bacuna",
-        "team": "Curacao",
-        "flag": "🇨🇼",
         "value": 2
       }
     ],
@@ -518,8 +518,8 @@
         "rank": 7,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 89.2,
-        "display": "89.2%",
+        "value": 89,
+        "display": "89.0%",
         "matches": 4
       },
       {
@@ -568,8 +568,8 @@
         "rank": 3,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 64.8,
-        "display": "64.8%",
+        "value": 64.7,
+        "display": "64.7%",
         "matches": 4
       },
       {
@@ -950,11 +950,11 @@
       },
       {
         "rank": 10,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 49.5,
-        "display": "49.5%",
-        "matches": 4
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 49.2,
+        "display": "49.2%",
+        "matches": 3
       }
     ]
   },
@@ -2043,7 +2043,7 @@
       "yellowCards": [
         {
           "name": "Cyle Larin",
-          "value": 1
+          "value": 2
         },
         {
           "name": "Derek Cornelius",
@@ -6653,31 +6653,31 @@
         "teamBox": [
           {
             "team": "Canada",
-            "possessionPct": 36.7,
-            "accuratePasses": 170,
-            "totalPasses": 229,
+            "possessionPct": 37.1,
+            "accuratePasses": 184,
+            "totalPasses": 246,
             "shotsOnTarget": 2,
             "totalShots": 5,
-            "effectiveTackles": 9,
-            "totalTackles": 17,
+            "effectiveTackles": 10,
+            "totalTackles": 18,
             "accurateCrosses": 6,
             "totalCrosses": 12,
             "accurateLongBalls": 8,
-            "totalLongBalls": 20
+            "totalLongBalls": 21
           },
           {
             "team": "Morocco",
-            "possessionPct": 63.3,
-            "accuratePasses": 357,
-            "totalPasses": 410,
+            "possessionPct": 62.9,
+            "accuratePasses": 374,
+            "totalPasses": 433,
             "shotsOnTarget": 2,
             "totalShots": 2,
             "effectiveTackles": 6,
             "totalTackles": 9,
             "accurateCrosses": 0,
             "totalCrosses": 4,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 30
+            "accurateLongBalls": 14,
+            "totalLongBalls": 34
           }
         ]
       }

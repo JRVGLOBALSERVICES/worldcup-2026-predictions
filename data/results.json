@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T18:30:03.729Z",
+    "generatedAt": "2026-07-04T18:40:03.969Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 68,
     "live": 1
@@ -9256,7 +9256,8 @@
           "minute": 49,
           "assist": null,
           "penalty": false,
-          "ownGoal": false
+          "ownGoal": false,
+          "outsideBox": true
         }
       ],
       "cards": [
@@ -9301,24 +9302,30 @@
           "player": "Luc de Fougerolles",
           "minute": 49,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Cyle Larin",
+          "minute": 67,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-04T17:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 5,
-          "away": 0
+          "home": 7,
+          "away": 1
         },
         "sot": {
           "home": 2,
-          "away": 1
+          "away": 2
         },
         "shots": {
-          "home": 4,
-          "away": 1
+          "home": 5,
+          "away": 2
         },
         "yellow": {
-          "home": 2,
+          "home": 4,
           "away": 4
         },
         "red": {
@@ -9326,17 +9333,17 @@
           "away": 0
         },
         "cards": {
-          "home": 2,
+          "home": 4,
           "away": 4
         },
         "cornersByHalf": {
           "home": [
             5,
-            0
+            2
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "sotByHalf": {
@@ -9354,7 +9361,7 @@
           "Tani Oluwaseyi": 1,
           "Soufiane Rahimi": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
