@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T03:00:05.236Z",
+    "generatedAt": "2026-07-04T03:10:03.778Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 67,
     "live": 1
@@ -9135,6 +9135,12 @@
           "player": "Fatawu Issahaku",
           "minute": 66,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Alidu Seidu",
+          "minute": 76,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-04T01:30:00.000Z",
@@ -9149,11 +9155,11 @@
         },
         "shots": {
           "home": 9,
-          "away": 6
+          "away": 8
         },
         "yellow": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "red": {
           "home": 0,
@@ -9161,7 +9167,7 @@
         },
         "cards": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
@@ -9200,6 +9206,16 @@
             "firstActionMinute": 33,
             "isCorner": true,
             "reliable": false
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 72,
+            "firstActionType": "Foul",
+            "firstActionMinute": 74,
+            "isCorner": false,
+            "reliable": true
           }
         }
       }
