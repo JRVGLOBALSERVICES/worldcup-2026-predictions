@@ -18237,33 +18237,33 @@
     },
     "col-gha-2026-07-04": {
       "corners": {
-        "home": 1,
+        "home": 3,
         "away": 2
       },
       "sot": {
-        "home": 3,
+        "home": 6,
         "away": 0
       },
       "shots": {
-        "home": 5,
-        "away": 6
+        "home": 13,
+        "away": 8
       },
       "yellow": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 3
       },
       "red": {
         "home": 0,
         "away": 0
       },
       "cards": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 3
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          2
         ],
         "away": [
           2,
@@ -18273,7 +18273,7 @@
       "sotByHalf": {
         "home": [
           2,
-          0
+          3
         ],
         "away": [
           0,
@@ -18281,8 +18281,10 @@
         ]
       },
       "playerSot": {
-        "Luis Díaz": 1,
-        "Johan Mojica": 1
+        "Luis Díaz": 2,
+        "Johan Mojica": 1,
+        "Gustavo Puerta": 1,
+        "Davinson Sánchez": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -18296,6 +18298,16 @@
           "firstActionMinute": 33,
           "isCorner": true,
           "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 72,
+          "firstActionType": "Foul",
+          "firstActionMinute": 74,
+          "isCorner": false,
+          "reliable": true
         }
       }
     }
