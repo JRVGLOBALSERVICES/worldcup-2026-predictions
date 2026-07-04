@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-04T02:10:06.869Z",
+    "generatedAt": "2026-07-04T02:20:06.675Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 71
   },
@@ -532,19 +532,19 @@
       },
       {
         "rank": 9,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 88.5,
+        "display": "88.5%",
+        "matches": 4
+      },
+      {
+        "rank": 10,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 88.3,
         "display": "88.3%",
         "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 88.2,
-        "display": "88.2%",
-        "matches": 4
       }
     ],
     "possession": [
@@ -598,18 +598,18 @@
       },
       {
         "rank": 7,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 62.7,
-        "display": "62.7%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
         "display": "62.1%",
+        "matches": 4
+      },
+      {
+        "rank": 8,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 61.9,
+        "display": "61.9%",
         "matches": 4
       },
       {
@@ -852,6 +852,14 @@
       },
       {
         "rank": 8,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 31.3,
+        "display": "31.3%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "Qatar",
         "flag": "🇶🇦",
         "value": 30,
@@ -859,20 +867,12 @@
         "matches": 2
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 28.8,
         "display": "28.8%",
         "matches": 3
-      },
-      {
-        "rank": 10,
-        "team": "Czechia",
-        "flag": "🇨🇿",
-        "value": 28.6,
-        "display": "28.6%",
-        "matches": 2
       }
     ],
     "longBallAccuracy": [
@@ -912,8 +912,8 @@
         "rank": 5,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 53.1,
-        "display": "53.1%",
+        "value": 53.3,
+        "display": "53.3%",
         "matches": 4
       },
       {
@@ -6595,31 +6595,31 @@
         "teamBox": [
           {
             "team": "Colombia",
-            "possessionPct": 71.4,
-            "accuratePasses": 237,
-            "totalPasses": 254,
-            "shotsOnTarget": 2,
-            "totalShots": 2,
-            "effectiveTackles": 2,
-            "totalTackles": 2,
-            "accurateCrosses": 1,
-            "totalCrosses": 7,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 19
+            "possessionPct": 67.9,
+            "accuratePasses": 307,
+            "totalPasses": 328,
+            "shotsOnTarget": 3,
+            "totalShots": 5,
+            "effectiveTackles": 4,
+            "totalTackles": 6,
+            "accurateCrosses": 3,
+            "totalCrosses": 9,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 20
           },
           {
             "team": "Ghana",
-            "possessionPct": 28.6,
-            "accuratePasses": 79,
-            "totalPasses": 99,
+            "possessionPct": 32.1,
+            "accuratePasses": 128,
+            "totalPasses": 153,
             "shotsOnTarget": 0,
-            "totalShots": 3,
+            "totalShots": 6,
             "effectiveTackles": 3,
             "totalTackles": 5,
             "accurateCrosses": 1,
-            "totalCrosses": 6,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 14
+            "totalCrosses": 7,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 19
           }
         ]
       }
