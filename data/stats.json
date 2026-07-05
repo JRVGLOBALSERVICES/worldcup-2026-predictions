@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T20:10:06.155Z",
+    "generatedAt": "2026-07-05T20:20:06.922Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 74
   },
@@ -443,6 +443,13 @@
     "penaltyMissed": [
       {
         "rank": 1,
+        "name": "Bruno Guimarães",
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Jørgen Strand Larsen",
         "team": "Norway",
         "flag": "🇳🇴",
@@ -486,8 +493,8 @@
         "rank": 3,
         "team": "Brazil",
         "flag": "🇧🇷",
-        "value": 90.9,
-        "display": "90.9%",
+        "value": 90.7,
+        "display": "90.7%",
         "matches": 4
       },
       {
@@ -664,19 +671,19 @@
       },
       {
         "rank": 5,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 45.5,
+        "display": "45.5%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
         "display": "45.5%",
         "matches": 3
-      },
-      {
-        "rank": 6,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 45.2,
-        "display": "45.2%",
-        "matches": 4
       },
       {
         "rank": 7,
@@ -754,6 +761,14 @@
       },
       {
         "rank": 6,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 67.2,
+        "display": "67.2%",
+        "matches": 5
+      },
+      {
+        "rank": 7,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 66.7,
@@ -761,15 +776,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 66.7,
-        "display": "66.7%",
-        "matches": 5
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
@@ -777,7 +784,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Uzbekistan",
         "flag": "🇺🇿",
         "value": 66.7,
@@ -796,19 +803,19 @@
     "crossCompletion": [
       {
         "rank": 1,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 38.3,
-        "display": "38.3%",
-        "matches": 5
-      },
-      {
-        "rank": 2,
         "team": "Curacao",
         "flag": "🇨🇼",
         "value": 37.5,
         "display": "37.5%",
         "matches": 2
+      },
+      {
+        "rank": 1,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 37.5,
+        "display": "37.5%",
+        "matches": 5
       },
       {
         "rank": 3,
@@ -6727,36 +6734,41 @@
         ]
       },
       "760504": {
-        "penMiss": [],
+        "penMiss": [
+          {
+            "name": "Bruno Guimarães",
+            "team": "Brazil"
+          }
+        ],
         "assists": [],
         "teamBox": [
           {
             "team": "Brazil",
-            "possessionPct": 17.2,
-            "accuratePasses": 6,
-            "totalPasses": 10,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
+            "possessionPct": 30.5,
+            "accuratePasses": 35,
+            "totalPasses": 46,
+            "shotsOnTarget": 1,
+            "totalShots": 2,
             "effectiveTackles": 0,
             "totalTackles": 0,
             "accurateCrosses": 0,
             "totalCrosses": 0,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 2
+            "accurateLongBalls": 4,
+            "totalLongBalls": 9
           },
           {
             "team": "Norway",
-            "possessionPct": 82.8,
-            "accuratePasses": 43,
-            "totalPasses": 47,
+            "possessionPct": 69.5,
+            "accuratePasses": 92,
+            "totalPasses": 102,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 0,
-            "totalTackles": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 1,
             "accurateCrosses": 0,
-            "totalCrosses": 1,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 5
+            "totalCrosses": 2,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 9
           }
         ]
       }
