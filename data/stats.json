@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T21:10:06.841Z",
+    "generatedAt": "2026-07-05T21:20:06.494Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 74
   },
@@ -491,19 +491,19 @@
       },
       {
         "rank": 3,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 90.7,
-        "display": "90.7%",
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 90.5,
         "display": "90.5%",
         "matches": 3
+      },
+      {
+        "rank": 4,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 90.4,
+        "display": "90.4%",
+        "matches": 4
       },
       {
         "rank": 5,
@@ -655,19 +655,19 @@
       },
       {
         "rank": 3,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 46.8,
-        "display": "46.8%",
-        "matches": 5
-      },
-      {
-        "rank": 4,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
         "display": "46.3%",
         "matches": 3
+      },
+      {
+        "rank": 4,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 45.8,
+        "display": "45.8%",
+        "matches": 5
       },
       {
         "rank": 5,
@@ -769,6 +769,14 @@
       },
       {
         "rank": 6,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 66.7,
+        "display": "66.7%",
+        "matches": 5
+      },
+      {
+        "rank": 6,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 66.7,
@@ -782,14 +790,6 @@
         "value": 66.7,
         "display": "66.7%",
         "matches": 3
-      },
-      {
-        "rank": 9,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 66.2,
-        "display": "66.2%",
-        "matches": 5
       },
       {
         "rank": 10,
@@ -949,19 +949,19 @@
       },
       {
         "rank": 9,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 50,
-        "display": "50.0%",
-        "matches": 4
-      },
-      {
-        "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 50,
         "display": "50.0%",
         "matches": 4
+      },
+      {
+        "rank": 10,
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 49.2,
+        "display": "49.2%",
+        "matches": 3
       }
     ]
   },
@@ -6744,31 +6744,31 @@
         "teamBox": [
           {
             "team": "Brazil",
-            "possessionPct": 35.1,
-            "accuratePasses": 156,
-            "totalPasses": 180,
+            "possessionPct": 33.6,
+            "accuratePasses": 181,
+            "totalPasses": 212,
             "shotsOnTarget": 2,
             "totalShots": 8,
-            "effectiveTackles": 4,
-            "totalTackles": 9,
+            "effectiveTackles": 5,
+            "totalTackles": 11,
             "accurateCrosses": 1,
-            "totalCrosses": 4,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 19
+            "totalCrosses": 6,
+            "accurateLongBalls": 13,
+            "totalLongBalls": 27
           },
           {
             "team": "Norway",
-            "possessionPct": 64.9,
-            "accuratePasses": 308,
-            "totalPasses": 337,
+            "possessionPct": 66.4,
+            "accuratePasses": 389,
+            "totalPasses": 428,
             "shotsOnTarget": 2,
-            "totalShots": 4,
-            "effectiveTackles": 3,
-            "totalTackles": 5,
+            "totalShots": 5,
+            "effectiveTackles": 4,
+            "totalTackles": 6,
             "accurateCrosses": 0,
             "totalCrosses": 8,
             "accurateLongBalls": 16,
-            "totalLongBalls": 28
+            "totalLongBalls": 29
           }
         ]
       }
