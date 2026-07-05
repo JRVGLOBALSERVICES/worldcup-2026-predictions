@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T21:50:02.722Z",
+    "generatedAt": "2026-07-05T22:00:06.657Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 70,
     "live": 1
@@ -9546,7 +9546,7 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "advanced": null,
       "goals": [
@@ -9557,25 +9557,41 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Erling Haaland",
+          "minute": 89,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Neymar",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-05T20:00:00.000Z",
       "stats": {
         "corners": {
           "home": 5,
-          "away": 4
+          "away": 5
         },
         "sot": {
           "home": 3,
-          "away": 4
+          "away": 5
         },
         "shots": {
-          "home": 11,
-          "away": 8
+          "home": 12,
+          "away": 9
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -9583,7 +9599,7 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "cornersByHalf": {
@@ -9593,7 +9609,7 @@
           ],
           "away": [
             3,
-            1
+            2
           ]
         },
         "sotByHalf": {

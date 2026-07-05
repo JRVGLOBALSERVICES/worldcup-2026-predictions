@@ -1,11 +1,19 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T21:50:05.027Z",
+    "generatedAt": "2026-07-05T22:00:10.559Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 74
   },
   "categories": {
     "scorers": [
+      {
+        "rank": 1,
+        "name": "Erling Haaland",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 7,
+        "matches": 4
+      },
       {
         "rank": 1,
         "name": "Kylian Mbappé",
@@ -20,14 +28,6 @@
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 7,
-        "matches": 4
-      },
-      {
-        "rank": 3,
-        "name": "Erling Haaland",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 6,
         "matches": 4
       },
       {
@@ -122,6 +122,14 @@
       },
       {
         "rank": 4,
+        "name": "Andreas Schjelderup",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 3,
+        "matches": 2
+      },
+      {
+        "rank": 4,
         "name": "Florian Wirtz",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -145,7 +153,7 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Achraf Hakimi",
         "team": "Morocco",
         "flag": "🇲🇦",
@@ -153,15 +161,7 @@
         "matches": 5
       },
       {
-        "rank": 8,
-        "name": "Andreas Schjelderup",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 2,
-        "matches": 2
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "name": "Anthony Gordon",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -501,8 +501,8 @@
         "rank": 4,
         "team": "Brazil",
         "flag": "🇧🇷",
-        "value": 90.2,
-        "display": "90.2%",
+        "value": 90.1,
+        "display": "90.1%",
         "matches": 4
       },
       {
@@ -647,19 +647,19 @@
       },
       {
         "rank": 2,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 48.1,
+        "display": "48.1%",
+        "matches": 5
+      },
+      {
+        "rank": 3,
         "team": "Croatia",
         "flag": "🇭🇷",
         "value": 47.2,
         "display": "47.2%",
         "matches": 4
-      },
-      {
-        "rank": 3,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 47.1,
-        "display": "47.1%",
-        "matches": 5
       },
       {
         "rank": 4,
@@ -711,11 +711,11 @@
       },
       {
         "rank": 10,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 41.5,
-        "display": "41.5%",
-        "matches": 4
+        "team": "New Zealand",
+        "flag": "🇳🇿",
+        "value": 41.2,
+        "display": "41.2%",
+        "matches": 2
       }
     ],
     "tackleSuccess": [
@@ -753,19 +753,19 @@
       },
       {
         "rank": 5,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 68.9,
+        "display": "68.9%",
+        "matches": 5
+      },
+      {
+        "rank": 6,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
         "display": "68.3%",
         "matches": 2
-      },
-      {
-        "rank": 6,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 68.1,
-        "display": "68.1%",
-        "matches": 5
       },
       {
         "rank": 7,
@@ -1117,7 +1117,7 @@
       "scorers": [
         {
           "name": "Erling Haaland",
-          "value": 6,
+          "value": 7,
           "matches": 4
         },
         {
@@ -1143,14 +1143,14 @@
       ],
       "assists": [
         {
+          "name": "Andreas Schjelderup",
+          "value": 3,
+          "matches": 2
+        },
+        {
           "name": "Martin Ødegaard",
           "value": 3,
           "matches": 3
-        },
-        {
-          "name": "Andreas Schjelderup",
-          "value": 2,
-          "matches": 2
         },
         {
           "name": "Patrick Berg",
@@ -2348,6 +2348,10 @@
         },
         {
           "name": "Fabinho",
+          "value": 1
+        },
+        {
+          "name": "Neymar",
           "value": 1
         }
       ],
@@ -6744,36 +6748,40 @@
           {
             "name": "Andreas Schjelderup",
             "team": "Norway"
+          },
+          {
+            "name": "Andreas Schjelderup",
+            "team": "Norway"
           }
         ],
         "teamBox": [
           {
             "team": "Brazil",
-            "possessionPct": 32.3,
-            "accuratePasses": 247,
-            "totalPasses": 290,
+            "possessionPct": 33.2,
+            "accuratePasses": 275,
+            "totalPasses": 322,
             "shotsOnTarget": 3,
-            "totalShots": 11,
-            "effectiveTackles": 7,
-            "totalTackles": 18,
+            "totalShots": 12,
+            "effectiveTackles": 9,
+            "totalTackles": 21,
             "accurateCrosses": 1,
-            "totalCrosses": 13,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 34
+            "totalCrosses": 15,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 38
           },
           {
             "team": "Norway",
-            "possessionPct": 67.7,
-            "accuratePasses": 577,
-            "totalPasses": 629,
-            "shotsOnTarget": 4,
-            "totalShots": 8,
-            "effectiveTackles": 9,
-            "totalTackles": 12,
+            "possessionPct": 66.8,
+            "accuratePasses": 614,
+            "totalPasses": 674,
+            "shotsOnTarget": 5,
+            "totalShots": 9,
+            "effectiveTackles": 11,
+            "totalTackles": 14,
             "accurateCrosses": 1,
             "totalCrosses": 12,
-            "accurateLongBalls": 20,
-            "totalLongBalls": 40
+            "accurateLongBalls": 24,
+            "totalLongBalls": 47
           }
         ]
       }
