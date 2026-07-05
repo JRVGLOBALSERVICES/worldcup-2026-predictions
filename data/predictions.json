@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T14:50:09.111Z",
+    "generatedAt": "2026-07-05T16:00:23.955Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-05T14:50:09.110Z"
+    "modelUpdatedAt": "2026-07-05T16:00:23.955Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -19396,9 +19396,9 @@
         {
           "player": "Erling Haaland",
           "team": "Norway",
-          "fairOdds": "2.42",
+          "fairOdds": "2.25",
           "banker": false,
-          "note": "5 goals in 3 group games; 41% modelled anytime chance on 1.1 team xG.",
+          "note": "5 goals in 3 group games; 44% modelled anytime chance on 1.1 team xG.",
           "strength": 3
         },
         {
@@ -19427,6 +19427,13 @@
           "note": "4 assists in the group stage; 58% modelled chance to set one up."
         },
         {
+          "player": "Martin Ødegaard",
+          "team": "Norway",
+          "fairOdds": "2.74",
+          "banker": false,
+          "note": "3 assists in the group stage; 36% modelled chance to set one up."
+        },
+        {
           "player": "Gabriel Magalhães",
           "team": "Brazil",
           "fairOdds": "3.00",
@@ -19439,13 +19446,6 @@
           "fairOdds": "3.00",
           "banker": false,
           "note": "1 assist in the group stage; 33% modelled chance to set one up."
-        },
-        {
-          "player": "Martin Ødegaard",
-          "team": "Norway",
-          "fairOdds": "3.02",
-          "banker": false,
-          "note": "3 assists in the group stage; 33% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -20070,10 +20070,10 @@
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "fairOdds": "2.89",
+          "fairOdds": "2.64",
           "banker": true,
-          "note": "4 goals in 4 group games; 35% modelled anytime chance on 0.8 team xG.",
-          "strength": 2
+          "note": "4 goals in 4 group games; 38% modelled anytime chance on 0.8 team xG.",
+          "strength": 3
         },
         {
           "player": "Cristiano Ronaldo",
@@ -20084,27 +20084,27 @@
           "strength": 1
         },
         {
-          "player": "Álex Baena",
-          "team": "Spain",
-          "fairOdds": "7.59",
-          "banker": false,
-          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
-          "strength": 1
-        },
-        {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "7.59",
+          "fairOdds": "6.80",
           "banker": false,
-          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "note": "1 goal in 1 group game; 15% modelled anytime chance on 0.8 team xG.",
           "strength": 1
         },
         {
           "player": "Pedro Porro",
           "team": "Spain",
-          "fairOdds": "7.59",
+          "fairOdds": "6.80",
           "banker": false,
-          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "note": "1 goal in 1 group game; 15% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Gonçalo Ramos",
+          "team": "Portugal",
+          "fairOdds": "8.90",
+          "banker": false,
+          "note": "1 goal in 1 group game; 11% modelled anytime chance on 0.7 team xG.",
           "strength": 1
         }
       ],
@@ -20141,7 +20141,7 @@
       "penalty": {
         "likelihood": "medium",
         "taker": "Mikel Oyarzabal",
-        "backup": "Álex Baena",
+        "backup": "Lamine Yamal",
         "note": "Tight model margin (8 pts) raises the odds a spot-kick decides it; Mikel Oyarzabal is Spain's group-stage top scorer and likely taker."
       },
       "lineups": {
@@ -20273,7 +20273,7 @@
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "note": "4 goals in 4 group games; 35% modelled anytime chance on 0.8 team xG."
+          "note": "4 goals in 4 group games; 38% modelled anytime chance on 0.8 team xG."
         },
         {
           "player": "Cristiano Ronaldo",
@@ -20423,26 +20423,26 @@
         {
           "player": "Leandro Trossard",
           "team": "Belgium",
-          "fairOdds": "3.14",
+          "fairOdds": "2.62",
           "banker": false,
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
+          "note": "2 goals in 4 group games; 38% modelled anytime chance on 1.5 team xG.",
+          "strength": 3
         },
         {
           "player": "Romelu Lukaku",
           "team": "Belgium",
-          "fairOdds": "3.14",
+          "fairOdds": "2.62",
           "banker": false,
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
+          "note": "2 goals in 4 group games; 38% modelled anytime chance on 1.5 team xG.",
+          "strength": 3
         },
         {
           "player": "Youri Tielemans",
           "team": "Belgium",
-          "fairOdds": "3.14",
+          "fairOdds": "2.62",
           "banker": false,
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
+          "note": "2 goals in 4 group games; 38% modelled anytime chance on 1.5 team xG.",
+          "strength": 3
         },
         {
           "player": "Alex Freeman",
@@ -20462,25 +20462,18 @@
           "note": "1 assist in the group stage; 53% modelled chance to set one up."
         },
         {
-          "player": "Hans Vanaken",
-          "team": "Belgium",
-          "fairOdds": "3.78",
-          "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
-        },
-        {
           "player": "Leandro Trossard",
           "team": "Belgium",
-          "fairOdds": "3.78",
+          "fairOdds": "2.41",
           "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "1 assist in the group stage; 42% modelled chance to set one up."
         },
         {
-          "player": "Nicolas Raskin",
+          "player": "Thomas Meunier",
           "team": "Belgium",
-          "fairOdds": "3.78",
+          "fairOdds": "2.41",
           "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "1 assist in the group stage; 42% modelled chance to set one up."
         }
       ],
       "penalty": {
@@ -20623,7 +20616,7 @@
         {
           "player": "Leandro Trossard",
           "team": "Belgium",
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG."
+          "note": "2 goals in 4 group games; 38% modelled anytime chance on 1.5 team xG."
         },
         {
           "player": "Sebastian Berhalter",
@@ -20792,9 +20785,9 @@
         {
           "player": "Emam Ashour",
           "team": "Egypt",
-          "fairOdds": "6.13",
+          "fairOdds": "5.57",
           "banker": false,
-          "note": "2 goals in 4 group games; 16% modelled anytime chance on 0.7 team xG.",
+          "note": "2 goals in 4 group games; 18% modelled anytime chance on 0.7 team xG.",
           "strength": 1
         }
       ],
@@ -20823,9 +20816,9 @@
         {
           "player": "Mohamed Salah",
           "team": "Egypt",
-          "fairOdds": "5.20",
+          "fairOdds": "4.61",
           "banker": false,
-          "note": "2 assists in the group stage; 19% modelled chance to set one up."
+          "note": "2 assists in the group stage; 22% modelled chance to set one up."
         }
       ],
       "penalty": {
