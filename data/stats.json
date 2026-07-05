@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T19:30:07.153Z",
+    "generatedAt": "2026-07-05T20:10:06.155Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 74
   },
@@ -476,18 +476,18 @@
       },
       {
         "rank": 2,
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 91.1,
-        "display": "91.1%",
-        "matches": 3
-      },
-      {
-        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 91,
         "display": "91.0%",
+        "matches": 4
+      },
+      {
+        "rank": 3,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 90.9,
+        "display": "90.9%",
         "matches": 4
       },
       {
@@ -652,7 +652,7 @@
         "flag": "🇳🇴",
         "value": 46.5,
         "display": "46.5%",
-        "matches": 4
+        "matches": 5
       },
       {
         "rank": 4,
@@ -676,7 +676,7 @@
         "flag": "🇧🇷",
         "value": 45.2,
         "display": "45.2%",
-        "matches": 3
+        "matches": 4
       },
       {
         "rank": 7,
@@ -766,7 +766,7 @@
         "flag": "🇳🇴",
         "value": 66.7,
         "display": "66.7%",
-        "matches": 4
+        "matches": 5
       },
       {
         "rank": 6,
@@ -798,9 +798,9 @@
         "rank": 1,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 39.1,
-        "display": "39.1%",
-        "matches": 4
+        "value": 38.3,
+        "display": "38.3%",
+        "matches": 5
       },
       {
         "rank": 2,
@@ -6723,6 +6723,40 @@
             "totalCrosses": 23,
             "accurateLongBalls": 25,
             "totalLongBalls": 40
+          }
+        ]
+      },
+      "760504": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Brazil",
+            "possessionPct": 17.2,
+            "accuratePasses": 6,
+            "totalPasses": 10,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 0,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 2
+          },
+          {
+            "team": "Norway",
+            "possessionPct": 82.8,
+            "accuratePasses": 43,
+            "totalPasses": 47,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 0,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 5
           }
         ]
       }
