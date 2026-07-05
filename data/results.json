@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T20:20:18.085Z",
+    "generatedAt": "2026-07-05T20:30:04.429Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 70,
     "live": 1
@@ -9597,7 +9597,18 @@
         "playerSot": {},
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {}
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "Foul",
+            "firstActionMinute": 22,
+            "isCorner": false,
+            "reliable": true
+          }
+        }
       }
     }
   }
