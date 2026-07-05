@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T21:40:06.468Z",
+    "generatedAt": "2026-07-05T21:50:05.027Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 74
   },
@@ -27,11 +27,11 @@
         "name": "Erling Haaland",
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 5,
-        "matches": 3
+        "value": 6,
+        "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -154,19 +154,19 @@
       },
       {
         "rank": 8,
+        "name": "Andreas Schjelderup",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 8,
         "name": "Anthony Gordon",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 2,
         "matches": 3
-      },
-      {
-        "rank": 8,
-        "name": "Breel Embolo",
-        "team": "Switzerland",
-        "flag": "🇨🇭",
-        "value": 2,
-        "matches": 4
       }
     ],
     "cleanSheets": [
@@ -501,8 +501,8 @@
         "rank": 4,
         "team": "Brazil",
         "flag": "🇧🇷",
-        "value": 90.1,
-        "display": "90.1%",
+        "value": 90.2,
+        "display": "90.2%",
         "matches": 4
       },
       {
@@ -655,19 +655,19 @@
       },
       {
         "rank": 3,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 47.1,
+        "display": "47.1%",
+        "matches": 5
+      },
+      {
+        "rank": 4,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
         "display": "46.3%",
         "matches": 3
-      },
-      {
-        "rank": 4,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 46,
-        "display": "46.0%",
-        "matches": 5
       },
       {
         "rank": 5,
@@ -763,8 +763,8 @@
         "rank": 6,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 67.6,
-        "display": "67.6%",
+        "value": 68.1,
+        "display": "68.1%",
         "matches": 5
       },
       {
@@ -853,8 +853,8 @@
         "rank": 7,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 31.6,
-        "display": "31.6%",
+        "value": 32.8,
+        "display": "32.8%",
         "matches": 5
       },
       {
@@ -1117,8 +1117,8 @@
       "scorers": [
         {
           "name": "Erling Haaland",
-          "value": 5,
-          "matches": 3
+          "value": 6,
+          "matches": 4
         },
         {
           "name": "Antonio Nusa",
@@ -1148,14 +1148,14 @@
           "matches": 3
         },
         {
+          "name": "Andreas Schjelderup",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Patrick Berg",
           "value": 2,
           "matches": 4
-        },
-        {
-          "name": "Andreas Schjelderup",
-          "value": 1,
-          "matches": 1
         },
         {
           "name": "David Møller Wolfe",
@@ -6740,35 +6740,40 @@
             "team": "Brazil"
           }
         ],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Andreas Schjelderup",
+            "team": "Norway"
+          }
+        ],
         "teamBox": [
           {
             "team": "Brazil",
-            "possessionPct": 31.1,
-            "accuratePasses": 216,
-            "totalPasses": 257,
+            "possessionPct": 32.3,
+            "accuratePasses": 247,
+            "totalPasses": 290,
             "shotsOnTarget": 3,
             "totalShots": 11,
-            "effectiveTackles": 6,
-            "totalTackles": 17,
+            "effectiveTackles": 7,
+            "totalTackles": 18,
             "accurateCrosses": 1,
-            "totalCrosses": 9,
+            "totalCrosses": 13,
             "accurateLongBalls": 16,
-            "totalLongBalls": 33
+            "totalLongBalls": 34
           },
           {
             "team": "Norway",
-            "possessionPct": 68.9,
-            "accuratePasses": 536,
-            "totalPasses": 584,
-            "shotsOnTarget": 3,
-            "totalShots": 7,
-            "effectiveTackles": 6,
-            "totalTackles": 8,
-            "accurateCrosses": 0,
-            "totalCrosses": 11,
-            "accurateLongBalls": 19,
-            "totalLongBalls": 35
+            "possessionPct": 67.7,
+            "accuratePasses": 577,
+            "totalPasses": 629,
+            "shotsOnTarget": 4,
+            "totalShots": 8,
+            "effectiveTackles": 9,
+            "totalTackles": 12,
+            "accurateCrosses": 1,
+            "totalCrosses": 12,
+            "accurateLongBalls": 20,
+            "totalLongBalls": 40
           }
         ]
       }

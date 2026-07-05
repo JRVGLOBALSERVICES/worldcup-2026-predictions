@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T21:40:03.793Z",
+    "generatedAt": "2026-07-05T21:50:02.722Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 70,
     "live": 1
@@ -9546,24 +9546,33 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Erling Haaland",
+          "minute": 79,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-05T20:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 3,
+          "home": 5,
           "away": 4
         },
         "sot": {
           "home": 3,
-          "away": 3
+          "away": 4
         },
         "shots": {
           "home": 11,
-          "away": 7
+          "away": 8
         },
         "yellow": {
           "home": 0,
@@ -9580,7 +9589,7 @@
         "cornersByHalf": {
           "home": [
             1,
-            2
+            4
           ],
           "away": [
             3,
@@ -9604,7 +9613,7 @@
           "Rayan": 1,
           "Andreas Schjelderup": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "header",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
