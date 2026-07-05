@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T20:30:04.429Z",
+    "generatedAt": "2026-07-05T20:40:03.674Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 70,
     "live": 1
@@ -9556,11 +9556,11 @@
         },
         "sot": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "shots": {
-          "home": 2,
-          "away": 0
+          "home": 4,
+          "away": 2
         },
         "yellow": {
           "home": 0,
@@ -9590,21 +9590,23 @@
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
-        "playerSot": {},
+        "playerSot": {
+          "Erling Haaland": 1
+        },
         "firstGoalMethod": null,
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
             "half": 1,
             "anchorMinute": 22,
-            "source": "anchor",
-            "breakEndMinute": null,
-            "firstActionType": "Foul",
-            "firstActionMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 29,
+            "firstActionType": "Shot Off Target",
+            "firstActionMinute": 30,
             "isCorner": false,
             "reliable": true
           }
