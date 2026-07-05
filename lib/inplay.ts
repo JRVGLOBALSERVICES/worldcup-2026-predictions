@@ -1491,10 +1491,13 @@ export function inPlayMultiLeg(
     if (leg.kind === "handicap") {
       // Handicap on `side`: add `line` to that side's running goals, compare to
       // the opponent. The adjusted margin swings both ways until FT, so it never
-      // dies early; locks at FT (exact push voids → passes through as neutral).
+      // dies early; locks at FT. Quarter lines (.25/.75) settle as HALVES, so a
+      // near miss (−0.5 < diff < 0, e.g. +0.75 losing by 1) is a half-loss, not
+      // a full kill — it passes through the acca like a push. Only diff <= −0.5
+      // fully fails. (Exact push voids → passes through as neutral.)
       const mine = leg.side === "home" ? cur.home : cur.away;
       const opp = leg.side === "home" ? cur.away : cur.home;
-      const covered = mine + leg.line >= opp; // ahead or level (push) = not dead
+      const covered = mine + leg.line - opp > -0.5; // full/half-win, push, or half-loss all survive
       if (done) {
         if (covered) {
           wonCount++;

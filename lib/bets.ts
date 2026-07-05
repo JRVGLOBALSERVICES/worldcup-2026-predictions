@@ -1272,14 +1272,22 @@ export function gradeSpecial(special: Special): BetStatus {
 
       if (leg.kind === "handicap") {
         // Handicap on `side`: add `line` to that side's FT goals, compare to the
-        // opponent. Ahead → covered (won); exactly level → push (voids, passes
-        // through the fixed-odds acca); behind → lost. 90-minute score.
+        // opponent. diff = mine + line − opp (90-minute score).
+        //
+        // Quarter lines (.25/.75) are TWO half-bets, so a near miss is a HALF
+        // result, not a full one — the acca survives it:
+        //   diff <= -0.5 → fully beaten → lost.
+        //   -0.5 < diff < 0 → HALF-LOSS / 50% refund (e.g. +0.75 losing by 1:
+        //     the +1.0 half pushes, the +0.5 half loses). Does NOT kill the acca
+        //     — passes through like a void; the halved return is a manual reprice.
+        //   diff === 0 → push → void, passes through.
+        //   diff > 0 → covered (a +0.25 half-win also just passes through).
         if (!ft) return "lost";
         const mine = leg.side === "home" ? ft.home : ft.away;
         const opp = leg.side === "home" ? ft.away : ft.home;
         const diff = mine + leg.line - opp;
-        if (diff < 0) return "lost"; // failed to cover
-        continue; // diff > 0 won, diff === 0 push — both pass through
+        if (diff <= -0.5) return "lost"; // fully failed to cover
+        continue; // half-loss / push / (half-)win all pass through the acca
       }
 
       // Unrecognised leg kind — never blind-win; hold the acca pending so a
