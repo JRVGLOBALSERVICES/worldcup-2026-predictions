@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T22:00:06.657Z",
+    "generatedAt": "2026-07-05T22:10:04.269Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 70,
-    "live": 1
+    "finished": 71,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -9536,19 +9536,25 @@
       }
     },
     "bra-nor-2026-07-05": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
-      "score": {
-        "home": 0,
+      "ft": {
+        "home": 1,
         "away": 2
       },
-      "advanced": null,
+      "ft90": {
+        "home": 1,
+        "away": 2
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -9566,6 +9572,14 @@
           "penalty": false,
           "ownGoal": false,
           "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Neymar",
+          "minute": 90,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -9583,11 +9597,11 @@
           "away": 5
         },
         "sot": {
-          "home": 3,
+          "home": 4,
           "away": 5
         },
         "shots": {
-          "home": 12,
+          "home": 14,
           "away": 9
         },
         "yellow": {

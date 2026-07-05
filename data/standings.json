@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T22:00:08.972Z",
+    "generatedAt": "2026-07-05T22:10:05.477Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -916,7 +916,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "R16-4 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-11T21:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "Senegal",
