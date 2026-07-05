@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T08:20:11.185Z",
+    "generatedAt": "2026-07-05T09:03:32.407Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-05T08:20:11.185Z"
+    "modelUpdatedAt": "2026-07-05T09:00:38.472Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -19358,250 +19358,130 @@
     "bra-nor-2026-07-05": {
       "win": {
         "pick": "Brazil",
-        "fairOdds": "1.36",
-        "reason": "Model: Brazil to win at 74% (Brazil 74% / draw 14% / Norway 11%). Expected goals 2.9–1.1 from group-stage attack/defence rates (Brazil 2.0 for / 0.8 against per game, Norway 2.2 / 2.0). Most likely score 2-1.",
-        "strength": 5
+        "fairOdds": "1.62",
+        "reason": "Brazil have the greater all-round quality and a deep forward line even without Raphinha/Rodrygo, but Norway's counter and Haaland make this a live knockout with real extra-time risk.",
+        "strength": 3
       },
       "halfTime": {
         "score": "1-0",
-        "fairOdds": "4.48",
+        "fairOdds": "3.6",
         "alt": "0-0",
-        "altOdds": "6.74"
+        "altOdds": "2.9",
+        "strength": 3
       },
       "htft": {
         "pick": "Brazil/Brazil",
-        "fairOdds": "1.69"
+        "fairOdds": "2.6",
+        "strength": 2
       },
       "fullTime": {
         "score": "2-1",
-        "fairOdds": "11.74"
+        "fairOdds": "8.0",
+        "strength": 2
       },
       "scorers": [
         {
           "player": "Vinícius Júnior",
-          "team": "Brazil",
-          "fairOdds": "1.52",
-          "banker": true,
-          "note": "4 goals in 4 group games; 66% modelled anytime chance on 2.9 team xG.",
-          "strength": 5
-        },
-        {
-          "player": "Matheus Cunha",
-          "team": "Brazil",
-          "fairOdds": "1.66",
+          "fairOdds": "2.9",
           "banker": false,
-          "note": "3 goals in 4 group games; 60% modelled anytime chance on 2.9 team xG.",
-          "strength": 5
-        },
-        {
-          "player": "Erling Haaland",
-          "team": "Norway",
-          "fairOdds": "2.42",
-          "banker": false,
-          "note": "5 goals in 3 group games; 41% modelled anytime chance on 1.1 team xG.",
+          "note": "Brazil's main threat; unplayable on form but pace-reliant on space Norway may deny.",
           "strength": 3
         },
         {
-          "player": "Casemiro",
-          "team": "Brazil",
-          "fairOdds": "3.07",
+          "player": "Erling Haaland",
+          "fairOdds": "3.1",
           "banker": false,
-          "note": "1 goal in 1 group game; 33% modelled anytime chance on 2.9 team xG.",
+          "note": "5 goals already, tournament in-form, will get chances on the counter — Norway's whole plan runs through him.",
+          "strength": 3
+        },
+        {
+          "player": "Endrick",
+          "fairOdds": "3.4",
+          "banker": false,
+          "note": "Leads the line with Rodrygo out; young starter but not a nailed banker.",
           "strength": 2
         },
         {
-          "player": "Gabriel Martinelli",
-          "team": "Brazil",
-          "fairOdds": "3.07",
+          "player": "Matheus Cunha",
+          "fairOdds": "4.5",
           "banker": false,
-          "note": "1 goal in 1 group game; 33% modelled anytime chance on 2.9 team xG.",
+          "note": "Deployed in the front line, mobile and involved in Brazil's chance creation.",
           "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Bruno Guimarães",
-          "team": "Brazil",
-          "fairOdds": "1.72",
-          "banker": true,
-          "note": "4 assists in the group stage; 58% modelled chance to set one up."
+          "player": "Vinícius Júnior",
+          "fairOdds": "5.0",
+          "banker": false,
+          "note": "Creates as much as he scores from the left.",
+          "strength": 2
         },
         {
-          "player": "Gabriel Magalhães",
-          "team": "Brazil",
-          "fairOdds": "3.00",
+          "player": "Martin Ødegaard",
+          "fairOdds": "5.5",
           "banker": false,
-          "note": "1 assist in the group stage; 33% modelled chance to set one up."
+          "note": "Norway's chief creator feeding Haaland/Sørloth.",
+          "strength": 2
+        },
+        {
+          "player": "Bruno Guimarães",
+          "fairOdds": "7.0",
+          "banker": false,
+          "note": "Deep-lying line-breaking passer in Brazil's midfield.",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Erling Haaland",
+        "backup": "Martin Ødegaard",
+        "note": "Knockout intensity + Vinícius drawing fouls raises spot-kick odds; Haaland is Norway's taker, Vinícius/Cunha the likely Brazil takers if awarded."
+      },
+      "lineups": {
+        "home": "Brazil (4-2-3-1): Alisson; Danilo, Marquinhos, Gabriel Magalhães, Wesley/Santos; Bruno Guimarães, Casemiro; Rayan, Matheus Cunha, Vinícius Júnior; Endrick. Raphinha out, Paqueta doubtful, Neymar an extra-time option off the bench.",
+        "away": "Norway (4-3-3): Nyland; Møller Wolfe, Ajer, Heggem, Holmgren Pedersen; Sander Berge, Ødegaard, Patrick Berg; Nusa, Haaland, Sørloth.",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Raphinha",
+          "team": "Brazil",
+          "note": "Ruled out — back in training but won't be risked Sunday."
         },
         {
           "player": "Lucas Paquetá",
           "team": "Brazil",
-          "fairOdds": "3.00",
-          "banker": false,
-          "note": "1 assist in the group stage; 33% modelled chance to set one up."
+          "note": "Hamstring, subbed at HT vs Japan; serious doubt, Danilo/Santos to deputise."
         },
         {
-          "player": "Martin Ødegaard",
+          "player": "Neymar",
+          "team": "Brazil",
+          "note": "Fit but being saved as an extra-time impact option per Ancelotti; unlikely to start."
+        },
+        {
+          "player": "Casemiro",
+          "team": "Brazil",
+          "note": "Walked off gingerly vs Japan but expected available."
+        },
+        {
+          "player": "Erling Haaland",
           "team": "Norway",
-          "fairOdds": "3.02",
-          "banker": false,
-          "note": "3 assists in the group stage; 33% modelled chance to set one up."
-        }
-      ],
-      "penalty": {
-        "likelihood": "low",
-        "taker": "Vinícius Júnior",
-        "backup": "Matheus Cunha",
-        "note": "Brazil favoured to control the game, so a penalty is less pivotal; Vinícius Júnior would take one if awarded."
-      },
-      "lineups": {
-        "home": "Alisson Becker, Gabriel Magalhães, Marquinhos, Douglas Santos, Danilo, Casemiro, Lucas Paquetá, Bruno Guimarães, Matheus Cunha, Vinícius Júnior, Rayan",
-        "away": "Ørjan Nyland, Marcus Holmgren Pedersen, Kristoffer Ajer, Torbjørn Heggem, David Møller Wolfe, Sander Berge, Patrick Berg, Martin Ødegaard, Antonio Nusa, Erling Haaland, Alexander Sørloth",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 1,
-              "name": "Alisson Becker",
-              "pos": "G"
-            },
-            {
-              "num": 3,
-              "name": "Gabriel Magalhães",
-              "pos": "CD-L"
-            },
-            {
-              "num": 4,
-              "name": "Marquinhos",
-              "pos": "CD-R"
-            },
-            {
-              "num": 16,
-              "name": "Douglas Santos",
-              "pos": "LB"
-            },
-            {
-              "num": 13,
-              "name": "Danilo",
-              "pos": "RB"
-            },
-            {
-              "num": 5,
-              "name": "Casemiro",
-              "pos": "CM"
-            },
-            {
-              "num": 20,
-              "name": "Lucas Paquetá",
-              "pos": "LM"
-            },
-            {
-              "num": 8,
-              "name": "Bruno Guimarães",
-              "pos": "RM"
-            },
-            {
-              "num": 9,
-              "name": "Matheus Cunha",
-              "pos": "F"
-            },
-            {
-              "num": 7,
-              "name": "Vinícius Júnior",
-              "pos": "LF"
-            },
-            {
-              "num": 26,
-              "name": "Rayan",
-              "pos": "RF"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 12,
-              "name": "Ørjan Nyland",
-              "pos": "G"
-            },
-            {
-              "num": 2,
-              "name": "Marcus Holmgren Pedersen",
-              "pos": "RB"
-            },
-            {
-              "num": 5,
-              "name": "Kristoffer Ajer",
-              "pos": "CD-R"
-            },
-            {
-              "num": 4,
-              "name": "Torbjørn Heggem",
-              "pos": "CD-L"
-            },
-            {
-              "num": 3,
-              "name": "David Møller Wolfe",
-              "pos": "LB"
-            },
-            {
-              "num": 6,
-              "name": "Sander Berge",
-              "pos": "CM-R"
-            },
-            {
-              "num": 18,
-              "name": "Patrick Berg",
-              "pos": "CM-L"
-            },
-            {
-              "num": 10,
-              "name": "Martin Ødegaard",
-              "pos": "AM"
-            },
-            {
-              "num": 20,
-              "name": "Antonio Nusa",
-              "pos": "RW"
-            },
-            {
-              "num": 9,
-              "name": "Erling Haaland",
-              "pos": "F"
-            },
-            {
-              "num": 11,
-              "name": "Alexander Sørloth",
-              "pos": "LW"
-            }
-          ]
-        }
-      },
-      "playerNotes": [
-        {
-          "player": "Vinícius Júnior",
-          "team": "Brazil",
-          "note": "4 goals in 4 group games; 66% modelled anytime chance on 2.9 team xG."
+          "note": "5 goals in tournament incl. 86th-min winner vs Ivory Coast; Norway's talisman and penalty taker."
         },
         {
-          "player": "Matheus Cunha",
-          "team": "Brazil",
-          "note": "3 goals in 4 group games; 60% modelled anytime chance on 2.9 team xG."
-        },
-        {
-          "player": "Bruno Guimarães",
-          "team": "Brazil",
-          "note": "4 assists in the group stage; 58% modelled chance to set one up."
+          "player": "Antonio Nusa",
+          "team": "Norway",
+          "note": "In form — curled a stunning goal vs Ivory Coast; key on the counter alongside Haaland."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.si.com/soccer/brazil-predicted-lineup-vs-norway-world-cup-7-5-26",
+        "https://www.rotowire.com/soccer/article/brazil-vs-norway-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121006",
+        "https://www.espn.com/soccer/story/_/id/49256507/brazil-vs-norway-fifa-world-cup-2026",
+        "https://www.aljazeera.com/sports/2026/7/5/brazil-vs-norway-fifa-world-cup-last-16"
       ],
       "pitchReport": {
         "facts": [
@@ -19702,251 +19582,131 @@
     },
     "mex-eng-2026-07-06": {
       "win": {
-        "pick": "Mexico",
-        "fairOdds": "1.89",
-        "reason": "Model: Mexico to win at 53% (Mexico 53% / draw 29% / England 18%). Expected goals 1.3–0.6 from group-stage attack/defence rates (Mexico 1.8 for / 0.6 against per game, England 1.8 / 1.0). Most likely score 1-0.",
-        "strength": 4
+        "pick": "England",
+        "fairOdds": "2.5",
+        "reason": "England are marginal favourites (market ~6/4 vs Mexico 2/1) on squad quality, but Mexico's unbeaten home run at altitude makes this a genuine coin-flip.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.36",
+        "fairOdds": "2.2",
         "alt": "1-0",
-        "altOdds": "4.03"
+        "altOdds": "4.5",
+        "strength": 3
       },
       "htft": {
-        "pick": "Draw/Mexico",
-        "fairOdds": "4.71"
+        "pick": "Draw/England",
+        "fairOdds": "5.0",
+        "strength": 2
       },
       "fullTime": {
-        "score": "1-0",
-        "fairOdds": "5.35"
+        "score": "1-1",
+        "fairOdds": "6.5",
+        "strength": 3
       },
       "scorers": [
         {
-          "player": "Julián Quiñones",
-          "team": "Mexico",
-          "fairOdds": "2.72",
-          "banker": true,
-          "note": "3 goals in 4 group games; 37% modelled anytime chance on 1.3 team xG.",
+          "player": "Harry Kane",
+          "fairOdds": "2.9",
+          "banker": false,
+          "note": "5 goals in 4 games this tournament and England's penalty taker; strong pick but England may play cagey away at altitude, so not a banker.",
           "strength": 3
         },
         {
-          "player": "Harry Kane",
-          "team": "England",
-          "fairOdds": "3.39",
-          "banker": false,
-          "note": "5 goals in 4 group games; 30% modelled anytime chance on 0.6 team xG.",
-          "strength": 2
-        },
-        {
           "player": "Raúl Jiménez",
-          "team": "Mexico",
-          "fairOdds": "3.58",
+          "fairOdds": "3.4",
           "banker": false,
-          "note": "2 goals in 3 group games; 28% modelled anytime chance on 1.3 team xG.",
+          "note": "Mexico's leading striker, 2 goals in the knockouts, on a farewell-World-Cup mission at the Azteca.",
+          "strength": 3
+        },
+        {
+          "player": "Jude Bellingham",
+          "fairOdds": "4.5",
+          "banker": false,
+          "note": "Arrives late from midfield; England's most likely non-Kane scorer.",
           "strength": 2
         },
         {
-          "player": "Álvaro Fidalgo",
-          "team": "Mexico",
-          "fairOdds": "5.60",
+          "player": "Julián Quiñones",
+          "fairOdds": "5.0",
           "banker": false,
-          "note": "1 goal in 1 group game; 18% modelled anytime chance on 1.3 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Luis Romo",
-          "team": "Mexico",
-          "fairOdds": "5.60",
-          "banker": false,
-          "note": "1 goal in 1 group game; 18% modelled anytime chance on 1.3 team xG.",
-          "strength": 1
+          "note": "Scored and assisted in the last-32 win over Ecuador; sharp and in the probable front three.",
+          "strength": 2
         }
       ],
       "assists": [
         {
-          "player": "Roberto Alvarado",
-          "team": "Mexico",
-          "fairOdds": "2.34",
-          "banker": true,
-          "note": "3 assists in the group stage; 43% modelled chance to set one up."
+          "player": "Bukayo Saka",
+          "fairOdds": "5.0",
+          "banker": false,
+          "note": "Creative outlet if he starts wide; England's chance creator — start not nailed.",
+          "strength": 2
         },
         {
-          "player": "Jorge Sánchez",
-          "team": "Mexico",
-          "fairOdds": "4.88",
+          "player": "Gilberto Mora",
+          "fairOdds": "6.0",
           "banker": false,
-          "note": "1 assist in the group stage; 21% modelled chance to set one up."
+          "note": "17-year-old playmaker who started and impressed vs Ecuador; Mexico's creative hub.",
+          "strength": 2
         },
         {
-          "player": "Julián Quiñones",
-          "team": "Mexico",
-          "fairOdds": "4.88",
+          "player": "Jude Bellingham",
+          "fairOdds": "6.0",
           "banker": false,
-          "note": "1 assist in the group stage; 21% modelled chance to set one up."
-        },
-        {
-          "player": "Anthony Gordon",
-          "team": "England",
-          "fairOdds": "6.41",
-          "banker": false,
-          "note": "2 assists in the group stage; 16% modelled chance to set one up."
+          "note": "Links play into Kane; two-way threat.",
+          "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "low",
-        "taker": "Julián Quiñones",
-        "backup": "Raúl Jiménez",
-        "note": "Mexico favoured to control the game, so a penalty is less pivotal; Julián Quiñones would take one if awarded."
+        "likelihood": "medium",
+        "taker": "Harry Kane",
+        "backup": "Raúl Jiménez (for Mexico)",
+        "note": "Knockout tie at altitude with a partisan Azteca crowd raises shootout/spot-kick risk; Kane converts for England, Jiménez for Mexico. Extra-time and penalties are live outcomes."
       },
       "lineups": {
-        "home": "Raúl Rangel, Jorge Sánchez, César Montes, Johan Vásquez, Jesús Gallardo, Erik Lira, Luis Romo, Gilberto Mora, Raúl Jiménez, Julián Quiñones, Roberto Alvarado",
-        "away": "Jordan Pickford, Djed Spence, Ezri Konsa, Marc Guéhi, Nico O'Reilly, Declan Rice, Elliot Anderson, Noni Madueke, Jude Bellingham, Marcus Rashford, Harry Kane",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 1,
-              "name": "Raúl Rangel",
-              "pos": "G"
-            },
-            {
-              "num": 2,
-              "name": "Jorge Sánchez",
-              "pos": "RB"
-            },
-            {
-              "num": 3,
-              "name": "César Montes",
-              "pos": "CD-R"
-            },
-            {
-              "num": 5,
-              "name": "Johan Vásquez",
-              "pos": "CD-L"
-            },
-            {
-              "num": 23,
-              "name": "Jesús Gallardo",
-              "pos": "LB"
-            },
-            {
-              "num": 6,
-              "name": "Erik Lira",
-              "pos": "CM"
-            },
-            {
-              "num": 7,
-              "name": "Luis Romo",
-              "pos": "CM"
-            },
-            {
-              "num": 19,
-              "name": "Gilberto Mora",
-              "pos": "CM"
-            },
-            {
-              "num": 9,
-              "name": "Raúl Jiménez",
-              "pos": "F"
-            },
-            {
-              "num": 16,
-              "name": "Julián Quiñones",
-              "pos": "LF"
-            },
-            {
-              "num": 25,
-              "name": "Roberto Alvarado",
-              "pos": "RF"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Jordan Pickford",
-              "pos": "G"
-            },
-            {
-              "num": 25,
-              "name": "Djed Spence",
-              "pos": "RB"
-            },
-            {
-              "num": 2,
-              "name": "Ezri Konsa",
-              "pos": "CD-R"
-            },
-            {
-              "num": 6,
-              "name": "Marc Guéhi",
-              "pos": "CD-L"
-            },
-            {
-              "num": 3,
-              "name": "Nico O'Reilly",
-              "pos": "LB"
-            },
-            {
-              "num": 4,
-              "name": "Declan Rice",
-              "pos": "DM-R"
-            },
-            {
-              "num": 8,
-              "name": "Elliot Anderson",
-              "pos": "DM-L"
-            },
-            {
-              "num": 20,
-              "name": "Noni Madueke",
-              "pos": "RM"
-            },
-            {
-              "num": 10,
-              "name": "Jude Bellingham",
-              "pos": "AM"
-            },
-            {
-              "num": 11,
-              "name": "Marcus Rashford",
-              "pos": "LM"
-            },
-            {
-              "num": 9,
-              "name": "Harry Kane",
-              "pos": "F"
-            }
-          ]
-        }
+        "home": "Mexico (4-3-3, probable): Rangel; Reyes, Montes, Vásquez, Gallardo; Romo, Lira, Mora; Alvarado, Jiménez, Quiñones. Note: Malagón injured, Lozano omitted from squad.",
+        "away": "England (4-2-3-1, probable): Pickford; Spence, Konsa, Guéhi, O'Reilly; Rice, Anderson; Saka/Madueke, Bellingham, Gordon; Kane. Rice a minor hamstring doubt but expected to start; Reece James & Quansah out injured.",
+        "status": "probable"
       },
       "playerNotes": [
         {
-          "player": "Julián Quiñones",
+          "player": "Declan Rice",
+          "team": "England",
+          "note": "Came off with hamstring tightness vs DR Congo; back in light training and expected to start, but a minor doubt on this baseline card."
+        },
+        {
+          "player": "Hirving Lozano",
           "team": "Mexico",
-          "note": "3 goals in 4 group games; 37% modelled anytime chance on 1.3 team xG."
+          "note": "Left OUT of Mexico's 26-man squad — will NOT feature despite being a listed key player."
+        },
+        {
+          "player": "Luis Malagón",
+          "team": "Mexico",
+          "note": "Injured and missed the squad; Mexico's goal is between Ochoa and José Rangel."
+        },
+        {
+          "player": "Gilberto Mora",
+          "team": "Mexico",
+          "note": "17-year-old playmaker central to Mexico's creativity; came through vs Ecuador unscathed."
         },
         {
           "player": "Harry Kane",
           "team": "England",
-          "note": "5 goals in 4 group games; 30% modelled anytime chance on 0.6 team xG."
+          "note": "Tournament form (5 goals in 4) and penalty taker; England's clearest goal threat."
         },
         {
-          "player": "Roberto Alvarado",
-          "team": "Mexico",
-          "note": "3 assists in the group stage; 43% modelled chance to set one up."
+          "player": "Reece James",
+          "team": "England",
+          "note": "Hamstring problem; unlikely to be risked from the start — Spence retained at right-back."
         }
       ],
       "confidence": "medium",
-      "strength": 4,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/mexico-vs-england-prediction-team-news-lineups_600597.html",
+        "https://theanalyst.com/articles/mexico-vs-england-analysis-preview-world-cup-2026-last-16",
+        "https://www.covers.com/world-cup/mexico-vs-england-prediction-picks-odds-sunday-7-5-2026",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-squad-announced"
       ],
       "pitchReport": {
         "facts": [
