@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T21:30:02.490Z",
+    "generatedAt": "2026-07-05T21:40:03.793Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 70,
     "live": 1
@@ -9559,11 +9559,11 @@
         },
         "sot": {
           "home": 3,
-          "away": 2
+          "away": 3
         },
         "shots": {
           "home": 11,
-          "away": 6
+          "away": 7
         },
         "yellow": {
           "home": 0,
@@ -9594,14 +9594,15 @@
           ],
           "away": [
             2,
-            0
+            1
           ]
         },
         "playerSot": {
           "Erling Haaland": 1,
           "Vinícius Júnior": 1,
           "Martin Ødegaard": 1,
-          "Rayan": 1
+          "Rayan": 1,
+          "Andreas Schjelderup": 1
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
@@ -9613,6 +9614,16 @@
             "breakEndMinute": 29,
             "firstActionType": "Shot Off Target",
             "firstActionMinute": 30,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Foul",
+            "firstActionMinute": 73,
             "isCorner": false,
             "reliable": true
           }
