@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T02:10:05.996Z",
+    "generatedAt": "2026-07-06T02:20:07.305Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -334,6 +334,13 @@
       },
       {
         "rank": 1,
+        "name": "Jarell Quansah",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 1
+      },
+      {
+        "rank": 1,
         "name": "Miguel Almirón",
         "team": "Paraguay",
         "flag": "🇵🇾",
@@ -517,8 +524,8 @@
         "rank": 6,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 89.1,
-        "display": "89.1%",
+        "value": 89,
+        "display": "89.0%",
         "matches": 5
       },
       {
@@ -753,19 +760,19 @@
       },
       {
         "rank": 5,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 68.7,
+        "display": "68.7%",
+        "matches": 5
+      },
+      {
+        "rank": 6,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
         "display": "68.3%",
         "matches": 2
-      },
-      {
-        "rank": 6,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 68.2,
-        "display": "68.2%",
-        "matches": 5
       },
       {
         "rank": 7,
@@ -803,14 +810,6 @@
     "crossCompletion": [
       {
         "rank": 1,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 37.8,
-        "display": "37.8%",
-        "matches": 4
-      },
-      {
-        "rank": 2,
         "team": "Curacao",
         "flag": "🇨🇼",
         "value": 37.5,
@@ -818,11 +817,19 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 36.7,
         "display": "36.7%",
+        "matches": 4
+      },
+      {
+        "rank": 3,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 35.9,
+        "display": "35.9%",
         "matches": 4
       },
       {
@@ -951,8 +958,8 @@
         "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 49.7,
-        "display": "49.7%",
+        "value": 50,
+        "display": "50.0%",
         "matches": 5
       },
       {
@@ -1603,7 +1610,12 @@
           "value": 1
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "name": "Jarell Quansah",
+          "value": 1
+        }
+      ]
     },
     "croatia": {
       "team": "Croatia",
@@ -6805,31 +6817,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 62.9,
-            "accuratePasses": 237,
-            "totalPasses": 257,
+            "possessionPct": 60.9,
+            "accuratePasses": 261,
+            "totalPasses": 285,
             "shotsOnTarget": 3,
-            "totalShots": 7,
+            "totalShots": 9,
             "effectiveTackles": 4,
-            "totalTackles": 11,
+            "totalTackles": 12,
             "accurateCrosses": 5,
-            "totalCrosses": 12,
+            "totalCrosses": 14,
             "accurateLongBalls": 12,
-            "totalLongBalls": 22
+            "totalLongBalls": 23
           },
           {
             "team": "England",
-            "possessionPct": 37.1,
-            "accuratePasses": 129,
-            "totalPasses": 153,
+            "possessionPct": 39.1,
+            "accuratePasses": 155,
+            "totalPasses": 185,
             "shotsOnTarget": 3,
-            "totalShots": 3,
-            "effectiveTackles": 7,
-            "totalTackles": 14,
+            "totalShots": 4,
+            "effectiveTackles": 8,
+            "totalTackles": 15,
             "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 19
+            "totalCrosses": 4,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 24
           }
         ]
       }
