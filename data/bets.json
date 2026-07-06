@@ -15344,6 +15344,91 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861980230612058112",
+      "slipNo": "861980230612058113",
+      "matchId": "usa-bel-2026-07-07",
+      "player": "—",
+      "market": "Match Parlay · 13 legs (BH8)",
+      "label": "Parlay (R16) — BTTS Yes · 1H Over 0.5 · Under 5.5 · 1H Under 2.5 · Balogun anytime · Lukaku 2+ shots · Belgium under 3.5 · USA under 3.5 · USA or Belgium · Trossard score/assist · Under 22.5 fouls · 1H Over 4.5 corners · 2H Over 4.5 corners (13 legs)",
+      "odds": 124.01,
+      "stake": 9,
+      "placedAt": "06/07 22:41",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "btts"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "firstHalfTotalUnder",
+            "line": 2.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scored",
+            "player": "Folarin Balogun"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "playerShotsOver",
+            "player": "Romelu Lukaku",
+            "line": 1.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "individualTotalUnder",
+            "side": "away",
+            "line": 3.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "individualTotalUnder",
+            "side": "home",
+            "line": 3.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Leandro Trossard"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "totalFoulsUnder",
+            "line": 22.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "halfCornersOver",
+            "half": 1,
+            "line": 4.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "halfCornersOver",
+            "half": 2,
+            "line": 4.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

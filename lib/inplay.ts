@@ -182,6 +182,10 @@ export function legLabelFor(leg: MultiLegCond): string {
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
     case "playerShotsOver":
       return `${leg.player} — ${plus(leg.line)} shots`;
+    case "totalFoulsUnder":
+      return `${m} — under ${leg.line} fouls`;
+    case "halfCornersOver":
+      return `${m} — ${plus(leg.line)} corners in the ${leg.half === 1 ? "1st" : "2nd"} half`;
     case "playerSotOver":
       return `${leg.player} — ${plus(leg.line)} shots on target`;
     case "firstToScore":
@@ -1251,6 +1255,51 @@ export function inPlayMultiLeg(
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (doneFull && lm.stats?.playerSot) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "totalFoulsUnder") {
+      // Combined fouls UNDER the line — fouls only accrue, so it dies the
+      // moment the running total goes over and only locks WON at the true
+      // whistle. While under it's on track; with no fouls snapshot at all it
+      // stays neutral (static holds pending for a human).
+      const f = lm.stats?.fouls;
+      const total = f ? f.home + f.away : null;
+      if (total != null && total > leg.line) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else if (doneFull && total != null) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (total != null) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "halfCornersOver") {
+      // Corners in ONE half over the line — accrues, so it locks WON the moment
+      // the half's total clears the line. The H1 line locks dead at the HT
+      // whistle (H1 split is final once the HT score is in); the H2 line dies
+      // only at the true whistle. No by-half tally yet → neutral.
+      const ch = lm.stats?.cornersByHalf;
+      const idx = leg.half === 1 ? 0 : 1;
+      const tot = ch ? ch.home[idx] + ch.away[idx] : null;
+      if (tot != null && tot > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (
+        tot != null &&
+        (doneFull || (leg.half === 1 && lm.htScore))
+      ) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {

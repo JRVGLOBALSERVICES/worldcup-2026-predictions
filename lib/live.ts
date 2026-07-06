@@ -138,6 +138,7 @@ async function fetchStats(
       yellow,
       red,
       cards: { home: yellow.home + red.home, away: yellow.away + red.away },
+      fouls: { home: stat(h, "foulsCommitted"), away: stat(a, "foulsCommitted") },
       cornersByHalf,
       sotByHalf,
       playerSot,

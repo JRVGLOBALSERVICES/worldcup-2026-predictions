@@ -104,6 +104,12 @@ export type MatchStats = {
   red: SideCount;
   /** Total bookings per side (yellow + red) — the count card markets settle on. */
   cards: SideCount;
+  /**
+   * Fouls committed per side, from `boxscore.teams[].statistics` foulsCommitted.
+   * This is what lets "Total Match Fouls O/U" legs auto-settle. Optional because
+   * stats snapshotted before 2026-07-06 never captured it.
+   */
+  fouls?: SideCount;
   cornersByHalf?: SideHalfCount;
   sotByHalf?: SideHalfCount;
   /**
@@ -471,6 +477,16 @@ export type MultiLegCond = { odds?: number } & (
   // line:-2 → home must win by 3+; an exact 2-goal home win is a PUSH → VOIDs).
   // 90-minute score; a void leg passes through a fixed-odds acca (won't reprice).
   | { matchId: string; kind: "handicap"; side: "home" | "away"; line: number }
+  // Total fouls committed by BOTH sides UNDER the line, from MatchStats.fouls
+  // (boxscore foulsCommitted). Fouls only accrue, so it dies mid-match the
+  // moment the running total goes over; wins only at FT. A finished match with
+  // no fouls snapshot holds pending for a human (older snapshots lack it).
+  | { matchId: string; kind: "totalFoulsUnder"; line: number }
+  // Corners (both sides) in ONE half OVER the line, from MatchStats.cornersByHalf
+  // (tallied per-period from ESPN commentary). Accrues → clinches mid-match the
+  // moment the half's total clears the line; the H1 line locks dead at the HT
+  // whistle (H1 split is final once `ht` is in), the H2 line only at FT.
+  | { matchId: string; kind: "halfCornersOver"; half: 1 | 2; line: number }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -1107,6 +1123,48 @@ export function gradeSpecial(special: Special): BetStatus {
           }
           return "lost";
         }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "totalFoulsUnder") {
+        // Combined fouls UNDER the line. Fouls only accrue, so a running total
+        // already over the line kills the acca mid-match; the win only settles
+        // at FT. A finished match with no fouls snapshot holds pending for a
+        // human (stats written before the field existed never captured it).
+        const f = getStats(leg.matchId)?.fouls;
+        const total = f ? f.home + f.away : null;
+        if (total != null && total > leg.line) return "lost";
+        if (finished) {
+          if (total == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          continue; // under at the whistle → leg won
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "halfCornersOver") {
+        // Corners in ONE half over the line, from the per-half commentary tally.
+        // Accrues → clinches mid-match once the half's total clears the line.
+        // The H1 line locks dead at the HT whistle (H1 split is final once `ht`
+        // is in — same lock comboDead applies to per-half combo legs); the H2
+        // line dies only at FT. No by-half snapshot at FT → pending for a human.
+        const ch = getStats(leg.matchId)?.cornersByHalf;
+        const idx = leg.half === 1 ? 0 : 1;
+        const tot = ch ? ch.home[idx] + ch.away[idx] : null;
+        if (tot != null && tot > leg.line) continue; // cleared the line → leg won
+        if (finished) {
+          if (tot == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        // H1 portion is fixed the instant the half ends — short then is dead.
+        if (leg.half === 1 && tot != null && getResult(leg.matchId).ht) return "lost";
         pending = true;
         continue;
       }

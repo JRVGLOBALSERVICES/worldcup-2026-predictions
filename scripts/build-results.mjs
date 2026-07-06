@@ -116,6 +116,7 @@ function statsFromSummary(summary, fixture) {
   const yellow = { home: statVal(home, "yellowCards"), away: statVal(away, "yellowCards") };
   const red = { home: statVal(home, "redCards"), away: statVal(away, "redCards") };
   const cards = { home: yellow.home + red.home, away: yellow.away + red.away };
+  const fouls = { home: statVal(home, "foulsCommitted"), away: statVal(away, "foulsCommitted") };
 
   // Per-half splits from the play-by-play commentary. period.number 1 → first
   // half (index 0), anything else → second half (index 1). Group stage has no ET.
@@ -153,7 +154,7 @@ function statsFromSummary(summary, fixture) {
   const wbH2 = waterBreakAction(summary.commentary, 2);
 
   return {
-    corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot, playerShots,
+    corners, sot, shots, yellow, red, cards, fouls, cornersByHalf, sotByHalf, playerSot, playerShots,
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
     firstPenalty: firstPenaltyTeam(summary.keyEvents, ours),
     waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
