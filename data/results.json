@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T20:50:04.043Z",
+    "generatedAt": "2026-07-06T21:00:05.561Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 72,
     "live": 1
@@ -14231,11 +14231,33 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
-      "cards": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Mikel Merino",
+          "minute": 90,
+          "assist": "Ferran Torres",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Bernardo Silva",
+          "minute": 88,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Renato Veiga",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-06T19:00:00.000Z",
       "stats": {
         "corners": {
@@ -14244,14 +14266,14 @@
         },
         "sot": {
           "home": 2,
-          "away": 5
+          "away": 6
         },
         "shots": {
-          "home": 8,
-          "away": 14
+          "home": 9,
+          "away": 15
         },
         "yellow": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "red": {
@@ -14259,11 +14281,11 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "fouls": {
-          "home": 6,
+          "home": 9,
           "away": 12
         },
         "cornersByHalf": {
@@ -14306,9 +14328,11 @@
           "Pedri": 1,
           "Vitinha": 1,
           "Bruno Fernandes": 1,
-          "Ferran Torres": 1
+          "Ferran Torres": 1,
+          "Mikel Merino": 1,
+          "Bernardo Silva": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
@@ -14334,16 +14358,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 42.8,
-            "away": 57.2
+            "home": 44.1,
+            "away": 55.9
           },
           "passes": {
-            "home": 369,
-            "away": 487
+            "home": 419,
+            "away": 530
           },
           "tackles": {
-            "home": 12,
-            "away": 16
+            "home": 14,
+            "away": 19
           },
           "saves": {
             "home": 5,
@@ -14359,11 +14383,11 @@
           },
           "interceptions": {
             "home": 7,
-            "away": 3
+            "away": 4
           },
           "clearances": {
-            "home": 22,
-            "away": 11
+            "home": 23,
+            "away": 14
           }
         }
       }

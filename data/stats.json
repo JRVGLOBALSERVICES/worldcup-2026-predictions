@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T20:50:06.216Z",
+    "generatedAt": "2026-07-06T21:00:08.594Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 76
   },
@@ -262,6 +262,13 @@
       },
       {
         "rank": 1,
+        "name": "Bernardo Silva",
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Caleb Yirenkyi",
         "team": "Ghana",
         "flag": "🇬🇭",
@@ -293,13 +300,6 @@
         "name": "Gervane Kastaneer",
         "team": "Curacao",
         "flag": "🇨🇼",
-        "value": 2
-      },
-      {
-        "rank": 1,
-        "name": "Issa Diop",
-        "team": "Morocco",
-        "flag": "🇲🇦",
         "value": 2
       }
     ],
@@ -490,19 +490,19 @@
       },
       {
         "rank": 2,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 90.3,
-        "display": "90.3%",
-        "matches": 5
-      },
-      {
-        "rank": 3,
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 90.1,
         "display": "90.1%",
         "matches": 4
+      },
+      {
+        "rank": 2,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 90.1,
+        "display": "90.1%",
+        "matches": 5
       },
       {
         "rank": 4,
@@ -574,8 +574,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 64.2,
-        "display": "64.2%",
+        "value": 63.9,
+        "display": "63.9%",
         "matches": 4
       },
       {
@@ -728,19 +728,19 @@
     "tackleSuccess": [
       {
         "rank": 1,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 72.1,
-        "display": "72.1%",
-        "matches": 4
-      },
-      {
-        "rank": 2,
         "team": "Tunisia",
         "flag": "🇹🇳",
         "value": 71.4,
         "display": "71.4%",
         "matches": 2
+      },
+      {
+        "rank": 2,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 70.3,
+        "display": "70.3%",
+        "matches": 4
       },
       {
         "rank": 3,
@@ -894,8 +894,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 60.7,
-        "display": "60.7%",
+        "value": 60.1,
+        "display": "60.1%",
         "matches": 4
       },
       {
@@ -918,8 +918,8 @@
         "rank": 4,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 56.9,
-        "display": "56.9%",
+        "value": 56.1,
+        "display": "56.1%",
         "matches": 5
       },
       {
@@ -1467,14 +1467,14 @@
       "yellowCards": [
         {
           "name": "Bernardo Silva",
-          "value": 1
-        },
-        {
-          "name": "Nélson Semedo",
-          "value": 1
+          "value": 2
         },
         {
           "name": "Renato Veiga",
+          "value": 2
+        },
+        {
+          "name": "Nélson Semedo",
           "value": 1
         },
         {
@@ -2779,6 +2779,11 @@
           "matches": 1
         },
         {
+          "name": "Mikel Merino",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Pedro Porro",
           "value": 1,
           "matches": 1
@@ -2806,7 +2811,7 @@
           "matches": 1
         },
         {
-          "name": "Marcos Llorente",
+          "name": "Ferran Torres",
           "value": 1,
           "matches": 1
         }
@@ -6863,35 +6868,40 @@
       },
       "760506": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Ferran Torres",
+            "team": "Spain"
+          }
+        ],
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 42.8,
-            "accuratePasses": 310,
-            "totalPasses": 369,
+            "possessionPct": 44.1,
+            "accuratePasses": 351,
+            "totalPasses": 419,
             "shotsOnTarget": 2,
-            "totalShots": 8,
-            "effectiveTackles": 8,
-            "totalTackles": 12,
-            "accurateCrosses": 1,
-            "totalCrosses": 8,
-            "accurateLongBalls": 22,
-            "totalLongBalls": 47
+            "totalShots": 9,
+            "effectiveTackles": 9,
+            "totalTackles": 14,
+            "accurateCrosses": 3,
+            "totalCrosses": 12,
+            "accurateLongBalls": 23,
+            "totalLongBalls": 52
           },
           {
             "team": "Spain",
-            "possessionPct": 57.2,
-            "accuratePasses": 427,
-            "totalPasses": 487,
-            "shotsOnTarget": 5,
-            "totalShots": 14,
-            "effectiveTackles": 14,
-            "totalTackles": 16,
+            "possessionPct": 55.9,
+            "accuratePasses": 466,
+            "totalPasses": 530,
+            "shotsOnTarget": 6,
+            "totalShots": 15,
+            "effectiveTackles": 15,
+            "totalTackles": 19,
             "accurateCrosses": 1,
             "totalCrosses": 16,
-            "accurateLongBalls": 15,
-            "totalLongBalls": 32
+            "accurateLongBalls": 16,
+            "totalLongBalls": 35
           }
         ]
       }
