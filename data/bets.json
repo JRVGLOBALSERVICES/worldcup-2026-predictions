@@ -15028,6 +15028,58 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861915225011208193",
+      "slipNo": "861915225011208193",
+      "matchId": "usa-bel-2026-07-07",
+      "player": "—",
+      "market": "Match Parlay · 7 legs (BH8)",
+      "label": "Parlay (R16) — Balogun anytime scorer · Trossard score/assist · 1H Over 0.5 · Under 5.5 · Doku 1+ shots · USA or Belgium · Lukaku anytime scorer (7 legs)",
+      "odds": 40.59,
+      "stake": 50,
+      "placedAt": "06/07 18:23",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scored",
+            "player": "Folarin Balogun"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Leandro Trossard"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "playerShotsOver",
+            "player": "Jeremy Doku",
+            "line": 0.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scored",
+            "player": "Romelu Lukaku"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
