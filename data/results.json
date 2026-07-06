@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T19:20:21.781Z",
+    "generatedAt": "2026-07-06T19:30:03.284Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 72,
     "live": 1
@@ -14245,7 +14245,7 @@
         },
         "shots": {
           "home": 3,
-          "away": 5
+          "away": 6
         },
         "yellow": {
           "home": 0,
@@ -14260,7 +14260,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 1,
+          "home": 3,
           "away": 2
         },
         "cornersByHalf": {
@@ -14295,30 +14295,42 @@
           "Pedro Neto": 1,
           "Cristiano Ronaldo": 1,
           "Álex Baena": 2,
-          "Lamine Yamal": 1
+          "Lamine Yamal": 1,
+          "Pedro Porro": 1
         },
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {},
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Handball",
+            "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
         "tempo": {
           "possession": {
-            "home": 39.9,
-            "away": 60.1
+            "home": 46,
+            "away": 54
           },
           "passes": {
-            "home": 84,
-            "away": 127
+            "home": 134,
+            "away": 156
           },
           "tackles": {
             "home": 2,
-            "away": 4
+            "away": 6
           },
           "saves": {
             "home": 3,
             "away": 1
           },
           "offsides": {
-            "home": 0,
+            "home": 1,
             "away": 0
           },
           "blockedShots": {
@@ -14326,7 +14338,7 @@
             "away": 0
           },
           "interceptions": {
-            "home": 0,
+            "home": 1,
             "away": 1
           },
           "clearances": {

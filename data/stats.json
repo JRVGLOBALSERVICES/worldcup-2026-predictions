@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T19:20:22.802Z",
+    "generatedAt": "2026-07-06T19:30:05.791Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 76
   },
@@ -489,25 +489,25 @@
         "matches": 4
       },
       {
-        "rank": 2,
+        "rank": 1,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 90.9,
-        "display": "90.9%",
+        "value": 91,
+        "display": "91.0%",
         "matches": 5
+      },
+      {
+        "rank": 3,
+        "team": "Brazil",
+        "flag": "🇧🇷",
+        "value": 90.1,
+        "display": "90.1%",
+        "matches": 4
       },
       {
         "rank": 3,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 90.2,
-        "display": "90.2%",
-        "matches": 4
-      },
-      {
-        "rank": 4,
-        "team": "Brazil",
-        "flag": "🇧🇷",
         "value": 90.1,
         "display": "90.1%",
         "matches": 4
@@ -574,8 +574,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 64.9,
-        "display": "64.9%",
+        "value": 63.4,
+        "display": "63.4%",
         "matches": 4
       },
       {
@@ -736,6 +736,14 @@
       },
       {
         "rank": 2,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 70.6,
+        "display": "70.6%",
+        "matches": 4
+      },
+      {
+        "rank": 3,
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 69.8,
@@ -743,20 +751,12 @@
         "matches": 3
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Cape Verde",
         "flag": "🇨🇻",
         "value": 69.4,
         "display": "69.4%",
         "matches": 3
-      },
-      {
-        "rank": 3,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 69.4,
-        "display": "69.4%",
-        "matches": 4
       },
       {
         "rank": 5,
@@ -874,19 +874,19 @@
       },
       {
         "rank": 9,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 29,
-        "display": "29.0%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Czechia",
         "flag": "🇨🇿",
         "value": 28.6,
         "display": "28.6%",
         "matches": 2
+      },
+      {
+        "rank": 9,
+        "team": "Ivory Coast",
+        "flag": "🇨🇮",
+        "value": 28.6,
+        "display": "28.6%",
+        "matches": 3
       }
     ],
     "longBallAccuracy": [
@@ -894,16 +894,16 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 65.8,
-        "display": "65.8%",
+        "value": 65.2,
+        "display": "65.2%",
         "matches": 4
       },
       {
         "rank": 2,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 59.1,
-        "display": "59.1%",
+        "value": 59.2,
+        "display": "59.2%",
         "matches": 5
       },
       {
@@ -6867,31 +6867,31 @@
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 39.9,
-            "accuratePasses": 68,
-            "totalPasses": 84,
+            "possessionPct": 46,
+            "accuratePasses": 116,
+            "totalPasses": 134,
             "shotsOnTarget": 1,
             "totalShots": 3,
             "effectiveTackles": 1,
             "totalTackles": 2,
             "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 12
+            "accurateLongBalls": 8,
+            "totalLongBalls": 15
           },
           {
             "team": "Spain",
-            "possessionPct": 60.1,
-            "accuratePasses": 108,
-            "totalPasses": 127,
+            "possessionPct": 54,
+            "accuratePasses": 133,
+            "totalPasses": 156,
             "shotsOnTarget": 3,
-            "totalShots": 5,
-            "effectiveTackles": 4,
-            "totalTackles": 4,
+            "totalShots": 6,
+            "effectiveTackles": 6,
+            "totalTackles": 6,
             "accurateCrosses": 1,
-            "totalCrosses": 3,
+            "totalCrosses": 4,
             "accurateLongBalls": 6,
-            "totalLongBalls": 8
+            "totalLongBalls": 9
           }
         ]
       }
