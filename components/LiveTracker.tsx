@@ -697,7 +697,13 @@ function GlobalParlays({
   if (parlays.length === 0) return null;
   const graded = parlays
     .map((p) => ({ ...p, verdict: gradeSpecial(p.special, live[p.anchorMatchId], live) }))
-    .sort((a, b) => VERDICT_ORDER[a.verdict.verdict] - VERDICT_ORDER[b.verdict.verdict]);
+    // Order by winning amount (potential payout) high → low so the biggest
+    // return sits on top; verdict (winning → alive → settled) breaks ties.
+    .sort(
+      (a, b) =>
+        b.special.potential - a.special.potential ||
+        VERDICT_ORDER[a.verdict.verdict] - VERDICT_ORDER[b.verdict.verdict],
+    );
   // Running = not yet decided: winning now, still mathematically on, or not kicked
   // off. Settled = the book is closed (won / refunded / can't-win / lost).
   const isRunning = (v: LiveVerdict) => v === "winning" || v === "alive" || v === "scheduled";
@@ -749,7 +755,14 @@ function GlobalParlays({
               if (!groups.has(label)) groups.set(label, []);
               groups.get(label)!.push(p);
             }
-            const ordered = [...groups.entries()].sort((a, b) => roundRank(a[0]) - roundRank(b[0]));
+            // Order the round groups by their biggest parlay (high → low) so the
+            // group holding the largest potential win sits on top, matching the
+            // within-group descending order. Round rank breaks ties.
+            const groupTop = (ps: typeof running) =>
+              ps.reduce((mx, p) => Math.max(mx, p.special.potential), 0);
+            const ordered = [...groups.entries()].sort(
+              (a, b) => groupTop(b[1]) - groupTop(a[1]) || roundRank(a[0]) - roundRank(b[0]),
+            );
             return ordered.map(([label, ps]) => (
               <div key={label} className="space-y-3">
                 <p className="flex items-center gap-2 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-acid">
