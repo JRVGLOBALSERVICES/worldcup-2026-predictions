@@ -115,6 +115,16 @@ export type MatchStats = {
    */
   playerSot?: Record<string, number>;
   /**
+   * Per-PLAYER TOTAL shots (on target + off target + blocked + woodwork + goals),
+   * keyed by the player's ESPN displayName. Tallied from `commentary[]` shot-type
+   * plays ("Shot On Target/Off Target/Blocked/Hit Woodwork") plus goal plays
+   * (excluding own goals — a goal is always a shot). Verified against the
+   * boxscore `totalShots` team totals. This is what lets per-player SHOTS props
+   * ("Player X Over 0.5 shots") auto-settle — `playerSot` alone can't, since an
+   * off-target attempt is a shot but not an SOT.
+   */
+  playerShots?: Record<string, number>;
+  /**
    * How the FIRST goal of the match was scored — parsed from the summary
    * `keyEvents[]` of the earliest scoring play (Opta commentary text + the
    * structured `penaltyKick`/`ownGoal` flags). This is what lets the
@@ -407,6 +417,22 @@ export type MultiLegCond = { odds?: number } & (
   // Score Two Goals (Brace) — Yes" → line:1.5 → won at 2+. Clinches mid-match
   // the moment his goal tally clears the line (graded like `scored`), loses at FT.
   | { matchId: string; kind: "goalsOver"; player: string; line: number }
+  // Named player's TOTAL shots (on + off target + blocked + woodwork + goals)
+  // strictly over `line` ("Bruno Fernandes Over 0.5 — Player Over Shots" →
+  // line:0.5 → won at 1+). Graded off MatchStats.playerShots (with the goal
+  // list as a backstop — a goal is always a shot). Clinches mid-match; if the
+  // per-shooter tally never lands, holds pending rather than blind-grading.
+  | { matchId: string; kind: "playerShotsOver"; player: string; line: number }
+  // Total FIRST-HALF goals (any team, own goals included) over `line` ("Over
+  // 0.5 — 1st Half Total Goals" → line:0.5). Graded off the HT score, so it
+  // DECIDES at the half-time whistle either way; a goal inside the first 45
+  // clinches it even before the HT snapshot lands.
+  | { matchId: string; kind: "firstHalfTotalOver"; line: number }
+  // The named side scores in BOTH halves ("Team To Score In Both Halves"):
+  // H1 off the HT score, H2 off FT − HT. `negate:true` is the "- No" pick.
+  // An H1 blank decides it at the half-time whistle (kills the Yes / clinches
+  // the No); otherwise it needs the 90-minute final score.
+  | { matchId: string; kind: "teamScoresBothHalves"; side: "home" | "away"; negate?: boolean }
   // Double Chance + Both Teams To Score — a DC outcome ("1X"/"12"/"X2") AND both
   // teams score ("1X And Both Teams To Score — Yes" → outcome:"1X"). Decides at
   // FT (the result swings until then); negate flips it ("- No").
@@ -675,6 +701,16 @@ function nameMatch(a: string, b: string): boolean {
 /** Sum a player's shots-on-target from the per-shooter map, matching names accent-safe. */
 export const playerSotCount = (stats: MatchStats | null, player: string): number => {
   const map = stats?.playerSot;
+  if (!map) return 0;
+  return Object.entries(map).reduce(
+    (n, [name, count]) => (nameMatch(name, player) ? n + count : n),
+    0,
+  );
+};
+
+/** Sum a player's TOTAL shots from the per-shooter map, matching names accent-safe. */
+export const playerShotsCount = (stats: MatchStats | null, player: string): number => {
+  const map = stats?.playerShots;
   if (!map) return 0;
   return Object.entries(map).reduce(
     (n, [name, count]) => (nameMatch(name, player) ? n + count : n),
@@ -1002,6 +1038,71 @@ export function gradeSpecial(special: Special): BetStatus {
         // leg in a fixed-odds acca neither wins nor loses, so pass it through.
         if (finished) continue;
         pending = true;
+        continue;
+      }
+
+      if (leg.kind === "playerShotsOver") {
+        // Player's TOTAL shots over the line, from the per-shooter tally. A goal
+        // is always a shot, so the goal list backstops a missing/behind tally.
+        // Clinches mid-match; at FT with no tally at all, holds pending for a
+        // human rather than blind-losing on unseen data.
+        const st = getStats(leg.matchId);
+        const shots = Math.max(
+          playerShotsCount(st, leg.player),
+          goalsBy(ev.goals, leg.player).length,
+        );
+        if (shots > leg.line) continue; // leg won, even mid-match
+        if (finished) {
+          if (!st?.playerShots) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "firstHalfTotalOver") {
+        // First-half total over the line — the HT score decides it at the
+        // half-time whistle either way; a goal inside the first 45 clinches
+        // early, before the HT snapshot lands.
+        const ht = getResult(leg.matchId).ht;
+        if (ht) {
+          const total = ht.home + ht.away;
+          if (total > leg.line) continue; // over → won
+          if (wholeLinePush(total, leg.line)) continue; // exact whole line → push
+          return "lost"; // the half ended under → dead, even mid-match
+        }
+        const h1 = ev.goals.filter(
+          (gl) => !gl.et && gl.minute != null && gl.minute <= 45,
+        ).length;
+        if (h1 > leg.line) continue; // clinched before the HT snapshot
+        if (finished) return "lost";
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "teamScoresBothHalves") {
+        // Side scores in BOTH halves: H1 off the HT score, H2 off FT − HT.
+        // negate = "- No". An H1 blank decides it the moment HT is in; a
+        // finished match with no HT snapshot holds pending (never blind-grades).
+        const r = getResult(leg.matchId);
+        const fts = ft90(leg.matchId);
+        let both: boolean | null = null;
+        if (r.ht) {
+          const h1 = (leg.side === "home" ? r.ht.home : r.ht.away) >= 1;
+          if (!h1) both = false; // blank first half → "both" already impossible
+          else if (finished && fts) {
+            both =
+              (leg.side === "home" ? fts.home - r.ht.home : fts.away - r.ht.away) >= 1;
+          }
+        }
+        if (both == null) {
+          pending = true;
+          continue;
+        }
+        if (leg.negate ? both : !both) return "lost";
         continue;
       }
 

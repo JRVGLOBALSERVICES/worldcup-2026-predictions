@@ -1,5 +1,12 @@
 import type { Goal, Card, Score, SpecialGrade, BetStatus, MultiLegCond } from "./bets";
-import { comboDead, evalCombo, playerSotCount, playerStarted, wholeLinePush } from "./bets";
+import {
+  comboDead,
+  evalCombo,
+  playerShotsCount,
+  playerSotCount,
+  playerStarted,
+  wholeLinePush,
+} from "./bets";
 import type { LiveMatch } from "./live";
 import fixturesJson from "@/data/fixtures.json";
 import type { Fixture } from "./types";
@@ -171,6 +178,14 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — a team to blank + Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "scored":
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
+    case "playerShotsOver":
+      return `${leg.player} — ${plus(leg.line)} shots`;
+    case "firstHalfTotalOver":
+      return `${m} — ${plus(leg.line)} goals before half-time`;
+    case "teamScoresBothHalves":
+      return leg.negate
+        ? `${side(leg.side)} not to score in both halves`
+        : `${side(leg.side)} to score in both halves`;
     case "scoredAndScoreOneOf":
       return `${leg.player} to score`;
     case "manual":
@@ -1171,6 +1186,89 @@ export function inPlayMultiLeg(
         parts.push(`${legLabel} ✗`);
       } else {
         parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "playerShotsOver") {
+      // Player's TOTAL shots over the line — accrues monotonically, so it locks
+      // WON the moment the tally clears it. A goal always counts as a shot, so
+      // the goal list backstops the per-shooter tally. Dies at the true whistle
+      // if short; with no tally at all it stays neutral (static holds pending).
+      const shots = Math.max(
+        playerShotsCount(lm.stats ?? null, leg.player),
+        goalsBy(lm.goals, leg.player).length,
+      );
+      if (shots > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && lm.stats?.playerShots) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "firstHalfTotalOver") {
+      // First-half total over the line — locks either way at the half-time
+      // whistle; a goal inside the first 45 locks WON before the HT snapshot.
+      const ht = lm.htScore;
+      if (ht) {
+        const total = ht.home + ht.away;
+        if (total > leg.line) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (wholeLinePush(total, leg.line)) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else {
+        const h1 = lm.goals.filter(
+          (gl) => !gl.et && gl.minute != null && gl.minute <= 45,
+        ).length;
+        if (h1 > leg.line) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (done) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else {
+          parts.push(`${legLabel} —`);
+        }
+      }
+      continue;
+    }
+
+    if (leg.kind === "teamScoresBothHalves") {
+      // Side scores in BOTH halves — H1 decides at the HT whistle (a blank kills
+      // the Yes / locks the No); after that, an H2 goal decides it early and the
+      // 90-minute whistle settles the rest. negate = "- No".
+      const ht = lm.htScore;
+      const at = (s: { home: number; away: number }) => (leg.side === "home" ? s.home : s.away);
+      if (!ht) {
+        // First half still running (or HT not captured) — nothing decidable yet.
+        parts.push(`${legLabel} ${leg.negate && !done ? "⋯" : "—"}`);
+        continue;
+      }
+      let both: boolean | null;
+      if (at(ht) === 0) both = false; // blank H1 → "both" already impossible
+      else if (at(cur) - at(ht) >= 1) both = true; // scored again in H2
+      else if (done) both = false; // 90 minutes up, no H2 goal
+      else both = null; // scored H1, H2 still open
+      if (both == null) {
+        parts.push(`${legLabel} ${leg.negate ? "⋯" : "—"}`);
+        if (leg.negate) onTrack = true;
+      } else if (leg.negate ? !both : both) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
       }
       continue;
     }

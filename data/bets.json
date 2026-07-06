@@ -14975,6 +14975,59 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861912311253336064",
+      "slipNo": "861912311253336064",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 7 legs (BH8)",
+      "label": "Parlay (R16) — Oyarzabal score/assist · Ronaldo score/assist · Bruno Fernandes 1+ shots · Portugal or Spain · 1H Over 0.5 · Under 5.5 · Portugal both halves No (7 legs)",
+      "odds": 15.84,
+      "stake": 50,
+      "placedAt": "06/07 18:11",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "playerShotsOver",
+            "player": "Bruno Fernandes",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "teamScoresBothHalves",
+            "side": "home",
+            "negate": true
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

@@ -102,11 +102,22 @@ async function fetchStats(
   const cornersByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
   const sotByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
   const playerSot: Record<string, number> = {};
+  const playerShots: Record<string, number> = {};
+  // A play counts toward TOTAL shots if it's any shot attempt ("Shot On Target/
+  // Off Target/Blocked/Hit Woodwork") or a goal (own goals excluded — not a shot
+  // for the "scorer"). This tally matches the boxscore totalShots team stat.
+  const isShotPlay = (t: string) =>
+    t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
   for (const c of data.commentary ?? []) {
     const p = c.play;
     const text = p?.type?.text;
+    if (!text || !p?.team?.displayName) continue;
+    if (isShotPlay(text)) {
+      // Attribute the attempt to its taker for the per-player TOTAL shots tally.
+      const taker = p.participants?.[0]?.athlete?.displayName;
+      if (taker) playerShots[taker] = (playerShots[taker] ?? 0) + 1;
+    }
     if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
-    if (!p?.team?.displayName) continue;
     const s = side(p.team.displayName);
     const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
     if (text === "Corner Awarded") {
@@ -130,6 +141,7 @@ async function fetchStats(
       cornersByHalf,
       sotByHalf,
       playerSot,
+      playerShots,
       firstGoalMethod: firstGoalMethod(data.keyEvents),
       firstPenalty: firstPenaltyTeam(data.keyEvents, homeName),
       waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },

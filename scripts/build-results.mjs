@@ -123,9 +123,19 @@ function statsFromSummary(summary, fixture) {
   const sotByHalf = { home: [0, 0], away: [0, 0] };
   // Per-shooter shots-on-target — keyed by ESPN displayName, for player SOT props.
   const playerSot = {};
+  // Per-shooter TOTAL shots — any shot attempt ("Shot On Target/Off Target/
+  // Blocked/Hit Woodwork") or a goal (own goals excluded — not a shot for the
+  // "scorer"). Matches the boxscore totalShots team stat; feeds playerShotsOver.
+  const playerShots = {};
+  const isShotPlay = (t) =>
+    t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
   for (const c of summary.commentary ?? []) {
     const p = c.play;
     const text = p?.type?.text;
+    if (text && isShotPlay(text)) {
+      const taker = p.participants?.[0]?.athlete?.displayName;
+      if (taker) playerShots[taker] = (playerShots[taker] ?? 0) + 1;
+    }
     if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
     const side = p.team?.displayName ? ours(p.team.displayName) : null;
     if (!side) continue;
@@ -143,7 +153,7 @@ function statsFromSummary(summary, fixture) {
   const wbH2 = waterBreakAction(summary.commentary, 2);
 
   return {
-    corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot,
+    corners, sot, shots, yellow, red, cards, cornersByHalf, sotByHalf, playerSot, playerShots,
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
     firstPenalty: firstPenaltyTeam(summary.keyEvents, ours),
     waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
