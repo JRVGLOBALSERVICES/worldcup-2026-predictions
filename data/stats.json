@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T01:30:09.525Z",
+    "generatedAt": "2026-07-06T01:40:08.241Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -48,6 +48,14 @@
       },
       {
         "rank": 5,
+        "name": "Jude Bellingham",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 4,
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "name": "Mikel Oyarzabal",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -71,16 +79,8 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 10,
         "name": "Brian Brobbey",
-        "team": "Netherlands",
-        "flag": "🇳🇱",
-        "value": 3,
-        "matches": 4
-      },
-      {
-        "rank": 9,
-        "name": "Cody Gakpo",
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 3,
@@ -130,6 +130,14 @@
       },
       {
         "rank": 4,
+        "name": "Bukayo Saka",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 3,
+        "matches": 4
+      },
+      {
+        "rank": 4,
         "name": "Florian Wirtz",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -153,20 +161,12 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 10,
         "name": "Achraf Hakimi",
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 2,
         "matches": 5
-      },
-      {
-        "rank": 9,
-        "name": "Anthony Gordon",
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 2,
-        "matches": 3
       }
     ],
     "cleanSheets": [
@@ -621,18 +621,18 @@
       },
       {
         "rank": 9,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 61.1,
-        "display": "61.1%",
-        "matches": 5
-      },
-      {
-        "rank": 10,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 60,
         "display": "60.0%",
+        "matches": 4
+      },
+      {
+        "rank": 10,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 59.8,
+        "display": "59.8%",
         "matches": 4
       }
     ],
@@ -721,14 +721,6 @@
     "tackleSuccess": [
       {
         "rank": 1,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 72.2,
-        "display": "72.2%",
-        "matches": 5
-      },
-      {
-        "rank": 2,
         "team": "Tunisia",
         "flag": "🇹🇳",
         "value": 71.4,
@@ -736,7 +728,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 69.8,
@@ -744,7 +736,7 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Cape Verde",
         "flag": "🇨🇻",
         "value": 69.4,
@@ -752,7 +744,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 68.9,
@@ -760,12 +752,20 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
         "display": "68.3%",
         "matches": 2
+      },
+      {
+        "rank": 6,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 67.7,
+        "display": "67.7%",
+        "matches": 5
       },
       {
         "rank": 7,
@@ -818,7 +818,15 @@
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 2,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 36.7,
+        "display": "36.7%",
+        "matches": 4
+      },
+      {
+        "rank": 4,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -826,20 +834,12 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
         "display": "35.7%",
         "matches": 3
-      },
-      {
-        "rank": 3,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 35.7,
-        "display": "35.7%",
-        "matches": 4
       },
       {
         "rank": 6,
@@ -951,8 +951,8 @@
         "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 50.3,
-        "display": "50.3%",
+        "value": 49.7,
+        "display": "49.7%",
         "matches": 5
       },
       {
@@ -1553,7 +1553,7 @@
         },
         {
           "name": "Jude Bellingham",
-          "value": 2,
+          "value": 4,
           "matches": 4
         },
         {
@@ -1564,14 +1564,14 @@
       ],
       "assists": [
         {
+          "name": "Bukayo Saka",
+          "value": 3,
+          "matches": 4
+        },
+        {
           "name": "Anthony Gordon",
           "value": 2,
           "matches": 3
-        },
-        {
-          "name": "Bukayo Saka",
-          "value": 2,
-          "matches": 4
         },
         {
           "name": "Declan Rice",
@@ -1584,7 +1584,7 @@
           "matches": 1
         },
         {
-          "name": "Jude Bellingham",
+          "name": "Harry Kane",
           "value": 1,
           "matches": 1
         }
@@ -6792,35 +6792,44 @@
       },
       "760505": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Bukayo Saka",
+            "team": "England"
+          },
+          {
+            "name": "Harry Kane",
+            "team": "England"
+          }
+        ],
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 51.7,
-            "accuratePasses": 96,
-            "totalPasses": 106,
+            "possessionPct": 58.6,
+            "accuratePasses": 180,
+            "totalPasses": 193,
             "shotsOnTarget": 1,
-            "totalShots": 3,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 10
+            "totalShots": 4,
+            "effectiveTackles": 3,
+            "totalTackles": 7,
+            "accurateCrosses": 2,
+            "totalCrosses": 5,
+            "accurateLongBalls": 8,
+            "totalLongBalls": 15
           },
           {
             "team": "England",
-            "possessionPct": 48.3,
-            "accuratePasses": 85,
-            "totalPasses": 99,
-            "shotsOnTarget": 1,
-            "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
-            "accurateCrosses": 0,
-            "totalCrosses": 2,
+            "possessionPct": 41.4,
+            "accuratePasses": 116,
+            "totalPasses": 135,
+            "shotsOnTarget": 3,
+            "totalShots": 3,
+            "effectiveTackles": 4,
+            "totalTackles": 10,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
             "accurateLongBalls": 7,
-            "totalLongBalls": 13
+            "totalLongBalls": 15
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T01:30:05.419Z",
+    "generatedAt": "2026-07-06T01:40:05.835Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 71,
     "live": 1
@@ -9676,10 +9676,27 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Jude Bellingham",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jude Bellingham",
+          "minute": 38,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [
         {
           "team": "away",
@@ -9696,11 +9713,11 @@
         },
         "sot": {
           "home": 1,
-          "away": 1
+          "away": 3
         },
         "shots": {
-          "home": 3,
-          "away": 1
+          "home": 4,
+          "away": 3
         },
         "yellow": {
           "home": 0,
@@ -9738,7 +9755,7 @@
           "Raúl Jiménez": 1,
           "Anthony Gordon": 1
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "header",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
