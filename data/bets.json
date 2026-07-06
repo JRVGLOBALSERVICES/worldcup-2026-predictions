@@ -24910,16 +24910,16 @@
     },
     "por-esp-2026-07-06": {
       "corners": {
-        "home": 2,
-        "away": 1
+        "home": 3,
+        "away": 2
       },
       "sot": {
-        "home": 1,
+        "home": 2,
         "away": 3
       },
       "shots": {
-        "home": 3,
-        "away": 5
+        "home": 5,
+        "away": 8
       },
       "yellow": {
         "home": 0,
@@ -24934,22 +24934,22 @@
         "away": 0
       },
       "fouls": {
-        "home": 1,
-        "away": 2
+        "home": 5,
+        "away": 8
       },
       "cornersByHalf": {
         "home": [
-          2,
+          3,
           0
         ],
         "away": [
-          1,
+          2,
           0
         ]
       },
       "sotByHalf": {
         "home": [
-          1,
+          2,
           0
         ],
         "away": [
@@ -24959,7 +24959,7 @@
       },
       "playerSot": {
         "Mikel Oyarzabal": 1,
-        "Cristiano Ronaldo": 1,
+        "Cristiano Ronaldo": 2,
         "Lamine Yamal": 1,
         "Álex Baena": 1
       },
@@ -24967,45 +24967,60 @@
         "Mikel Oyarzabal": 2,
         "João Cancelo": 1,
         "Pedro Neto": 1,
-        "Cristiano Ronaldo": 1,
+        "Cristiano Ronaldo": 2,
         "Álex Baena": 2,
-        "Lamine Yamal": 1
+        "Lamine Yamal": 1,
+        "Pedro Porro": 1,
+        "Dani Olmo": 1,
+        "Nuno Mendes": 1,
+        "Rodri": 1
       },
       "firstGoalMethod": null,
       "firstPenalty": null,
-      "waterBreak": {},
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 26,
+          "firstActionType": "Handball",
+          "firstActionMinute": 29,
+          "isCorner": false,
+          "reliable": true
+        }
+      },
       "tempo": {
         "possession": {
-          "home": 39.9,
-          "away": 60.1
+          "home": 44.4,
+          "away": 55.6
         },
         "passes": {
-          "home": 84,
-          "away": 127
+          "home": 258,
+          "away": 323
         },
         "tackles": {
-          "home": 2,
-          "away": 4
+          "home": 11,
+          "away": 12
         },
         "saves": {
           "home": 3,
-          "away": 1
+          "away": 2
         },
         "offsides": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 1
         },
         "blockedShots": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "interceptions": {
-          "home": 0,
-          "away": 1
+          "home": 4,
+          "away": 3
         },
         "clearances": {
-          "home": 4,
-          "away": 6
+          "home": 11,
+          "away": 8
         }
       }
     }
