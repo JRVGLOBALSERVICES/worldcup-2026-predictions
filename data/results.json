@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T20:30:03.999Z",
+    "generatedAt": "2026-07-06T20:40:03.647Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 72,
     "live": 1
@@ -14240,15 +14240,15 @@
       "stats": {
         "corners": {
           "home": 3,
-          "away": 4
+          "away": 5
         },
         "sot": {
           "home": 2,
-          "away": 4
+          "away": 5
         },
         "shots": {
           "home": 6,
-          "away": 11
+          "away": 12
         },
         "yellow": {
           "home": 0,
@@ -14263,7 +14263,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 5,
+          "home": 6,
           "away": 10
         },
         "cornersByHalf": {
@@ -14273,7 +14273,7 @@
           ],
           "away": [
             2,
-            2
+            3
           ]
         },
         "sotByHalf": {
@@ -14283,13 +14283,13 @@
           ],
           "away": [
             3,
-            1
+            2
           ]
         },
         "playerSot": {
           "Mikel Oyarzabal": 1,
           "Cristiano Ronaldo": 2,
-          "Lamine Yamal": 1,
+          "Lamine Yamal": 2,
           "Álex Baena": 2
         },
         "playerShots": {
@@ -14298,7 +14298,7 @@
           "Pedro Neto": 1,
           "Cristiano Ronaldo": 3,
           "Álex Baena": 3,
-          "Lamine Yamal": 2,
+          "Lamine Yamal": 3,
           "Pedro Porro": 1,
           "Dani Olmo": 1,
           "Nuno Mendes": 1,
@@ -14317,27 +14317,37 @@
             "firstActionMinute": 29,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
           }
         },
         "tempo": {
           "possession": {
-            "home": 46,
-            "away": 54
+            "home": 44.4,
+            "away": 55.6
           },
           "passes": {
-            "home": 322,
-            "away": 374
+            "home": 339,
+            "away": 420
           },
           "tackles": {
             "home": 12,
-            "away": 13
+            "away": 15
           },
           "saves": {
-            "home": 4,
+            "home": 5,
             "away": 2
           },
           "offsides": {
-            "home": 2,
+            "home": 3,
             "away": 1
           },
           "blockedShots": {
@@ -14349,7 +14359,7 @@
             "away": 3
           },
           "clearances": {
-            "home": 15,
+            "home": 17,
             "away": 9
           }
         }
