@@ -119,7 +119,8 @@ function statsFromSummary(summary, fixture) {
   const fouls = { home: statVal(home, "foulsCommitted"), away: statVal(away, "foulsCommitted") };
 
   // Per-half splits from the play-by-play commentary. period.number 1 → first
-  // half (index 0), anything else → second half (index 1). Group stage has no ET.
+  // half (index 0), period 2 → second half (index 1); ET periods (≥ 3) are
+  // skipped — the per-half markets settle on regulation 90 only.
   const cornersByHalf = { home: [0, 0], away: [0, 0] };
   const sotByHalf = { home: [0, 0], away: [0, 0] };
   // Per-shooter shots-on-target — keyed by ESPN displayName, for player SOT props.
@@ -140,11 +141,15 @@ function statsFromSummary(summary, fixture) {
     if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
     const side = p.team?.displayName ? ours(p.team.displayName) : null;
     if (!side) continue;
-    const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
+    // ET plays (period ≥ 3) stay OUT of the per-half buckets — half markets
+    // and the FT corner-count 1X2 are regulation-90 (book rule). Per-player
+    // tallies keep the whole match (they mirror the boxscore team totals).
+    const period = p.period?.number ?? 1;
+    const idx = period === 1 ? 0 : 1;
     if (text === "Corner Awarded") {
-      cornersByHalf[side][idx] += 1;
+      if (period <= 2) cornersByHalf[side][idx] += 1;
     } else {
-      sotByHalf[side][idx] += 1;
+      if (period <= 2) sotByHalf[side][idx] += 1;
       const shooter = p.participants?.[0]?.athlete?.displayName;
       if (shooter) playerSot[shooter] = (playerSot[shooter] ?? 0) + 1;
     }

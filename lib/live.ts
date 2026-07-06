@@ -119,11 +119,15 @@ async function fetchStats(
     }
     if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
     const s = side(p.team.displayName);
-    const idx = (p.period?.number ?? 1) === 1 ? 0 : 1;
+    // ET plays (period ≥ 3) stay OUT of the per-half buckets — half markets
+    // and the FT corner-count 1X2 are regulation-90 (book rule). Per-player
+    // tallies keep the whole match (they mirror the boxscore team totals).
+    const period = p.period?.number ?? 1;
+    const idx = period === 1 ? 0 : 1;
     if (text === "Corner Awarded") {
-      cornersByHalf[s][idx] += 1;
+      if (period <= 2) cornersByHalf[s][idx] += 1;
     } else {
-      sotByHalf[s][idx] += 1;
+      if (period <= 2) sotByHalf[s][idx] += 1;
       // Attribute the shot to its taker (the first participant) for per-player props.
       const shooter = p.participants?.[0]?.athlete?.displayName;
       if (shooter) playerSot[shooter] = (playerSot[shooter] ?? 0) + 1;

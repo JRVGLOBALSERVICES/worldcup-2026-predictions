@@ -487,6 +487,14 @@ export type MultiLegCond = { odds?: number } & (
   // moment the half's total clears the line; the H1 line locks dead at the HT
   // whistle (H1 split is final once `ht` is in), the H2 line only at FT.
   | { matchId: string; kind: "halfCornersOver"; half: 1 | 2; line: number }
+  // Corner-count 1X2 at FT ("Corners FT 1X2 — Spain" → side:"away"): the picked
+  // side must take strictly MORE corners than the opponent — a tie loses (the
+  // tie is the market's "X"). Regulation-90 market (book rule), so it settles
+  // off the per-half commentary tally (ET plays never land in those buckets);
+  // falls back to boxscore corners only when the match ended in 90. Corners
+  // accrue for BOTH sides, so the lead can flip any minute — nothing clinches
+  // or dies before the FT whistle.
+  | { matchId: string; kind: "mostCorners"; side: "home" | "away" }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -1167,6 +1175,36 @@ export function gradeSpecial(special: Special): BetStatus {
         if (leg.half === 1 && tot != null && getResult(leg.matchId).ht) return "lost";
         pending = true;
         continue;
+      }
+
+      if (leg.kind === "mostCorners") {
+        // Corner-count 1X2 at FT — strictly more corners than the opponent
+        // (a tie loses). Regulation-90 market: the per-half tally is the
+        // source (ET plays never land in it); boxscore corners only back it
+        // up when the match ended in 90 (a post-ET boxscore includes ET
+        // corners). Both sides accrue, so nothing decides before the whistle.
+        if (!finished) {
+          pending = true;
+          continue;
+        }
+        const st = getStats(leg.matchId);
+        const opp = leg.side === "home" ? "away" : "home";
+        const ch = st?.cornersByHalf;
+        let mine: number | null = null;
+        let theirs: number | null = null;
+        if (ch) {
+          mine = ch[leg.side][0] + ch[leg.side][1];
+          theirs = ch[opp][0] + ch[opp][1];
+        } else if (st && getResult(leg.matchId).finishPhase === "regulation") {
+          mine = st.corners[leg.side];
+          theirs = st.corners[opp];
+        }
+        if (mine == null || theirs == null) {
+          pending = true; // stats never snapshotted → manual settle
+          continue;
+        }
+        if (mine > theirs) continue; // strictly more at the whistle → leg won
+        return "lost";
       }
 
       if (leg.kind === "firstToScore") {

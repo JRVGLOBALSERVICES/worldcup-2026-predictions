@@ -15481,6 +15481,52 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861985718615613440",
+      "slipNo": "861985718615613441",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 6 legs (BH8)",
+      "label": "Parlay (R16) — Portugal to qualify · Over 0.5 · BTTS Yes · Bruno Fernandes 1+ shots · Spain most corners FT · Under 21.5 fouls (6 legs)",
+      "odds": 10.72,
+      "stake": 20,
+      "placedAt": "06/07 23:03",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "btts"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "playerShotsOver",
+            "player": "Bruno Fernandes",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "mostCorners",
+            "side": "away"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalFoulsUnder",
+            "line": 21.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

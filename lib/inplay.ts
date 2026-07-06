@@ -186,6 +186,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — under ${leg.line} fouls`;
     case "halfCornersOver":
       return `${m} — ${plus(leg.line)} corners in the ${leg.half === 1 ? "1st" : "2nd"} half`;
+    case "mostCorners":
+      return `${side(leg.side)} — most corners at full-time`;
     case "playerSotOver":
       return `${leg.player} — ${plus(leg.line)} shots on target`;
     case "firstToScore":
@@ -1302,6 +1304,36 @@ export function inPlayMultiLeg(
       ) {
         dead = true;
         parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "mostCorners") {
+      // Corner-count 1X2 — strictly more corners at the 90-minute whistle (a
+      // tie loses). Both sides accrue, so the lead can flip any minute:
+      // leading mid-match is only on-track, never a lock; trailing isn't dead.
+      // Decides at the whistle. Per-half tally preferred (regulation-only);
+      // boxscore corners back it up pre-ET.
+      const ch = lm.stats?.cornersByHalf;
+      const c = lm.stats?.corners;
+      const opp = leg.side === "home" ? "away" : "home";
+      const mine = ch ? ch[leg.side][0] + ch[leg.side][1] : c ? c[leg.side] : null;
+      const theirs = ch ? ch[opp][0] + ch[opp][1] : c ? c[opp] : null;
+      if (mine == null || theirs == null) {
+        parts.push(`${legLabel} —`);
+      } else if (doneFull) {
+        if (mine > theirs) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (mine > theirs) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
       } else {
         parts.push(`${legLabel} —`);
       }
