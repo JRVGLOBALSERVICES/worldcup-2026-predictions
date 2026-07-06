@@ -1,4 +1,4 @@
-import { mytTime, etTime, mytDayKey, mytDayLabel, getFixture, getResearch } from "@/lib/data";
+import { mytTime, etTime, mytDayKey, mytDayLabel, getFixture, getResearch, fixtures } from "@/lib/data";
 import { isMatchFinished } from "@/lib/live";
 import {
   settleAll,
@@ -78,7 +78,34 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
       result: getResult(matchId),
       bets: [] as (typeof groups)[number]["bets"],
     }));
-  const allGroups = [...groups, ...specialsOnly].sort((a, b) => {
+
+  // Forward schedule — surface UPCOMING fixtures (not yet finished) even when this
+  // owner has no bet on them, so the tracker's upcoming slate reads as a complete
+  // schedule (e.g. a surviving team's next knockout tie like the England QF) rather
+  // than only the matches on the slip. Deliberately excludes PAST betless matches:
+  // settled history stays slip-scoped so "Earlier rounds" doesn't fill with games
+  // the owner never touched. The 3.5 h grace mirrors dayEnded's fallback below, so
+  // a just-kicked, still-unfinished match still counts as upcoming. These rows carry
+  // zero bets/specials → they add nothing to any money total; the match card renders
+  // its "on the slate for the live score" schedule state.
+  const knownIds = new Set<string>([...groupIds, ...specialsByMatch.keys()]);
+  const scheduleGrace = 3.5 * 60 * 60 * 1000;
+  const nowForSchedule = Date.now();
+  const upcomingFixtures = fixtures
+    .filter(
+      (f) =>
+        !knownIds.has(f.id) &&
+        !isMatchFinished(f.id) &&
+        new Date(f.kickoffUTC).getTime() > nowForSchedule - scheduleGrace,
+    )
+    .map((f) => ({
+      matchId: f.id,
+      fixture: f as ReturnType<typeof getFixture>,
+      result: getResult(f.id),
+      bets: [] as (typeof groups)[number]["bets"],
+    }));
+
+  const allGroups = [...groups, ...specialsOnly, ...upcomingFixtures].sort((a, b) => {
     const ta = a.fixture ? new Date(a.fixture.kickoffUTC).getTime() : 0;
     const tb = b.fixture ? new Date(b.fixture.kickoffUTC).getTime() : 0;
     return ta - tb;
