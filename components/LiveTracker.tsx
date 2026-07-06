@@ -341,7 +341,9 @@ function parseLegs(note: string): { label: string; glyph: string }[] | null {
   // ↺ = whole-line push → the leg voids and its odds drop out of the acca
   // (stake portion returns); it must be recognised or one refunded leg
   // collapses the entire slip to a raw-text fallback.
-  const known = new Set(["✓", "✗", "⋯", "—", "↺"]);
+  // ½✓ / ½✗ = Asian quarter-line half-win / half-loss — the leg survives the
+  // acca but reprices the payout, so it must read as a half, never a clean ✓.
+  const known = new Set(["✓", "✗", "⋯", "—", "↺", "½✓", "½✗"]);
   return legs.every((l) => known.has(l.glyph)) && legs.length > 0 ? legs : null;
 }
 
@@ -351,6 +353,8 @@ const LEG_GLYPH: Record<string, { cls: string; dot: string; pulse?: boolean }> =
   "⋯": { cls: "text-acid", dot: "bg-acid", pulse: true },
   "—": { cls: "text-faint/60", dot: "bg-faint/40" },
   "↺": { cls: "text-amber", dot: "bg-amber" },
+  "½✓": { cls: "text-amber", dot: "bg-amber" },
+  "½✗": { cls: "text-amber", dot: "bg-amber" },
 };
 
 /** Collection tag — whose bet this slip is, so it's clear who to collect from /

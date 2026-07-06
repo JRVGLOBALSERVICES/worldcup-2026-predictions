@@ -734,6 +734,9 @@ export type SettledSpecial = Special & {
   potential: number;
   /** +profit on a win, −stake on a loss, 0 while pending. */
   pnl: number;
+  /** Asian half-result / push repricing multiplier on the combined odds
+   *  (1 = every leg settled whole; < 1 = payout reduced — see PayoutAdj). */
+  payoutFactor: number;
 };
 
 /** Strip diacritics so ESPN's "Luis Díaz" / "Daniel Muñoz" match plain-ASCII picks. */
@@ -976,7 +979,38 @@ export function comboDead(conds: StatCond[], ht: Score, stats: MatchStats | null
  * Returns "pending" until the match is finished (events.status === "finished").
  * A manual `statusOverride` always wins (bad-scrape safety valve).
  */
-export function gradeSpecial(special: Special): BetStatus {
+/**
+ * Payout-adjustment accumulator threaded through multiLeg grading. Asian
+ * quarter lines settle as TWO half-bets, so a leg can HALF-win / HALF-lose /
+ * push without killing the acca — but then it must not pay full leg odds
+ * either. Each such leg (with a known per-leg price) multiplies `factor` by
+ * adjustedLegOdds / originalLegOdds:
+ *   push       → 1 / odds            (leg voids, its odds drop out)
+ *   half-loss  → 0.5 / odds          (half stake lost, half voided)
+ *   half-win   → ((odds+1)/2) / odds (half at full odds, half voided)
+ * Effective payout = stake × slip.odds × factor — scaling the stored combined
+ * odds keeps any acca bonus baked into them proportional, which matches how
+ * 1xBet settled slip 83906844771 (RM100.81, not the full RM1,206.98).
+ * Legs without a stored per-leg price can't be repriced — they pass through at
+ * full odds (pre-existing behaviour) and `unpriced` counts them for a human eye.
+ */
+export type PayoutAdj = { factor: number; unpriced: number };
+
+/** Fold one push / half-result leg into the adjustment (no-op without a leg price). */
+function adjustLeg(
+  adj: PayoutAdj | undefined,
+  odds: number | undefined,
+  kind: "push" | "halfLoss" | "halfWin",
+): void {
+  if (!adj) return;
+  if (!odds || odds <= 1) {
+    adj.unpriced += 1;
+    return;
+  }
+  adj.factor *= kind === "push" ? 1 / odds : kind === "halfLoss" ? 0.5 / odds : (odds + 1) / 2 / odds;
+}
+
+export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
   if (special.statusOverride) return special.statusOverride;
   const g = special.grade;
   if (!g) return "pending";
@@ -1408,7 +1442,10 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!oneBlank) return "lost";
         const total = ft.home + ft.away;
         if (total > leg.line) continue; // both parts hit → won
-        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        if (wholeLinePush(total, leg.line)) {
+          adjustLeg(adj, leg.odds, "push"); // total pushes → combo voids, odds drop out
+          continue;
+        }
         return "lost"; // total under → lost
       }
 
@@ -1421,25 +1458,35 @@ export function gradeSpecial(special: Special): BetStatus {
       }
 
       if (leg.kind === "totalUnder") {
-        // Total match goals under `line`. Under → won; a whole-line exact total
-        // (Under 4 in a 4-goal game) is a push → voids and passes through the
-        // fixed-odds acca; strictly over loses. Half/quarter lines never hit ===.
+        // Total match goals under `line`. Asian quarter lines (x.25/x.75) are
+        // TWO half-bets: a total landing 0.25 from the line half-wins or
+        // half-loses instead of settling whole — either passes through the
+        // acca (repriced), only a clear miss kills it. diff = line − total:
+        //   ≥ 0.5 full win · +0.25 half-win (U3.25, 3 goals) · 0 push ·
+        //   −0.25 half-loss (U3.75, 4 goals) · ≤ −0.5 lost.
         if (!ft) return "lost";
-        const total = ft.home + ft.away;
-        if (total < leg.line) continue; // under → won
-        if (wholeLinePush(total, leg.line)) continue; // exact whole line → push
-        return "lost"; // over → lost
+        const diff = leg.line - (ft.home + ft.away);
+        if (diff >= 0.5) continue; // clear under → full win
+        if (diff === 0.25) adjustLeg(adj, leg.odds, "halfWin");
+        else if (diff === 0) adjustLeg(adj, leg.odds, "push"); // whole-line exact
+        else if (diff === -0.25) adjustLeg(adj, leg.odds, "halfLoss");
+        else return "lost"; // clear over
+        continue;
       }
 
       if (leg.kind === "totalOver") {
-        // Total match goals over `line` (mirror of totalUnder). Over → won; a
-        // whole-line exact total (Over 4 in a 4-goal game) is a push → voids;
-        // strictly under loses.
+        // Total match goals over `line` (mirror of totalUnder, same Asian
+        // quarter-line halves). diff = total − line:
+        //   ≥ 0.5 full win · +0.25 half-win (O1.75, 2 goals) · 0 push ·
+        //   −0.25 half-loss (O1.25, 1 goal) · ≤ −0.5 lost.
         if (!ft) return "lost";
-        const total = ft.home + ft.away;
-        if (total > leg.line) continue; // over → won
-        if (wholeLinePush(total, leg.line)) continue; // exact whole line → push
-        return "lost"; // under → lost
+        const diff = ft.home + ft.away - leg.line;
+        if (diff >= 0.5) continue; // clear over → full win
+        if (diff === 0.25) adjustLeg(adj, leg.odds, "halfWin");
+        else if (diff === 0) adjustLeg(adj, leg.odds, "push"); // whole-line exact
+        else if (diff === -0.25) adjustLeg(adj, leg.odds, "halfLoss");
+        else return "lost"; // clear under
+        continue;
       }
 
       if (leg.kind === "doubleChance") {
@@ -1468,30 +1515,39 @@ export function gradeSpecial(special: Special): BetStatus {
         if (outcome !== leg.outcome) return "lost";
         const total = ft.home + ft.away;
         if (total < leg.line) continue; // both parts hit → won
-        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        if (wholeLinePush(total, leg.line)) {
+          adjustLeg(adj, leg.odds, "push"); // total pushes → combo voids, odds drop out
+          continue;
+        }
         return "lost"; // total over → lost
       }
 
       if (leg.kind === "individualTotalUnder") {
-        // One side's own goals under `line`. Under → won; a whole-line exact
-        // tally (line 2, scored 2) is a push → voids and passes through; over
-        // loses. Mirror of individualTotalOver. (Half lines never hit ===.)
+        // One side's own goals under `line` — same Asian quarter-line halves
+        // as totalUnder, off that side's tally. Mirror of individualTotalOver.
         if (!ft) return "lost";
         const scored = leg.side === "home" ? ft.home : ft.away;
-        if (scored < leg.line) continue; // under → won
-        if (wholeLinePush(scored, leg.line)) continue; // exact whole line → push
-        return "lost"; // over → lost
+        const diff = leg.line - scored;
+        if (diff >= 0.5) continue; // clear under → full win
+        if (diff === 0.25) adjustLeg(adj, leg.odds, "halfWin");
+        else if (diff === 0) adjustLeg(adj, leg.odds, "push"); // exact whole line
+        else if (diff === -0.25) adjustLeg(adj, leg.odds, "halfLoss");
+        else return "lost"; // clear over
+        continue;
       }
 
       if (leg.kind === "individualTotalOver") {
-        // One side's own goals over `line`. Cleared → won; a whole-line exact
-        // tally (line 2, scored 2) is a push → voids and passes through the
-        // fixed-odds acca; strictly under loses. (Half lines never hit ===.)
+        // One side's own goals over `line` — same Asian quarter-line halves
+        // as totalOver, off that side's tally.
         if (!ft) return "lost";
         const scored = leg.side === "home" ? ft.home : ft.away;
-        if (scored > leg.line) continue; // covered → won
-        if (scored === leg.line) continue; // push → void, passes through
-        return "lost"; // under
+        const diff = scored - leg.line;
+        if (diff >= 0.5) continue; // clear over → full win
+        if (diff === 0.25) adjustLeg(adj, leg.odds, "halfWin");
+        else if (diff === 0) adjustLeg(adj, leg.odds, "push"); // exact whole line
+        else if (diff === -0.25) adjustLeg(adj, leg.odds, "halfLoss");
+        else return "lost"; // clear under
+        continue;
       }
 
       if (leg.kind === "winsAtLeastOneHalf") {
@@ -1535,7 +1591,10 @@ export function gradeSpecial(special: Special): BetStatus {
         if (outcome !== leg.outcome) return "lost";
         const total = ft.home + ft.away;
         if (total > leg.line) continue; // both parts hit → won
-        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        if (wholeLinePush(total, leg.line)) {
+          adjustLeg(adj, leg.odds, "push"); // total pushes → combo voids, odds drop out
+          continue;
+        }
         return "lost"; // total under → lost
       }
 
@@ -1548,7 +1607,10 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!leg.outcome.includes(outcome)) return "lost";
         const total = ft.home + ft.away;
         if (total > leg.line) continue; // both parts hit → won
-        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        if (wholeLinePush(total, leg.line)) {
+          adjustLeg(adj, leg.odds, "push"); // total pushes → combo voids, odds drop out
+          continue;
+        }
         return "lost"; // total under → lost
       }
 
@@ -1560,7 +1622,10 @@ export function gradeSpecial(special: Special): BetStatus {
         if (!leg.outcome.includes(outcome)) return "lost";
         const total = ft.home + ft.away;
         if (total < leg.line) continue; // both parts hit → won
-        if (wholeLinePush(total, leg.line)) continue; // total pushes → combo voids
+        if (wholeLinePush(total, leg.line)) {
+          adjustLeg(adj, leg.odds, "push"); // total pushes → combo voids, odds drop out
+          continue;
+        }
         return "lost"; // total over → lost
       }
 
@@ -1580,15 +1645,21 @@ export function gradeSpecial(special: Special): BetStatus {
         //   diff <= -0.5 → fully beaten → lost.
         //   -0.5 < diff < 0 → HALF-LOSS / 50% refund (e.g. +0.75 losing by 1:
         //     the +1.0 half pushes, the +0.5 half loses). Does NOT kill the acca
-        //     — passes through like a void; the halved return is a manual reprice.
-        //   diff === 0 → push → void, passes through.
-        //   diff > 0 → covered (a +0.25 half-win also just passes through).
+        //     — passes through, repriced via `adj` (settleSpecials applies it).
+        //   diff === 0 → push → void, passes through repriced.
+        //   diff >= 0.5 → fully covered at full leg odds; a +0.25 half-win
+        //     passes through repriced to (odds+1)/2.
         if (!ft) return "lost";
         const mine = leg.side === "home" ? ft.home : ft.away;
         const opp = leg.side === "home" ? ft.away : ft.home;
         const diff = mine + leg.line - opp;
         if (diff <= -0.5) return "lost"; // fully failed to cover
-        continue; // half-loss / push / (half-)win all pass through the acca
+        // Half-loss / push / half-win pass through the acca but reprice it —
+        // full leg odds only apply when the cover clears by ≥ 0.5.
+        if (diff < 0) adjustLeg(adj, leg.odds, "halfLoss"); // −0.25: +x.75 losing by 1
+        else if (diff === 0) adjustLeg(adj, leg.odds, "push"); // whole-line exact
+        else if (diff < 0.5) adjustLeg(adj, leg.odds, "halfWin"); // +0.25: −x.75 winning by 1
+        continue;
       }
 
       // Unrecognised leg kind — never blind-win; hold the acca pending so a
@@ -1829,13 +1900,22 @@ export function gradeSpecial(special: Special): BetStatus {
 
 export function settleSpecials(slip: BetSlipFile = betSlip): SettledSpecial[] {
   return (slip.specials ?? []).map((s) => {
-    const status = gradeSpecial(s);
+    const adj: PayoutAdj = { factor: 1, unpriced: 0 };
+    const status = gradeSpecial(s, adj);
+    // Effective combined odds after Asian half-results / pushes reprice their
+    // legs (factor 1 when every leg settled whole). Scaling the stored slip
+    // odds keeps any acca bonus baked into them proportional — matches the
+    // book's actual payout (e.g. 83906844771: half-loss × half-win → RM100.81).
+    // A slip carrying a manual `reprice` already folded its void into `odds` —
+    // applying the factor again would double-count it, so the human reprice wins.
+    const eff = s.reprice ? s.odds : s.odds * adj.factor;
     return {
       ...s,
       status,
       fixture: getFixture(s.matchId),
-      potential: s.stake * s.odds,
-      pnl: status === "won" ? s.stake * (s.odds - 1) : status === "lost" ? -s.stake : 0,
+      payoutFactor: s.reprice ? 1 : adj.factor,
+      potential: s.stake * eff,
+      pnl: status === "won" ? s.stake * (eff - 1) : status === "lost" ? -s.stake : 0,
     };
   });
 }

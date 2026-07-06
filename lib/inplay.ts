@@ -1166,13 +1166,21 @@ export function inPlayMultiLeg(
       // that voids and passes through the fixed-odds acca (same as handicap), so
       // it stays alive at 4 and only dies on a 5th goal. Locks at FT.
       const total = cur.home + cur.away;
-      if (total > leg.line) {
+      const diff = leg.line - total;
+      if (diff <= -0.5) {
+        // Clearly over — dead even mid-match (goals only accrue).
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else if (done) {
-        // total <= line at FT: under → won; exact whole line → push (passes through)
+        // Survives at FT — whole win, or an Asian quarter-line half / push
+        // that passes through the acca repriced (see gradeSpecial).
         wonCount++;
-        parts.push(`${legLabel} ${wholeLinePush(total, leg.line) ? "↺" : "✓"}`);
+        parts.push(
+          `${legLabel} ${diff >= 0.5 ? "✓" : diff === 0.25 ? "½✓" : diff === 0 ? "↺" : "½✗"}`,
+        );
+      } else if (diff === -0.25) {
+        // Quarter-line half already lost live; the other half can still push.
+        parts.push(`${legLabel} —`);
       } else {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
@@ -1186,13 +1194,28 @@ export function inPlayMultiLeg(
       // a whole-line exact total (4 goals on Over 4) is a push → voids and passes
       // through the fixed-odds acca; strictly under is dead.
       const total = cur.home + cur.away;
-      if (total > leg.line) {
+      const diff = total - leg.line;
+      if (diff >= 0.5) {
+        // Clearly over — locks WON the moment the running total clears it.
         wonCount++;
         parts.push(`${legLabel} ✓`);
+      } else if (diff === 0.25) {
+        // Quarter-line half-win already banked (O x.75 at x+1 goals); the
+        // pushing half upgrades to a full win on another goal — never dies.
+        if (done) {
+          wonCount++;
+          parts.push(`${legLabel} ½✓`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
       } else if (done) {
-        if (wholeLinePush(total, leg.line)) {
+        if (diff === 0) {
           wonCount++;
           parts.push(`${legLabel} ↺`); // push → void, passes through
+        } else if (diff === -0.25) {
+          wonCount++; // half-loss survives the acca (repriced at settlement)
+          parts.push(`${legLabel} ½✗`);
         } else {
           dead = true;
           parts.push(`${legLabel} ✗`);
@@ -1828,14 +1851,18 @@ export function inPlayMultiLeg(
       // fully fails. (Exact push voids → passes through as neutral.)
       const mine = leg.side === "home" ? cur.home : cur.away;
       const opp = leg.side === "home" ? cur.away : cur.home;
-      const covered = mine + leg.line - opp > -0.5; // full/half-win, push, or half-loss all survive
+      const diff = mine + leg.line - opp;
       if (done) {
-        if (covered) {
-          wonCount++;
-          parts.push(`${legLabel} ✓`);
-        } else {
+        if (diff <= -0.5) {
           dead = true;
           parts.push(`${legLabel} ✗`);
+        } else {
+          // Survives, but a quarter-line half-result must READ as a half —
+          // a bare ✓ on a half-lost leg is how the full-payout confusion starts.
+          wonCount++;
+          parts.push(
+            `${legLabel} ${diff < 0 ? "½✗" : diff === 0 ? "↺" : diff < 0.5 ? "½✓" : "✓"}`,
+          );
         }
       } else if (mine + leg.line > opp) {
         onTrack = true;
