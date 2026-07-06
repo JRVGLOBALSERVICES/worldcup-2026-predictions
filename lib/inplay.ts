@@ -182,6 +182,12 @@ export function legLabelFor(leg: MultiLegCond): string {
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
     case "playerShotsOver":
       return `${leg.player} — ${plus(leg.line)} shots`;
+    case "playerSotOver":
+      return `${leg.player} — ${plus(leg.line)} shots on target`;
+    case "firstToScore":
+      return leg.outcome === "X"
+        ? `${m} — goalless (neither side scores first)`
+        : `${leg.outcome === "1" ? h : a} to score first`;
     case "firstHalfTotalOver":
       return `${m} — ${plus(leg.line)} goals before half-time`;
     case "firstHalfTotalUnder":
@@ -1225,6 +1231,60 @@ export function inPlayMultiLeg(
       } else if (doneFull && lm.stats?.playerShots) {
         dead = true;
         parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "playerSotOver") {
+      // Player's shots ON TARGET over the line — accrues monotonically, so it
+      // locks WON the moment the tally clears it. A real goal is always on
+      // target, so the goal list backstops the per-shooter tally. Dies at the
+      // whistle if short; with no tally at all it stays neutral (static holds
+      // pending) — mirror of playerShotsOver.
+      const sot = Math.max(
+        playerSotCount(lm.stats ?? null, leg.player),
+        goalsBy(lm.goals, leg.player).length,
+      );
+      if (sot > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && lm.stats?.playerSot) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "firstToScore") {
+      // The first goal fixes this three-way forever: a team pick locks WON or
+      // dies the instant it lands (own goals count for the credited side, ET
+      // excluded); the "X" (no goals) pick rides a clean scoreboard to FT and
+      // dies on any goal.
+      const first = lm.goals.find((gl) => !gl.et);
+      if (first) {
+        if ((first.team === "home" ? "1" : "2") === leg.outcome) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (done) {
+        // Goalless at the 90-minute whistle → only the "X" pick survives.
+        if (leg.outcome === "X") {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (leg.outcome === "X") {
+        onTrack = true; // 0-0 and running — the no-goal pick is on track
+        parts.push(`${legLabel} ⋯`);
       } else {
         parts.push(`${legLabel} —`);
       }

@@ -15217,6 +15217,79 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861940791982596096",
+      "slipNo": "861940791982596097",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 11 legs (BH8)",
+      "label": "Parlay (R16) — Over 1.5 · Under 5.5 · 1H Over 0.5 · 1H Under 2.5 · BTTS Yes · Oyarzabal 2+ shots on target · Yamal score/assist · Portugal under 2.5 · Spain under 3.5 · Portugal or Spain · Spain to score first (11 legs)",
+      "odds": 18.44,
+      "stake": 50,
+      "placedAt": "06/07 20:05",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalUnder",
+            "line": 2.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "btts"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "playerSotOver",
+            "player": "Mikel Oyarzabal",
+            "line": 1.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "individualTotalUnder",
+            "side": "home",
+            "line": 2.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "individualTotalUnder",
+            "side": "away",
+            "line": 3.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstToScore",
+            "outcome": "2"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

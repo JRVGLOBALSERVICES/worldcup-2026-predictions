@@ -423,6 +423,19 @@ export type MultiLegCond = { odds?: number } & (
   // list as a backstop — a goal is always a shot). Clinches mid-match; if the
   // per-shooter tally never lands, holds pending rather than blind-grading.
   | { matchId: string; kind: "playerShotsOver"; player: string; line: number }
+  // Named player's shots ON TARGET strictly over `line` ("Mikel Oyarzabal Over
+  // 1.5 — Player Over Shots on Target" → line:1.5 → won at 2+). Graded off
+  // MatchStats.playerSot, tallied per-shooter from ESPN "Shot On Target"
+  // commentary plays (with the goal list as a backstop — a real goal is always
+  // on target). Clinches mid-match; if the per-shooter tally never lands,
+  // holds pending rather than blind-grading.
+  | { matchId: string; kind: "playerSotOver"; player: string; line: number }
+  // Which side scores the match's FIRST goal, as a three-way 1X2 ("First To
+  // Score 1X2 — Spain" → outcome:"2"; "X" = no goals). Own goals count for the
+  // side CREDITED on the scoreboard (Goal.team is the benefiting team); ET
+  // goals excluded (90-minute market). A team pick decides the instant the
+  // first goal lands; the "X" pick can only win at a goalless FT.
+  | { matchId: string; kind: "firstToScore"; outcome: "1" | "X" | "2" }
   // Total FIRST-HALF goals (any team, own goals included) over `line` ("Over
   // 0.5 — 1st Half Total Goals" → line:0.5). Graded off the HT score, so it
   // DECIDES at the half-time whistle either way; a goal inside the first 45
@@ -1070,6 +1083,47 @@ export function gradeSpecial(special: Special): BetStatus {
             continue;
           }
           return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "playerSotOver") {
+        // Player's shots ON TARGET over the line, from the per-shooter SOT
+        // tally. A real goal is always on target, so the goal list backstops
+        // a missing/behind tally. Clinches mid-match; at FT with no tally at
+        // all, holds pending for a human rather than blind-losing on unseen
+        // data (mirror of playerShotsOver).
+        const st = getStats(leg.matchId);
+        const sot = Math.max(
+          playerSotCount(st, leg.player),
+          goalsBy(ev.goals, leg.player).length,
+        );
+        if (sot > leg.line) continue; // leg won, even mid-match
+        if (finished) {
+          if (!st?.playerSot) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "firstToScore") {
+        // Three-way first-to-score: the side credited with the match's first
+        // 90-minute goal (own goals count for the benefiting side), "X" = no
+        // goals. The first goal fixes it forever, so a team pick decides the
+        // instant it lands; the "X" pick needs a goalless FT.
+        const first = ev.goals.find((gl) => !gl.et);
+        if (first) {
+          if ((first.team === "home" ? "1" : "2") !== leg.outcome) return "lost";
+          continue; // right side struck first → leg won, even mid-match
+        }
+        if (finished) {
+          if (leg.outcome !== "X") return "lost"; // goalless FT → only "X" wins
+          continue;
         }
         pending = true;
         continue;
