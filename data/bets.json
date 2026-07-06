@@ -15191,6 +15191,32 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861937310618001408",
+      "slipNo": "861937310618001409",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 2 legs (BH8)",
+      "label": "Parlay (R16) — Oyarzabal anytime · Ronaldo score/assist (2 legs)",
+      "odds": 5.6,
+      "stake": 50,
+      "placedAt": "06/07 19:51",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scored",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Cristiano Ronaldo"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
