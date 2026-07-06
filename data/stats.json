@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T02:30:05.815Z",
+    "generatedAt": "2026-07-06T02:40:06.951Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -948,19 +948,19 @@
       },
       {
         "rank": 8,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 50.6,
+        "display": "50.6%",
+        "matches": 5
+      },
+      {
+        "rank": 8,
         "team": "Senegal",
         "flag": "🇸🇳",
         "value": 50.6,
         "display": "50.6%",
         "matches": 4
-      },
-      {
-        "rank": 9,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 50,
-        "display": "50.0%",
-        "matches": 5
       },
       {
         "rank": 10,
@@ -1608,6 +1608,14 @@
         {
           "name": "Jude Bellingham",
           "value": 1
+        },
+        {
+          "name": "Marc Guéhi",
+          "value": 1
+        },
+        {
+          "name": "Nico O'Reilly",
+          "value": 1
         }
       ],
       "redCards": [
@@ -2145,6 +2153,10 @@
       "yellowCards": [
         {
           "name": "Edson Álvarez",
+          "value": 1
+        },
+        {
+          "name": "Jorge Sánchez",
           "value": 1
         }
       ],
@@ -6817,31 +6829,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 60.2,
-            "accuratePasses": 279,
-            "totalPasses": 307,
-            "shotsOnTarget": 3,
-            "totalShots": 9,
+            "possessionPct": 60.6,
+            "accuratePasses": 288,
+            "totalPasses": 317,
+            "shotsOnTarget": 4,
+            "totalShots": 10,
             "effectiveTackles": 5,
-            "totalTackles": 13,
+            "totalTackles": 15,
             "accurateCrosses": 5,
             "totalCrosses": 17,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 25
+            "accurateLongBalls": 15,
+            "totalLongBalls": 26
           },
           {
             "team": "England",
-            "possessionPct": 39.8,
-            "accuratePasses": 174,
-            "totalPasses": 206,
+            "possessionPct": 39.4,
+            "accuratePasses": 177,
+            "totalPasses": 209,
             "shotsOnTarget": 4,
             "totalShots": 5,
             "effectiveTackles": 9,
             "totalTackles": 16,
             "accurateCrosses": 1,
             "totalCrosses": 4,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 26
+            "accurateLongBalls": 15,
+            "totalLongBalls": 28
           }
         ]
       }

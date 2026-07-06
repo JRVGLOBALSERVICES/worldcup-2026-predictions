@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T02:30:02.465Z",
+    "generatedAt": "2026-07-06T02:40:03.598Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 71,
     "live": 1
@@ -9678,7 +9678,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 3
       },
       "advanced": null,
@@ -9714,6 +9714,14 @@
           "assist": null,
           "penalty": true,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Raúl Jiménez",
+          "minute": 69,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -9728,6 +9736,24 @@
           "player": "Jarell Quansah",
           "minute": 53,
           "type": "red"
+        },
+        {
+          "team": "away",
+          "player": "Marc Guéhi",
+          "minute": 68,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Jorge Sánchez",
+          "minute": 71,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Nico O'Reilly",
+          "minute": 71,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-06T01:00:00.000Z",
@@ -9737,24 +9763,24 @@
           "away": 2
         },
         "sot": {
-          "home": 3,
+          "home": 4,
           "away": 4
         },
         "shots": {
-          "home": 9,
+          "home": 10,
           "away": 5
         },
         "yellow": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 3
         },
         "red": {
           "home": 0,
           "away": 1
         },
         "cards": {
-          "home": 0,
-          "away": 2
+          "home": 1,
+          "away": 4
         },
         "cornersByHalf": {
           "home": [
@@ -9790,6 +9816,16 @@
             "breakEndMinute": 25,
             "firstActionType": "Shot On Target",
             "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Yellow Card",
+            "firstActionMinute": 71,
             "isCorner": false,
             "reliable": true
           }
