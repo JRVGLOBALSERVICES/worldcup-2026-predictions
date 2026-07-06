@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T01:10:12.110Z",
+    "generatedAt": "2026-07-06T01:20:11.748Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -605,14 +605,6 @@
       },
       {
         "rank": 7,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 61.5,
-        "display": "61.5%",
-        "matches": 5
-      },
-      {
-        "rank": 8,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 61.2,
@@ -620,11 +612,19 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "team": "France",
         "flag": "🇫🇷",
         "value": 61.2,
         "display": "61.2%",
+        "matches": 5
+      },
+      {
+        "rank": 9,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 60.7,
+        "display": "60.7%",
         "matches": 5
       },
       {
@@ -723,8 +723,8 @@
         "rank": 1,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 73.1,
-        "display": "73.1%",
+        "value": 72.2,
+        "display": "72.2%",
         "matches": 5
       },
       {
@@ -819,14 +819,6 @@
       },
       {
         "rank": 3,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 36,
-        "display": "36.0%",
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -834,12 +826,20 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
         "display": "35.7%",
         "matches": 3
+      },
+      {
+        "rank": 3,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 35.7,
+        "display": "35.7%",
+        "matches": 4
       },
       {
         "rank": 6,
@@ -951,8 +951,8 @@
         "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 49.3,
-        "display": "49.3%",
+        "value": 50,
+        "display": "50.0%",
         "matches": 5
       },
       {
@@ -6796,31 +6796,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 50,
-            "accuratePasses": 29,
-            "totalPasses": 33,
-            "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 0,
-            "totalTackles": 1,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 0,
-            "totalLongBalls": 2
+            "possessionPct": 53.7,
+            "accuratePasses": 84,
+            "totalPasses": 91,
+            "shotsOnTarget": 1,
+            "totalShots": 2,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 8
           },
           {
             "team": "England",
-            "possessionPct": 50,
-            "accuratePasses": 25,
-            "totalPasses": 32,
+            "possessionPct": 46.3,
+            "accuratePasses": 67,
+            "totalPasses": 79,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 0,
-            "totalTackles": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
             "accurateCrosses": 0,
             "totalCrosses": 1,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 4
+            "accurateLongBalls": 5,
+            "totalLongBalls": 10
           }
         ]
       }
