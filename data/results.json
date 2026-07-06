@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T02:20:22.428Z",
+    "generatedAt": "2026-07-06T02:30:02.465Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 71,
     "live": 1
@@ -9679,7 +9679,7 @@
       "finishPhase": null,
       "score": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "advanced": null,
       "goals": [
@@ -9706,6 +9706,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Harry Kane",
+          "minute": 60,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -9725,16 +9733,16 @@
       "updatedAt": "2026-07-06T01:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 4,
+          "home": 5,
           "away": 2
         },
         "sot": {
           "home": 3,
-          "away": 3
+          "away": 4
         },
         "shots": {
           "home": 9,
-          "away": 4
+          "away": 5
         },
         "yellow": {
           "home": 0,
@@ -9751,7 +9759,7 @@
         "cornersByHalf": {
           "home": [
             4,
-            0
+            1
           ],
           "away": [
             2,

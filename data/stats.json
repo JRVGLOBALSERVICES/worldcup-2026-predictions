@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T02:20:29.509Z",
+    "generatedAt": "2026-07-06T02:30:05.815Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -35,7 +35,7 @@
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 5,
+        "value": 6,
         "matches": 4
       },
       {
@@ -378,69 +378,69 @@
     "penaltyScored": [
       {
         "rank": 1,
+        "name": "Harry Kane",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 2
+      },
+      {
+        "rank": 2,
         "name": "Awer Mabil",
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Chemsdine Talbi",
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Cristiano Ronaldo",
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Granit Xhaka",
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Gustavo Gómez",
         "team": "Paraguay",
         "flag": "🇵🇾",
         "value": 1
       },
       {
-        "rank": 1,
-        "name": "Harry Kane",
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 1
-      },
-      {
-        "rank": 1,
+        "rank": 2,
         "name": "Hossam Abdelmaguid",
         "team": "Egypt",
         "flag": "🇪🇬",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Ismael Saibari",
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Jackson Irvine",
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Jamal Musiala",
         "team": "Germany",
         "flag": "🇩🇪",
@@ -752,18 +752,18 @@
       },
       {
         "rank": 4,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 68.9,
-        "display": "68.9%",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 69.1,
+        "display": "69.1%",
         "matches": 5
       },
       {
         "rank": 5,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 68.7,
-        "display": "68.7%",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 68.9,
+        "display": "68.9%",
         "matches": 5
       },
       {
@@ -826,14 +826,6 @@
       },
       {
         "rank": 3,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 35.9,
-        "display": "35.9%",
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -841,7 +833,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
@@ -849,7 +841,15 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 5,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 33.3,
+        "display": "33.3%",
+        "matches": 4
+      },
+      {
+        "rank": 5,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -1555,7 +1555,7 @@
       "scorers": [
         {
           "name": "Harry Kane",
-          "value": 5,
+          "value": 6,
           "matches": 4
         },
         {
@@ -6817,31 +6817,31 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 60.9,
-            "accuratePasses": 261,
-            "totalPasses": 285,
+            "possessionPct": 60.2,
+            "accuratePasses": 279,
+            "totalPasses": 307,
             "shotsOnTarget": 3,
             "totalShots": 9,
-            "effectiveTackles": 4,
-            "totalTackles": 12,
+            "effectiveTackles": 5,
+            "totalTackles": 13,
             "accurateCrosses": 5,
-            "totalCrosses": 14,
-            "accurateLongBalls": 12,
-            "totalLongBalls": 23
+            "totalCrosses": 17,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 25
           },
           {
             "team": "England",
-            "possessionPct": 39.1,
-            "accuratePasses": 155,
-            "totalPasses": 185,
-            "shotsOnTarget": 3,
-            "totalShots": 4,
-            "effectiveTackles": 8,
-            "totalTackles": 15,
+            "possessionPct": 39.8,
+            "accuratePasses": 174,
+            "totalPasses": 206,
+            "shotsOnTarget": 4,
+            "totalShots": 5,
+            "effectiveTackles": 9,
+            "totalTackles": 16,
             "accurateCrosses": 1,
             "totalCrosses": 4,
-            "accurateLongBalls": 12,
-            "totalLongBalls": 24
+            "accurateLongBalls": 13,
+            "totalLongBalls": 26
           }
         ]
       }
