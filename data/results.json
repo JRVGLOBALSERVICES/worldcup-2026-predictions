@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T21:00:05.561Z",
+    "generatedAt": "2026-07-06T21:10:03.623Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 72,
-    "live": 1
+    "finished": 73,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -14221,19 +14221,25 @@
       "assistsChecked": true
     },
     "por-esp-2026-07-06": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 0
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
+      "ft90": {
+        "home": 0,
+        "away": 1
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 0,
         "away": 1
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -14256,6 +14262,12 @@
           "player": "Renato Veiga",
           "minute": 90,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Ferran Torres",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-06T19:00:00.000Z",
@@ -14269,12 +14281,12 @@
           "away": 6
         },
         "shots": {
-          "home": 9,
+          "home": 10,
           "away": 15
         },
         "yellow": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -14282,11 +14294,11 @@
         },
         "cards": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "fouls": {
           "home": 9,
-          "away": 12
+          "away": 13
         },
         "cornersByHalf": {
           "home": [
@@ -14330,7 +14342,8 @@
           "Bruno Fernandes": 1,
           "Ferran Torres": 1,
           "Mikel Merino": 1,
-          "Bernardo Silva": 1
+          "Bernardo Silva": 1,
+          "João Neves": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -14358,12 +14371,12 @@
         },
         "tempo": {
           "possession": {
-            "home": 44.1,
-            "away": 55.9
+            "home": 44.5,
+            "away": 55.5
           },
           "passes": {
-            "home": 419,
-            "away": 530
+            "home": 426,
+            "away": 531
           },
           "tackles": {
             "home": 14,
@@ -14383,14 +14396,15 @@
           },
           "interceptions": {
             "home": 7,
-            "away": 4
+            "away": 5
           },
           "clearances": {
             "home": 23,
             "away": 14
           }
         }
-      }
+      },
+      "assistsChecked": true
     }
   }
 }
