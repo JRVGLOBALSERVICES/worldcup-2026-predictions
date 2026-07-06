@@ -1131,6 +1131,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "mex-eng-2026-07-06": {
+      "ht": {
+        "home": 1,
+        "away": 2
+      },
+      "ft": {
+        "home": 2,
+        "away": 3
+      },
+      "ft90": {
+        "home": 2,
+        "away": 3
+      },
+      "finishPhase": "regulation",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4369,6 +4385,95 @@
         {
           "team": "home",
           "player": "Neymar",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "mex-eng-2026-07-06": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Jude Bellingham",
+          "minute": 36,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jude Bellingham",
+          "minute": 38,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Julián Quiñones",
+          "minute": 42,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Harry Kane",
+          "minute": 60,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Raúl Jiménez",
+          "minute": 69,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Declan Rice",
+          "minute": 1,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Jarell Quansah",
+          "minute": 53,
+          "type": "red"
+        },
+        {
+          "team": "away",
+          "player": "Marc Guéhi",
+          "minute": 68,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Jorge Sánchez",
+          "minute": 71,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Nico O'Reilly",
+          "minute": 71,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Johan Vásquez",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Jordan Henderson",
           "minute": 90,
           "type": "yellow"
         }
@@ -14730,6 +14835,53 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-84054834813",
+      "slipNo": "84054834813",
+      "matchId": "por-esp-2026-07-06",
+      "player": "5-game acca",
+      "market": "Accumulator (5) — Player G+A / BTTS",
+      "label": "REAL 1xBet slip 84054834813 (06/07 11:11) — 5-fold @ 25.931, RM100 -> RM2593.14. Por/Esp Mikel Oyarzabal Goals+Assists Over 0.5 (1.95) · USA/Bel Folarin Balogun Goals+Assists Over 0.5 (2.25) · Arg/Egy Lionel Messi Goals+Assists Over 0.5 (1.5) · Sui/Col Both Teams To Score Yes (1.98) · Fra/Mar Both Teams To Score Yes (1.99).",
+      "odds": 25.931,
+      "stake": 100,
+      "placedAt": "06/07 11:11",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "goalsAssistsOver",
+            "player": "Mikel Oyarzabal",
+            "line": 0.5,
+            "odds": 1.95
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "goalsAssistsOver",
+            "player": "Folarin Balogun",
+            "line": 0.5,
+            "odds": 2.25
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "goalsAssistsOver",
+            "player": "Lionel Messi",
+            "line": 0.5,
+            "odds": 1.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "btts",
+            "odds": 1.98
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "btts",
+            "odds": 1.99
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
@@ -19761,33 +19913,33 @@
     },
     "mex-eng-2026-07-06": {
       "corners": {
-        "home": 4,
+        "home": 12,
         "away": 2
       },
       "sot": {
-        "home": 3,
-        "away": 3
+        "home": 5,
+        "away": 5
       },
       "shots": {
-        "home": 9,
-        "away": 4
+        "home": 20,
+        "away": 6
       },
       "yellow": {
-        "home": 0,
-        "away": 1
+        "home": 2,
+        "away": 4
       },
       "red": {
         "home": 0,
         "away": 1
       },
       "cards": {
-        "home": 0,
-        "away": 2
+        "home": 2,
+        "away": 5
       },
       "cornersByHalf": {
         "home": [
           4,
-          0
+          8
         ],
         "away": [
           2,
@@ -19797,16 +19949,18 @@
       "sotByHalf": {
         "home": [
           2,
-          0
+          1
         ],
         "away": [
           1,
-          0
+          1
         ]
       },
       "playerSot": {
         "Raúl Jiménez": 2,
-        "Anthony Gordon": 1
+        "Anthony Gordon": 1,
+        "Álvaro Fidalgo": 1,
+        "Jude Bellingham": 1
       },
       "firstGoalMethod": "header",
       "firstPenalty": null,
@@ -19818,6 +19972,16 @@
           "breakEndMinute": 25,
           "firstActionType": "Shot On Target",
           "firstActionMinute": 26,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 71,
+          "firstActionType": "Yellow Card",
+          "firstActionMinute": 71,
           "isCorner": false,
           "reliable": true
         }
