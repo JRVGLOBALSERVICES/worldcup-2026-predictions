@@ -1473,9 +1473,20 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       <div className="mt-10 space-y-12">
         {(() => {
           const renderDay = (day: DayRow) => {
+          // Order cards by their biggest potential winning (high → low) so the
+          // largest returns sit on top. A card's winning amount = the max payout
+          // across its own non-mirror bets/specials; schedule-only cards (no bet)
+          // fall to 0 and sink to the bottom. Kickoff time breaks ties.
+          const topPotential = (m: MatchRow) => {
+            const rows = [
+              ...m.bets,
+              ...m.specials.filter((s) => !s.mirror),
+            ];
+            return rows.reduce((mx, r) => Math.max(mx, r.potential), 0);
+          };
           const sorted = [...day.matches].sort(
             (a, b) =>
-              rank(live[a.matchId]) - rank(live[b.matchId]) ||
+              topPotential(b) - topPotential(a) ||
               new Date(a.kickoffUTC).getTime() - new Date(b.kickoffUTC).getTime(),
           );
           // Stage badge for the day header: knockout days carry one round (R16 /
@@ -1760,13 +1771,6 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
 }
 
 // Live/half-time first, upcoming next, finished last.
-function rank(live: LiveMatch | undefined): number {
-  if (!live) return 1;
-  if (live.state === "live" || live.state === "halftime") return 0;
-  if (live.state === "finished") return 2;
-  return 1;
-}
-
 // Order bet rows by live status: winning first, then still-on, then losses.
 //   winning  → on track now / already won (green)
 //   still on → mathematically alive, or not yet kicked off (amber/idle)
