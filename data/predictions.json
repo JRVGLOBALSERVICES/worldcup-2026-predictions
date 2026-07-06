@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T18:07:04.816Z",
+    "generatedAt": "2026-07-06T18:10:05.892Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-06T18:07:04.816Z"
+    "modelUpdatedAt": "2026-07-06T18:10:05.891Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -20326,7 +20326,7 @@
           "Model projects Spain to carry more of the ball and the better chances (higher attack rating); Portugal to sit compact and play on the break.",
           "Goal expectancy 0.7–0.8 (Portugal–Spain) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "CONFIRMED. Portugal 4-2-3-1 with Joao Felix in for Rafael Leao (Neto right, Ronaldo up top). Spain 4-3-3 as expected - Yamal/Baena wide, Olmo behind Oyarzabal, Rodri+Pedri in midfield. Nico Williams & Yeremy Pino out injured.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Chances project close (0.7–0.8 xG) — a true coin-flip for territory; small margins decide it.",
         "drawRisk": "High. Low combined xG (1.6) and a 35.7% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
@@ -20337,12 +20337,11 @@
           "Conditions (heat) suit a controlled game Spain can manage."
         ],
         "caseAgainst": [
-          "~28% draw + Portugal's counter and set-piece threat - a classic possession-favourite-vs-compact-block out-xG trap.",
-          "Four clean sheets between them and knockout tension point to a low-scoring 1-1 that drifts to extra time / pens.",
-          "Felix-for-Leao dulls Portugal's counter but Spain still have to break down a deep, aerially strong block (Dias/Veiga)."
+          "35.7% draw + Portugal's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Spain's number may be inflated by one result."
         ],
-        "verdict": "Lean Spain / respect the draw",
-        "changeMind": "Already resolved for lineups - XIs are confirmed. Would now only turn on a live in-game red card or early goal."
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -20369,7 +20368,7 @@
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs now CONFIRMED - Joao Felix in for Leao is the only change; scorer/pen angles are grounded in the real starters."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
@@ -20391,15 +20390,15 @@
         "verdict": "LEAN",
         "call": "Spain to win is a lean, not a lock. Respect the live draw.",
         "read": {
-          "tag": "Lean Spain",
-          "line": "Confirmed XIs out - Spain the ~44% pick (0 conceded all tournament), but a ~28% draw + pens is very much live."
+          "tag": "Pass",
+          "line": "Spain are the model's 36% pick, but a 35.7% draw is very much alive."
         },
         "price": {
           "tag": "Not priced yet",
           "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "3 warnings",
+          "tag": "2 warnings",
           "line": "This is built for a 1-0 or penalties, not a comfortable win."
         }
       },
