@@ -12,6 +12,7 @@ import { LiveEventFX } from "./LiveFX";
 import { diffLegEvents, legKey, type LegSnap, type LegEvent } from "@/lib/legEvents";
 import { SiteNav, type NavKey } from "./SiteNav";
 import { SpotlightCard, type SpotTone } from "./SpotlightCard";
+import MatchSpotlight from "./MatchSpotlight";
 
 /** Keys of legs that just settled this poll — the tracker fills it and every
  * rendered leg row reads it to flash. Empty by default (e.g. the leg grid on
@@ -1203,6 +1204,21 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   // which stay scoped to the parlay legs via legBatch.)
   const fxMatches = useMemo(() => Object.values(live), [live]);
 
+  // Every match Rj actually has action on — a single-leg bet/special OR any leg
+  // of a cross-match parlay — so the spotlight can tag "On your slip".
+  const betMatchIds = useMemo(() => {
+    const s = new Set<string>();
+    for (const d of base.days)
+      for (const m of d.matches) {
+        if (m.bets.length > 0 || m.specials.some((x) => !x.mirror)) s.add(m.matchId);
+        for (const sp of m.specials) {
+          const legs = (sp.grade as { legs?: { matchId?: string }[] } | undefined)?.legs;
+          if (Array.isArray(legs)) for (const l of legs) if (l.matchId) s.add(l.matchId);
+        }
+      }
+    return s;
+  }, [base.days]);
+
   // Every leg's live verdict glyph this poll, keyed by (match · pick). Reuses the
   // exact grader the leg grid renders from (gradeSpecial → parseLegs), so a leg
   // event can never disagree with how the slip is actually settling.
@@ -1406,6 +1422,14 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
 
         {!empty && <SlipBreakdown days={base.days} currency={cur} />}
       </section>
+
+      {/* Match-FX section — fronts the next fixture with a live countdown, then
+       * flips to a live scoreline + inline play-by-play the moment it kicks off.
+       * The full-screen firecracker FX (above) still fires; this is the standing
+       * "what's on / what's next" centrepiece. */}
+      <div className="mt-8">
+        <MatchSpotlight live={live} betMatchIds={betMatchIds} />
+      </div>
 
       {empty && (
         <section className="mt-10 rounded-3xl border border-dashed border-line bg-card/30 px-6 py-16 text-center">

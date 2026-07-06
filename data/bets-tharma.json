@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "owner": "Tharma",
+    "placedAt": "2026-07-06T12:00:00.000Z",
+    "currency": "RM",
+    "unitStake": 100,
+    "note": "Tharma's Portugal v Spain match parlay (BK8). Three legs on one slip — Portugal to qualify, over 1.5 total goals, and both teams to score. All three auto-settle against verified ESPN results once the match is final; the qualify leg settles on advancement (90 min, extra time, or penalties).",
+    "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Legs settle against ESPN's official match result and statistics."
+  },
+  "results": {},
+  "matchEvents": {},
+  "bets": [],
+  "specials": [
+    {
+      "id": "sp-tharma-por-esp-parlay",
+      "slipNo": "THARMA-0707",
+      "matchId": "por-esp-2026-07-06",
+      "player": "Portugal v Spain",
+      "market": "Match Parlay",
+      "label": "Portugal to qualify + Over 1.5 total goals + Both teams to score",
+      "odds": 4.11,
+      "stake": 100,
+      "placedAt": "06/07 20:00",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          { "matchId": "por-esp-2026-07-06", "kind": "qualify", "side": "home" },
+          { "matchId": "por-esp-2026-07-06", "kind": "totalOver", "line": 1.5 },
+          { "matchId": "por-esp-2026-07-06", "kind": "btts" }
+        ]
+      }
+    }
+  ]
+}
