@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T21:10:07.020Z",
+    "generatedAt": "2026-07-06T23:05:24.163Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-06T21:10:07.019Z"
+    "modelUpdatedAt": "2026-07-06T23:05:24.163Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -20415,106 +20415,91 @@
     "usa-bel-2026-07-07": {
       "win": {
         "pick": "United States",
-        "fairOdds": "2.53",
-        "reason": "Model: United States to win at 40% (United States 40% / draw 24% / Belgium 37%). Expected goals 1.6–1.5 from group-stage attack/defence rates (United States 2.2 for / 1.4 against per game, Belgium 1.8 / 1.0). Most likely score 1-1.",
-        "strength": 2
+        "fairOdds": "2.45",
+        "reason": "USA name an unchanged, cohesive XI for the third straight match with Balogun restored to the exact system Pochettino built around him, pressing high through the Adams-McKennie double pivot and transitioning via Pulisic and Tillman. Belgium arrive off a draining extra-time slog with Senegal and field a misfiring De Ketelaere false-nine (Lukaku benched), leaning on De Bruyne's dead-ball delivery and Doku/Trossard counters. Home crowd in Seattle plus fresher legs give USA a genuine edge, but Belgium's counter and KDB's set-pieces keep this a real coin-flip.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "3.97",
+        "fairOdds": "2.35",
         "alt": "1-0",
-        "altOdds": "5.17"
+        "altOdds": "4.80"
       },
       "htft": {
         "pick": "Draw/United States",
-        "fairOdds": "6.33"
+        "fairOdds": "6.50"
       },
       "fullTime": {
         "score": "1-1",
-        "fairOdds": "9.35"
+        "fairOdds": "6.80"
       },
       "scorers": [
         {
           "player": "Folarin Balogun",
           "team": "United States",
-          "fairOdds": "2.16",
-          "banker": true,
-          "note": "3 goals in 3 group games; 46% modelled anytime chance on 1.6 team xG.",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Leads USA with 3 group-stage goals (incl. a double vs Paraguay) and starts through the middle; red card overturned so he is available. Faces a Mechele/Theate pairing that can be run in behind, but Courtois lowers conversion.",
           "strength": 4
+        },
+        {
+          "player": "Christian Pulisic",
+          "team": "United States",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "USA's most-feared attacker from the left, matched against RB Castagne and able to cut inside. A primary shot and set-piece-adjacent threat.",
+          "strength": 3
+        },
+        {
+          "player": "Malik Tillman",
+          "team": "United States",
+          "fairOdds": "5.50",
+          "banker": false,
+          "note": "Buried a curling free-kick vs Bosnia in the R32 and works between the lines as the No.10; late box runs plus a set-piece option.",
+          "strength": 3
         },
         {
           "player": "Leandro Trossard",
           "team": "Belgium",
-          "fairOdds": "3.14",
+          "fairOdds": "5.00",
           "banker": false,
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "fairOdds": "3.14",
-          "banker": false,
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Youri Tielemans",
-          "team": "Belgium",
-          "fairOdds": "3.14",
-          "banker": false,
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Alex Freeman",
-          "team": "United States",
-          "fairOdds": "4.28",
-          "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 1.6 team xG.",
-          "strength": 1
+          "note": "Starts left of Belgium's front three, one of their two most dangerous counter outlets at Freeman/Dest's side. Belgium's toothless attack caps his edge.",
+          "strength": 3
         }
       ],
       "assists": [
         {
-          "player": "Sebastian Berhalter",
+          "player": "Kevin De Bruyne",
+          "team": "Belgium",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Belgium's creative engine and primary set-piece/free-kick deliverer; most chance creation runs through his dead-ball service and through-balls to Doku/Trossard."
+        },
+        {
+          "player": "Christian Pulisic",
           "team": "United States",
-          "fairOdds": "1.90",
-          "banker": true,
-          "note": "1 assist in the group stage; 53% modelled chance to set one up."
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Chief chance-creator from the left for USA; fed Balogun's opener vs Paraguay and drives the transition attack."
         },
         {
-          "player": "Hans Vanaken",
-          "team": "Belgium",
-          "fairOdds": "3.78",
+          "player": "Antonee Robinson",
+          "team": "United States",
+          "fairOdds": "6.50",
           "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
-        },
-        {
-          "player": "Leandro Trossard",
-          "team": "Belgium",
-          "fairOdds": "3.78",
-          "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
-        },
-        {
-          "player": "Nicolas Raskin",
-          "team": "Belgium",
-          "fairOdds": "3.78",
-          "banker": false,
-          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+          "note": "Overlapping LB providing width and cutbacks behind Pulisic; a repeat crossing outlet when USA push Belgium's tired back line deep."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Folarin Balogun",
-        "backup": "Alex Freeman",
-        "note": "Tight model margin (3 pts) raises the odds a spot-kick decides it; Folarin Balogun is United States's group-stage top scorer and likely taker."
+        "taker": "Kevin De Bruyne",
+        "backup": "Youri Tielemans",
+        "note": "De Bruyne is Belgium's designated first penalty taker and set-piece specialist; Tielemans converted the extra-time winner vs Senegal and is the clear backup. USA's likely taker is Pulisic. Transition-heavy game raises box contact but neither side draws penalties at a high rate."
       },
       "lineups": {
         "home": "Matt Freese, Alex Freeman, Chris Richards, Tim Ream, Antonee Robinson, Tyler Adams, Weston McKennie, Sergino Dest, Malik Tillman, Christian Pulisic, Folarin Balogun",
         "away": "Thibaut Courtois, Timothy Castagne, Brandon Mechele, Arthur Theate, Maxim De Cuyper, Youri Tielemans, Kevin De Bruyne, Hans Vanaken, Jérémy Doku, Charles De Ketelaere, Leandro Trossard",
-        "status": "unconfirmed",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -20638,27 +20623,43 @@
       },
       "playerNotes": [
         {
-          "player": "Folarin Balogun",
+          "player": "Tyler Adams",
           "team": "United States",
-          "note": "3 goals in 3 group games; 46% modelled anytime chance on 1.6 team xG."
+          "note": "Anchors the double pivot with McKennie; his ball-winning is the mechanism to disrupt De Bruyne and spring USA's transitions — the key duel is Adams vs KDB."
         },
         {
-          "player": "Leandro Trossard",
+          "player": "Weston McKennie",
+          "team": "United States",
+          "note": "Box-to-box CM alongside Adams; late runs into the area and must track Tielemans/Vanaken to stop Belgium's midfield overloads."
+        },
+        {
+          "player": "Jérémy Doku",
           "team": "Belgium",
-          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG."
+          "note": "Right-wing dribble threat and Belgium's main counter outlet; subbed at 56' vs Senegal (fatigue). Direct test for LB Antonee Robinson."
         },
         {
-          "player": "Sebastian Berhalter",
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "note": "Starts as a misfiring false-nine with Lukaku on the bench; Belgium look toothless in this shape, underwriting the low-scoring/draw risk."
+        },
+        {
+          "player": "Sergiño Dest",
           "team": "United States",
-          "note": "1 assist in the group stage; 53% modelled chance to set one up."
+          "note": "Attacking RB who joins the press and overlaps Freeman; exposed if Trossard isolates him — a two-way swing factor."
+        },
+        {
+          "player": "Thibaut Courtois",
+          "team": "Belgium",
+          "note": "Elite keeper and Belgium's biggest edge — his shot-stopping is why USA's correct-score and win-to-nil lines should be shaded longer despite USA creating the better chances."
         }
       ],
       "confidence": "medium",
-      "strength": 2,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.ussoccer.com/stories/2026/07/usmnt/starting-xi-lineup-notes-vs-belgium-round-of-16-world-cup-seattle",
+        "https://www.rotowire.com/soccer/article/usa-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121161",
+        "https://www.si.com/soccer/usmnt-vs-belgium-world-cup-preview-predictions-lineups-7-6-26",
+        "https://www.foxsports.com/stories/soccer/usa-belgium-world-cup-storylines-projected-lineup-predictions"
       ],
       "pitchReport": {
         "facts": [
