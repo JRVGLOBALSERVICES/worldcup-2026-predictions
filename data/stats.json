@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-05T23:20:06.285Z",
+    "generatedAt": "2026-07-06T01:10:12.110Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -283,6 +283,13 @@
       },
       {
         "rank": 1,
+        "name": "Declan Rice",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Gervane Kastaneer",
         "team": "Curacao",
         "flag": "🇨🇼",
@@ -293,13 +300,6 @@
         "name": "Issa Diop",
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 2
-      },
-      {
-        "rank": 1,
-        "name": "Ivan Perisic",
-        "team": "Croatia",
-        "flag": "🇭🇷",
         "value": 2
       }
     ],
@@ -517,9 +517,9 @@
         "rank": 6,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 89.4,
-        "display": "89.4%",
-        "matches": 4
+        "value": 89.2,
+        "display": "89.2%",
+        "matches": 5
       },
       {
         "rank": 7,
@@ -573,14 +573,6 @@
       },
       {
         "rank": 3,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 64.3,
-        "display": "64.3%",
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "team": "South Korea",
         "flag": "🇰🇷",
         "value": 63,
@@ -588,7 +580,7 @@
         "matches": 2
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Turkiye",
         "flag": "🇹🇷",
         "value": 63,
@@ -596,7 +588,7 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 62.9,
@@ -604,12 +596,20 @@
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 62.1,
         "display": "62.1%",
         "matches": 4
+      },
+      {
+        "rank": 7,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 61.5,
+        "display": "61.5%",
+        "matches": 5
       },
       {
         "rank": 8,
@@ -725,7 +725,7 @@
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 73.1,
         "display": "73.1%",
-        "matches": 4
+        "matches": 5
       },
       {
         "rank": 2,
@@ -823,7 +823,7 @@
         "flag": "🇲🇽",
         "value": 36,
         "display": "36.0%",
-        "matches": 3
+        "matches": 4
       },
       {
         "rank": 4,
@@ -951,9 +951,9 @@
         "rank": 9,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 50,
-        "display": "50.0%",
-        "matches": 4
+        "value": 49.3,
+        "display": "49.3%",
+        "matches": 5
       },
       {
         "rank": 10,
@@ -1592,7 +1592,7 @@
       "yellowCards": [
         {
           "name": "Declan Rice",
-          "value": 1
+          "value": 2
         },
         {
           "name": "Jarell Quansah",
@@ -6787,6 +6787,40 @@
             "totalCrosses": 12,
             "accurateLongBalls": 24,
             "totalLongBalls": 47
+          }
+        ]
+      },
+      "760505": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Mexico",
+            "possessionPct": 50,
+            "accuratePasses": 29,
+            "totalPasses": 33,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 0,
+            "totalTackles": 1,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 2
+          },
+          {
+            "team": "England",
+            "possessionPct": 50,
+            "accuratePasses": 25,
+            "totalPasses": 32,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 0,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 4
           }
         ]
       }
