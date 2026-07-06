@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T01:40:05.835Z",
+    "generatedAt": "2026-07-06T01:50:02.408Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 71,
     "live": 1
@@ -9675,7 +9675,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 2
       },
       "advanced": null,
@@ -9695,6 +9695,14 @@
           "assist": null,
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Julián Quiñones",
+          "minute": 42,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -9708,15 +9716,15 @@
       "updatedAt": "2026-07-06T01:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 3,
           "away": 2
         },
         "sot": {
-          "home": 1,
+          "home": 3,
           "away": 3
         },
         "shots": {
-          "home": 4,
+          "home": 7,
           "away": 3
         },
         "yellow": {
@@ -9733,7 +9741,7 @@
         },
         "cornersByHalf": {
           "home": [
-            2,
+            3,
             0
           ],
           "away": [
@@ -9743,7 +9751,7 @@
         },
         "sotByHalf": {
           "home": [
-            1,
+            2,
             0
           ],
           "away": [
@@ -9752,7 +9760,7 @@
           ]
         },
         "playerSot": {
-          "Raúl Jiménez": 1,
+          "Raúl Jiménez": 2,
           "Anthony Gordon": 1
         },
         "firstGoalMethod": "header",
