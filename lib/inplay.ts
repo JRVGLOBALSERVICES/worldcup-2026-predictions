@@ -188,6 +188,10 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — ${plus(leg.line)} corners in the ${leg.half === 1 ? "1st" : "2nd"} half`;
     case "mostCorners":
       return `${side(leg.side)} — most corners at full-time`;
+    case "cornersTotalOver":
+      return `${m} — Over ${leg.line} corners`;
+    case "cornersTotalUnder":
+      return `${m} — Under ${leg.line} corners`;
     case "playerSotOver":
       return `${leg.player} — ${plus(leg.line)} shots on target`;
     case "firstToScore":
@@ -1355,6 +1359,46 @@ export function inPlayMultiLeg(
           parts.push(`${legLabel} ✗`);
         }
       } else if (mine > theirs) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "cornersTotalOver") {
+      // Full-match corner total over the line — corners only accrue, so it locks
+      // WON the moment the running total clears the line; while still short it's
+      // neutral (either side's corners can get it there); dead at FT if short. No
+      // corners snapshot → neutral.
+      const c = lm.stats?.corners;
+      const total = c ? c.home + c.away : null;
+      if (total != null && total > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && total != null) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "cornersTotalUnder") {
+      // Full-match corner total under the line — corners accrue, so it dies the
+      // moment the running total goes over and only locks WON at the true whistle
+      // still short. While under it's on track; no corners snapshot → neutral.
+      const c = lm.stats?.corners;
+      const total = c ? c.home + c.away : null;
+      if (total != null && total > leg.line) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else if (doneFull && total != null) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (total != null) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
       } else {

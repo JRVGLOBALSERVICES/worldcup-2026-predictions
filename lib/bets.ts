@@ -518,6 +518,14 @@ export type MultiLegCond = { odds?: number } & (
   // accrue for BOTH sides, so the lead can flip any minute — nothing clinches
   // or dies before the FT whistle.
   | { matchId: string; kind: "mostCorners"; side: "home" | "away" }
+  // Full-match corners (both sides) total over/under `line`, from MatchStats.corners
+  // (the running commentary tally). Over accrues → clinches mid-match the moment the
+  // running total clears the line, dead at FT if it stayed short. Under dies the
+  // instant the running total goes over, wins only at FT with the total short. No
+  // stats snapshot → pending for a human. Book corner lines are half lines (10.5),
+  // so no whole-line push arises.
+  | { matchId: string; kind: "cornersTotalOver"; line: number }
+  | { matchId: string; kind: "cornersTotalUnder"; line: number }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -1265,6 +1273,42 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         }
         if (mine > theirs) continue; // strictly more at the whistle → leg won
         return "lost";
+      }
+
+      if (leg.kind === "cornersTotalOver") {
+        // Full-match corner total over `line`, from the running MatchStats tally.
+        // Corners accrue → clinches the moment the total clears the line; at FT a
+        // total still short is dead; no snapshot → pending for a human.
+        const cs = getStats(leg.matchId)?.corners;
+        const tot = cs ? cs.home + cs.away : null;
+        if (tot != null && tot > leg.line) continue; // cleared → won, even mid-match
+        if (finished) {
+          if (tot == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "cornersTotalUnder") {
+        // Full-match corner total under `line`. Corners only accrue, so it dies
+        // the instant the running total goes over; wins only at FT with the total
+        // short; no snapshot at FT → pending for a human.
+        const cs = getStats(leg.matchId)?.corners;
+        const tot = cs ? cs.home + cs.away : null;
+        if (tot != null && tot > leg.line) return "lost"; // busted → dead, even mid-match
+        if (finished) {
+          if (tot == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          continue; // total stayed under → won
+        }
+        pending = true;
+        continue;
       }
 
       if (leg.kind === "firstToScore") {
