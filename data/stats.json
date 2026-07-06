@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T01:50:05.901Z",
+    "generatedAt": "2026-07-06T02:00:07.821Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 75
   },
@@ -745,14 +745,6 @@
       },
       {
         "rank": 4,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 69.2,
-        "display": "69.2%",
-        "matches": 5
-      },
-      {
-        "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 68.9,
@@ -760,12 +752,20 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
         "display": "68.3%",
         "matches": 2
+      },
+      {
+        "rank": 6,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 68.2,
+        "display": "68.2%",
+        "matches": 5
       },
       {
         "rank": 7,
@@ -803,6 +803,14 @@
     "crossCompletion": [
       {
         "rank": 1,
+        "team": "Mexico",
+        "flag": "🇲🇽",
+        "value": 37.8,
+        "display": "37.8%",
+        "matches": 4
+      },
+      {
+        "rank": 2,
         "team": "Curacao",
         "flag": "🇨🇼",
         "value": 37.5,
@@ -810,19 +818,11 @@
         "matches": 2
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 36.7,
         "display": "36.7%",
-        "matches": 4
-      },
-      {
-        "rank": 3,
-        "team": "Mexico",
-        "flag": "🇲🇽",
-        "value": 36.1,
-        "display": "36.1%",
         "matches": 4
       },
       {
@@ -6805,27 +6805,27 @@
         "teamBox": [
           {
             "team": "Mexico",
-            "possessionPct": 61.5,
-            "accuratePasses": 214,
-            "totalPasses": 233,
+            "possessionPct": 62.7,
+            "accuratePasses": 226,
+            "totalPasses": 245,
             "shotsOnTarget": 3,
-            "totalShots": 8,
+            "totalShots": 7,
             "effectiveTackles": 4,
-            "totalTackles": 9,
-            "accurateCrosses": 4,
-            "totalCrosses": 11,
+            "totalTackles": 10,
+            "accurateCrosses": 5,
+            "totalCrosses": 12,
             "accurateLongBalls": 11,
             "totalLongBalls": 20
           },
           {
             "team": "England",
-            "possessionPct": 38.5,
+            "possessionPct": 37.3,
             "accuratePasses": 126,
             "totalPasses": 148,
             "shotsOnTarget": 3,
             "totalShots": 3,
             "effectiveTackles": 7,
-            "totalTackles": 13,
+            "totalTackles": 14,
             "accurateCrosses": 1,
             "totalCrosses": 3,
             "accurateLongBalls": 8,
