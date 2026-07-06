@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T03:00:03.982Z",
+    "generatedAt": "2026-07-06T03:10:04.081Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 71,
-    "live": 1
+    "finished": 72,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -9669,19 +9669,25 @@
       }
     },
     "mex-eng-2026-07-06": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 2
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 2,
+        "away": 3
+      },
+      "ft90": {
+        "home": 2,
+        "away": 3
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 2,
         "away": 3
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -9754,12 +9760,24 @@
           "player": "Nico O'Reilly",
           "minute": 71,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Johan Vásquez",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Jordan Henderson",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-06T01:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 9,
+          "home": 12,
           "away": 2
         },
         "sot": {
@@ -9767,25 +9785,25 @@
           "away": 5
         },
         "shots": {
-          "home": 15,
+          "home": 20,
           "away": 6
         },
         "yellow": {
-          "home": 1,
-          "away": 3
+          "home": 2,
+          "away": 4
         },
         "red": {
           "home": 0,
           "away": 1
         },
         "cards": {
-          "home": 1,
-          "away": 4
+          "home": 2,
+          "away": 5
         },
         "cornersByHalf": {
           "home": [
             4,
-            5
+            8
           ],
           "away": [
             2,

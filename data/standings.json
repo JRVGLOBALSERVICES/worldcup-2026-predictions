@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T03:00:11.491Z",
+    "generatedAt": "2026-07-06T03:10:06.014Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -911,11 +911,11 @@
           ],
           "next": {
             "round": "Quarter-final",
-            "opponent": "R16-4 Winner",
-            "opponentFlag": null,
+            "opponent": "England",
+            "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
             "kickoffUTC": "2026-07-11T21:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -1211,7 +1211,14 @@
             "D",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "Norway",
+            "opponentFlag": "🇳🇴",
+            "kickoffUTC": "2026-07-11T21:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Croatia",
