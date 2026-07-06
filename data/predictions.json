@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T09:05:22.719Z",
+    "generatedAt": "2026-07-06T09:10:06.654Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-06T09:00:40.655Z"
+    "modelUpdatedAt": "2026-07-06T09:10:06.654Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -20069,91 +20069,106 @@
     "por-esp-2026-07-06": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "2.05",
-        "reason": "Spain are unbeaten with four straight clean sheets (0-0 Cape Verde, 4-0 Saudi Arabia, 1-0 Uruguay, 3-0 Austria) and models give them ~64%, but that is far from certainty. Portugal are fully fit yet stuttering — 1-1 vs DR Congo despite dominance, 0-0 vs Colombia, a late-winner scrape past Croatia — and they beat this Spain side on penalties in the 2025 Nations League final after a 2-2 draw. A 90-minute draw against a Portugal side happy to sit deeper and counter carries genuine weight here.",
-        "strength": 3
+        "fairOdds": "2.78",
+        "reason": "Model: Spain to win at 36% (Portugal 28% / draw 36% / Spain 36%). Expected goals 0.7–0.8 from group-stage attack/defence rates (Portugal 1.8 for / 0.8 against per game, Spain 1.6 / 0.6). Most likely score 0-0.",
+        "strength": 1
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.90",
-        "alt": "0-1",
-        "altOdds": "4.60"
+        "fairOdds": "1.99",
+        "alt": "1-0",
+        "altOdds": "3.55"
       },
       "htft": {
         "pick": "Draw/Spain",
-        "fairOdds": "5.00"
+        "fairOdds": "6.95"
       },
       "fullTime": {
-        "score": "1-1",
-        "fairOdds": "6.00"
+        "score": "0-0",
+        "fairOdds": "4.77"
       },
       "scorers": [
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "fairOdds": "2.80",
+          "fairOdds": "2.89",
           "banker": true,
-          "note": "Joint tournament top scorer: 4 goals off 3.19 xG with 8 shots on target, brace in the 3-0 vs Austria, and Spain's first-choice penalty taker.",
-          "strength": 4
+          "note": "4 goals in 4 group games; 35% modelled anytime chance on 0.8 team xG.",
+          "strength": 2
         },
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "fairOdds": "3.40",
+          "fairOdds": "4.12",
           "banker": false,
-          "note": "3 goals (brace vs Uzbekistan) off a match-high 4.15 xG and on penalties — but at 41 he blanked vs DR Congo on 2026-06-17 despite heavy possession; volume shooter, not a banker.",
-          "strength": 3
+          "note": "3 goals in 4 group games; 24% modelled anytime chance on 0.7 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "fairOdds": "7.59",
+          "banker": false,
+          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
         },
         {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "3.80",
+          "fairOdds": "7.59",
           "banker": false,
-          "note": "Spain's main right-side creator and second-choice penalty taker; fitness managed after a spring hamstring layoff but started the knockouts.",
-          "strength": 3
+          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
         },
         {
-          "player": "Bruno Fernandes",
-          "team": "Portugal",
-          "fairOdds": "4.80",
+          "player": "Pedro Porro",
+          "team": "Spain",
+          "fairOdds": "7.59",
           "banker": false,
-          "note": "Portugal's primary set-piece taker (~3 per game), on free kicks and corners and shares penalty duty — likeliest non-Ronaldo route to a Portugal goal.",
-          "strength": 2
+          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Lamine Yamal",
+          "player": "Marc Cucurella",
           "team": "Spain",
-          "fairOdds": "3.30",
+          "fairOdds": "4.45",
           "banker": true,
-          "note": "Chief chance creator on Spain's right; supplies Oyarzabal, the tournament's joint-top scorer."
+          "note": "2 assists in the group stage; 22% modelled chance to set one up."
         },
         {
           "player": "Bruno Fernandes",
           "team": "Portugal",
-          "fairOdds": "4.00",
+          "fairOdds": "6.51",
           "banker": false,
-          "note": "All Portugal dead balls (corners + free kicks) run through him; primary service to Ronaldo."
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
         },
         {
-          "player": "Pedri",
-          "team": "Spain",
-          "fairOdds": "4.50",
+          "player": "João Cancelo",
+          "team": "Portugal",
+          "fairOdds": "6.51",
           "banker": false,
-          "note": "Controls tempo in the double pivot with Rodri; progressive passer into Olmo/Oyarzabal."
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
+        },
+        {
+          "player": "Pedro Neto",
+          "team": "Portugal",
+          "fairOdds": "6.51",
+          "banker": false,
+          "note": "1 assist in the group stage; 15% modelled chance to set one up."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Cristiano Ronaldo",
-        "backup": "Bruno Fernandes",
-        "note": "Portugal: Ronaldo remains first-choice with Bruno Fernandes sharing duties. Spain: Mikel Oyarzabal is first-choice with Lamine Yamal next in line. Elite knockout with VAR and a possible pens finish keeps spot-kick likelihood live."
+        "taker": "Mikel Oyarzabal",
+        "backup": "Álex Baena",
+        "note": "Tight model margin (8 pts) raises the odds a spot-kick decides it; Mikel Oyarzabal is Spain's group-stage top scorer and likely taker."
       },
       "lineups": {
-        "home": "Diogo Costa, Joao Cancelo, Ruben Dias, Renato Veiga, Nuno Mendes, Joao Neves, Vitinha, Pedro Neto, Bruno Fernandes, Rafael Leao, Cristiano Ronaldo",
-        "away": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Lamine Yamal, Dani Olmo, Alex Baena, Mikel Oyarzabal",
-        "status": "probable",
+        "home": "Diogo Costa, João Cancelo, Rúben Dias, Renato Veiga, Nuno Mendes, João Neves, Vitinha, Pedro Neto, Bruno Fernandes, Rafael Leão, Cristiano Ronaldo",
+        "away": "Unai Simón, Pedro Porro, Pau Cubarsí, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Dani Olmo, Lamine Yamal, Mikel Oyarzabal, Álex Baena",
+        "status": "unconfirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -20279,42 +20294,25 @@
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "note": "4 goals off 3.19 xG with 8 shots on target — joint tournament top scorer, first Spaniard since Butragueno to score a knockout-round World Cup brace, and Spain's first-choice penalty taker."
+          "note": "4 goals in 4 group games; 35% modelled anytime chance on 0.8 team xG."
         },
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "note": "3 tournament goals off a match-high 4.15 xG and 7 shots on target, still on penalties at 41 — but blanked vs DR Congo and this is possibly his final World Cup match if Portugal lose."
+          "note": "3 goals in 4 group games; 24% modelled anytime chance on 0.7 team xG."
         },
         {
-          "player": "Bruno Fernandes",
-          "team": "Portugal",
-          "note": "Portugal's primary set-piece taker at roughly 3 per game — free kicks, corners, and shared penalty duty with Ronaldo."
-        },
-        {
-          "player": "Lamine Yamal",
+          "player": "Marc Cucurella",
           "team": "Spain",
-          "note": "returned from an April hamstring injury to start the tournament; Spain's backup penalty taker and key right-wing creator."
-        },
-        {
-          "player": "Rodri",
-          "team": "Spain",
-          "note": "anchors Spain's double pivot with Pedri behind Olmo — Spain have yet to concede a goal in four matches at this World Cup."
-        },
-        {
-          "player": "Pedro Neto",
-          "team": "Portugal",
-          "note": "holds the only genuinely contested Portugal spot, fending off Bernardo Silva and Francisco Conceicao on the right; Martinez otherwise not expected to change a fully fit XI."
+          "note": "2 assists in the group stage; 22% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
+      "strength": 1,
       "sources": [
-        "https://www.espn.com/soccer/story/_/id/49266158/fifa-world-cup-2026-portugal-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://www.squawka.com/us/news/world-cup/match-preview-portugal-vs-spain-07-06-26-world-cup-2026-round-of-16/",
-        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-spain-prediction-team-news-lineups_600650.html",
-        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
-        "https://www.aljazeera.com/sports/2026/7/5/world-cup-portugal-vs-spain-key-talking-points-ronaldo-yamal-prediction"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
@@ -20416,91 +20414,106 @@
     "usa-bel-2026-07-07": {
       "win": {
         "pick": "United States",
-        "fairOdds": "2.75",
-        "reason": "USA arrive in better form (W-W-L-W, group D winners, 2-0 over Bosnia) while Belgium topped Group G despite misfiring with 1-1 and 0-0 draws before the 5-1 NZ win and needed a late comeback to beat Senegal 3-2 AET. Belgium's individual quality and six straight H2H wins (5-2 in March 2026) keep this genuinely tight, and Belgium's slow starts vs USA's fast starts point to a live draw at 90 minutes. Home crowd at Lumen Field is a real but modest edge — this is a coin-flip-plus, not a banker.",
-        "strength": 3
+        "fairOdds": "2.53",
+        "reason": "Model: United States to win at 40% (United States 40% / draw 24% / Belgium 37%). Expected goals 1.6–1.5 from group-stage attack/defence rates (United States 2.2 for / 1.4 against per game, Belgium 1.8 / 1.0). Most likely score 1-1.",
+        "strength": 2
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.40",
+        "fairOdds": "3.97",
         "alt": "1-0",
-        "altOdds": "4.20"
+        "altOdds": "5.17"
       },
       "htft": {
         "pick": "Draw/United States",
-        "fairOdds": "5.50"
+        "fairOdds": "6.33"
       },
       "fullTime": {
         "score": "1-1",
-        "fairOdds": "6.00"
+        "fairOdds": "9.35"
       },
       "scorers": [
         {
           "player": "Folarin Balogun",
           "team": "United States",
-          "fairOdds": "3.00",
+          "fairOdds": "2.16",
           "banker": true,
-          "note": "3 tournament goals and among the World Cup's leading scorers; available after FIFA suspended his controversial red card from the Bosnia game. In-form 24-year-old focal point, the one justifiable banker.",
+          "note": "3 goals in 3 group games; 46% modelled anytime chance on 1.6 team xG.",
           "strength": 4
-        },
-        {
-          "player": "Christian Pulisic",
-          "team": "United States",
-          "fairOdds": "3.60",
-          "banker": false,
-          "note": "Yet to score this tournament but 'due' per multiple previews; registered his 3rd career World Cup assist and carries USA's biggest shot volume from the left.",
-          "strength": 3
-        },
-        {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "fairOdds": "3.75",
-          "banker": false,
-          "note": "2 goals but he's 33 and used as a super-sub — rescued the Egypt draw and sparked the Senegal comeback off the bench. Expected to start on the bench again, so anytime price is live but he is emphatically not a banker.",
-          "strength": 3
         },
         {
           "player": "Leandro Trossard",
           "team": "Belgium",
-          "fairOdds": "4.30",
+          "fairOdds": "3.14",
           "banker": false,
-          "note": "Scored twice in the 5-1 win over New Zealand and passed fit after an injury scare; Belgium's most productive forward in the tournament so far.",
+          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
           "strength": 2
+        },
+        {
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "fairOdds": "3.14",
+          "banker": false,
+          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Youri Tielemans",
+          "team": "Belgium",
+          "fairOdds": "3.14",
+          "banker": false,
+          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Alex Freeman",
+          "team": "United States",
+          "fairOdds": "4.28",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 1.6 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "fairOdds": "3.80",
-          "banker": false,
-          "note": "Still Belgium's chief creator, but was hooked on 56 minutes vs Senegal — his earliest tournament substitution — so form is under scrutiny."
-        },
-        {
-          "player": "Christian Pulisic",
+          "player": "Sebastian Berhalter",
           "team": "United States",
-          "fairOdds": "4.00",
-          "banker": false,
-          "note": "Assisted Balogun vs Paraguay for his 3rd World Cup assist; primary set-piece and creative outlet for the hosts."
+          "fairOdds": "1.90",
+          "banker": true,
+          "note": "1 assist in the group stage; 53% modelled chance to set one up."
         },
         {
-          "player": "Jeremy Doku",
+          "player": "Hans Vanaken",
           "team": "Belgium",
-          "fairOdds": "4.50",
+          "fairOdds": "3.78",
           "banker": false,
-          "note": "Belgium's main dribbling threat down the left, though he was also withdrawn early vs Senegal alongside De Bruyne."
+          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+        },
+        {
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "fairOdds": "3.78",
+          "banker": false,
+          "note": "1 assist in the group stage; 26% modelled chance to set one up."
+        },
+        {
+          "player": "Nicolas Raskin",
+          "team": "Belgium",
+          "fairOdds": "3.78",
+          "banker": false,
+          "note": "1 assist in the group stage; 26% modelled chance to set one up."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Youri Tielemans",
-        "backup": "Christian Pulisic",
-        "note": "Tielemans (captain) scored Belgium's controversial extra-time penalty winner vs Senegal and is their confirmed first-choice; De Bruyne/Lukaku are alternatives if he's off. For USA, Pulisic is the customary taker — no explicit pre-match assignment was published, so treat that as probable rather than confirmed. Knockout stakes plus VAR make a spot-kick a live medium-probability event."
+        "taker": "Folarin Balogun",
+        "backup": "Alex Freeman",
+        "note": "Tight model margin (3 pts) raises the odds a spot-kick decides it; Folarin Balogun is United States's group-stage top scorer and likely taker."
       },
       "lineups": {
-        "home": "Matt Freese, Alex Freeman, Chris Richards, Tim Ream, Antonee Robinson, Tyler Adams, Weston McKennie, Malik Tillman, Sergino Dest, Folarin Balogun, Christian Pulisic",
-        "away": "Thibaut Courtois, Timothy Castagne, Brandon Mechele, Arthur Theate, Maxim De Cuyper, Youri Tielemans, Hans Vanaken, Kevin De Bruyne, Leandro Trossard, Jeremy Doku, Charles De Ketelaere",
-        "status": "probable",
+        "home": "Matt Freese, Alex Freeman, Chris Richards, Tim Ream, Antonee Robinson, Tyler Adams, Weston McKennie, Sergino Dest, Malik Tillman, Christian Pulisic, Folarin Balogun",
+        "away": "Thibaut Courtois, Timothy Castagne, Brandon Mechele, Arthur Theate, Maxim De Cuyper, Youri Tielemans, Kevin De Bruyne, Hans Vanaken, Jérémy Doku, Charles De Ketelaere, Leandro Trossard",
+        "status": "unconfirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -20626,42 +20639,25 @@
         {
           "player": "Folarin Balogun",
           "team": "United States",
-          "note": "3 goals this World Cup (brace vs Paraguay); his red card vs Bosnia was suspended by FIFA so he leads the line — the tournament's breakout USMNT star."
+          "note": "3 goals in 3 group games; 46% modelled anytime chance on 1.6 team xG."
         },
         {
-          "player": "Christian Pulisic",
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "note": "2 goals in 4 group games; 32% modelled anytime chance on 1.5 team xG."
+        },
+        {
+          "player": "Sebastian Berhalter",
           "team": "United States",
-          "note": "no goal yet but a 3rd career World Cup assist; multiple previews tag him as 'due' and he takes USA's key set pieces and likely penalties."
-        },
-        {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "note": "33-year-old super-sub with 2 goals — rescued the Egypt draw and sparked the Senegal comeback from the bench; expected to start on the bench again with De Ketelaere as false nine despite CDK's 0 goals in 3 starts."
-        },
-        {
-          "player": "Youri Tielemans",
-          "team": "Belgium",
-          "note": "Belgium captain and first-choice penalty taker; converted the controversial extra-time winner vs Senegal, the latest goal in World Cup history per Opta."
-        },
-        {
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "note": "subbed off on 56 minutes vs Senegal — his earliest tournament substitution — with Belgium's attack described as misfiring through the group stage (1-1 Egypt, 0-0 Iran)."
-        },
-        {
-          "player": "Zeno Debast",
-          "team": "Belgium",
-          "note": "leg injury has sidelined him for the entire tournament and he remains a doubt, so Theate–Mechele continue as Belgium's centre-back pairing; for USA, Mark McKenzie (foot) and Cristian Roldan (muscle) need assessment."
+          "note": "1 assist in the group stage; 53% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
+      "strength": 2,
       "sources": [
-        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/usa-vs-belgium-prediction-team-news-lineups_600664.html",
-        "https://www.rotowire.com/soccer/article/usa-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121161",
-        "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
-        "https://www.espn.com/soccer/story/_/id/48940468/usa-world-cup-2026-schedule-fixtures-results-scores-group-d-how-watch-news-analysis-injuries",
-        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
