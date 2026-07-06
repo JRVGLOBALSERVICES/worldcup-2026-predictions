@@ -14882,6 +14882,52 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-84055410791",
+      "slipNo": "84055410791",
+      "matchId": "por-esp-2026-07-06",
+      "player": "5-game acca",
+      "market": "Accumulator (5) — Anytime Scorer / Total Over",
+      "label": "REAL 1xBet slip 84055410791 (06/07 11:39) — 5-fold @ 62.491, RM50 -> RM3124.58. Por/Esp Cristiano Ronaldo To Score At Any Time Yes (2.9) · USA/Bel Folarin Balogun To Score At Any Time Yes (2.5) · Arg/Egy Lionel Messi To Score At Any Time Yes (1.82) · Sui/Col Breel Embolo To Score At Any Time Yes (3.7) · Fra/Mar Total Over 1.5 (1.28).",
+      "odds": 62.491,
+      "stake": 50,
+      "placedAt": "06/07 11:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scored",
+            "player": "Cristiano Ronaldo",
+            "odds": 2.9
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scored",
+            "player": "Folarin Balogun",
+            "odds": 2.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scored",
+            "player": "Lionel Messi",
+            "odds": 1.82
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "scored",
+            "player": "Breel Embolo",
+            "odds": 3.7
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalOver",
+            "line": 1.5,
+            "odds": 1.28
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
