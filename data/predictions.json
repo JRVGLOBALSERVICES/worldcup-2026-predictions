@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T16:20:10.220Z",
+    "generatedAt": "2026-07-06T18:07:04.816Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-06T16:20:10.220Z"
+    "modelUpdatedAt": "2026-07-06T18:07:04.816Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -20069,106 +20069,91 @@
     "por-esp-2026-07-06": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "2.78",
-        "reason": "Model: Spain to win at 36% (Portugal 28% / draw 36% / Spain 36%). Expected goals 0.7–0.8 from group-stage attack/defence rates (Portugal 1.8 for / 0.8 against per game, Spain 1.6 / 0.6). Most likely score 0-0.",
+        "fairOdds": "2.20",
+        "reason": "Confirmed XIs are out. Spain (4-3-3: Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri; Yamal, Olmo, Baena; Oyarzabal) are unbeaten with ZERO goals conceded all tournament and Rodri fit - the model favourite at ~44% (Portugal ~28% / draw ~28%). Portugal swap in Joao Felix for Rafael Leao, trading transition pace for link-play, so their counter is a shade less lethal. But ~44% is not certainty: a ~28% draw plus extra-time/pens is very much alive, and possession-Spain vs a countering Portugal is a real out-xG trap. Lean Spain, respect the draw.",
         "strength": 1
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "1.99",
+        "fairOdds": "1.95",
         "alt": "1-0",
-        "altOdds": "3.55"
+        "altOdds": "3.60"
       },
       "htft": {
         "pick": "Draw/Spain",
-        "fairOdds": "6.95"
+        "fairOdds": "6.40"
       },
       "fullTime": {
-        "score": "0-0",
-        "fairOdds": "4.77"
+        "score": "1-1",
+        "fairOdds": "6.00"
       },
       "scorers": [
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "fairOdds": "2.89",
+          "fairOdds": "2.60",
           "banker": true,
-          "note": "4 goals in 4 group games; 35% modelled anytime chance on 0.8 team xG.",
+          "note": "Spain's spearhead and penalty taker - tournament-leading 4 goals (braces v Saudi & Austria) plus an assist. In form and on spot-kicks; the strongest single scorer on the card.",
           "strength": 2
         },
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "fairOdds": "4.12",
+          "fairOdds": "3.30",
           "banker": false,
-          "note": "3 goals in 4 group games; 24% modelled anytime chance on 0.7 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Álex Baena",
-          "team": "Spain",
-          "fairOdds": "7.59",
-          "banker": false,
-          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "note": "Confirmed to start and on penalties/free-kicks, 3 goals this WC - but at 41 he is a low-touch poacher, not a banker; against a Spain side yet to concede, his cleanest route is a set-piece or a spot-kick.",
           "strength": 1
         },
         {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "7.59",
+          "fairOdds": "3.50",
           "banker": false,
-          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "note": "Starts on the right off 141 group minutes back from a hamstring but looked sharp v Austria; his duel with Nuno Mendes is a game-swinger and he carries a real anytime threat cutting inside.",
           "strength": 1
         },
         {
-          "player": "Pedro Porro",
+          "player": "Dani Olmo",
           "team": "Spain",
-          "fairOdds": "7.59",
+          "fairOdds": "4.90",
           "banker": false,
-          "note": "1 goal in 1 group game; 13% modelled anytime chance on 0.8 team xG.",
+          "note": "Between-the-lines creator arriving late into the box behind Oyarzabal; Spain's second-line runner and a live anytime option if the game opens.",
           "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Marc Cucurella",
+          "player": "Alex Baena",
           "team": "Spain",
-          "fairOdds": "4.45",
+          "fairOdds": "4.30",
           "banker": true,
-          "note": "2 assists in the group stage; 22% modelled chance to set one up."
+          "note": "Spain's primary free-kick and corner taker plus open-play creator from the left - highest set-piece volume in the XI, their best assist route against a packed box."
+        },
+        {
+          "player": "Lamine Yamal",
+          "team": "Spain",
+          "fairOdds": "5.20",
+          "banker": false,
+          "note": "Right-wing chance creator; his deliveries and cut-backs for Oyarzabal are Spain's sharpest open-play supply."
         },
         {
           "player": "Bruno Fernandes",
           "team": "Portugal",
-          "fairOdds": "6.51",
+          "fairOdds": "5.80",
           "banker": false,
-          "note": "1 assist in the group stage; 15% modelled chance to set one up."
-        },
-        {
-          "player": "João Cancelo",
-          "team": "Portugal",
-          "fairOdds": "6.51",
-          "banker": false,
-          "note": "1 assist in the group stage; 15% modelled chance to set one up."
-        },
-        {
-          "player": "Pedro Neto",
-          "team": "Portugal",
-          "fairOdds": "6.51",
-          "banker": false,
-          "note": "1 assist in the group stage; 15% modelled chance to set one up."
+          "note": "Portugal's creative hub and corner taker, backup penalty/FK man - their likeliest provider, especially from the set-piece deliveries that are Portugal's best goal path here."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Mikel Oyarzabal",
-        "backup": "Álex Baena",
-        "note": "Tight model margin (8 pts) raises the odds a spot-kick decides it; Mikel Oyarzabal is Spain's group-stage top scorer and likely taker."
+        "taker": "Mikel Oyarzabal (Spain) / Cristiano Ronaldo (Portugal)",
+        "backup": "Alex Baena (Spain) / Bruno Fernandes (Portugal)",
+        "note": "An in-game spot-kick is a medium shout, but with four clean sheets between them and a tight knockout the bigger call is a SHOOTOUT - genuinely live at ~23%. Oyarzabal (Spain) and Ronaldo (Portugal) are the confirmed primary takers."
       },
       "lineups": {
-        "home": "Diogo Costa, João Cancelo, Rúben Dias, Renato Veiga, Nuno Mendes, João Neves, Vitinha, Pedro Neto, Bruno Fernandes, Rafael Leão, Cristiano Ronaldo",
-        "away": "Unai Simón, Pedro Porro, Pau Cubarsí, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Dani Olmo, Lamine Yamal, Mikel Oyarzabal, Álex Baena",
-        "status": "unconfirmed",
+        "home": "Diogo Costa, Joao Cancelo, Ruben Dias, Renato Veiga, Nuno Mendes, Joao Neves, Vitinha, Pedro Neto, Bruno Fernandes, Joao Felix, Cristiano Ronaldo",
+        "away": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Lamine Yamal, Dani Olmo, Alex Baena, Mikel Oyarzabal",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -20179,12 +20164,12 @@
             },
             {
               "num": 20,
-              "name": "João Cancelo",
+              "name": "Joao Cancelo",
               "pos": "RB"
             },
             {
               "num": 3,
-              "name": "Rúben Dias",
+              "name": "Ruben Dias",
               "pos": "CD-R"
             },
             {
@@ -20199,7 +20184,7 @@
             },
             {
               "num": 21,
-              "name": "João Neves",
+              "name": "Joao Neves",
               "pos": "DM-R"
             },
             {
@@ -20218,8 +20203,8 @@
               "pos": "AM"
             },
             {
-              "num": 15,
-              "name": "Rafael Leão",
+              "num": 11,
+              "name": "Joao Felix",
               "pos": "AM-L"
             },
             {
@@ -20234,7 +20219,7 @@
           "players": [
             {
               "num": 23,
-              "name": "Unai Simón",
+              "name": "Unai Simon",
               "pos": "G"
             },
             {
@@ -20244,7 +20229,7 @@
             },
             {
               "num": 22,
-              "name": "Pau Cubarsí",
+              "name": "Pau Cubarsi",
               "pos": "CB-R"
             },
             {
@@ -20265,11 +20250,6 @@
             {
               "num": 20,
               "name": "Pedri",
-              "pos": "CM-R"
-            },
-            {
-              "num": 10,
-              "name": "Dani Olmo",
               "pos": "CM-L"
             },
             {
@@ -20279,40 +20259,61 @@
             },
             {
               "num": 21,
-              "name": "Mikel Oyarzabal",
-              "pos": "ST"
+              "name": "Dani Olmo",
+              "pos": "AM"
             },
             {
-              "num": 15,
-              "name": "Álex Baena",
+              "num": 10,
+              "name": "Alex Baena",
               "pos": "LW"
+            },
+            {
+              "num": 9,
+              "name": "Mikel Oyarzabal",
+              "pos": "F"
             }
           ]
         }
       },
       "playerNotes": [
         {
+          "player": "Joao Felix",
+          "team": "Portugal",
+          "note": "THE lineup change - starts on the left for Rafael Leao. A tactical call by Martinez (pressing/link-play over Leao's direct pace), which makes Portugal's left a touch less transition-lethal; Leao now a pace weapon off the bench late."
+        },
+        {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "note": "4 goals in 4 group games; 35% modelled anytime chance on 0.8 team xG."
+          "note": "Confirmed to start up top and on penalties; tournament-leading 4 goals plus an assist - Spain's clearest match-winner."
         },
         {
           "player": "Cristiano Ronaldo",
           "team": "Portugal",
-          "note": "3 goals in 4 group games; 24% modelled anytime chance on 0.7 team xG."
+          "note": "Starts and fit despite a bloody knee v Croatia; 3 WC goals and primary pen/FK taker - but 41 and a low-touch poacher, so a non-banker against a Spain side yet to concede."
         },
         {
-          "player": "Marc Cucurella",
+          "player": "Rodri",
           "team": "Spain",
-          "note": "2 assists in the group stage; 22% modelled chance to set one up."
+          "note": "Fit and starting at the base of midfield - Spain are 'a different team' with him; his control vs Neves/Vitinha decides the possession share."
+        },
+        {
+          "player": "Lamine Yamal",
+          "team": "Spain",
+          "note": "Starts right off limited minutes (hamstring-managed) but sharp v Austria; his duel with Nuno Mendes is the marquee matchup."
+        },
+        {
+          "player": "Nuno Mendes",
+          "team": "Portugal",
+          "note": "Elite 1v1 defender tasked with Yamal while also joining Portugal's attacking left with Felix - the hinge of both boxes."
         }
       ],
       "confidence": "medium",
       "strength": 1,
       "sources": [
+        "Confirmed XIs: World Soccer Talk live coverage + Last Word on Sports (6 Jul 2026)",
+        "Team news: Sports Mole / Yahoo Sports Portugal-Spain previews",
         "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Scorer/penalty duty: live team-news research on the confirmed starters"
       ],
       "pitchReport": {
         "facts": [
@@ -20325,7 +20326,7 @@
           "Model projects Spain to carry more of the ball and the better chances (higher attack rating); Portugal to sit compact and play on the break.",
           "Goal expectancy 0.7–0.8 (Portugal–Spain) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "CONFIRMED. Portugal 4-2-3-1 with Joao Felix in for Rafael Leao (Neto right, Ronaldo up top). Spain 4-3-3 as expected - Yamal/Baena wide, Olmo behind Oyarzabal, Rodri+Pedri in midfield. Nico Williams & Yeremy Pino out injured.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Chances project close (0.7–0.8 xG) — a true coin-flip for territory; small margins decide it.",
         "drawRisk": "High. Low combined xG (1.6) and a 35.7% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
@@ -20336,11 +20337,12 @@
           "Conditions (heat) suit a controlled game Spain can manage."
         ],
         "caseAgainst": [
-          "35.7% draw + Portugal's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Spain's number may be inflated by one result."
+          "~28% draw + Portugal's counter and set-piece threat - a classic possession-favourite-vs-compact-block out-xG trap.",
+          "Four clean sheets between them and knockout tension point to a low-scoring 1-1 that drifts to extra time / pens.",
+          "Felix-for-Leao dulls Portugal's counter but Spain still have to break down a deep, aerially strong block (Dias/Veiga)."
         ],
-        "verdict": "Pass",
-        "changeMind": "A confirmed XI resting Mikel Oyarzabal, or news the underdog is missing a defensive linchpin."
+        "verdict": "Lean Spain / respect the draw",
+        "changeMind": "Already resolved for lineups - XIs are confirmed. Would now only turn on a live in-game red card or early goal."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -20366,8 +20368,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs now CONFIRMED - Joao Felix in for Leao is the only change; scorer/pen angles are grounded in the real starters."
           },
           {
             "name": "Ignoring the draw",
@@ -20380,7 +20382,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 3,
+        "trapsTripped": 2,
         "edge": "edge-leaning",
         "verdict": "LEAN",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
@@ -20389,8 +20391,8 @@
         "verdict": "LEAN",
         "call": "Spain to win is a lean, not a lock. Respect the live draw.",
         "read": {
-          "tag": "Pass",
-          "line": "Spain are the model's 36% pick, but a 35.7% draw is very much alive."
+          "tag": "Lean Spain",
+          "line": "Confirmed XIs out - Spain the ~44% pick (0 conceded all tournament), but a ~28% draw + pens is very much live."
         },
         "price": {
           "tag": "Not priced yet",
