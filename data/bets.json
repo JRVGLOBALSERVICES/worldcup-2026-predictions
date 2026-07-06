@@ -1147,6 +1147,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "por-esp-2026-07-06": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
+      "ft90": {
+        "home": 0,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4474,6 +4490,39 @@
         {
           "team": "away",
           "player": "Jordan Henderson",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ]
+    },
+    "por-esp-2026-07-06": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Mikel Merino",
+          "minute": 90,
+          "assist": "Ferran Torres",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Bernardo Silva",
+          "minute": 88,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Renato Veiga",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Ferran Torres",
           "minute": 90,
           "type": "yellow"
         }
@@ -25080,12 +25129,12 @@
         "away": 6
       },
       "shots": {
-        "home": 9,
+        "home": 10,
         "away": 15
       },
       "yellow": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -25093,11 +25142,11 @@
       },
       "cards": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "fouls": {
         "home": 9,
-        "away": 12
+        "away": 13
       },
       "cornersByHalf": {
         "home": [
@@ -25141,7 +25190,8 @@
         "Bruno Fernandes": 1,
         "Ferran Torres": 1,
         "Mikel Merino": 1,
-        "Bernardo Silva": 1
+        "Bernardo Silva": 1,
+        "João Neves": 1
       },
       "firstGoalMethod": "shot",
       "firstPenalty": null,
@@ -25169,12 +25219,12 @@
       },
       "tempo": {
         "possession": {
-          "home": 44.1,
-          "away": 55.9
+          "home": 44.5,
+          "away": 55.5
         },
         "passes": {
-          "home": 419,
-          "away": 530
+          "home": 426,
+          "away": 531
         },
         "tackles": {
           "home": 14,
@@ -25194,7 +25244,7 @@
         },
         "interceptions": {
           "home": 7,
-          "away": 4
+          "away": 5
         },
         "clearances": {
           "home": 23,
