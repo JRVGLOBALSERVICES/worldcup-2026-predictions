@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import type { BetStatus, SpecialGrade } from "@/lib/bets";
@@ -9,8 +9,15 @@ import fixturesJson from "@/data/fixtures.json";
 import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, realisedLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { LiveEventFX } from "./LiveFX";
+import { diffLegEvents, legKey, type LegSnap, type LegEvent } from "@/lib/legEvents";
 import { SiteNav, type NavKey } from "./SiteNav";
 import { SpotlightCard, type SpotTone } from "./SpotlightCard";
+
+/** Keys of legs that just settled this poll — the tracker fills it and every
+ * rendered leg row reads it to flash. Empty by default (e.g. the leg grid on
+ * a shared card outside the live tracker). */
+const LegFlashContext = createContext<Set<string>>(new Set());
+const useLegFlash = () => useContext(LegFlashContext);
 
 /** Map a live verdict to the glass card's glow + edge tone: green when it's
  *  winning/won, amber while it's still alive / not started / refunded, red once
@@ -489,11 +496,11 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
  *  tally · verdict glyph), living inside its match panel beneath the score line.
  *  A player leg ("Mbappé — 2+ goals") carries that player's live goal/assist
  *  tally so a scorer bet reads its own match involvement inline. */
-function LegLine({ leg, lm }: { leg: { label: string; glyph: string; player?: string }; lm: LiveMatch | undefined }) {
+function LegLine({ leg, lm, flash }: { leg: { label: string; glyph: string; player?: string }; lm: LiveMatch | undefined; flash?: boolean }) {
   const g = LEG_GLYPH[leg.glyph] ?? LEG_GLYPH["—"];
   const tally = leg.player && lm && lm.state !== "scheduled" ? playerTally(lm, leg.player) : null;
   return (
-    <li className="leg-line flex items-center gap-2.5 px-3.5 py-2 transition-colors hover:bg-white/[0.03]">
+    <li className={`leg-line flex items-center gap-2.5 px-3.5 py-2 transition-colors hover:bg-white/[0.03] ${flash ? "leg-flash" : ""}`}>
       <span className={`size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
       <span className="min-w-0 flex-1 break-words text-[0.82rem] leading-snug text-ink">
         {sentenceCase(leg.label)}
@@ -526,12 +533,20 @@ function MatchGroup({
   const meta = matchMeta(matchId);
   const lm = live[matchId];
   const hot = lm?.state === "live" || lm?.state === "halftime";
+  const flashed = useLegFlash();
   return (
     <div className={`match-panel ${hot ? "match-panel--hot" : ""}`}>
       {withHeader && <MatchScoreLine matchId={matchId} live={live} />}
       <ul>
         {legs.map((l, i) => (
-          <LegLine key={i} leg={{ ...l, label: withHeader ? stripMatchPrefix(l.label, meta) : l.label }} lm={lm} />
+          <LegLine
+            key={i}
+            // Flash key uses the UNSTRIPPED label — the same one the snapshot in
+            // LiveTracker keys on — so the row that flashes is the leg that settled.
+            flash={flashed.has(legKey(matchId, l.label))}
+            leg={{ ...l, label: withHeader ? stripMatchPrefix(l.label, meta) : l.label }}
+            lm={lm}
+          />
         ))}
       </ul>
     </div>
@@ -1170,6 +1185,94 @@ function Performance({ rows }: { rows: InPlay[] }) {
 // ─────────────────────────────────────────────────────────────────────────────
 export default function LiveTracker({ base, activeNav }: { base: TrackerBase; activeNav: NavKey }) {
   const { live, updatedAt, pollFast, nextRefreshAt, refreshing, refresh } = useLive(base);
+
+  // ── Explicit parlay ↔ live-event link ──────────────────────────────────────
+  // The match FX (goals, chips) fire off the raw feed. THIS ties them to the
+  // slip: which fixtures Rj actually has action on, and — the real link — the
+  // moment a live event settles a specific leg.
+
+  // Fixtures any non-mirror bet/leg touches. The FX overlay is scoped to these,
+  // so firecrackers + chips fire only for matches on the slip, not every game
+  // in the tournament that happens to be live.
+  const slipMatchIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const d of base.days)
+      for (const m of d.matches) {
+        if (m.bets.length) ids.add(m.matchId);
+        for (const s of m.specials) {
+          if (s.mirror) continue;
+          const legs = (s.grade as { legs?: { matchId?: string }[] } | undefined)?.legs;
+          if (legs?.length) legs.forEach((l) => l.matchId && ids.add(l.matchId));
+          else ids.add(m.matchId);
+        }
+      }
+    return ids;
+  }, [base.days]);
+  const fxMatches = useMemo(
+    () => Object.values(live).filter((m) => slipMatchIds.has(m.matchId)),
+    [live, slipMatchIds],
+  );
+
+  // Every leg's live verdict glyph this poll, keyed by (match · pick). Reuses the
+  // exact grader the leg grid renders from (gradeSpecial → parseLegs), so a leg
+  // event can never disagree with how the slip is actually settling.
+  const legSnapshot = useMemo(() => {
+    const snap: Record<string, LegSnap> = {};
+    for (const d of base.days)
+      for (const m of d.matches)
+        for (const s of m.specials) {
+          if (s.mirror || !isAccaRow(s)) continue;
+          const ip = gradeSpecial(s, live[m.matchId], live);
+          const parsed = parseLegs(ip.note);
+          if (!parsed) continue;
+          const rawLegs = ((s.grade as { legs?: { matchId?: string }[] }).legs) ?? [];
+          if (rawLegs.length !== parsed.length) continue; // can't align → skip
+          for (let i = 0; i < parsed.length; i++) {
+            const mid = rawLegs[i].matchId;
+            if (!mid) continue;
+            // A leg settling is a LIVE moment only while its match is in play. Gating
+            // here means a leg event fires when a goal/whistle flips it mid-match —
+            // not on page load, where every historical leg's not-started→settled
+            // hydration would otherwise replay as a burst of stale "leg dead" chips.
+            const st = live[mid]?.state;
+            if (st !== "live" && st !== "halftime") continue;
+            snap[legKey(mid, parsed[i].label)] = {
+              matchId: mid,
+              label: parsed[i].label,
+              glyph: parsed[i].glyph,
+              slipNo: s.slipNo,
+              market: s.market,
+            };
+          }
+        }
+    return snap;
+  }, [base.days, live]);
+
+  // Diff poll-to-poll → flash the settled rows + fire leg chips through the FX.
+  const prevLegSnap = useRef<Record<string, LegSnap> | null>(null);
+  const [flashedLegs, setFlashedLegs] = useState<Set<string>>(() => new Set());
+  const [legBatch, setLegBatch] = useState<{ id: number; events: LegEvent[] }>({ id: 0, events: [] });
+  useEffect(() => {
+    const prev = prevLegSnap.current;
+    prevLegSnap.current = legSnapshot;
+    const evs = diffLegEvents(prev, legSnapshot);
+    if (!evs.length) return;
+    const keys = evs.map((e) => legKey(e.matchId, e.label));
+    setFlashedLegs((cur) => {
+      const n = new Set(cur);
+      keys.forEach((k) => n.add(k));
+      return n;
+    });
+    setLegBatch((b) => ({ id: b.id + 1, events: evs }));
+    const t = setTimeout(() => {
+      setFlashedLegs((cur) => {
+        const n = new Set(cur);
+        keys.forEach((k) => n.delete(k));
+        return n;
+      });
+    }, 1800);
+    return () => clearTimeout(t);
+  }, [legSnapshot]);
   const cur = base.meta.currency;
   const totalToday = base.counts.score + base.counts.props;
   const totalSeason = base.season.counts.score + base.season.counts.props;
@@ -1234,10 +1337,12 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   const pnlValue = `${livePnl > 0 ? "+" : ""}${money(livePnl, cur)}`;
 
   return (
+    <LegFlashContext.Provider value={flashedLegs}>
     <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
-      {/* Live-event reactions — firecrackers on goals, event chips for the rest,
-       * across every fixture this tracker is watching. */}
-      <LiveEventFX matches={Object.values(live)} />
+      {/* Live-event reactions, SCOPED to the fixtures on the slip: firecrackers on
+       * goals + tempo chips, plus leg-settlement chips the moment a live event
+       * clinches / kills / half-covers a specific parlay leg (legBatch). */}
+      <LiveEventFX matches={fxMatches} legBatch={legBatch} />
       <header className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
         <Link href="/" className="flex w-fit items-center gap-2.5">
           <span className="grid size-8 place-items-center rounded-lg bg-acid font-display text-lg font-black text-pitch">⚽</span>
@@ -1614,6 +1719,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         <p className="mt-6 font-mono text-[0.66rem] uppercase tracking-[0.18em]">Matchday Edge · {base.meta.owner}&rsquo;s slip · fun-money only</p>
       </footer>
     </main>
+    </LegFlashContext.Provider>
   );
 }
 

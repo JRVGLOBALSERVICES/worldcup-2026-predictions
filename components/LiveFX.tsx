@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { LiveMatch } from "@/lib/live";
 import { diffLiveEvents, type LiveEvent } from "@/lib/liveEvents";
+import type { LegEvent } from "@/lib/legEvents";
 import { fixtures } from "@/lib/data";
 import { useLive, useLiveMatch } from "./LiveProvider";
 
@@ -29,6 +30,23 @@ const TEAM = {
 } as const;
 const AMBER = "var(--color-amber)";
 const ROSE = "var(--color-rose)";
+
+/** Leg-settlement chip vocabulary — the EXPLICIT parlay link. When a live event
+ * settles a leg on your slip, this is what says so ("⚡ Leg clinched — Over 1.25").
+ * Distinct from the match chips: a bolder glyph + a verdict-coloured edge, and
+ * always the pick label so you know exactly which leg moved. */
+const LEG_CHIP: Record<
+  LegEvent["kind"],
+  { glyph: string; label: string; edge: string }
+> = {
+  clinched: { glyph: "⚡", label: "Leg clinched", edge: "var(--color-acid)" },
+  dead: { glyph: "✗", label: "Leg dead", edge: ROSE },
+  halfWin: { glyph: "½", label: "Leg half-covered", edge: AMBER },
+  halfLoss: { glyph: "½", label: "Leg half-down", edge: AMBER },
+  void: { glyph: "↺", label: "Leg void · refunded", edge: AMBER },
+};
+
+const sentence = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 
 const CHIP: Record<
   Exclude<LiveEvent["kind"], "goal">,
@@ -158,7 +176,10 @@ function useFireworks() {
 }
 
 /* ── Overlay state ───────────────────────────────────────────────────────── */
-type Chip = { id: number; ev: LiveEvent; flags: FlagPair; out: boolean };
+type Chip = { id: number; out: boolean } & (
+  | { ev: LiveEvent; flags: FlagPair; leg?: undefined }
+  | { leg: LegEvent; ev?: undefined; flags?: undefined }
+);
 type Banner = {
   id: number;
   team: "home" | "away";
@@ -174,12 +195,40 @@ let nextId = 1;
  * per-match previous snapshot, diffs on each poll, and renders one shared
  * overlay (banner top, chips bottom, fireworks full-screen).
  */
-export function LiveEventFX({ matches }: { matches: LiveMatch[] }) {
+export function LiveEventFX({
+  matches,
+  legBatch,
+}: {
+  matches: LiveMatch[];
+  /** Freshly-diffed leg settlements from the tracker. `id` bumps only when a
+   * new batch arrives, so re-renders never re-announce a stale batch. */
+  legBatch?: { id: number; events: LegEvent[] };
+}) {
   const prev = useRef<Record<string, LiveMatch>>({});
   const [chips, setChips] = useState<Chip[]>([]);
   const [banner, setBanner] = useState<Banner | null>(null);
   const bannerTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { canvasRef, burst, active } = useFireworks();
+
+  // Leg-settlement chips — the explicit slip link. Pushed onto the same bottom
+  // chip stack as match events, styled distinctly (LEG_CHIP). A leg dying gets a
+  // longer dwell than an on-target chip: it's money, not tempo. One callback for
+  // the whole batch (mirrors `announce`) so the effect calls setState once.
+  const showLegChips = useCallback((legs: LegEvent[]) => {
+    for (const leg of legs) {
+      const chip: Chip = { id: nextId++, leg, out: false };
+      setChips((cs) => [...cs.slice(-4), chip]);
+      setTimeout(() => setChips((cs) => cs.map((c) => (c.id === chip.id ? { ...c, out: true } : c))), 5200);
+      setTimeout(() => setChips((cs) => cs.filter((c) => c.id !== chip.id)), 5700);
+    }
+  }, []);
+
+  const lastLegBatch = useRef(0);
+  useEffect(() => {
+    if (!legBatch || legBatch.id === lastLegBatch.current) return;
+    lastLegBatch.current = legBatch.id;
+    showLegChips(legBatch.events);
+  }, [legBatch, showLegChips]);
 
   const announce = useCallback(
     (evs: LiveEvent[], matchId: string) => {
@@ -245,7 +294,14 @@ export function LiveEventFX({ matches }: { matches: LiveMatch[] }) {
       [10400, { kind: "goal", team: "away", player: "Demo Poacher", minute: 55, penalty: true }],
     ];
     const timers = seq.map(([t, ev]) => setTimeout(() => announce([ev], matchId()), t));
-    return () => timers.forEach(clearTimeout);
+    // Leg-settlement chips — the explicit slip link — replayed alongside.
+    const legSeq: [number, LegEvent][] = [
+      [2100, { kind: "clinched", matchId: matchId(), label: "Over 1.25 goals", glyph: "✓", slipNo: "3", market: "Acca (3)" }],
+      [7400, { kind: "halfWin", matchId: matchId(), label: "Paraguay +0.75", glyph: "½✓", slipNo: "3", market: "Acca (3)" }],
+      [11200, { kind: "dead", matchId: matchId(), label: "Norway -0.75", glyph: "✗", slipNo: "3", market: "Acca (3)" }],
+    ];
+    const legTimers = legSeq.map(([t, ev]) => setTimeout(() => showLegChips([ev]), t));
+    return () => [...timers, ...legTimers].forEach(clearTimeout);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -291,7 +347,27 @@ export function LiveEventFX({ matches }: { matches: LiveMatch[] }) {
 }
 
 function EventChip({ chip }: { chip: Chip }) {
-  const { ev, flags, out } = chip;
+  const { out } = chip;
+
+  // Leg-settlement chip — a slip verdict, not a pitch event. Bolder edge, the
+  // pick label, and a slip tag so it's unmistakably about YOUR bet.
+  if (chip.leg) {
+    const leg = chip.leg;
+    const m = LEG_CHIP[leg.kind];
+    return (
+      <div
+        className={`chip-in flex items-center gap-2 rounded-full border border-line bg-pitch-2/95 py-1.5 pl-2 pr-3.5 font-mono text-[0.66rem] uppercase tracking-[0.14em] text-ink shadow-lg backdrop-blur transition-[opacity,transform] duration-500 ${out ? "translate-y-2 opacity-0" : ""}`}
+        style={{ boxShadow: `inset 3px 0 0 0 ${m.edge}` }}
+      >
+        <span className="text-sm leading-none" style={{ color: m.edge }}>{m.glyph}</span>
+        <span className="font-semibold">{m.label}</span>
+        <span className="text-ink/60 normal-case tracking-normal">{sentence(leg.label)}</span>
+        {leg.slipNo && <span className="text-faint/50">· slip {leg.slipNo}</span>}
+      </div>
+    );
+  }
+
+  const { ev, flags } = chip;
   const meta = CHIP[ev.kind as keyof typeof CHIP];
   if (!meta) return null;
   const team = ev.team;
