@@ -341,7 +341,7 @@ export type MultiLegCond = { odds?: number } & (
   | { matchId: string; kind: "qualify"; side: "home" | "away" }
   | { matchId: string; kind: "correctScore"; home: number; away: number }
   | { matchId: string; kind: "btts"; negate?: boolean }
-  | { matchId: string; kind: "cleanSheet"; side: "home" | "away" }
+  | { matchId: string; kind: "cleanSheet"; side: "home" | "away"; negate?: boolean }
   | { matchId: string; kind: "resultBtts"; outcome: "1" | "X" | "2"; negate?: boolean }
   | { matchId: string; kind: "bttsEachOver"; line: number; negate?: boolean }
   | { matchId: string; kind: "totalUnder"; line: number }
@@ -428,6 +428,18 @@ export type MultiLegCond = { odds?: number } & (
   // DECIDES at the half-time whistle either way; a goal inside the first 45
   // clinches it even before the HT snapshot lands.
   | { matchId: string; kind: "firstHalfTotalOver"; line: number }
+  // Total FIRST-HALF goals UNDER `line` ("Under 2.5 — 1st Half Total Goals" →
+  // line:2.5) — mirror of firstHalfTotalOver. The HT score decides it at the
+  // half-time whistle; goals piling past the line inside the first 45 kill it
+  // even before the HT snapshot lands. A finished match with no HT snapshot
+  // holds pending (never blind-grades a win off goal minutes alone).
+  | { matchId: string; kind: "firstHalfTotalUnder"; line: number }
+  // Which half produces MORE goals ("Half With Most Goals — 2nd Half" →
+  // half:"2"). Three-way market: the picked half must strictly outscore the
+  // other — a tie loses. H1 off the HT score, H2 off FT − HT, both authoritative
+  // snapshots; a "2nd half" pick clinches mid-H2 the moment H2 goals exceed the
+  // fixed H1 count (goals only accrue), a "1st half" pick dies the same way.
+  | { matchId: string; kind: "halfWithMostGoals"; half: "1" | "2" }
   // The named side scores in BOTH halves ("Team To Score In Both Halves"):
   // H1 off the HT score, H2 off FT − HT. `negate:true` is the "- No" pick.
   // An H1 blank decides it at the half-time whistle (kills the Yes / clinches
@@ -1083,6 +1095,26 @@ export function gradeSpecial(special: Special): BetStatus {
         continue;
       }
 
+      if (leg.kind === "firstHalfTotalUnder") {
+        // First-half total UNDER the line — the HT score decides it at the
+        // half-time whistle; goals piling past the line inside the first 45
+        // kill it before the snapshot. A finished match with no HT snapshot
+        // holds pending (never blind-grades a win off goal minutes alone).
+        const ht = getResult(leg.matchId).ht;
+        if (ht) {
+          const total = ht.home + ht.away;
+          if (total < leg.line) continue; // under → won
+          if (wholeLinePush(total, leg.line)) continue; // exact whole line → push
+          return "lost"; // the half ended over → dead, even mid-match
+        }
+        const h1 = ev.goals.filter(
+          (gl) => !gl.et && gl.minute != null && gl.minute <= 45,
+        ).length;
+        if (h1 > leg.line) return "lost"; // busted before the HT snapshot
+        pending = true; // still in H1, or finished with no snapshot → manual
+        continue;
+      }
+
       if (leg.kind === "teamScoresBothHalves") {
         // Side scores in BOTH halves: H1 off the HT score, H2 off FT − HT.
         // negate = "- No". An H1 blank decides it the moment HT is in; a
@@ -1172,10 +1204,28 @@ export function gradeSpecial(special: Special): BetStatus {
       }
 
       if (leg.kind === "cleanSheet") {
-        // The named side conceded zero (the OTHER side scored 0).
+        // The named side conceded zero (the OTHER side scored 0). negate =
+        // "Team Clean Sheet - No": the side DOES concede at least once.
         if (!ft) return "lost";
         const conceded = leg.side === "home" ? ft.away : ft.home;
-        if (conceded !== 0) return "lost";
+        const raw = conceded === 0;
+        if (leg.negate ? raw : !raw) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "halfWithMostGoals") {
+        // Which half produced more goals — the picked half must strictly
+        // outscore the other (a tie loses the three-way market). H1 off the
+        // HT snapshot, H2 off FT − HT; a finished match with no HT snapshot
+        // holds pending (never blind-grades off goal minutes alone).
+        const ht = getResult(leg.matchId).ht;
+        if (!ht || !ft) {
+          pending = true;
+          continue;
+        }
+        const h1 = ht.home + ht.away;
+        const h2 = ft.home + ft.away - h1;
+        if (!(leg.half === "2" ? h2 > h1 : h1 > h2)) return "lost";
         continue;
       }
 

@@ -91,7 +91,9 @@ export function legLabelFor(leg: MultiLegCond): string {
     case "btts":
       return `${m} — both teams to score${leg.negate ? " (no)" : ""}`;
     case "cleanSheet":
-      return `${side(leg.side)} to keep a clean sheet`;
+      return leg.negate
+        ? `${side(leg.side)} to concede (clean sheet no)`
+        : `${side(leg.side)} to keep a clean sheet`;
     case "resultBtts": {
       // One combined selection — result AND both-teams-score on the SAME line,
       // never split into two legs.
@@ -182,6 +184,10 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.player} — ${plus(leg.line)} shots`;
     case "firstHalfTotalOver":
       return `${m} — ${plus(leg.line)} goals before half-time`;
+    case "firstHalfTotalUnder":
+      return `${m} — ${totalThreshold(leg.line, "under")} before half-time`;
+    case "halfWithMostGoals":
+      return `${m} — ${leg.half === "2" ? "2nd" : "1st"} half with most goals`;
     case "teamScoresBothHalves":
       return leg.negate
         ? `${side(leg.side)} not to score in both halves`
@@ -1009,7 +1015,21 @@ export function inPlayMultiLeg(
     if (leg.kind === "cleanSheet") {
       // Named side keeps a clean sheet — dies the instant the other side scores
       // (goals don't come off), locks WON only at FT with the other side on 0.
+      // negate ("- No") is the exact mirror: locks WON on the first goal
+      // conceded, dies only at FT on a blank.
       const conceded = leg.side === "home" ? cur.away : cur.home;
+      if (leg.negate) {
+        if (conceded > 0) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (done) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else {
+          parts.push(`${legLabel} —`);
+        }
+        continue;
+      }
       if (conceded > 0) {
         dead = true;
         parts.push(`${legLabel} ✗`);
@@ -1239,6 +1259,78 @@ export function inPlayMultiLeg(
           parts.push(`${legLabel} ✗`);
         } else {
           parts.push(`${legLabel} —`);
+        }
+      }
+      continue;
+    }
+
+    if (leg.kind === "firstHalfTotalUnder") {
+      // First-half total UNDER the line — locks either way at the half-time
+      // whistle; goals piling past the line inside the first 45 kill it before
+      // the HT snapshot lands. Finished with no snapshot → defer to the static
+      // settle (which holds it pending) rather than blind-locking here.
+      const ht = lm.htScore;
+      if (ht) {
+        const total = ht.home + ht.away;
+        if (total < leg.line) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (wholeLinePush(total, leg.line)) {
+          wonCount++;
+          parts.push(`${legLabel} ↺`); // push → void, passes through
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else {
+        const h1 = lm.goals.filter(
+          (gl) => !gl.et && gl.minute != null && gl.minute <= 45,
+        ).length;
+        if (h1 > leg.line) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else if (done) {
+          parts.push(`${legLabel} —`); // no HT snapshot → static settles it
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
+        }
+      }
+      continue;
+    }
+
+    if (leg.kind === "halfWithMostGoals") {
+      // H1's count is fixed at the HT whistle and H2 goals only accrue, so a
+      // "2nd half" pick locks WON the moment H2 outscores H1 (nothing can take
+      // it back), and a "1st half" pick dies the moment H2 catches H1 (the tie
+      // already loses the three-way). Otherwise the 90-minute whistle settles it.
+      const ht = lm.htScore;
+      if (!ht) {
+        parts.push(`${legLabel} —`); // H1 still running — nothing locked yet
+        continue;
+      }
+      const h1 = ht.home + ht.away;
+      const h2 = cur.home + cur.away - h1;
+      if (leg.half === "2") {
+        if (h2 > h1) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else if (done) {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        } else {
+          parts.push(`${legLabel} —`);
+        }
+      } else {
+        if (h2 >= h1) {
+          dead = true; // H2 caught H1 — the 1st-half pick can never win now
+          parts.push(`${legLabel} ✗`);
+        } else if (done) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          onTrack = true;
+          parts.push(`${legLabel} ⋯`);
         }
       }
       continue;

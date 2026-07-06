@@ -15028,6 +15028,169 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861933680942841856",
+      "slipNo": "861933680942841857",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 7 legs (BH8)",
+      "label": "Parlay (R16) — Under 5.5 · 1H Over 0.5 · 1H Under 2.5 · BTTS Yes · Ronaldo score/assist · Yamal score/assist · Oyarzabal anytime (7 legs)",
+      "odds": 23.06,
+      "stake": 100,
+      "placedAt": "06/07 19:36",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalUnder",
+            "line": 2.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "btts"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scored",
+            "player": "Mikel Oyarzabal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-861934266358595584",
+      "slipNo": "861934266358595585",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 7 legs (BH8)",
+      "label": "Parlay (R16) — Portugal to qualify · Over 1.5 · 1H Over 0.5 · Under 5.5 · BTTS Yes · Oyarzabal score/assist · Portugal or Spain (7 legs)",
+      "odds": 18.14,
+      "stake": 50,
+      "placedAt": "06/07 19:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "btts"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "doubleChance",
+            "outcome": "12"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-861934847299059712",
+      "slipNo": "861934847299059713",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Match Parlay · 9 legs (BH8)",
+      "label": "Parlay (R16) — Portugal CS No · Spain CS No · Under 4.5 · 1H Over 0.5 · 1H Under 2.5 · Oyarzabal anytime · 2nd half most goals · Ronaldo score/assist · Yamal score/assist (9 legs)",
+      "odds": 69.06,
+      "stake": 39,
+      "placedAt": "06/07 19:41",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "cleanSheet",
+            "side": "home",
+            "negate": true
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "cleanSheet",
+            "side": "away",
+            "negate": true
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "firstHalfTotalUnder",
+            "line": 2.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scored",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "halfWithMostGoals",
+            "half": "2"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Cristiano Ronaldo"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Lamine Yamal"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
