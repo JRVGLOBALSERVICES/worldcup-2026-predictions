@@ -1781,10 +1781,20 @@ const VERDICT_ORDER: Record<LiveVerdict, number> = {
   lost: 6,
 };
 
-/** Re-order rows and their verdicts together by status. Stable within a bucket,
- *  so a match's original bet order is preserved among equal verdicts. */
-function orderByVerdict<T>(rows: T[], verdicts: InPlay[]): { rows: T[]; verdicts: InPlay[] } {
+/** Re-order rows and their verdicts together by winning amount (potential payout),
+ *  highest first — so the biggest-return line always sits at the top of a card.
+ *  Verdict (won → live → lost) is the tiebreaker among equal payouts, and original
+ *  order breaks any remaining ties (stable), so ordering stays deterministic. */
+function orderByVerdict<T extends { potential?: number }>(
+  rows: T[],
+  verdicts: InPlay[],
+): { rows: T[]; verdicts: InPlay[] } {
   const idx = rows.map((_, i) => i);
-  idx.sort((a, b) => VERDICT_ORDER[verdicts[a].verdict] - VERDICT_ORDER[verdicts[b].verdict]);
+  idx.sort((a, b) => {
+    const pa = rows[a].potential ?? 0;
+    const pb = rows[b].potential ?? 0;
+    if (pb !== pa) return pb - pa; // winning amount, high → low
+    return VERDICT_ORDER[verdicts[a].verdict] - VERDICT_ORDER[verdicts[b].verdict];
+  });
   return { rows: idx.map((i) => rows[i]), verdicts: idx.map((i) => verdicts[i]) };
 }
