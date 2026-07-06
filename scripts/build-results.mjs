@@ -315,6 +315,47 @@ function tagOutsideBox(goals, keyEvents) {
   }
 }
 
+/**
+ * Opta prose naming the assister ("… Assisted by Achraf Hakimi following a set
+ * piece situation."). The scoreboard `details` athletesInvolved carry the scorer
+ * only — across 207 settled goals not one had athletesInvolved[1] — so the
+ * assist has to come from the summary keyEvents: participants[1] when present,
+ * else parsed from the text. Mirror of lib/live.ts goalsFromKeyEvents.
+ */
+const ASSISTED_BY_RE = /Assisted by\s+(.+?)(?=\s+(?:with|following|after)\b|[.,]|$)/;
+
+/**
+ * Fill each goal's `assist` from the summary keyEvents, matched by scorer name
+ * + nearby minute (same pairing rule as tagOutsideBox). Mutates `goals` in
+ * place; never overwrites an assist already set, never touches own goals —
+ * feeds scoredOrAssisted / assisted / goalsAssistsOver settlement.
+ */
+function enrichAssists(goals, keyEvents) {
+  const rich = (keyEvents ?? [])
+    .filter((e) => e.scoringPlay && e.ownGoal !== true)
+    .map((e) => ({
+      scorer: norm(e.participants?.[0]?.athlete?.displayName ?? ""),
+      minute: e.clock?.value != null ? Math.round(e.clock.value / 60) : null,
+      assist:
+        e.participants?.[1]?.athlete?.displayName ??
+        ASSISTED_BY_RE.exec(e.text ?? "")?.[1]?.trim() ??
+        null,
+    }))
+    .filter((r) => r.assist);
+  if (!rich.length) return;
+  for (const g of goals) {
+    if (g.ownGoal || g.assist) continue;
+    const gn = norm(g.scorer ?? "");
+    const hit = rich.find(
+      (r) =>
+        r.scorer &&
+        (gn === r.scorer || gn.includes(r.scorer) || r.scorer.includes(gn)) &&
+        (r.minute == null || g.minute == null || Math.abs(r.minute - g.minute) <= 2),
+    );
+    if (hit) g.assist = hit.assist;
+  }
+}
+
 /** Convert one ESPN event to our result shape, oriented to the fixture's home/away. */
 function resultFromEvent(ev, fixture) {
   const comp = ev.competitions?.[0];
@@ -505,6 +546,25 @@ function settleBetsFromResults(bets, results) {
     // Player-prop layer: only fill when not already finished, so we never clobber
     // an AI-enriched goal list (with assists) by overwriting it with ESPN's.
     const ev = bets.matchEvents[id];
+    if (ev && ev.status === "finished" && Array.isArray(ev.goals)) {
+      // Additive assist backfill: if the entry locked on a run where the summary
+      // fetch failed (assists null), layer them in from this run's enriched goals
+      // — matched by team + scorer + nearby minute, never overwriting a set value.
+      for (const g of ev.goals) {
+        if (g.assist || g.ownGoal) continue;
+        const src = r.goals.find(
+          (x) =>
+            x.assist &&
+            x.team === g.team &&
+            norm(x.scorer ?? "") === norm(g.scorer ?? "") &&
+            (x.minute == null || g.minute == null || Math.abs(x.minute - g.minute) <= 2),
+        );
+        if (src) {
+          g.assist = src.assist;
+          changed = true;
+        }
+      }
+    }
     if (!ev || ev.status !== "finished") {
       bets.matchEvents[id] = {
         status: "finished",
@@ -613,9 +673,12 @@ async function main() {
       r.stats = s;
       statsCount++;
     }
-    // Tag long-range goals from the same summary, so the "score from outside the
-    // box" market settles off real commentary (scoreboard details carry no location).
-    if (Array.isArray(r.goals)) tagOutsideBox(r.goals, b.value?.keyEvents);
+    // Tag long-range goals + fill assists from the same summary — the scoreboard
+    // details carry neither location prose nor the assister; only keyEvents do.
+    if (Array.isArray(r.goals)) {
+      tagOutsideBox(r.goals, b.value?.keyEvents);
+      enrichAssists(r.goals, b.value?.keyEvents);
+    }
   });
   // Carry forward reused final snapshots for matches we deliberately didn't refetch.
   for (const [id, r] of Object.entries(results)) {
