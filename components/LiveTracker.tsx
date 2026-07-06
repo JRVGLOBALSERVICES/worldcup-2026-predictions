@@ -1191,27 +1191,12 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   // slip: which fixtures Rj actually has action on, and — the real link — the
   // moment a live event settles a specific leg.
 
-  // Fixtures any non-mirror bet/leg touches. The FX overlay is scoped to these,
-  // so firecrackers + chips fire only for matches on the slip, not every game
-  // in the tournament that happens to be live.
-  const slipMatchIds = useMemo(() => {
-    const ids = new Set<string>();
-    for (const d of base.days)
-      for (const m of d.matches) {
-        if (m.bets.length) ids.add(m.matchId);
-        for (const s of m.specials) {
-          if (s.mirror) continue;
-          const legs = (s.grade as { legs?: { matchId?: string }[] } | undefined)?.legs;
-          if (legs?.length) legs.forEach((l) => l.matchId && ids.add(l.matchId));
-          else ids.add(m.matchId);
-        }
-      }
-    return ids;
-  }, [base.days]);
-  const fxMatches = useMemo(
-    () => Object.values(live).filter((m) => slipMatchIds.has(m.matchId)),
-    [live, slipMatchIds],
-  );
+  // The tracker is the live hub: the match FX (goal firecrackers, GOAL banners,
+  // tempo chips) fires for EVERY live fixture — exactly what the match/home FX
+  // shows — so a burst lands whenever any game is in play, not only when the
+  // slip has action. (The explicit slip link is the leg-settlement chips below,
+  // which stay scoped to the parlay legs via legBatch.)
+  const fxMatches = useMemo(() => Object.values(live), [live]);
 
   // Every leg's live verdict glyph this poll, keyed by (match · pick). Reuses the
   // exact grader the leg grid renders from (gradeSpecial → parseLegs), so a leg
@@ -1339,9 +1324,10 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   return (
     <LegFlashContext.Provider value={flashedLegs}>
     <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
-      {/* Live-event reactions, SCOPED to the fixtures on the slip: firecrackers on
-       * goals + tempo chips, plus leg-settlement chips the moment a live event
-       * clinches / kills / half-covers a specific parlay leg (legBatch). */}
+      {/* Live-event reactions — the tracker is the live hub: firecrackers on goals
+       * + tempo chips for EVERY live fixture (fxMatches), plus leg-settlement
+       * chips the moment a live event clinches / kills / half-covers a specific
+       * parlay leg on the slip (legBatch — the explicit parlay link). */}
       <LiveEventFX matches={fxMatches} legBatch={legBatch} />
       <header className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
         <Link href="/" className="flex w-fit items-center gap-2.5">

@@ -9,7 +9,6 @@ import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
 import { LiveProvider } from "@/components/LiveProvider";
 import { MatchHeaderScore, LiveStatusLine, LiveGoalLog, LiveStats } from "@/components/LiveScore";
-import { MatchEventFX } from "@/components/LiveFX";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 
 export function generateStaticParams() {
@@ -56,7 +55,6 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
 
   return (
     <LiveProvider kickoffs={[fixture.kickoffUTC]}>
-    <MatchEventFX matchId={fixture.id} />
     <main className="mx-auto max-w-3xl px-4 pb-24 sm:px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
