@@ -654,17 +654,27 @@ async function main() {
   // previous results.json so the hourly cron only hits summaries for the day's
   // active games, not all 104 finished matches by tournament's end.
   let prevStats = {};
+  // Prior finished records whose summary was successfully fetched at least once
+  // (assistsChecked) — their goal enrichment (assist / outsideBox) is carried
+  // forward instead of refetched. Goals are rebuilt from the scoreboard every
+  // run (scoreboard carries NO assists), so without this carry-forward an
+  // enriched assist survives exactly one run before being wiped.
+  let prevChecked = {};
   try {
     const prev = JSON.parse(readFileSync(RESULTS_PATH, "utf8"));
     for (const [id, r] of Object.entries(prev.results ?? {})) {
       if (r.state === "finished" && r.stats) prevStats[id] = r.stats;
+      if (r.state === "finished" && r.assistsChecked === true) prevChecked[id] = r.goals ?? [];
     }
   } catch {
     /* first run — no prior stats */
   }
   const fixById = Object.fromEntries(fixtures.map((f) => [f.id, f]));
+  // Refetch a finished match's summary until BOTH its stats snapshot exists AND
+  // its goals have been assist-checked once. Matches finished before the
+  // assistsChecked flag existed lack it → one-time backfill fetch, then locked.
   const needStats = Object.entries(results).filter(
-    ([id, r]) => r.eventId && !(r.state === "finished" && prevStats[id]),
+    ([id, r]) => r.eventId && !(r.state === "finished" && prevStats[id] && prevChecked[id]),
   );
   const fetchedStats = await Promise.allSettled(
     needStats.map(([, r]) => fetchSummary(r.eventId)),
@@ -684,10 +694,32 @@ async function main() {
       tagOutsideBox(r.goals, b.value?.keyEvents);
       enrichAssists(r.goals, b.value?.keyEvents);
     }
+    // Mark finished matches as assist-checked so the hourly cron stops
+    // refetching them. A failed fetch leaves the flag off → retried next run.
+    if (r.state === "finished" && Array.isArray(b.value?.keyEvents)) {
+      r.assistsChecked = true;
+    }
   });
   // Carry forward reused final snapshots for matches we deliberately didn't refetch.
   for (const [id, r] of Object.entries(results)) {
     if (!r.stats && prevStats[id]) r.stats = prevStats[id];
+    // Re-apply prior enrichment onto the freshly rebuilt (assist-less) goals.
+    const prevGoals = prevChecked[id];
+    if (r.state === "finished" && !r.assistsChecked && prevGoals) {
+      for (const g of r.goals ?? []) {
+        const src = prevGoals.find(
+          (x) =>
+            x.team === g.team &&
+            norm(x.scorer ?? "") === norm(g.scorer ?? "") &&
+            (x.minute == null || g.minute == null || Math.abs(x.minute - g.minute) <= 2),
+        );
+        if (src) {
+          if (src.assist && !g.assist && !g.ownGoal) g.assist = src.assist;
+          if (src.outsideBox === true) g.outsideBox = true;
+        }
+      }
+      r.assistsChecked = true;
+    }
   }
   // eventId was only needed for the summary fetch — drop it from the persisted shape.
   for (const r of Object.values(results)) delete r.eventId;
