@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T16:10:11.919Z",
+    "generatedAt": "2026-07-06T16:20:10.220Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-06T16:10:11.918Z"
+    "modelUpdatedAt": "2026-07-06T16:20:10.220Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -21789,6 +21789,351 @@
         "etWinner": "France",
         "shootout": "Near coin-flip, with the marginal nerve edge to France.",
         "note": "Most likely settled inside 90 (81.4%). But a 18.6% level 90 keeps extra time (10.8%) and penalties (7.8%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "nor-eng-2026-07-11": {
+      "win": {
+        "pick": "England",
+        "fairOdds": "1.80",
+        "reason": "Model: England to win at 56% (Norway 24% / draw 20% / England 56%). Expected goals 1.5–2.3 from group-stage attack/defence rates (Norway 2.2 for / 2.0 against per game, England 1.8 / 1.0). Most likely score 1-2.",
+        "strength": 4
+      },
+      "halfTime": {
+        "score": "0-1",
+        "fairOdds": "5.26",
+        "alt": "0-0",
+        "altOdds": "5.97"
+      },
+      "htft": {
+        "pick": "England/England",
+        "fairOdds": "2.25"
+      },
+      "fullTime": {
+        "score": "1-2",
+        "fairOdds": "11.29"
+      },
+      "scorers": [
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "fairOdds": "1.52",
+          "banker": true,
+          "note": "6 goals in 5 group games; 66% modelled anytime chance on 2.3 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "fairOdds": "1.73",
+          "banker": false,
+          "note": "7 goals in 4 group games; 58% modelled anytime chance on 1.5 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Jude Bellingham",
+          "team": "England",
+          "fairOdds": "1.82",
+          "banker": false,
+          "note": "4 goals in 5 group games; 55% modelled anytime chance on 2.3 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Marcus Rashford",
+          "team": "England",
+          "fairOdds": "4.27",
+          "banker": false,
+          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.3 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Antonio Nusa",
+          "team": "Norway",
+          "fairOdds": "6.29",
+          "banker": false,
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.5 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Bukayo Saka",
+          "team": "England",
+          "fairOdds": "1.84",
+          "banker": true,
+          "note": "3 assists in the group stage; 54% modelled chance to set one up."
+        },
+        {
+          "player": "Anthony Gordon",
+          "team": "England",
+          "fairOdds": "2.35",
+          "banker": false,
+          "note": "2 assists in the group stage; 43% modelled chance to set one up."
+        },
+        {
+          "player": "Andreas Schjelderup",
+          "team": "Norway",
+          "fairOdds": "2.69",
+          "banker": false,
+          "note": "3 assists in the group stage; 37% modelled chance to set one up."
+        },
+        {
+          "player": "Martin Ødegaard",
+          "team": "Norway",
+          "fairOdds": "2.69",
+          "banker": false,
+          "note": "3 assists in the group stage; 37% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "low",
+        "taker": "Harry Kane",
+        "backup": "Jude Bellingham",
+        "note": "England favoured to control the game, so a penalty is less pivotal; Harry Kane would take one if awarded."
+      },
+      "lineups": {
+        "home": "Orjan Nyland, Marcus Holmgren Pedersen, Kristoffer Ajer, Torbjorn Heggem, David Moller Wolfe, Sander Berge, Patrick Berg, Martin Odegaard, Antonio Nusa, Erling Haaland, Alexander Sorloth",
+        "away": "Jordan Pickford, Jarell Quansah, Ezri Konsa, Marc Guéhi, Nico O'Reilly, Declan Rice, Elliot Anderson, Bukayo Saka, Jude Bellingham, Anthony Gordon, Harry Kane",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 12,
+              "name": "Orjan Nyland",
+              "pos": "G"
+            },
+            {
+              "num": 5,
+              "name": "Marcus Holmgren Pedersen",
+              "pos": "RB"
+            },
+            {
+              "num": 6,
+              "name": "Kristoffer Ajer",
+              "pos": "CB"
+            },
+            {
+              "num": 15,
+              "name": "Torbjorn Heggem",
+              "pos": "CB"
+            },
+            {
+              "num": 3,
+              "name": "David Moller Wolfe",
+              "pos": "LB"
+            },
+            {
+              "num": 8,
+              "name": "Sander Berge",
+              "pos": "CM"
+            },
+            {
+              "num": 18,
+              "name": "Patrick Berg",
+              "pos": "CM"
+            },
+            {
+              "num": 10,
+              "name": "Martin Odegaard",
+              "pos": "CM/AM"
+            },
+            {
+              "num": 20,
+              "name": "Antonio Nusa",
+              "pos": "RW"
+            },
+            {
+              "num": 9,
+              "name": "Erling Haaland",
+              "pos": "ST"
+            },
+            {
+              "num": 11,
+              "name": "Alexander Sorloth",
+              "pos": "LW"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Jordan Pickford",
+              "pos": "G"
+            },
+            {
+              "num": 16,
+              "name": "Jarell Quansah",
+              "pos": "RB"
+            },
+            {
+              "num": 2,
+              "name": "Ezri Konsa",
+              "pos": "CD-R"
+            },
+            {
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Nico O'Reilly",
+              "pos": "LB"
+            },
+            {
+              "num": 4,
+              "name": "Declan Rice",
+              "pos": "DM-R"
+            },
+            {
+              "num": 8,
+              "name": "Elliot Anderson",
+              "pos": "DM-L"
+            },
+            {
+              "num": 7,
+              "name": "Bukayo Saka",
+              "pos": "RM"
+            },
+            {
+              "num": 10,
+              "name": "Jude Bellingham",
+              "pos": "AM"
+            },
+            {
+              "num": 19,
+              "name": "Anthony Gordon",
+              "pos": "LM"
+            },
+            {
+              "num": 9,
+              "name": "Harry Kane",
+              "pos": "F"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "note": "6 goals in 5 group games; 66% modelled anytime chance on 2.3 team xG."
+        },
+        {
+          "player": "Erling Haaland",
+          "team": "Norway",
+          "note": "7 goals in 4 group games; 58% modelled anytime chance on 1.5 team xG."
+        },
+        {
+          "player": "Bukayo Saka",
+          "team": "England",
+          "note": "3 assists in the group stage; 54% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 4,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Norway: 6 pts, +1 GD across 3 group games (8 for / 7 against).",
+          "England: 7 pts, +4 GD across 3 group games (6 for / 2 against).",
+          "Norway's Erling Haaland leads them with 7 goals in 4 games.",
+          "England's Harry Kane leads them with 6 goals in 5 games."
+        ],
+        "assumptions": [
+          "Model projects England to carry more of the ball and the better chances (higher attack rating); Norway to sit compact and play on the break.",
+          "Goal expectancy 1.5–2.3 (Norway–England) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "England shade the chance-creation (2.3 vs 1.5 xG) — they should make the running.",
+        "drawRisk": "Moderate — 19.7% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Miami humidity drags the second-half tempo; hydration breaks reset momentum.",
+        "caseFor": [
+          "England are the model's 55.5% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Harry Kane carrying the scoring load.",
+          "Conditions (heat) suit a controlled game England can manage."
+        ],
+        "caseAgainst": [
+          "19.7% draw + Norway's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; England's number may be inflated by one result."
+        ],
+        "verdict": "Bet",
+        "changeMind": "A confirmed XI resting Harry Kane, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (19.7%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "England to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "England are the model's 56% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+        }
+      },
+      "resolution": {
+        "ninety": 80.3,
+        "extraTime": 11.8,
+        "penalties": 7.9,
+        "mostLikely": "Regulation",
+        "etWinner": "England",
+        "shootout": "Near coin-flip, with the marginal nerve edge to England.",
+        "note": "Most likely settled inside 90 (80.3%). But a 19.7% level 90 keeps extra time (11.8%) and penalties (7.9%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
   }
