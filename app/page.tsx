@@ -1,5 +1,6 @@
 import { MatchCard } from "@/components/MatchCard";
 import { LiveProvider } from "@/components/LiveProvider";
+import { AllMatchesEventFX } from "@/components/LiveFX";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 import { SiteNav } from "@/components/SiteNav";
 import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
@@ -92,6 +93,8 @@ export default function Home() {
       </section>
 
       <LiveProvider kickoffs={fixtures.map((f) => f.kickoffUTC)}>
+      {/* Live-event reactions across today's grid — goals firecracker, the rest chip in. */}
+      <AllMatchesEventFX />
       <section className="mt-12">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
           <div className="flex items-baseline gap-3">

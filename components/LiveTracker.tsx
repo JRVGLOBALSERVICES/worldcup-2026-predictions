@@ -8,6 +8,7 @@ import type { Fixture } from "@/lib/types";
 import fixturesJson from "@/data/fixtures.json";
 import { inPlayBet, inPlaySpecial, inPlayMultiScorers, inPlayMultiLeg, liveLeans, realisedLeans, type InPlay, type LiveVerdict } from "@/lib/inplay";
 import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
+import { LiveEventFX } from "./LiveFX";
 import { SiteNav, type NavKey } from "./SiteNav";
 import { SpotlightCard, type SpotTone } from "./SpotlightCard";
 
@@ -1234,6 +1235,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
 
   return (
     <main className="mx-auto max-w-5xl px-4 pb-24 sm:px-6">
+      {/* Live-event reactions — firecrackers on goals, event chips for the rest,
+       * across every fixture this tracker is watching. */}
+      <LiveEventFX matches={Object.values(live)} />
       <header className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
         <Link href="/" className="flex w-fit items-center gap-2.5">
           <span className="grid size-8 place-items-center rounded-lg bg-acid font-display text-lg font-black text-pitch">⚽</span>

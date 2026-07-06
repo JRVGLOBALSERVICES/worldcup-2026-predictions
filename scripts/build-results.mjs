@@ -163,6 +163,19 @@ function statsFromSummary(summary, fixture) {
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
     firstPenalty: firstPenaltyTeam(summary.keyEvents, ours),
     waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
+    // Tempo block — full-picture stats for the live view (possession / passes /
+    // tackles / saves / offsides / blocked / interceptions / clearances). No
+    // market settles on these; keep names in sync with lib/live.ts fetchStats.
+    tempo: {
+      possession: { home: statVal(home, "possessionPct"), away: statVal(away, "possessionPct") },
+      passes: { home: statVal(home, "totalPasses"), away: statVal(away, "totalPasses") },
+      tackles: { home: statVal(home, "totalTackles"), away: statVal(away, "totalTackles") },
+      saves: { home: statVal(home, "saves"), away: statVal(away, "saves") },
+      offsides: { home: statVal(home, "offsides"), away: statVal(away, "offsides") },
+      blockedShots: { home: statVal(home, "blockedShots"), away: statVal(away, "blockedShots") },
+      interceptions: { home: statVal(home, "interceptions"), away: statVal(away, "interceptions") },
+      clearances: { home: statVal(home, "effectiveClearance"), away: statVal(away, "effectiveClearance") },
+    },
   };
 }
 
@@ -670,11 +683,12 @@ async function main() {
     /* first run — no prior stats */
   }
   const fixById = Object.fromEntries(fixtures.map((f) => [f.id, f]));
-  // Refetch a finished match's summary until BOTH its stats snapshot exists AND
-  // its goals have been assist-checked once. Matches finished before the
-  // assistsChecked flag existed lack it → one-time backfill fetch, then locked.
+  // Refetch a finished match's summary until its stats snapshot exists, its
+  // goals have been assist-checked once, AND the snapshot carries the tempo
+  // block (possession / passes / tackles — added 2026-07-06; earlier snapshots
+  // lack it → one-time backfill fetch, then locked).
   const needStats = Object.entries(results).filter(
-    ([id, r]) => r.eventId && !(r.state === "finished" && prevStats[id] && prevChecked[id]),
+    ([id, r]) => r.eventId && !(r.state === "finished" && prevStats[id]?.tempo && prevChecked[id]),
   );
   const fetchedStats = await Promise.allSettled(
     needStats.map(([, r]) => fetchSummary(r.eventId)),

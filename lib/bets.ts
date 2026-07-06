@@ -162,6 +162,28 @@ export type MatchStats = {
    * Written by lib/live.ts fetchStats (in-play) and scripts/build-results.mjs.
    */
   waterBreak?: Partial<Record<"h1" | "h2", WaterBreakAction>>;
+  /**
+   * Tempo / territory stats from the same `boxscore.teams[].statistics` block —
+   * possessionPct, totalPasses, totalTackles, saves, offsides, blockedShots,
+   * interceptions, effectiveClearance. No bet market settles on these (yet);
+   * they exist so the live match view can show — and animate — the full picture
+   * of a game, not just the settling counts. Optional because stats snapshotted
+   * before 2026-07-06 never captured them.
+   */
+  tempo?: TempoStats;
+};
+
+/** Full-picture team stats for the live view — see MatchStats.tempo. */
+export type TempoStats = {
+  /** Possession percent per side (ESPN possessionPct, e.g. 66.4). */
+  possession: SideCount;
+  passes: SideCount;
+  tackles: SideCount;
+  saves: SideCount;
+  offsides: SideCount;
+  blockedShots: SideCount;
+  interceptions: SideCount;
+  clearances: SideCount;
 };
 
 /** How a goal was scored, derived from ESPN's per-event summary commentary. */

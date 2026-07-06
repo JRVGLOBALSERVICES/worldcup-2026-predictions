@@ -150,6 +150,19 @@ async function fetchStats(
       firstGoalMethod: firstGoalMethod(data.keyEvents),
       firstPenalty: firstPenaltyTeam(data.keyEvents, homeName),
       waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
+      // Tempo block — the full-picture stats the live view animates. Same
+      // boxscore statistics list as the settling counts above; keep the names
+      // in sync with scripts/build-results.mjs statsFromSummary.
+      tempo: {
+        possession: { home: stat(h, "possessionPct"), away: stat(a, "possessionPct") },
+        passes: { home: stat(h, "totalPasses"), away: stat(a, "totalPasses") },
+        tackles: { home: stat(h, "totalTackles"), away: stat(a, "totalTackles") },
+        saves: { home: stat(h, "saves"), away: stat(a, "saves") },
+        offsides: { home: stat(h, "offsides"), away: stat(a, "offsides") },
+        blockedShots: { home: stat(h, "blockedShots"), away: stat(a, "blockedShots") },
+        interceptions: { home: stat(h, "interceptions"), away: stat(a, "interceptions") },
+        clearances: { home: stat(h, "effectiveClearance"), away: stat(a, "effectiveClearance") },
+      },
     },
     goals,
   };
