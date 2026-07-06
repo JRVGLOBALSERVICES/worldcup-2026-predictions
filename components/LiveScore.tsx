@@ -86,6 +86,9 @@ export function LiveScore({ matchId }: { matchId: string }) {
           <StatPair label="Cor" h={lm.stats.corners.home} a={lm.stats.corners.away} />
           <StatPair label="SOT" h={lm.stats.sot.home} a={lm.stats.sot.away} />
           <StatPair label="Sh" h={lm.stats.shots.home} a={lm.stats.shots.away} />
+          {lm.stats.fouls && (
+            <StatPair label="Fls" h={lm.stats.fouls.home} a={lm.stats.fouls.away} />
+          )}
           <StatPair
             label="Crd"
             h={lm.stats.cards.home}

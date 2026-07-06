@@ -492,6 +492,8 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
           <MiniStat label="On tgt" h={stats.sot.home} a={stats.sot.away} />
           <MiniStat label="Corners" h={stats.corners.home} a={stats.corners.away} />
           <MiniStat label="Shots" h={stats.shots.home} a={stats.shots.away} />
+          {stats.fouls && <MiniStat label="Fouls" h={stats.fouls.home} a={stats.fouls.away} />}
+          <MiniStat label="Cards" h={stats.cards.home} a={stats.cards.away} />
         </div>
       )}
     </div>
@@ -1184,6 +1186,7 @@ function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
       <Cell label="Corners" h={s.corners.home} a={s.corners.away} />
       <Cell label="On target" h={s.sot.home} a={s.sot.away} />
       <Cell label="Shots" h={s.shots.home} a={s.shots.away} />
+      {s.fouls && <Cell label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
       <Cell label="Cards" h={s.cards.home} a={s.cards.away} sub={`(${yel}Y ${red}R)`} />
     </div>
   );
