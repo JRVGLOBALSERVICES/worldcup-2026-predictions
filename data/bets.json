@@ -15290,6 +15290,60 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-861978383759392768",
+      "slipNo": "861978383759392768",
+      "matchId": "por-esp-2026-07-06",
+      "player": "—",
+      "market": "Doubles · 2 match parlays · 8 legs (BH8)",
+      "label": "Double (R16) — Por-Esp @ 8.72: Portugal to qualify · Under 5.5 · BTTS Yes · Oyarzabal score/assist × USA-Bel @ 6.07: Belgium to qualify · Under 5.5 · BTTS Yes · Balogun score/assist (8 legs across 2 matches — both parlays must land)",
+      "odds": 52.93,
+      "stake": 52,
+      "placedAt": "06/07 22:37",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "btts"
+          },
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scoredOrAssisted",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "btts"
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Folarin Balogun"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
