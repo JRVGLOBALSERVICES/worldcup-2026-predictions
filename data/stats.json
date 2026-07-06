@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T20:40:06.930Z",
+    "generatedAt": "2026-07-06T20:50:06.216Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 76
   },
@@ -492,8 +492,8 @@
         "rank": 2,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 90.5,
-        "display": "90.5%",
+        "value": 90.3,
+        "display": "90.3%",
         "matches": 5
       },
       {
@@ -506,16 +506,16 @@
       },
       {
         "rank": 4,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 89.9,
-        "display": "89.9%",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 90,
+        "display": "90.0%",
         "matches": 4
       },
       {
-        "rank": 4,
-        "team": "Spain",
-        "flag": "🇪🇸",
+        "rank": 5,
+        "team": "Algeria",
+        "flag": "🇩🇿",
         "value": 89.9,
         "display": "89.9%",
         "matches": 4
@@ -574,8 +574,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 63.8,
-        "display": "63.8%",
+        "value": 64.2,
+        "display": "64.2%",
         "matches": 4
       },
       {
@@ -730,8 +730,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 71.7,
-        "display": "71.7%",
+        "value": 72.1,
+        "display": "72.1%",
         "matches": 4
       },
       {
@@ -894,20 +894,12 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 60.2,
-        "display": "60.2%",
+        "value": 60.7,
+        "display": "60.7%",
         "matches": 4
       },
       {
         "rank": 2,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 57.7,
-        "display": "57.7%",
-        "matches": 5
-      },
-      {
-        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 57.5,
@@ -915,12 +907,20 @@
         "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 57,
         "display": "57.0%",
         "matches": 3
+      },
+      {
+        "rank": 4,
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 56.9,
+        "display": "56.9%",
+        "matches": 5
       },
       {
         "rank": 5,
@@ -6867,31 +6867,31 @@
         "teamBox": [
           {
             "team": "Portugal",
-            "possessionPct": 44.4,
-            "accuratePasses": 289,
-            "totalPasses": 339,
+            "possessionPct": 42.8,
+            "accuratePasses": 310,
+            "totalPasses": 369,
             "shotsOnTarget": 2,
-            "totalShots": 6,
+            "totalShots": 8,
             "effectiveTackles": 8,
             "totalTackles": 12,
             "accurateCrosses": 1,
-            "totalCrosses": 7,
+            "totalCrosses": 8,
             "accurateLongBalls": 22,
-            "totalLongBalls": 44
+            "totalLongBalls": 47
           },
           {
             "team": "Spain",
-            "possessionPct": 55.6,
-            "accuratePasses": 365,
-            "totalPasses": 420,
+            "possessionPct": 57.2,
+            "accuratePasses": 427,
+            "totalPasses": 487,
             "shotsOnTarget": 5,
-            "totalShots": 12,
-            "effectiveTackles": 13,
-            "totalTackles": 15,
+            "totalShots": 14,
+            "effectiveTackles": 14,
+            "totalTackles": 16,
             "accurateCrosses": 1,
-            "totalCrosses": 12,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 30
+            "totalCrosses": 16,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 32
           }
         ]
       }
