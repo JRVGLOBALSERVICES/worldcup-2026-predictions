@@ -41,8 +41,13 @@ function roundLabel(r: string | undefined): string {
   return r && r.trim() ? r : "Group stage";
 }
 function roundRank(label: string): number {
-  const i = ROUND_ORDER.indexOf(label);
-  return i === -1 ? ROUND_ORDER.length + 1 : i; // unknown knockout label before group
+  // Tolerant match: the data labels a round "Quarter-final" (singular) while
+  // ROUND_ORDER carries "Quarter-finals" — an exact indexOf misses, so the round
+  // ranked as "unknown" (least-advanced) and the active-round grid wrongly showed
+  // it. Normalise a trailing plural 's' + case so singular/plural always align.
+  const norm = (x: string) => x.toLowerCase().replace(/s$/, "");
+  const i = ROUND_ORDER.findIndex((o) => norm(o) === norm(label));
+  return i === -1 ? ROUND_ORDER.length + 1 : i; // still unknown → ranked after group
 }
 
 // ── serialisable payload the server page hands down (no functions/classes) ────

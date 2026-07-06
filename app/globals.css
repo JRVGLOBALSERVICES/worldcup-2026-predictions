@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* Twemoji country flags — Windows Chrome/Edge render regional-indicator emoji as
+ * two-letter tofu boxes (no native flag glyphs). This font supplies real flag
+ * glyphs; `unicode-range` scopes it to flag codepoints ONLY, so it never touches
+ * normal text and only downloads when a flag is on screen. Listed first in every
+ * font token below → flags render consistently on all platforms. */
+@font-face {
+  font-family: "Twemoji Country Flags";
+  unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E007F;
+  src: url("/fonts/TwemojiCountryFlags.woff2") format("woff2");
+  font-display: swap;
+}
+
 /* Hallmark · redesign: disciplined dark system · tone: premium-terminal
  * anchor hue: ink-blue 265 ground · electric-lime 122 single hero accent
  *
@@ -52,9 +64,9 @@
   --color-bloom-acid:    oklch(0.88 0.18 123 / 0.09);  /* card corner — lime */
   --color-bloom-mintcast:oklch(0.78 0.10 215 / 0.06);  /* card corner — cyan */
 
-  --font-display: var(--font-archivo), system-ui, sans-serif;
-  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: "Twemoji Country Flags", var(--font-archivo), system-ui, sans-serif;
+  --font-sans: "Twemoji Country Flags", var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: "Twemoji Country Flags", var(--font-geist-mono), ui-monospace, monospace;
 }
 
 @layer base {
