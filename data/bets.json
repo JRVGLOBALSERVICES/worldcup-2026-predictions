@@ -14928,6 +14928,53 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-84055479289",
+      "slipNo": "84055479289",
+      "matchId": "por-esp-2026-07-06",
+      "player": "5-game acca",
+      "market": "Accumulator (5) — Anytime Scorer / 1X+BTTS / Player G+A",
+      "label": "REAL 1xBet slip 84055479289 (06/07 11:43) — 5-fold @ 70.641, RM50 -> RM3532.05. Por/Esp Mikel Oyarzabal To Score At Any Time Yes (2.43) · USA/Bel Romelu Lukaku To Score At Any Time Yes (2.25) · Arg/Egy Lionel Messi To Score At Any Time Yes (1.82) · Fra/Mar 1X And Both Teams To Score Yes (2.29) · Sui/Col Breel Embolo Total Goals + Assists Combined Over 0.5 (3.1).",
+      "odds": 70.641,
+      "stake": 50,
+      "placedAt": "06/07 11:43",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "por-esp-2026-07-06",
+            "kind": "scored",
+            "player": "Mikel Oyarzabal",
+            "odds": 2.43
+          },
+          {
+            "matchId": "usa-bel-2026-07-07",
+            "kind": "scored",
+            "player": "Romelu Lukaku",
+            "odds": 2.25
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scored",
+            "player": "Lionel Messi",
+            "odds": 1.82
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X",
+            "odds": 2.29
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "goalsAssistsOver",
+            "player": "Breel Embolo",
+            "line": 0.5,
+            "odds": 3.1
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
