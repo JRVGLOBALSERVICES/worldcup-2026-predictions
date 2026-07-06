@@ -1473,7 +1473,17 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       <div className="mt-10 space-y-12">
         {(() => {
           const renderDay = (day: DayRow) => {
-          const sorted = [...day.matches].sort((a, b) => rank(live[a.matchId]) - rank(live[b.matchId]));
+          const sorted = [...day.matches].sort(
+            (a, b) =>
+              rank(live[a.matchId]) - rank(live[b.matchId]) ||
+              new Date(a.kickoffUTC).getTime() - new Date(b.kickoffUTC).getTime(),
+          );
+          // Stage badge for the day header: knockout days carry one round (R16 /
+          // Quarter-final …); group-stage days show "Group stage". A day that
+          // straddles rounds (rare) reads "Knockouts".
+          const dayRounds = [...new Set(day.matches.map((m) => m.round).filter(Boolean))] as string[];
+          const stageLabel =
+            dayRounds.length === 1 ? dayRounds[0] : dayRounds.length > 1 ? "Knockouts" : "Group stage";
           // Multi-leg parlays are no longer rolled up per day — they all live in the
           // single top-level GlobalParlays section, so a parlay whose legs span
           // several days (e.g. the R16 "to qualify" accas) shows up ONCE rather
@@ -1492,6 +1502,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                     <span className="self-center rounded-full bg-acid px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-pitch">Today</span>
                   )}
                   {day.label}
+                  <span className="self-center rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+                    {stageLabel}
+                  </span>
                 </h2>
                 <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
                   {singleCount} bets
@@ -1695,7 +1708,15 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           // round. Key comparison is deterministic (no Date.now → no hydration drift).
           const isPast = (d: DayRow) => d.key !== "tbd" && d.key < base.featuredKey;
           const featured = base.days.filter((d) => d.isFeatured);
-          const upcoming = base.days.filter((d) => !d.isFeatured && !isPast(d));
+          // The forward schedule reads chronologically: today (featured) → soonest
+          // upcoming → latest. base.days is stored newest-first, so re-sort the
+          // upcoming slate ASCENDING by date key ("tbd" undated bucket sinks last).
+          const upcoming = base.days
+            .filter((d) => !d.isFeatured && !isPast(d))
+            .sort((a, b) =>
+              a.key === "tbd" ? 1 : b.key === "tbd" ? -1 : a.key.localeCompare(b.key),
+            );
+          // Settled history stays newest-first inside the folded "Earlier rounds".
           const past = base.days.filter((d) => !d.isFeatured && isPast(d));
           const pastBets = past.reduce(
             (s, d) => s + d.matches.reduce((x, m) => x + m.bets.length + m.specials.filter((sp) => !sp.mirror).length, 0),
