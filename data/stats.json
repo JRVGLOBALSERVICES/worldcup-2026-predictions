@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T22:00:12.000Z",
+    "generatedAt": "2026-07-07T22:10:06.523Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 79
   },
@@ -958,8 +958,8 @@
         "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 49.4,
-        "display": "49.4%",
+        "value": 50.4,
+        "display": "50.4%",
         "matches": 5
       },
       {
@@ -1808,6 +1808,10 @@
       ],
       "yellowCards": [
         {
+          "name": "Davinson Sánchez",
+          "value": 1
+        },
+        {
           "name": "Gustavo Puerta",
           "value": 1
         },
@@ -1821,10 +1825,6 @@
         },
         {
           "name": "Jhon Lucumí",
-          "value": 1
-        },
-        {
-          "name": "Johan Mojica",
           "value": 1
         }
       ],
@@ -6989,31 +6989,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 52.4,
-            "accuratePasses": 428,
-            "totalPasses": 491,
+            "possessionPct": 52,
+            "accuratePasses": 451,
+            "totalPasses": 520,
             "shotsOnTarget": 2,
             "totalShots": 6,
-            "effectiveTackles": 4,
-            "totalTackles": 8,
-            "accurateCrosses": 1,
-            "totalCrosses": 13,
-            "accurateLongBalls": 18,
-            "totalLongBalls": 40
-          },
-          {
-            "team": "Colombia",
-            "possessionPct": 47.6,
-            "accuratePasses": 370,
-            "totalPasses": 447,
-            "shotsOnTarget": 2,
-            "totalShots": 7,
-            "effectiveTackles": 7,
-            "totalTackles": 15,
+            "effectiveTackles": 5,
+            "totalTackles": 10,
             "accurateCrosses": 1,
             "totalCrosses": 13,
             "accurateLongBalls": 20,
-            "totalLongBalls": 57
+            "totalLongBalls": 46
+          },
+          {
+            "team": "Colombia",
+            "possessionPct": 48,
+            "accuratePasses": 399,
+            "totalPasses": 479,
+            "shotsOnTarget": 2,
+            "totalShots": 9,
+            "effectiveTackles": 7,
+            "totalTackles": 15,
+            "accurateCrosses": 2,
+            "totalCrosses": 15,
+            "accurateLongBalls": 26,
+            "totalLongBalls": 64
           }
         ]
       },
