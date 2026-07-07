@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T17:40:09.175Z",
+    "generatedAt": "2026-07-07T17:50:07.658Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 78
   },
@@ -8,6 +8,14 @@
     "scorers": [
       {
         "rank": 1,
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 8,
+        "matches": 5
+      },
+      {
+        "rank": 2,
         "name": "Erling Haaland",
         "team": "Norway",
         "flag": "🇳🇴",
@@ -15,20 +23,12 @@
         "matches": 4
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
         "value": 7,
         "matches": 5
-      },
-      {
-        "rank": 1,
-        "name": "Lionel Messi",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 7,
-        "matches": 4
       },
       {
         "rank": 4,
@@ -484,8 +484,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 90.9,
-        "display": "90.9%",
+        "value": 91,
+        "display": "91.0%",
         "matches": 5
       },
       {
@@ -622,8 +622,8 @@
         "rank": 8,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 60.7,
-        "display": "60.7%",
+        "value": 60.9,
+        "display": "60.9%",
         "matches": 5
       },
       {
@@ -712,8 +712,8 @@
         "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 41.4,
-        "display": "41.4%",
+        "value": 41.3,
+        "display": "41.3%",
         "matches": 5
       },
       {
@@ -818,14 +818,6 @@
       },
       {
         "rank": 2,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 37,
-        "display": "37.0%",
-        "matches": 5
-      },
-      {
-        "rank": 3,
         "team": "Haiti",
         "flag": "🇭🇹",
         "value": 35.7,
@@ -833,7 +825,7 @@
         "matches": 2
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "Iraq",
         "flag": "🇮🇶",
         "value": 35.7,
@@ -841,7 +833,15 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 4,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 33.3,
+        "display": "33.3%",
+        "matches": 5
+      },
+      {
+        "rank": 4,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -1226,8 +1226,13 @@
       "scorers": [
         {
           "name": "Lionel Messi",
-          "value": 7,
-          "matches": 4
+          "value": 8,
+          "matches": 5
+        },
+        {
+          "name": "Cristian Romero",
+          "value": 1,
+          "matches": 1
         },
         {
           "name": "Giovani Lo Celso",
@@ -1257,17 +1262,17 @@
           "matches": 1
         },
         {
+          "name": "Gonzalo Montiel",
+          "value": 1,
+          "matches": 1
+        },
+        {
+          "name": "Lionel Messi",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Lisandro Martínez",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Nico González",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Rodrigo De Paul",
           "value": 1,
           "matches": 1
         }
@@ -6985,36 +6990,44 @@
           {
             "name": "Haissem Hassan",
             "team": "Egypt"
+          },
+          {
+            "name": "Lionel Messi",
+            "team": "Argentina"
+          },
+          {
+            "name": "Gonzalo Montiel",
+            "team": "Argentina"
           }
         ],
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 64.2,
-            "accuratePasses": 442,
-            "totalPasses": 492,
-            "shotsOnTarget": 4,
-            "totalShots": 14,
+            "possessionPct": 65.6,
+            "accuratePasses": 500,
+            "totalPasses": 552,
+            "shotsOnTarget": 6,
+            "totalShots": 19,
             "effectiveTackles": 15,
-            "totalTackles": 18,
-            "accurateCrosses": 6,
-            "totalCrosses": 16,
+            "totalTackles": 19,
+            "accurateCrosses": 7,
+            "totalCrosses": 24,
             "accurateLongBalls": 13,
             "totalLongBalls": 21
           },
           {
             "team": "Egypt",
-            "possessionPct": 35.8,
-            "accuratePasses": 230,
-            "totalPasses": 276,
+            "possessionPct": 34.4,
+            "accuratePasses": 245,
+            "totalPasses": 295,
             "shotsOnTarget": 2,
-            "totalShots": 3,
-            "effectiveTackles": 6,
-            "totalTackles": 11,
+            "totalShots": 4,
+            "effectiveTackles": 7,
+            "totalTackles": 13,
             "accurateCrosses": 1,
             "totalCrosses": 5,
-            "accurateLongBalls": 7,
-            "totalLongBalls": 25
+            "accurateLongBalls": 9,
+            "totalLongBalls": 30
           }
         ]
       }
