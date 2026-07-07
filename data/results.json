@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T21:50:03.922Z",
+    "generatedAt": "2026-07-07T22:00:06.184Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 75,
     "live": 1
@@ -41321,7 +41321,7 @@
       "updatedAt": "2026-07-07T20:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 2,
+          "home": 3,
           "away": 4
         },
         "sot": {
@@ -41329,7 +41329,7 @@
           "away": 2
         },
         "shots": {
-          "home": 5,
+          "home": 6,
           "away": 7
         },
         "yellow": {
@@ -41345,13 +41345,13 @@
           "away": 1
         },
         "fouls": {
-          "home": 12,
+          "home": 13,
           "away": 15
         },
         "cornersByHalf": {
           "home": [
             1,
-            1
+            2
           ],
           "away": [
             4,
@@ -41378,7 +41378,7 @@
           "Jhon Arias": 1,
           "Gustavo Puerta": 2,
           "Fabian Rieder": 3,
-          "Dan Ndoye": 1,
+          "Dan Ndoye": 2,
           "Luis Díaz": 2,
           "Luis Suárez": 2,
           "Djibril Sow": 1
@@ -41410,9 +41410,9 @@
           },
           "Dan Ndoye": {
             "team": "home",
-            "shots": 1,
+            "shots": 2,
             "sot": 1,
-            "off": 0,
+            "off": 1,
             "blocked": 0,
             "goals": 0
           },
@@ -41497,6 +41497,13 @@
             "on": "Cedric Itten",
             "off": "Breel Embolo",
             "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 90,
+            "on": "Rubén Vargas",
+            "off": "Dan Ndoye",
+            "injury": false
           }
         ],
         "firstGoalMethod": null,
@@ -41525,16 +41532,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 51.4,
-            "away": 48.6
+            "home": 52.4,
+            "away": 47.6
           },
           "passes": {
-            "home": 450,
-            "away": 425
+            "home": 491,
+            "away": 447
           },
           "tackles": {
             "home": 8,
-            "away": 14
+            "away": 15
           },
           "saves": {
             "home": 2,
@@ -41549,19 +41556,19 @@
             "away": 3
           },
           "interceptions": {
-            "home": 9,
-            "away": 9
+            "home": 11,
+            "away": 10
           },
           "clearances": {
             "home": 26,
-            "away": 16
+            "away": 18
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "12",
+            "home": "13",
             "away": "15"
           },
           {
@@ -41585,7 +41592,7 @@
           {
             "key": "wonCorners",
             "label": "Corner Kicks",
-            "home": "2",
+            "home": "3",
             "away": "4"
           },
           {
@@ -41597,13 +41604,13 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "51.4",
-            "away": "48.6"
+            "home": "52.4",
+            "away": "47.6"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "5",
+            "home": "6",
             "away": "7"
           },
           {
@@ -41615,7 +41622,7 @@
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "0.4",
+            "home": "0.3",
             "away": "0.3"
           },
           {
@@ -41633,14 +41640,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "388",
-            "away": "351"
+            "home": "428",
+            "away": "370"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "450",
-            "away": "425"
+            "home": "491",
+            "away": "447"
           },
           {
             "key": "passPct",
@@ -41657,7 +41664,7 @@
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "11",
+            "home": "13",
             "away": "13"
           },
           {
@@ -41669,19 +41676,19 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "38",
-            "away": "55"
+            "home": "40",
+            "away": "57"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "16",
+            "home": "18",
             "away": "20"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.4",
+            "home": "0.5",
             "away": "0.4"
           },
           {
@@ -41694,37 +41701,37 @@
             "key": "effectiveTackles",
             "label": "Effective Tackles",
             "home": "4",
-            "away": "6"
+            "away": "7"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
             "home": "8",
-            "away": "14"
+            "away": "15"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
             "home": "0.5",
-            "away": "0.4"
+            "away": "0.5"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "9",
-            "away": "9"
+            "home": "11",
+            "away": "10"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
             "home": "26",
-            "away": "16"
+            "away": "18"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
             "home": "26",
-            "away": "16"
+            "away": "18"
           }
         ]
       }
