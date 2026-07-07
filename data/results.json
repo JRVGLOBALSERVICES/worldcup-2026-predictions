@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T18:00:05.657Z",
+    "generatedAt": "2026-07-07T18:10:04.556Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 74,
-    "live": 1
+    "finished": 75,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -40718,19 +40718,25 @@
       "assistsChecked": true
     },
     "arg-egy-2026-07-07": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 0,
         "away": 1
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 3,
+        "away": 2
+      },
+      "ft90": {
+        "home": 3,
+        "away": 2
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 3,
         "away": 2
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "away",
@@ -40785,6 +40791,24 @@
           "player": "Hamdy Fathy",
           "minute": 90,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Marawan Attia",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Unknown",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Haissem Hassan",
+          "minute": 90,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-07T16:00:00.000Z",
@@ -40803,7 +40827,7 @@
         },
         "yellow": {
           "home": 0,
-          "away": 1
+          "away": 4
         },
         "red": {
           "home": 0,
@@ -40811,11 +40835,11 @@
         },
         "cards": {
           "home": 0,
-          "away": 1
+          "away": 4
         },
         "fouls": {
-          "home": 12,
-          "away": 10
+          "home": 13,
+          "away": 11
         },
         "cornersByHalf": {
           "home": [
@@ -40950,8 +40974,8 @@
             "team": "away",
             "shots": 2,
             "sot": 0,
-            "off": 1,
-            "blocked": 1,
+            "off": 2,
+            "blocked": 0,
             "goals": 0
           },
           "Cristian Romero": {
@@ -41005,6 +41029,27 @@
             "on": "Omar Marmoush",
             "off": "Mostafa Zico",
             "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 90,
+            "on": "Facundo Medina",
+            "off": "Julián Alvarez",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 90,
+            "on": "Nicolás Otamendi",
+            "off": "Cristian Romero",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 90,
+            "on": "Zizo",
+            "off": "Mohanad Lasheen",
+            "injury": false
           }
         ],
         "firstGoalMethod": "header",
@@ -41033,16 +41078,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 64.6,
-            "away": 35.4
+            "home": 63.6,
+            "away": 36.4
           },
           "passes": {
-            "home": 592,
-            "away": 330
+            "home": 602,
+            "away": 349
           },
           "tackles": {
             "home": 20,
-            "away": 14
+            "away": 15
           },
           "saves": {
             "home": 0,
@@ -41061,22 +41106,22 @@
             "away": 10
           },
           "clearances": {
-            "home": 12,
-            "away": 42
+            "home": 14,
+            "away": 43
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "12",
-            "away": "10"
+            "home": "13",
+            "away": "11"
           },
           {
             "key": "yellowCards",
             "label": "Yellow Cards",
             "home": "0",
-            "away": "1"
+            "away": "4"
           },
           {
             "key": "redCards",
@@ -41104,9 +41149,9 @@
           },
           {
             "key": "possessionPct",
-            "label": "POSSESSION",
-            "home": "64.6",
-            "away": "35.4"
+            "label": "Possession",
+            "home": "63.6",
+            "away": "36.4"
           },
           {
             "key": "totalShots",
@@ -41141,14 +41186,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "535",
-            "away": "275"
+            "home": "541",
+            "away": "289"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "592",
-            "away": "330"
+            "home": "602",
+            "away": "349"
           },
           {
             "key": "passPct",
@@ -41166,7 +41211,7 @@
             "key": "totalCrosses",
             "label": "Crosses",
             "home": "26",
-            "away": "6"
+            "away": "8"
           },
           {
             "key": "crossPct",
@@ -41177,19 +41222,19 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "26",
-            "away": "31"
+            "home": "31",
+            "away": "35"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "18",
-            "away": "9"
+            "home": "19",
+            "away": "12"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.7",
+            "home": "0.6",
             "away": "0.3"
           },
           {
@@ -41202,13 +41247,13 @@
             "key": "effectiveTackles",
             "label": "Effective Tackles",
             "home": "15",
-            "away": "7"
+            "away": "8"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
             "home": "20",
-            "away": "14"
+            "away": "15"
           },
           {
             "key": "tacklePct",
@@ -41225,17 +41270,18 @@
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "12",
-            "away": "42"
+            "home": "14",
+            "away": "43"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "12",
-            "away": "42"
+            "home": "14",
+            "away": "43"
           }
         ]
-      }
+      },
+      "assistsChecked": true
     }
   }
 }
