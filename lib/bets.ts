@@ -867,6 +867,12 @@ export const playerShotsCount = (stats: MatchStats | null, player: string): numb
   );
 };
 
+/** Was `player` substituted OFF (per the subs log)? Football has no re-entry,
+ *  so a subbed-off player's shot line is FROZEN — an under-the-line shots/SOT
+ *  prop can never recover and locks dead the moment he walks. */
+export const subbedOff = (stats: MatchStats | null, player: string): boolean =>
+  (stats?.subs ?? []).some((s) => nameMatch(s.off, player));
+
 // `realGoals` = the 90-minute scoring goals: no own goals, no extra-time goals.
 // Every scorer/first-scorer/brace/total market reads through this, so they all
 // settle on regulation only — matching the bookmaker rule that those markets are
@@ -1232,6 +1238,9 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
           goalsBy(ev.goals, leg.player).length,
         );
         if (shots > leg.line) continue; // leg won, even mid-match
+        // Subbed off still under the line → his tally is frozen, acca dead —
+        // but only trust it when the shot map was actually snapshotted.
+        if (st?.playerShots && subbedOff(st, leg.player)) return "lost";
         if (finished) {
           if (!st?.playerShots) {
             pending = true; // stats never snapshotted → manual settle
@@ -1255,6 +1264,9 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
           goalsBy(ev.goals, leg.player).length,
         );
         if (sot > leg.line) continue; // leg won, even mid-match
+        // Subbed off still under the line → his tally is frozen, acca dead —
+        // but only trust it when the SOT map was actually snapshotted.
+        if (st?.playerSot && subbedOff(st, leg.player)) return "lost";
         if (finished) {
           if (!st?.playerSot) {
             pending = true; // stats never snapshotted → manual settle

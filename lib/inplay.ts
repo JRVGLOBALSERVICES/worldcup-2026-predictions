@@ -5,6 +5,7 @@ import {
   playerShotsCount,
   playerSotCount,
   playerStarted,
+  subbedOff,
   wholeLinePush,
 } from "./bets";
 import type { LiveMatch } from "./live";
@@ -1262,7 +1263,9 @@ export function inPlayMultiLeg(
       // Player's TOTAL shots over the line — accrues monotonically, so it locks
       // WON the moment the tally clears it. A goal always counts as a shot, so
       // the goal list backstops the per-shooter tally. Dies at the true whistle
-      // if short; with no tally at all it stays neutral (static holds pending).
+      // if short — or the moment the player is SUBBED OFF still under the line
+      // (his shot line is frozen; no re-entry). With no tally at all it stays
+      // neutral (static holds pending).
       const shots = Math.max(
         playerShotsCount(lm.stats ?? null, leg.player),
         goalsBy(lm.goals, leg.player).length,
@@ -1270,6 +1273,9 @@ export function inPlayMultiLeg(
       if (shots > leg.line) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
+      } else if (lm.stats?.playerShots && subbedOff(lm.stats, leg.player)) {
+        dead = true;
+        parts.push(`${legLabel} ✗ (subbed off)`);
       } else if (doneFull && lm.stats?.playerShots) {
         dead = true;
         parts.push(`${legLabel} ✗`);
@@ -1283,8 +1289,9 @@ export function inPlayMultiLeg(
       // Player's shots ON TARGET over the line — accrues monotonically, so it
       // locks WON the moment the tally clears it. A real goal is always on
       // target, so the goal list backstops the per-shooter tally. Dies at the
-      // whistle if short; with no tally at all it stays neutral (static holds
-      // pending) — mirror of playerShotsOver.
+      // whistle if short — or the moment the player is SUBBED OFF still under
+      // the line (frozen; no re-entry). With no tally at all it stays neutral
+      // (static holds pending) — mirror of playerShotsOver.
       const sot = Math.max(
         playerSotCount(lm.stats ?? null, leg.player),
         goalsBy(lm.goals, leg.player).length,
@@ -1292,6 +1299,9 @@ export function inPlayMultiLeg(
       if (sot > leg.line) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
+      } else if (lm.stats?.playerSot && subbedOff(lm.stats, leg.player)) {
+        dead = true;
+        parts.push(`${legLabel} ✗ (subbed off)`);
       } else if (doneFull && lm.stats?.playerSot) {
         dead = true;
         parts.push(`${legLabel} ✗`);
