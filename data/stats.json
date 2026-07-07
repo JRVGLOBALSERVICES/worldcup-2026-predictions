@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-06T23:10:05.808Z",
+    "generatedAt": "2026-07-07T00:10:05.624Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 77
   },
@@ -620,6 +620,14 @@
       },
       {
         "rank": 8,
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 60.8,
+        "display": "60.8%",
+        "matches": 4
+      },
+      {
+        "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 60,
@@ -627,20 +635,12 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 59.8,
         "display": "59.8%",
         "matches": 4
-      },
-      {
-        "rank": 10,
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 58.9,
-        "display": "58.9%",
-        "matches": 3
       }
     ],
     "shotAccuracy": [
@@ -964,11 +964,11 @@
       },
       {
         "rank": 10,
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 49.2,
-        "display": "49.2%",
-        "matches": 3
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 49.1,
+        "display": "49.1%",
+        "matches": 4
       }
     ]
   },
@@ -6906,6 +6906,40 @@
             "totalCrosses": 16,
             "accurateLongBalls": 16,
             "totalLongBalls": 35
+          }
+        ]
+      },
+      "760507": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "United States",
+            "possessionPct": 33.8,
+            "accuratePasses": 19,
+            "totalPasses": 25,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 0,
+            "totalLongBalls": 1
+          },
+          {
+            "team": "Belgium",
+            "possessionPct": 66.2,
+            "accuratePasses": 43,
+            "totalPasses": 50,
+            "shotsOnTarget": 2,
+            "totalShots": 5,
+            "effectiveTackles": 2,
+            "totalTackles": 4,
+            "accurateCrosses": 1,
+            "totalCrosses": 2,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 7
           }
         ]
       }
