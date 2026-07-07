@@ -331,33 +331,29 @@ export function buildShotRows(lm: LiveMatch, tracked: string[] = []): ShotRow[] 
 
   // Zero-rows for tracked players who haven't attempted yet — resolved to the
   // REAL sheet name via the confirmed XI or the subs list (came on later), so
-  // a raw bet label never renders as a player name.
+  // a raw bet label never renders as a player name. One tracked entry can name
+  // SEVERAL players (a parlay label with five player legs), so collect EVERY
+  // sheet hit per entry — resolving just the first pins one player and
+  // silently drops the rest of the slip.
   const have = (name: string) => rows.some((r) => nameMatch(r.player, name));
   for (const t of tracked) {
-    let team: "home" | "away" | null = null;
-    let resolved: string | null = null;
-    for (const side of ["home", "away"] as const) {
-      const p = lm.lineups?.[side]?.players.find((x) => nameMatch(t, x.name));
-      if (p) {
-        team = side;
-        resolved = p.name;
-      }
+    const hits: { team: "home" | "away"; name: string }[] = [];
+    for (const side of ["home", "away"] as const)
+      for (const p of lm.lineups?.[side]?.players ?? [])
+        if (nameMatch(t, p.name)) hits.push({ team: side, name: p.name });
+    if (hits.length === 0)
+      for (const s of subs ?? [])
+        if (s.on && nameMatch(t, s.on)) hits.push({ team: s.team, name: s.on });
+    for (const hit of hits) {
+      // not on the sheet (yet) → no hit → nothing truthful to show
+      if (have(hit.name)) continue; // already shooting / two labels on one player → one row
+      rows.push({
+        player: hit.name,
+        line: { team: hit.team, shots: 0, sot: 0, off: 0, blocked: 0, goals: 0 },
+        ...subMarks(subs, hit.name),
+        tracked: true,
+      });
     }
-    if (!resolved) {
-      const s = (subs ?? []).find((x) => x.on && nameMatch(t, x.on));
-      if (s) {
-        team = s.team;
-        resolved = s.on;
-      }
-    }
-    if (!team || !resolved) continue; // not on the sheet (yet) — nothing truthful to show
-    if (have(resolved)) continue; // already shooting / two labels on one player → one row
-    rows.push({
-      player: resolved,
-      line: { team, shots: 0, sot: 0, off: 0, blocked: 0, goals: 0 },
-      ...subMarks(subs, resolved),
-      tracked: true,
-    });
   }
 
   // Tracked lines first, then by shots desc, then on-target desc.

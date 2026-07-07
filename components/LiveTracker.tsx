@@ -1258,6 +1258,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   // matches player names against these to pin + highlight tracked shooters
   // ("Bruno Fernandes Over 0.5 shots" pins Bruno's live line to the top).
   // Cross-match acca labels fan out to every leg's matchId, same as betMatchIds.
+  // Per-leg PLAYER names fan out too — a parlay naming five players is one
+  // label, and the zero-attempt pin resolves one player per entry, so each
+  // player leg must land as its own entry or only the first ever pins.
   const openLabelsByMatch = useMemo(() => {
     const m: Record<string, string[]> = {};
     const add = (id: string, label: string) => (m[id] ??= []).push(label);
@@ -1267,8 +1270,18 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
         for (const sp of g.specials) {
           if (sp.staticStatus !== "pending" || sp.mirror) continue;
           add(g.matchId, sp.label);
-          const legs = (sp.grade as { legs?: { matchId?: string }[] } | undefined)?.legs;
-          if (Array.isArray(legs)) for (const l of legs) if (l.matchId) add(l.matchId, sp.label);
+          const grade = sp.grade as
+            | { player?: string; players?: string[]; legs?: { matchId?: string; player?: string; players?: string[] }[] }
+            | undefined;
+          if (grade?.player) add(g.matchId, grade.player);
+          for (const p of grade?.players ?? []) add(g.matchId, p);
+          if (Array.isArray(grade?.legs))
+            for (const l of grade.legs) {
+              const mid = l.matchId ?? g.matchId;
+              if (l.matchId) add(l.matchId, sp.label);
+              if (l.player) add(mid, l.player);
+              for (const p of l.players ?? []) add(mid, p);
+            }
         }
       }
     return m;
