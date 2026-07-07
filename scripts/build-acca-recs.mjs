@@ -19,7 +19,14 @@ const J = (f) => JSON.parse(readFileSync(join(DATA, f), "utf8"));
 const fixtures = J("fixtures.json");
 const results = J("results.json").results;
 const stats = J("stats.json");
-const normTeam = (s) => String(s ?? "").toLowerCase().replace(/[^a-z]/g, "").replace(/^unitedstates(ofamerica)?$/, "usa");
+// 8-year historical priors (Elo, opp-adjusted att/def, 1H shares, player rates)
+// built by build-history.mjs from the full international-results archive.
+let hist = { teams: {}, players: {}, meta: { mu8: 1.27 } };
+try { hist = J("history.json"); } catch { console.warn("history.json missing — running tournament-only"); }
+const strip = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "");
+const normTeam = (s) => strip(s).toLowerCase().replace(/[^a-z]/g, "").replace(/^unitedstates(ofamerica)?$/, "usa");
+const normPlayer = (s) => strip(s).toLowerCase().replace(/[^a-z]/g, "");
+const H = (t) => hist.teams[normTeam(t)];
 
 const fxArr = Array.isArray(fixtures) ? fixtures : fixtures.fixtures || fixtures.matches;
 const name = (t) => (typeof t === "string" ? t : t?.name || "?");
@@ -56,17 +63,20 @@ function factorial(n) { let r = 1; for (let i = 2; i <= n; i++) r *= i; return r
 const pois = (k, l) => (Math.exp(-l) * l ** k) / factorial(k);
 const poisCdf = (k, l) => { let s = 0; for (let i = 0; i <= k; i++) s += pois(i, l); return s; };
 
-// recency-weighted rate: last 2 games weight 1.5x
+// recency-weighted rate: last 2 games weight 1.5x, shrunk toward the team's
+// OWN 8-year historical att/def (PRIOR_G pseudo-games) instead of the league
+// mean — a team's long-run identity fills in what 5-7 tournament games can't.
+const PRIOR_G = 4;
 function rates(t) {
+  const h = H(t);
+  const priorAtt = h ? h.att : 1, priorDef = h ? h.def : 1;
   const tm = T[t];
-  if (!tm || tm.g < 2) return { att: 1, def: 1, cf: MUC, ca: MUC, ff: MUF, fa: MUF, g: tm?.g ?? 0 };
+  if (!tm || tm.g < 2) return { att: priorAtt, def: priorDef, cf: MUC, ca: MUC, ff: MUF, fa: MUF, g: tm?.g ?? 0 };
   const ms = [...tm.matches].sort((a, b) => new Date(a.kick) - new Date(b.kick));
   let wgf = 0, wga = 0, W = 0;
   ms.forEach((m, i) => { const w = i >= ms.length - 2 ? 1.5 : 1; wgf += w * m.gf; wga += w * m.ga; W += w; });
-  const att = (wgf / W + SHRINK * MU / tm.g) / ((W + SHRINK) / W) / MU * (W / (W)) ;
-  // simpler shrink: blend observed with league mean by SHRINK pseudo-games
-  const attS = ((wgf / W) * tm.g + MU * SHRINK) / (tm.g + SHRINK) / MU;
-  const defS = ((wga / W) * tm.g + MU * SHRINK) / (tm.g + SHRINK) / MU;
+  const attS = ((wgf / W) * tm.g + MU * priorAtt * PRIOR_G) / (tm.g + PRIOR_G) / MU;
+  const defS = ((wga / W) * tm.g + MU * priorDef * PRIOR_G) / (tm.g + PRIOR_G) / MU;
   return { att: attS, def: defS, cf: tm.cf / tm.g, ca: tm.ca / tm.g, ff: tm.ff / tm.g, fa: tm.fa / tm.g, g: tm.g };
 }
 
@@ -92,13 +102,21 @@ function playerRates() {
 }
 const pShots = playerRates();
 
+// scorer prob: tournament goal share blended with the player's 4-year
+// historical share (gpg vs team scoring rate — both from history.json).
+// K pseudo team-goals of history keeps a 1-goal tournament fluke honest and
+// lets proven scorers (Mbappe/Haaland tier) rate correctly even off 1-2 WC goals.
 function scorerProb(teamName, player, lTeam) {
-  const bt = stats.byTeam?.[normTeam(teamName)]; if (!bt) return null;
-  const teamGoals = bt.scorers.reduce((s, x) => s + x.value, 0) || 1;
-  const p = bt.scorers.find((x) => x.name === player);
-  if (!p) return null;
-  const lp = lTeam * (p.value / teamGoals);
-  return 1 - Math.exp(-lp);
+  const bt = stats.byTeam?.[normTeam(teamName)];
+  const teamGoals = bt ? bt.scorers.reduce((s, x) => s + x.value, 0) : 0;
+  const tourGoals = bt?.scorers.find((x) => normPlayer(x.name) === normPlayer(player))?.value ?? 0;
+  const hp = hist.players?.[normPlayer(player)];
+  const ht = H(teamName);
+  const histShare = hp && ht ? Math.min(0.6, hp.gpg / Math.max(0.4, ht.gfRate)) : null;
+  if (!tourGoals && histShare == null) return null;
+  const K = 4;
+  const share = histShare != null ? (tourGoals + K * histShare) / (Math.max(teamGoals, 1) + K) : tourGoals / Math.max(teamGoals, 1);
+  return 1 - Math.exp(-lTeam * share);
 }
 
 // ── build recs for each upcoming fixture ────────────────────────────────────
@@ -113,7 +131,10 @@ for (const fx of upcoming) {
   const lh = MU * rh.att * ra.def * HFA;
   const la = MU * ra.att * rh.def / HFA;
   const G = grid(lh, la);
-  const G1 = grid(lh * HT_SHARE, la * HT_SHARE);
+  // per-team historical 1st-half goal share (e.g. France back-loads goals,
+  // Argentina front-loads) — falls back to the tournament-wide 0.44
+  const fhH = H(h)?.fhShare ?? HT_SHARE, fhA = H(a)?.fhShare ?? HT_SHARE;
+  const G1 = grid(lh * fhH, la * fhA);
   const legs = [];
   const add = (market, pick, p, note) => p != null && legs.push({ market, pick, p: +p.toFixed(3), note });
 
@@ -123,8 +144,15 @@ for (const fx of upcoming) {
   add("Double Chance", `${a} or Draw`, G.pA + G.pD);
   add("Double Chance", `${h} or ${a}`, G.pH + G.pA);
   const favShare = G.pH / (G.pH + G.pA);
-  add("To Qualify", h, G.pH + G.pD * favShare, "90-min win + ET/pens share");
-  add("To Qualify", a, G.pA + G.pD * (1 - favShare), "90-min win + ET/pens share");
+  // qualify = Poisson 90' + draw split, blended 70/30 with 8-year Elo expectation
+  const eloH = H(h)?.elo, eloA = H(a)?.elo;
+  let qH = G.pH + G.pD * favShare, qA = G.pA + G.pD * (1 - favShare);
+  if (eloH && eloA) {
+    const pe = 1 / (1 + 10 ** ((eloA - eloH) / 400));
+    qH = 0.7 * qH + 0.3 * pe; qA = 0.7 * qA + 0.3 * (1 - pe);
+  }
+  add("To Qualify", h, qH, eloH ? `Elo ${eloH} v ${eloA}` : "90-min win + ET/pens share");
+  add("To Qualify", a, qA, eloH ? `Elo ${eloA} v ${eloH}` : "90-min win + ET/pens share");
 
   // totals
   for (const line of [1.5, 2.5, 3.5, 4.5, 5.5]) {
@@ -136,9 +164,13 @@ for (const fx of upcoming) {
   add("Team Goals", `${h} Under 2.5`, poisCdf(2, lh)); add("Team Goals", `${a} Under 2.5`, poisCdf(2, la));
   add("Team Goals", `${h} Under 3.5`, poisCdf(3, lh)); add("Team Goals", `${a} Under 3.5`, poisCdf(3, la));
   add("Team Goals", `${h} Over 0.5`, 1 - pois(0, lh)); add("Team Goals", `${a} Over 0.5`, 1 - pois(0, la));
-  // BTTS + 1H
-  add("BTTS", "Yes", pBtts(G)); add("BTTS", "No", 1 - pBtts(G));
-  add("1st Half Goals", "Over 0.5", 1 - pois(0, lh * HT_SHARE) * pois(0, la * HT_SHARE));
+  // BTTS + 1H — BTTS blends the matchup grid with the teams' 8-year BTTS base rates
+  let btts = pBtts(G);
+  const bH = H(h)?.bttsRate, bA = H(a)?.bttsRate;
+  if (bH != null && bA != null) btts = 0.75 * btts + 0.25 * (bH + bA) / 2;
+  add("BTTS", "Yes", btts, bH != null ? `8y base ${(bH * 100).toFixed(0)}%/${(bA * 100).toFixed(0)}%` : undefined);
+  add("BTTS", "No", 1 - btts);
+  add("1st Half Goals", "Over 0.5", 1 - pois(0, lh * fhH) * pois(0, la * fhA), `1H shares ${fhH.toFixed(2)}/${fhA.toFixed(2)}`);
   add("1st Half Goals", "Under 1.5", pTotUnder(G1, 1.5));
   add("1st Half Goals", "Under 2.5", pTotUnder(G1, 2.5));
   add("1st Half DC", `${h} or Draw`, G1.pH + G1.pD);
@@ -160,8 +192,20 @@ for (const fx of upcoming) {
   // scorers + shots for top players of each side
   for (const [tn, lt] of [[h, lh], [a, la]]) {
     const bt = stats.byTeam?.[normTeam(tn)]; if (!bt) continue;
+    // tournament top-3 + 8-year historical top scorers not already covered
+    const cands8y = Object.values(hist.players ?? {})
+      .filter((p) => p.team === normTeam(tn) && p.gpg >= 0.2)
+      .sort((x, y) => y.gpg - x.gpg).slice(0, 3)
+      .map((p) => p.name)
+      .filter((n) => !bt.scorers.slice(0, 3).some((s) => normPlayer(s.name) === normPlayer(n)));
     for (const sc of bt.scorers.slice(0, 3)) {
-      add("Anytime Scorer", `${sc.name} (${tn})`, scorerProb(tn, sc.name, lt), `${sc.value} goals this WC`);
+      const hp = hist.players?.[normPlayer(sc.name)];
+      add("Anytime Scorer", `${sc.name} (${tn})`, scorerProb(tn, sc.name, lt),
+        `${sc.value} this WC${hp ? ` · ${hp.goals4y} in 4y (${hp.gpg}/gm)` : ""}`);
+    }
+    for (const n of cands8y) {
+      const hp = hist.players[normPlayer(n)];
+      add("Anytime Scorer", `${n} (${tn})`, scorerProb(tn, n, lt), `${hp.goals4y} intl goals in 4y (${hp.gpg}/gm)`);
     }
     // player shots from real per-match shot data
     const cands = Object.entries(pShots)
@@ -176,7 +220,8 @@ for (const fx of upcoming) {
   legs.sort((x, y) => y.p - x.p);
   out[fx.id] = {
     match: `${h} vs ${a}`, kickoffUTC: fx.kickoffUTC, stage: fx.stage || fx.round,
-    xg: { [h]: +lh.toFixed(2), [a]: +la.toFixed(2) }, expCorners: +expC.toFixed(1), expFouls: +expF.toFixed(1),
+    xg: { [h]: +lh.toFixed(2), [a]: +la.toFixed(2) }, elo: eloH ? { [h]: eloH, [a]: eloA } : undefined,
+    expCorners: +expC.toFixed(1), expFouls: +expF.toFixed(1),
     legs,
   };
 }

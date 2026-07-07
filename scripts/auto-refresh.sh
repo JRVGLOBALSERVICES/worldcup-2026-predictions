@@ -13,7 +13,7 @@ REPO="/root/repos/worldcup-2026"
 cd "$REPO" || exit 1
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 LOG="$REPO/data/auto-refresh.log"
-GEN="data/results.json data/standings.json data/stats.json data/odds.json data/predictions.json"
+GEN="data/results.json data/standings.json data/stats.json data/odds.json data/predictions.json data/history.json data/acca-recs.json"
 
 stamp() { date -u +%FT%TZ; }
 log() { echo "$(stamp) $*" >> "$LOG"; }
@@ -34,6 +34,8 @@ node scripts/build-standings.mjs   >>"$LOG" 2>&1
 node scripts/build-stats.mjs       >>"$LOG" 2>&1
 node scripts/build-odds.mjs        >>"$LOG" 2>&1
 node scripts/build-predictions.mjs >>"$LOG" 2>&1
+node scripts/build-history.mjs     >>"$LOG" 2>&1
+node scripts/build-acca-recs.mjs   >>"$LOG" 2>&1
 
 after="$(node scripts/content-hash.mjs 2>>"$LOG")"
 

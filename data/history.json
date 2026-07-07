@@ -1,0 +1,7195 @@
+{
+  "meta": {
+    "window": "2018-07-07..2026-07-05",
+    "playerWindow": "2022-07-07",
+    "mu8": 1.27,
+    "teams": 214,
+    "players": 550
+  },
+  "teams": {
+    "sweden": {
+      "name": "Sweden",
+      "elo": 1690,
+      "games": 96,
+      "gfRate": 1.86,
+      "gaRate": 1.271,
+      "bttsRate": 0.538,
+      "over25Rate": 0.635,
+      "cleanSheetRate": 0.229,
+      "fhShare": 0.481,
+      "att": 1.464,
+      "def": 1.001
+    },
+    "england": {
+      "name": "England",
+      "elo": 1991,
+      "games": 105,
+      "gfRate": 2.441,
+      "gaRate": 0.506,
+      "bttsRate": 0.374,
+      "over25Rate": 0.53,
+      "cleanSheetRate": 0.564,
+      "fhShare": 0.465,
+      "att": 1.922,
+      "def": 0.398
+    },
+    "russia": {
+      "name": "Russia",
+      "elo": 1735,
+      "games": 68,
+      "gfRate": 2.077,
+      "gaRate": 0.695,
+      "bttsRate": 0.398,
+      "over25Rate": 0.592,
+      "cleanSheetRate": 0.493,
+      "fhShare": 0.453,
+      "att": 1.635,
+      "def": 0.547
+    },
+    "croatia": {
+      "name": "Croatia",
+      "elo": 1824,
+      "games": 100,
+      "gfRate": 1.913,
+      "gaRate": 0.909,
+      "bttsRate": 0.536,
+      "over25Rate": 0.583,
+      "cleanSheetRate": 0.354,
+      "fhShare": 0.423,
+      "att": 1.506,
+      "def": 0.716
+    },
+    "france": {
+      "name": "France",
+      "elo": 2038,
+      "games": 103,
+      "gfRate": 2.594,
+      "gaRate": 0.656,
+      "bttsRate": 0.486,
+      "over25Rate": 0.595,
+      "cleanSheetRate": 0.454,
+      "fhShare": 0.387,
+      "att": 2.042,
+      "def": 0.516
+    },
+    "belgium": {
+      "name": "Belgium",
+      "elo": 1858,
+      "games": 97,
+      "gfRate": 2.416,
+      "gaRate": 0.745,
+      "bttsRate": 0.482,
+      "over25Rate": 0.538,
+      "cleanSheetRate": 0.413,
+      "fhShare": 0.503,
+      "att": 1.902,
+      "def": 0.587
+    },
+    "liberia": {
+      "name": "Liberia",
+      "elo": 1446,
+      "games": 59,
+      "gfRate": 0.942,
+      "gaRate": 1.345,
+      "bttsRate": 0.454,
+      "over25Rate": 0.478,
+      "cleanSheetRate": 0.174,
+      "fhShare": null,
+      "att": 0.742,
+      "def": 1.059
+    },
+    "sierraleone": {
+      "name": "Sierra Leone",
+      "elo": 1472,
+      "games": 52,
+      "gfRate": 1.045,
+      "gaRate": 1.322,
+      "bttsRate": 0.546,
+      "over25Rate": 0.424,
+      "cleanSheetRate": 0.259,
+      "fhShare": null,
+      "att": 0.823,
+      "def": 1.041
+    },
+    "anguilla": {
+      "name": "Anguilla",
+      "elo": 1055,
+      "games": 40,
+      "gfRate": 0.379,
+      "gaRate": 3.63,
+      "bttsRate": 0.279,
+      "over25Rate": 0.68,
+      "cleanSheetRate": 0.091,
+      "fhShare": null,
+      "att": 0.298,
+      "def": 2.858
+    },
+    "britishvirginislands": {
+      "name": "British Virgin Islands",
+      "elo": 1206,
+      "games": 39,
+      "gfRate": 0.823,
+      "gaRate": 2.265,
+      "bttsRate": 0.432,
+      "over25Rate": 0.611,
+      "cleanSheetRate": 0.166,
+      "fhShare": null,
+      "att": 0.648,
+      "def": 1.783
+    },
+    "belize": {
+      "name": "Belize",
+      "elo": 1382,
+      "games": 49,
+      "gfRate": 1.107,
+      "gaRate": 1.809,
+      "bttsRate": 0.401,
+      "over25Rate": 0.563,
+      "cleanSheetRate": 0.277,
+      "fhShare": null,
+      "att": 0.872,
+      "def": 1.424
+    },
+    "barbados": {
+      "name": "Barbados",
+      "elo": 1224,
+      "games": 56,
+      "gfRate": 1.246,
+      "gaRate": 2.591,
+      "bttsRate": 0.614,
+      "over25Rate": 0.77,
+      "cleanSheetRate": 0.156,
+      "fhShare": null,
+      "att": 0.981,
+      "def": 2.04
+    },
+    "palestine": {
+      "name": "Palestine",
+      "elo": 1591,
+      "games": 71,
+      "gfRate": 1.049,
+      "gaRate": 0.99,
+      "bttsRate": 0.369,
+      "over25Rate": 0.431,
+      "cleanSheetRate": 0.425,
+      "fhShare": 0.516,
+      "att": 0.826,
+      "def": 0.779
+    },
+    "iraq": {
+      "name": "Iraq",
+      "elo": 1629,
+      "games": 108,
+      "gfRate": 1.276,
+      "gaRate": 0.99,
+      "bttsRate": 0.409,
+      "over25Rate": 0.453,
+      "cleanSheetRate": 0.381,
+      "fhShare": 0.424,
+      "att": 1.005,
+      "def": 0.779
+    },
+    "guatemala": {
+      "name": "Guatemala",
+      "elo": 1632,
+      "games": 94,
+      "gfRate": 1.543,
+      "gaRate": 1.104,
+      "bttsRate": 0.437,
+      "over25Rate": 0.484,
+      "cleanSheetRate": 0.331,
+      "fhShare": 0.37,
+      "att": 1.215,
+      "def": 0.869
+    },
+    "cuba": {
+      "name": "Cuba",
+      "elo": 1487,
+      "games": 66,
+      "gfRate": 1.153,
+      "gaRate": 1.529,
+      "bttsRate": 0.374,
+      "over25Rate": 0.574,
+      "cleanSheetRate": 0.383,
+      "fhShare": null,
+      "att": 0.908,
+      "def": 1.204
+    },
+    "andorra": {
+      "name": "Andorra",
+      "elo": 1115,
+      "games": 82,
+      "gfRate": 0.342,
+      "gaRate": 1.691,
+      "bttsRate": 0.217,
+      "over25Rate": 0.392,
+      "cleanSheetRate": 0.189,
+      "fhShare": 0.385,
+      "att": 0.269,
+      "def": 1.331
+    },
+    "unitedarabemirates": {
+      "name": "United Arab Emirates",
+      "elo": 1653,
+      "games": 99,
+      "gfRate": 1.51,
+      "gaRate": 0.944,
+      "bttsRate": 0.572,
+      "over25Rate": 0.502,
+      "cleanSheetRate": 0.245,
+      "fhShare": 0.475,
+      "att": 1.189,
+      "def": 0.743
+    },
+    "grenada": {
+      "name": "Grenada",
+      "elo": 1333,
+      "games": 56,
+      "gfRate": 1.015,
+      "gaRate": 2.057,
+      "bttsRate": 0.364,
+      "over25Rate": 0.673,
+      "cleanSheetRate": 0.233,
+      "fhShare": null,
+      "att": 0.799,
+      "def": 1.619
+    },
+    "jamaica": {
+      "name": "Jamaica",
+      "elo": 1652,
+      "games": 103,
+      "gfRate": 1.467,
+      "gaRate": 0.939,
+      "bttsRate": 0.408,
+      "over25Rate": 0.469,
+      "cleanSheetRate": 0.379,
+      "fhShare": 0.564,
+      "att": 1.155,
+      "def": 0.739
+    },
+    "sintmaarten": {
+      "name": "Sint Maarten",
+      "elo": 1396,
+      "games": 34,
+      "gfRate": 1.283,
+      "gaRate": 2.43,
+      "bttsRate": 0.548,
+      "over25Rate": 0.654,
+      "cleanSheetRate": 0.248,
+      "fhShare": null,
+      "att": 1.01,
+      "def": 1.913
+    },
+    "saintmartin": {
+      "name": "Saint Martin",
+      "elo": 1445,
+      "games": 33,
+      "gfRate": 1.491,
+      "gaRate": 1.758,
+      "bttsRate": 0.373,
+      "over25Rate": 0.816,
+      "cleanSheetRate": 0.325,
+      "fhShare": null,
+      "att": 1.174,
+      "def": 1.384
+    },
+    "bangladesh": {
+      "name": "Bangladesh",
+      "elo": 1259,
+      "games": 70,
+      "gfRate": 0.694,
+      "gaRate": 1.703,
+      "bttsRate": 0.443,
+      "over25Rate": 0.4,
+      "cleanSheetRate": 0.232,
+      "fhShare": null,
+      "att": 0.546,
+      "def": 1.341
+    },
+    "srilanka": {
+      "name": "Sri Lanka",
+      "elo": 1163,
+      "games": 49,
+      "gfRate": 0.599,
+      "gaRate": 1.849,
+      "bttsRate": 0.309,
+      "over25Rate": 0.453,
+      "cleanSheetRate": 0.251,
+      "fhShare": null,
+      "att": 0.472,
+      "def": 1.456
+    },
+    "macau": {
+      "name": "Macau",
+      "elo": 1100,
+      "games": 18,
+      "gfRate": 0.32,
+      "gaRate": 3.604,
+      "bttsRate": 0.355,
+      "over25Rate": 0.628,
+      "cleanSheetRate": 0.111,
+      "fhShare": null,
+      "att": 0.252,
+      "def": 2.837
+    },
+    "solomonislands": {
+      "name": "Solomon Islands",
+      "elo": 1354,
+      "games": 44,
+      "gfRate": 1.67,
+      "gaRate": 2.063,
+      "bttsRate": 0.503,
+      "over25Rate": 0.623,
+      "cleanSheetRate": 0.214,
+      "fhShare": null,
+      "att": 1.315,
+      "def": 1.624
+    },
+    "timorleste": {
+      "name": "Timor-Leste",
+      "elo": 1085,
+      "games": 34,
+      "gfRate": 0.593,
+      "gaRate": 3.253,
+      "bttsRate": 0.369,
+      "over25Rate": 0.661,
+      "cleanSheetRate": 0.172,
+      "fhShare": null,
+      "att": 0.467,
+      "def": 2.561
+    },
+    "brunei": {
+      "name": "Brunei",
+      "elo": 1129,
+      "games": 32,
+      "gfRate": 0.552,
+      "gaRate": 3.3,
+      "bttsRate": 0.235,
+      "over25Rate": 0.629,
+      "cleanSheetRate": 0.202,
+      "fhShare": null,
+      "att": 0.435,
+      "def": 2.598
+    },
+    "ethiopia": {
+      "name": "Ethiopia",
+      "elo": 1414,
+      "games": 59,
+      "gfRate": 0.864,
+      "gaRate": 1.331,
+      "bttsRate": 0.397,
+      "over25Rate": 0.365,
+      "cleanSheetRate": 0.261,
+      "fhShare": null,
+      "att": 0.68,
+      "def": 1.048
+    },
+    "burundi": {
+      "name": "Burundi",
+      "elo": 1409,
+      "games": 52,
+      "gfRate": 0.831,
+      "gaRate": 1.453,
+      "bttsRate": 0.371,
+      "over25Rate": 0.391,
+      "cleanSheetRate": 0.131,
+      "fhShare": null,
+      "att": 0.654,
+      "def": 1.144
+    },
+    "guam": {
+      "name": "Guam",
+      "elo": 1160,
+      "games": 26,
+      "gfRate": 0.873,
+      "gaRate": 3.338,
+      "bttsRate": 0.464,
+      "over25Rate": 0.866,
+      "cleanSheetRate": 0.126,
+      "fhShare": null,
+      "att": 0.687,
+      "def": 2.628
+    },
+    "mongolia": {
+      "name": "Mongolia",
+      "elo": 1174,
+      "games": 37,
+      "gfRate": 0.471,
+      "gaRate": 2.566,
+      "bttsRate": 0.207,
+      "over25Rate": 0.487,
+      "cleanSheetRate": 0.17,
+      "fhShare": null,
+      "att": 0.371,
+      "def": 2.02
+    },
+    "nepal": {
+      "name": "Nepal",
+      "elo": 1225,
+      "games": 65,
+      "gfRate": 0.517,
+      "gaRate": 1.947,
+      "bttsRate": 0.303,
+      "over25Rate": 0.448,
+      "cleanSheetRate": 0.235,
+      "fhShare": null,
+      "att": 0.407,
+      "def": 1.533
+    },
+    "pakistan": {
+      "name": "Pakistan",
+      "elo": 1291,
+      "games": 32,
+      "gfRate": 0.516,
+      "gaRate": 1.951,
+      "bttsRate": 0.146,
+      "over25Rate": 0.49,
+      "cleanSheetRate": 0.325,
+      "fhShare": null,
+      "att": 0.406,
+      "def": 1.536
+    },
+    "bhutan": {
+      "name": "Bhutan",
+      "elo": 1035,
+      "games": 26,
+      "gfRate": 0.373,
+      "gaRate": 3.244,
+      "bttsRate": 0.318,
+      "over25Rate": 0.534,
+      "cleanSheetRate": 0.176,
+      "fhShare": null,
+      "att": 0.294,
+      "def": 2.554
+    },
+    "fiji": {
+      "name": "Fiji",
+      "elo": 1430,
+      "games": 47,
+      "gfRate": 1.56,
+      "gaRate": 1.744,
+      "bttsRate": 0.494,
+      "over25Rate": 0.519,
+      "cleanSheetRate": 0.215,
+      "fhShare": 0.458,
+      "att": 1.228,
+      "def": 1.373
+    },
+    "slovakia": {
+      "name": "Slovakia",
+      "elo": 1589,
+      "games": 87,
+      "gfRate": 1.335,
+      "gaRate": 1.064,
+      "bttsRate": 0.413,
+      "over25Rate": 0.43,
+      "cleanSheetRate": 0.396,
+      "fhShare": 0.477,
+      "att": 1.051,
+      "def": 0.838
+    },
+    "denmark": {
+      "name": "Denmark",
+      "elo": 1792,
+      "games": 91,
+      "gfRate": 1.985,
+      "gaRate": 0.818,
+      "bttsRate": 0.45,
+      "over25Rate": 0.558,
+      "cleanSheetRate": 0.45,
+      "fhShare": 0.445,
+      "att": 1.563,
+      "def": 0.644
+    },
+    "india": {
+      "name": "India",
+      "elo": 1331,
+      "games": 71,
+      "gfRate": 0.738,
+      "gaRate": 1.134,
+      "bttsRate": 0.358,
+      "over25Rate": 0.326,
+      "cleanSheetRate": 0.307,
+      "fhShare": null,
+      "att": 0.581,
+      "def": 0.893
+    },
+    "germany": {
+      "name": "Germany",
+      "elo": 1865,
+      "games": 96,
+      "gfRate": 2.716,
+      "gaRate": 0.893,
+      "bttsRate": 0.609,
+      "over25Rate": 0.633,
+      "cleanSheetRate": 0.297,
+      "fhShare": 0.419,
+      "att": 2.138,
+      "def": 0.703
+    },
+    "czechrepublic": {
+      "name": "Czech Republic",
+      "elo": 1647,
+      "games": 91,
+      "gfRate": 1.61,
+      "gaRate": 1.084,
+      "bttsRate": 0.575,
+      "over25Rate": 0.601,
+      "cleanSheetRate": 0.289,
+      "fhShare": 0.468,
+      "att": 1.268,
+      "def": 0.853
+    },
+    "ukraine": {
+      "name": "Ukraine",
+      "elo": 1696,
+      "games": 87,
+      "gfRate": 1.538,
+      "gaRate": 1.216,
+      "bttsRate": 0.581,
+      "over25Rate": 0.58,
+      "cleanSheetRate": 0.259,
+      "fhShare": 0.402,
+      "att": 1.211,
+      "def": 0.957
+    },
+    "wales": {
+      "name": "Wales",
+      "elo": 1628,
+      "games": 86,
+      "gfRate": 1.511,
+      "gaRate": 1.002,
+      "bttsRate": 0.539,
+      "over25Rate": 0.434,
+      "cleanSheetRate": 0.332,
+      "fhShare": 0.452,
+      "att": 1.19,
+      "def": 0.789
+    },
+    "republicofireland": {
+      "name": "Republic of Ireland",
+      "elo": 1627,
+      "games": 81,
+      "gfRate": 1.183,
+      "gaRate": 0.996,
+      "bttsRate": 0.417,
+      "over25Rate": 0.44,
+      "cleanSheetRate": 0.309,
+      "fhShare": 0.404,
+      "att": 0.931,
+      "def": 0.784
+    },
+    "norway": {
+      "name": "Norway",
+      "elo": 1886,
+      "games": 84,
+      "gfRate": 2.58,
+      "gaRate": 0.939,
+      "bttsRate": 0.619,
+      "over25Rate": 0.71,
+      "cleanSheetRate": 0.319,
+      "fhShare": 0.474,
+      "att": 2.031,
+      "def": 0.739
+    },
+    "cyprus": {
+      "name": "Cyprus",
+      "elo": 1284,
+      "games": 80,
+      "gfRate": 0.819,
+      "gaRate": 1.909,
+      "bttsRate": 0.396,
+      "over25Rate": 0.605,
+      "cleanSheetRate": 0.187,
+      "fhShare": 0.49,
+      "att": 0.645,
+      "def": 1.503
+    },
+    "slovenia": {
+      "name": "Slovenia",
+      "elo": 1613,
+      "games": 85,
+      "gfRate": 1.15,
+      "gaRate": 0.944,
+      "bttsRate": 0.475,
+      "over25Rate": 0.412,
+      "cleanSheetRate": 0.379,
+      "fhShare": 0.494,
+      "att": 0.905,
+      "def": 0.743
+    },
+    "bulgaria": {
+      "name": "Bulgaria",
+      "elo": 1467,
+      "games": 81,
+      "gfRate": 1.058,
+      "gaRate": 1.57,
+      "bttsRate": 0.474,
+      "over25Rate": 0.489,
+      "cleanSheetRate": 0.23,
+      "fhShare": 0.404,
+      "att": 0.833,
+      "def": 1.236
+    },
+    "kazakhstan": {
+      "name": "Kazakhstan",
+      "elo": 1421,
+      "games": 79,
+      "gfRate": 0.899,
+      "gaRate": 1.493,
+      "bttsRate": 0.382,
+      "over25Rate": 0.475,
+      "cleanSheetRate": 0.267,
+      "fhShare": 0.484,
+      "att": 0.708,
+      "def": 1.175
+    },
+    "georgia": {
+      "name": "Georgia",
+      "elo": 1598,
+      "games": 82,
+      "gfRate": 1.531,
+      "gaRate": 1.192,
+      "bttsRate": 0.497,
+      "over25Rate": 0.545,
+      "cleanSheetRate": 0.321,
+      "fhShare": 0.388,
+      "att": 1.205,
+      "def": 0.938
+    },
+    "latvia": {
+      "name": "Latvia",
+      "elo": 1244,
+      "games": 79,
+      "gfRate": 0.644,
+      "gaRate": 1.597,
+      "bttsRate": 0.42,
+      "over25Rate": 0.397,
+      "cleanSheetRate": 0.202,
+      "fhShare": 0.327,
+      "att": 0.507,
+      "def": 1.257
+    },
+    "armenia": {
+      "name": "Armenia",
+      "elo": 1317,
+      "games": 77,
+      "gfRate": 0.972,
+      "gaRate": 2.056,
+      "bttsRate": 0.535,
+      "over25Rate": 0.548,
+      "cleanSheetRate": 0.071,
+      "fhShare": 0.388,
+      "att": 0.765,
+      "def": 1.619
+    },
+    "liechtenstein": {
+      "name": "Liechtenstein",
+      "elo": 960,
+      "games": 77,
+      "gfRate": 0.236,
+      "gaRate": 2.814,
+      "bttsRate": 0.197,
+      "over25Rate": 0.516,
+      "cleanSheetRate": 0.098,
+      "fhShare": null,
+      "att": 0.186,
+      "def": 2.215
+    },
+    "gibraltar": {
+      "name": "Gibraltar",
+      "elo": 1104,
+      "games": 77,
+      "gfRate": 0.451,
+      "gaRate": 2.604,
+      "bttsRate": 0.297,
+      "over25Rate": 0.647,
+      "cleanSheetRate": 0.149,
+      "fhShare": 0.5,
+      "att": 0.355,
+      "def": 2.05
+    },
+    "northmacedonia": {
+      "name": "North Macedonia",
+      "elo": 1525,
+      "games": 84,
+      "gfRate": 1.148,
+      "gaRate": 1.195,
+      "bttsRate": 0.406,
+      "over25Rate": 0.446,
+      "cleanSheetRate": 0.403,
+      "fhShare": 0.394,
+      "att": 0.904,
+      "def": 0.941
+    },
+    "austria": {
+      "name": "Austria",
+      "elo": 1759,
+      "games": 91,
+      "gfRate": 1.919,
+      "gaRate": 0.938,
+      "bttsRate": 0.516,
+      "over25Rate": 0.517,
+      "cleanSheetRate": 0.289,
+      "fhShare": 0.407,
+      "att": 1.511,
+      "def": 0.738
+    },
+    "bahrain": {
+      "name": "Bahrain",
+      "elo": 1561,
+      "games": 107,
+      "gfRate": 1.249,
+      "gaRate": 1.084,
+      "bttsRate": 0.402,
+      "over25Rate": 0.449,
+      "cleanSheetRate": 0.347,
+      "fhShare": 0.371,
+      "att": 0.983,
+      "def": 0.853
+    },
+    "philippines": {
+      "name": "Philippines",
+      "elo": 1446,
+      "games": 67,
+      "gfRate": 1.334,
+      "gaRate": 1.577,
+      "bttsRate": 0.607,
+      "over25Rate": 0.589,
+      "cleanSheetRate": 0.198,
+      "fhShare": null,
+      "att": 1.05,
+      "def": 1.242
+    },
+    "jordan": {
+      "name": "Jordan",
+      "elo": 1706,
+      "games": 112,
+      "gfRate": 1.753,
+      "gaRate": 1.015,
+      "bttsRate": 0.495,
+      "over25Rate": 0.585,
+      "cleanSheetRate": 0.366,
+      "fhShare": 0.484,
+      "att": 1.38,
+      "def": 0.799
+    },
+    "lebanon": {
+      "name": "Lebanon",
+      "elo": 1505,
+      "games": 74,
+      "gfRate": 0.929,
+      "gaRate": 0.914,
+      "bttsRate": 0.263,
+      "over25Rate": 0.428,
+      "cleanSheetRate": 0.474,
+      "fhShare": 0.538,
+      "att": 0.731,
+      "def": 0.72
+    },
+    "kyrgyzstan": {
+      "name": "Kyrgyzstan",
+      "elo": 1479,
+      "games": 63,
+      "gfRate": 1.284,
+      "gaRate": 1.408,
+      "bttsRate": 0.545,
+      "over25Rate": 0.435,
+      "cleanSheetRate": 0.179,
+      "fhShare": 0.54,
+      "att": 1.011,
+      "def": 1.108
+    },
+    "netherlands": {
+      "name": "Netherlands",
+      "elo": 1916,
+      "games": 97,
+      "gfRate": 2.607,
+      "gaRate": 0.818,
+      "bttsRate": 0.593,
+      "over25Rate": 0.663,
+      "cleanSheetRate": 0.352,
+      "fhShare": 0.372,
+      "att": 2.052,
+      "def": 0.644
+    },
+    "peru": {
+      "name": "Peru",
+      "elo": 1656,
+      "games": 90,
+      "gfRate": 0.887,
+      "gaRate": 0.937,
+      "bttsRate": 0.303,
+      "over25Rate": 0.318,
+      "cleanSheetRate": 0.303,
+      "fhShare": 0.5,
+      "att": 0.698,
+      "def": 0.738
+    },
+    "portugal": {
+      "name": "Portugal",
+      "elo": 1953,
+      "games": 98,
+      "gfRate": 2.576,
+      "gaRate": 0.664,
+      "bttsRate": 0.464,
+      "over25Rate": 0.592,
+      "cleanSheetRate": 0.435,
+      "fhShare": 0.446,
+      "att": 2.028,
+      "def": 0.523
+    },
+    "trinidadandtobago": {
+      "name": "Trinidad and Tobago",
+      "elo": 1516,
+      "games": 85,
+      "gfRate": 1.453,
+      "gaRate": 1.568,
+      "bttsRate": 0.525,
+      "over25Rate": 0.61,
+      "cleanSheetRate": 0.235,
+      "fhShare": 0.472,
+      "att": 1.144,
+      "def": 1.234
+    },
+    "uzbekistan": {
+      "name": "Uzbekistan",
+      "elo": 1706,
+      "games": 88,
+      "gfRate": 1.614,
+      "gaRate": 0.881,
+      "bttsRate": 0.407,
+      "over25Rate": 0.541,
+      "cleanSheetRate": 0.483,
+      "fhShare": 0.5,
+      "att": 1.271,
+      "def": 0.694
+    },
+    "syria": {
+      "name": "Syria",
+      "elo": 1613,
+      "games": 89,
+      "gfRate": 1.259,
+      "gaRate": 0.989,
+      "bttsRate": 0.35,
+      "over25Rate": 0.426,
+      "cleanSheetRate": 0.414,
+      "fhShare": 0.465,
+      "att": 0.991,
+      "def": 0.779
+    },
+    "dominica": {
+      "name": "Dominica",
+      "elo": 1261,
+      "games": 40,
+      "gfRate": 0.858,
+      "gaRate": 2.026,
+      "bttsRate": 0.453,
+      "over25Rate": 0.591,
+      "cleanSheetRate": 0.306,
+      "fhShare": null,
+      "att": 0.675,
+      "def": 1.595
+    },
+    "suriname": {
+      "name": "Suriname",
+      "elo": 1602,
+      "games": 53,
+      "gfRate": 1.482,
+      "gaRate": 0.964,
+      "bttsRate": 0.483,
+      "over25Rate": 0.47,
+      "cleanSheetRate": 0.32,
+      "fhShare": 0.447,
+      "att": 1.167,
+      "def": 0.759
+    },
+    "guyana": {
+      "name": "Guyana",
+      "elo": 1563,
+      "games": 56,
+      "gfRate": 1.784,
+      "gaRate": 1.628,
+      "bttsRate": 0.597,
+      "over25Rate": 0.702,
+      "cleanSheetRate": 0.17,
+      "fhShare": null,
+      "att": 1.404,
+      "def": 1.282
+    },
+    "italy": {
+      "name": "Italy",
+      "elo": 1790,
+      "games": 92,
+      "gfRate": 2.028,
+      "gaRate": 0.87,
+      "bttsRate": 0.508,
+      "over25Rate": 0.539,
+      "cleanSheetRate": 0.408,
+      "fhShare": 0.458,
+      "att": 1.597,
+      "def": 0.685
+    },
+    "poland": {
+      "name": "Poland",
+      "elo": 1658,
+      "games": 89,
+      "gfRate": 1.623,
+      "gaRate": 1.167,
+      "bttsRate": 0.605,
+      "over25Rate": 0.506,
+      "cleanSheetRate": 0.289,
+      "fhShare": 0.379,
+      "att": 1.278,
+      "def": 0.919
+    },
+    "turkey": {
+      "name": "Turkey",
+      "elo": 1781,
+      "games": 94,
+      "gfRate": 1.923,
+      "gaRate": 1.096,
+      "bttsRate": 0.511,
+      "over25Rate": 0.607,
+      "cleanSheetRate": 0.317,
+      "fhShare": 0.397,
+      "att": 1.514,
+      "def": 0.863
+    },
+    "albania": {
+      "name": "Albania",
+      "elo": 1545,
+      "games": 82,
+      "gfRate": 0.985,
+      "gaRate": 0.866,
+      "bttsRate": 0.328,
+      "over25Rate": 0.332,
+      "cleanSheetRate": 0.398,
+      "fhShare": 0.433,
+      "att": 0.775,
+      "def": 0.682
+    },
+    "israel": {
+      "name": "Israel",
+      "elo": 1575,
+      "games": 75,
+      "gfRate": 1.577,
+      "gaRate": 1.616,
+      "bttsRate": 0.619,
+      "over25Rate": 0.704,
+      "cleanSheetRate": 0.216,
+      "fhShare": 0.352,
+      "att": 1.242,
+      "def": 1.272
+    },
+    "lithuania": {
+      "name": "Lithuania",
+      "elo": 1236,
+      "games": 81,
+      "gfRate": 0.661,
+      "gaRate": 1.63,
+      "bttsRate": 0.423,
+      "over25Rate": 0.401,
+      "cleanSheetRate": 0.165,
+      "fhShare": 0.432,
+      "att": 0.52,
+      "def": 1.283
+    },
+    "serbia": {
+      "name": "Serbia",
+      "elo": 1688,
+      "games": 87,
+      "gfRate": 1.389,
+      "gaRate": 1.068,
+      "bttsRate": 0.473,
+      "over25Rate": 0.5,
+      "cleanSheetRate": 0.3,
+      "fhShare": 0.465,
+      "att": 1.094,
+      "def": 0.841
+    },
+    "romania": {
+      "name": "Romania",
+      "elo": 1582,
+      "games": 84,
+      "gfRate": 1.406,
+      "gaRate": 1.023,
+      "bttsRate": 0.458,
+      "over25Rate": 0.525,
+      "cleanSheetRate": 0.349,
+      "fhShare": 0.446,
+      "att": 1.107,
+      "def": 0.805
+    },
+    "montenegro": {
+      "name": "Montenegro",
+      "elo": 1409,
+      "games": 80,
+      "gfRate": 1.01,
+      "gaRate": 1.493,
+      "bttsRate": 0.408,
+      "over25Rate": 0.499,
+      "cleanSheetRate": 0.245,
+      "fhShare": 0.492,
+      "att": 0.795,
+      "def": 1.175
+    },
+    "faroeislands": {
+      "name": "Faroe Islands",
+      "elo": 1338,
+      "games": 79,
+      "gfRate": 0.753,
+      "gaRate": 1.441,
+      "bttsRate": 0.409,
+      "over25Rate": 0.418,
+      "cleanSheetRate": 0.188,
+      "fhShare": 0.451,
+      "att": 0.593,
+      "def": 1.134
+    },
+    "malta": {
+      "name": "Malta",
+      "elo": 1257,
+      "games": 77,
+      "gfRate": 0.66,
+      "gaRate": 1.77,
+      "bttsRate": 0.334,
+      "over25Rate": 0.451,
+      "cleanSheetRate": 0.276,
+      "fhShare": 0.4,
+      "att": 0.52,
+      "def": 1.393
+    },
+    "azerbaijan": {
+      "name": "Azerbaijan",
+      "elo": 1331,
+      "games": 79,
+      "gfRate": 0.894,
+      "gaRate": 1.748,
+      "bttsRate": 0.477,
+      "over25Rate": 0.542,
+      "cleanSheetRate": 0.179,
+      "fhShare": 0.486,
+      "att": 0.704,
+      "def": 1.376
+    },
+    "kosovo": {
+      "name": "Kosovo",
+      "elo": 1631,
+      "games": 82,
+      "gfRate": 1.38,
+      "gaRate": 1.08,
+      "bttsRate": 0.436,
+      "over25Rate": 0.488,
+      "cleanSheetRate": 0.356,
+      "fhShare": 0.402,
+      "att": 1.086,
+      "def": 0.85
+    },
+    "argentina": {
+      "name": "Argentina",
+      "elo": 2074,
+      "games": 100,
+      "gfRate": 2.486,
+      "gaRate": 0.427,
+      "bttsRate": 0.338,
+      "over25Rate": 0.473,
+      "cleanSheetRate": 0.617,
+      "fhShare": 0.568,
+      "att": 1.957,
+      "def": 0.336
+    },
+    "taiwan": {
+      "name": "Taiwan",
+      "elo": 1204,
+      "games": 42,
+      "gfRate": 0.923,
+      "gaRate": 2.651,
+      "bttsRate": 0.544,
+      "over25Rate": 0.783,
+      "cleanSheetRate": 0.144,
+      "fhShare": null,
+      "att": 0.727,
+      "def": 2.087
+    },
+    "malaysia": {
+      "name": "Malaysia",
+      "elo": 1536,
+      "games": 86,
+      "gfRate": 1.55,
+      "gaRate": 1.21,
+      "bttsRate": 0.428,
+      "over25Rate": 0.58,
+      "cleanSheetRate": 0.362,
+      "fhShare": 0.375,
+      "att": 1.22,
+      "def": 0.953
+    },
+    "ecuador": {
+      "name": "Ecuador",
+      "elo": 1836,
+      "games": 96,
+      "gfRate": 1.219,
+      "gaRate": 0.585,
+      "bttsRate": 0.379,
+      "over25Rate": 0.311,
+      "cleanSheetRate": 0.457,
+      "fhShare": 0.526,
+      "att": 0.96,
+      "def": 0.461
+    },
+    "southkorea": {
+      "name": "South Korea",
+      "elo": 1785,
+      "games": 101,
+      "gfRate": 1.953,
+      "gaRate": 0.716,
+      "bttsRate": 0.384,
+      "over25Rate": 0.481,
+      "cleanSheetRate": 0.45,
+      "fhShare": 0.394,
+      "att": 1.538,
+      "def": 0.564
+    },
+    "costarica": {
+      "name": "Costa Rica",
+      "elo": 1715,
+      "games": 104,
+      "gfRate": 1.696,
+      "gaRate": 1.044,
+      "bttsRate": 0.448,
+      "over25Rate": 0.577,
+      "cleanSheetRate": 0.353,
+      "fhShare": 0.461,
+      "att": 1.335,
+      "def": 0.822
+    },
+    "mexico": {
+      "name": "Mexico",
+      "elo": 1913,
+      "games": 133,
+      "gfRate": 1.89,
+      "gaRate": 0.612,
+      "bttsRate": 0.299,
+      "over25Rate": 0.415,
+      "cleanSheetRate": 0.579,
+      "fhShare": 0.387,
+      "att": 1.488,
+      "def": 0.482
+    },
+    "uruguay": {
+      "name": "Uruguay",
+      "elo": 1804,
+      "games": 89,
+      "gfRate": 1.486,
+      "gaRate": 0.666,
+      "bttsRate": 0.355,
+      "over25Rate": 0.343,
+      "cleanSheetRate": 0.463,
+      "fhShare": 0.448,
+      "att": 1.17,
+      "def": 0.524
+    },
+    "qatar": {
+      "name": "Qatar",
+      "elo": 1519,
+      "games": 123,
+      "gfRate": 1.533,
+      "gaRate": 1.304,
+      "bttsRate": 0.542,
+      "over25Rate": 0.597,
+      "cleanSheetRate": 0.271,
+      "fhShare": 0.5,
+      "att": 1.207,
+      "def": 1.027
+    },
+    "china": {
+      "name": "China",
+      "elo": 1569,
+      "games": 72,
+      "gfRate": 1.129,
+      "gaRate": 1.109,
+      "bttsRate": 0.388,
+      "over25Rate": 0.437,
+      "cleanSheetRate": 0.301,
+      "fhShare": 0.383,
+      "att": 0.889,
+      "def": 0.873
+    },
+    "scotland": {
+      "name": "Scotland",
+      "elo": 1702,
+      "games": 89,
+      "gfRate": 1.511,
+      "gaRate": 1.057,
+      "bttsRate": 0.419,
+      "over25Rate": 0.552,
+      "cleanSheetRate": 0.352,
+      "fhShare": 0.414,
+      "att": 1.19,
+      "def": 0.832
+    },
+    "singapore": {
+      "name": "Singapore",
+      "elo": 1374,
+      "games": 76,
+      "gfRate": 1.189,
+      "gaRate": 1.764,
+      "bttsRate": 0.622,
+      "over25Rate": 0.675,
+      "cleanSheetRate": 0.2,
+      "fhShare": null,
+      "att": 0.936,
+      "def": 1.389
+    },
+    "mauritius": {
+      "name": "Mauritius",
+      "elo": 1295,
+      "games": 47,
+      "gfRate": 0.692,
+      "gaRate": 1.468,
+      "bttsRate": 0.359,
+      "over25Rate": 0.393,
+      "cleanSheetRate": 0.269,
+      "fhShare": null,
+      "att": 0.545,
+      "def": 1.156
+    },
+    "usa": {
+      "name": "United States",
+      "elo": 1814,
+      "games": 124,
+      "gfRate": 2.281,
+      "gaRate": 0.8,
+      "bttsRate": 0.475,
+      "over25Rate": 0.529,
+      "cleanSheetRate": 0.407,
+      "fhShare": 0.471,
+      "att": 1.796,
+      "def": 0.63
+    },
+    "brazil": {
+      "name": "Brazil",
+      "elo": 1951,
+      "games": 97,
+      "gfRate": 2.292,
+      "gaRate": 0.614,
+      "bttsRate": 0.481,
+      "over25Rate": 0.511,
+      "cleanSheetRate": 0.429,
+      "fhShare": 0.455,
+      "att": 1.804,
+      "def": 0.483
+    },
+    "venezuela": {
+      "name": "Venezuela",
+      "elo": 1719,
+      "games": 83,
+      "gfRate": 1.352,
+      "gaRate": 1.089,
+      "bttsRate": 0.453,
+      "over25Rate": 0.471,
+      "cleanSheetRate": 0.318,
+      "fhShare": 0.349,
+      "att": 1.064,
+      "def": 0.857
+    },
+    "colombia": {
+      "name": "Colombia",
+      "elo": 1959,
+      "games": 94,
+      "gfRate": 1.986,
+      "gaRate": 0.619,
+      "bttsRate": 0.42,
+      "over25Rate": 0.483,
+      "cleanSheetRate": 0.493,
+      "fhShare": 0.461,
+      "att": 1.564,
+      "def": 0.487
+    },
+    "maldives": {
+      "name": "Maldives",
+      "elo": 1148,
+      "games": 50,
+      "gfRate": 0.57,
+      "gaRate": 2.125,
+      "bttsRate": 0.312,
+      "over25Rate": 0.543,
+      "cleanSheetRate": 0.21,
+      "fhShare": null,
+      "att": 0.449,
+      "def": 1.673
+    },
+    "frenchguiana": {
+      "name": "French Guiana",
+      "elo": 1472,
+      "games": 32,
+      "gfRate": 1.388,
+      "gaRate": 1.394,
+      "bttsRate": 0.541,
+      "over25Rate": 0.541,
+      "cleanSheetRate": 0.251,
+      "fhShare": null,
+      "att": 1.093,
+      "def": 1.097
+    },
+    "antiguaandbarbuda": {
+      "name": "Antigua and Barbuda",
+      "elo": 1199,
+      "games": 41,
+      "gfRate": 0.706,
+      "gaRate": 2.336,
+      "bttsRate": 0.405,
+      "over25Rate": 0.593,
+      "cleanSheetRate": 0.196,
+      "fhShare": null,
+      "att": 0.556,
+      "def": 1.839
+    },
+    "saintlucia": {
+      "name": "Saint Lucia",
+      "elo": 1260,
+      "games": 39,
+      "gfRate": 1.046,
+      "gaRate": 2.285,
+      "bttsRate": 0.596,
+      "over25Rate": 0.779,
+      "cleanSheetRate": 0.135,
+      "fhShare": null,
+      "att": 0.823,
+      "def": 1.799
+    },
+    "bahamas": {
+      "name": "Bahamas",
+      "elo": 1051,
+      "games": 39,
+      "gfRate": 0.733,
+      "gaRate": 4.028,
+      "bttsRate": 0.53,
+      "over25Rate": 0.769,
+      "cleanSheetRate": 0.056,
+      "fhShare": null,
+      "att": 0.577,
+      "def": 3.171
+    },
+    "switzerland": {
+      "name": "Switzerland",
+      "elo": 1866,
+      "games": 97,
+      "gfRate": 2.104,
+      "gaRate": 0.905,
+      "bttsRate": 0.589,
+      "over25Rate": 0.514,
+      "cleanSheetRate": 0.31,
+      "fhShare": 0.477,
+      "att": 1.656,
+      "def": 0.712
+    },
+    "iceland": {
+      "name": "Iceland",
+      "elo": 1508,
+      "games": 94,
+      "gfRate": 1.392,
+      "gaRate": 1.505,
+      "bttsRate": 0.529,
+      "over25Rate": 0.608,
+      "cleanSheetRate": 0.241,
+      "fhShare": 0.465,
+      "att": 1.096,
+      "def": 1.185
+    },
+    "spain": {
+      "name": "Spain",
+      "elo": 2049,
+      "games": 100,
+      "gfRate": 2.819,
+      "gaRate": 0.562,
+      "bttsRate": 0.439,
+      "over25Rate": 0.636,
+      "cleanSheetRate": 0.539,
+      "fhShare": 0.486,
+      "att": 2.219,
+      "def": 0.442
+    },
+    "northernireland": {
+      "name": "Northern Ireland",
+      "elo": 1537,
+      "games": 78,
+      "gfRate": 1.062,
+      "gaRate": 1.09,
+      "bttsRate": 0.361,
+      "over25Rate": 0.363,
+      "cleanSheetRate": 0.346,
+      "fhShare": 0.358,
+      "att": 0.836,
+      "def": 0.858
+    },
+    "bosniaandherzegovina": {
+      "name": "Bosnia and Herzegovina",
+      "elo": 1573,
+      "games": 82,
+      "gfRate": 1.21,
+      "gaRate": 1.38,
+      "bttsRate": 0.584,
+      "over25Rate": 0.493,
+      "cleanSheetRate": 0.2,
+      "fhShare": 0.397,
+      "att": 0.953,
+      "def": 1.086
+    },
+    "finland": {
+      "name": "Finland",
+      "elo": 1508,
+      "games": 87,
+      "gfRate": 1.086,
+      "gaRate": 1.28,
+      "bttsRate": 0.411,
+      "over25Rate": 0.468,
+      "cleanSheetRate": 0.27,
+      "fhShare": 0.395,
+      "att": 0.855,
+      "def": 1.008
+    },
+    "hungary": {
+      "name": "Hungary",
+      "elo": 1633,
+      "games": 86,
+      "gfRate": 1.452,
+      "gaRate": 1.125,
+      "bttsRate": 0.49,
+      "over25Rate": 0.544,
+      "cleanSheetRate": 0.337,
+      "fhShare": 0.495,
+      "att": 1.143,
+      "def": 0.886
+    },
+    "estonia": {
+      "name": "Estonia",
+      "elo": 1351,
+      "games": 87,
+      "gfRate": 0.792,
+      "gaRate": 1.686,
+      "bttsRate": 0.436,
+      "over25Rate": 0.473,
+      "cleanSheetRate": 0.201,
+      "fhShare": 0.455,
+      "att": 0.624,
+      "def": 1.327
+    },
+    "greece": {
+      "name": "Greece",
+      "elo": 1678,
+      "games": 81,
+      "gfRate": 1.545,
+      "gaRate": 0.83,
+      "bttsRate": 0.357,
+      "over25Rate": 0.509,
+      "cleanSheetRate": 0.416,
+      "fhShare": 0.462,
+      "att": 1.216,
+      "def": 0.653
+    },
+    "belarus": {
+      "name": "Belarus",
+      "elo": 1476,
+      "games": 79,
+      "gfRate": 0.985,
+      "gaRate": 1.441,
+      "bttsRate": 0.413,
+      "over25Rate": 0.446,
+      "cleanSheetRate": 0.313,
+      "fhShare": 0.34,
+      "att": 0.775,
+      "def": 1.134
+    },
+    "sanmarino": {
+      "name": "San Marino",
+      "elo": 924,
+      "games": 78,
+      "gfRate": 0.305,
+      "gaRate": 3.236,
+      "bttsRate": 0.29,
+      "over25Rate": 0.634,
+      "cleanSheetRate": 0.074,
+      "fhShare": null,
+      "att": 0.24,
+      "def": 2.548
+    },
+    "luxembourg": {
+      "name": "Luxembourg",
+      "elo": 1360,
+      "games": 79,
+      "gfRate": 0.703,
+      "gaRate": 1.431,
+      "bttsRate": 0.297,
+      "over25Rate": 0.375,
+      "cleanSheetRate": 0.225,
+      "fhShare": 0.393,
+      "att": 0.553,
+      "def": 1.127
+    },
+    "moldova": {
+      "name": "Moldova",
+      "elo": 1251,
+      "games": 83,
+      "gfRate": 0.72,
+      "gaRate": 2.072,
+      "bttsRate": 0.442,
+      "over25Rate": 0.444,
+      "cleanSheetRate": 0.193,
+      "fhShare": 0.429,
+      "att": 0.567,
+      "def": 1.631
+    },
+    "equatorialguinea": {
+      "name": "Equatorial Guinea",
+      "elo": 1461,
+      "games": 70,
+      "gfRate": 0.968,
+      "gaRate": 1.183,
+      "bttsRate": 0.389,
+      "over25Rate": 0.361,
+      "cleanSheetRate": 0.295,
+      "fhShare": 0.3,
+      "att": 0.762,
+      "def": 0.931
+    },
+    "sudan": {
+      "name": "Sudan",
+      "elo": 1457,
+      "games": 74,
+      "gfRate": 0.65,
+      "gaRate": 1.147,
+      "bttsRate": 0.251,
+      "over25Rate": 0.328,
+      "cleanSheetRate": 0.385,
+      "fhShare": null,
+      "att": 0.512,
+      "def": 0.903
+    },
+    "comoros": {
+      "name": "Comoros",
+      "elo": 1462,
+      "games": 82,
+      "gfRate": 1.027,
+      "gaRate": 1.267,
+      "bttsRate": 0.436,
+      "over25Rate": 0.434,
+      "cleanSheetRate": 0.339,
+      "fhShare": null,
+      "att": 0.809,
+      "def": 0.997
+    },
+    "cameroon": {
+      "name": "Cameroon",
+      "elo": 1694,
+      "games": 83,
+      "gfRate": 1.383,
+      "gaRate": 0.69,
+      "bttsRate": 0.412,
+      "over25Rate": 0.357,
+      "cleanSheetRate": 0.41,
+      "fhShare": 0.441,
+      "att": 1.089,
+      "def": 0.543
+    },
+    "gabon": {
+      "name": "Gabon",
+      "elo": 1521,
+      "games": 62,
+      "gfRate": 1.443,
+      "gaRate": 1.308,
+      "bttsRate": 0.533,
+      "over25Rate": 0.554,
+      "cleanSheetRate": 0.34,
+      "fhShare": 0.405,
+      "att": 1.136,
+      "def": 1.03
+    },
+    "gambia": {
+      "name": "Gambia",
+      "elo": 1519,
+      "games": 62,
+      "gfRate": 1.473,
+      "gaRate": 1.343,
+      "bttsRate": 0.568,
+      "over25Rate": 0.505,
+      "cleanSheetRate": 0.253,
+      "fhShare": 0.353,
+      "att": 1.16,
+      "def": 1.057
+    },
+    "algeria": {
+      "name": "Algeria",
+      "elo": 1794,
+      "games": 110,
+      "gfRate": 2.143,
+      "gaRate": 0.761,
+      "bttsRate": 0.461,
+      "over25Rate": 0.551,
+      "cleanSheetRate": 0.435,
+      "fhShare": 0.486,
+      "att": 1.687,
+      "def": 0.599
+    },
+    "southafrica": {
+      "name": "South Africa",
+      "elo": 1650,
+      "games": 100,
+      "gfRate": 1.348,
+      "gaRate": 0.8,
+      "bttsRate": 0.434,
+      "over25Rate": 0.402,
+      "cleanSheetRate": 0.412,
+      "fhShare": 0.378,
+      "att": 1.061,
+      "def": 0.63
+    },
+    "libya": {
+      "name": "Libya",
+      "elo": 1523,
+      "games": 61,
+      "gfRate": 1.011,
+      "gaRate": 1.015,
+      "bttsRate": 0.425,
+      "over25Rate": 0.344,
+      "cleanSheetRate": 0.354,
+      "fhShare": null,
+      "att": 0.796,
+      "def": 0.799
+    },
+    "mauritania": {
+      "name": "Mauritania",
+      "elo": 1449,
+      "games": 80,
+      "gfRate": 0.707,
+      "gaRate": 1.096,
+      "bttsRate": 0.29,
+      "over25Rate": 0.284,
+      "cleanSheetRate": 0.356,
+      "fhShare": null,
+      "att": 0.557,
+      "def": 0.863
+    },
+    "burkinafaso": {
+      "name": "Burkina Faso",
+      "elo": 1636,
+      "games": 87,
+      "gfRate": 1.493,
+      "gaRate": 0.946,
+      "bttsRate": 0.476,
+      "over25Rate": 0.515,
+      "cleanSheetRate": 0.366,
+      "fhShare": 0.412,
+      "att": 1.175,
+      "def": 0.745
+    },
+    "egypt": {
+      "name": "Egypt",
+      "elo": 1790,
+      "games": 99,
+      "gfRate": 1.561,
+      "gaRate": 0.626,
+      "bttsRate": 0.448,
+      "over25Rate": 0.349,
+      "cleanSheetRate": 0.461,
+      "fhShare": 0.561,
+      "att": 1.229,
+      "def": 0.493
+    },
+    "niger": {
+      "name": "Niger",
+      "elo": 1477,
+      "games": 66,
+      "gfRate": 1.04,
+      "gaRate": 1.319,
+      "bttsRate": 0.425,
+      "over25Rate": 0.414,
+      "cleanSheetRate": 0.206,
+      "fhShare": 0.286,
+      "att": 0.819,
+      "def": 1.038
+    },
+    "namibia": {
+      "name": "Namibia",
+      "elo": 1434,
+      "games": 68,
+      "gfRate": 0.795,
+      "gaRate": 1.176,
+      "bttsRate": 0.385,
+      "over25Rate": 0.404,
+      "cleanSheetRate": 0.359,
+      "fhShare": null,
+      "att": 0.626,
+      "def": 0.926
+    },
+    "zambia": {
+      "name": "Zambia",
+      "elo": 1540,
+      "games": 82,
+      "gfRate": 1.175,
+      "gaRate": 1.213,
+      "bttsRate": 0.464,
+      "over25Rate": 0.442,
+      "cleanSheetRate": 0.274,
+      "fhShare": null,
+      "att": 0.925,
+      "def": 0.955
+    },
+    "uganda": {
+      "name": "Uganda",
+      "elo": 1509,
+      "games": 73,
+      "gfRate": 1.041,
+      "gaRate": 1.039,
+      "bttsRate": 0.399,
+      "over25Rate": 0.387,
+      "cleanSheetRate": 0.417,
+      "fhShare": 0.522,
+      "att": 0.82,
+      "def": 0.818
+    },
+    "tanzania": {
+      "name": "Tanzania",
+      "elo": 1424,
+      "games": 72,
+      "gfRate": 0.733,
+      "gaRate": 0.976,
+      "bttsRate": 0.282,
+      "over25Rate": 0.203,
+      "cleanSheetRate": 0.288,
+      "fhShare": null,
+      "att": 0.577,
+      "def": 0.768
+    },
+    "saintvincentandthegrenadines": {
+      "name": "Saint Vincent and the Grenadines",
+      "elo": 1412,
+      "games": 58,
+      "gfRate": 1.491,
+      "gaRate": 1.941,
+      "bttsRate": 0.667,
+      "over25Rate": 0.711,
+      "cleanSheetRate": 0.187,
+      "fhShare": null,
+      "att": 1.174,
+      "def": 1.528
+    },
+    "nicaragua": {
+      "name": "Nicaragua",
+      "elo": 1542,
+      "games": 73,
+      "gfRate": 1.275,
+      "gaRate": 1.16,
+      "bttsRate": 0.334,
+      "over25Rate": 0.45,
+      "cleanSheetRate": 0.327,
+      "fhShare": 0.409,
+      "att": 1.004,
+      "def": 0.913
+    },
+    "turksandcaicosislands": {
+      "name": "Turks and Caicos Islands",
+      "elo": 1117,
+      "games": 32,
+      "gfRate": 0.839,
+      "gaRate": 3.27,
+      "bttsRate": 0.531,
+      "over25Rate": 0.675,
+      "cleanSheetRate": 0.112,
+      "fhShare": null,
+      "att": 0.661,
+      "def": 2.574
+    },
+    "montserrat": {
+      "name": "Montserrat",
+      "elo": 1319,
+      "games": 36,
+      "gfRate": 0.918,
+      "gaRate": 1.932,
+      "bttsRate": 0.462,
+      "over25Rate": 0.64,
+      "cleanSheetRate": 0.189,
+      "fhShare": null,
+      "att": 0.723,
+      "def": 1.521
+    },
+    "elsalvador": {
+      "name": "El Salvador",
+      "elo": 1520,
+      "games": 101,
+      "gfRate": 0.938,
+      "gaRate": 1.068,
+      "bttsRate": 0.344,
+      "over25Rate": 0.373,
+      "cleanSheetRate": 0.329,
+      "fhShare": 0.489,
+      "att": 0.738,
+      "def": 0.841
+    },
+    "morocco": {
+      "name": "Morocco",
+      "elo": 1965,
+      "games": 113,
+      "gfRate": 2.237,
+      "gaRate": 0.403,
+      "bttsRate": 0.333,
+      "over25Rate": 0.454,
+      "cleanSheetRate": 0.641,
+      "fhShare": 0.465,
+      "att": 1.761,
+      "def": 0.317
+    },
+    "malawi": {
+      "name": "Malawi",
+      "elo": 1455,
+      "games": 77,
+      "gfRate": 0.844,
+      "gaRate": 1.113,
+      "bttsRate": 0.334,
+      "over25Rate": 0.38,
+      "cleanSheetRate": 0.31,
+      "fhShare": null,
+      "att": 0.664,
+      "def": 0.876
+    },
+    "seychelles": {
+      "name": "Seychelles",
+      "elo": 1078,
+      "games": 46,
+      "gfRate": 0.31,
+      "gaRate": 3.521,
+      "bttsRate": 0.25,
+      "over25Rate": 0.715,
+      "cleanSheetRate": 0.121,
+      "fhShare": null,
+      "att": 0.244,
+      "def": 2.772
+    },
+    "nigeria": {
+      "name": "Nigeria",
+      "elo": 1833,
+      "games": 97,
+      "gfRate": 1.82,
+      "gaRate": 0.739,
+      "bttsRate": 0.518,
+      "over25Rate": 0.467,
+      "cleanSheetRate": 0.422,
+      "fhShare": 0.484,
+      "att": 1.433,
+      "def": 0.582
+    },
+    "kenya": {
+      "name": "Kenya",
+      "elo": 1487,
+      "games": 58,
+      "gfRate": 1.079,
+      "gaRate": 1.176,
+      "bttsRate": 0.486,
+      "over25Rate": 0.452,
+      "cleanSheetRate": 0.323,
+      "fhShare": 0.48,
+      "att": 0.849,
+      "def": 0.926
+    },
+    "ghana": {
+      "name": "Ghana",
+      "elo": 1648,
+      "games": 81,
+      "gfRate": 1.276,
+      "gaRate": 0.93,
+      "bttsRate": 0.415,
+      "over25Rate": 0.399,
+      "cleanSheetRate": 0.375,
+      "fhShare": 0.4,
+      "att": 1.005,
+      "def": 0.732
+    },
+    "mozambique": {
+      "name": "Mozambique",
+      "elo": 1488,
+      "games": 80,
+      "gfRate": 1.074,
+      "gaRate": 1.334,
+      "bttsRate": 0.469,
+      "over25Rate": 0.464,
+      "cleanSheetRate": 0.229,
+      "fhShare": 0.577,
+      "att": 0.846,
+      "def": 1.05
+    },
+    "guineabissau": {
+      "name": "Guinea-Bissau",
+      "elo": 1397,
+      "games": 61,
+      "gfRate": 0.818,
+      "gaRate": 1.242,
+      "bttsRate": 0.413,
+      "over25Rate": 0.345,
+      "cleanSheetRate": 0.265,
+      "fhShare": null,
+      "att": 0.644,
+      "def": 0.978
+    },
+    "oman": {
+      "name": "Oman",
+      "elo": 1595,
+      "games": 104,
+      "gfRate": 1.123,
+      "gaRate": 0.875,
+      "bttsRate": 0.436,
+      "over25Rate": 0.421,
+      "cleanSheetRate": 0.383,
+      "fhShare": 0.32,
+      "att": 0.884,
+      "def": 0.689
+    },
+    "congo": {
+      "name": "Congo",
+      "elo": 1362,
+      "games": 42,
+      "gfRate": 0.769,
+      "gaRate": 1.814,
+      "bttsRate": 0.483,
+      "over25Rate": 0.419,
+      "cleanSheetRate": 0.16,
+      "fhShare": null,
+      "att": 0.605,
+      "def": 1.428
+    },
+    "zimbabwe": {
+      "name": "Zimbabwe",
+      "elo": 1497,
+      "games": 62,
+      "gfRate": 0.895,
+      "gaRate": 1.069,
+      "bttsRate": 0.461,
+      "over25Rate": 0.35,
+      "cleanSheetRate": 0.274,
+      "fhShare": null,
+      "att": 0.705,
+      "def": 0.842
+    },
+    "rwanda": {
+      "name": "Rwanda",
+      "elo": 1468,
+      "games": 55,
+      "gfRate": 0.813,
+      "gaRate": 0.905,
+      "bttsRate": 0.249,
+      "over25Rate": 0.253,
+      "cleanSheetRate": 0.34,
+      "fhShare": null,
+      "att": 0.64,
+      "def": 0.712
+    },
+    "ivorycoast": {
+      "name": "Ivory Coast",
+      "elo": 1781,
+      "games": 93,
+      "gfRate": 1.718,
+      "gaRate": 0.616,
+      "bttsRate": 0.355,
+      "over25Rate": 0.459,
+      "cleanSheetRate": 0.524,
+      "fhShare": 0.435,
+      "att": 1.353,
+      "def": 0.485
+    },
+    "bonaire": {
+      "name": "Bonaire",
+      "elo": 1230,
+      "games": 31,
+      "gfRate": 0.995,
+      "gaRate": 2.198,
+      "bttsRate": 0.557,
+      "over25Rate": 0.665,
+      "cleanSheetRate": 0.165,
+      "fhShare": null,
+      "att": 0.783,
+      "def": 1.73
+    },
+    "dominicanrepublic": {
+      "name": "Dominican Republic",
+      "elo": 1542,
+      "games": 57,
+      "gfRate": 1.83,
+      "gaRate": 1.127,
+      "bttsRate": 0.436,
+      "over25Rate": 0.564,
+      "cleanSheetRate": 0.423,
+      "fhShare": 0.591,
+      "att": 1.441,
+      "def": 0.887
+    },
+    "unitedstatesvirginislands": {
+      "name": "United States Virgin Islands",
+      "elo": 1152,
+      "games": 34,
+      "gfRate": 0.906,
+      "gaRate": 2.743,
+      "bttsRate": 0.505,
+      "over25Rate": 0.635,
+      "cleanSheetRate": 0.109,
+      "fhShare": null,
+      "att": 0.713,
+      "def": 2.159
+    },
+    "canada": {
+      "name": "Canada",
+      "elo": 1772,
+      "games": 97,
+      "gfRate": 1.992,
+      "gaRate": 0.751,
+      "bttsRate": 0.403,
+      "over25Rate": 0.467,
+      "cleanSheetRate": 0.449,
+      "fhShare": 0.415,
+      "att": 1.568,
+      "def": 0.591
+    },
+    "aruba": {
+      "name": "Aruba",
+      "elo": 1346,
+      "games": 39,
+      "gfRate": 1.206,
+      "gaRate": 2.069,
+      "bttsRate": 0.516,
+      "over25Rate": 0.667,
+      "cleanSheetRate": 0.147,
+      "fhShare": null,
+      "att": 0.949,
+      "def": 1.629
+    },
+    "bermuda": {
+      "name": "Bermuda",
+      "elo": 1384,
+      "games": 53,
+      "gfRate": 1.484,
+      "gaRate": 2.3,
+      "bttsRate": 0.548,
+      "over25Rate": 0.742,
+      "cleanSheetRate": 0.202,
+      "fhShare": 0.333,
+      "att": 1.168,
+      "def": 1.811
+    },
+    "caymanislands": {
+      "name": "Cayman Islands",
+      "elo": 1169,
+      "games": 38,
+      "gfRate": 0.661,
+      "gaRate": 2.485,
+      "bttsRate": 0.466,
+      "over25Rate": 0.567,
+      "cleanSheetRate": 0.252,
+      "fhShare": null,
+      "att": 0.52,
+      "def": 1.956
+    },
+    "saintkittsandnevis": {
+      "name": "Saint Kitts and Nevis",
+      "elo": 1331,
+      "games": 54,
+      "gfRate": 1.243,
+      "gaRate": 2.178,
+      "bttsRate": 0.481,
+      "over25Rate": 0.659,
+      "cleanSheetRate": 0.221,
+      "fhShare": null,
+      "att": 0.979,
+      "def": 1.715
+    },
+    "puertorico": {
+      "name": "Puerto Rico",
+      "elo": 1466,
+      "games": 46,
+      "gfRate": 1.674,
+      "gaRate": 1.376,
+      "bttsRate": 0.427,
+      "over25Rate": 0.665,
+      "cleanSheetRate": 0.323,
+      "fhShare": 0.45,
+      "att": 1.318,
+      "def": 1.083
+    },
+    "madagascar": {
+      "name": "Madagascar",
+      "elo": 1506,
+      "games": 65,
+      "gfRate": 1.189,
+      "gaRate": 1.35,
+      "bttsRate": 0.489,
+      "over25Rate": 0.475,
+      "cleanSheetRate": 0.234,
+      "fhShare": 0.393,
+      "att": 0.936,
+      "def": 1.063
+    },
+    "senegal": {
+      "name": "Senegal",
+      "elo": 1809,
+      "games": 105,
+      "gfRate": 2.036,
+      "gaRate": 0.678,
+      "bttsRate": 0.409,
+      "over25Rate": 0.486,
+      "cleanSheetRate": 0.52,
+      "fhShare": 0.371,
+      "att": 1.603,
+      "def": 0.534
+    },
+    "southsudan": {
+      "name": "South Sudan",
+      "elo": 1300,
+      "games": 49,
+      "gfRate": 0.584,
+      "gaRate": 1.635,
+      "bttsRate": 0.36,
+      "over25Rate": 0.445,
+      "cleanSheetRate": 0.193,
+      "fhShare": null,
+      "att": 0.46,
+      "def": 1.287
+    },
+    "mali": {
+      "name": "Mali",
+      "elo": 1684,
+      "games": 78,
+      "gfRate": 1.436,
+      "gaRate": 0.507,
+      "bttsRate": 0.342,
+      "over25Rate": 0.303,
+      "cleanSheetRate": 0.526,
+      "fhShare": 0.435,
+      "att": 1.131,
+      "def": 0.399
+    },
+    "togo": {
+      "name": "Togo",
+      "elo": 1498,
+      "games": 57,
+      "gfRate": 1.056,
+      "gaRate": 1.113,
+      "bttsRate": 0.453,
+      "over25Rate": 0.321,
+      "cleanSheetRate": 0.258,
+      "fhShare": null,
+      "att": 0.831,
+      "def": 0.876
+    },
+    "benin": {
+      "name": "Benin",
+      "elo": 1532,
+      "games": 70,
+      "gfRate": 0.984,
+      "gaRate": 1.12,
+      "bttsRate": 0.378,
+      "over25Rate": 0.421,
+      "cleanSheetRate": 0.366,
+      "fhShare": 0.591,
+      "att": 0.775,
+      "def": 0.882
+    },
+    "guinea": {
+      "name": "Guinea",
+      "elo": 1567,
+      "games": 77,
+      "gfRate": 1.245,
+      "gaRate": 0.963,
+      "bttsRate": 0.422,
+      "over25Rate": 0.436,
+      "cleanSheetRate": 0.333,
+      "fhShare": 0.48,
+      "att": 0.98,
+      "def": 0.758
+    },
+    "centralafricanrepublic": {
+      "name": "Central African Republic",
+      "elo": 1396,
+      "games": 49,
+      "gfRate": 0.999,
+      "gaRate": 1.832,
+      "bttsRate": 0.394,
+      "over25Rate": 0.534,
+      "cleanSheetRate": 0.21,
+      "fhShare": null,
+      "att": 0.786,
+      "def": 1.442
+    },
+    "angola": {
+      "name": "Angola",
+      "elo": 1579,
+      "games": 75,
+      "gfRate": 1.11,
+      "gaRate": 0.823,
+      "bttsRate": 0.466,
+      "over25Rate": 0.332,
+      "cleanSheetRate": 0.365,
+      "fhShare": 0.448,
+      "att": 0.874,
+      "def": 0.648
+    },
+    "botswana": {
+      "name": "Botswana",
+      "elo": 1409,
+      "games": 63,
+      "gfRate": 0.736,
+      "gaRate": 1.264,
+      "bttsRate": 0.308,
+      "over25Rate": 0.396,
+      "cleanSheetRate": 0.292,
+      "fhShare": null,
+      "att": 0.579,
+      "def": 0.995
+    },
+    "eswatini": {
+      "name": "Eswatini",
+      "elo": 1374,
+      "games": 59,
+      "gfRate": 0.745,
+      "gaRate": 1.6,
+      "bttsRate": 0.408,
+      "over25Rate": 0.479,
+      "cleanSheetRate": 0.184,
+      "fhShare": null,
+      "att": 0.587,
+      "def": 1.26
+    },
+    "tunisia": {
+      "name": "Tunisia",
+      "elo": 1626,
+      "games": 109,
+      "gfRate": 1.418,
+      "gaRate": 0.84,
+      "bttsRate": 0.326,
+      "over25Rate": 0.417,
+      "cleanSheetRate": 0.469,
+      "fhShare": 0.382,
+      "att": 1.116,
+      "def": 0.661
+    },
+    "lesotho": {
+      "name": "Lesotho",
+      "elo": 1427,
+      "games": 64,
+      "gfRate": 0.684,
+      "gaRate": 1.407,
+      "bttsRate": 0.329,
+      "over25Rate": 0.371,
+      "cleanSheetRate": 0.301,
+      "fhShare": null,
+      "att": 0.538,
+      "def": 1.108
+    },
+    "capeverde": {
+      "name": "Cape Verde",
+      "elo": 1663,
+      "games": 76,
+      "gfRate": 1.3,
+      "gaRate": 0.893,
+      "bttsRate": 0.405,
+      "over25Rate": 0.389,
+      "cleanSheetRate": 0.458,
+      "fhShare": 0.405,
+      "att": 1.023,
+      "def": 0.703
+    },
+    "drcongo": {
+      "name": "DR Congo",
+      "elo": 1753,
+      "games": 86,
+      "gfRate": 1.286,
+      "gaRate": 0.653,
+      "bttsRate": 0.413,
+      "over25Rate": 0.265,
+      "cleanSheetRate": 0.434,
+      "fhShare": 0.56,
+      "att": 1.012,
+      "def": 0.514
+    },
+    "cambodia": {
+      "name": "Cambodia",
+      "elo": 1250,
+      "games": 58,
+      "gfRate": 1.056,
+      "gaRate": 2.105,
+      "bttsRate": 0.569,
+      "over25Rate": 0.693,
+      "cleanSheetRate": 0.187,
+      "fhShare": null,
+      "att": 0.831,
+      "def": 1.657
+    },
+    "kuwait": {
+      "name": "Kuwait",
+      "elo": 1499,
+      "games": 85,
+      "gfRate": 1.169,
+      "gaRate": 1.333,
+      "bttsRate": 0.52,
+      "over25Rate": 0.477,
+      "cleanSheetRate": 0.209,
+      "fhShare": 0.29,
+      "att": 0.92,
+      "def": 1.049
+    },
+    "saudiarabia": {
+      "name": "Saudi Arabia",
+      "elo": 1674,
+      "games": 119,
+      "gfRate": 1.197,
+      "gaRate": 0.867,
+      "bttsRate": 0.414,
+      "over25Rate": 0.405,
+      "cleanSheetRate": 0.375,
+      "fhShare": 0.466,
+      "att": 0.942,
+      "def": 0.683
+    },
+    "bolivia": {
+      "name": "Bolivia",
+      "elo": 1591,
+      "games": 85,
+      "gfRate": 1.073,
+      "gaRate": 1.55,
+      "bttsRate": 0.354,
+      "over25Rate": 0.649,
+      "cleanSheetRate": 0.23,
+      "fhShare": 0.438,
+      "att": 0.845,
+      "def": 1.22
+    },
+    "haiti": {
+      "name": "Haiti",
+      "elo": 1662,
+      "games": 71,
+      "gfRate": 2.067,
+      "gaRate": 1.182,
+      "bttsRate": 0.485,
+      "over25Rate": 0.671,
+      "cleanSheetRate": 0.323,
+      "fhShare": 0.392,
+      "att": 1.627,
+      "def": 0.931
+    },
+    "curacao": {
+      "name": "Curaçao",
+      "elo": 1590,
+      "games": 62,
+      "gfRate": 1.607,
+      "gaRate": 1.183,
+      "bttsRate": 0.419,
+      "over25Rate": 0.49,
+      "cleanSheetRate": 0.402,
+      "fhShare": 0.5,
+      "att": 1.265,
+      "def": 0.931
+    },
+    "indonesia": {
+      "name": "Indonesia",
+      "elo": 1514,
+      "games": 89,
+      "gfRate": 1.364,
+      "gaRate": 1.358,
+      "bttsRate": 0.366,
+      "over25Rate": 0.557,
+      "cleanSheetRate": 0.375,
+      "fhShare": 0.513,
+      "att": 1.074,
+      "def": 1.069
+    },
+    "japan": {
+      "name": "Japan",
+      "elo": 1899,
+      "games": 104,
+      "gfRate": 2.688,
+      "gaRate": 0.58,
+      "bttsRate": 0.405,
+      "over25Rate": 0.585,
+      "cleanSheetRate": 0.511,
+      "fhShare": 0.427,
+      "att": 2.116,
+      "def": 0.457
+    },
+    "chile": {
+      "name": "Chile",
+      "elo": 1677,
+      "games": 87,
+      "gfRate": 1.202,
+      "gaRate": 1.079,
+      "bttsRate": 0.369,
+      "over25Rate": 0.487,
+      "cleanSheetRate": 0.319,
+      "fhShare": 0.486,
+      "att": 0.946,
+      "def": 0.849
+    },
+    "laos": {
+      "name": "Laos",
+      "elo": 1113,
+      "games": 39,
+      "gfRate": 0.725,
+      "gaRate": 2.891,
+      "bttsRate": 0.571,
+      "over25Rate": 0.683,
+      "cleanSheetRate": 0.021,
+      "fhShare": null,
+      "att": 0.571,
+      "def": 2.276
+    },
+    "panama": {
+      "name": "Panama",
+      "elo": 1720,
+      "games": 115,
+      "gfRate": 1.657,
+      "gaRate": 0.994,
+      "bttsRate": 0.469,
+      "over25Rate": 0.477,
+      "cleanSheetRate": 0.295,
+      "fhShare": 0.383,
+      "att": 1.305,
+      "def": 0.783
+    },
+    "iran": {
+      "name": "Iran",
+      "elo": 1833,
+      "games": 85,
+      "gfRate": 2.051,
+      "gaRate": 0.685,
+      "bttsRate": 0.431,
+      "over25Rate": 0.488,
+      "cleanSheetRate": 0.507,
+      "fhShare": 0.473,
+      "att": 1.615,
+      "def": 0.539
+    },
+    "guadeloupe": {
+      "name": "Guadeloupe",
+      "elo": 1563,
+      "games": 42,
+      "gfRate": 1.702,
+      "gaRate": 1.006,
+      "bttsRate": 0.379,
+      "over25Rate": 0.551,
+      "cleanSheetRate": 0.458,
+      "fhShare": null,
+      "att": 1.34,
+      "def": 0.792
+    },
+    "myanmar": {
+      "name": "Myanmar",
+      "elo": 1258,
+      "games": 65,
+      "gfRate": 0.9,
+      "gaRate": 2.711,
+      "bttsRate": 0.486,
+      "over25Rate": 0.65,
+      "cleanSheetRate": 0.15,
+      "fhShare": null,
+      "att": 0.709,
+      "def": 2.134
+    },
+    "honduras": {
+      "name": "Honduras",
+      "elo": 1693,
+      "games": 91,
+      "gfRate": 1.362,
+      "gaRate": 1.057,
+      "bttsRate": 0.353,
+      "over25Rate": 0.452,
+      "cleanSheetRate": 0.398,
+      "fhShare": 0.378,
+      "att": 1.072,
+      "def": 0.832
+    },
+    "hongkong": {
+      "name": "Hong Kong",
+      "elo": 1453,
+      "games": 67,
+      "gfRate": 1.277,
+      "gaRate": 1.375,
+      "bttsRate": 0.354,
+      "over25Rate": 0.535,
+      "cleanSheetRate": 0.338,
+      "fhShare": null,
+      "att": 1.005,
+      "def": 1.082
+    },
+    "thailand": {
+      "name": "Thailand",
+      "elo": 1602,
+      "games": 96,
+      "gfRate": 1.728,
+      "gaRate": 1.062,
+      "bttsRate": 0.512,
+      "over25Rate": 0.606,
+      "cleanSheetRate": 0.39,
+      "fhShare": 0.44,
+      "att": 1.36,
+      "def": 0.836
+    },
+    "northkorea": {
+      "name": "North Korea",
+      "elo": 1525,
+      "games": 37,
+      "gfRate": 1.181,
+      "gaRate": 1.499,
+      "bttsRate": 0.516,
+      "over25Rate": 0.524,
+      "cleanSheetRate": 0.16,
+      "fhShare": 0.458,
+      "att": 0.93,
+      "def": 1.18
+    },
+    "martinique": {
+      "name": "Martinique",
+      "elo": 1485,
+      "games": 38,
+      "gfRate": 0.978,
+      "gaRate": 1.332,
+      "bttsRate": 0.392,
+      "over25Rate": 0.432,
+      "cleanSheetRate": 0.31,
+      "fhShare": null,
+      "att": 0.77,
+      "def": 1.049
+    },
+    "australia": {
+      "name": "Australia",
+      "elo": 1843,
+      "games": 79,
+      "gfRate": 1.857,
+      "gaRate": 0.569,
+      "bttsRate": 0.356,
+      "over25Rate": 0.383,
+      "cleanSheetRate": 0.508,
+      "fhShare": 0.54,
+      "att": 1.462,
+      "def": 0.448
+    },
+    "vietnam": {
+      "name": "Vietnam",
+      "elo": 1570,
+      "games": 86,
+      "gfRate": 1.474,
+      "gaRate": 1.038,
+      "bttsRate": 0.373,
+      "over25Rate": 0.543,
+      "cleanSheetRate": 0.414,
+      "fhShare": 0.429,
+      "att": 1.16,
+      "def": 0.817
+    },
+    "vanuatu": {
+      "name": "Vanuatu",
+      "elo": 1473,
+      "games": 36,
+      "gfRate": 1.38,
+      "gaRate": 1.939,
+      "bttsRate": 0.519,
+      "over25Rate": 0.64,
+      "cleanSheetRate": 0.183,
+      "fhShare": null,
+      "att": 1.086,
+      "def": 1.527
+    },
+    "newcaledonia": {
+      "name": "New Caledonia",
+      "elo": 1652,
+      "games": 30,
+      "gfRate": 2.017,
+      "gaRate": 0.985,
+      "bttsRate": 0.345,
+      "over25Rate": 0.591,
+      "cleanSheetRate": 0.366,
+      "fhShare": null,
+      "att": 1.588,
+      "def": 0.775
+    },
+    "yemen": {
+      "name": "Yemen",
+      "elo": 1385,
+      "games": 47,
+      "gfRate": 1.278,
+      "gaRate": 1.541,
+      "bttsRate": 0.345,
+      "over25Rate": 0.529,
+      "cleanSheetRate": 0.328,
+      "fhShare": null,
+      "att": 1.006,
+      "def": 1.213
+    },
+    "paraguay": {
+      "name": "Paraguay",
+      "elo": 1767,
+      "games": 83,
+      "gfRate": 1.102,
+      "gaRate": 0.859,
+      "bttsRate": 0.373,
+      "over25Rate": 0.349,
+      "cleanSheetRate": 0.391,
+      "fhShare": 0.357,
+      "att": 0.868,
+      "def": 0.676
+    },
+    "tajikistan": {
+      "name": "Tajikistan",
+      "elo": 1470,
+      "games": 67,
+      "gfRate": 1.168,
+      "gaRate": 0.997,
+      "bttsRate": 0.373,
+      "over25Rate": 0.448,
+      "cleanSheetRate": 0.381,
+      "fhShare": 0.429,
+      "att": 0.92,
+      "def": 0.785
+    },
+    "afghanistan": {
+      "name": "Afghanistan",
+      "elo": 1292,
+      "games": 40,
+      "gfRate": 0.515,
+      "gaRate": 1.712,
+      "bttsRate": 0.388,
+      "over25Rate": 0.317,
+      "cleanSheetRate": 0.281,
+      "fhShare": null,
+      "att": 0.405,
+      "def": 1.348
+    },
+    "turkmenistan": {
+      "name": "Turkmenistan",
+      "elo": 1450,
+      "games": 36,
+      "gfRate": 1.101,
+      "gaRate": 1.569,
+      "bttsRate": 0.544,
+      "over25Rate": 0.58,
+      "cleanSheetRate": 0.103,
+      "fhShare": null,
+      "att": 0.867,
+      "def": 1.235
+    },
+    "jersey": {
+      "name": "Jersey",
+      "elo": 1786,
+      "games": 17,
+      "gfRate": 2.828,
+      "gaRate": 0.93,
+      "bttsRate": 0.507,
+      "over25Rate": 0.691,
+      "cleanSheetRate": 0.471,
+      "fhShare": null,
+      "att": 2.226,
+      "def": 0.732
+    },
+    "tahiti": {
+      "name": "Tahiti",
+      "elo": 1558,
+      "games": 26,
+      "gfRate": 1.491,
+      "gaRate": 1.107,
+      "bttsRate": 0.28,
+      "over25Rate": 0.592,
+      "cleanSheetRate": 0.392,
+      "fhShare": null,
+      "att": 1.174,
+      "def": 0.872
+    },
+    "samoa": {
+      "name": "Samoa",
+      "elo": 1330,
+      "games": 17,
+      "gfRate": 1.292,
+      "gaRate": 2.483,
+      "bttsRate": 0.41,
+      "over25Rate": 0.717,
+      "cleanSheetRate": 0.273,
+      "fhShare": null,
+      "att": 1.017,
+      "def": 1.955
+    },
+    "papuanewguinea": {
+      "name": "Papua New Guinea",
+      "elo": 1511,
+      "games": 33,
+      "gfRate": 1.437,
+      "gaRate": 1.509,
+      "bttsRate": 0.57,
+      "over25Rate": 0.58,
+      "cleanSheetRate": 0.3,
+      "fhShare": null,
+      "att": 1.131,
+      "def": 1.188
+    },
+    "djibouti": {
+      "name": "Djibouti",
+      "elo": 1202,
+      "games": 30,
+      "gfRate": 0.58,
+      "gaRate": 2.658,
+      "bttsRate": 0.445,
+      "over25Rate": 0.582,
+      "cleanSheetRate": 0.062,
+      "fhShare": null,
+      "att": 0.457,
+      "def": 2.093
+    },
+    "saotomeandprincipe": {
+      "name": "São Tomé and Príncipe",
+      "elo": 1243,
+      "games": 30,
+      "gfRate": 0.592,
+      "gaRate": 2.535,
+      "bttsRate": 0.361,
+      "over25Rate": 0.585,
+      "cleanSheetRate": 0.108,
+      "fhShare": null,
+      "att": 0.466,
+      "def": 1.996
+    },
+    "chad": {
+      "name": "Chad",
+      "elo": 1293,
+      "games": 36,
+      "gfRate": 0.539,
+      "gaRate": 1.743,
+      "bttsRate": 0.385,
+      "over25Rate": 0.425,
+      "cleanSheetRate": 0.153,
+      "fhShare": null,
+      "att": 0.424,
+      "def": 1.372
+    },
+    "somalia": {
+      "name": "Somalia",
+      "elo": 1181,
+      "games": 22,
+      "gfRate": 0.415,
+      "gaRate": 1.815,
+      "bttsRate": 0.302,
+      "over25Rate": 0.55,
+      "cleanSheetRate": 0.157,
+      "fhShare": null,
+      "att": 0.327,
+      "def": 1.429
+    },
+    "newzealand": {
+      "name": "New Zealand",
+      "elo": 1647,
+      "games": 52,
+      "gfRate": 2.173,
+      "gaRate": 1.091,
+      "bttsRate": 0.402,
+      "over25Rate": 0.629,
+      "cleanSheetRate": 0.349,
+      "fhShare": 0.438,
+      "att": 1.711,
+      "def": 0.859
+    }
+  },
+  "players": {
+    "johnmcginn": {
+      "name": "John McGinn",
+      "team": "scotland",
+      "goals4y": 7,
+      "teamGames4y": 44,
+      "gpg": 0.159,
+      "penShare": 0
+    },
+    "lyndondykes": {
+      "name": "Lyndon Dykes",
+      "team": "scotland",
+      "goals4y": 4,
+      "teamGames4y": 44,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "kevindebruyne": {
+      "name": "Kevin De Bruyne",
+      "team": "belgium",
+      "goals4y": 11,
+      "teamGames4y": 48,
+      "gpg": 0.229,
+      "penShare": 0.27
+    },
+    "kieffermoore": {
+      "name": "Kieffer Moore",
+      "team": "wales",
+      "goals4y": 5,
+      "teamGames4y": 39,
+      "gpg": 0.128,
+      "penShare": 0
+    },
+    "christianeriksen": {
+      "name": "Christian Eriksen",
+      "team": "denmark",
+      "goals4y": 5,
+      "teamGames4y": 43,
+      "gpg": 0.116,
+      "penShare": 0
+    },
+    "lovromajer": {
+      "name": "Lovro Majer",
+      "team": "croatia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "kylianmbappe": {
+      "name": "Kylian Mbappe",
+      "team": "france",
+      "goals4y": 32,
+      "teamGames4y": 54,
+      "gpg": 0.593,
+      "penShare": 0.28
+    },
+    "oliviergiroud": {
+      "name": "Olivier Giroud",
+      "team": "france",
+      "goals4y": 8,
+      "teamGames4y": 54,
+      "gpg": 0.148,
+      "penShare": 0
+    },
+    "bakhtiyarzaynutdinov": {
+      "name": "Bakhtiyar Zaynutdinov",
+      "team": "kazakhstan",
+      "goals4y": 5,
+      "teamGames4y": 39,
+      "gpg": 0.128,
+      "penShare": 0.4
+    },
+    "ionnicolaescu": {
+      "name": "Ion Nicolaescu",
+      "team": "moldova",
+      "goals4y": 8,
+      "teamGames4y": 37,
+      "gpg": 0.216,
+      "penShare": 0.25
+    },
+    "albertrosas": {
+      "name": "Albert Rosas",
+      "team": "andorra",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "codygakpo": {
+      "name": "Cody Gakpo",
+      "team": "netherlands",
+      "goals4y": 20,
+      "teamGames4y": 51,
+      "gpg": 0.392,
+      "penShare": 0.25
+    },
+    "renatdadashov": {
+      "name": "Renat Dadashov",
+      "team": "azerbaijan",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "danelsinani": {
+      "name": "Danel Sinani",
+      "team": "luxembourg",
+      "goals4y": 4,
+      "teamGames4y": 36,
+      "gpg": 0.111,
+      "penShare": 0
+    },
+    "gersonrodrigues": {
+      "name": "Gerson Rodrigues",
+      "team": "luxembourg",
+      "goals4y": 9,
+      "teamGames4y": 36,
+      "gpg": 0.25,
+      "penShare": 0.22
+    },
+    "ermedindemirovic": {
+      "name": "Ermedin Demirovic",
+      "team": "bosniaandherzegovina",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "kirildespodov": {
+      "name": "Kiril Despodov",
+      "team": "bulgaria",
+      "goals4y": 6,
+      "teamGames4y": 38,
+      "gpg": 0.158,
+      "penShare": 0.17
+    },
+    "marinpetkov": {
+      "name": "Marin Petkov",
+      "team": "bulgaria",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "raunosappinen": {
+      "name": "Rauno Sappinen",
+      "team": "estonia",
+      "goals4y": 6,
+      "teamGames4y": 42,
+      "gpg": 0.143,
+      "penShare": 0.17
+    },
+    "teddyteuma": {
+      "name": "Teddy Teuma",
+      "team": "malta",
+      "goals4y": 3,
+      "teamGames4y": 35,
+      "gpg": 0.086,
+      "penShare": 1
+    },
+    "henrianier": {
+      "name": "Henri Anier",
+      "team": "estonia",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "teemupukki": {
+      "name": "Teemu Pukki",
+      "team": "finland",
+      "goals4y": 4,
+      "teamGames4y": 40,
+      "gpg": 0.1,
+      "penShare": 0
+    },
+    "florintanase": {
+      "name": "Florin Tanase",
+      "team": "romania",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "khvichakvaratskhelia": {
+      "name": "Khvicha Kvaratskhelia",
+      "team": "georgia",
+      "goals4y": 11,
+      "teamGames4y": 40,
+      "gpg": 0.275,
+      "penShare": 0.18
+    },
+    "giacomoraspadori": {
+      "name": "Giacomo Raspadori",
+      "team": "italy",
+      "goals4y": 8,
+      "teamGames4y": 42,
+      "gpg": 0.19,
+      "penShare": 0.13
+    },
+    "artemdovbyk": {
+      "name": "Artem Dovbyk",
+      "team": "ukraine",
+      "goals4y": 5,
+      "teamGames4y": 40,
+      "gpg": 0.125,
+      "penShare": 0.4
+    },
+    "diogodalot": {
+      "name": "Diogo Dalot",
+      "team": "portugal",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "brunofernandes": {
+      "name": "Bruno Fernandes",
+      "team": "portugal",
+      "goals4y": 15,
+      "teamGames4y": 52,
+      "gpg": 0.288,
+      "penShare": 0.2
+    },
+    "diogojota": {
+      "name": "Diogo Jota",
+      "team": "portugal",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "shonweissman": {
+      "name": "Shon Weissman",
+      "team": "israel",
+      "goals4y": 3,
+      "teamGames4y": 35,
+      "gpg": 0.086,
+      "penShare": 0.33
+    },
+    "vedatmuriqi": {
+      "name": "Vedat Muriqi",
+      "team": "kosovo",
+      "goals4y": 12,
+      "teamGames4y": 37,
+      "gpg": 0.324,
+      "penShare": 0.17
+    },
+    "joshmagennis": {
+      "name": "Josh Magennis",
+      "team": "northernireland",
+      "goals4y": 3,
+      "teamGames4y": 36,
+      "gpg": 0.083,
+      "penShare": 0
+    },
+    "ryanchristie": {
+      "name": "Ryan Christie",
+      "team": "scotland",
+      "goals4y": 4,
+      "teamGames4y": 44,
+      "gpg": 0.091,
+      "penShare": 0.25
+    },
+    "viktorclaesson": {
+      "name": "Viktor Claesson",
+      "team": "sweden",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "aleksandarmitrovic": {
+      "name": "Aleksandar Mitrovic",
+      "team": "serbia",
+      "goals4y": 16,
+      "teamGames4y": 43,
+      "gpg": 0.372,
+      "penShare": 0.13
+    },
+    "erlinghaaland": {
+      "name": "Erling Haaland",
+      "team": "norway",
+      "goals4y": 37,
+      "teamGames4y": 43,
+      "gpg": 0.86,
+      "penShare": 0.05
+    },
+    "andrazsporar": {
+      "name": "Andraz Sporar",
+      "team": "slovenia",
+      "goals4y": 4,
+      "teamGames4y": 43,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "benjaminsesko": {
+      "name": "Benjamin Sesko",
+      "team": "slovenia",
+      "goals4y": 12,
+      "teamGames4y": 43,
+      "gpg": 0.279,
+      "penShare": 0.33
+    },
+    "manuelakanji": {
+      "name": "Manuel Akanji",
+      "team": "switzerland",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "breelembolo": {
+      "name": "Breel Embolo",
+      "team": "switzerland",
+      "goals4y": 12,
+      "teamGames4y": 50,
+      "gpg": 0.24,
+      "penShare": 0.08
+    },
+    "vladislavsgutkovskis": {
+      "name": "Vladislavs Gutkovskis",
+      "team": "latvia",
+      "goals4y": 3,
+      "teamGames4y": 36,
+      "gpg": 0.083,
+      "penShare": 0.33
+    },
+    "lukamodric": {
+      "name": "Luka Modric",
+      "team": "croatia",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0.25
+    },
+    "christophbaumgartner": {
+      "name": "Christoph Baumgartner",
+      "team": "austria",
+      "goals4y": 8,
+      "teamGames4y": 45,
+      "gpg": 0.178,
+      "penShare": 0
+    },
+    "viljormurdavidsen": {
+      "name": "Viljormur Davidsen",
+      "team": "faroeislands",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0.67
+    },
+    "virgilvandijk": {
+      "name": "Virgil van Dijk",
+      "team": "netherlands",
+      "goals4y": 5,
+      "teamGames4y": 51,
+      "gpg": 0.098,
+      "penShare": 0.2
+    },
+    "karolswiderski": {
+      "name": "Karol Swiderski",
+      "team": "poland",
+      "goals4y": 6,
+      "teamGames4y": 44,
+      "gpg": 0.136,
+      "penShare": 0
+    },
+    "ilkaygundogan": {
+      "name": "Ilkay Gundogan",
+      "team": "germany",
+      "goals4y": 3,
+      "teamGames4y": 50,
+      "gpg": 0.06,
+      "penShare": 0.67
+    },
+    "kaihavertz": {
+      "name": "Kai Havertz",
+      "team": "germany",
+      "goals4y": 11,
+      "teamGames4y": 50,
+      "gpg": 0.22,
+      "penShare": 0.36
+    },
+    "harrykane": {
+      "name": "Harry Kane",
+      "team": "england",
+      "goals4y": 30,
+      "teamGames4y": 53,
+      "gpg": 0.566,
+      "penShare": 0.37
+    },
+    "federicodimarco": {
+      "name": "Federico Dimarco",
+      "team": "italy",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "oliverantman": {
+      "name": "Oliver Antman",
+      "team": "finland",
+      "goals4y": 5,
+      "teamGames4y": 40,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "benjaminkallman": {
+      "name": "Benjamin Kallman",
+      "team": "finland",
+      "goals4y": 6,
+      "teamGames4y": 40,
+      "gpg": 0.15,
+      "penShare": 0
+    },
+    "dennisman": {
+      "name": "Dennis Man",
+      "team": "romania",
+      "goals4y": 6,
+      "teamGames4y": 42,
+      "gpg": 0.143,
+      "penShare": 0
+    },
+    "georgepuscas": {
+      "name": "George Puscas",
+      "team": "romania",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "edindzeko": {
+      "name": "Edin Dzeko",
+      "team": "bosniaandherzegovina",
+      "goals4y": 10,
+      "teamGames4y": 39,
+      "gpg": 0.256,
+      "penShare": 0
+    },
+    "dimitriospelkas": {
+      "name": "Dimitrios Pelkas",
+      "team": "greece",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "giorgosmasouras": {
+      "name": "Giorgos Masouras",
+      "team": "greece",
+      "goals4y": 6,
+      "teamGames4y": 38,
+      "gpg": 0.158,
+      "penShare": 0
+    },
+    "florentmuslija": {
+      "name": "Florent Muslija",
+      "team": "kosovo",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "dusanvlahovic": {
+      "name": "Dusan Vlahovic",
+      "team": "serbia",
+      "goals4y": 8,
+      "teamGames4y": 43,
+      "gpg": 0.186,
+      "penShare": 0
+    },
+    "alvaromorata": {
+      "name": "Alvaro Morata",
+      "team": "spain",
+      "goals4y": 10,
+      "teamGames4y": 52,
+      "gpg": 0.192,
+      "penShare": 0
+    },
+    "eduardspertsyan": {
+      "name": "Eduard Spertsyan",
+      "team": "armenia",
+      "goals4y": 5,
+      "teamGames4y": 37,
+      "gpg": 0.135,
+      "penShare": 0.2
+    },
+    "emilforsberg": {
+      "name": "Emil Forsberg",
+      "team": "sweden",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "remofreuler": {
+      "name": "Remo Freuler",
+      "team": "switzerland",
+      "goals4y": 6,
+      "teamGames4y": 50,
+      "gpg": 0.12,
+      "penShare": 0
+    },
+    "patrikschick": {
+      "name": "Patrik Schick",
+      "team": "czechrepublic",
+      "goals4y": 7,
+      "teamGames4y": 44,
+      "gpg": 0.159,
+      "penShare": 0.14
+    },
+    "isakbergmannjohannesson": {
+      "name": "Isak Bergmann Johannesson",
+      "team": "iceland",
+      "goals4y": 4,
+      "teamGames4y": 45,
+      "gpg": 0.089,
+      "penShare": 0.25
+    },
+    "ennervalencia": {
+      "name": "Enner Valencia",
+      "team": "ecuador",
+      "goals4y": 9,
+      "teamGames4y": 49,
+      "gpg": 0.184,
+      "penShare": 0.33
+    },
+    "judebellingham": {
+      "name": "Jude Bellingham",
+      "team": "england",
+      "goals4y": 8,
+      "teamGames4y": 53,
+      "gpg": 0.151,
+      "penShare": 0
+    },
+    "bukayosaka": {
+      "name": "Bukayo Saka",
+      "team": "england",
+      "goals4y": 9,
+      "teamGames4y": 53,
+      "gpg": 0.17,
+      "penShare": 0
+    },
+    "mehditaremi": {
+      "name": "Mehdi Taremi",
+      "team": "iran",
+      "goals4y": 15,
+      "teamGames4y": 49,
+      "gpg": 0.306,
+      "penShare": 0.27
+    },
+    "marcusrashford": {
+      "name": "Marcus Rashford",
+      "team": "england",
+      "goals4y": 7,
+      "teamGames4y": 53,
+      "gpg": 0.132,
+      "penShare": 0.14
+    },
+    "jackgrealish": {
+      "name": "Jack Grealish",
+      "team": "england",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "lionelmessi": {
+      "name": "Lionel Messi",
+      "team": "argentina",
+      "goals4y": 22,
+      "teamGames4y": 53,
+      "gpg": 0.415,
+      "penShare": 0.18
+    },
+    "salehalshehri": {
+      "name": "Saleh Al-Shehri",
+      "team": "saudiarabia",
+      "goals4y": 6,
+      "teamGames4y": 71,
+      "gpg": 0.085,
+      "penShare": 0.33
+    },
+    "salemaldawsari": {
+      "name": "Salem Al-Dawsari",
+      "team": "saudiarabia",
+      "goals4y": 4,
+      "teamGames4y": 71,
+      "gpg": 0.056,
+      "penShare": 0
+    },
+    "craiggoodwin": {
+      "name": "Craig Goodwin",
+      "team": "australia",
+      "goals4y": 6,
+      "teamGames4y": 48,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "adrienrabiot": {
+      "name": "Adrien Rabiot",
+      "team": "france",
+      "goals4y": 5,
+      "teamGames4y": 54,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "ritsudoan": {
+      "name": "Ritsu Doan",
+      "team": "japan",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0
+    },
+    "daniolmo": {
+      "name": "Dani Olmo",
+      "team": "spain",
+      "goals4y": 7,
+      "teamGames4y": 52,
+      "gpg": 0.135,
+      "penShare": 0
+    },
+    "ferrantorres": {
+      "name": "Ferran Torres",
+      "team": "spain",
+      "goals4y": 9,
+      "teamGames4y": 52,
+      "gpg": 0.173,
+      "penShare": 0.11
+    },
+    "gavi": {
+      "name": "Gavi",
+      "team": "spain",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "richarlison": {
+      "name": "Richarlison",
+      "team": "brazil",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "cristianoronaldo": {
+      "name": "Cristiano Ronaldo",
+      "team": "portugal",
+      "goals4y": 27,
+      "teamGames4y": 52,
+      "gpg": 0.519,
+      "penShare": 0.26
+    },
+    "joaofelix": {
+      "name": "Joao Felix",
+      "team": "portugal",
+      "goals4y": 7,
+      "teamGames4y": 52,
+      "gpg": 0.135,
+      "penShare": 0
+    },
+    "rafaelleao": {
+      "name": "Rafael Leao",
+      "team": "portugal",
+      "goals4y": 5,
+      "teamGames4y": 52,
+      "gpg": 0.096,
+      "penShare": 0
+    },
+    "raminrezaeian": {
+      "name": "Ramin Rezaeian",
+      "team": "iran",
+      "goals4y": 5,
+      "teamGames4y": 49,
+      "gpg": 0.102,
+      "penShare": 0
+    },
+    "enzofernandez": {
+      "name": "Enzo Fernandez",
+      "team": "argentina",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "piotrzielinski": {
+      "name": "Piotr Zielinski",
+      "team": "poland",
+      "goals4y": 6,
+      "teamGames4y": 44,
+      "gpg": 0.136,
+      "penShare": 0
+    },
+    "robertlewandowski": {
+      "name": "Robert Lewandowski",
+      "team": "poland",
+      "goals4y": 12,
+      "teamGames4y": 44,
+      "gpg": 0.273,
+      "penShare": 0.33
+    },
+    "mitchellduke": {
+      "name": "Mitchell Duke",
+      "team": "australia",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0
+    },
+    "andrejkramaric": {
+      "name": "Andrej Kramaric",
+      "team": "croatia",
+      "goals4y": 15,
+      "teamGames4y": 51,
+      "gpg": 0.294,
+      "penShare": 0.07
+    },
+    "niclasfullkrug": {
+      "name": "Niclas Fullkrug",
+      "team": "germany",
+      "goals4y": 5,
+      "teamGames4y": 50,
+      "gpg": 0.1,
+      "penShare": 0
+    },
+    "vincentaboubakar": {
+      "name": "Vincent Aboubakar",
+      "team": "cameroon",
+      "goals4y": 6,
+      "teamGames4y": 44,
+      "gpg": 0.136,
+      "penShare": 0.33
+    },
+    "mohammedsalisu": {
+      "name": "Mohammed Salisu",
+      "team": "ghana",
+      "goals4y": 3,
+      "teamGames4y": 46,
+      "gpg": 0.065,
+      "penShare": 0
+    },
+    "mohammedkudus": {
+      "name": "Mohammed Kudus",
+      "team": "ghana",
+      "goals4y": 6,
+      "teamGames4y": 46,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "choguesung": {
+      "name": "Cho Gue-sung",
+      "team": "southkorea",
+      "goals4y": 4,
+      "teamGames4y": 54,
+      "gpg": 0.074,
+      "penShare": 0
+    },
+    "ismailasarr": {
+      "name": "Ismaila Sarr",
+      "team": "senegal",
+      "goals4y": 9,
+      "teamGames4y": 58,
+      "gpg": 0.155,
+      "penShare": 0.11
+    },
+    "alexismacallister": {
+      "name": "Alexis Mac Allister",
+      "team": "argentina",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "julianalvarez": {
+      "name": "Julian Alvarez",
+      "team": "argentina",
+      "goals4y": 10,
+      "teamGames4y": 53,
+      "gpg": 0.189,
+      "penShare": 0
+    },
+    "henrymartin": {
+      "name": "Henry Martin",
+      "team": "mexico",
+      "goals4y": 3,
+      "teamGames4y": 70,
+      "gpg": 0.043,
+      "penShare": 0
+    },
+    "luischavez": {
+      "name": "Luis Chavez",
+      "team": "mexico",
+      "goals4y": 3,
+      "teamGames4y": 70,
+      "gpg": 0.043,
+      "penShare": 0
+    },
+    "hakimziyech": {
+      "name": "Hakim Ziyech",
+      "team": "morocco",
+      "goals4y": 4,
+      "teamGames4y": 66,
+      "gpg": 0.061,
+      "penShare": 0.25
+    },
+    "youssefennesyri": {
+      "name": "Youssef En-Nesyri",
+      "team": "morocco",
+      "goals4y": 5,
+      "teamGames4y": 66,
+      "gpg": 0.076,
+      "penShare": 0
+    },
+    "sergegnabry": {
+      "name": "Serge Gnabry",
+      "team": "germany",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "juanpablovargas": {
+      "name": "Juan Pablo Vargas",
+      "team": "costarica",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "giorgiandearrascaeta": {
+      "name": "Giorgian de Arrascaeta",
+      "team": "uruguay",
+      "goals4y": 4,
+      "teamGames4y": 47,
+      "gpg": 0.085,
+      "penShare": 0
+    },
+    "xherdanshaqiri": {
+      "name": "Xherdan Shaqiri",
+      "team": "switzerland",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0.25
+    },
+    "ricardohorta": {
+      "name": "Ricardo Horta",
+      "team": "portugal",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "hwangheechan": {
+      "name": "Hwang Hee-chan",
+      "team": "southkorea",
+      "goals4y": 6,
+      "teamGames4y": 54,
+      "gpg": 0.111,
+      "penShare": 0.17
+    },
+    "memphisdepay": {
+      "name": "Memphis Depay",
+      "team": "netherlands",
+      "goals4y": 12,
+      "teamGames4y": 51,
+      "gpg": 0.235,
+      "penShare": 0.25
+    },
+    "denzeldumfries": {
+      "name": "Denzel Dumfries",
+      "team": "netherlands",
+      "goals4y": 6,
+      "teamGames4y": 51,
+      "gpg": 0.118,
+      "penShare": 0
+    },
+    "viniciusjunior": {
+      "name": "Vinicius Junior",
+      "team": "brazil",
+      "goals4y": 9,
+      "teamGames4y": 49,
+      "gpg": 0.184,
+      "penShare": 0
+    },
+    "neymar": {
+      "name": "Neymar",
+      "team": "brazil",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0.5
+    },
+    "lucaspaqueta": {
+      "name": "Lucas Paqueta",
+      "team": "brazil",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0.33
+    },
+    "daizenmaeda": {
+      "name": "Daizen Maeda",
+      "team": "japan",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "ivanperisic": {
+      "name": "Ivan Perisic",
+      "team": "croatia",
+      "goals4y": 7,
+      "teamGames4y": 51,
+      "gpg": 0.137,
+      "penShare": 0.14
+    },
+    "goncaloramos": {
+      "name": "Goncalo Ramos",
+      "team": "portugal",
+      "goals4y": 8,
+      "teamGames4y": 52,
+      "gpg": 0.154,
+      "penShare": 0
+    },
+    "woutweghorst": {
+      "name": "Wout Weghorst",
+      "team": "netherlands",
+      "goals4y": 8,
+      "teamGames4y": 51,
+      "gpg": 0.157,
+      "penShare": 0.13
+    },
+    "randalkolomuani": {
+      "name": "Randal Kolo Muani",
+      "team": "france",
+      "goals4y": 7,
+      "teamGames4y": 54,
+      "gpg": 0.13,
+      "penShare": 0.14
+    },
+    "joskogvardiol": {
+      "name": "Josko Gvardiol",
+      "team": "croatia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "rasmushjlund": {
+      "name": "Rasmus Højlund",
+      "team": "denmark",
+      "goals4y": 13,
+      "teamGames4y": 43,
+      "gpg": 0.302,
+      "penShare": 0.08
+    },
+    "declanrice": {
+      "name": "Declan Rice",
+      "team": "england",
+      "goals4y": 4,
+      "teamGames4y": 53,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "mateoretegui": {
+      "name": "Mateo Retegui",
+      "team": "italy",
+      "goals4y": 9,
+      "teamGames4y": 42,
+      "gpg": 0.214,
+      "penShare": 0.22
+    },
+    "maksimsamorodov": {
+      "name": "Maksim Samorodov",
+      "team": "kazakhstan",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "zanvipotnik": {
+      "name": "Zan Vipotnik",
+      "team": "slovenia",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "elifelmas": {
+      "name": "Elif Elmas",
+      "team": "northmacedonia",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "joaocancelo": {
+      "name": "Joao Cancelo",
+      "team": "portugal",
+      "goals4y": 5,
+      "teamGames4y": 52,
+      "gpg": 0.096,
+      "penShare": 0
+    },
+    "bernardosilva": {
+      "name": "Bernardo Silva",
+      "team": "portugal",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0
+    },
+    "dioncharles": {
+      "name": "Dion Charles",
+      "team": "northernireland",
+      "goals4y": 4,
+      "teamGames4y": 36,
+      "gpg": 0.111,
+      "penShare": 0.25
+    },
+    "marcelsabitzer": {
+      "name": "Marcel Sabitzer",
+      "team": "austria",
+      "goals4y": 11,
+      "teamGames4y": 45,
+      "gpg": 0.244,
+      "penShare": 0.27
+    },
+    "michaelgregoritsch": {
+      "name": "Michael Gregoritsch",
+      "team": "austria",
+      "goals4y": 11,
+      "teamGames4y": 45,
+      "gpg": 0.244,
+      "penShare": 0
+    },
+    "eminmahmudov": {
+      "name": "Emin Mahmudov",
+      "team": "azerbaijan",
+      "goals4y": 4,
+      "teamGames4y": 37,
+      "gpg": 0.108,
+      "penShare": 0.25
+    },
+    "nikolakrstovic": {
+      "name": "Nikola Krstovic",
+      "team": "montenegro",
+      "goals4y": 7,
+      "teamGames4y": 38,
+      "gpg": 0.184,
+      "penShare": 0.14
+    },
+    "ladislavkrejci": {
+      "name": "Ladislav Krejci",
+      "team": "czechrepublic",
+      "goals4y": 4,
+      "teamGames4y": 44,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "tasosbakasetas": {
+      "name": "Tasos Bakasetas",
+      "team": "greece",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0.33
+    },
+    "romelulukaku": {
+      "name": "Romelu Lukaku",
+      "team": "belgium",
+      "goals4y": 20,
+      "teamGames4y": 48,
+      "gpg": 0.417,
+      "penShare": 0.1
+    },
+    "denisalibec": {
+      "name": "Denis Alibec",
+      "team": "romania",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "keremakturkoglu": {
+      "name": "Kerem Akturkoglu",
+      "team": "turkey",
+      "goals4y": 11,
+      "teamGames4y": 46,
+      "gpg": 0.239,
+      "penShare": 0
+    },
+    "renatosteffen": {
+      "name": "Renato Steffen",
+      "team": "switzerland",
+      "goals4y": 3,
+      "teamGames4y": 50,
+      "gpg": 0.06,
+      "penShare": 0
+    },
+    "granitxhaka": {
+      "name": "Granit Xhaka",
+      "team": "switzerland",
+      "goals4y": 5,
+      "teamGames4y": 50,
+      "gpg": 0.1,
+      "penShare": 0.6
+    },
+    "zekiamdouni": {
+      "name": "Zeki Amdouni",
+      "team": "switzerland",
+      "goals4y": 9,
+      "teamGames4y": 50,
+      "gpg": 0.18,
+      "penShare": 0.11
+    },
+    "nathanbroadhead": {
+      "name": "Nathan Broadhead",
+      "team": "wales",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "dorperetz": {
+      "name": "Dor Peretz",
+      "team": "israel",
+      "goals4y": 4,
+      "teamGames4y": 35,
+      "gpg": 0.114,
+      "penShare": 0
+    },
+    "scottmctominay": {
+      "name": "Scott McTominay",
+      "team": "scotland",
+      "goals4y": 13,
+      "teamGames4y": 44,
+      "gpg": 0.295,
+      "penShare": 0.08
+    },
+    "joselu": {
+      "name": "Joselu",
+      "team": "spain",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0
+    },
+    "askhattagybergen": {
+      "name": "Askhat Tagybergen",
+      "team": "kazakhstan",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0.67
+    },
+    "abataymbetov": {
+      "name": "Abat Aymbetov",
+      "team": "kazakhstan",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0.33
+    },
+    "hakonarnarharaldsson": {
+      "name": "Hakon Arnar Haraldsson",
+      "team": "iceland",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "arongunnarsson": {
+      "name": "Aron Gunnarsson",
+      "team": "iceland",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0.33
+    },
+    "andrigujohnsen": {
+      "name": "Andri Guðjohnsen",
+      "team": "iceland",
+      "goals4y": 5,
+      "teamGames4y": 45,
+      "gpg": 0.111,
+      "penShare": 0
+    },
+    "lukasharaslin": {
+      "name": "Lukas Haraslin",
+      "team": "slovakia",
+      "goals4y": 5,
+      "teamGames4y": 42,
+      "gpg": 0.119,
+      "penShare": 0
+    },
+    "dominikszoboszlai": {
+      "name": "Dominik Szoboszlai",
+      "team": "hungary",
+      "goals4y": 8,
+      "teamGames4y": 41,
+      "gpg": 0.195,
+      "penShare": 0.38
+    },
+    "viktorgyokeres": {
+      "name": "Viktor Gyokeres",
+      "team": "sweden",
+      "goals4y": 17,
+      "teamGames4y": 45,
+      "gpg": 0.378,
+      "penShare": 0.12
+    },
+    "anthonyelanga": {
+      "name": "Anthony Elanga",
+      "team": "sweden",
+      "goals4y": 5,
+      "teamGames4y": 45,
+      "gpg": 0.111,
+      "penShare": 0
+    },
+    "alexandersrloth": {
+      "name": "Alexander Sørloth",
+      "team": "norway",
+      "goals4y": 10,
+      "teamGames4y": 43,
+      "gpg": 0.233,
+      "penShare": 0
+    },
+    "georgesmikautadze": {
+      "name": "Georges Mikautadze",
+      "team": "georgia",
+      "goals4y": 14,
+      "teamGames4y": 40,
+      "gpg": 0.35,
+      "penShare": 0.21
+    },
+    "nicolaestanciu": {
+      "name": "Nicolae Stanciu",
+      "team": "romania",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "rubenvargas": {
+      "name": "Ruben Vargas",
+      "team": "switzerland",
+      "goals4y": 7,
+      "teamGames4y": 50,
+      "gpg": 0.14,
+      "penShare": 0
+    },
+    "donyellmalen": {
+      "name": "Donyell Malen",
+      "team": "netherlands",
+      "goals4y": 7,
+      "teamGames4y": 51,
+      "gpg": 0.137,
+      "penShare": 0
+    },
+    "mariopasalic": {
+      "name": "Mario Pasalic",
+      "team": "croatia",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0
+    },
+    "yeremypino": {
+      "name": "Yeremy Pino",
+      "team": "spain",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "maxebong": {
+      "name": "Max Ebong",
+      "team": "belarus",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "oscargloukh": {
+      "name": "Oscar Gloukh",
+      "team": "israel",
+      "goals4y": 3,
+      "teamGames4y": 35,
+      "gpg": 0.086,
+      "penShare": 0
+    },
+    "jonaswind": {
+      "name": "Jonas Wind",
+      "team": "denmark",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "joelpohjanpalo": {
+      "name": "Joel Pohjanpalo",
+      "team": "finland",
+      "goals4y": 5,
+      "teamGames4y": 40,
+      "gpg": 0.125,
+      "penShare": 0.6
+    },
+    "irfankahveci": {
+      "name": "Irfan Kahveci",
+      "team": "turkey",
+      "goals4y": 3,
+      "teamGames4y": 46,
+      "gpg": 0.065,
+      "penShare": 0
+    },
+    "enisbardhi": {
+      "name": "Enis Bardhi",
+      "team": "northmacedonia",
+      "goals4y": 7,
+      "teamGames4y": 39,
+      "gpg": 0.179,
+      "penShare": 0.29
+    },
+    "viktortsyhankov": {
+      "name": "Viktor Tsyhankov",
+      "team": "ukraine",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0.33
+    },
+    "danieljames": {
+      "name": "Daniel James",
+      "team": "wales",
+      "goals4y": 5,
+      "teamGames4y": 39,
+      "gpg": 0.128,
+      "penShare": 0
+    },
+    "lucaszelarayan": {
+      "name": "Lucas Zelarayan",
+      "team": "armenia",
+      "goals4y": 5,
+      "teamGames4y": 37,
+      "gpg": 0.135,
+      "penShare": 0
+    },
+    "grantleonranos": {
+      "name": "Grant-Leon Ranos",
+      "team": "armenia",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "harrywilson": {
+      "name": "Harry Wilson",
+      "team": "wales",
+      "goals4y": 12,
+      "teamGames4y": 39,
+      "gpg": 0.308,
+      "penShare": 0.33
+    },
+    "jasirasani": {
+      "name": "Jasir Asani",
+      "team": "albania",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "nedimbajrami": {
+      "name": "Nedim Bajrami",
+      "team": "albania",
+      "goals4y": 5,
+      "teamGames4y": 42,
+      "gpg": 0.119,
+      "penShare": 0.2
+    },
+    "ioannispittas": {
+      "name": "Ioannis Pittas",
+      "team": "cyprus",
+      "goals4y": 6,
+      "teamGames4y": 38,
+      "gpg": 0.158,
+      "penShare": 0.33
+    },
+    "vaclavcerny": {
+      "name": "Vaclav Cerny",
+      "team": "czechrepublic",
+      "goals4y": 5,
+      "teamGames4y": 44,
+      "gpg": 0.114,
+      "penShare": 0
+    },
+    "alfrefinnbogason": {
+      "name": "Alfreð Finnbogason",
+      "team": "iceland",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0.33
+    },
+    "davidefrattesi": {
+      "name": "Davide Frattesi",
+      "team": "italy",
+      "goals4y": 7,
+      "teamGames4y": 42,
+      "gpg": 0.167,
+      "penShare": 0
+    },
+    "federicochiesa": {
+      "name": "Federico Chiesa",
+      "team": "italy",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "danielhakans": {
+      "name": "Daniel Hakans",
+      "team": "finland",
+      "goals4y": 4,
+      "teamGames4y": 40,
+      "gpg": 0.1,
+      "penShare": 0
+    },
+    "evanferguson": {
+      "name": "Evan Ferguson",
+      "team": "republicofireland",
+      "goals4y": 7,
+      "teamGames4y": 39,
+      "gpg": 0.179,
+      "penShare": 0
+    },
+    "adamidah": {
+      "name": "Adam Idah",
+      "team": "republicofireland",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0.25
+    },
+    "valentinmihaila": {
+      "name": "Valentin Mihaila",
+      "team": "romania",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "ardaguler": {
+      "name": "Arda Guler",
+      "team": "turkey",
+      "goals4y": 6,
+      "teamGames4y": 46,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "kristjanasllani": {
+      "name": "Kristjan Asllani",
+      "team": "albania",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0.25
+    },
+    "barnabasvarga": {
+      "name": "Barnabas Varga",
+      "team": "hungary",
+      "goals4y": 10,
+      "teamGames4y": 41,
+      "gpg": 0.244,
+      "penShare": 0
+    },
+    "rolandsallai": {
+      "name": "Roland Sallai",
+      "team": "hungary",
+      "goals4y": 4,
+      "teamGames4y": 41,
+      "gpg": 0.098,
+      "penShare": 0
+    },
+    "grigoriskastanos": {
+      "name": "Grigoris Kastanos",
+      "team": "cyprus",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0.33
+    },
+    "brandonvazquez": {
+      "name": "Brandon Vazquez",
+      "team": "usa",
+      "goals4y": 3,
+      "teamGames4y": 64,
+      "gpg": 0.047,
+      "penShare": 0
+    },
+    "duckensnazon": {
+      "name": "Duckens Nazon",
+      "team": "haiti",
+      "goals4y": 7,
+      "teamGames4y": 37,
+      "gpg": 0.189,
+      "penShare": 0.14
+    },
+    "frantzdypierrot": {
+      "name": "Frantzdy Pierrot",
+      "team": "haiti",
+      "goals4y": 5,
+      "teamGames4y": 37,
+      "gpg": 0.135,
+      "penShare": 0
+    },
+    "luisromo": {
+      "name": "Luis Romo",
+      "team": "mexico",
+      "goals4y": 3,
+      "teamGames4y": 70,
+      "gpg": 0.043,
+      "penShare": 0
+    },
+    "josefajardo": {
+      "name": "Jose Fajardo",
+      "team": "panama",
+      "goals4y": 7,
+      "teamGames4y": 63,
+      "gpg": 0.111,
+      "penShare": 0
+    },
+    "patrickburner": {
+      "name": "Patrick Burner",
+      "team": "martinique",
+      "goals4y": 3,
+      "teamGames4y": 21,
+      "gpg": 0.143,
+      "penShare": 0
+    },
+    "darwinlom": {
+      "name": "Darwin Lom",
+      "team": "guatemala",
+      "goals4y": 3,
+      "teamGames4y": 54,
+      "gpg": 0.056,
+      "penShare": 0
+    },
+    "jesusferreira": {
+      "name": "Jesus Ferreira",
+      "team": "usa",
+      "goals4y": 6,
+      "teamGames4y": 64,
+      "gpg": 0.094,
+      "penShare": 0.17
+    },
+    "danleyjeanjacques": {
+      "name": "Danley Jean Jacques",
+      "team": "haiti",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "matthiasphaeton": {
+      "name": "Matthias Phaeton",
+      "team": "guadeloupe",
+      "goals4y": 3,
+      "teamGames4y": 24,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "angefreddyplumain": {
+      "name": "Ange-Freddy Plumain",
+      "team": "guadeloupe",
+      "goals4y": 3,
+      "teamGames4y": 24,
+      "gpg": 0.125,
+      "penShare": 0.67
+    },
+    "jonrussell": {
+      "name": "Jon Russell",
+      "team": "jamaica",
+      "goals4y": 4,
+      "teamGames4y": 57,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "franciscocalvo": {
+      "name": "Francisco Calvo",
+      "team": "costarica",
+      "goals4y": 4,
+      "teamGames4y": 53,
+      "gpg": 0.075,
+      "penShare": 0.25
+    },
+    "rubiorubin": {
+      "name": "Rubio Rubin",
+      "team": "guatemala",
+      "goals4y": 6,
+      "teamGames4y": 54,
+      "gpg": 0.111,
+      "penShare": 0
+    },
+    "brayangil": {
+      "name": "Brayan Gil",
+      "team": "elsalvador",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "ismaeldiaz": {
+      "name": "Ismael Diaz",
+      "team": "panama",
+      "goals4y": 12,
+      "teamGames4y": 63,
+      "gpg": 0.19,
+      "penShare": 0.17
+    },
+    "pierreemilehjbjerg": {
+      "name": "Pierre-Emile Højbjerg",
+      "team": "denmark",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "fedorcernych": {
+      "name": "Fedor Cernych",
+      "team": "lithuania",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "isaacprice": {
+      "name": "Isaac Price",
+      "team": "northernireland",
+      "goals4y": 7,
+      "teamGames4y": 36,
+      "gpg": 0.194,
+      "penShare": 0
+    },
+    "rodrygo": {
+      "name": "Rodrygo",
+      "team": "brazil",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "raphinha": {
+      "name": "Raphinha",
+      "team": "brazil",
+      "goals4y": 6,
+      "teamGames4y": 49,
+      "gpg": 0.122,
+      "penShare": 0.5
+    },
+    "giorgichakvetadze": {
+      "name": "Giorgi Chakvetadze",
+      "team": "georgia",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "nicowilliams": {
+      "name": "Nico Williams",
+      "team": "spain",
+      "goals4y": 5,
+      "teamGames4y": 52,
+      "gpg": 0.096,
+      "penShare": 0
+    },
+    "lamineyamal": {
+      "name": "Lamine Yamal",
+      "team": "spain",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0.17
+    },
+    "nicolasdelacruz": {
+      "name": "Nicolas de la Cruz",
+      "team": "uruguay",
+      "goals4y": 3,
+      "teamGames4y": 47,
+      "gpg": 0.064,
+      "penShare": 0
+    },
+    "federicovalverde": {
+      "name": "Federico Valverde",
+      "team": "uruguay",
+      "goals4y": 3,
+      "teamGames4y": 47,
+      "gpg": 0.064,
+      "penShare": 0
+    },
+    "dejankulusevski": {
+      "name": "Dejan Kulusevski",
+      "team": "sweden",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "alexanderisak": {
+      "name": "Alexander Isak",
+      "team": "sweden",
+      "goals4y": 6,
+      "teamGames4y": 45,
+      "gpg": 0.133,
+      "penShare": 0
+    },
+    "stevanjovetic": {
+      "name": "Stevan Jovetic",
+      "team": "montenegro",
+      "goals4y": 4,
+      "teamGames4y": 38,
+      "gpg": 0.105,
+      "penShare": 0
+    },
+    "davidbrooks": {
+      "name": "David Brooks",
+      "team": "wales",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "davidhancko": {
+      "name": "David Hancko",
+      "team": "slovakia",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "ondrejduda": {
+      "name": "Ondrej Duda",
+      "team": "slovakia",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0.5
+    },
+    "leandrotrossard": {
+      "name": "Leandro Trossard",
+      "team": "belgium",
+      "goals4y": 6,
+      "teamGames4y": 48,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "charlesdeketelaere": {
+      "name": "Charles De Ketelaere",
+      "team": "belgium",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0
+    },
+    "buduzivzivadze": {
+      "name": "Budu Zivzivadze",
+      "team": "georgia",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "mikelmerino": {
+      "name": "Mikel Merino",
+      "team": "spain",
+      "goals4y": 9,
+      "teamGames4y": 52,
+      "gpg": 0.173,
+      "penShare": 0
+    },
+    "alexbaena": {
+      "name": "Alex Baena",
+      "team": "spain",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "markoarnautovic": {
+      "name": "Marko Arnautovic",
+      "team": "austria",
+      "goals4y": 15,
+      "teamGames4y": 45,
+      "gpg": 0.333,
+      "penShare": 0.33
+    },
+    "salomonrondon": {
+      "name": "Salomon Rondon",
+      "team": "venezuela",
+      "goals4y": 9,
+      "teamGames4y": 40,
+      "gpg": 0.225,
+      "penShare": 0.33
+    },
+    "milotrashica": {
+      "name": "Milot Rashica",
+      "team": "kosovo",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "nicolasotamendi": {
+      "name": "Nicolas Otamendi",
+      "team": "argentina",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "eduardbello": {
+      "name": "Eduard Bello",
+      "team": "venezuela",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "jamesrodriguez": {
+      "name": "James Rodriguez",
+      "team": "colombia",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0.5
+    },
+    "darwinnunez": {
+      "name": "Darwin Nunez",
+      "team": "uruguay",
+      "goals4y": 7,
+      "teamGames4y": 47,
+      "gpg": 0.149,
+      "penShare": 0.14
+    },
+    "sebastianszymanski": {
+      "name": "Sebastian Szymanski",
+      "team": "poland",
+      "goals4y": 5,
+      "teamGames4y": 44,
+      "gpg": 0.114,
+      "penShare": 0
+    },
+    "dimasdrajad": {
+      "name": "Dimas Drajad",
+      "team": "indonesia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "rizkyridho": {
+      "name": "Rizky Ridho",
+      "team": "indonesia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "ramadhansananta": {
+      "name": "Ramadhan Sananta",
+      "team": "indonesia",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0.25
+    },
+    "yuyaohsing": {
+      "name": "Yu Yao-hsing",
+      "team": "taiwan",
+      "goals4y": 3,
+      "teamGames4y": 23,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "konradlaimer": {
+      "name": "Konrad Laimer",
+      "team": "austria",
+      "goals4y": 5,
+      "teamGames4y": 45,
+      "gpg": 0.111,
+      "penShare": 0
+    },
+    "toralbayramov": {
+      "name": "Toral Bayramov",
+      "team": "azerbaijan",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0.33
+    },
+    "orrioskarsson": {
+      "name": "Orri Oskarsson",
+      "team": "iceland",
+      "goals4y": 7,
+      "teamGames4y": 45,
+      "gpg": 0.156,
+      "penShare": 0
+    },
+    "pijussirvys": {
+      "name": "Pijus Sirvys",
+      "team": "lithuania",
+      "goals4y": 4,
+      "teamGames4y": 38,
+      "gpg": 0.105,
+      "penShare": 0
+    },
+    "erikjanza": {
+      "name": "Erik Janza",
+      "team": "slovenia",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "heorhiysudakov": {
+      "name": "Heorhiy Sudakov",
+      "team": "ukraine",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "tomassoucek": {
+      "name": "Tomas Soucek",
+      "team": "czechrepublic",
+      "goals4y": 7,
+      "teamGames4y": 44,
+      "gpg": 0.159,
+      "penShare": 0.29
+    },
+    "ianishagi": {
+      "name": "Ianis Hagi",
+      "team": "romania",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0.25
+    },
+    "razvanmarin": {
+      "name": "Razvan Marin",
+      "team": "romania",
+      "goals4y": 10,
+      "teamGames4y": 42,
+      "gpg": 0.238,
+      "penShare": 0.7
+    },
+    "cenktosun": {
+      "name": "Cenk Tosun",
+      "team": "turkey",
+      "goals4y": 3,
+      "teamGames4y": 46,
+      "gpg": 0.065,
+      "penShare": 0
+    },
+    "mykhailomudryk": {
+      "name": "Mykhailo Mudryk",
+      "team": "ukraine",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "antoniosanabria": {
+      "name": "Antonio Sanabria",
+      "team": "paraguay",
+      "goals4y": 4,
+      "teamGames4y": 43,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "yoanewissa": {
+      "name": "Yoane Wissa",
+      "team": "drcongo",
+      "goals4y": 8,
+      "teamGames4y": 51,
+      "gpg": 0.157,
+      "penShare": 0.25
+    },
+    "theobongonda": {
+      "name": "Theo Bongonda",
+      "team": "drcongo",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0
+    },
+    "baghdadbounedjah": {
+      "name": "Baghdad Bounedjah",
+      "team": "algeria",
+      "goals4y": 6,
+      "teamGames4y": 58,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "harrysouttar": {
+      "name": "Harry Souttar",
+      "team": "australia",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0
+    },
+    "jamiemaclaren": {
+      "name": "Jamie Maclaren",
+      "team": "australia",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0
+    },
+    "stanleyratifo": {
+      "name": "Stanley Ratifo",
+      "team": "mozambique",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "musabarrow": {
+      "name": "Musa Barrow",
+      "team": "gambia",
+      "goals4y": 7,
+      "teamGames4y": 29,
+      "gpg": 0.241,
+      "penShare": 0.14
+    },
+    "sudiabdallah": {
+      "name": "Sudi Abdallah",
+      "team": "burundi",
+      "goals4y": 3,
+      "teamGames4y": 25,
+      "gpg": 0.12,
+      "penShare": 0
+    },
+    "luisdiaz": {
+      "name": "Luis Diaz",
+      "team": "colombia",
+      "goals4y": 10,
+      "teamGames4y": 49,
+      "gpg": 0.204,
+      "penShare": 0.1
+    },
+    "mikeloyarzabal": {
+      "name": "Mikel Oyarzabal",
+      "team": "spain",
+      "goals4y": 16,
+      "teamGames4y": 52,
+      "gpg": 0.308,
+      "penShare": 0.19
+    },
+    "mohamedsalah": {
+      "name": "Mohamed Salah",
+      "team": "egypt",
+      "goals4y": 14,
+      "teamGames4y": 54,
+      "gpg": 0.259,
+      "penShare": 0.29
+    },
+    "mostafamohamed": {
+      "name": "Mostafa Mohamed",
+      "team": "egypt",
+      "goals4y": 5,
+      "teamGames4y": 54,
+      "gpg": 0.093,
+      "penShare": 0.2
+    },
+    "trezeguet": {
+      "name": "Trezeguet",
+      "team": "egypt",
+      "goals4y": 7,
+      "teamGames4y": 54,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "philipplienhart": {
+      "name": "Philipp Lienhart",
+      "team": "austria",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "denisbouanga": {
+      "name": "Denis Bouanga",
+      "team": "gabon",
+      "goals4y": 9,
+      "teamGames4y": 33,
+      "gpg": 0.273,
+      "penShare": 0
+    },
+    "sardarazmoun": {
+      "name": "Sardar Azmoun",
+      "team": "iran",
+      "goals4y": 10,
+      "teamGames4y": 49,
+      "gpg": 0.204,
+      "penShare": 0
+    },
+    "alialhamadi": {
+      "name": "Ali Al-Hamadi",
+      "team": "iraq",
+      "goals4y": 3,
+      "teamGames4y": 56,
+      "gpg": 0.054,
+      "penShare": 0
+    },
+    "ayaseueda": {
+      "name": "Ayase Ueda",
+      "team": "japan",
+      "goals4y": 14,
+      "teamGames4y": 52,
+      "gpg": 0.269,
+      "penShare": 0.14
+    },
+    "daichikamada": {
+      "name": "Daichi Kamada",
+      "team": "japan",
+      "goals4y": 7,
+      "teamGames4y": 52,
+      "gpg": 0.135,
+      "penShare": 0
+    },
+    "kaimerk": {
+      "name": "Kai Merk",
+      "team": "kyrgyzstan",
+      "goals4y": 3,
+      "teamGames4y": 33,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "hassanalhaydos": {
+      "name": "Hassan Al-Haydos",
+      "team": "qatar",
+      "goals4y": 5,
+      "teamGames4y": 62,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "almoezali": {
+      "name": "Almoez Ali",
+      "team": "qatar",
+      "goals4y": 14,
+      "teamGames4y": 62,
+      "gpg": 0.226,
+      "penShare": 0.14
+    },
+    "sonheungmin": {
+      "name": "Son Heung-min",
+      "team": "southkorea",
+      "goals4y": 12,
+      "teamGames4y": 54,
+      "gpg": 0.222,
+      "penShare": 0.33
+    },
+    "leekangin": {
+      "name": "Lee Kang-in",
+      "team": "southkorea",
+      "goals4y": 8,
+      "teamGames4y": 54,
+      "gpg": 0.148,
+      "penShare": 0
+    },
+    "yazanalnaimat": {
+      "name": "Yazan Al-Naimat",
+      "team": "jordan",
+      "goals4y": 12,
+      "teamGames4y": 57,
+      "gpg": 0.211,
+      "penShare": 0.08
+    },
+    "wulei": {
+      "name": "Wu Lei",
+      "team": "china",
+      "goals4y": 5,
+      "teamGames4y": 36,
+      "gpg": 0.139,
+      "penShare": 0
+    },
+    "otabekshukurov": {
+      "name": "Otabek Shukurov",
+      "team": "uzbekistan",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0.33
+    },
+    "eldorshomurodov": {
+      "name": "Eldor Shomurodov",
+      "team": "uzbekistan",
+      "goals4y": 6,
+      "teamGames4y": 49,
+      "gpg": 0.122,
+      "penShare": 0
+    },
+    "alimabkhout": {
+      "name": "Ali Mabkhout",
+      "team": "unitedarabemirates",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0.67
+    },
+    "fabiolima": {
+      "name": "Fabio Lima",
+      "team": "unitedarabemirates",
+      "goals4y": 8,
+      "teamGames4y": 48,
+      "gpg": 0.167,
+      "penShare": 0.25
+    },
+    "mohamedmarhoon": {
+      "name": "Mohamed Marhoon",
+      "team": "bahrain",
+      "goals4y": 3,
+      "teamGames4y": 50,
+      "gpg": 0.06,
+      "penShare": 0
+    },
+    "mamabalde": {
+      "name": "Mama Balde",
+      "team": "guineabissau",
+      "goals4y": 3,
+      "teamGames4y": 31,
+      "gpg": 0.097,
+      "penShare": 0
+    },
+    "bertrandtraore": {
+      "name": "Bertrand Traore",
+      "team": "burkinafaso",
+      "goals4y": 6,
+      "teamGames4y": 49,
+      "gpg": 0.122,
+      "penShare": 0.67
+    },
+    "bryanmbeumo": {
+      "name": "Bryan Mbeumo",
+      "team": "cameroon",
+      "goals4y": 4,
+      "teamGames4y": 44,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "rafikisaid": {
+      "name": "Rafiki Said",
+      "team": "comoros",
+      "goals4y": 3,
+      "teamGames4y": 47,
+      "gpg": 0.064,
+      "penShare": 0
+    },
+    "myzianemaolida": {
+      "name": "Myziane Maolida",
+      "team": "comoros",
+      "goals4y": 4,
+      "teamGames4y": 47,
+      "gpg": 0.085,
+      "penShare": 0
+    },
+    "aguiboucamara": {
+      "name": "Aguibou Camara",
+      "team": "guinea",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "janiatanasov": {
+      "name": "Jani Atanasov",
+      "team": "northmacedonia",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "sebastienhaller": {
+      "name": "Sebastien Haller",
+      "team": "ivorycoast",
+      "goals4y": 4,
+      "teamGames4y": 52,
+      "gpg": 0.077,
+      "penShare": 0.25
+    },
+    "simonadingra": {
+      "name": "Simon Adingra",
+      "team": "ivorycoast",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "sekofofana": {
+      "name": "Seko Fofana",
+      "team": "ivorycoast",
+      "goals4y": 4,
+      "teamGames4y": 52,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "jeanphilippekrasso": {
+      "name": "Jean-Philippe Krasso",
+      "team": "ivorycoast",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0.33
+    },
+    "kamorydoumbia": {
+      "name": "Kamory Doumbia",
+      "team": "mali",
+      "goals4y": 8,
+      "teamGames4y": 40,
+      "gpg": 0.2,
+      "penShare": 0.13
+    },
+    "patsondaka": {
+      "name": "Patson Daka",
+      "team": "zambia",
+      "goals4y": 5,
+      "teamGames4y": 40,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "ousmanedembele": {
+      "name": "Ousmane Dembele",
+      "team": "france",
+      "goals4y": 7,
+      "teamGames4y": 54,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "papematarsarr": {
+      "name": "Pape Matar Sarr",
+      "team": "senegal",
+      "goals4y": 4,
+      "teamGames4y": 58,
+      "gpg": 0.069,
+      "penShare": 0
+    },
+    "sadiomane": {
+      "name": "Sadio Mane",
+      "team": "senegal",
+      "goals4y": 8,
+      "teamGames4y": 58,
+      "gpg": 0.138,
+      "penShare": 0.13
+    },
+    "laminecamara": {
+      "name": "Lamine Camara",
+      "team": "senegal",
+      "goals4y": 3,
+      "teamGames4y": 58,
+      "gpg": 0.052,
+      "penShare": 0
+    },
+    "stevemounie": {
+      "name": "Steve Mounie",
+      "team": "benin",
+      "goals4y": 5,
+      "teamGames4y": 36,
+      "gpg": 0.139,
+      "penShare": 0
+    },
+    "jimallevinah": {
+      "name": "Jim Allevinah",
+      "team": "gabon",
+      "goals4y": 3,
+      "teamGames4y": 33,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "tomaschory": {
+      "name": "Tomas Chory",
+      "team": "czechrepublic",
+      "goals4y": 4,
+      "teamGames4y": 44,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "michaelolunga": {
+      "name": "Michael Olunga",
+      "team": "kenya",
+      "goals4y": 6,
+      "teamGames4y": 31,
+      "gpg": 0.194,
+      "penShare": 0.33
+    },
+    "mohammaddaham": {
+      "name": "Mohammad Daham",
+      "team": "kuwait",
+      "goals4y": 4,
+      "teamGames4y": 47,
+      "gpg": 0.085,
+      "penShare": 0
+    },
+    "antebudimir": {
+      "name": "Ante Budimir",
+      "team": "croatia",
+      "goals4y": 5,
+      "teamGames4y": 51,
+      "gpg": 0.098,
+      "penShare": 0.2
+    },
+    "ryanmendes": {
+      "name": "Ryan Mendes",
+      "team": "capeverde",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0.33
+    },
+    "jamiromonteiro": {
+      "name": "Jamiro Monteiro",
+      "team": "capeverde",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "dangoouattara": {
+      "name": "Dango Ouattara",
+      "team": "burkinafaso",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0.25
+    },
+    "calvinstengs": {
+      "name": "Calvin Stengs",
+      "team": "netherlands",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "fotisioannidis": {
+      "name": "Fotis Ioannidis",
+      "team": "greece",
+      "goals4y": 5,
+      "teamGames4y": 38,
+      "gpg": 0.132,
+      "penShare": 0
+    },
+    "jongilgwan": {
+      "name": "Jong Il-gwan",
+      "team": "northkorea",
+      "goals4y": 5,
+      "teamGames4y": 18,
+      "gpg": 0.278,
+      "penShare": 0
+    },
+    "supachoksarachat": {
+      "name": "Supachok Sarachat",
+      "team": "thailand",
+      "goals4y": 3,
+      "teamGames4y": 56,
+      "gpg": 0.054,
+      "penShare": 0
+    },
+    "suphanatmueanta": {
+      "name": "Suphanat Mueanta",
+      "team": "thailand",
+      "goals4y": 4,
+      "teamGames4y": 56,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "rogersmato": {
+      "name": "Rogers Mato",
+      "team": "uganda",
+      "goals4y": 4,
+      "teamGames4y": 34,
+      "gpg": 0.118,
+      "penShare": 0
+    },
+    "takefusakubo": {
+      "name": "Takefusa Kubo",
+      "team": "japan",
+      "goals4y": 5,
+      "teamGames4y": 52,
+      "gpg": 0.096,
+      "penShare": 0
+    },
+    "ostonurunov": {
+      "name": "Oston Urunov",
+      "team": "uzbekistan",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0
+    },
+    "igorsergeev": {
+      "name": "Igor Sergeev",
+      "team": "uzbekistan",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "mohanadali": {
+      "name": "Mohanad Ali",
+      "team": "iraq",
+      "goals4y": 4,
+      "teamGames4y": 56,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "akramafif": {
+      "name": "Akram Afif",
+      "team": "qatar",
+      "goals4y": 12,
+      "teamGames4y": 62,
+      "gpg": 0.194,
+      "penShare": 0.42
+    },
+    "jacksonirvine": {
+      "name": "Jackson Irvine",
+      "team": "australia",
+      "goals4y": 5,
+      "teamGames4y": 48,
+      "gpg": 0.104,
+      "penShare": 0
+    },
+    "alexanderdjiku": {
+      "name": "Alexander Djiku",
+      "team": "ghana",
+      "goals4y": 3,
+      "teamGames4y": 46,
+      "gpg": 0.065,
+      "penShare": 0
+    },
+    "mehdighayedi": {
+      "name": "Mehdi Ghayedi",
+      "team": "iran",
+      "goals4y": 5,
+      "teamGames4y": 49,
+      "gpg": 0.102,
+      "penShare": 0
+    },
+    "tamerseyam": {
+      "name": "Tamer Seyam",
+      "team": "palestine",
+      "goals4y": 3,
+      "teamGames4y": 36,
+      "gpg": 0.083,
+      "penShare": 0
+    },
+    "takumiminamino": {
+      "name": "Takumi Minamino",
+      "team": "japan",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0
+    },
+    "phamtuanhai": {
+      "name": "Pham Tuan Hai",
+      "team": "vietnam",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "keitonakamura": {
+      "name": "Keito Nakamura",
+      "team": "japan",
+      "goals4y": 4,
+      "teamGames4y": 52,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "ibansalvador": {
+      "name": "Iban Salvador",
+      "team": "equatorialguinea",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "victorosimhen": {
+      "name": "Victor Osimhen",
+      "team": "nigeria",
+      "goals4y": 11,
+      "teamGames4y": 51,
+      "gpg": 0.216,
+      "penShare": 0
+    },
+    "sultanadil": {
+      "name": "Sultan Adil",
+      "team": "unitedarabemirates",
+      "goals4y": 7,
+      "teamGames4y": 48,
+      "gpg": 0.146,
+      "penShare": 0.14
+    },
+    "yahyaalghassani": {
+      "name": "Yahya Al-Ghassani",
+      "team": "unitedarabemirates",
+      "goals4y": 4,
+      "teamGames4y": 48,
+      "gpg": 0.083,
+      "penShare": 0.25
+    },
+    "mabululu": {
+      "name": "Mabululu",
+      "team": "angola",
+      "goals4y": 4,
+      "teamGames4y": 46,
+      "gpg": 0.087,
+      "penShare": 0.25
+    },
+    "mohamedbayo": {
+      "name": "Mohamed Bayo",
+      "team": "guinea",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0.33
+    },
+    "marselinoferdinan": {
+      "name": "Marselino Ferdinan",
+      "team": "indonesia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "aymenhussein": {
+      "name": "Aymen Hussein",
+      "team": "iraq",
+      "goals4y": 16,
+      "teamGames4y": 56,
+      "gpg": 0.286,
+      "penShare": 0.19
+    },
+    "musaaltaamari": {
+      "name": "Musa Al-Taamari",
+      "team": "jordan",
+      "goals4y": 11,
+      "teamGames4y": 57,
+      "gpg": 0.193,
+      "penShare": 0.09
+    },
+    "papegueye": {
+      "name": "Pape Gueye",
+      "team": "senegal",
+      "goals4y": 6,
+      "teamGames4y": 58,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "lassinesinayoko": {
+      "name": "Lassine Sinayoko",
+      "team": "mali",
+      "goals4y": 8,
+      "teamGames4y": 40,
+      "gpg": 0.2,
+      "penShare": 0.25
+    },
+    "azzedineounahi": {
+      "name": "Azzedine Ounahi",
+      "team": "morocco",
+      "goals4y": 5,
+      "teamGames4y": 66,
+      "gpg": 0.076,
+      "penShare": 0
+    },
+    "omarmarmoush": {
+      "name": "Omar Marmoush",
+      "team": "egypt",
+      "goals4y": 4,
+      "teamGames4y": 54,
+      "gpg": 0.074,
+      "penShare": 0.25
+    },
+    "emilionsue": {
+      "name": "Emilio Nsue",
+      "team": "equatorialguinea",
+      "goals4y": 7,
+      "teamGames4y": 39,
+      "gpg": 0.179,
+      "penShare": 0
+    },
+    "abbosbekfayzullaev": {
+      "name": "Abbosbek Fayzullaev",
+      "team": "uzbekistan",
+      "goals4y": 7,
+      "teamGames4y": 49,
+      "gpg": 0.143,
+      "penShare": 0
+    },
+    "williamtroostekong": {
+      "name": "William Troost-Ekong",
+      "team": "nigeria",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0.75
+    },
+    "habibdiallo": {
+      "name": "Habib Diallo",
+      "team": "senegal",
+      "goals4y": 5,
+      "teamGames4y": 58,
+      "gpg": 0.086,
+      "penShare": 0
+    },
+    "gelsondala": {
+      "name": "Gelson Dala",
+      "team": "angola",
+      "goals4y": 6,
+      "teamGames4y": 46,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "thembazwane": {
+      "name": "Themba Zwane",
+      "team": "southafrica",
+      "goals4y": 3,
+      "teamGames4y": 60,
+      "gpg": 0.05,
+      "penShare": 0
+    },
+    "jordanayew": {
+      "name": "Jordan Ayew",
+      "team": "ghana",
+      "goals4y": 9,
+      "teamGames4y": 46,
+      "gpg": 0.196,
+      "penShare": 0.44
+    },
+    "genycatamo": {
+      "name": "Geny Catamo",
+      "team": "mozambique",
+      "goals4y": 6,
+      "teamGames4y": 43,
+      "gpg": 0.14,
+      "penShare": 0.5
+    },
+    "martinboyle": {
+      "name": "Martin Boyle",
+      "team": "australia",
+      "goals4y": 4,
+      "teamGames4y": 48,
+      "gpg": 0.083,
+      "penShare": 0.5
+    },
+    "azizbekturgunboev": {
+      "name": "Azizbek Turgunboev",
+      "team": "uzbekistan",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "ilimanndiaye": {
+      "name": "Iliman Ndiaye",
+      "team": "senegal",
+      "goals4y": 4,
+      "teamGames4y": 58,
+      "gpg": 0.069,
+      "penShare": 0
+    },
+    "odaydabbagh": {
+      "name": "Oday Dabbagh",
+      "team": "palestine",
+      "goals4y": 6,
+      "teamGames4y": 36,
+      "gpg": 0.167,
+      "penShare": 0
+    },
+    "zaidqunbar": {
+      "name": "Zaid Qunbar",
+      "team": "palestine",
+      "goals4y": 3,
+      "teamGames4y": 36,
+      "gpg": 0.083,
+      "penShare": 0
+    },
+    "omarkhribin": {
+      "name": "Omar Khribin",
+      "team": "syria",
+      "goals4y": 5,
+      "teamGames4y": 43,
+      "gpg": 0.116,
+      "penShare": 0.4
+    },
+    "muhsenalghassani": {
+      "name": "Muhsen Al-Ghassani",
+      "team": "oman",
+      "goals4y": 4,
+      "teamGames4y": 55,
+      "gpg": 0.073,
+      "penShare": 0
+    },
+    "joelkojo": {
+      "name": "Joel Kojo",
+      "team": "kyrgyzstan",
+      "goals4y": 7,
+      "teamGames4y": 33,
+      "gpg": 0.212,
+      "penShare": 0.14
+    },
+    "ademolalookman": {
+      "name": "Ademola Lookman",
+      "team": "nigeria",
+      "goals4y": 6,
+      "teamGames4y": 51,
+      "gpg": 0.118,
+      "penShare": 0
+    },
+    "meschakelia": {
+      "name": "Meschak Elia",
+      "team": "drcongo",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "franckkessie": {
+      "name": "Franck Kessie",
+      "team": "ivorycoast",
+      "goals4y": 5,
+      "teamGames4y": 52,
+      "gpg": 0.096,
+      "penShare": 0.2
+    },
+    "evidencemakgopa": {
+      "name": "Evidence Makgopa",
+      "team": "southafrica",
+      "goals4y": 3,
+      "teamGames4y": 60,
+      "gpg": 0.05,
+      "penShare": 0
+    },
+    "tebohomokoena": {
+      "name": "Teboho Mokoena",
+      "team": "southafrica",
+      "goals4y": 3,
+      "teamGames4y": 60,
+      "gpg": 0.05,
+      "penShare": 0.67
+    },
+    "hidemasamorita": {
+      "name": "Hidemasa Morita",
+      "team": "japan",
+      "goals4y": 4,
+      "teamGames4y": 52,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "mohammadmohebi": {
+      "name": "Mohammad Mohebi",
+      "team": "iran",
+      "goals4y": 7,
+      "teamGames4y": 49,
+      "gpg": 0.143,
+      "penShare": 0
+    },
+    "romanyaremchuk": {
+      "name": "Roman Yaremchuk",
+      "team": "ukraine",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "armandaskucys": {
+      "name": "Armandas Kucys",
+      "team": "lithuania",
+      "goals4y": 7,
+      "teamGames4y": 38,
+      "gpg": 0.184,
+      "penShare": 0.14
+    },
+    "anastasiosbakasetas": {
+      "name": "Anastasios Bakasetas",
+      "team": "greece",
+      "goals4y": 5,
+      "teamGames4y": 38,
+      "gpg": 0.132,
+      "penShare": 0.2
+    },
+    "albertgumundsson": {
+      "name": "Albert Guðmundsson",
+      "team": "iceland",
+      "goals4y": 8,
+      "teamGames4y": 45,
+      "gpg": 0.178,
+      "penShare": 0
+    },
+    "issamalsabhi": {
+      "name": "Issam Al-Sabhi",
+      "team": "oman",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0.33
+    },
+    "aliolwan": {
+      "name": "Ali Olwan",
+      "team": "jordan",
+      "goals4y": 10,
+      "teamGames4y": 57,
+      "gpg": 0.175,
+      "penShare": 0.3
+    },
+    "ahmedalrawi": {
+      "name": "Ahmed Al-Rawi",
+      "team": "qatar",
+      "goals4y": 3,
+      "teamGames4y": 62,
+      "gpg": 0.048,
+      "penShare": 0
+    },
+    "alisaleh": {
+      "name": "Ali Saleh",
+      "team": "unitedarabemirates",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0.33
+    },
+    "brennanjohnson": {
+      "name": "Brennan Johnson",
+      "team": "wales",
+      "goals4y": 5,
+      "teamGames4y": 39,
+      "gpg": 0.128,
+      "penShare": 0
+    },
+    "cylelarin": {
+      "name": "Cyle Larin",
+      "team": "canada",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0
+    },
+    "orlandogalo": {
+      "name": "Orlando Galo",
+      "team": "costarica",
+      "goals4y": 4,
+      "teamGames4y": 53,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "warrenmadrigal": {
+      "name": "Warren Madrigal",
+      "team": "costarica",
+      "goals4y": 4,
+      "teamGames4y": 53,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "kusiniyengi": {
+      "name": "Kusini Yengi",
+      "team": "australia",
+      "goals4y": 6,
+      "teamGames4y": 48,
+      "gpg": 0.125,
+      "penShare": 0.17
+    },
+    "firasalburaikan": {
+      "name": "Firas Al-Buraikan",
+      "team": "saudiarabia",
+      "goals4y": 6,
+      "teamGames4y": 71,
+      "gpg": 0.085,
+      "penShare": 0.17
+    },
+    "leejaesung": {
+      "name": "Lee Jae-sung",
+      "team": "southkorea",
+      "goals4y": 5,
+      "teamGames4y": 54,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "rangelojanga": {
+      "name": "Rangelo Janga",
+      "team": "curacao",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0.33
+    },
+    "gervanekastaneer": {
+      "name": "Gervane Kastaneer",
+      "team": "curacao",
+      "goals4y": 5,
+      "teamGames4y": 39,
+      "gpg": 0.128,
+      "penShare": 0
+    },
+    "jaimemoreno": {
+      "name": "Jaime Moreno",
+      "team": "nicaragua",
+      "goals4y": 4,
+      "teamGames4y": 39,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "oalexanderson": {
+      "name": "Oalex Anderson",
+      "team": "saintvincentandthegrenadines",
+      "goals4y": 5,
+      "teamGames4y": 33,
+      "gpg": 0.152,
+      "penShare": 0
+    },
+    "mohamedalibenromdhane": {
+      "name": "Mohamed Ali Ben Romdhane",
+      "team": "tunisia",
+      "goals4y": 4,
+      "teamGames4y": 55,
+      "gpg": 0.073,
+      "penShare": 0.5
+    },
+    "zhangyuning": {
+      "name": "Zhang Yuning",
+      "team": "china",
+      "goals4y": 3,
+      "teamGames4y": 36,
+      "gpg": 0.083,
+      "penShare": 0
+    },
+    "josimaralcocer": {
+      "name": "Josimar Alcocer",
+      "team": "costarica",
+      "goals4y": 4,
+      "teamGames4y": 53,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "lassinatraore": {
+      "name": "Lassina Traore",
+      "team": "burkinafaso",
+      "goals4y": 6,
+      "teamGames4y": 49,
+      "gpg": 0.122,
+      "penShare": 0.17
+    },
+    "caniggiaelva": {
+      "name": "Caniggia Elva",
+      "team": "saintlucia",
+      "goals4y": 3,
+      "teamGames4y": 26,
+      "gpg": 0.115,
+      "penShare": 0.67
+    },
+    "anthonylozano": {
+      "name": "Anthony Lozano",
+      "team": "honduras",
+      "goals4y": 3,
+      "teamGames4y": 47,
+      "gpg": 0.064,
+      "penShare": 0
+    },
+    "shamarnicholson": {
+      "name": "Shamar Nicholson",
+      "team": "jamaica",
+      "goals4y": 5,
+      "teamGames4y": 57,
+      "gpg": 0.088,
+      "penShare": 0.2
+    },
+    "kokiogawa": {
+      "name": "Koki Ogawa",
+      "team": "japan",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0
+    },
+    "haribabdalla": {
+      "name": "Harib Abdalla",
+      "team": "unitedarabemirates",
+      "goals4y": 6,
+      "teamGames4y": 48,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "musabaljuwayr": {
+      "name": "Musab Al-Juwayr",
+      "team": "saudiarabia",
+      "goals4y": 3,
+      "teamGames4y": 71,
+      "gpg": 0.042,
+      "penShare": 0
+    },
+    "joseluisrodriguez": {
+      "name": "Jose Luis Rodriguez",
+      "team": "panama",
+      "goals4y": 3,
+      "teamGames4y": 63,
+      "gpg": 0.048,
+      "penShare": 0
+    },
+    "fistonmayele": {
+      "name": "Fiston Mayele",
+      "team": "drcongo",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "abdulrahmanalmushaifri": {
+      "name": "Abdulrahman Al-Mushaifri",
+      "team": "oman",
+      "goals4y": 5,
+      "teamGames4y": 55,
+      "gpg": 0.091,
+      "penShare": 0
+    },
+    "rayanraveloson": {
+      "name": "Rayan Raveloson",
+      "team": "madagascar",
+      "goals4y": 5,
+      "teamGames4y": 35,
+      "gpg": 0.143,
+      "penShare": 0
+    },
+    "juninhobacuna": {
+      "name": "Juninho Bacuna",
+      "team": "curacao",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "nathanieljames": {
+      "name": "Nathaniel James",
+      "team": "trinidadandtobago",
+      "goals4y": 3,
+      "teamGames4y": 50,
+      "gpg": 0.06,
+      "penShare": 0
+    },
+    "bancyhernandez": {
+      "name": "Bancy Hernandez",
+      "team": "nicaragua",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "yankubaminteh": {
+      "name": "Yankuba Minteh",
+      "team": "gambia",
+      "goals4y": 5,
+      "teamGames4y": 29,
+      "gpg": 0.172,
+      "penShare": 0
+    },
+    "adamasidibeh": {
+      "name": "Adama Sidibeh",
+      "team": "gambia",
+      "goals4y": 5,
+      "teamGames4y": 29,
+      "gpg": 0.172,
+      "penShare": 0
+    },
+    "manfredugalde": {
+      "name": "Manfred Ugalde",
+      "team": "costarica",
+      "goals4y": 6,
+      "teamGames4y": 53,
+      "gpg": 0.113,
+      "penShare": 0.5
+    },
+    "raphaelonyedika": {
+      "name": "Raphael Onyedika",
+      "team": "nigeria",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "louismafouta": {
+      "name": "Louis Mafouta",
+      "team": "centralafricanrepublic",
+      "goals4y": 3,
+      "teamGames4y": 25,
+      "gpg": 0.12,
+      "penShare": 0
+    },
+    "dornyromero": {
+      "name": "Dorny Romero",
+      "team": "dominicanrepublic",
+      "goals4y": 4,
+      "teamGames4y": 35,
+      "gpg": 0.114,
+      "penShare": 0.25
+    },
+    "pierreemerickaubameyang": {
+      "name": "Pierre-Emerick Aubameyang",
+      "team": "gabon",
+      "goals4y": 8,
+      "teamGames4y": 33,
+      "gpg": 0.242,
+      "penShare": 0.13
+    },
+    "hassanmaatouk": {
+      "name": "Hassan Maatouk",
+      "team": "lebanon",
+      "goals4y": 3,
+      "teamGames4y": 35,
+      "gpg": 0.086,
+      "penShare": 0.33
+    },
+    "ayoubelkaabi": {
+      "name": "Ayoub El Kaabi",
+      "team": "morocco",
+      "goals4y": 7,
+      "teamGames4y": 66,
+      "gpg": 0.106,
+      "penShare": 0
+    },
+    "soufianerahimi": {
+      "name": "Soufiane Rahimi",
+      "team": "morocco",
+      "goals4y": 3,
+      "teamGames4y": 66,
+      "gpg": 0.045,
+      "penShare": 0
+    },
+    "rijoguk": {
+      "name": "Ri Jo-guk",
+      "team": "northkorea",
+      "goals4y": 4,
+      "teamGames4y": 18,
+      "gpg": 0.222,
+      "penShare": 0.25
+    },
+    "bienvenuekanakimana": {
+      "name": "Bienvenue Kanakimana",
+      "team": "burundi",
+      "goals4y": 3,
+      "teamGames4y": 25,
+      "gpg": 0.12,
+      "penShare": 0
+    },
+    "mahdiabduljabbar": {
+      "name": "Mahdi Abduljabbar",
+      "team": "bahrain",
+      "goals4y": 3,
+      "teamGames4y": 50,
+      "gpg": 0.06,
+      "penShare": 0
+    },
+    "florianwirtz": {
+      "name": "Florian Wirtz",
+      "team": "germany",
+      "goals4y": 7,
+      "teamGames4y": 50,
+      "gpg": 0.14,
+      "penShare": 0
+    },
+    "jamalmusiala": {
+      "name": "Jamal Musiala",
+      "team": "germany",
+      "goals4y": 7,
+      "teamGames4y": 50,
+      "gpg": 0.14,
+      "penShare": 0
+    },
+    "fabianruiz": {
+      "name": "Fabian Ruiz",
+      "team": "spain",
+      "goals4y": 4,
+      "teamGames4y": 52,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "thomasdunn": {
+      "name": "Thomas Dunn",
+      "team": "fiji",
+      "goals4y": 4,
+      "teamGames4y": 31,
+      "gpg": 0.129,
+      "penShare": 0
+    },
+    "roykrishna": {
+      "name": "Roy Krishna",
+      "team": "fiji",
+      "goals4y": 8,
+      "teamGames4y": 31,
+      "gpg": 0.258,
+      "penShare": 0.63
+    },
+    "tommysemmy": {
+      "name": "Tommy Semmy",
+      "team": "papuanewguinea",
+      "goals4y": 4,
+      "teamGames4y": 25,
+      "gpg": 0.16,
+      "penShare": 0
+    },
+    "teaonuitehau": {
+      "name": "Teaonui Tehau",
+      "team": "tahiti",
+      "goals4y": 4,
+      "teamGames4y": 17,
+      "gpg": 0.235,
+      "penShare": 0
+    },
+    "ivanschranz": {
+      "name": "Ivan Schranz",
+      "team": "slovakia",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "denisdragus": {
+      "name": "Denis Dragus",
+      "team": "romania",
+      "goals4y": 5,
+      "teamGames4y": 42,
+      "gpg": 0.119,
+      "penShare": 0
+    },
+    "benwaine": {
+      "name": "Ben Waine",
+      "team": "newzealand",
+      "goals4y": 6,
+      "teamGames4y": 38,
+      "gpg": 0.158,
+      "penShare": 0.17
+    },
+    "kostabarbarouses": {
+      "name": "Kosta Barbarouses",
+      "team": "newzealand",
+      "goals4y": 5,
+      "teamGames4y": 38,
+      "gpg": 0.132,
+      "penShare": 0
+    },
+    "franciscoconceicao": {
+      "name": "Francisco Conceicao",
+      "team": "portugal",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "lautaromartinez": {
+      "name": "Lautaro Martinez",
+      "team": "argentina",
+      "goals4y": 9,
+      "teamGames4y": 53,
+      "gpg": 0.17,
+      "penShare": 0.11
+    },
+    "elijahjust": {
+      "name": "Elijah Just",
+      "team": "newzealand",
+      "goals4y": 8,
+      "teamGames4y": 38,
+      "gpg": 0.211,
+      "penShare": 0
+    },
+    "youritielemans": {
+      "name": "Youri Tielemans",
+      "team": "belgium",
+      "goals4y": 6,
+      "teamGames4y": 48,
+      "gpg": 0.125,
+      "penShare": 0.17
+    },
+    "danndoye": {
+      "name": "Dan Ndoye",
+      "team": "switzerland",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "folarinbalogun": {
+      "name": "Folarin Balogun",
+      "team": "usa",
+      "goals4y": 5,
+      "teamGames4y": 64,
+      "gpg": 0.078,
+      "penShare": 0
+    },
+    "maximilianoaraujo": {
+      "name": "Maximiliano Araujo",
+      "team": "uruguay",
+      "goals4y": 4,
+      "teamGames4y": 47,
+      "gpg": 0.085,
+      "penShare": 0
+    },
+    "danielmunoz": {
+      "name": "Daniel Munoz",
+      "team": "colombia",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0
+    },
+    "julioenciso": {
+      "name": "Julio Enciso",
+      "team": "paraguay",
+      "goals4y": 5,
+      "teamGames4y": 43,
+      "gpg": 0.116,
+      "penShare": 0.2
+    },
+    "romanoschmid": {
+      "name": "Romano Schmid",
+      "team": "austria",
+      "goals4y": 4,
+      "teamGames4y": 45,
+      "gpg": 0.089,
+      "penShare": 0
+    },
+    "jonathandavid": {
+      "name": "Jonathan David",
+      "team": "canada",
+      "goals4y": 7,
+      "teamGames4y": 55,
+      "gpg": 0.127,
+      "penShare": 0.14
+    },
+    "hakancalhanoglu": {
+      "name": "Hakan Calhanoglu",
+      "team": "turkey",
+      "goals4y": 4,
+      "teamGames4y": 46,
+      "gpg": 0.087,
+      "penShare": 0.75
+    },
+    "jhoncordoba": {
+      "name": "Jhon Cordoba",
+      "team": "colombia",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0
+    },
+    "omaralderete": {
+      "name": "Omar Alderete",
+      "team": "paraguay",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "eduardoguerrero": {
+      "name": "Eduardo Guerrero",
+      "team": "panama",
+      "goals4y": 3,
+      "teamGames4y": 63,
+      "gpg": 0.048,
+      "penShare": 0.33
+    },
+    "merihdemiral": {
+      "name": "Merih Demiral",
+      "team": "turkey",
+      "goals4y": 4,
+      "teamGames4y": 46,
+      "gpg": 0.087,
+      "penShare": 0
+    },
+    "xavisimons": {
+      "name": "Xavi Simons",
+      "team": "netherlands",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0
+    },
+    "luissuarez": {
+      "name": "Luis Suarez",
+      "team": "uruguay",
+      "goals4y": 5,
+      "teamGames4y": 47,
+      "gpg": 0.106,
+      "penShare": 0
+    },
+    "miguelterceros": {
+      "name": "Miguel Terceros",
+      "team": "bolivia",
+      "goals4y": 8,
+      "teamGames4y": 44,
+      "gpg": 0.182,
+      "penShare": 0.5
+    },
+    "patrickdorgu": {
+      "name": "Patrick Dorgu",
+      "team": "denmark",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "yousefnasser": {
+      "name": "Yousef Nasser",
+      "team": "kuwait",
+      "goals4y": 5,
+      "teamGames4y": 47,
+      "gpg": 0.106,
+      "penShare": 0.4
+    },
+    "nicolazalewski": {
+      "name": "Nicola Zalewski",
+      "team": "poland",
+      "goals4y": 3,
+      "teamGames4y": 44,
+      "gpg": 0.068,
+      "penShare": 0.33
+    },
+    "bradleybarcola": {
+      "name": "Bradley Barcola",
+      "team": "france",
+      "goals4y": 5,
+      "teamGames4y": 54,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "giorgikochorashvili": {
+      "name": "Giorgi Kochorashvili",
+      "team": "georgia",
+      "goals4y": 4,
+      "teamGames4y": 40,
+      "gpg": 0.1,
+      "penShare": 0
+    },
+    "tijjanireijnders": {
+      "name": "Tijjani Reijnders",
+      "team": "netherlands",
+      "goals4y": 5,
+      "teamGames4y": 51,
+      "gpg": 0.098,
+      "penShare": 0
+    },
+    "davidstrelec": {
+      "name": "David Strelec",
+      "team": "slovakia",
+      "goals4y": 6,
+      "teamGames4y": 42,
+      "gpg": 0.143,
+      "penShare": 0
+    },
+    "moisekean": {
+      "name": "Moise Kean",
+      "team": "italy",
+      "goals4y": 9,
+      "teamGames4y": 42,
+      "gpg": 0.214,
+      "penShare": 0
+    },
+    "mohammadabufani": {
+      "name": "Mohammad Abu Fani",
+      "team": "israel",
+      "goals4y": 4,
+      "teamGames4y": 35,
+      "gpg": 0.114,
+      "penShare": 0.25
+    },
+    "victorpalsson": {
+      "name": "Victor Palsson",
+      "team": "iceland",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "eduardovargas": {
+      "name": "Eduardo Vargas",
+      "team": "chile",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "pavelsulc": {
+      "name": "Pavel Sulc",
+      "team": "czechrepublic",
+      "goals4y": 5,
+      "teamGames4y": 44,
+      "gpg": 0.114,
+      "penShare": 0
+    },
+    "denizundav": {
+      "name": "Deniz Undav",
+      "team": "germany",
+      "goals4y": 6,
+      "teamGames4y": 50,
+      "gpg": 0.12,
+      "penShare": 0
+    },
+    "joshuakimmich": {
+      "name": "Joshua Kimmich",
+      "team": "germany",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0.5
+    },
+    "bojanmiovski": {
+      "name": "Bojan Miovski",
+      "team": "northmacedonia",
+      "goals4y": 6,
+      "teamGames4y": 39,
+      "gpg": 0.154,
+      "penShare": 0
+    },
+    "wessamabouali": {
+      "name": "Wessam Abou Ali",
+      "team": "palestine",
+      "goals4y": 4,
+      "teamGames4y": 36,
+      "gpg": 0.111,
+      "penShare": 0.5
+    },
+    "christostzolis": {
+      "name": "Christos Tzolis",
+      "team": "greece",
+      "goals4y": 6,
+      "teamGames4y": 38,
+      "gpg": 0.158,
+      "penShare": 0
+    },
+    "nishanvelupillay": {
+      "name": "Nishan Velupillay",
+      "team": "australia",
+      "goals4y": 3,
+      "teamGames4y": 48,
+      "gpg": 0.063,
+      "penShare": 0
+    },
+    "vangelispavlidis": {
+      "name": "Vangelis Pavlidis",
+      "team": "greece",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "andreacambiaso": {
+      "name": "Andrea Cambiaso",
+      "team": "italy",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "maximdecuyper": {
+      "name": "Maxim De Cuyper",
+      "team": "belgium",
+      "goals4y": 4,
+      "teamGames4y": 48,
+      "gpg": 0.083,
+      "penShare": 0
+    },
+    "ohhyeongyu": {
+      "name": "Oh Hyeon-gyu",
+      "team": "southkorea",
+      "goals4y": 5,
+      "teamGames4y": 54,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "josephathale": {
+      "name": "Joseph Athale",
+      "team": "newcaledonia",
+      "goals4y": 3,
+      "teamGames4y": 18,
+      "gpg": 0.167,
+      "penShare": 1
+    },
+    "georgesgopefenepej": {
+      "name": "Georges Gope-Fenepej",
+      "team": "newcaledonia",
+      "goals4y": 3,
+      "teamGames4y": 18,
+      "gpg": 0.167,
+      "penShare": 0
+    },
+    "chriswood": {
+      "name": "Chris Wood",
+      "team": "newzealand",
+      "goals4y": 9,
+      "teamGames4y": 38,
+      "gpg": 0.237,
+      "penShare": 0
+    },
+    "yasinayari": {
+      "name": "Yasin Ayari",
+      "team": "sweden",
+      "goals4y": 4,
+      "teamGames4y": 45,
+      "gpg": 0.089,
+      "penShare": 0
+    },
+    "martinzubimendi": {
+      "name": "Martin Zubimendi",
+      "team": "spain",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "stefanposch": {
+      "name": "Stefan Posch",
+      "team": "austria",
+      "goals4y": 3,
+      "teamGames4y": 45,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "hanussrensen": {
+      "name": "Hanus Sørensen",
+      "team": "faroeislands",
+      "goals4y": 5,
+      "teamGames4y": 37,
+      "gpg": 0.135,
+      "penShare": 0
+    },
+    "thiagoalmada": {
+      "name": "Thiago Almada",
+      "team": "argentina",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "gustavisaksen": {
+      "name": "Gustav Isaksen",
+      "team": "denmark",
+      "goals4y": 5,
+      "teamGames4y": 43,
+      "gpg": 0.116,
+      "penShare": 0
+    },
+    "sandrotonali": {
+      "name": "Sandro Tonali",
+      "team": "italy",
+      "goals4y": 4,
+      "teamGames4y": 42,
+      "gpg": 0.095,
+      "penShare": 0
+    },
+    "gonzaloplata": {
+      "name": "Gonzalo Plata",
+      "team": "ecuador",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "antonionusa": {
+      "name": "Antonio Nusa",
+      "team": "norway",
+      "goals4y": 6,
+      "teamGames4y": 43,
+      "gpg": 0.14,
+      "penShare": 0
+    },
+    "gvidasgineitis": {
+      "name": "Gvidas Gineitis",
+      "team": "lithuania",
+      "goals4y": 4,
+      "teamGames4y": 38,
+      "gpg": 0.105,
+      "penShare": 0.25
+    },
+    "rodrigoaguirre": {
+      "name": "Rodrigo Aguirre",
+      "team": "uruguay",
+      "goals4y": 3,
+      "teamGames4y": 47,
+      "gpg": 0.064,
+      "penShare": 0
+    },
+    "timkleindienst": {
+      "name": "Tim Kleindienst",
+      "team": "germany",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "leroysane": {
+      "name": "Leroy Sane",
+      "team": "germany",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "brianbrobbey": {
+      "name": "Brian Brobbey",
+      "team": "netherlands",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0
+    },
+    "kenanyldz": {
+      "name": "Kenan Yıldız",
+      "team": "turkey",
+      "goals4y": 4,
+      "teamGames4y": 46,
+      "gpg": 0.087,
+      "penShare": 0
+    },
+    "hazemmastouri": {
+      "name": "Hazem Mastouri",
+      "team": "tunisia",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0
+    },
+    "oleromeny": {
+      "name": "Ole Romeny",
+      "team": "indonesia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0.33
+    },
+    "dorgelesnene": {
+      "name": "Dorgeles Nene",
+      "team": "mali",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "oleksiyhutsulyak": {
+      "name": "Oleksiy Hutsulyak",
+      "team": "ukraine",
+      "goals4y": 4,
+      "teamGames4y": 40,
+      "gpg": 0.1,
+      "penShare": 0
+    },
+    "evannguessand": {
+      "name": "Evann Guessand",
+      "team": "ivorycoast",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "ismaelsaibari": {
+      "name": "Ismael Saibari",
+      "team": "morocco",
+      "goals4y": 7,
+      "teamGames4y": 66,
+      "gpg": 0.106,
+      "penShare": 0
+    },
+    "theloaasgaard": {
+      "name": "Thelo Aasgaard",
+      "team": "norway",
+      "goals4y": 6,
+      "teamGames4y": 43,
+      "gpg": 0.14,
+      "penShare": 0.17
+    },
+    "michaelolise": {
+      "name": "Michael Olise",
+      "team": "france",
+      "goals4y": 4,
+      "teamGames4y": 54,
+      "gpg": 0.074,
+      "penShare": 0
+    },
+    "konstantinoskaretsas": {
+      "name": "Konstantinos Karetsas",
+      "team": "greece",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "reymanaj": {
+      "name": "Rey Manaj",
+      "team": "albania",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "eberechieze": {
+      "name": "Eberechi Eze",
+      "team": "england",
+      "goals4y": 3,
+      "teamGames4y": 53,
+      "gpg": 0.057,
+      "penShare": 0
+    },
+    "bereketdesta": {
+      "name": "Bereket Desta",
+      "team": "ethiopia",
+      "goals4y": 3,
+      "teamGames4y": 27,
+      "gpg": 0.111,
+      "penShare": 0.33
+    },
+    "abubekernassir": {
+      "name": "Abubeker Nassir",
+      "team": "ethiopia",
+      "goals4y": 3,
+      "teamGames4y": 27,
+      "gpg": 0.111,
+      "penShare": 0.33
+    },
+    "thomaspartey": {
+      "name": "Thomas Partey",
+      "team": "ghana",
+      "goals4y": 3,
+      "teamGames4y": 46,
+      "gpg": 0.065,
+      "penShare": 0
+    },
+    "petershalulile": {
+      "name": "Peter Shalulile",
+      "team": "namibia",
+      "goals4y": 4,
+      "teamGames4y": 35,
+      "gpg": 0.114,
+      "penShare": 0
+    },
+    "eliasachouri": {
+      "name": "Elias Achouri",
+      "team": "tunisia",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0.33
+    },
+    "mohamedamoura": {
+      "name": "Mohamed Amoura",
+      "team": "algeria",
+      "goals4y": 8,
+      "teamGames4y": 58,
+      "gpg": 0.138,
+      "penShare": 0.25
+    },
+    "dailonlivramento": {
+      "name": "Dailon Livramento",
+      "team": "capeverde",
+      "goals4y": 4,
+      "teamGames4y": 45,
+      "gpg": 0.089,
+      "penShare": 0
+    },
+    "matheuscunha": {
+      "name": "Matheus Cunha",
+      "team": "brazil",
+      "goals4y": 4,
+      "teamGames4y": 49,
+      "gpg": 0.082,
+      "penShare": 0
+    },
+    "lylefoster": {
+      "name": "Lyle Foster",
+      "team": "southafrica",
+      "goals4y": 4,
+      "teamGames4y": 60,
+      "gpg": 0.067,
+      "penShare": 0
+    },
+    "ezooelmaremi": {
+      "name": "Ezoo El Maremi",
+      "team": "libya",
+      "goals4y": 4,
+      "teamGames4y": 32,
+      "gpg": 0.125,
+      "penShare": 0
+    },
+    "mattiaskait": {
+      "name": "Mattias Kait",
+      "team": "estonia",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "brahimdiaz": {
+      "name": "Brahim Diaz",
+      "team": "morocco",
+      "goals4y": 6,
+      "teamGames4y": 66,
+      "gpg": 0.091,
+      "penShare": 0.33
+    },
+    "allanokello": {
+      "name": "Allan Okello",
+      "team": "uganda",
+      "goals4y": 3,
+      "teamGames4y": 34,
+      "gpg": 0.088,
+      "penShare": 0.33
+    },
+    "djairparfitt": {
+      "name": "Djair Parfitt",
+      "team": "bermuda",
+      "goals4y": 4,
+      "teamGames4y": 30,
+      "gpg": 0.133,
+      "penShare": 0
+    },
+    "matiasgalarza": {
+      "name": "Matias Galarza",
+      "team": "paraguay",
+      "goals4y": 3,
+      "teamGames4y": 43,
+      "gpg": 0.07,
+      "penShare": 0
+    },
+    "pedri": {
+      "name": "Pedri",
+      "team": "spain",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "oscarsantis": {
+      "name": "Oscar Santis",
+      "team": "guatemala",
+      "goals4y": 7,
+      "teamGames4y": 54,
+      "gpg": 0.13,
+      "penShare": 0
+    },
+    "dantesealy": {
+      "name": "Dante Sealy",
+      "team": "trinidadandtobago",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "alonsomartinez": {
+      "name": "Alonso Martinez",
+      "team": "costarica",
+      "goals4y": 6,
+      "teamGames4y": 53,
+      "gpg": 0.113,
+      "penShare": 0
+    },
+    "warnerbrown": {
+      "name": "Warner Brown",
+      "team": "jamaica",
+      "goals4y": 3,
+      "teamGames4y": 57,
+      "gpg": 0.053,
+      "penShare": 0
+    },
+    "jeremydoku": {
+      "name": "Jeremy Doku",
+      "team": "belgium",
+      "goals4y": 5,
+      "teamGames4y": 48,
+      "gpg": 0.104,
+      "penShare": 0
+    },
+    "kenjigorre": {
+      "name": "Kenji Gorre",
+      "team": "curacao",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "rauljimenez": {
+      "name": "Raul Jimenez",
+      "team": "mexico",
+      "goals4y": 6,
+      "teamGames4y": 70,
+      "gpg": 0.086,
+      "penShare": 0.17
+    },
+    "cesarmontes": {
+      "name": "Cesar Montes",
+      "team": "mexico",
+      "goals4y": 3,
+      "teamGames4y": 70,
+      "gpg": 0.043,
+      "penShare": 0
+    },
+    "richonellmargaret": {
+      "name": "Richonell Margaret",
+      "team": "suriname",
+      "goals4y": 4,
+      "teamGames4y": 30,
+      "gpg": 0.133,
+      "penShare": 0
+    },
+    "maliktillman": {
+      "name": "Malik Tillman",
+      "team": "usa",
+      "goals4y": 4,
+      "teamGames4y": 64,
+      "gpg": 0.063,
+      "penShare": 0
+    },
+    "tomasrodriguez": {
+      "name": "Tomas Rodriguez",
+      "team": "panama",
+      "goals4y": 3,
+      "teamGames4y": 63,
+      "gpg": 0.048,
+      "penShare": 0
+    },
+    "tajonbuchanan": {
+      "name": "Tajon Buchanan",
+      "team": "canada",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0
+    },
+    "nathansaliba": {
+      "name": "Nathan Saliba",
+      "team": "canada",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0
+    },
+    "romellquioto": {
+      "name": "Romell Quioto",
+      "team": "honduras",
+      "goals4y": 3,
+      "teamGames4y": 47,
+      "gpg": 0.064,
+      "penShare": 0
+    },
+    "dondeedsonlouicius": {
+      "name": "Don Deedson Louicius",
+      "team": "haiti",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "olgerescobar": {
+      "name": "Olger Escobar",
+      "team": "guatemala",
+      "goals4y": 3,
+      "teamGames4y": 54,
+      "gpg": 0.056,
+      "penShare": 0
+    },
+    "diegoluna": {
+      "name": "Diego Luna",
+      "team": "usa",
+      "goals4y": 3,
+      "teamGames4y": 64,
+      "gpg": 0.047,
+      "penShare": 0
+    },
+    "ronaldoafonso": {
+      "name": "Ronaldo Afonso",
+      "team": "saotomeandprincipe",
+      "goals4y": 3,
+      "teamGames4y": 16,
+      "gpg": 0.188,
+      "penShare": 1
+    },
+    "eliassaad": {
+      "name": "Elias Saad",
+      "team": "tunisia",
+      "goals4y": 3,
+      "teamGames4y": 55,
+      "gpg": 0.055,
+      "penShare": 0
+    },
+    "edmondtapsoba": {
+      "name": "Edmond Tapsoba",
+      "team": "burkinafaso",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "ryanogam": {
+      "name": "Ryan Ogam",
+      "team": "kenya",
+      "goals4y": 4,
+      "teamGames4y": 31,
+      "gpg": 0.129,
+      "penShare": 0
+    },
+    "oswinappollis": {
+      "name": "Oswin Appollis",
+      "team": "southafrica",
+      "goals4y": 4,
+      "teamGames4y": 60,
+      "gpg": 0.067,
+      "penShare": 0.25
+    },
+    "cedricbakambu": {
+      "name": "Cedric Bakambu",
+      "team": "drcongo",
+      "goals4y": 5,
+      "teamGames4y": 51,
+      "gpg": 0.098,
+      "penShare": 0
+    },
+    "mikkeldamsgaard": {
+      "name": "Mikkel Damsgaard",
+      "team": "denmark",
+      "goals4y": 4,
+      "teamGames4y": 43,
+      "gpg": 0.093,
+      "penShare": 0
+    },
+    "ayoubakosiah": {
+      "name": "Ayouba Kosiah",
+      "team": "liberia",
+      "goals4y": 3,
+      "teamGames4y": 30,
+      "gpg": 0.1,
+      "penShare": 0.33
+    },
+    "nicolasjackson": {
+      "name": "Nicolas Jackson",
+      "team": "senegal",
+      "goals4y": 4,
+      "teamGames4y": 58,
+      "gpg": 0.069,
+      "penShare": 0.25
+    },
+    "danielsosah": {
+      "name": "Daniel Sosah",
+      "team": "niger",
+      "goals4y": 3,
+      "teamGames4y": 34,
+      "gpg": 0.088,
+      "penShare": 0
+    },
+    "riyadmahrez": {
+      "name": "Riyad Mahrez",
+      "team": "algeria",
+      "goals4y": 6,
+      "teamGames4y": 58,
+      "gpg": 0.103,
+      "penShare": 0.17
+    },
+    "abdoulkarimtraore": {
+      "name": "Abdoul Karim Traore",
+      "team": "guinea",
+      "goals4y": 3,
+      "teamGames4y": 38,
+      "gpg": 0.079,
+      "penShare": 0
+    },
+    "ruslanmalinovskyi": {
+      "name": "Ruslan Malinovskyi",
+      "team": "ukraine",
+      "goals4y": 3,
+      "teamGames4y": 40,
+      "gpg": 0.075,
+      "penShare": 0
+    },
+    "akoradams": {
+      "name": "Akor Adams",
+      "team": "nigeria",
+      "goals4y": 4,
+      "teamGames4y": 51,
+      "gpg": 0.078,
+      "penShare": 0
+    },
+    "yandiomande": {
+      "name": "Yan Diomande",
+      "team": "ivorycoast",
+      "goals4y": 3,
+      "teamGames4y": 52,
+      "gpg": 0.058,
+      "penShare": 0
+    },
+    "cherifndiaye": {
+      "name": "Cherif Ndiaye",
+      "team": "senegal",
+      "goals4y": 3,
+      "teamGames4y": 58,
+      "gpg": 0.052,
+      "penShare": 0.33
+    },
+    "johanmanzambi": {
+      "name": "Johan Manzambi",
+      "team": "switzerland",
+      "goals4y": 5,
+      "teamGames4y": 50,
+      "gpg": 0.1,
+      "penShare": 0
+    },
+    "pioesposito": {
+      "name": "Pio Esposito",
+      "team": "italy",
+      "goals4y": 3,
+      "teamGames4y": 42,
+      "gpg": 0.071,
+      "penShare": 0
+    },
+    "pierrelandrykabore": {
+      "name": "Pierre Landry Kabore",
+      "team": "burkinafaso",
+      "goals4y": 3,
+      "teamGames4y": 49,
+      "gpg": 0.061,
+      "penShare": 0
+    },
+    "nickwoltemade": {
+      "name": "Nick Woltemade",
+      "team": "germany",
+      "goals4y": 4,
+      "teamGames4y": 50,
+      "gpg": 0.08,
+      "penShare": 0
+    },
+    "fisnikasllani": {
+      "name": "Fisnik Asllani",
+      "team": "kosovo",
+      "goals4y": 3,
+      "teamGames4y": 37,
+      "gpg": 0.081,
+      "penShare": 0
+    },
+    "amaddiallo": {
+      "name": "Amad Diallo",
+      "team": "ivorycoast",
+      "goals4y": 6,
+      "teamGames4y": 52,
+      "gpg": 0.115,
+      "penShare": 0
+    },
+    "abdouliemanneh": {
+      "name": "Abdoulie Manneh",
+      "team": "gambia",
+      "goals4y": 3,
+      "teamGames4y": 29,
+      "gpg": 0.103,
+      "penShare": 0
+    },
+    "troyparrott": {
+      "name": "Troy Parrott",
+      "team": "republicofireland",
+      "goals4y": 6,
+      "teamGames4y": 39,
+      "gpg": 0.154,
+      "penShare": 0.33
+    },
+    "nikolavlasic": {
+      "name": "Nikola Vlasic",
+      "team": "croatia",
+      "goals4y": 3,
+      "teamGames4y": 51,
+      "gpg": 0.059,
+      "penShare": 0
+    },
+    "haristabakovic": {
+      "name": "Haris Tabakovic",
+      "team": "bosniaandherzegovina",
+      "goals4y": 3,
+      "teamGames4y": 39,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "joaoneves": {
+      "name": "Joao Neves",
+      "team": "portugal",
+      "goals4y": 4,
+      "teamGames4y": 52,
+      "gpg": 0.077,
+      "penShare": 0
+    },
+    "julianquinones": {
+      "name": "Julian Quinones",
+      "team": "mexico",
+      "goals4y": 4,
+      "teamGames4y": 70,
+      "gpg": 0.057,
+      "penShare": 0
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T06:29:46.591Z",
+    "generatedAt": "2026-07-07T06:36:50.954Z",
     "mu": 1.59
   },
   "recs": {
@@ -9,8 +9,12 @@
       "kickoffUTC": "2026-07-07T16:00:00.000Z",
       "stage": "Round of 16",
       "xg": {
-        "Argentina": 1.47,
-        "Egypt": 1.02
+        "Argentina": 1.5,
+        "Egypt": 0.67
+      },
+      "elo": {
+        "Argentina": 2074,
+        "Egypt": 1790
       },
       "expCorners": 9.5,
       "expFouls": 24.3,
@@ -18,7 +22,12 @@
         {
           "market": "Team Goals",
           "pick": "Egypt Under 3.5",
-          "p": 0.98
+          "p": 0.995
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 5.5",
+          "p": 0.977
         },
         {
           "market": "Player 1+ Shot",
@@ -27,9 +36,9 @@
           "note": "5.7 shots/gm over 3 gms"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 5.5",
-          "p": 0.959
+          "market": "Team Goals",
+          "pick": "Egypt Under 2.5",
+          "p": 0.969
         },
         {
           "market": "Player 1+ Shot",
@@ -40,27 +49,17 @@
         {
           "market": "Team Goals",
           "pick": "Argentina Under 3.5",
-          "p": 0.938
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Over 0.5",
-          "p": 0.917
-        },
-        {
-          "market": "Team Goals",
-          "pick": "Egypt Under 2.5",
-          "p": 0.916
-        },
-        {
-          "market": "1st Half Goals",
-          "pick": "Under 2.5",
-          "p": 0.901
+          "p": 0.935
         },
         {
           "market": "Total Goals",
           "pick": "Under 4.5",
-          "p": 0.893
+          "p": 0.931
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Over 0.5",
+          "p": 0.886
         },
         {
           "market": "Fouls",
@@ -69,35 +68,46 @@
           "note": "exp 24.3"
         },
         {
-          "market": "Team Goals",
-          "pick": "Argentina Under 2.5",
-          "p": 0.816
+          "market": "1st Half Goals",
+          "pick": "Under 2.5",
+          "p": 0.874
         },
         {
           "market": "1st Half DC",
           "pick": "Argentina or Draw",
-          "p": 0.784
+          "p": 0.844
         },
         {
-          "market": "Team Goals",
-          "pick": "Argentina Over 0.5",
-          "p": 0.77
+          "market": "Double Chance",
+          "pick": "Argentina or Draw",
+          "p": 0.833
         },
         {
           "market": "Total Goals",
           "pick": "Under 3.5",
-          "p": 0.76
+          "p": 0.825
+        },
+        {
+          "market": "Team Goals",
+          "pick": "Argentina Under 2.5",
+          "p": 0.81
+        },
+        {
+          "market": "To Qualify",
+          "pick": "Argentina",
+          "p": 0.792,
+          "note": "Elo 2074 v 1790"
+        },
+        {
+          "market": "Team Goals",
+          "pick": "Argentina Over 0.5",
+          "p": 0.776
         },
         {
           "market": "Fouls",
           "pick": "Under 27.5",
           "p": 0.746,
           "note": "exp 24.3"
-        },
-        {
-          "market": "Double Chance",
-          "pick": "Argentina or Draw",
-          "p": 0.738
         },
         {
           "market": "Double Chance",
@@ -111,11 +121,6 @@
           "note": "exp 9.5"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 1.5",
-          "p": 0.71
-        },
-        {
           "market": "Fouls",
           "pick": "Over 21.5",
           "p": 0.709,
@@ -123,24 +128,14 @@
         },
         {
           "market": "1st Half Goals",
-          "pick": "Under 1.5",
-          "p": 0.701
+          "pick": "Over 0.5",
+          "p": 0.707,
+          "note": "1H shares 0.57/0.56"
         },
         {
           "market": "1st Half Goals",
-          "pick": "Over 0.5",
-          "p": 0.666
-        },
-        {
-          "market": "1st Half DC",
-          "pick": "Egypt or Draw",
-          "p": 0.654
-        },
-        {
-          "market": "To Qualify",
-          "pick": "Argentina",
-          "p": 0.645,
-          "note": "90-min win + ET/pens share"
+          "pick": "Under 1.5",
+          "p": 0.653
         },
         {
           "market": "Corners",
@@ -149,15 +144,19 @@
           "note": "exp 9.5"
         },
         {
-          "market": "Anytime Scorer",
-          "pick": "Lionel Messi (Argentina)",
-          "p": 0.643,
-          "note": "7 goals this WC"
+          "market": "Total Goals",
+          "pick": "Over 1.5",
+          "p": 0.638
         },
         {
-          "market": "Team Goals",
-          "pick": "Egypt Over 0.5",
-          "p": 0.639
+          "market": "Total Goals",
+          "pick": "Under 2.5",
+          "p": 0.631
+        },
+        {
+          "market": "BTTS",
+          "pick": "No",
+          "p": 0.617
         },
         {
           "market": "Corners",
@@ -166,9 +165,20 @@
           "note": "exp 9.5"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 2.5",
-          "p": 0.547
+          "market": "Result",
+          "pick": "Argentina",
+          "p": 0.571
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Lionel Messi (Argentina)",
+          "p": 0.559,
+          "note": "7 this WC · 22 in 4y (0.415/gm)"
+        },
+        {
+          "market": "1st Half DC",
+          "pick": "Egypt or Draw",
+          "p": 0.551
         },
         {
           "market": "Fouls",
@@ -177,25 +187,15 @@
           "note": "exp 24.3"
         },
         {
-          "market": "Double Chance",
-          "pick": "Egypt or Draw",
-          "p": 0.524
-        },
-        {
           "market": "Corners",
           "pick": "Under 9.5",
           "p": 0.522,
           "note": "exp 9.5"
         },
         {
-          "market": "BTTS",
-          "pick": "No",
-          "p": 0.508
-        },
-        {
-          "market": "BTTS",
-          "pick": "Yes",
-          "p": 0.492
+          "market": "Team Goals",
+          "pick": "Egypt Over 0.5",
+          "p": 0.49
         },
         {
           "market": "Corners",
@@ -204,20 +204,15 @@
           "note": "exp 9.5"
         },
         {
-          "market": "Result",
-          "pick": "Argentina",
-          "p": 0.476
-        },
-        {
           "market": "Fouls",
           "pick": "Over 24.5",
           "p": 0.473,
           "note": "exp 24.3"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 2.5",
-          "p": 0.453
+          "market": "Double Chance",
+          "pick": "Egypt or Draw",
+          "p": 0.429
         },
         {
           "market": "Corners",
@@ -226,10 +221,20 @@
           "note": "exp 9.5"
         },
         {
-          "market": "To Qualify",
-          "pick": "Egypt",
-          "p": 0.355,
-          "note": "90-min win + ET/pens share"
+          "market": "BTTS",
+          "pick": "Yes",
+          "p": 0.383,
+          "note": "8y base 34%/45%"
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Over 2.5",
+          "p": 0.369
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 1.5",
+          "p": 0.362
         },
         {
           "market": "Corners",
@@ -244,20 +249,10 @@
           "note": "exp 24.3"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 1.5",
-          "p": 0.29
-        },
-        {
           "market": "Corners",
           "pick": "Under 7.5",
           "p": 0.269,
           "note": "exp 9.5"
-        },
-        {
-          "market": "Result",
-          "pick": "Egypt",
-          "p": 0.262
         },
         {
           "market": "Result",
@@ -271,39 +266,50 @@
           "note": "exp 24.3"
         },
         {
+          "market": "To Qualify",
+          "pick": "Egypt",
+          "p": 0.208,
+          "note": "Elo 1790 v 2074"
+        },
+        {
           "market": "Total Goals",
           "pick": "Over 3.5",
-          "p": 0.24
+          "p": 0.175
+        },
+        {
+          "market": "Result",
+          "pick": "Egypt",
+          "p": 0.167
         },
         {
           "market": "Anytime Scorer",
           "pick": "Emam Ashour (Egypt)",
-          "p": 0.225,
-          "note": "2 goals this WC"
+          "p": 0.155,
+          "note": "2 this WC"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Mahmoud Saber (Egypt)",
-          "p": 0.225,
-          "note": "2 goals this WC"
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Mohamed Salah (Egypt)",
-          "p": 0.225,
-          "note": "2 goals this WC"
+          "p": 0.155,
+          "note": "2 this WC"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Giovani Lo Celso (Argentina)",
-          "p": 0.137,
-          "note": "1 goals this WC"
+          "p": 0.139,
+          "note": "1 this WC"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Mohamed Salah (Egypt)",
+          "p": 0.139,
+          "note": "2 this WC · 14 in 4y (0.259/gm)"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Lautaro Martínez (Argentina)",
-          "p": 0.137,
-          "note": "1 goals this WC"
+          "p": 0.127,
+          "note": "1 this WC · 9 in 4y (0.17/gm)"
         },
         {
           "market": "Fouls",
@@ -314,12 +320,12 @@
         {
           "market": "Total Goals",
           "pick": "Over 4.5",
-          "p": 0.107
+          "p": 0.069
         },
         {
           "market": "Total Goals",
           "pick": "Over 5.5",
-          "p": 0.041
+          "p": 0.023
         }
       ]
     },
@@ -328,31 +334,30 @@
       "kickoffUTC": "2026-07-07T20:00:00.000Z",
       "stage": "Round of 16",
       "xg": {
-        "Switzerland": 0.92,
-        "Colombia": 0.78
+        "Switzerland": 0.81,
+        "Colombia": 1
+      },
+      "elo": {
+        "Switzerland": 1866,
+        "Colombia": 1959
       },
       "expCorners": 7.7,
       "expFouls": 25,
       "legs": [
         {
+          "market": "Team Goals",
+          "pick": "Switzerland Under 3.5",
+          "p": 0.99
+        },
+        {
           "market": "Total Goals",
           "pick": "Under 5.5",
-          "p": 0.992
+          "p": 0.989
         },
         {
           "market": "Team Goals",
           "pick": "Colombia Under 3.5",
-          "p": 0.992
-        },
-        {
-          "market": "Team Goals",
-          "pick": "Switzerland Under 3.5",
-          "p": 0.986
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Under 4.5",
-          "p": 0.971
+          "p": 0.981
         },
         {
           "market": "Player 1+ Shot",
@@ -361,14 +366,14 @@
           "note": "4.0 shots/gm over 4 gms"
         },
         {
-          "market": "1st Half Goals",
-          "pick": "Under 2.5",
-          "p": 0.96
+          "market": "Total Goals",
+          "pick": "Under 4.5",
+          "p": 0.963
         },
         {
           "market": "Team Goals",
-          "pick": "Colombia Under 2.5",
-          "p": 0.955
+          "pick": "Switzerland Under 2.5",
+          "p": 0.951
         },
         {
           "market": "Player 1+ Shot",
@@ -377,9 +382,14 @@
           "note": "3.0 shots/gm over 4 gms"
         },
         {
+          "market": "1st Half Goals",
+          "pick": "Under 2.5",
+          "p": 0.945
+        },
+        {
           "market": "Team Goals",
-          "pick": "Switzerland Under 2.5",
-          "p": 0.934
+          "pick": "Colombia Under 2.5",
+          "p": 0.919
         },
         {
           "market": "Fouls",
@@ -388,15 +398,15 @@
           "note": "exp 25.0"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 3.5",
-          "p": 0.907
-        },
-        {
           "market": "Player 1+ Shot",
           "pick": "Luis Suárez (Colombia)",
           "p": 0.903,
           "note": "2.3 shots/gm over 3 gms"
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 3.5",
+          "p": 0.889
         },
         {
           "market": "Player 1+ Shot",
@@ -411,14 +421,9 @@
           "note": "exp 7.7"
         },
         {
-          "market": "1st Half Goals",
-          "pick": "Under 1.5",
-          "p": 0.828
-        },
-        {
           "market": "Total Goals",
           "pick": "Over 0.5",
-          "p": 0.817
+          "p": 0.837
         },
         {
           "market": "Player 1+ Shot",
@@ -427,14 +432,14 @@
           "note": "1.7 shots/gm over 3 gms"
         },
         {
-          "market": "1st Half DC",
-          "pick": "Switzerland or Draw",
-          "p": 0.793
+          "market": "1st Half Goals",
+          "pick": "Under 1.5",
+          "p": 0.791
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 2.5",
-          "p": 0.758
+          "market": "1st Half DC",
+          "pick": "Colombia or Draw",
+          "p": 0.78
         },
         {
           "market": "Corners",
@@ -450,13 +455,18 @@
         },
         {
           "market": "1st Half DC",
-          "pick": "Colombia or Draw",
-          "p": 0.749
+          "pick": "Switzerland or Draw",
+          "p": 0.728
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 2.5",
+          "p": 0.727
         },
         {
           "market": "Double Chance",
-          "pick": "Switzerland or Draw",
-          "p": 0.708
+          "pick": "Colombia or Draw",
+          "p": 0.714
         },
         {
           "market": "Fouls",
@@ -465,14 +475,9 @@
           "note": "exp 25.0"
         },
         {
-          "market": "BTTS",
-          "pick": "No",
-          "p": 0.675
-        },
-        {
           "market": "Double Chance",
           "pick": "Switzerland or Colombia",
-          "p": 0.66
+          "p": 0.675
         },
         {
           "market": "Corners",
@@ -481,41 +486,47 @@
           "note": "exp 7.7"
         },
         {
+          "market": "Team Goals",
+          "pick": "Colombia Over 0.5",
+          "p": 0.633
+        },
+        {
           "market": "Double Chance",
-          "pick": "Colombia or Draw",
-          "p": 0.631
+          "pick": "Switzerland or Draw",
+          "p": 0.611
+        },
+        {
+          "market": "BTTS",
+          "pick": "No",
+          "p": 0.61
+        },
+        {
+          "market": "To Qualify",
+          "pick": "Colombia",
+          "p": 0.592,
+          "note": "Elo 1959 v 1866"
+        },
+        {
+          "market": "1st Half Goals",
+          "pick": "Over 0.5",
+          "p": 0.572,
+          "note": "1H shares 0.48/0.46"
         },
         {
           "market": "Team Goals",
           "pick": "Switzerland Over 0.5",
-          "p": 0.601
+          "p": 0.556
         },
         {
-          "market": "To Qualify",
-          "pick": "Switzerland",
-          "p": 0.558,
-          "note": "90-min win + ET/pens share"
-        },
-        {
-          "market": "Team Goals",
-          "pick": "Colombia Over 0.5",
-          "p": 0.542
+          "market": "Total Goals",
+          "pick": "Over 1.5",
+          "p": 0.541
         },
         {
           "market": "Fouls",
           "pick": "Over 24.5",
           "p": 0.53,
           "note": "exp 25.0"
-        },
-        {
-          "market": "1st Half Goals",
-          "pick": "Over 0.5",
-          "p": 0.526
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Over 1.5",
-          "p": 0.506
         },
         {
           "market": "Corners",
@@ -530,26 +541,32 @@
           "note": "exp 7.7"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 1.5",
-          "p": 0.494
-        },
-        {
           "market": "Fouls",
           "pick": "Under 24.5",
           "p": 0.47,
           "note": "exp 25.0"
         },
         {
+          "market": "Total Goals",
+          "pick": "Under 1.5",
+          "p": 0.459
+        },
+        {
           "market": "To Qualify",
-          "pick": "Colombia",
-          "p": 0.442,
-          "note": "90-min win + ET/pens share"
+          "pick": "Switzerland",
+          "p": 0.408,
+          "note": "Elo 1866 v 1959"
+        },
+        {
+          "market": "BTTS",
+          "pick": "Yes",
+          "p": 0.39,
+          "note": "8y base 59%/42%"
         },
         {
           "market": "Result",
-          "pick": "Switzerland",
-          "p": 0.369
+          "pick": "Colombia",
+          "p": 0.389
         },
         {
           "market": "Corners",
@@ -560,11 +577,6 @@
         {
           "market": "Result",
           "pick": "Draw",
-          "p": 0.34
-        },
-        {
-          "market": "BTTS",
-          "pick": "Yes",
           "p": 0.325
         },
         {
@@ -575,20 +587,13 @@
         },
         {
           "market": "Result",
-          "pick": "Colombia",
-          "p": 0.292
+          "pick": "Switzerland",
+          "p": 0.286
         },
         {
-          "market": "Anytime Scorer",
-          "pick": "Daniel Muñoz (Colombia)",
-          "p": 0.268,
-          "note": "2 goals this WC"
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Johan Manzambi (Switzerland)",
-          "p": 0.264,
-          "note": "3 goals this WC"
+          "market": "Total Goals",
+          "pick": "Over 2.5",
+          "p": 0.273
         },
         {
           "market": "Fouls",
@@ -603,21 +608,28 @@
           "note": "exp 7.7"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 2.5",
-          "p": 0.242
+          "market": "Anytime Scorer",
+          "pick": "Daniel Muñoz (Colombia)",
+          "p": 0.214,
+          "note": "2 this WC · 4 in 4y (0.082/gm)"
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Breel Embolo (Switzerland)",
-          "p": 0.184,
-          "note": "2 goals this WC"
+          "pick": "Johan Manzambi (Switzerland)",
+          "p": 0.181,
+          "note": "3 this WC · 5 in 4y (0.1/gm)"
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Rubén Vargas (Switzerland)",
-          "p": 0.184,
-          "note": "2 goals this WC"
+          "pick": "Jáminton Campaz (Colombia)",
+          "p": 0.181,
+          "note": "1 this WC"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Jhon Arias (Colombia)",
+          "p": 0.181,
+          "note": "1 this WC"
         },
         {
           "market": "Corners",
@@ -627,20 +639,26 @@
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Jáminton Campaz (Colombia)",
-          "p": 0.144,
-          "note": "1 goals this WC"
+          "pick": "Luis Diaz (Colombia)",
+          "p": 0.145,
+          "note": "10 intl goals in 4y (0.204/gm)"
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Jhon Arias (Colombia)",
-          "p": 0.144,
-          "note": "1 goals this WC"
+          "pick": "Breel Embolo (Switzerland)",
+          "p": 0.142,
+          "note": "2 this WC · 12 in 4y (0.24/gm)"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Rubén Vargas (Switzerland)",
+          "p": 0.132,
+          "note": "2 this WC · 7 in 4y (0.14/gm)"
         },
         {
           "market": "Total Goals",
           "pick": "Over 3.5",
-          "p": 0.093
+          "p": 0.111
         },
         {
           "market": "Fouls",
@@ -651,12 +669,12 @@
         {
           "market": "Total Goals",
           "pick": "Over 4.5",
-          "p": 0.029
+          "p": 0.037
         },
         {
           "market": "Total Goals",
           "pick": "Over 5.5",
-          "p": 0.008
+          "p": 0.011
         }
       ]
     },
@@ -665,8 +683,12 @@
       "kickoffUTC": "2026-07-09T20:00:00.000Z",
       "stage": "Quarter-final",
       "xg": {
-        "France": 1.46,
-        "Morocco": 0.81
+        "France": 1.14,
+        "Morocco": 0.78
+      },
+      "elo": {
+        "France": 2038,
+        "Morocco": 1965
       },
       "expCorners": 10.1,
       "expFouls": 24.8,
@@ -674,12 +696,17 @@
         {
           "market": "Team Goals",
           "pick": "Morocco Under 3.5",
-          "p": 0.991
+          "p": 0.992
         },
         {
           "market": "Total Goals",
           "pick": "Under 5.5",
-          "p": 0.972
+          "p": 0.986
+        },
+        {
+          "market": "Team Goals",
+          "pick": "France Under 3.5",
+          "p": 0.971
         },
         {
           "market": "Player 1+ Shot",
@@ -702,12 +729,17 @@
         {
           "market": "Team Goals",
           "pick": "Morocco Under 2.5",
-          "p": 0.951
+          "p": 0.956
         },
         {
-          "market": "Team Goals",
-          "pick": "France Under 3.5",
-          "p": 0.939
+          "market": "Total Goals",
+          "pick": "Under 4.5",
+          "p": 0.954
+        },
+        {
+          "market": "1st Half Goals",
+          "pick": "Under 2.5",
+          "p": 0.952
         },
         {
           "market": "Player 1+ Shot",
@@ -722,16 +754,6 @@
           "note": "2.7 shots/gm over 3 gms"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 4.5",
-          "p": 0.92
-        },
-        {
-          "market": "1st Half Goals",
-          "pick": "Under 2.5",
-          "p": 0.92
-        },
-        {
           "market": "Player 1+ Shot",
           "pick": "Soufiane Rahimi (Morocco)",
           "p": 0.903,
@@ -744,9 +766,14 @@
           "note": "exp 24.8"
         },
         {
+          "market": "Team Goals",
+          "pick": "France Under 2.5",
+          "p": 0.892
+        },
+        {
           "market": "Total Goals",
-          "pick": "Over 0.5",
-          "p": 0.897
+          "pick": "Under 3.5",
+          "p": 0.872
         },
         {
           "market": "Player 1+ Shot",
@@ -761,14 +788,9 @@
           "note": "2.0 shots/gm over 3 gms"
         },
         {
-          "market": "1st Half DC",
-          "pick": "France or Draw",
-          "p": 0.825
-        },
-        {
-          "market": "Team Goals",
-          "pick": "France Under 2.5",
-          "p": 0.818
+          "market": "Total Goals",
+          "pick": "Over 0.5",
+          "p": 0.853
         },
         {
           "market": "Player 1+ Shot",
@@ -777,14 +799,9 @@
           "note": "1.7 shots/gm over 3 gms"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 3.5",
-          "p": 0.805
-        },
-        {
-          "market": "Double Chance",
-          "pick": "France or Draw",
-          "p": 0.792
+          "market": "1st Half Goals",
+          "pick": "Under 1.5",
+          "p": 0.808
         },
         {
           "market": "Corners",
@@ -793,9 +810,14 @@
           "note": "exp 10.1"
         },
         {
-          "market": "Team Goals",
-          "pick": "France Over 0.5",
-          "p": 0.768
+          "market": "1st Half DC",
+          "pick": "France or Draw",
+          "p": 0.79
+        },
+        {
+          "market": "Double Chance",
+          "pick": "France or Draw",
+          "p": 0.75
         },
         {
           "market": "Fouls",
@@ -804,19 +826,14 @@
           "note": "exp 24.8"
         },
         {
-          "market": "1st Half Goals",
-          "pick": "Under 1.5",
-          "p": 0.736
-        },
-        {
           "market": "Player 1+ Shot",
           "pick": "Azzedine Ounahi (Morocco)",
           "p": 0.736,
           "note": "1.3 shots/gm over 3 gms"
         },
         {
-          "market": "Double Chance",
-          "pick": "France or Morocco",
+          "market": "1st Half DC",
+          "pick": "Morocco or Draw",
           "p": 0.733
         },
         {
@@ -826,10 +843,14 @@
           "note": "exp 24.8"
         },
         {
-          "market": "To Qualify",
-          "pick": "France",
-          "p": 0.717,
-          "note": "90-min win + ET/pens share"
+          "market": "Total Goals",
+          "pick": "Under 2.5",
+          "p": 0.699
+        },
+        {
+          "market": "Double Chance",
+          "pick": "France or Morocco",
+          "p": 0.691
         },
         {
           "market": "Corners",
@@ -838,29 +859,25 @@
           "note": "exp 10.1"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 1.5",
-          "p": 0.662
+          "market": "Team Goals",
+          "pick": "France Over 0.5",
+          "p": 0.68
         },
         {
-          "market": "1st Half Goals",
-          "pick": "Over 0.5",
-          "p": 0.632
-        },
-        {
-          "market": "1st Half DC",
-          "pick": "Morocco or Draw",
-          "p": 0.632
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Under 2.5",
-          "p": 0.604
+          "market": "To Qualify",
+          "pick": "France",
+          "p": 0.628,
+          "note": "Elo 2038 v 1965"
         },
         {
           "market": "BTTS",
           "pick": "No",
-          "p": 0.574
+          "p": 0.622
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Over 1.5",
+          "p": 0.571
         },
         {
           "market": "Corners",
@@ -869,26 +886,26 @@
           "note": "exp 10.1"
         },
         {
+          "market": "Double Chance",
+          "pick": "Morocco or Draw",
+          "p": 0.559
+        },
+        {
           "market": "Corners",
           "pick": "Over 9.5",
           "p": 0.558,
           "note": "exp 10.1"
         },
         {
+          "market": "1st Half Goals",
+          "pick": "Over 0.5",
+          "p": 0.552,
+          "note": "1H shares 0.39/0.47"
+        },
+        {
           "market": "Team Goals",
           "pick": "Morocco Over 0.5",
-          "p": 0.555
-        },
-        {
-          "market": "Result",
-          "pick": "France",
-          "p": 0.526
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Kylian Mbappé (France)",
-          "p": 0.519,
-          "note": "7 goals this WC"
+          "p": 0.541
         },
         {
           "market": "Fouls",
@@ -903,15 +920,15 @@
           "note": "exp 24.8"
         },
         {
-          "market": "Double Chance",
-          "pick": "Morocco or Draw",
-          "p": 0.474
-        },
-        {
           "market": "Corners",
           "pick": "Under 9.5",
           "p": 0.442,
           "note": "exp 10.1"
+        },
+        {
+          "market": "Result",
+          "pick": "France",
+          "p": 0.441
         },
         {
           "market": "Corners",
@@ -920,25 +937,27 @@
           "note": "exp 10.1"
         },
         {
-          "market": "BTTS",
-          "pick": "Yes",
-          "p": 0.426
-        },
-        {
           "market": "Total Goals",
-          "pick": "Over 2.5",
-          "p": 0.396
+          "pick": "Under 1.5",
+          "p": 0.429
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Ousmane Dembélé (France)",
-          "p": 0.341,
-          "note": "4 goals this WC"
+          "pick": "Kylian Mbappé (France)",
+          "p": 0.394,
+          "note": "7 this WC · 32 in 4y (0.593/gm)"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 1.5",
-          "p": 0.338
+          "market": "BTTS",
+          "pick": "Yes",
+          "p": 0.378,
+          "note": "8y base 49%/33%"
+        },
+        {
+          "market": "To Qualify",
+          "pick": "Morocco",
+          "p": 0.372,
+          "note": "Elo 1965 v 2038"
         },
         {
           "market": "Corners",
@@ -947,10 +966,14 @@
           "note": "exp 10.1"
         },
         {
-          "market": "To Qualify",
-          "pick": "Morocco",
-          "p": 0.283,
-          "note": "90-min win + ET/pens share"
+          "market": "Result",
+          "pick": "Draw",
+          "p": 0.309
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Over 2.5",
+          "p": 0.301
         },
         {
           "market": "Fouls",
@@ -959,27 +982,21 @@
           "note": "exp 24.8"
         },
         {
-          "market": "Result",
-          "pick": "Draw",
-          "p": 0.267
-        },
-        {
           "market": "Fouls",
           "pick": "Under 21.5",
           "p": 0.263,
           "note": "exp 24.8"
         },
         {
-          "market": "Anytime Scorer",
-          "pick": "Ismael Saibari (Morocco)",
-          "p": 0.215,
-          "note": "3 goals this WC"
+          "market": "Result",
+          "pick": "Morocco",
+          "p": 0.25
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Soufiane Rahimi (Morocco)",
-          "p": 0.215,
-          "note": "3 goals this WC"
+          "pick": "Ousmane Dembélé (France)",
+          "p": 0.234,
+          "note": "4 this WC · 7 in 4y (0.13/gm)"
         },
         {
           "market": "Corners",
@@ -988,26 +1005,33 @@
           "note": "exp 10.1"
         },
         {
-          "market": "Result",
-          "pick": "Morocco",
-          "p": 0.208
+          "market": "Anytime Scorer",
+          "pick": "Ismael Saibari (Morocco)",
+          "p": 0.163,
+          "note": "3 this WC · 7 in 4y (0.106/gm)"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Soufiane Rahimi (Morocco)",
+          "p": 0.157,
+          "note": "3 this WC · 3 in 4y (0.045/gm)"
         },
         {
           "market": "Total Goals",
           "pick": "Over 3.5",
-          "p": 0.195
+          "p": 0.128
         },
         {
           "market": "Anytime Scorer",
           "pick": "Bradley Barcola (France)",
-          "p": 0.188,
-          "note": "2 goals this WC"
+          "p": 0.127,
+          "note": "2 this WC · 5 in 4y (0.093/gm)"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Azzedine Ounahi (Morocco)",
-          "p": 0.149,
-          "note": "2 goals this WC"
+          "p": 0.112,
+          "note": "2 this WC · 5 in 4y (0.076/gm)"
         },
         {
           "market": "Fouls",
@@ -1018,12 +1042,12 @@
         {
           "market": "Total Goals",
           "pick": "Over 4.5",
-          "p": 0.08
+          "p": 0.046
         },
         {
           "market": "Total Goals",
           "pick": "Over 5.5",
-          "p": 0.028
+          "p": 0.014
         }
       ]
     },
@@ -1032,8 +1056,12 @@
       "kickoffUTC": "2026-07-11T21:00:00.000Z",
       "stage": "Quarter-final",
       "xg": {
-        "Norway": 1.48,
-        "England": 2.18
+        "Norway": 1.5,
+        "England": 2.37
+      },
+      "elo": {
+        "Norway": 1886,
+        "England": 1991
       },
       "expCorners": 10.9,
       "expFouls": 21.2,
@@ -1041,7 +1069,7 @@
         {
           "market": "Total Goals",
           "pick": "Over 0.5",
-          "p": 0.974
+          "p": 0.979
         },
         {
           "market": "Player 1+ Shot",
@@ -1064,7 +1092,7 @@
         {
           "market": "Team Goals",
           "pick": "Norway Under 3.5",
-          "p": 0.936
+          "p": 0.935
         },
         {
           "market": "Fouls",
@@ -1079,20 +1107,20 @@
           "note": "2.4 shots/gm over 5 gms"
         },
         {
+          "market": "Team Goals",
+          "pick": "England Over 0.5",
+          "p": 0.906
+        },
+        {
           "market": "Player 1+ Shot",
           "pick": "Martin Ødegaard (Norway)",
           "p": 0.903,
           "note": "2.3 shots/gm over 3 gms"
         },
         {
-          "market": "Team Goals",
-          "pick": "England Over 0.5",
-          "p": 0.887
-        },
-        {
           "market": "Total Goals",
           "pick": "Over 1.5",
-          "p": 0.88
+          "p": 0.898
         },
         {
           "market": "Corners",
@@ -1101,9 +1129,10 @@
           "note": "exp 10.9"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 5.5",
-          "p": 0.835
+          "market": "1st Half Goals",
+          "pick": "Over 0.5",
+          "p": 0.836,
+          "note": "1H shares 0.47/0.47"
         },
         {
           "market": "Player 1+ Shot",
@@ -1113,33 +1142,28 @@
         },
         {
           "market": "Team Goals",
-          "pick": "England Under 3.5",
-          "p": 0.823
-        },
-        {
-          "market": "Team Goals",
           "pick": "Norway Under 2.5",
-          "p": 0.813
-        },
-        {
-          "market": "1st Half Goals",
-          "pick": "Over 0.5",
-          "p": 0.8
+          "p": 0.81
         },
         {
           "market": "Double Chance",
           "pick": "Norway or England",
-          "p": 0.794
+          "p": 0.806
         },
         {
-          "market": "1st Half Goals",
-          "pick": "Under 2.5",
-          "p": 0.78
+          "market": "Total Goals",
+          "pick": "Under 5.5",
+          "p": 0.806
+        },
+        {
+          "market": "Team Goals",
+          "pick": "England Under 3.5",
+          "p": 0.785
         },
         {
           "market": "Team Goals",
           "pick": "Norway Over 0.5",
-          "p": 0.773
+          "p": 0.776
         },
         {
           "market": "Fouls",
@@ -1148,20 +1172,30 @@
           "note": "exp 21.2"
         },
         {
+          "market": "1st Half DC",
+          "pick": "England or Draw",
+          "p": 0.765
+        },
+        {
+          "market": "Double Chance",
+          "pick": "England or Draw",
+          "p": 0.763
+        },
+        {
           "market": "Corners",
           "pick": "Over 8.5",
           "p": 0.761,
           "note": "exp 10.9"
         },
         {
-          "market": "1st Half DC",
-          "pick": "England or Draw",
-          "p": 0.76
+          "market": "Total Goals",
+          "pick": "Over 2.5",
+          "p": 0.741
         },
         {
-          "market": "Double Chance",
-          "pick": "England or Draw",
-          "p": 0.74
+          "market": "1st Half Goals",
+          "pick": "Under 2.5",
+          "p": 0.728
         },
         {
           "market": "Fouls",
@@ -1176,31 +1210,27 @@
           "note": "1.3 shots/gm over 4 gms"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 2.5",
-          "p": 0.708
+          "market": "To Qualify",
+          "pick": "England",
+          "p": 0.688,
+          "note": "Elo 1991 v 1886"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Harry Kane (England)",
-          "p": 0.695,
-          "note": "6 goals this WC"
+          "p": 0.665,
+          "note": "6 this WC · 30 in 4y (0.566/gm)"
         },
         {
           "market": "Total Goals",
           "pick": "Under 4.5",
-          "p": 0.694
+          "p": 0.655
         },
         {
           "market": "BTTS",
           "pick": "Yes",
-          "p": 0.685
-        },
-        {
-          "market": "To Qualify",
-          "pick": "England",
-          "p": 0.673,
-          "note": "90-min win + ET/pens share"
+          "p": 0.651,
+          "note": "8y base 62%/37%"
         },
         {
           "market": "Corners",
@@ -1211,24 +1241,28 @@
         {
           "market": "Team Goals",
           "pick": "England Under 2.5",
-          "p": 0.628
+          "p": 0.578
+        },
+        {
+          "market": "Result",
+          "pick": "England",
+          "p": 0.569
         },
         {
           "market": "Anytime Scorer",
           "pick": "Erling Haaland (Norway)",
-          "p": 0.611,
-          "note": "7 goals this WC"
+          "p": 0.564,
+          "note": "7 this WC · 37 in 4y (0.86/gm)"
         },
         {
           "market": "1st Half DC",
           "pick": "Norway or Draw",
-          "p": 0.586
+          "p": 0.553
         },
         {
-          "market": "Anytime Scorer",
-          "pick": "Jude Bellingham (England)",
-          "p": 0.547,
-          "note": "4 goals this WC"
+          "market": "Total Goals",
+          "pick": "Over 3.5",
+          "p": 0.54
         },
         {
           "market": "Fouls",
@@ -1237,30 +1271,16 @@
           "note": "exp 21.2"
         },
         {
-          "market": "Result",
-          "pick": "England",
-          "p": 0.534
-        },
-        {
           "market": "Corners",
           "pick": "Over 10.5",
           "p": 0.531,
           "note": "exp 10.9"
         },
         {
-          "market": "1st Half Goals",
-          "pick": "Under 1.5",
-          "p": 0.521
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Under 3.5",
-          "p": 0.502
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Over 3.5",
-          "p": 0.498
+          "market": "Anytime Scorer",
+          "pick": "Jude Bellingham (England)",
+          "p": 0.489,
+          "note": "4 this WC · 8 in 4y (0.151/gm)"
         },
         {
           "market": "Corners",
@@ -1269,9 +1289,14 @@
           "note": "exp 10.9"
         },
         {
-          "market": "Double Chance",
-          "pick": "Norway or Draw",
-          "p": 0.465
+          "market": "Total Goals",
+          "pick": "Under 3.5",
+          "p": 0.46
+        },
+        {
+          "market": "1st Half Goals",
+          "pick": "Under 1.5",
+          "p": 0.46
         },
         {
           "market": "Fouls",
@@ -1280,31 +1305,31 @@
           "note": "exp 21.2"
         },
         {
+          "market": "Double Chance",
+          "pick": "Norway or Draw",
+          "p": 0.43
+        },
+        {
+          "market": "BTTS",
+          "pick": "No",
+          "p": 0.349
+        },
+        {
           "market": "Corners",
           "pick": "Under 9.5",
           "p": 0.349,
           "note": "exp 10.9"
         },
         {
-          "market": "To Qualify",
-          "pick": "Norway",
-          "p": 0.327,
-          "note": "90-min win + ET/pens share"
-        },
-        {
-          "market": "BTTS",
-          "pick": "No",
-          "p": 0.315
-        },
-        {
           "market": "Total Goals",
           "pick": "Over 4.5",
-          "p": 0.306
+          "p": 0.345
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 2.5",
-          "p": 0.292
+          "market": "To Qualify",
+          "pick": "Norway",
+          "p": 0.311,
+          "note": "Elo 1886 v 1991"
         },
         {
           "market": "Fouls",
@@ -1313,15 +1338,20 @@
           "note": "exp 21.2"
         },
         {
-          "market": "Result",
-          "pick": "Norway",
-          "p": 0.26
+          "market": "Total Goals",
+          "pick": "Under 2.5",
+          "p": 0.259
         },
         {
           "market": "Corners",
           "pick": "Under 8.5",
           "p": 0.239,
           "note": "exp 10.9"
+        },
+        {
+          "market": "Result",
+          "pick": "Norway",
+          "p": 0.236
         },
         {
           "market": "Fouls",
@@ -1332,18 +1362,18 @@
         {
           "market": "Result",
           "pick": "Draw",
-          "p": 0.205
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Marcus Rashford (England)",
-          "p": 0.18,
-          "note": "1 goals this WC"
+          "p": 0.194
         },
         {
           "market": "Total Goals",
           "pick": "Over 5.5",
-          "p": 0.165
+          "p": 0.194
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Marcus Rashford (England)",
+          "p": 0.175,
+          "note": "1 this WC · 7 in 4y (0.132/gm)"
         },
         {
           "market": "Corners",
@@ -1353,26 +1383,32 @@
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Antonio Nusa (Norway)",
-          "p": 0.126,
-          "note": "1 goals this WC"
+          "pick": "Leo Østigard (Norway)",
+          "p": 0.127,
+          "note": "1 this WC"
         },
         {
           "market": "Anytime Scorer",
-          "pick": "Leo Østigard (Norway)",
-          "p": 0.126,
-          "note": "1 goals this WC"
+          "pick": "Antonio Nusa (Norway)",
+          "p": 0.114,
+          "note": "1 this WC · 6 in 4y (0.14/gm)"
         },
         {
           "market": "Total Goals",
           "pick": "Under 1.5",
-          "p": 0.12
+          "p": 0.102
         },
         {
           "market": "Fouls",
           "pick": "Over 27.5",
           "p": 0.09,
           "note": "exp 21.2"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Alexander Sørloth (Norway)",
+          "p": 0.035,
+          "note": "10 intl goals in 4y (0.233/gm)"
         }
       ]
     }
