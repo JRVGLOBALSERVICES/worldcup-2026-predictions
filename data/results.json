@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T17:00:04.073Z",
+    "generatedAt": "2026-07-07T17:10:05.403Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 74,
     "live": 1
@@ -40719,7 +40719,10 @@
     },
     "arg-egy-2026-07-07": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -40851,7 +40854,15 @@
             "goals": 0
           }
         },
-        "subs": [],
+        "subs": [
+          {
+            "team": "away",
+            "minute": 45,
+            "on": "Hamdi Fathy",
+            "off": "Emam Ashour",
+            "injury": true
+          }
+        ],
         "firstGoalMethod": "header",
         "firstPenalty": null,
         "waterBreak": {
@@ -40877,7 +40888,7 @@
           },
           "tackles": {
             "home": 12,
-            "away": 4
+            "away": 5
           },
           "saves": {
             "home": 0,
@@ -41037,19 +41048,19 @@
             "key": "effectiveTackles",
             "label": "Effective Tackles",
             "home": "9",
-            "away": "2"
+            "away": "3"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
             "home": "12",
-            "away": "4"
+            "away": "5"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
             "home": "0.8",
-            "away": "0.5"
+            "away": "0.6"
           },
           {
             "key": "interceptions",
