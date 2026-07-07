@@ -52815,6 +52815,278 @@
           "away": "43"
         }
       ]
+    },
+    "sui-col-2026-07-07": {
+      "corners": {
+        "home": 1,
+        "away": 1
+      },
+      "sot": {
+        "home": 0,
+        "away": 0
+      },
+      "shots": {
+        "home": 0,
+        "away": 1
+      },
+      "yellow": {
+        "home": 0,
+        "away": 0
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 0,
+        "away": 0
+      },
+      "fouls": {
+        "home": 4,
+        "away": 2
+      },
+      "cornersByHalf": {
+        "home": [
+          1,
+          0
+        ],
+        "away": [
+          1,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          0,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {},
+      "playerShots": {
+        "Jhon Arias": 1
+      },
+      "playerShotBreakdown": {
+        "Jhon Arias": {
+          "team": "away",
+          "shots": 1,
+          "sot": 0,
+          "off": 0,
+          "blocked": 1,
+          "goals": 0
+        }
+      },
+      "subs": [],
+      "firstGoalMethod": null,
+      "firstPenalty": null,
+      "waterBreak": {},
+      "tempo": {
+        "possession": {
+          "home": 47.5,
+          "away": 52.5
+        },
+        "passes": {
+          "home": 101,
+          "away": 111
+        },
+        "tackles": {
+          "home": 3,
+          "away": 5
+        },
+        "saves": {
+          "home": 0,
+          "away": 0
+        },
+        "offsides": {
+          "home": 1,
+          "away": 0
+        },
+        "blockedShots": {
+          "home": 0,
+          "away": 1
+        },
+        "interceptions": {
+          "home": 5,
+          "away": 2
+        },
+        "clearances": {
+          "home": 7,
+          "away": 2
+        }
+      },
+      "full": [
+        {
+          "key": "foulsCommitted",
+          "label": "Fouls",
+          "home": "4",
+          "away": "2"
+        },
+        {
+          "key": "yellowCards",
+          "label": "Yellow Cards",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "redCards",
+          "label": "Red Cards",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "offsides",
+          "label": "Offsides",
+          "home": "1",
+          "away": "0"
+        },
+        {
+          "key": "wonCorners",
+          "label": "Corner Kicks",
+          "home": "1",
+          "away": "1"
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "possessionPct",
+          "label": "POSSESSION",
+          "home": "47.5",
+          "away": "52.5"
+        },
+        {
+          "key": "totalShots",
+          "label": "SHOTS",
+          "home": "0",
+          "away": "1"
+        },
+        {
+          "key": "shotsOnTarget",
+          "label": "ON GOAL",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "shotPct",
+          "label": "On Target %",
+          "home": "0.0",
+          "away": "0.0"
+        },
+        {
+          "key": "penaltyKickGoals",
+          "label": "Penalty Goals",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "penaltyKickShots",
+          "label": "Penalty Kicks Taken",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "accuratePasses",
+          "label": "Accurate Passes",
+          "home": "90",
+          "away": "93"
+        },
+        {
+          "key": "totalPasses",
+          "label": "Passes",
+          "home": "101",
+          "away": "111"
+        },
+        {
+          "key": "passPct",
+          "label": "Pass Completion %",
+          "home": "0.9",
+          "away": "0.8"
+        },
+        {
+          "key": "accurateCrosses",
+          "label": "Accurate Crosses",
+          "home": "0",
+          "away": "1"
+        },
+        {
+          "key": "totalCrosses",
+          "label": "Crosses",
+          "home": "2",
+          "away": "4"
+        },
+        {
+          "key": "crossPct",
+          "label": "Cross %",
+          "home": "0.0",
+          "away": "0.3"
+        },
+        {
+          "key": "totalLongBalls",
+          "label": "Long Balls",
+          "home": "4",
+          "away": "15"
+        },
+        {
+          "key": "accurateLongBalls",
+          "label": "Accurate Long Balls",
+          "home": "3",
+          "away": "6"
+        },
+        {
+          "key": "longballPct",
+          "label": "Long Balls %",
+          "home": "0.8",
+          "away": "0.4"
+        },
+        {
+          "key": "blockedShots",
+          "label": "Blocked Shots",
+          "home": "0",
+          "away": "1"
+        },
+        {
+          "key": "effectiveTackles",
+          "label": "Effective Tackles",
+          "home": "1",
+          "away": "3"
+        },
+        {
+          "key": "totalTackles",
+          "label": "Tackles",
+          "home": "3",
+          "away": "5"
+        },
+        {
+          "key": "tacklePct",
+          "label": "Tackle %",
+          "home": "0.3",
+          "away": "0.6"
+        },
+        {
+          "key": "interceptions",
+          "label": "Interceptions",
+          "home": "5",
+          "away": "2"
+        },
+        {
+          "key": "effectiveClearance",
+          "label": "Effective Clearances",
+          "home": "7",
+          "away": "2"
+        },
+        {
+          "key": "totalClearance",
+          "label": "Clearances",
+          "home": "7",
+          "away": "2"
+        }
+      ]
     }
   }
 }
