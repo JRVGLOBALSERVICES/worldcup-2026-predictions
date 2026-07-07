@@ -1275,7 +1275,7 @@ export function inPlayMultiLeg(
         parts.push(`${legLabel} ✓`);
       } else if (lm.stats?.playerShots && subbedOff(lm.stats, leg.player)) {
         dead = true;
-        parts.push(`${legLabel} ✗ (subbed off)`);
+        parts.push(`${legLabel} (subbed off) ✗`);
       } else if (doneFull && lm.stats?.playerShots) {
         dead = true;
         parts.push(`${legLabel} ✗`);
@@ -1301,7 +1301,7 @@ export function inPlayMultiLeg(
         parts.push(`${legLabel} ✓`);
       } else if (lm.stats?.playerSot && subbedOff(lm.stats, leg.player)) {
         dead = true;
-        parts.push(`${legLabel} ✗ (subbed off)`);
+        parts.push(`${legLabel} (subbed off) ✗`);
       } else if (doneFull && lm.stats?.playerSot) {
         dead = true;
         parts.push(`${legLabel} ✗`);
