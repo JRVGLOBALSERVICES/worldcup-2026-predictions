@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T16:30:11.948Z",
+    "generatedAt": "2026-07-07T16:40:06.765Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 78
   },
@@ -484,8 +484,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 91,
-        "display": "91.0%",
+        "value": 90.8,
+        "display": "90.8%",
         "matches": 5
       },
       {
@@ -630,8 +630,8 @@
         "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 58.7,
-        "display": "58.7%",
+        "value": 59.3,
+        "display": "59.3%",
         "matches": 5
       },
       {
@@ -670,14 +670,6 @@
       },
       {
         "rank": 4,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 46.6,
-        "display": "46.6%",
-        "matches": 5
-      },
-      {
-        "rank": 5,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
@@ -685,7 +677,7 @@
         "matches": 3
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
@@ -693,12 +685,20 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
         "display": "44.4%",
         "matches": 3
+      },
+      {
+        "rank": 7,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 44.3,
+        "display": "44.3%",
+        "matches": 5
       },
       {
         "rank": 8,
@@ -902,8 +902,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 58.1,
-        "display": "58.1%",
+        "value": 58.3,
+        "display": "58.3%",
         "matches": 5
       },
       {
@@ -6986,31 +6986,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 54.5,
-            "accuratePasses": 134,
-            "totalPasses": 150,
+            "possessionPct": 57.4,
+            "accuratePasses": 193,
+            "totalPasses": 219,
             "shotsOnTarget": 2,
-            "totalShots": 2,
-            "effectiveTackles": 4,
-            "totalTackles": 6,
+            "totalShots": 5,
+            "effectiveTackles": 7,
+            "totalTackles": 9,
             "accurateCrosses": 1,
             "totalCrosses": 1,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 9
+            "accurateLongBalls": 8,
+            "totalLongBalls": 12
           },
           {
             "team": "Egypt",
-            "possessionPct": 45.5,
-            "accuratePasses": 114,
-            "totalPasses": 123,
+            "possessionPct": 42.6,
+            "accuratePasses": 142,
+            "totalPasses": 159,
             "shotsOnTarget": 1,
-            "totalShots": 1,
+            "totalShots": 2,
             "effectiveTackles": 2,
             "totalTackles": 4,
             "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 1,
-            "totalLongBalls": 5
+            "totalCrosses": 4,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 13
           }
         ]
       }
