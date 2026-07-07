@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T00:30:03.058Z",
+    "generatedAt": "2026-07-07T00:40:03.583Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 73,
     "live": 1
@@ -14413,8 +14413,8 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "advanced": null,
       "goals": [
@@ -14425,25 +14425,48 @@
           "assist": "Nicolas Raskin",
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Malik Tillman",
+          "minute": 31,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Charles De Ketelaere",
+          "minute": 32,
+          "assist": "Leandro Trossard",
+          "penalty": false,
+          "ownGoal": false
         }
       ],
-      "cards": [],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Weston McKennie",
+          "minute": 34,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-07T00:00:00.000Z",
       "stats": {
         "corners": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "sot": {
-          "home": 0,
-          "away": 3
+          "home": 1,
+          "away": 4
         },
         "shots": {
-          "home": 0,
-          "away": 7
+          "home": 1,
+          "away": 8
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "red": {
@@ -14451,12 +14474,12 @@
           "away": 0
         },
         "cards": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fouls": {
-          "home": 3,
-          "away": 2
+          "home": 4,
+          "away": 3
         },
         "cornersByHalf": {
           "home": [
@@ -14464,7 +14487,7 @@
             0
           ],
           "away": [
-            1,
+            2,
             0
           ]
         },
@@ -14486,7 +14509,8 @@
           "Leandro Trossard": 2,
           "Youri Tielemans": 2,
           "Timothy Castagne": 1,
-          "Charles De Ketelaere": 2
+          "Charles De Ketelaere": 3,
+          "Malik Tillman": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -14508,12 +14532,12 @@
             "away": 56.1
           },
           "passes": {
-            "home": 109,
-            "away": 138
+            "home": 145,
+            "away": 185
           },
           "tackles": {
-            "home": 5,
-            "away": 7
+            "home": 6,
+            "away": 10
           },
           "saves": {
             "home": 2,
@@ -14532,8 +14556,8 @@
             "away": 2
           },
           "clearances": {
-            "home": 14,
-            "away": 3
+            "home": 15,
+            "away": 4
           }
         }
       }
