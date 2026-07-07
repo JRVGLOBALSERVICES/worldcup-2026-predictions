@@ -119,6 +119,15 @@ export function legLabelFor(leg: MultiLegCond): string {
       return leg.outcome === "X"
         ? `${m} — level at half-time`
         : `${leg.outcome === "1" ? h : a} to lead at half-time`;
+    case "firstHalfDoubleChance": {
+      const dc =
+        leg.outcome === "1X"
+          ? `${h} or draw`
+          : leg.outcome === "X2"
+            ? `${a} or draw`
+            : `${h} or ${a}`;
+      return `${m} — ${dc} at half-time (1H double chance)`;
+    }
     case "resultAndTotalUnder":
       return `${leg.outcome === "X" ? `${m} draw` : `${leg.outcome === "1" ? h : a} to win`} + Under ${leg.line} goals (${totalThreshold(leg.line, "under")})`;
     case "resultAndTotalOver":
@@ -1609,6 +1618,29 @@ export function inPlayMultiLeg(
         }
       } else if (o(cur.home, cur.away) === leg.outcome) {
         onTrack = true; // first half still running, currently on the right side
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "firstHalfDoubleChance") {
+      // Double chance off the HALF-TIME score. Locks the instant HT is known;
+      // covers two of the three HT outcomes, so it's only dead if HT lands on
+      // the single uncovered outcome.
+      const ht = lm.htScore;
+      const o = (h: number, a: number) => (h > a ? "1" : h < a ? "2" : "X");
+      if (ht) {
+        if (leg.outcome.includes(o(ht.home, ht.away))) {
+          wonCount++;
+          parts.push(`${legLabel} ✓`);
+        } else {
+          dead = true;
+          parts.push(`${legLabel} ✗`);
+        }
+      } else if (leg.outcome.includes(o(cur.home, cur.away))) {
+        onTrack = true; // 1st half running, currently inside the covered pair
         parts.push(`${legLabel} ⋯`);
       } else {
         parts.push(`${legLabel} —`);

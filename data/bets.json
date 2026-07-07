@@ -15815,6 +15815,259 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-862178069283815425",
+      "slipNo": "862178069283815425",
+      "matchId": "arg-egy-2026-07-07",
+      "player": "13-leg double",
+      "market": "Double (13)",
+      "label": "REAL 1xBet slip 862178069283815425 (07/07 11:47, pre-match) — Double @ 20.73, RM80 -> RM1,658.72. Arg/Egy: 1H Over 0.5 · Argentina to qualify · Under 5.5 · Corners Over 8.5 · BTTS · Salah 1+ shots · Ashour 1+ shots · Argentina or Egypt (double chance) · Messi score/assist. Swi/Col: Over 0.5 · Under 4.5 · Switzerland or Colombia (double chance) · Embolo 1+ shots.",
+      "odds": 20.73,
+      "stake": 80,
+      "placedAt": "07/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "cornersTotalOver",
+            "line": 8.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "btts"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "playerShotsOver",
+            "player": "Mohamed Salah",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "playerShotsOver",
+            "player": "Emam Ashour",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "playerShotsOver",
+            "player": "Breel Embolo",
+            "line": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-862177125527650305",
+      "slipNo": "862177125527650305",
+      "matchId": "arg-egy-2026-07-07",
+      "player": "16-leg 4-fold",
+      "market": "4-Fold (16)",
+      "label": "REAL 1xBet slip 862177125527650305 (07/07 11:44, pre-match) — 4-fold @ 93.56 (+2%), RM28 -> RM2,672.29. Arg/Egy: Argentina to qualify · Over 1.5 · Under 5.5 · Messi score/assist. Swi/Col: Over 0.5 · Under 4.5 · Luis Diaz score/assist. Fra/Mor: France to qualify · Over 0.5 · Under 5.5 · France or Morocco (double chance) · Mbappe anytime · Olise score/assist. Nor/Eng: Haaland anytime · Kane score/assist · Under 5.5.",
+      "odds": 93.56,
+      "stake": 28,
+      "placedAt": "07/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Luis Diaz"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Michael Olise"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scored",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "totalUnder",
+            "line": 5.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-862170009198862337",
+      "slipNo": "862170009198862337",
+      "matchId": "arg-egy-2026-07-07",
+      "player": "12-leg double",
+      "market": "Double (12)",
+      "label": "REAL 1xBet slip 862170009198862337 (07/07 11:15, pre-match) — Double @ 47.42, RM10 -> RM474.22. Arg/Egy: Argentina to qualify · Over 0.5 · Under 5.5 · 1H Over 0.5 · BTTS · Argentina or Egypt (double chance) · Argentina or draw at HT (1H double chance) · Messi score/assist. Swi/Col: Under 4.5 · BTTS · Luis Diaz score/assist · Switzerland or Colombia (double chance).",
+      "odds": 47.42,
+      "stake": 10,
+      "placedAt": "07/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "btts"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "firstHalfDoubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "btts"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Luis Diaz"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

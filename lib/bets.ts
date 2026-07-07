@@ -384,6 +384,9 @@ export type MultiLegCond = { odds?: number } & (
   | { matchId: string; kind: "doubleChance"; outcome: "1X" | "12" | "X2" }
   // 1X2 off the HALF-TIME score ("1X2 … 1st half"), oriented to home/away.
   | { matchId: string; kind: "resultFirstHalf"; outcome: "1" | "X" | "2" }
+  // Double chance on the 1st-half result only ("Argentina or Tie" 1st Half
+  // Double Chance → outcome:"1X"). Covers two of the three HT outcomes.
+  | { matchId: string; kind: "firstHalfDoubleChance"; outcome: "1X" | "12" | "X2" }
   // Result + Total: a 1X2 outcome AND the match total is under `line`
   // ("Team 2 To Win And Total < (2.5)" → outcome:"2", line:2.5).
   | { matchId: string; kind: "resultAndTotalUnder"; outcome: "1" | "X" | "2"; line: number }
@@ -1573,6 +1576,16 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         if (!ht) return "lost";
         const outcome = ht.home > ht.away ? "1" : ht.home < ht.away ? "2" : "X";
         if (outcome !== leg.outcome) return "lost";
+        continue;
+      }
+
+      if (leg.kind === "firstHalfDoubleChance") {
+        // Double chance off the HALF-TIME score — the HT 1X2 outcome must be one
+        // of the two covered ("1X"/"12"/"X2"), oriented to the leg match.
+        const ht = getResult(leg.matchId).ht;
+        if (!ht) return "lost";
+        const outcome = ht.home > ht.away ? "1" : ht.home < ht.away ? "2" : "X";
+        if (!leg.outcome.includes(outcome)) return "lost";
         continue;
       }
 
