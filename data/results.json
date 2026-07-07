@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T00:20:21.869Z",
+    "generatedAt": "2026-07-07T00:30:03.058Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 73,
     "live": 1
@@ -14455,8 +14455,8 @@
           "away": 0
         },
         "fouls": {
-          "home": 2,
-          "away": 0
+          "home": 3,
+          "away": 2
         },
         "cornersByHalf": {
           "home": [
@@ -14490,18 +14490,29 @@
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
-        "waterBreak": {},
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Foul",
+            "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
         "tempo": {
           "possession": {
-            "home": 40.5,
-            "away": 59.5
+            "home": 43.9,
+            "away": 56.1
           },
           "passes": {
-            "home": 67,
-            "away": 99
+            "home": 109,
+            "away": 138
           },
           "tackles": {
-            "home": 3,
+            "home": 5,
             "away": 7
           },
           "saves": {
@@ -14517,12 +14528,12 @@
             "away": 2
           },
           "interceptions": {
-            "home": 0,
+            "home": 2,
             "away": 2
           },
           "clearances": {
-            "home": 10,
-            "away": 2
+            "home": 14,
+            "away": 3
           }
         }
       }
