@@ -1179,6 +1179,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "arg-egy-2026-07-07": {
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 3,
+        "away": 2
+      },
+      "ft90": {
+        "home": 3,
+        "away": 2
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4600,6 +4616,83 @@
           "team": "home",
           "player": "Malik Tillman",
           "minute": 68,
+          "type": "yellow"
+        }
+      ]
+    },
+    "arg-egy-2026-07-07": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Yasser Ibrahim",
+          "minute": 14,
+          "assist": "Marawan Attia",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Mostafa Zico",
+          "minute": 67,
+          "assist": "Haissem Hassan",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Cristian Romero",
+          "minute": 79,
+          "assist": "Lionel Messi",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Lionel Messi",
+          "minute": 83,
+          "assist": "Gonzalo Montiel",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Enzo Fernández",
+          "minute": 90,
+          "assist": "Lautaro Martínez",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Mostafa Shoubir",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Hamdy Fathy",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Marawan Attia",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Unknown",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Haissem Hassan",
+          "minute": 90,
           "type": "yellow"
         }
       ]
@@ -16385,6 +16478,61 @@
             "matchId": "sui-col-2026-07-07",
             "kind": "totalShotsUnder",
             "line": 24.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-862385728502599681",
+      "slipNo": "862385728502599681",
+      "matchId": "sui-col-2026-07-07",
+      "player": "4-fold acca",
+      "market": "4 folds (7 player legs)",
+      "label": "REAL 1xBet slip 862385728502599681 (07/08 01:32, pre-match) — 4 folds @ 164.32 +2% bonus (eff 167.615), RM14 -> RM2,346.61. Swi/Col @2.73: Embolo score/assist. Fra/Mar @3.32: Mbappe anytime scorer + Olise score/assist. Nor/Eng @3.37: Kane score/assist + Haaland score/assist. Spa/Bel @5.38: Oyarzabal score/assist + Trossard score/assist.",
+      "odds": 167.615,
+      "stake": 14,
+      "placedAt": "07/08 01:32",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Breel Embolo",
+            "odds": 2.73
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Michael Olise",
+            "odds": 3.32
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Erling Haaland",
+            "odds": 3.37
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "scoredOrAssisted",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "scoredOrAssisted",
+            "player": "Leandro Trossard",
+            "odds": 5.38
           }
         ]
       }
@@ -52147,7 +52295,7 @@
       },
       "yellow": {
         "home": 0,
-        "away": 1
+        "away": 4
       },
       "red": {
         "home": 0,
@@ -52155,11 +52303,11 @@
       },
       "cards": {
         "home": 0,
-        "away": 1
+        "away": 4
       },
       "fouls": {
-        "home": 12,
-        "away": 10
+        "home": 13,
+        "away": 11
       },
       "cornersByHalf": {
         "home": [
@@ -52294,8 +52442,8 @@
           "team": "away",
           "shots": 2,
           "sot": 0,
-          "off": 1,
-          "blocked": 1,
+          "off": 2,
+          "blocked": 0,
           "goals": 0
         },
         "Cristian Romero": {
@@ -52349,6 +52497,27 @@
           "on": "Omar Marmoush",
           "off": "Mostafa Zico",
           "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 90,
+          "on": "Facundo Medina",
+          "off": "Julián Alvarez",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 90,
+          "on": "Nicolás Otamendi",
+          "off": "Cristian Romero",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 90,
+          "on": "Zizo",
+          "off": "Mohanad Lasheen",
+          "injury": false
         }
       ],
       "firstGoalMethod": "header",
@@ -52377,16 +52546,16 @@
       },
       "tempo": {
         "possession": {
-          "home": 64.6,
-          "away": 35.4
+          "home": 63.6,
+          "away": 36.4
         },
         "passes": {
-          "home": 592,
-          "away": 330
+          "home": 602,
+          "away": 349
         },
         "tackles": {
           "home": 20,
-          "away": 14
+          "away": 15
         },
         "saves": {
           "home": 0,
@@ -52405,22 +52574,22 @@
           "away": 10
         },
         "clearances": {
-          "home": 12,
-          "away": 42
+          "home": 14,
+          "away": 43
         }
       },
       "full": [
         {
           "key": "foulsCommitted",
           "label": "Fouls",
-          "home": "12",
-          "away": "10"
+          "home": "13",
+          "away": "11"
         },
         {
           "key": "yellowCards",
           "label": "Yellow Cards",
           "home": "0",
-          "away": "1"
+          "away": "4"
         },
         {
           "key": "redCards",
@@ -52448,9 +52617,9 @@
         },
         {
           "key": "possessionPct",
-          "label": "POSSESSION",
-          "home": "64.6",
-          "away": "35.4"
+          "label": "Possession",
+          "home": "63.6",
+          "away": "36.4"
         },
         {
           "key": "totalShots",
@@ -52485,14 +52654,14 @@
         {
           "key": "accuratePasses",
           "label": "Accurate Passes",
-          "home": "535",
-          "away": "275"
+          "home": "541",
+          "away": "289"
         },
         {
           "key": "totalPasses",
           "label": "Passes",
-          "home": "592",
-          "away": "330"
+          "home": "602",
+          "away": "349"
         },
         {
           "key": "passPct",
@@ -52510,7 +52679,7 @@
           "key": "totalCrosses",
           "label": "Crosses",
           "home": "26",
-          "away": "6"
+          "away": "8"
         },
         {
           "key": "crossPct",
@@ -52521,19 +52690,19 @@
         {
           "key": "totalLongBalls",
           "label": "Long Balls",
-          "home": "26",
-          "away": "31"
+          "home": "31",
+          "away": "35"
         },
         {
           "key": "accurateLongBalls",
           "label": "Accurate Long Balls",
-          "home": "18",
-          "away": "9"
+          "home": "19",
+          "away": "12"
         },
         {
           "key": "longballPct",
           "label": "Long Balls %",
-          "home": "0.7",
+          "home": "0.6",
           "away": "0.3"
         },
         {
@@ -52546,13 +52715,13 @@
           "key": "effectiveTackles",
           "label": "Effective Tackles",
           "home": "15",
-          "away": "7"
+          "away": "8"
         },
         {
           "key": "totalTackles",
           "label": "Tackles",
           "home": "20",
-          "away": "14"
+          "away": "15"
         },
         {
           "key": "tacklePct",
@@ -52569,14 +52738,14 @@
         {
           "key": "effectiveClearance",
           "label": "Effective Clearances",
-          "home": "12",
-          "away": "42"
+          "home": "14",
+          "away": "43"
         },
         {
           "key": "totalClearance",
           "label": "Clearances",
-          "home": "12",
-          "away": "42"
+          "home": "14",
+          "away": "43"
         }
       ]
     }
