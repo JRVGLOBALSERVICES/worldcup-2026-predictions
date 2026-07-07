@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generatedAt": "2026-07-07T15:04:35.676426Z",
+  "generatedAt": "2026-07-07T15:05:34.558530Z",
   "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
   "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
   "modelUpdatedAt": "2026-07-07T12:20:09.702Z"
@@ -21287,55 +21287,55 @@
   "arg-egy-2026-07-07": {
    "win": {
     "pick": "Argentina",
-    "fairOdds": "1.42",
-    "reason": "Confirmed XIs: Scaloni freshens the side after 120 min vs Cape Verde (Tagliafico, Paredes, Álvarez in) while Egypt keep their deep-block core with a sub-100% Salah (hamstring, 120 min vs Australia). Market prices Argentina ~74%; we hold ~70% — Egypt's deep-block-and-counter profile is a live draw risk (cf. Portugal 1-1 DR Congo), and Argentina's back line was opened twice by Cape Verde. Draw ~21%, Egypt ~9%.",
+    "fairOdds": "1.61",
+    "reason": "Confirmed-XI read: Argentina 62% / draw 24% / Egypt 14%. Scaloni beefed the midfield (Paredes anchor in, Almada out) and picked Álvarez's press over Lautaro — built to break a deep block. But Egypt's confirmed 4-2-3-1 low block (Marmoush benched, extra legs in Lashin/Hassan) is a genuine draw-and-under profile: under 2.5 has hit in 5 of Egypt's last 6, and market consensus is Argentina + under.",
     "strength": 4
    },
    "halfTime": {
     "score": "0-0",
-    "fairOdds": "3.10",
+    "fairOdds": "3.05",
     "alt": "1-0",
-    "altOdds": "4.60"
+    "altOdds": "5.30"
    },
    "htft": {
     "pick": "Draw/Argentina",
-    "fairOdds": "3.60"
+    "fairOdds": "3.90"
    },
    "fullTime": {
     "score": "2-0",
-    "fairOdds": "8.00"
+    "fairOdds": "8.40"
    },
    "scorers": [
     {
      "player": "Lionel Messi",
      "team": "Argentina",
-     "fairOdds": "1.72",
+     "fairOdds": "1.70",
      "banker": false,
-     "note": "7 goals, scored in 8 straight WC games, sole pen/FK/corner taker — but 39 and off 120 minutes; veteran marquee ≠ banker (Ronaldo lesson). ~58% anytime.",
+     "note": "Scored in 8 straight WC matches, Golden Boot leader (6 group goals), takes pens + FKs. Still NOT a banker: he's 39, played 120 min Friday, and Egypt's block starves the box — veteran stars are non-banker by rule.",
      "strength": 4
     },
     {
      "player": "Julián Álvarez",
      "team": "Argentina",
-     "fairOdds": "2.60",
+     "fairOdds": "3.60",
      "banker": false,
-     "note": "Fresh legs after being rested vs Cape Verde; leads the line with Messi. ~38% anytime on ~2.0 team xG.",
-     "strength": 3
+     "note": "Confirmed starter over Lautaro for his pressing (28.6 pressing actions/90). 0 G/A this tournament — picked for work rate, but he's the man on the end of the front-two moves.",
+     "strength": 2
     },
     {
      "player": "Mohamed Salah",
      "team": "Egypt",
-     "fairOdds": "5.00",
+     "fairOdds": "5.40",
      "banker": false,
-     "note": "1G 1A this WC, carrying a minor hamstring issue but starts; Egypt's pen taker and counter outlet. ~20% anytime.",
+     "note": "Egypt's whole attack with Marmoush benched: goal+assist vs NZ, Panenka in the R32 shootout, sole pen/set-piece taker. Counters at Tagliafico's flank are Egypt's one road to goal.",
      "strength": 2
     },
     {
-     "player": "Emam Ashour",
-     "team": "Egypt",
-     "fairOdds": "7.00",
+     "player": "Alexis Mac Allister",
+     "team": "Argentina",
+     "fairOdds": "5.60",
      "banker": false,
-     "note": "Egypt's breakout — scored their biggest goals vs Belgium and vs Australia; arrives late in the box. ~14% anytime.",
+     "note": "Arrives late from midfield into the space a deep block concedes at the edge of the box; second-ball threat on Messi/Paredes corners.",
      "strength": 1
     }
    ],
@@ -21343,34 +21343,34 @@
     {
      "player": "Lionel Messi",
      "team": "Argentina",
-     "fairOdds": "2.40",
-     "banker": false,
-     "note": "Primary corner/FK taker (14 set-piece attempts, most on team); winner vs Cape Verde came from his corner. ~42% assist chance."
+     "fairOdds": "2.60",
+     "banker": true,
+     "note": "Everything runs through him vs a low block — corners, free kicks, and the final pass between the lines. Creator is the safer Messi market than scorer today."
     },
     {
-     "player": "Alexis Mac Allister",
+     "player": "Rodrigo De Paul",
      "team": "Argentina",
-     "fairOdds": "3.40",
+     "fairOdds": "4.20",
      "banker": false,
-     "note": "Argentina's most consistent open-play creator this tournament; keeps his place in the confirmed XI. ~29%."
+     "note": "Right-side link man and a corner taker in the confirmed XI; feeds Messi's half-space."
     },
     {
-     "player": "Mohamed Salah",
+     "player": "Mostafa Ziko",
      "team": "Egypt",
-     "fairOdds": "5.50",
+     "fairOdds": "7.50",
      "banker": false,
-     "note": "Egypt's set-piece hub (12 SP attempts) and counter trigger — assisted vs New Zealand. ~18%."
+     "note": "Goal + assist vs New Zealand; with Marmoush out he's the second counter-outlet alongside Salah."
     }
    ],
    "penalty": {
     "likelihood": "medium",
     "taker": "Lionel Messi",
     "backup": "Julián Álvarez",
-    "note": "Argentina should camp in Egypt's box against a deep block, so a spot-kick is genuinely live. Pen order Messi → Lautaro → Álvarez. Egypt's taker if awarded: Salah (Marmoush backup)."
+    "note": "Deep blocks concede box contact — a pen is Argentina's likeliest route past a packed area. Messi first (5 pens in qualifying); with Lautaro (2nd choice) benched, Álvarez moves up to on-pitch backup. For Egypt it's Salah, sole taker."
    },
    "lineups": {
-    "home": "Emiliano Martínez, Lisandro Martínez, Cristian Romero, Nicolás Tagliafico, Nahuel Molina, Leandro Paredes, Alexis Mac Allister, Enzo Fernández, Rodrigo De Paul, Julián Álvarez, Lionel Messi",
-    "away": "Mostafa Shoubir, Ramy Rabia, Yasser Ibrahim, Karim Hafez, Mohamed Hany, Mohanad Lashin, Marawan Attia, Haissem Hassan, Emam Ashour, Mostafa Zico, Mohamed Salah",
+    "home": "Emiliano Martínez, Nahuel Molina, Cristian Romero, Lisandro Martínez, Nicolás Tagliafico, Rodrigo De Paul, Leandro Paredes, Alexis Mac Allister, Enzo Fernández, Lionel Messi, Julián Álvarez",
+    "away": "Mostafa Shobeir, Mohamed Hany, Ramy Rabia, Yasser Ibrahim, Karim Hafez, Emam Ashour, Marwan Attia, Mostafa Ziko, Mohanad Lashin, Mohamed Salah, Haissem Hassan",
     "status": "confirmed",
     "homeXI": {
      "formation": "4-4-2",
@@ -21381,39 +21381,24 @@
        "pos": "G"
       },
       {
-       "num": 6,
-       "name": "Lisandro Martínez",
-       "pos": "CD-L"
-      },
-      {
-       "num": 13,
-       "name": "Cristian Romero",
-       "pos": "CD-R"
-      },
-      {
-       "num": 3,
-       "name": "Nicolás Tagliafico",
-       "pos": "LB"
-      },
-      {
        "num": 26,
        "name": "Nahuel Molina",
        "pos": "RB"
       },
       {
-       "num": 5,
-       "name": "Leandro Paredes",
-       "pos": "CM-L"
+       "num": 13,
+       "name": "Cristian Romero",
+       "pos": "CD"
       },
       {
-       "num": 20,
-       "name": "Alexis Mac Allister",
-       "pos": "CM-R"
+       "num": 25,
+       "name": "Lisandro Martínez",
+       "pos": "CD"
       },
       {
-       "num": 24,
-       "name": "Enzo Fernández",
-       "pos": "LM"
+       "num": null,
+       "name": "Nicolás Tagliafico",
+       "pos": "LB"
       },
       {
        "num": 7,
@@ -21421,39 +21406,39 @@
        "pos": "RM"
       },
       {
-       "num": 9,
-       "name": "Julián Álvarez",
-       "pos": "CF-L"
+       "num": null,
+       "name": "Leandro Paredes",
+       "pos": "CM"
+      },
+      {
+       "num": 20,
+       "name": "Alexis Mac Allister",
+       "pos": "CM"
+      },
+      {
+       "num": 24,
+       "name": "Enzo Fernández",
+       "pos": "LM"
       },
       {
        "num": 10,
        "name": "Lionel Messi",
-       "pos": "CF-R"
+       "pos": "ST"
+      },
+      {
+       "num": null,
+       "name": "Julián Álvarez",
+       "pos": "ST"
       }
      ]
     },
     "awayXI": {
-     "formation": "4-4-2",
+     "formation": "4-2-3-1",
      "players": [
       {
        "num": 23,
-       "name": "Mostafa Shoubir",
+       "name": "Mostafa Shobeir",
        "pos": "G"
-      },
-      {
-       "num": 5,
-       "name": "Ramy Rabia",
-       "pos": "CD-L"
-      },
-      {
-       "num": 2,
-       "name": "Yasser Ibrahim",
-       "pos": "CD-R"
-      },
-      {
-       "num": 15,
-       "name": "Karim Hafez",
-       "pos": "LB"
       },
       {
        "num": 3,
@@ -21461,34 +21446,49 @@
        "pos": "RB"
       },
       {
-       "num": 17,
-       "name": "Mohanad Lashin",
-       "pos": "CM-L"
+       "num": 5,
+       "name": "Ramy Rabia",
+       "pos": "CD"
       },
       {
-       "num": 19,
-       "name": "Marawan Attia",
-       "pos": "CM-R"
+       "num": 2,
+       "name": "Yasser Ibrahim",
+       "pos": "CD"
       },
       {
-       "num": 12,
-       "name": "Haissem Hassan",
-       "pos": "LM"
+       "num": 30,
+       "name": "Karim Hafez",
+       "pos": "LB"
       },
       {
        "num": 8,
        "name": "Emam Ashour",
-       "pos": "RM"
+       "pos": "CM"
+      },
+      {
+       "num": 19,
+       "name": "Marwan Attia",
+       "pos": "CM"
       },
       {
        "num": 11,
-       "name": "Mostafa Zico",
-       "pos": "CF-L"
+       "name": "Mostafa Ziko",
+       "pos": "RW"
+      },
+      {
+       "num": null,
+       "name": "Mohanad Lashin",
+       "pos": "AM"
       },
       {
        "num": 10,
        "name": "Mohamed Salah",
-       "pos": "CF-R"
+       "pos": "LW"
+      },
+      {
+       "num": null,
+       "name": "Haissem Hassan",
+       "pos": "CF"
       }
      ]
     }
@@ -21497,43 +21497,43 @@
     {
      "player": "Lionel Messi",
      "team": "Argentina",
-     "note": "39, Golden Boot co-leader (7, level with Mbappé and Haaland), scored in a record 8 straight WC matches, 20 career WC goals. Sole pen + set-piece taker. Off 120 hard minutes on 7/3 — elite but NOT a banker tag."
+     "note": "Starts despite 120 minutes on Friday — scored in 8 straight WC games, 20 career WC goals, leads the Golden Boot. Takes pens and free kicks."
     },
     {
      "player": "Julián Álvarez",
      "team": "Argentina",
-     "note": "Fresh legs after being rested vs Cape Verde; leads the line with Messi."
+     "note": "Preferred to Lautaro Martínez (benched, tactical) for pressing intensity — 28.6 pressing actions/90 vs Lautaro's 20.4. Yet to score this tournament."
     },
     {
      "player": "Leandro Paredes",
      "team": "Argentina",
-     "note": "In for structure after the midfield was opened by Cape Verde's counters — screens the transitions Salah lives on."
+     "note": "Surprise anchor for Almada — Scaloni adds a second base alongside Enzo to control tempo vs the low block. Also a corner taker."
     },
     {
-     "player": "Mohamed Salah",
-     "team": "Egypt",
-     "note": "Starts despite a minor hamstring concern after 120 min vs Australia. 1G 1A (xG 1.94), pens + primary set pieces. Works the Tagliafico side on the counter — Egypt's out ball."
+     "player": "Nicolás Tagliafico",
+     "team": "Argentina",
+     "note": "In for Facundo Medina (knock in the R32, 'cramp' officially). His flank vs Salah's counters is THE defensive matchup of the tie."
     },
     {
-     "player": "Emam Ashour",
+     "player": "Omar Marmoush",
      "team": "Egypt",
-     "note": "Breakout No.10 — 20-yard opener vs Belgium, headed opener vs Australia. Egypt's likeliest non-Salah scorer, arriving late against a tired back line."
+     "note": "Benched, not injured — dropped after an underwhelming group stage (also benched vs Iran). Egypt's obvious impact sub if chasing."
     },
     {
-     "player": "Mostafa Zico",
+     "player": "Mostafa Shobeir",
      "team": "Egypt",
-     "note": "Goal + assist in the 3-1 over New Zealand; leads the press-and-counter out of the deep block."
+     "note": "Egypt's designated No.1, not an emergency pick — 4th-highest-rated GK of the tournament so far (7.80), and saved Egypt in the R32 shootout."
     }
    ],
    "confidence": "medium",
-   "strength": 5,
+   "strength": 4,
    "sources": [
-    "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary?event=760509",
-    "https://www.rotowire.com/soccer/article/argentina-vs-egypt-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121312",
-    "https://www.infobae.com/deportes/2026/07/07/argentina-egipto-en-vivo-por-los-octavos-de-final-del-mundial-hora-tv-formaciones-y-todo-lo-que-hay-que-saber/",
-    "https://worldsoccertalk.com/world-cup/lionel-scaloni-reportedly-weighing-one-change-in-each-line-of-lionel-messis-argentina-lineup-for-egypt-clash/",
-    "https://www.aljazeera.com/sports/2026/7/3/egypt-beat-australia-on-penalties-to-win-first-world-cup-knockout-match",
-    "https://www.pbs.org/newshour/world/lionel-messi-scores-20th-world-cup-goal-extends-streak-to-8-games-and-takes-golden-boot-lead"
+    "Confirmed XIs: rotowire.com preview 121312 + moroccoworldnews.com (official lineups out)",
+    "Marmoush benched (not injured): rotowire.com 522773, africasoccer.com",
+    "Álvarez-over-Lautaro pressing call: Olé via mundoalbiceleste.com",
+    "Form/set pieces: espn.com, si.com, sportsmole.co.uk, aljazeera.com",
+    "Market read (ARG + under 2.5 consensus): covers.com, cbssports.com, fanduel.com",
+    "Model: bivariate-Poisson xG re-weighted for the confirmed XIs"
    ],
    "pitchReport": {
     "facts": [
@@ -21546,10 +21546,10 @@
      "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Egypt to sit compact and play on the break.",
      "Goal expectancy 2.1–0.7 (Argentina–Egypt) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
     ],
-    "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+    "lineups": "CONFIRMED. Argentina: Álvarez over Lautaro (press), Paredes anchor in, Tagliafico for the knocked Medina. Egypt: Marmoush BENCHED (tactical) — Haissem Hassan leads the line, Lashin adds legs. Full-strength intent on both sides.",
     "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-    "xgRead": "Argentina shade the chance-creation (2.1 vs 0.7 xG) — they should make the running.",
-    "drawRisk": "Moderate — 19.4% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+    "xgRead": "Argentina shade chance-creation (~1.9 vs 0.8 on the XI-adjusted read) but a packed box compresses that edge — expect volume of half-chances, not clean big ones.",
+    "drawRisk": "Real — 24% on the re-weighted model. Egypt's confirmed 4-2-3-1 low block is exactly the possession-favourite trap profile: under 2.5 hit in 5 of their last 6, and they held Belgium and Iran to draws. Respect draw-no-bet over correct-score bravado.",
     "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
     "caseFor": [
      "Argentina are the model's 68.7% favourite — higher attack rating and the better recent goal-rate.",
@@ -21557,11 +21557,12 @@
      "Conditions (heat) suit a controlled game Argentina can manage."
     ],
     "caseAgainst": [
-     "19.4% draw + Egypt's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-     "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result."
+     "24% draw + Egypt's deep block — the classic possession-favourite-vs-low-block out-xG trap (Portugal 0.64 xG vs DR Congo's 0.82 despite 75% possession on 2026-06-17).",
+     "Messi is 39 and played 120 minutes four days ago; Álvarez hasn't scored all tournament.",
+     "Egypt already parked draws vs Belgium and Iran, and won a shootout — they're built for exactly this game."
     ],
     "verdict": "Bet",
-    "changeMind": "A confirmed XI resting Lionel Messi, or news the underdog is missing a defensive linchpin."
+    "changeMind": "Nothing left to wait for — XIs are in. Only a pre-KO warm-up injury changes this read."
    },
    "valueSpot": null,
    "trapDetector": {
@@ -21587,13 +21588,13 @@
      },
      {
       "name": "Lineups unconfirmed and the bet depends on them",
-      "tripped": true,
-      "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+      "tripped": false,
+      "why": "XIs confirmed — scorer/lineup markets are now live-grounded (Marmoush benched, Lautaro benched)."
      },
      {
       "name": "Ignoring the draw",
-      "tripped": false,
-      "why": "Draw chance (19.4%) is low enough to discount."
+      "tripped": true,
+      "why": "24% draw vs a confirmed low block that already drew twice this tournament — do not wave it away."
      },
      {
       "name": "Emotional / a chase / just for action",
@@ -21608,10 +21609,10 @@
    },
    "brainSummary": {
     "verdict": "PLAYABLE",
-    "call": "Argentina to win is a clean call.",
+    "call": "Argentina to win, but pair with under 2.5 / draw-no-bet rather than correct-score heroics.",
     "read": {
      "tag": "Bet",
-     "line": "Argentina are the model's 69% pick."
+     "line": "Argentina 62% on the confirmed-XI model — press-heavy XI built to break the block."
     },
     "price": {
      "tag": "Not priced yet",
@@ -21619,17 +21620,17 @@
     },
     "trap": {
      "tag": "1 warning",
-     "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+     "line": "Draw risk is live: Egypt's confirmed low block already parked two draws this tournament."
     }
    },
    "resolution": {
-    "ninety": 80.6,
-    "extraTime": 10.4,
-    "penalties": 9,
+    "ninety": 76.0,
+    "extraTime": 13.0,
+    "penalties": 11.0,
     "mostLikely": "Regulation",
     "etWinner": "Argentina",
     "shootout": "Near coin-flip, with the marginal nerve edge to Argentina.",
-    "note": "Most likely settled inside 90 (80.6%). But a 19.4% level 90 keeps extra time (10.4%) and penalties (9%) live — in a knockout, that's the bit a straight win bet ignores."
+    "note": "Settled inside 90 at 76%, but a 24% level game keeps ET (13%) and pens (11%) live — and Egypt just WON a shootout while Shobeir is the tournament's 4th-rated GK. A straight win bet ignores exactly the scenario Egypt is built for."
    }
   },
   "sui-col-2026-07-07": {
