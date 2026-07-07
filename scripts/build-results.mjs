@@ -191,6 +191,20 @@ function statsFromSummary(summary, fixture) {
   const wbH1 = waterBreakAction(summary.commentary, 1);
   const wbH2 = waterBreakAction(summary.commentary, 2);
 
+  // The COMPLETE boxscore list, zipped home/away in ESPN's order — labels +
+  // displayValue strings intact (percents included). Display-only ("all match
+  // stats" boards); mirrors lib/live.ts fetchStats — keep in sync.
+  const full = (home.statistics ?? []).flatMap((hs) => {
+    if (!hs.name) return [];
+    const as = (away.statistics ?? []).find((x) => x.name === hs.name);
+    return [{
+      key: hs.name,
+      label: hs.label ?? hs.name,
+      home: hs.displayValue ?? String(hs.value ?? 0),
+      away: as?.displayValue ?? String(as?.value ?? 0),
+    }];
+  });
+
   return {
     corners, sot, shots, yellow, red, cards, fouls, cornersByHalf, sotByHalf, playerSot, playerShots,
     playerShotBreakdown,
@@ -211,6 +225,7 @@ function statsFromSummary(summary, fixture) {
       interceptions: { home: statVal(home, "interceptions"), away: statVal(away, "interceptions") },
       clearances: { home: statVal(home, "effectiveClearance"), away: statVal(away, "effectiveClearance") },
     },
+    ...(full.length ? { full } : {}),
   };
 }
 
@@ -720,8 +735,9 @@ async function main() {
   const fixById = Object.fromEntries(fixtures.map((f) => [f.id, f]));
   // Refetch a finished match's summary until its stats snapshot exists, its
   // goals have been assist-checked once, AND the snapshot carries the tempo
-  // block (possession / passes / tackles — added 2026-07-06) AND the per-player
-  // shot breakdown + subs log (added 2026-07-07); earlier snapshots lack them →
+  // block (possession / passes / tackles — added 2026-07-06), the per-player
+  // shot breakdown + subs log (added 2026-07-07) AND the complete boxscore
+  // list (`full` — added 2026-07-07); earlier snapshots lack them →
   // one-time backfill fetch, then locked.
   const needStats = Object.entries(results).filter(
     ([id, r]) =>
@@ -730,6 +746,7 @@ async function main() {
         r.state === "finished" &&
         prevStats[id]?.tempo &&
         prevStats[id]?.playerShotBreakdown &&
+        prevStats[id]?.full &&
         prevChecked[id]
       ),
   );

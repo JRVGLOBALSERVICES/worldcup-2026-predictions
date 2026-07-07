@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import { fixtures } from "@/lib/data";
 import { diffLiveEvents, type LiveEvent, type LiveEventKind } from "@/lib/liveEvents";
-import { buildShotRows, ShotRowsBlock } from "./LiveScore";
+import { buildFullStatRows, buildShotRows, ShotRowsBlock } from "./LiveScore";
 
 /**
  * The match-FX section — the tracker's live centrepiece. It always fronts ONE
@@ -14,11 +14,11 @@ import { buildShotRows, ShotRowsBlock } from "./LiveScore";
  *     (days / hours / mins / secs), the two sides, venue + MYT time. On your slip
  *     matches carry a tag.
  *   • the moment it starts → the same card flips to LIVE: big scoreline, match
- *     minute, a verified stats grid (possession / shots / SOT / corners / fouls /
- *     cards straight off ESPN's summary), and a rolling inline feed of what's
- *     happening (goals, shots on target, corners, cards, whistles) diffed off
- *     the /api/live poll — the same deltas that drive the full-screen
- *     firecracker FX, kept here as a persistent play-by-play.
+ *     minute, a rolling inline feed of what's happening (goals, shots on
+ *     target, corners, cards, subs, whistles) diffed off the /api/live poll —
+ *     the same deltas that drive the full-screen firecracker FX — and BELOW
+ *     the feed the complete verified match-stats board (every line ESPN's
+ *     boxscore publishes) plus the per-player shots board.
  * Fixtures are static, so kickoff picking is deterministic; the live half reads
  * the poll map the tracker already holds. Countdown digits render only after
  * mount so SSR and client agree (no hydration drift on the clock).
@@ -145,11 +145,14 @@ function Versus({
 /** One mirrored stat row for the spotlight — bars grow toward the centre label,
  *  home in acid on the left, away in mint on the right. Transform-only motion
  *  (scaleX) so each 5s poll eases the bars without layout work. */
-function SpotStatRow({ label, h, a }: { label: string; h: number; a: number }) {
+function SpotStatRow({ label, h, a, pct }: { label: string; h: number; a: number; pct?: boolean }) {
   const max = Math.max(h, a, 1);
   return (
-    <div className="grid grid-cols-[2rem_1fr_minmax(5rem,auto)_1fr_2rem] items-center gap-2">
-      <span className="tnum text-right font-mono text-[0.74rem] font-semibold text-acid">{h}</span>
+    <div className="grid grid-cols-[2.4rem_1fr_minmax(5rem,auto)_1fr_2.4rem] items-center gap-2">
+      <span className="tnum text-right font-mono text-[0.74rem] font-semibold text-acid">
+        {h}
+        {pct && <span className="text-[0.56rem] text-acid/70">%</span>}
+      </span>
       <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
         <span
           className="block h-full origin-right rounded-full bg-acid transition-transform duration-700 ease-out"
@@ -163,24 +166,34 @@ function SpotStatRow({ label, h, a }: { label: string; h: number; a: number }) {
           style={{ transform: `scaleX(${a / max})` }}
         />
       </div>
-      <span className="tnum font-mono text-[0.74rem] font-semibold text-mint">{a}</span>
+      <span className="tnum font-mono text-[0.74rem] font-semibold text-mint">
+        {a}
+        {pct && <span className="text-[0.56rem] text-mint/70">%</span>}
+      </span>
     </div>
   );
 }
 
-/** Live stats block for the spotlight — the settling counts (shots / SOT /
- *  corners / fouls / cards) plus a possession strip when ESPN's summary carries
- *  tempo. Reads the LiveMatch the tracker already polls (no provider needed —
- *  the tracker isn't wrapped in LiveProvider, so no useLiveMatch here). Renders
- *  nothing until the summary endpoint has verified numbers. */
+/** The full match-stats board for the spotlight, sitting BELOW the live feed —
+ *  possession strip on top, then EVERY line ESPN's boxscore publishes (shots,
+ *  pass counts + completion %, crosses, long balls, tackles, clearances,
+ *  penalties, discipline…). Falls back to the curated settling counts for
+ *  snapshots captured before `full` existed. Reads the LiveMatch the tracker
+ *  already polls (no provider needed — the tracker isn't wrapped in
+ *  LiveProvider, so no useLiveMatch here). Renders nothing until the summary
+ *  endpoint has verified numbers. */
 function SpotStats({ lm }: { lm: LiveMatch }) {
   const s = lm.stats;
   if (!s) return null;
   const t = s.tempo;
+  const full = s.full?.length ? buildFullStatRows(s.full) : null;
   const hasPossession = t && (t.possession.home > 0 || t.possession.away > 0);
   const posTotal = hasPossession ? t.possession.home + t.possession.away || 1 : 1;
   return (
     <div className="mt-4 border-t border-white/[0.07] pt-4">
+      <p className="mb-3 text-center font-mono text-[0.56rem] uppercase tracking-[0.16em] text-faint/60">
+        {full ? "All match stats" : "Match stats"} · live
+      </p>
       {hasPossession && (
         <div className="mb-3">
           <div className="mb-1 flex items-baseline justify-between font-mono text-[0.58rem] uppercase tracking-[0.16em]">
@@ -196,14 +209,22 @@ function SpotStats({ lm }: { lm: LiveMatch }) {
           </div>
         </div>
       )}
-      <div className="space-y-2">
-        <SpotStatRow label="Shots" h={s.shots.home} a={s.shots.away} />
-        <SpotStatRow label="On target" h={s.sot.home} a={s.sot.away} />
-        <SpotStatRow label="Corners" h={s.corners.home} a={s.corners.away} />
-        {s.fouls && <SpotStatRow label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
-        {t && <SpotStatRow label="Offsides" h={t.offsides.home} a={t.offsides.away} />}
-        <SpotStatRow label="Cards" h={s.cards.home} a={s.cards.away} />
-      </div>
+      {full ? (
+        <div className="space-y-2">
+          {full.map((r) => (
+            <SpotStatRow key={r.key} label={r.label} h={r.h} a={r.a} pct={r.pct} />
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-2">
+          <SpotStatRow label="Shots" h={s.shots.home} a={s.shots.away} />
+          <SpotStatRow label="On target" h={s.sot.home} a={s.sot.away} />
+          <SpotStatRow label="Corners" h={s.corners.home} a={s.corners.away} />
+          {s.fouls && <SpotStatRow label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
+          {t && <SpotStatRow label="Offsides" h={t.offsides.home} a={t.offsides.away} />}
+          <SpotStatRow label="Cards" h={s.cards.home} a={s.cards.away} />
+        </div>
+      )}
       <p className="mt-2.5 text-center font-mono text-[0.52rem] uppercase tracking-[0.14em] text-faint/40">
         Verified vs ESPN · ticks live every 5s
       </p>
@@ -442,11 +463,13 @@ export default function MatchSpotlight({
           {fx.round ?? `Group ${fx.group}`} · {fx.venue}, {fx.city}
         </p>
 
+        {/* Play-by-play first; the full stats board reads beneath it (Rj's
+          * spec: "all the match stats below the live feed when live"). */}
+        <LiveFeed lm={spotlightLive} home={fx.home} away={fx.away} />
+
         <SpotStats lm={spotlightLive} />
 
         <SpotPlayerShots lm={spotlightLive} labels={openLabels?.[spotlightLive.matchId] ?? []} />
-
-        <LiveFeed lm={spotlightLive} home={fx.home} away={fx.away} />
       </section>
     );
   }

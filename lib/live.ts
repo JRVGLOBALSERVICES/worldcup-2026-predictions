@@ -189,6 +189,23 @@ async function fetchStats(
     }
   }
 
+  // The COMPLETE boxscore list, zipped home/away in ESPN's order — every stat
+  // the summary publishes, labels + displayValues intact (percents included).
+  // Feeds the "all match stats" boards under the live feed; the typed counts
+  // below stay the settling source. Keep in sync with build-results.mjs.
+  const full = (h.statistics ?? []).flatMap((hs) => {
+    if (!hs.name) return [];
+    const as = (a.statistics ?? []).find((x) => x.name === hs.name);
+    return [
+      {
+        key: hs.name,
+        label: hs.label ?? hs.name,
+        home: hs.displayValue ?? String(hs.value ?? 0),
+        away: as?.displayValue ?? String(as?.value ?? 0),
+      },
+    ];
+  });
+
   return {
     stats: {
       corners: { home: stat(h, "wonCorners"), away: stat(a, "wonCorners") },
@@ -221,6 +238,7 @@ async function fetchStats(
         interceptions: { home: stat(h, "interceptions"), away: stat(a, "interceptions") },
         clearances: { home: stat(h, "effectiveClearance"), away: stat(a, "effectiveClearance") },
       },
+      ...(full.length ? { full } : {}),
     },
     goals,
     lineups,
@@ -447,7 +465,7 @@ type EspnEvent = {
 // Per-event summary shapes (corners / shots-on-target / cards).
 type EspnStatTeam = {
   team?: { displayName?: string };
-  statistics?: { name?: string; displayValue?: string; value?: number }[];
+  statistics?: { name?: string; label?: string; displayValue?: string; value?: number }[];
 };
 type EspnKeyEvent = {
   scoringPlay?: boolean;

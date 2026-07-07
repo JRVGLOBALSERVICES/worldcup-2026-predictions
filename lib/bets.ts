@@ -212,6 +212,26 @@ export type MatchStats = {
    * before 2026-07-06 never captured them.
    */
   tempo?: TempoStats;
+  /**
+   * The COMPLETE ESPN boxscore statistics list, home/away zipped per entry —
+   * everything the summary publishes (28 lines as of R16: shots, pass counts +
+   * completion %, crosses, long balls, tackles, clearances, penalty counts…),
+   * with ESPN's own label and displayValue strings so percents survive intact.
+   * Display-only ("all match stats" boards under the live feed); settlement
+   * keeps reading the typed counts above. Optional — snapshots before
+   * 2026-07-07 never captured it.
+   */
+  full?: FullStatLine[];
+};
+
+/** One line of the complete ESPN boxscore — see MatchStats.full. */
+export type FullStatLine = {
+  /** ESPN stat name, e.g. "totalPasses", "shotPct". */
+  key: string;
+  /** ESPN's human label, e.g. "Pass Completion %". */
+  label: string;
+  home: string;
+  away: string;
 };
 
 /** Full-picture team stats for the live view — see MatchStats.tempo. */

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLiveMatch } from "./LiveProvider";
 import { KickoffClock } from "./KickoffClock";
 import type { LiveMatch } from "@/lib/live";
-import type { PlayerShotLine, Substitution } from "@/lib/bets";
+import type { FullStatLine, PlayerShotLine, Substitution } from "@/lib/bets";
 import { nameMatch } from "@/lib/bets";
 
 /**
@@ -143,12 +143,16 @@ function PossessionBar({ home, away }: { home: number; away: number }) {
   );
 }
 
-/** One mirrored stat row — bars grow toward each side from the centre label. */
-function StatRow({ label, h, a }: { label: string; h: number; a: number }) {
+/** One mirrored stat row — bars grow toward each side from the centre label.
+ * `pct` rows render a % suffix (the bars still race on the same numbers). */
+function StatRow({ label, h, a, pct }: { label: string; h: number; a: number; pct?: boolean }) {
   const max = Math.max(h, a, 1);
   return (
-    <div className="grid grid-cols-[2.2rem_1fr_minmax(5.5rem,auto)_1fr_2.2rem] items-center gap-2">
-      <AnimatedNum value={h} className="tnum text-right text-[0.8rem] font-semibold text-acid" />
+    <div className="grid grid-cols-[2.6rem_1fr_minmax(5.5rem,auto)_1fr_2.6rem] items-center gap-2">
+      <span className="tnum text-right text-[0.8rem] font-semibold text-acid">
+        <AnimatedNum value={h} />
+        {pct && <span className="text-[0.6rem] text-acid/70">%</span>}
+      </span>
       {/* Bars grow toward the centre label via scaleX — transform-only motion. */}
       <div className="h-1 overflow-hidden rounded-full bg-raised/50">
         <span
@@ -165,9 +169,58 @@ function StatRow({ label, h, a }: { label: string; h: number; a: number }) {
           style={{ transform: `scaleX(${a / max})` }}
         />
       </div>
-      <AnimatedNum value={a} className="tnum text-[0.8rem] font-semibold text-mint" />
+      <span className="tnum text-[0.8rem] font-semibold text-mint">
+        <AnimatedNum value={a} />
+        {pct && <span className="text-[0.6rem] text-mint/70">%</span>}
+      </span>
     </div>
   );
+}
+
+/* ── The COMPLETE boxscore board ────────────────────────────────────────────
+ * Everything ESPN publishes per team (28 lines as of R16), grouped for reading:
+ * attack → set pieces/keeping → passing → defending → discipline. Unknown new
+ * keys ESPN adds later keep their feed order at the end — never silently
+ * dropped. Possession is excluded here (it IS the bar above the board). */
+
+const FULL_ORDER = [
+  // attack
+  "totalShots", "shotsOnTarget", "blockedShots", "shotPct",
+  "penaltyKickGoals", "penaltyKickShots",
+  // set pieces + keeping
+  "wonCorners", "offsides", "saves",
+  // passing
+  "totalPasses", "accuratePasses", "passPct",
+  "totalCrosses", "accurateCrosses", "crossPct",
+  "totalLongBalls", "accurateLongBalls", "longballPct",
+  // defending
+  "totalTackles", "effectiveTackles", "tacklePct",
+  "interceptions", "totalClearance", "effectiveClearance",
+  // discipline
+  "foulsCommitted", "yellowCards", "redCards",
+];
+
+export type FullStatRow = { key: string; label: string; h: number; a: number; pct: boolean };
+
+/** Numeric rows from the raw ESPN lines. Ratio stats arrive as fractions
+ * (shotPct 0.2 → 20%); possessionPct is already 0–100 and is filtered out. */
+export function buildFullStatRows(full: FullStatLine[]): FullStatRow[] {
+  const rank = (k: string) => {
+    const i = FULL_ORDER.indexOf(k);
+    return i === -1 ? FULL_ORDER.length : i;
+  };
+  return full
+    .filter((l) => l.key !== "possessionPct")
+    .map((l) => {
+      const pct = /Pct$/.test(l.key);
+      const num = (s: string) => {
+        const v = parseFloat(s);
+        if (!Number.isFinite(v)) return 0;
+        return pct && v <= 1 ? Math.round(v * 100) : Math.round(v * 10) / 10;
+      };
+      return { key: l.key, label: l.label, h: num(l.home), a: num(l.away), pct };
+    })
+    .sort((x, y) => rank(x.key) - rank(y.key)); // stable → unknowns keep feed order
 }
 
 /**
@@ -181,10 +234,13 @@ export function LiveStats({ matchId }: { matchId: string }) {
   if (!lm || lm.state === "scheduled" || !lm.stats) return null;
   const s = lm.stats;
   const t = s.tempo;
+  // The complete ESPN list when the snapshot carries it; curated fallback for
+  // matches snapshotted before `full` existed (pre 2026-07-07).
+  const full = s.full?.length ? buildFullStatRows(s.full) : null;
   return (
     <div className="mt-6 rounded-2xl border border-line bg-card/50 p-5">
       <h3 className="mb-4 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
-        Match stats {lm.state === "finished" ? "(full time)" : "(live)"} · verified vs ESPN
+        {full ? "All match stats" : "Match stats"} {lm.state === "finished" ? "(full time)" : "(live)"} · verified vs ESPN
       </h3>
 
       {t && (t.possession.home > 0 || t.possession.away > 0) && (
@@ -193,20 +249,28 @@ export function LiveStats({ matchId }: { matchId: string }) {
         </div>
       )}
 
-      <div className="space-y-2.5">
-        <StatRow label="Shots" h={s.shots.home} a={s.shots.away} />
-        <StatRow label="On target" h={s.sot.home} a={s.sot.away} />
-        {t && <StatRow label="Blocked" h={t.blockedShots.home} a={t.blockedShots.away} />}
-        <StatRow label="Corners" h={s.corners.home} a={s.corners.away} />
-        {t && <StatRow label="Saves" h={t.saves.home} a={t.saves.away} />}
-        {t && <StatRow label="Passes" h={t.passes.home} a={t.passes.away} />}
-        {t && <StatRow label="Tackles" h={t.tackles.home} a={t.tackles.away} />}
-        {t && <StatRow label="Interceptions" h={t.interceptions.home} a={t.interceptions.away} />}
-        {t && <StatRow label="Clearances" h={t.clearances.home} a={t.clearances.away} />}
-        {s.fouls && <StatRow label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
-        {t && <StatRow label="Offsides" h={t.offsides.home} a={t.offsides.away} />}
-        <StatRow label="Cards" h={s.cards.home} a={s.cards.away} />
-      </div>
+      {full ? (
+        <div className="space-y-2.5">
+          {full.map((r) => (
+            <StatRow key={r.key} label={r.label} h={r.h} a={r.a} pct={r.pct} />
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-2.5">
+          <StatRow label="Shots" h={s.shots.home} a={s.shots.away} />
+          <StatRow label="On target" h={s.sot.home} a={s.sot.away} />
+          {t && <StatRow label="Blocked" h={t.blockedShots.home} a={t.blockedShots.away} />}
+          <StatRow label="Corners" h={s.corners.home} a={s.corners.away} />
+          {t && <StatRow label="Saves" h={t.saves.home} a={t.saves.away} />}
+          {t && <StatRow label="Passes" h={t.passes.home} a={t.passes.away} />}
+          {t && <StatRow label="Tackles" h={t.tackles.home} a={t.tackles.away} />}
+          {t && <StatRow label="Interceptions" h={t.interceptions.home} a={t.interceptions.away} />}
+          {t && <StatRow label="Clearances" h={t.clearances.home} a={t.clearances.away} />}
+          {s.fouls && <StatRow label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
+          {t && <StatRow label="Offsides" h={t.offsides.home} a={t.offsides.away} />}
+          <StatRow label="Cards" h={s.cards.home} a={s.cards.away} />
+        </div>
+      )}
 
       <p className="mt-3 border-t border-line/50 pt-2 font-mono text-[0.56rem] uppercase tracking-[0.14em] text-ink/35">
         {s.yellow.home + s.yellow.away} yellow · {s.red.home + s.red.away} red
