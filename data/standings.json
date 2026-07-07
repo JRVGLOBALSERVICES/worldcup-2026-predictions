@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T22:50:05.285Z",
+    "generatedAt": "2026-07-07T23:00:06.416Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -132,7 +132,14 @@
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "Argentina",
+            "opponentFlag": "🇦🇷",
+            "kickoffUTC": "2026-07-12T01:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Canada",
@@ -973,11 +980,11 @@
           ],
           "next": {
             "round": "Quarter-final",
-            "opponent": "R16-8 Winner",
-            "opponentFlag": null,
+            "opponent": "Switzerland",
+            "opponentFlag": "🇨🇭",
             "kickoffUTC": "2026-07-12T01:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
