@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T22:20:16.117Z",
+    "generatedAt": "2026-07-07T22:30:02.910Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 75,
     "live": 1
@@ -41341,8 +41341,8 @@
           "away": 3
         },
         "shots": {
-          "home": 6,
-          "away": 12
+          "home": 7,
+          "away": 14
         },
         "yellow": {
           "home": 3,
@@ -41357,8 +41357,8 @@
           "away": 2
         },
         "fouls": {
-          "home": 16,
-          "away": 20
+          "home": 20,
+          "away": 21
         },
         "cornersByHalf": {
           "home": [
@@ -41398,7 +41398,9 @@
           "Davinson Sánchez": 1,
           "Jhon Lucumí": 1,
           "Richard Ríos": 1,
-          "Jáminton Campaz": 1
+          "Jáminton Campaz": 2,
+          "Juan Fernando Quintero": 1,
+          "Granit Xhaka": 1
         },
         "playerShotBreakdown": {
           "Jhon Arias": {
@@ -41483,9 +41485,25 @@
           },
           "Jáminton Campaz": {
             "team": "away",
-            "shots": 1,
+            "shots": 2,
             "sot": 1,
-            "off": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Juan Fernando Quintero": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Granit Xhaka": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
             "blocked": 0,
             "goals": 0
           }
@@ -41588,16 +41606,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 52.2,
-            "away": 47.8
+            "home": 53.1,
+            "away": 46.9
           },
           "passes": {
-            "home": 549,
-            "away": 501
+            "home": 609,
+            "away": 534
           },
           "tackles": {
-            "home": 10,
-            "away": 15
+            "home": 13,
+            "away": 17
           },
           "saves": {
             "home": 3,
@@ -41613,19 +41631,19 @@
           },
           "interceptions": {
             "home": 13,
-            "away": 11
+            "away": 12
           },
           "clearances": {
-            "home": 32,
-            "away": 18
+            "home": 34,
+            "away": 20
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "16",
-            "away": "20"
+            "home": "20",
+            "away": "21"
           },
           {
             "key": "yellowCards",
@@ -41660,14 +41678,14 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "52.2",
-            "away": "47.8"
+            "home": "53.1",
+            "away": "46.9"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "6",
-            "away": "12"
+            "home": "7",
+            "away": "14"
           },
           {
             "key": "shotsOnTarget",
@@ -41679,7 +41697,7 @@
             "key": "shotPct",
             "label": "On Target %",
             "home": "0.3",
-            "away": "0.3"
+            "away": "0.2"
           },
           {
             "key": "penaltyKickGoals",
@@ -41696,14 +41714,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "478",
-            "away": "418"
+            "home": "532",
+            "away": "445"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "549",
-            "away": "501"
+            "home": "609",
+            "away": "534"
           },
           {
             "key": "passPct",
@@ -41720,7 +41738,7 @@
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "13",
+            "home": "14",
             "away": "17"
           },
           {
@@ -41732,19 +41750,19 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "47",
-            "away": "66"
+            "home": "58",
+            "away": "72"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "21",
-            "away": "27"
+            "home": "28",
+            "away": "30"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.4",
+            "home": "0.5",
             "away": "0.4"
           },
           {
@@ -41756,14 +41774,14 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "5",
-            "away": "7"
+            "home": "7",
+            "away": "8"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "10",
-            "away": "15"
+            "home": "13",
+            "away": "17"
           },
           {
             "key": "tacklePct",
@@ -41775,19 +41793,19 @@
             "key": "interceptions",
             "label": "Interceptions",
             "home": "13",
-            "away": "11"
+            "away": "12"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "32",
-            "away": "18"
+            "home": "34",
+            "away": "20"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "32",
-            "away": "18"
+            "home": "34",
+            "away": "20"
           }
         ]
       }
