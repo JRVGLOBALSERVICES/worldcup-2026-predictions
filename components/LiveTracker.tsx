@@ -51,14 +51,21 @@ function roundRank(label: string): number {
   return i === -1 ? ROUND_ORDER.length + 1 : i; // still unknown → ranked after group
 }
 
-// Rj (2026-07-07): losing bets from rounds BEFORE the Round of 16 are hidden from
-// the tracker — group-stage + R32 losses are history and just bury the live
-// picture. Losses from R16 / QF / SF / Final still render. Only the visible rows
-// are pruned; every money summary keeps grading the full unfiltered slip, so
-// staked / returned / net P&L stay truthful.
-const R16_RANK = roundRank("Round of 16");
-const hideLossRound = (round: string | undefined) => roundRank(roundLabel(round)) > R16_RANK;
-const isLossVerdict = (v: LiveVerdict) => v === "lost" || v === "dead";
+// Rj (2026-07-07): the tracker shows slips from the LAST 7 DAYS only — a rolling
+// window anchored on the server-set featured day key (never Date.now() in render,
+// so server + client produce identical HTML). Anything older — wins AND losses
+// alike — drops from view: whole day sections, plus parlays whose latest leg
+// kicked off before the window. Money summaries keep grading the full unfiltered
+// slip, so staked / returned / net P&L stay truthful. (Supersedes the earlier
+// hide-pre-R16-losses rule.)
+const WINDOW_DAYS = 7;
+function windowCutoffKey(featuredKey: string): string {
+  // Pure calendar arithmetic on the MYT day key ("2026-07-07" − 7d) — the key is
+  // already the local betting day, so UTC parse/format is just date math.
+  const t = Date.parse(`${featuredKey}T00:00:00Z`);
+  if (Number.isNaN(t)) return ""; // "tbd"/malformed featured key → keep everything
+  return new Date(t - WINDOW_DAYS * 86_400_000).toISOString().slice(0, 10);
+}
 
 // ── serialisable payload the server page hands down (no functions/classes) ────
 export type BetRow = {
@@ -708,10 +715,6 @@ function GlobalParlays({
   if (parlays.length === 0) return null;
   const graded = parlays
     .map((p) => ({ ...p, verdict: gradeSpecial(p.special, live[p.anchorMatchId], live) }))
-    // Pre-R16 losers are dropped from view outright (see hideLossRound) — the
-    // panel's counts and money lines below all read this filtered list so the
-    // header always matches the cards actually shown.
-    .filter((p) => !(isLossVerdict(p.verdict.verdict) && hideLossRound(ROUND_BY_MATCH.get(p.anchorMatchId))))
     // Order by winning amount (potential payout) high → low so the biggest
     // return sits on top; verdict (winning → alive → settled) breaks ties.
     .sort(
@@ -725,7 +728,8 @@ function GlobalParlays({
   const running = graded.filter((p) => isRunning(p.verdict.verdict));
   const settled = graded.filter((p) => !isRunning(p.verdict.verdict));
   // Staked sum covers the VISIBLE parlays only, matching the count badge —
-  // hidden pre-R16 losers keep their money in the global Net P&L headline.
+  // out-of-window parlays (filtered at the call site) keep their money in the
+  // global Net P&L headline.
   const stake = graded.reduce((s, p) => s + p.special.stake, 0);
   const secured = graded.reduce((s, p) => {
     if (p.verdict.verdict === "won") return s + p.special.potential;
@@ -735,8 +739,6 @@ function GlobalParlays({
   const liveCount = graded.filter((p) => p.verdict.verdict === "winning" || p.verdict.verdict === "alive").length;
   const won = graded.filter((p) => p.verdict.verdict === "won").length;
   const lost = graded.filter((p) => p.verdict.verdict === "lost" || p.verdict.verdict === "dead").length;
-  // Every parlay was a hidden pre-R16 loser → nothing to show at all.
-  if (graded.length === 0) return null;
   return (
     <section className="rounded-3xl border border-acid-dim/40 bg-pitch-2/40 p-4 sm:p-6">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-line/60 pb-3.5">
@@ -1317,15 +1319,40 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   const totalSeason = base.season.counts.score + base.season.counts.props;
   const empty = totalSeason === 0;
 
+  // 7-day display window (see windowCutoffKey): day sections and parlays older
+  // than the cutoff key don't render. Keyed off base.featuredKey so the same
+  // HTML comes out of the server and the client.
+  const cutoffKey = windowCutoffKey(base.featuredKey);
+  // Which MYT betting day each match sits on — parlays are windowed by their
+  // LATEST leg's day, so a slip stays visible as long as any leg is recent.
+  const dayKeyByMatch = new Map<string, string>();
+  for (const d of base.days) for (const m of d.matches) dayKeyByMatch.set(m.matchId, d.key);
+  const inWindow = (matchIds: string[]) => {
+    // "tbd" (undated) keys sort after any date string → undated slips stay visible.
+    const latest = matchIds.reduce((mx, id) => {
+      const k = dayKeyByMatch.get(id) ?? "";
+      return k > mx ? k : mx;
+    }, "");
+    return latest === "" || latest >= cutoffKey;
+  };
+
   // Every multi-leg parlay across ALL days, surfaced ONCE in a single top-level
   // roll-up (GlobalParlays). `isParlayRow` keeps the real copy only (drops the
   // cross-match mirrors) and excludes lone 1-leg "accas", which stay inline on
-  // their own game card. Anchored to the match the real copy lives on.
-  const allParlays = base.days.flatMap((d) =>
-    d.matches.flatMap((m) =>
-      m.specials.filter((s) => isParlayRow(s)).map((s) => ({ special: s, anchorMatchId: m.matchId })),
-    ),
-  );
+  // their own game card. Anchored to the match the real copy lives on. Parlays
+  // whose every leg predates the 7-day window are dropped from view here.
+  const allParlays = base.days
+    .flatMap((d) =>
+      d.matches.flatMap((m) =>
+        m.specials.filter((s) => isParlayRow(s)).map((s) => ({ special: s, anchorMatchId: m.matchId })),
+      ),
+    )
+    .filter((p) => {
+      const legIds = ((p.special.grade as { legs?: { matchId?: string }[] }).legs ?? [])
+        .map((l) => l.matchId)
+        .filter((id): id is string => Boolean(id));
+      return inWindow(legIds.length > 0 ? legIds : [p.anchorMatchId]);
+    });
 
   // Live "if it ended now" P&L — scoped to today's featured slate, matching the
   // staked / max-return figures in the hero (season roll-up lives below).
@@ -1565,24 +1592,6 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // Float winning lines to the top, still-on next, losses last.
                   const orderedBets = orderByVerdict(m.bets, betVerdicts);
                   const orderedSpecials = orderByVerdict(m.specials, spVerdicts);
-                  // Pre-R16 games hide their losing rows entirely (see hideLossRound).
-                  // allV / matchStaked / matchReturned below keep reading the FULL
-                  // row set, so the W·L tally and money lines stay truthful — only
-                  // the rendered cards are pruned.
-                  const hideLosses = hideLossRound(m.round);
-                  const prune = <T,>(o: { rows: T[]; verdicts: InPlay[] }) => {
-                    if (!hideLosses) return o;
-                    const keep = o.verdicts.map((v) => !isLossVerdict(v.verdict));
-                    return {
-                      rows: o.rows.filter((_, i) => keep[i]),
-                      verdicts: o.verdicts.filter((_, i) => keep[i]),
-                    };
-                  };
-                  const shownBets = prune(orderedBets);
-                  const shownSpecials = prune(orderedSpecials);
-                  const hiddenLosses =
-                    orderedBets.rows.length - shownBets.rows.length +
-                    (orderedSpecials.rows.length - shownSpecials.rows.length);
                   // Multi-leg parlays no longer render inside the game card — they're
                   // rolled up ONCE at the top of the day (DayParlays), so a 6-leg acca
                   // isn't repeated across 6 cards. What stays here: this game's own
@@ -1590,22 +1599,22 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   // card inline; mirror copies render nowhere (their source is up top).
                   const isInlineAcca = (r: SpecialRow) =>
                     isAccaRow(r) && !r.mirror && (r.grade as { legs: unknown[] }).legs.length < 2;
-                  const accaIdx = shownSpecials.rows
+                  const accaIdx = orderedSpecials.rows
                     .map((_, i) => i)
-                    .filter((i) => isInlineAcca(shownSpecials.rows[i] as SpecialRow));
-                  const accaRows = accaIdx.map((i) => shownSpecials.rows[i]) as SpecialRow[];
-                  const accaVerdicts = accaIdx.map((i) => shownSpecials.verdicts[i]);
-                  const propIdx = shownSpecials.rows
+                    .filter((i) => isInlineAcca(orderedSpecials.rows[i] as SpecialRow));
+                  const accaRows = accaIdx.map((i) => orderedSpecials.rows[i]) as SpecialRow[];
+                  const accaVerdicts = accaIdx.map((i) => orderedSpecials.verdicts[i]);
+                  const propIdx = orderedSpecials.rows
                     .map((_, i) => i)
-                    .filter((i) => !isAccaRow(shownSpecials.rows[i] as SpecialRow));
-                  const propRows = propIdx.map((i) => shownSpecials.rows[i]);
-                  const propVerdicts = propIdx.map((i) => shownSpecials.verdicts[i]);
+                    .filter((i) => !isAccaRow(orderedSpecials.rows[i] as SpecialRow));
+                  const propRows = propIdx.map((i) => orderedSpecials.rows[i]);
+                  const propVerdicts = propIdx.map((i) => orderedSpecials.verdicts[i]);
                   // Whether this game carries any of Rj's OWN lines (singles / props /
                   // inline 1-leg acca). Games with none are pure parlay legs — kept
                   // visible for the live score but collapsed, with a pointer to the
                   // parlays above instead of an empty body.
                   const hasOwnBets =
-                    shownBets.rows.length > 0 || accaRows.length > 0 || propRows.length > 0;
+                    orderedBets.rows.length > 0 || accaRows.length > 0 || propRows.length > 0;
                   const liveNow = lm?.state === "live" || lm?.state === "halftime";
                   // Which parlays use this match as a leg (for the pointer note) —
                   // checked against the whole-slate list now, not just this day's.
@@ -1696,15 +1705,15 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                           </div>
                         )}
 
-                        {shownBets.rows.length > 0 && (
+                        {orderedBets.rows.length > 0 && (
                           <div>
                             <div className="flex items-center gap-2 bg-pitch-2/50 px-5 py-2.5">
                               <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-acid">Match score</span>
                               <span className="rounded-full border border-acid-dim/50 px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-acid">HT · FT · live grade</span>
                             </div>
                             <div className="space-y-3 px-5 py-4">
-                              {(shownBets.rows as BetRow[]).map((r, i) => (
-                                <BetCard key={r.id} bet={r} verdict={shownBets.verdicts[i]} currency={cur} />
+                              {(orderedBets.rows as BetRow[]).map((r, i) => (
+                                <BetCard key={r.id} bet={r} verdict={orderedBets.verdicts[i]} currency={cur} />
                               ))}
                             </div>
                           </div>
@@ -1738,19 +1747,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                           </div>
                         )}
 
-                        {/* Pre-R16 losers pruned above — one faint line says how many,
-                            so an emptied-out card doesn't read as "never had bets". */}
-                        {hiddenLosses > 0 && (
-                          <div className={`px-5 py-3 ${hasOwnBets ? "border-t border-line" : ""}`}>
-                            <p className="font-mono text-[0.62rem] uppercase tracking-wider text-faint/70">
-                              {hiddenLosses} losing bet{hiddenLosses > 1 ? "s" : ""} hidden · pre-R16
-                            </p>
-                          </div>
-                        )}
-
                         {/* Pure parlay-leg game — no singles of its own. Point back to
                             the parlays above instead of an empty body. */}
-                        {!hasOwnBets && hiddenLosses === 0 && (
+                        {!hasOwnBets && (
                           <div className="px-5 py-4">
                             <p className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
                               No singles here —{" "}
@@ -1779,6 +1778,14 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
           // into a folded accordion so settled history doesn't clutter the current
           // round. Key comparison is deterministic (no Date.now → no hydration drift).
           const isPast = (d: DayRow) => d.key !== "tbd" && d.key < base.featuredKey;
+          // 7-day window: past days older than the cutoff don't render at all —
+          // not even inside "Earlier rounds". A faint tally below keeps it honest.
+          const inDayWindow = (d: DayRow) => d.key === "tbd" || d.key >= cutoffKey;
+          const olderDays = base.days.filter((d) => !d.isFeatured && isPast(d) && !inDayWindow(d));
+          const olderBets = olderDays.reduce(
+            (s, d) => s + d.matches.reduce((x, m) => x + m.bets.length + m.specials.filter((sp) => !sp.mirror).length, 0),
+            0,
+          );
           const featured = base.days.filter((d) => d.isFeatured);
           // The forward schedule reads chronologically: today (featured) → soonest
           // upcoming → latest. base.days is stored newest-first, so re-sort the
@@ -1788,8 +1795,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
             .sort((a, b) =>
               a.key === "tbd" ? 1 : b.key === "tbd" ? -1 : a.key.localeCompare(b.key),
             );
-          // Settled history stays newest-first inside the folded "Earlier rounds".
-          const past = base.days.filter((d) => !d.isFeatured && isPast(d));
+          // Settled history stays newest-first inside the folded "Earlier rounds" —
+          // trimmed to the 7-day window; anything older is gone from view.
+          const past = base.days.filter((d) => !d.isFeatured && isPast(d) && inDayWindow(d));
           const pastBets = past.reduce(
             (s, d) => s + d.matches.reduce((x, m) => x + m.bets.length + m.specials.filter((sp) => !sp.mirror).length, 0),
             0,
@@ -1812,6 +1820,13 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                   </summary>
                   <div className="mt-8 space-y-12">{past.map(renderDay)}</div>
                 </details>
+              )}
+              {/* Out-of-window tally — hidden days still exist in the data (and in
+                  every money summary); this one line keeps the pruning honest. */}
+              {olderBets > 0 && (
+                <p className="font-mono text-[0.62rem] uppercase tracking-wider text-faint/70">
+                  {olderBets} older bet{olderBets > 1 ? "s" : ""} hidden · showing last {WINDOW_DAYS} days
+                </p>
               )}
             </>
           );
