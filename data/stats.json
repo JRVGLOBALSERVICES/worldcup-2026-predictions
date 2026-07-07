@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T17:50:07.658Z",
+    "generatedAt": "2026-07-07T18:00:10.507Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 78
   },
@@ -484,8 +484,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 91,
-        "display": "91.0%",
+        "value": 90.9,
+        "display": "90.9%",
         "matches": 5
       },
       {
@@ -622,8 +622,8 @@
         "rank": 8,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 60.9,
-        "display": "60.9%",
+        "value": 60.7,
+        "display": "60.7%",
         "matches": 5
       },
       {
@@ -712,8 +712,8 @@
         "rank": 9,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 41.3,
-        "display": "41.3%",
+        "value": 42.7,
+        "display": "42.7%",
         "matches": 5
       },
       {
@@ -836,12 +836,12 @@
         "rank": 4,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 33.3,
-        "display": "33.3%",
+        "value": 33.9,
+        "display": "33.9%",
         "matches": 5
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -902,8 +902,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 58.2,
-        "display": "58.2%",
+        "value": 59.6,
+        "display": "59.6%",
         "matches": 5
       },
       {
@@ -1235,17 +1235,17 @@
           "matches": 1
         },
         {
+          "name": "Enzo Fernández",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Giovani Lo Celso",
           "value": 1,
           "matches": 1
         },
         {
           "name": "Lautaro Martínez",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Lisandro Martínez",
           "value": 1,
           "matches": 1
         }
@@ -1267,12 +1267,12 @@
           "matches": 1
         },
         {
-          "name": "Lionel Messi",
+          "name": "Lautaro Martínez",
           "value": 1,
           "matches": 1
         },
         {
-          "name": "Lisandro Martínez",
+          "name": "Lionel Messi",
           "value": 1,
           "matches": 1
         }
@@ -3070,6 +3070,10 @@
         },
         {
           "name": "Haissem Hassan",
+          "value": 1
+        },
+        {
+          "name": "Hamdy Fathy",
           "value": 1
         },
         {
@@ -6998,36 +7002,40 @@
           {
             "name": "Gonzalo Montiel",
             "team": "Argentina"
+          },
+          {
+            "name": "Lautaro Martínez",
+            "team": "Argentina"
           }
         ],
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 65.6,
-            "accuratePasses": 500,
-            "totalPasses": 552,
-            "shotsOnTarget": 6,
+            "possessionPct": 64.6,
+            "accuratePasses": 535,
+            "totalPasses": 592,
+            "shotsOnTarget": 7,
             "totalShots": 19,
             "effectiveTackles": 15,
-            "totalTackles": 19,
-            "accurateCrosses": 7,
-            "totalCrosses": 24,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 21
+            "totalTackles": 20,
+            "accurateCrosses": 8,
+            "totalCrosses": 26,
+            "accurateLongBalls": 18,
+            "totalLongBalls": 26
           },
           {
             "team": "Egypt",
-            "possessionPct": 34.4,
-            "accuratePasses": 245,
-            "totalPasses": 295,
+            "possessionPct": 35.4,
+            "accuratePasses": 275,
+            "totalPasses": 330,
             "shotsOnTarget": 2,
-            "totalShots": 4,
+            "totalShots": 5,
             "effectiveTackles": 7,
-            "totalTackles": 13,
-            "accurateCrosses": 1,
-            "totalCrosses": 5,
+            "totalTackles": 14,
+            "accurateCrosses": 2,
+            "totalCrosses": 6,
             "accurateLongBalls": 9,
-            "totalLongBalls": 30
+            "totalLongBalls": 31
           }
         ]
       }
