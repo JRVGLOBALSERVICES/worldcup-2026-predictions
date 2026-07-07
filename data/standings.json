@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T02:00:05.790Z",
+    "generatedAt": "2026-07-07T02:10:04.794Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -651,7 +651,14 @@
             "D",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "Spain",
+            "opponentFlag": "🇪🇸",
+            "kickoffUTC": "2026-07-10T19:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Egypt",
@@ -759,11 +766,11 @@
           ],
           "next": {
             "round": "Quarter-final",
-            "opponent": "R16-6 Winner",
-            "opponentFlag": null,
+            "opponent": "Belgium",
+            "opponentFlag": "🇧🇪",
             "kickoffUTC": "2026-07-10T19:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
