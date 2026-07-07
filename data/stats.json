@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T21:10:06.542Z",
+    "generatedAt": "2026-07-07T21:20:07.599Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 79
   },
@@ -648,8 +648,8 @@
         "rank": 1,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 54.8,
-        "display": "54.8%",
+        "value": 53.1,
+        "display": "53.1%",
         "matches": 4
       },
       {
@@ -866,14 +866,6 @@
       },
       {
         "rank": 8,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 28.6,
-        "display": "28.6%",
-        "matches": 5
-      },
-      {
-        "rank": 8,
         "team": "Czechia",
         "flag": "🇨🇿",
         "value": 28.6,
@@ -887,6 +879,14 @@
         "value": 28.6,
         "display": "28.6%",
         "matches": 3
+      },
+      {
+        "rank": 10,
+        "team": "Egypt",
+        "flag": "🇪🇬",
+        "value": 28.4,
+        "display": "28.4%",
+        "matches": 4
       }
     ],
     "longBallAccuracy": [
@@ -956,19 +956,19 @@
       },
       {
         "rank": 9,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 50,
-        "display": "50.0%",
-        "matches": 5
-      },
-      {
-        "rank": 10,
         "team": "Algeria",
         "flag": "🇩🇿",
         "value": 49.1,
         "display": "49.1%",
         "matches": 4
+      },
+      {
+        "rank": 9,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 49.1,
+        "display": "49.1%",
+        "matches": 5
       }
     ]
   },
@@ -1981,6 +1981,10 @@
       "yellowCards": [
         {
           "name": "Granit Xhaka",
+          "value": 2
+        },
+        {
+          "name": "Denis Zakaria",
           "value": 1
         },
         {
@@ -6985,31 +6989,31 @@
         "teamBox": [
           {
             "team": "Switzerland",
-            "possessionPct": 50,
-            "accuratePasses": 241,
-            "totalPasses": 275,
+            "possessionPct": 50.7,
+            "accuratePasses": 293,
+            "totalPasses": 339,
             "shotsOnTarget": 2,
-            "totalShots": 3,
+            "totalShots": 4,
             "effectiveTackles": 3,
             "totalTackles": 6,
             "accurateCrosses": 1,
             "totalCrosses": 5,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 15
+            "accurateLongBalls": 11,
+            "totalLongBalls": 22
           },
           {
             "team": "Colombia",
-            "possessionPct": 50,
-            "accuratePasses": 227,
-            "totalPasses": 273,
+            "possessionPct": 49.3,
+            "accuratePasses": 266,
+            "totalPasses": 326,
             "shotsOnTarget": 1,
             "totalShots": 5,
-            "effectiveTackles": 4,
-            "totalTackles": 10,
+            "effectiveTackles": 5,
+            "totalTackles": 11,
             "accurateCrosses": 1,
-            "totalCrosses": 9,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 34
+            "totalCrosses": 10,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 44
           }
         ]
       },
