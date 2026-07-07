@@ -1,7 +1,7 @@
 import type { Fixture, Prediction, Pick, Resolution } from "@/lib/types";
 import { strengthFromOdds, strengthLabel, overallStrength } from "@/lib/data";
 import { SectionLabel, Banker, Confidence, StrengthMeter } from "./atoms";
-import { LineupPitch } from "./LineupPitch";
+import { LiveLineup } from "./LiveLineup";
 
 /** Split a penalty-likelihood string into a short grade token + optional reason.
  * Data is inconsistent: most are a bare grade ("medium", "low-medium"), but some
@@ -103,7 +103,7 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
       })()}
 
       {/* lineups — formation board */}
-      <LineupPitch fixture={fixture} lineups={pred.lineups} />
+      <LiveLineup fixture={fixture} lineups={pred.lineups} />
 
       {/* deep player research */}
       <div>

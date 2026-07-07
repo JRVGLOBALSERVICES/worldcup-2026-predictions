@@ -1,5 +1,14 @@
 import { fixtures } from "./data";
-import type { Goal, Card, MatchStats, GoalMethod, WaterBreakAction } from "./bets";
+import type {
+  Goal,
+  Card,
+  MatchStats,
+  GoalMethod,
+  WaterBreakAction,
+  PlayerShotLine,
+  Substitution,
+} from "./bets";
+import type { LineupXI } from "./types";
 import resultsFile from "@/data/results.json";
 
 /** Persisted ESPN snapshots (written by scripts/build-results.mjs). */
@@ -50,17 +59,22 @@ export function isMatchFinished(matchId: string): boolean {
 const ESPN_SUMMARY =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 
+/** Confirmed XIs off ESPN's published team sheet, oriented to our home/away. */
+export type LiveLineups = { home: LineupXI; away: LineupXI };
+
 /**
- * Per-event summary feed. Returns both the verified stats (corners / SOT /
- * cards) and the richer goal list — scorer + assister + minute — which the
- * cheap scoreboard `details` feed omits during live play. `stats` is null when
- * the boxscore hasn't populated yet; `goals` rides on the keyEvents and is
- * available as soon as the first goal is logged. Both oriented to our home/away.
+ * Per-event summary feed. Returns the verified stats (corners / SOT / cards),
+ * the richer goal list — scorer + assister + minute — which the cheap
+ * scoreboard `details` feed omits during live play, and the confirmed line-ups
+ * once ESPN publishes the team sheet (~1h pre-kickoff). `stats` is null when
+ * the boxscore hasn't populated yet (incl. pre-kickoff); `goals` rides on the
+ * keyEvents; `lineups` is null until the sheet is out. All oriented to our
+ * home/away.
  */
 async function fetchStats(
   eventId: string,
   matchId: string,
-): Promise<{ stats: MatchStats | null; goals: Goal[] } | null> {
+): Promise<{ stats: MatchStats | null; goals: Goal[]; lineups: LiveLineups | null } | null> {
   const fx = fixtures.find((f) => f.id === matchId);
   if (!fx) return null;
   let data: EspnSummary;
@@ -77,9 +91,10 @@ async function fetchStats(
   }
   const homeName = norm(fx.home.name);
   const goals = goalsFromKeyEvents(data.keyEvents, homeName);
+  const lineups = lineupsFromRosters(data.rosters, homeName);
 
   const teams = data.boxscore?.teams;
-  if (!Array.isArray(teams) || teams.length < 2) return { stats: null, goals };
+  if (!Array.isArray(teams) || teams.length < 2) return { stats: null, goals, lineups };
   const side = (espnName?: string) => (norm(espnName ?? "") === homeName ? "home" : "away");
   const stat = (t: EspnStatTeam | undefined, name: string): number => {
     const s = (t?.statistics ?? []).find((x) => x.name === name);
@@ -94,7 +109,7 @@ async function fetchStats(
   for (const t of teams) byName[side(t.team?.displayName)] = t;
   const h = byName.home;
   const a = byName.away;
-  if (!h || !a) return { stats: null, goals };
+  if (!h || !a) return { stats: null, goals, lineups };
 
   const yellow = { home: stat(h, "yellowCards"), away: stat(a, "yellowCards") };
   const red = { home: stat(h, "redCards"), away: stat(a, "redCards") };
@@ -103,6 +118,8 @@ async function fetchStats(
   const sotByHalf = { home: [0, 0] as [number, number], away: [0, 0] as [number, number] };
   const playerSot: Record<string, number> = {};
   const playerShots: Record<string, number> = {};
+  const playerShotBreakdown: Record<string, PlayerShotLine> = {};
+  const subs: Substitution[] = [];
   // A play counts toward TOTAL shots if it's any shot attempt ("Shot On Target/
   // Off Target/Blocked/Hit Woodwork") or a goal (own goals excluded — not a shot
   // for the "scorer"). This tally matches the boxscore totalShots team stat.
@@ -115,7 +132,45 @@ async function fetchStats(
     if (isShotPlay(text)) {
       // Attribute the attempt to its taker for the per-player TOTAL shots tally.
       const taker = p.participants?.[0]?.athlete?.displayName;
-      if (taker) playerShots[taker] = (playerShots[taker] ?? 0) + 1;
+      if (taker) {
+        playerShots[taker] = (playerShots[taker] ?? 0) + 1;
+        // Full breakdown line for the live player-shots board. A goal counts as
+        // on target (boxscore convention); woodwork counts as off target.
+        const line = (playerShotBreakdown[taker] ??= {
+          team: side(p.team.displayName),
+          shots: 0,
+          sot: 0,
+          off: 0,
+          blocked: 0,
+          goals: 0,
+        });
+        line.shots += 1;
+        if (text.startsWith("Goal") || text === "Penalty - Scored") {
+          line.goals += 1;
+          line.sot += 1;
+        } else if (text === "Shot On Target") line.sot += 1;
+        else if (text.startsWith("Shot Blocked")) line.blocked += 1;
+        else line.off += 1; // Shot Off Target / Shot Hit Woodwork
+      }
+    }
+    if (text === "Substitution") {
+      // Opta prose: "Substitution, <Team>. <On> replaces <Off>." — injury
+      // changes end "… because of an injury." The prose is the reliable order;
+      // participants back it up ([0] = coming on, [1] = going off).
+      const prose = c.text ?? "";
+      const m = prose.match(/([^,.]+?)\s+replaces\s+([^,.]+?)(?:\s+because of an injury)?\s*\.?\s*$/i);
+      const pa = p.participants ?? [];
+      const on = m?.[1]?.trim() ?? pa[0]?.athlete?.displayName ?? "";
+      const off = m?.[2]?.trim() ?? pa[1]?.athlete?.displayName ?? "";
+      if (on || off) {
+        subs.push({
+          team: side(p.team.displayName),
+          minute: p.clock?.value != null ? Math.round(p.clock.value / 60) : null,
+          on,
+          off,
+          injury: /injur/i.test(prose),
+        });
+      }
     }
     if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
     const s = side(p.team.displayName);
@@ -147,6 +202,9 @@ async function fetchStats(
       sotByHalf,
       playerSot,
       playerShots,
+      playerShotBreakdown,
+      // Commentary arrives newest-first; the subs log reads oldest-first.
+      subs: subs.sort((x, y) => (x.minute ?? 999) - (y.minute ?? 999)),
       firstGoalMethod: firstGoalMethod(data.keyEvents),
       firstPenalty: firstPenaltyTeam(data.keyEvents, homeName),
       waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },
@@ -165,7 +223,67 @@ async function fetchStats(
       },
     },
     goals,
+    lineups,
   };
+}
+
+/**
+ * Confirmed XIs from the summary `rosters` — real formation, shirt numbers and
+ * position codes, oriented to our home/away. Null until ESPN publishes BOTH
+ * team sheets (~1h pre-kickoff). Mirrors scripts/build-lineups.mjs teamXI —
+ * keep the two in sync.
+ */
+function lineupsFromRosters(
+  rosters: EspnRosterTeam[] | undefined,
+  homeName: string,
+): LiveLineups | null {
+  if (!Array.isArray(rosters) || rosters.length < 2) return null;
+
+  const teamXI = (rt: EspnRosterTeam | undefined): LineupXI | null => {
+    if (!rt) return null;
+    const starters = (rt.roster ?? []).filter((p) => p.starter);
+    if (starters.length < 11) return null; // sheet not confirmed yet
+
+    // GK first (defensive — ESPN already orders it so), then the rest as listed.
+    const ordered = [
+      ...starters.filter((p) => (p.position?.abbreviation ?? "") === "G"),
+      ...starters.filter((p) => (p.position?.abbreviation ?? "") !== "G"),
+    ];
+    const players = ordered.map((p) => {
+      const num = parseInt(p.jersey ?? p.athlete?.jersey ?? "", 10);
+      return {
+        num: Number.isFinite(num) ? num : null,
+        name: p.athlete?.displayName ?? p.athlete?.fullName ?? "Unknown",
+        pos: p.position?.abbreviation ?? "",
+      };
+    });
+
+    const formation =
+      typeof rt.formation === "string" && /^\d(-\d){1,3}$/.test(rt.formation)
+        ? rt.formation
+        : players
+            .slice(1)
+            .reduce(
+              (acc, p) => {
+                acc[p.pos === "D" ? 0 : p.pos === "F" ? 2 : 1]++;
+                return acc;
+              },
+              [0, 0, 0],
+            )
+            .filter((n) => n > 0)
+            .join("-");
+
+    return { formation, players };
+  };
+
+  const bySide: Partial<Record<"home" | "away", EspnRosterTeam>> = {};
+  for (const t of rosters) {
+    bySide[norm(t.team?.displayName ?? "") === homeName ? "home" : "away"] = t;
+  }
+  const home = teamXI(bySide.home);
+  const away = teamXI(bySide.away);
+  if (!home || !away) return null;
+  return { home, away };
 }
 
 /** Map a durable persisted result into the LiveMatch shape the UI consumes. */
@@ -243,6 +361,9 @@ export type LiveMatch = {
   cards: Card[];
   /** Verified corner/SOT/card counts — present once the summary endpoint has data. */
   stats?: MatchStats;
+  /** Confirmed XIs — present from the moment ESPN publishes the team sheet
+   * (~1h pre-kickoff), including on a still-scheduled match. */
+  lineups?: LiveLineups | null;
 };
 
 // ESPN occasionally spells a nation differently from our fixtures. Map the few
@@ -341,9 +462,23 @@ type EspnKeyEvent = {
   // even the scorer's name) only land here, in the summary keyEvents.
   participants?: { athlete?: { displayName?: string } }[];
 };
+// Team-sheet roster block (line-ups). `starter` marks the XI; formation is real.
+type EspnRosterTeam = {
+  team?: { displayName?: string };
+  formation?: string;
+  roster?: {
+    starter?: boolean;
+    jersey?: string;
+    athlete?: { displayName?: string; fullName?: string; jersey?: string };
+    position?: { abbreviation?: string };
+  }[];
+};
 type EspnSummary = {
   boxscore?: { teams?: EspnStatTeam[] };
+  rosters?: EspnRosterTeam[];
   commentary?: {
+    /** Opta prose for the play ("Substitution, Spain. X replaces Y."). */
+    text?: string;
     play?: {
       type?: { text?: string };
       period?: { number?: number };
@@ -757,7 +892,10 @@ async function fetchDate(param: string): Promise<EspnEvent[]> {
  * no ESPN data simply don't appear (the UI falls back to its static state).
  */
 export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Record<string, LiveMatch>> {
-  const WINDOW_BEFORE = 15 * 60 * 1000;
+  // 75 min ahead, not 15 — ESPN publishes the confirmed team sheets ~1h before
+  // kickoff, and the line-up flow (spotlight "line-ups confirmed", live pitch
+  // board) needs the summary fetch running through that window.
+  const WINDOW_BEFORE = 75 * 60 * 1000;
   // Keep resolving a match well past the whistle (≈3h game + buffer) so the
   // final score + goal log stay on the page for hours after full time, not just
   // during play. Below ~6h, a match that ended would silently revert to its
@@ -818,11 +956,19 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
   }
 
   // Verified stats (corners / shots-on-target / cards) ride a separate per-event
-  // summary call. Fetch them only for matches that have actually kicked off this
-  // poll — live, at the break, or just finished — so the counts climb in real
-  // time. Older finished matches keep the stats baked into results.json above.
+  // summary call. Fetch them for matches that have kicked off this poll — live,
+  // at the break, or just finished — so the counts climb in real time, PLUS
+  // still-scheduled matches inside the pre-kickoff window: their summary carries
+  // the confirmed team sheet the moment ESPN publishes it (~1h before KO).
+  // Older finished matches keep the stats baked into results.json above.
+  const preKo = (id: string) => {
+    const fx = fixtures.find((f) => f.id === id);
+    if (!fx) return false;
+    const ko = new Date(fx.kickoffUTC).getTime();
+    return nowMs >= ko - WINDOW_BEFORE && nowMs <= ko + WINDOW_AFTER;
+  };
   const liveIds = Object.entries(out)
-    .filter(([id, m]) => m.state !== "scheduled" && eventIdByMatch[id])
+    .filter(([id, m]) => eventIdByMatch[id] && (m.state !== "scheduled" || preKo(id)))
     .map(([id]) => id);
   if (liveIds.length) {
     const statBatches = await Promise.allSettled(
@@ -832,6 +978,7 @@ export async function fetchLiveMatches(nowMs: number = Date.now()): Promise<Reco
       const b = statBatches[i];
       if (b.status === "fulfilled" && b.value) {
         if (b.value.stats) out[id].stats = b.value.stats;
+        if (b.value.lineups) out[id].lineups = b.value.lineups;
         // Layer the summary's scorer/assist detail onto the scoreboard goals,
         // which carry neither during live play.
         out[id].goals = enrichGoals(out[id].goals, b.value.goals);

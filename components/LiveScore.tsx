@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { useLiveMatch } from "./LiveProvider";
 import { KickoffClock } from "./KickoffClock";
 import type { LiveMatch } from "@/lib/live";
+import type { PlayerShotLine, Substitution } from "@/lib/bets";
+import { nameMatch } from "@/lib/bets";
 
 /**
  * A live number that pops (scale + brightness flash) whenever its value
@@ -210,6 +212,220 @@ export function LiveStats({ matchId }: { matchId: string }) {
         {s.yellow.home + s.yellow.away} yellow · {s.red.home + s.red.away} red
         {lm.state !== "finished" ? " · numbers tick live every 5s" : ""}
       </p>
+    </div>
+  );
+}
+
+/* ── Player shots board + subs log ──────────────────────────────────────────
+ * The per-player layer under the team stats: every shooter's full line (total /
+ * on / off / blocked / goals), live sub markers, and the substitution log with
+ * injury flags. This is the view that tracks a "Player Over X shots" leg shot
+ * by shot — the counts ARE the settling tallies from lib/live.ts. */
+
+export type ShotRow = {
+  player: string;
+  line: PlayerShotLine;
+  /** Substitution touching this player, if any. */
+  subbedOff?: number | null;
+  subbedOn?: number | null;
+  injuredOff?: boolean;
+  /** Player is named in an open bet leg (shots / SOT prop) — highlight. */
+  tracked?: boolean;
+};
+
+/** Sub markers per player name (accent-safe), from the match's subs list. */
+function subMarks(subs: Substitution[] | undefined, player: string) {
+  let subbedOff: number | null | undefined;
+  let subbedOn: number | null | undefined;
+  let injuredOff = false;
+  for (const s of subs ?? []) {
+    if (s.off && nameMatch(s.off, player)) {
+      subbedOff = s.minute;
+      injuredOff = s.injury;
+    }
+    if (s.on && nameMatch(s.on, player)) subbedOn = s.minute;
+  }
+  return { subbedOff, subbedOn, injuredOff };
+}
+
+/**
+ * Build the board rows for one match: every player with a shot attempt, PLUS
+ * any tracked player (matched against open shots-prop bet LABELS — a label
+ * contains the player's name) from the confirmed XI / subs even at 0 attempts,
+ * so a tracked line reads 0, not "missing". `tracked` entries may be full bet
+ * labels; matching is accent-safe containment either way (lib/bets nameMatch).
+ */
+export function buildShotRows(lm: LiveMatch, tracked: string[] = []): ShotRow[] {
+  const breakdown = lm.stats?.playerShotBreakdown ?? {};
+  const subs = lm.stats?.subs;
+  const rows: ShotRow[] = Object.entries(breakdown).map(([player, line]) => ({
+    player,
+    line,
+    ...subMarks(subs, player),
+    tracked: tracked.some((t) => nameMatch(t, player)),
+  }));
+
+  // Zero-rows for tracked players who haven't attempted yet — resolved to the
+  // REAL sheet name via the confirmed XI or the subs list (came on later), so
+  // a raw bet label never renders as a player name.
+  const have = (name: string) => rows.some((r) => nameMatch(r.player, name));
+  for (const t of tracked) {
+    let team: "home" | "away" | null = null;
+    let resolved: string | null = null;
+    for (const side of ["home", "away"] as const) {
+      const p = lm.lineups?.[side]?.players.find((x) => nameMatch(t, x.name));
+      if (p) {
+        team = side;
+        resolved = p.name;
+      }
+    }
+    if (!resolved) {
+      const s = (subs ?? []).find((x) => x.on && nameMatch(t, x.on));
+      if (s) {
+        team = s.team;
+        resolved = s.on;
+      }
+    }
+    if (!team || !resolved) continue; // not on the sheet (yet) — nothing truthful to show
+    if (have(resolved)) continue; // already shooting / two labels on one player → one row
+    rows.push({
+      player: resolved,
+      line: { team, shots: 0, sot: 0, off: 0, blocked: 0, goals: 0 },
+      ...subMarks(subs, resolved),
+      tracked: true,
+    });
+  }
+
+  // Tracked lines first, then by shots desc, then on-target desc.
+  return rows.sort(
+    (a, b) =>
+      Number(b.tracked ?? false) - Number(a.tracked ?? false) ||
+      b.line.shots - a.line.shots ||
+      b.line.sot - a.line.sot ||
+      a.player.localeCompare(b.player),
+  );
+}
+
+/** One player row — name (+ sub/injury markers) and the five ticking counts. */
+function ShotRowLine({ row }: { row: ShotRow }) {
+  const tone = row.line.team === "home" ? "text-acid" : "text-mint";
+  return (
+    <div
+      className={`grid grid-cols-[1fr_repeat(5,2.1rem)] items-center gap-1 rounded-lg px-2 py-1.5 ${
+        row.tracked ? "border border-acid-dim/40 bg-acid/[0.06]" : ""
+      }`}
+    >
+      <span className="flex min-w-0 items-center gap-1.5">
+        <span className={`size-1.5 shrink-0 rounded-full ${row.line.team === "home" ? "bg-acid" : "bg-mint"}`} />
+        <span className={`truncate text-[0.78rem] font-semibold ${row.tracked ? tone : "text-ink"}`}>
+          {row.player}
+        </span>
+        {row.tracked && (
+          <span className="shrink-0 rounded-full border border-acid-dim/50 px-1 font-mono text-[0.5rem] font-semibold uppercase tracking-wider text-acid">
+            slip
+          </span>
+        )}
+        {row.subbedOff != null && (
+          <span
+            className={`shrink-0 font-mono text-[0.58rem] ${row.injuredOff ? "text-rose" : "text-amber"}`}
+            title={row.injuredOff ? "Subbed off injured" : "Subbed off"}
+          >
+            ⬇{row.subbedOff}&apos;{row.injuredOff ? " ✚" : ""}
+          </span>
+        )}
+        {row.subbedOn != null && row.subbedOff == null && (
+          <span className="shrink-0 font-mono text-[0.58rem] text-mint" title="Came on">
+            ⬆{row.subbedOn}&apos;
+          </span>
+        )}
+      </span>
+      <AnimatedNum value={row.line.shots} className="tnum text-center font-mono text-[0.78rem] font-bold text-ink" />
+      <AnimatedNum value={row.line.sot} className="tnum text-center font-mono text-[0.78rem] font-semibold text-acid" />
+      <AnimatedNum value={row.line.off} className="tnum text-center font-mono text-[0.78rem] text-muted" />
+      <AnimatedNum value={row.line.blocked} className="tnum text-center font-mono text-[0.78rem] text-muted" />
+      <AnimatedNum value={row.line.goals} className="tnum text-center font-mono text-[0.78rem] font-semibold text-amber" />
+    </div>
+  );
+}
+
+/** Column header shared by the board wherever it renders. */
+function ShotBoardHead() {
+  return (
+    <div className="grid grid-cols-[1fr_repeat(5,2.1rem)] gap-1 px-2 font-mono text-[0.54rem] uppercase tracking-[0.14em] text-faint">
+      <span>Player</span>
+      <span className="text-center">Sh</span>
+      <span className="text-center">On</span>
+      <span className="text-center">Off</span>
+      <span className="text-center">Blk</span>
+      <span className="text-center">⚽</span>
+    </div>
+  );
+}
+
+/** Shared board body — rows only (caller provides the card + heading). */
+export function ShotRowsBlock({ rows }: { rows: ShotRow[] }) {
+  return (
+    <div className="space-y-0.5">
+      <ShotBoardHead />
+      {rows.map((r) => (
+        <ShotRowLine key={r.player} row={r} />
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Per-player shots board for the match-detail page. Every shooter's live line —
+ * the exact tallies "Player Over X shots / shots on target" legs settle on —
+ * with sub markers (⬇ off / ⬆ on, injury in rose). Appears once anyone has an
+ * attempt (or a tracked player is on the sheet); every number ticks per poll.
+ */
+export function PlayerShotsBoard({ matchId, trackedNames }: { matchId: string; trackedNames?: string[] }) {
+  const lm = useLiveMatch(matchId);
+  if (!lm || lm.state === "scheduled") return null;
+  const rows = buildShotRows(lm, trackedNames ?? []);
+  if (rows.length === 0) return null;
+  return (
+    <div className="mt-6 rounded-2xl border border-line bg-card/50 p-5">
+      <h3 className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
+        Player shots {lm.state === "finished" ? "(full time)" : "(live)"} · settles the shots props
+      </h3>
+      <ShotRowsBlock rows={rows} />
+      <p className="mt-3 border-t border-line/50 pt-2 font-mono text-[0.56rem] uppercase tracking-[0.14em] text-ink/35">
+        Sh total · On target (goals count) · Off target · Blocked · Goals
+        {lm.state !== "finished" ? " · ticks live every 5s" : ""} · ⬇ subbed off · ✚ injury
+      </p>
+    </div>
+  );
+}
+
+/** Substitution log — who came on / went off, minute, injury flag. */
+export function SubsLog({ matchId }: { matchId: string }) {
+  const lm = useLiveMatch(matchId);
+  const subs = lm?.stats?.subs;
+  if (!lm || lm.state === "scheduled" || !subs || subs.length === 0) return null;
+  return (
+    <div className="mt-6 rounded-2xl border border-line bg-card/50 p-5">
+      <h3 className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
+        Substitutions {lm.state === "finished" ? "(full time)" : "(live)"}
+      </h3>
+      <ul className="space-y-2">
+        {subs.map((s, i) => (
+          <li key={i} className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm">
+            <span className="tnum w-9 shrink-0 font-mono text-faint">
+              {s.minute != null ? `${s.minute}'` : "—"}
+            </span>
+            <span className={`size-2 shrink-0 rounded-full ${s.team === "home" ? "bg-acid" : "bg-mint"}`} />
+            <span className="font-semibold text-ink">⬆ {s.on}</span>
+            <span className="text-muted">⬇ {s.off}</span>
+            {s.injury && (
+              <span className="rounded-full border border-rose/40 bg-rose/10 px-1.5 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-rose">
+                injury
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

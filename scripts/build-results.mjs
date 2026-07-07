@@ -129,17 +129,50 @@ function statsFromSummary(summary, fixture) {
   // Blocked/Hit Woodwork") or a goal (own goals excluded — not a shot for the
   // "scorer"). Matches the boxscore totalShots team stat; feeds playerShotsOver.
   const playerShots = {};
+  // Full per-player breakdown (total / on / off / blocked / goals + side) and
+  // the substitution log — mirrors lib/live.ts fetchStats; keep in sync.
+  const playerShotBreakdown = {};
+  const subs = [];
   const isShotPlay = (t) =>
     t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
   for (const c of summary.commentary ?? []) {
     const p = c.play;
     const text = p?.type?.text;
+    const playSide = p?.team?.displayName ? ours(p.team.displayName) : null;
     if (text && isShotPlay(text)) {
       const taker = p.participants?.[0]?.athlete?.displayName;
-      if (taker) playerShots[taker] = (playerShots[taker] ?? 0) + 1;
+      if (taker) {
+        playerShots[taker] = (playerShots[taker] ?? 0) + 1;
+        const line = (playerShotBreakdown[taker] ??= {
+          team: playSide ?? "home", shots: 0, sot: 0, off: 0, blocked: 0, goals: 0,
+        });
+        line.shots += 1;
+        if (text.startsWith("Goal") || text === "Penalty - Scored") { line.goals += 1; line.sot += 1; }
+        else if (text === "Shot On Target") line.sot += 1;
+        else if (text.startsWith("Shot Blocked")) line.blocked += 1;
+        else line.off += 1; // Shot Off Target / Shot Hit Woodwork
+      }
+    }
+    if (text === "Substitution" && playSide) {
+      // Opta prose: "Substitution, <Team>. <On> replaces <Off>." — injury
+      // changes end "… because of an injury." Participants back the prose up
+      // ([0] = coming on, [1] = going off).
+      const prose = c.text ?? "";
+      const m = prose.match(/([^,.]+?)\s+replaces\s+([^,.]+?)(?:\s+because of an injury)?\s*\.?\s*$/i);
+      const pa = p.participants ?? [];
+      const on = (m?.[1] ?? pa[0]?.athlete?.displayName ?? "").trim();
+      const off = (m?.[2] ?? pa[1]?.athlete?.displayName ?? "").trim();
+      if (on || off) {
+        subs.push({
+          team: playSide,
+          minute: p.clock?.value != null ? Math.round(p.clock.value / 60) : null,
+          on, off,
+          injury: /injur/i.test(prose),
+        });
+      }
     }
     if (text !== "Corner Awarded" && text !== "Shot On Target") continue;
-    const side = p.team?.displayName ? ours(p.team.displayName) : null;
+    const side = playSide;
     if (!side) continue;
     // ET plays (period ≥ 3) stay OUT of the per-half buckets — half markets
     // and the FT corner-count 1X2 are regulation-90 (book rule). Per-player
@@ -160,6 +193,8 @@ function statsFromSummary(summary, fixture) {
 
   return {
     corners, sot, shots, yellow, red, cards, fouls, cornersByHalf, sotByHalf, playerSot, playerShots,
+    playerShotBreakdown,
+    subs: subs.sort((x, y) => (x.minute ?? 999) - (y.minute ?? 999)),
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
     firstPenalty: firstPenaltyTeam(summary.keyEvents, ours),
     waterBreak: { ...(wbH1 ? { h1: wbH1 } : {}), ...(wbH2 ? { h2: wbH2 } : {}) },

@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { LiveMatch } from "@/lib/live";
 import { fixtures } from "@/lib/data";
 import { diffLiveEvents, type LiveEvent, type LiveEventKind } from "@/lib/liveEvents";
+import { buildShotRows, ShotRowsBlock } from "./LiveScore";
 
 /**
  * The match-FX section — the tracker's live centrepiece. It always fronts ONE
@@ -53,6 +54,8 @@ const FEED: Record<LiveEventKind, { glyph: string; label: string }> = {
   foul: { glyph: "❗", label: "Foul" },
   offside: { glyph: "🚫", label: "Offside" },
   possession: { glyph: "📈", label: "Possession swing" },
+  sub: { glyph: "🔁", label: "Substitution" },
+  lineups: { glyph: "📋", label: "Line-ups confirmed" },
   kickoff: { glyph: "▶", label: "Kick-off" },
   halftime: { glyph: "⏸", label: "Half-time" },
   fulltime: { glyph: "🏁", label: "Full time" },
@@ -208,6 +211,75 @@ function SpotStats({ lm }: { lm: LiveMatch }) {
   );
 }
 
+/** Per-player shots strip for the live spotlight — every shooter's full line
+ *  (total / on / off / blocked / goals) with sub + injury markers, tracked-leg
+ *  rows pinned on top and highlighted. The counts are the exact tallies the
+ *  "Player Over X shots (on target)" legs settle on. Capped at 10 rows here
+ *  (tracked rows sort first, so a slip line is never the one clipped). */
+function SpotPlayerShots({ lm, labels }: { lm: LiveMatch; labels: string[] }) {
+  const rows = buildShotRows(lm, labels);
+  if (rows.length === 0) return null;
+  const shown = rows.slice(0, 10);
+  return (
+    <div className="mt-4 border-t border-white/[0.07] pt-4">
+      <p className="mb-2 text-center font-mono text-[0.56rem] uppercase tracking-[0.16em] text-faint/60">
+        Player shots · Sh / On / Off / Blk / ⚽ · settles the shots props
+      </p>
+      <ShotRowsBlock rows={shown} />
+      {rows.length > shown.length && (
+        <p className="mt-1.5 text-center font-mono text-[0.52rem] uppercase tracking-[0.14em] text-faint/40">
+          +{rows.length - shown.length} more shooters on the match page
+        </p>
+      )}
+    </div>
+  );
+}
+
+/** Confirmed XIs block for the countdown card — appears the moment ESPN posts
+ *  the team sheets (~1h pre-KO): real formation + shirt numbers, both sides. */
+function ConfirmedXIs({
+  lm,
+  home,
+  away,
+}: {
+  lm: LiveMatch;
+  home: { name: string; flag: string };
+  away: { name: string; flag: string };
+}) {
+  const lu = lm.lineups;
+  if (!lu) return null;
+  const Col = ({ side, team }: { side: "home" | "away"; team: { name: string; flag: string } }) => (
+    <div className="min-w-0 flex-1">
+      <p className="mb-1.5 flex items-center gap-1.5 font-mono text-[0.6rem] font-semibold uppercase tracking-wider">
+        <span aria-hidden>{team.flag}</span>
+        <span className={side === "home" ? "text-acid" : "text-mint"}>{teamCode(team.name)}</span>
+        <span className="tnum rounded-full border border-line px-1.5 text-[0.54rem] text-faint">
+          {lu[side].formation}
+        </span>
+      </p>
+      <ul className="space-y-0.5">
+        {lu[side].players.map((p) => (
+          <li key={`${p.num}-${p.name}`} className="flex items-baseline gap-1.5 text-[0.66rem] leading-tight">
+            <span className="tnum w-4 shrink-0 text-right font-mono text-faint/60">{p.num ?? ""}</span>
+            <span className="truncate text-ink/90">{p.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+  return (
+    <div className="mt-5 border-t border-white/[0.07] pt-4">
+      <p className="mb-3 text-center font-mono text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-acid">
+        📋 Line-ups confirmed · official team sheets
+      </p>
+      <div className="flex gap-4">
+        <Col side="home" team={home} />
+        <Col side="away" team={away} />
+      </div>
+    </div>
+  );
+}
+
 /** Rolling inline play-by-play for the live match. Diffs each poll and keeps the
  *  last ~7 happenings, newest on top, so the section reads what's going on even
  *  between the transient full-screen bursts. */
@@ -245,17 +317,31 @@ function LiveFeed({ lm, home, away }: { lm: LiveMatch; home: { flag: string; nam
       {rows.map((r) => {
         const meta = FEED[r.ev.kind];
         const isGoal = r.ev.kind === "goal";
+        const isInjurySub = r.ev.kind === "sub" && r.ev.injury;
         const flag = r.ev.team === "home" ? home.flag : r.ev.team === "away" ? away.flag : "";
         const side = r.ev.team === "home" ? home.name : r.ev.team === "away" ? away.name : "";
         const detail =
           r.ev.kind === "possession" && r.ev.value != null
             ? `${side} ${r.ev.value}%`
-            : [r.ev.player ?? side, r.ev.minute != null ? `${r.ev.minute}'` : ""].filter(Boolean).join(" · ");
+            : r.ev.kind === "sub"
+              ? [
+                  r.ev.player ? `⬆ ${r.ev.player}` : "",
+                  r.ev.playerOff ? `⬇ ${r.ev.playerOff}` : "",
+                  r.ev.minute != null ? `${r.ev.minute}'` : "",
+                  r.ev.injury ? "INJURY" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" · ")
+              : [r.ev.player ?? side, r.ev.minute != null ? `${r.ev.minute}'` : ""].filter(Boolean).join(" · ");
         return (
           <li
             key={r.id}
             className={`chip-in flex items-center gap-2.5 rounded-lg px-3 py-2 ${
-              isGoal ? "border border-acid-dim/40 bg-acid/[0.08]" : "bg-white/[0.025]"
+              isGoal
+                ? "border border-acid-dim/40 bg-acid/[0.08]"
+                : isInjurySub
+                  ? "border border-rose/30 bg-rose/[0.06]"
+                  : "bg-white/[0.025]"
             }`}
           >
             <span className="text-sm leading-none">{meta.glyph}</span>
@@ -274,9 +360,13 @@ function LiveFeed({ lm, home, away }: { lm: LiveMatch; home: { flag: string; nam
 export default function MatchSpotlight({
   live,
   betMatchIds,
+  openLabels,
 }: {
   live: Record<string, LiveMatch | undefined>;
   betMatchIds?: Set<string>;
+  /** Open (pending) bet/special labels per matchId — a label containing a
+   * player's name pins + highlights that player on the shots strip. */
+  openLabels?: Record<string, string[]>;
 }) {
   const [mounted, setMounted] = useState(false);
   const [nowMs, setNowMs] = useState(0);
@@ -354,6 +444,8 @@ export default function MatchSpotlight({
 
         <SpotStats lm={spotlightLive} />
 
+        <SpotPlayerShots lm={spotlightLive} labels={openLabels?.[spotlightLive.matchId] ?? []} />
+
         <LiveFeed lm={spotlightLive} home={fx.home} away={fx.away} />
       </section>
     );
@@ -405,8 +497,12 @@ export default function MatchSpotlight({
         </div>
       </div>
 
+      {live[fx.id]?.lineups && <ConfirmedXIs lm={live[fx.id]!} home={fx.home} away={fx.away} />}
+
       <p className="mt-5 border-t border-white/[0.06] pt-3.5 text-center font-mono text-[0.58rem] uppercase tracking-[0.14em] text-faint/45">
-        The moment it kicks off, this section goes live — score, full match stats (shots, corners, fouls, cards, possession) and every event as it happens.{" "}
+        {live[fx.id]?.lineups
+          ? "The moment it kicks off, this goes live — score, full match stats, per-player shots (on/off target) and every goal, sub and card as it happens."
+          : "Confirmed line-ups land here the moment ESPN posts the team sheets (~1h before KO). At kickoff it goes live — score, full match stats, per-player shots and every event."}{" "}
         <Link href={`/match/${fx.id}`} className="text-acid/70 underline-offset-2 hover:underline">
           Match preview →
         </Link>

@@ -20,6 +20,8 @@ export type LiveEventKind =
   | "foul"          // Δ foulsCommitted
   | "offside"       // Δ offsides
   | "possession"    // possession swung ≥ POSSESSION_SWING points toward a side
+  | "sub"           // substitution (stats.subs list grew) — injury flag when ESPN says so
+  | "lineups"       // confirmed team sheets landed (lineups appeared on the match)
   | "kickoff"       // state scheduled → live
   | "halftime"      // state live → halftime
   | "fulltime";     // state → finished
@@ -29,7 +31,8 @@ export type LiveEvent = {
   /** Side the event belongs to (the scorer / shooter / booked side; for a save,
    * the side MAKING the save). Absent for whole-match moments (HT/FT). */
   team?: "home" | "away";
-  /** Player name when the feed carries one (goals, cards). */
+  /** Player name when the feed carries one (goals, cards; for a sub, the player
+   * coming ON). */
   player?: string;
   minute?: number;
   /** Goal decoration. */
@@ -38,6 +41,9 @@ export type LiveEvent = {
   assist?: string | null;
   /** possession: the new leader's share, rounded. */
   value?: number;
+  /** sub: the player going OFF, and whether it was an injury change. */
+  playerOff?: string;
+  injury?: boolean;
 };
 
 /** Minimum poll-to-poll possession swing (percentage points) worth a chip. */
@@ -84,6 +90,24 @@ export function diffLiveEvents(prev: LiveMatch | undefined, next: LiveMatch): Li
       for (let i = 0; i < d; i++) out.push({ kind: "goal", team: side, minute: next.minute ?? undefined });
     }
   }
+
+  // ── Substitutions — the subs list growing. Headline-tier (never capped):
+  // a roster change freezes/starts a player's shot line, which is exactly what
+  // a shots-prop slip needs to know the moment it happens.
+  const prevSubs = prev.stats?.subs?.length ?? 0;
+  for (const s of (next.stats?.subs ?? []).slice(prevSubs)) {
+    out.push({
+      kind: "sub",
+      team: s.team,
+      player: s.on || undefined,
+      playerOff: s.off || undefined,
+      minute: s.minute ?? undefined,
+      injury: s.injury,
+    });
+  }
+
+  // ── Confirmed line-ups landing (pre-kickoff team sheets published).
+  if (!prev.lineups && next.lineups) out.push({ kind: "lineups" });
 
   // ── State flips.
   if (prev.state !== next.state) {

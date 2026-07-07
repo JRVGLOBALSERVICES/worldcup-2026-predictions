@@ -97,6 +97,33 @@ export type SideHalfCount = { home: number[]; away: number[] };
  * what lets corner / shots-on-target / card bet legs auto-settle against real
  * numbers instead of a hand-graded guess. Written by scripts/build-results.mjs.
  */
+/**
+ * One shooter's full live shot line. `sot` counts "Shot On Target" plays PLUS
+ * goals (a goal is always on target — mirrors the boxscore shotsOnTarget
+ * convention); `off` includes woodwork; `shots` = sot + off + blocked (the
+ * same attempts the playerShots settling tally counts).
+ */
+export type PlayerShotLine = {
+  team: "home" | "away";
+  shots: number;
+  sot: number;
+  off: number;
+  blocked: number;
+  goals: number;
+};
+
+/** One substitution, parsed from ESPN commentary "Substitution" plays. */
+export type Substitution = {
+  team: "home" | "away";
+  minute: number | null;
+  /** Player coming ON. */
+  on: string;
+  /** Player going OFF. */
+  off: string;
+  /** ESPN's prose flagged it as an injury change ("because of an injury"). */
+  injury: boolean;
+};
+
 export type MatchStats = {
   corners: SideCount;
   sot: SideCount;
@@ -131,6 +158,19 @@ export type MatchStats = {
    * off-target attempt is a shot but not an SOT.
    */
   playerShots?: Record<string, number>;
+  /**
+   * Full per-player shot breakdown — one PlayerShotLine per shooter (total /
+   * on target / off target / blocked / goals + which side he plays for).
+   * Superset of `playerSot`/`playerShots` (those stay the settling maps); this
+   * feeds the live player-shots board so shots props track shot by shot.
+   */
+  playerShotBreakdown?: Record<string, PlayerShotLine>;
+  /**
+   * Substitutions in match order — who came on / went off, the minute, and
+   * whether ESPN's prose flags an injury. Drives the subs log + feed chips
+   * (a subbed-off player's shot line is frozen — critical for shots props).
+   */
+  subs?: Substitution[];
   /**
    * How the FIRST goal of the match was scored — parsed from the summary
    * `keyEvents[]` of the earliest scoring play (Opta commentary text + the
@@ -781,7 +821,7 @@ const deburr = (s: string): string =>
   s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
 
 /** Loose name match — "Ronaldo" matches "Cristiano Ronaldo", case- and accent-insensitive, either direction. */
-function nameMatch(a: string, b: string): boolean {
+export function nameMatch(a: string, b: string): boolean {
   const x = deburr(a);
   const y = deburr(b);
   return x === y || x.includes(y) || y.includes(x);

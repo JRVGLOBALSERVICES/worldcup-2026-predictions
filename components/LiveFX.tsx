@@ -62,6 +62,8 @@ const CHIP: Record<
   foul: { glyph: "❗", label: "Foul" },
   offside: { glyph: "🚫", label: "Offside" },
   possession: { glyph: "📈", label: "Possession swing" },
+  sub: { glyph: "🔁", label: "Substitution" },
+  lineups: { glyph: "📋", label: "Line-ups confirmed" },
   kickoff: { glyph: "▶", label: "Kick-off" },
   halftime: { glyph: "⏸", label: "Half-time" },
   fulltime: { glyph: "🏁", label: "Full time" },
@@ -372,10 +374,26 @@ function EventChip({ chip }: { chip: Chip }) {
   if (!meta) return null;
   const team = ev.team;
   const edge =
-    ev.kind === "yellow" ? AMBER : ev.kind === "red" ? ROSE : team ? TEAM[team].edge : "rgb(255 255 255 / 0.25)";
+    ev.kind === "yellow" || (ev.kind === "sub" && ev.injury)
+      ? AMBER
+      : ev.kind === "red"
+        ? ROSE
+        : team
+          ? TEAM[team].edge
+          : "rgb(255 255 255 / 0.25)";
   const detail =
     ev.kind === "possession" && ev.value != null
       ? `${team === "home" ? flags.homeName : flags.awayName} ${ev.value}%`
+      : ev.kind === "sub"
+      ? [
+          team ? (team === "home" ? flags.home : flags.away) : "",
+          ev.player ? `⬆ ${ev.player}` : "",
+          ev.playerOff ? `⬇ ${ev.playerOff}` : "",
+          ev.minute != null ? `${ev.minute}'` : "",
+          ev.injury ? "· INJURY" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")
       : [
           team ? (team === "home" ? flags.home : flags.away) : "",
           ev.player ?? (team ? (team === "home" ? flags.homeName : flags.awayName) : ""),
