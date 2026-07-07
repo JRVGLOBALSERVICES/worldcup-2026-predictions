@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T19:10:06.564Z",
+    "generatedAt": "2026-07-07T20:10:07.507Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 79
   },
@@ -538,14 +538,6 @@
       },
       {
         "rank": 8,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 88.4,
-        "display": "88.4%",
-        "matches": 4
-      },
-      {
-        "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
         "value": 88.4,
@@ -553,12 +545,20 @@
         "matches": 5
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 88.3,
         "display": "88.3%",
         "matches": 4
+      },
+      {
+        "rank": 9,
+        "team": "Netherlands",
+        "flag": "🇳🇱",
+        "value": 88.3,
+        "display": "88.3%",
+        "matches": 3
       }
     ],
     "possession": [
@@ -628,18 +628,18 @@
       },
       {
         "rank": 9,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 60,
-        "display": "60.0%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 58.5,
         "display": "58.5%",
+        "matches": 5
+      },
+      {
+        "rank": 10,
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 58.2,
+        "display": "58.2%",
         "matches": 5
       }
     ],
@@ -650,7 +650,7 @@
         "flag": "🇨🇭",
         "value": 53.6,
         "display": "53.6%",
-        "matches": 3
+        "matches": 4
       },
       {
         "rank": 2,
@@ -860,9 +860,9 @@
         "rank": 7,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 31.5,
-        "display": "31.5%",
-        "matches": 4
+        "value": 31.6,
+        "display": "31.6%",
+        "matches": 5
       },
       {
         "rank": 8,
@@ -924,18 +924,18 @@
       },
       {
         "rank": 5,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 53.3,
-        "display": "53.3%",
-        "matches": 4
-      },
-      {
-        "rank": 6,
         "team": "France",
         "flag": "🇫🇷",
         "value": 52.9,
         "display": "52.9%",
+        "matches": 5
+      },
+      {
+        "rank": 6,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 52.3,
+        "display": "52.3%",
         "matches": 5
       },
       {
@@ -6976,6 +6976,40 @@
             "totalCrosses": 14,
             "accurateLongBalls": 17,
             "totalLongBalls": 55
+          }
+        ]
+      },
+      "760508": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Switzerland",
+            "possessionPct": 60.4,
+            "accuratePasses": 55,
+            "totalPasses": 61,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 2,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 3
+          },
+          {
+            "team": "Colombia",
+            "possessionPct": 39.6,
+            "accuratePasses": 30,
+            "totalPasses": 37,
+            "shotsOnTarget": 0,
+            "totalShots": 1,
+            "effectiveTackles": 1,
+            "totalTackles": 1,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
+            "accurateLongBalls": 2,
+            "totalLongBalls": 8
           }
         ]
       },
