@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T16:10:07.982Z",
+    "generatedAt": "2026-07-07T16:20:07.533Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 78
   },
@@ -638,8 +638,8 @@
         "rank": 10,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 58.4,
-        "display": "58.4%",
+        "value": 58.2,
+        "display": "58.2%",
         "matches": 5
       }
     ],
@@ -902,8 +902,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 57.9,
-        "display": "57.9%",
+        "value": 57.8,
+        "display": "57.8%",
         "matches": 5
       },
       {
@@ -3039,17 +3039,17 @@
           "matches": 1
         },
         {
+          "name": "Marawan Attia",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Mohamed Hany",
           "value": 1,
           "matches": 1
         },
         {
           "name": "Mostafa Zico",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Trézéguet",
           "value": 1,
           "matches": 1
         }
@@ -6972,35 +6972,40 @@
       },
       "760509": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Marawan Attia",
+            "team": "Egypt"
+          }
+        ],
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 52.8,
-            "accuratePasses": 48,
-            "totalPasses": 56,
+            "possessionPct": 51.8,
+            "accuratePasses": 101,
+            "totalPasses": 114,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 1,
-            "totalTackles": 3,
+            "effectiveTackles": 2,
+            "totalTackles": 4,
             "accurateCrosses": 0,
             "totalCrosses": 0,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 6
+            "accurateLongBalls": 5,
+            "totalLongBalls": 8
           },
           {
             "team": "Egypt",
-            "possessionPct": 47.2,
-            "accuratePasses": 48,
-            "totalPasses": 49,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
-            "effectiveTackles": 0,
-            "totalTackles": 1,
-            "accurateCrosses": 0,
-            "totalCrosses": 1,
+            "possessionPct": 48.2,
+            "accuratePasses": 95,
+            "totalPasses": 103,
+            "shotsOnTarget": 1,
+            "totalShots": 1,
+            "effectiveTackles": 1,
+            "totalTackles": 2,
+            "accurateCrosses": 1,
+            "totalCrosses": 3,
             "accurateLongBalls": 1,
-            "totalLongBalls": 1
+            "totalLongBalls": 4
           }
         ]
       }

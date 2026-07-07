@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T16:10:04.542Z",
+    "generatedAt": "2026-07-07T16:20:04.356Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 74,
     "live": 1
@@ -40725,24 +40725,33 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Yasser Ibrahim",
+          "minute": 14,
+          "assist": "Marawan Attia",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-07T16:00:00.000Z",
       "stats": {
         "corners": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "sot": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "shots": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "yellow": {
           "home": 0,
@@ -40757,8 +40766,8 @@
           "away": 0
         },
         "fouls": {
-          "home": 2,
-          "away": 0
+          "home": 4,
+          "away": 1
         },
         "cornersByHalf": {
           "home": [
@@ -40766,7 +40775,7 @@
             0
           ],
           "away": [
-            0,
+            1,
             0
           ]
         },
@@ -40781,31 +40790,42 @@
           ]
         },
         "playerSot": {},
-        "playerShots": {},
-        "playerShotBreakdown": {},
+        "playerShots": {
+          "Yasser Ibrahim": 1
+        },
+        "playerShotBreakdown": {
+          "Yasser Ibrahim": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 1
+          }
+        },
         "subs": [],
-        "firstGoalMethod": null,
+        "firstGoalMethod": "header",
         "firstPenalty": null,
         "waterBreak": {},
         "tempo": {
           "possession": {
-            "home": 52.8,
-            "away": 47.2
+            "home": 51.8,
+            "away": 48.2
           },
           "passes": {
-            "home": 56,
-            "away": 49
+            "home": 114,
+            "away": 103
           },
           "tackles": {
-            "home": 3,
-            "away": 1
+            "home": 4,
+            "away": 2
           },
           "saves": {
             "home": 0,
             "away": 0
           },
           "offsides": {
-            "home": 0,
+            "home": 1,
             "away": 0
           },
           "blockedShots": {
@@ -40813,20 +40833,20 @@
             "away": 0
           },
           "interceptions": {
-            "home": 1,
-            "away": 1
+            "home": 2,
+            "away": 2
           },
           "clearances": {
-            "home": 1,
-            "away": 0
+            "home": 5,
+            "away": 3
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "2",
-            "away": "0"
+            "home": "4",
+            "away": "1"
           },
           {
             "key": "yellowCards",
@@ -40843,14 +40863,14 @@
           {
             "key": "offsides",
             "label": "Offsides",
-            "home": "0",
+            "home": "1",
             "away": "0"
           },
           {
             "key": "wonCorners",
             "label": "Corner Kicks",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "saves",
@@ -40861,26 +40881,26 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "52.8",
-            "away": "47.2"
+            "home": "51.8",
+            "away": "48.2"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "shotPct",
             "label": "On Target %",
             "home": "0.0",
-            "away": "0.0"
+            "away": "1.0"
           },
           {
             "key": "penaltyKickGoals",
@@ -40897,56 +40917,56 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "48",
-            "away": "48"
+            "home": "101",
+            "away": "95"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "56",
-            "away": "49"
+            "home": "114",
+            "away": "103"
           },
           {
             "key": "passPct",
             "label": "Pass Completion %",
             "home": "0.9",
-            "away": "1.0"
+            "away": "0.9"
           },
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
             "home": "0",
-            "away": "1"
+            "away": "3"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
             "home": "0.0",
-            "away": "0.0"
+            "away": "0.3"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "6",
-            "away": "1"
+            "home": "8",
+            "away": "4"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "4",
+            "home": "5",
             "away": "1"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.7",
-            "away": "1.0"
+            "home": "0.6",
+            "away": "0.3"
           },
           {
             "key": "blockedShots",
@@ -40957,38 +40977,38 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "1",
-            "away": "0"
+            "home": "2",
+            "away": "1"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "3",
-            "away": "1"
+            "home": "4",
+            "away": "2"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.3",
-            "away": "0.0"
+            "home": "0.5",
+            "away": "0.5"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "1",
-            "away": "1"
+            "home": "2",
+            "away": "2"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "1",
-            "away": "0"
+            "home": "5",
+            "away": "3"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "1",
-            "away": "0"
+            "home": "5",
+            "away": "3"
           }
         ]
       }
