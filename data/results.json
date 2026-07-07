@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T20:50:02.190Z",
+    "generatedAt": "2026-07-07T21:10:04.253Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 75,
     "live": 1
@@ -41285,7 +41285,10 @@
     },
     "sui-col-2026-07-07": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -41307,7 +41310,7 @@
           "away": 1
         },
         "shots": {
-          "home": 2,
+          "home": 3,
           "away": 5
         },
         "yellow": {
@@ -41357,7 +41360,8 @@
           "Fabian Rieder": 1,
           "Dan Ndoye": 1,
           "Luis Díaz": 1,
-          "Luis Suárez": 1
+          "Luis Suárez": 1,
+          "Djibril Sow": 1
         },
         "playerShotBreakdown": {
           "Jhon Arias": {
@@ -41407,9 +41411,25 @@
             "off": 0,
             "blocked": 1,
             "goals": 0
+          },
+          "Djibril Sow": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
           }
         },
-        "subs": [],
+        "subs": [
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Djibril Sow",
+            "off": "Ardon Jashari",
+            "injury": false
+          }
+        ],
         "firstGoalMethod": null,
         "firstPenalty": null,
         "waterBreak": {
@@ -41426,12 +41446,12 @@
         },
         "tempo": {
           "possession": {
-            "home": 49.1,
-            "away": 50.9
+            "home": 50,
+            "away": 50
           },
           "passes": {
-            "home": 253,
-            "away": 260
+            "home": 275,
+            "away": 273
           },
           "tackles": {
             "home": 6,
@@ -41442,7 +41462,7 @@
             "away": 2
           },
           "offsides": {
-            "home": 1,
+            "home": 3,
             "away": 1
           },
           "blockedShots": {
@@ -41454,8 +41474,8 @@
             "away": 6
           },
           "clearances": {
-            "home": 17,
-            "away": 5
+            "home": 18,
+            "away": 6
           }
         },
         "full": [
@@ -41480,7 +41500,7 @@
           {
             "key": "offsides",
             "label": "Offsides",
-            "home": "1",
+            "home": "3",
             "away": "1"
           },
           {
@@ -41498,13 +41518,13 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "49.1",
-            "away": "50.9"
+            "home": "50",
+            "away": "50"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "2",
+            "home": "3",
             "away": "5"
           },
           {
@@ -41516,7 +41536,7 @@
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "1.0",
+            "home": "0.7",
             "away": "0.2"
           },
           {
@@ -41534,14 +41554,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "219",
-            "away": "219"
+            "home": "241",
+            "away": "227"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "253",
-            "away": "260"
+            "home": "275",
+            "away": "273"
           },
           {
             "key": "passPct",
@@ -41558,26 +41578,26 @@
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "4",
+            "home": "5",
             "away": "9"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
-            "home": "0.3",
+            "home": "0.2",
             "away": "0.1"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "14",
-            "away": "31"
+            "home": "15",
+            "away": "34"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "5",
-            "away": "9"
+            "home": "6",
+            "away": "10"
           },
           {
             "key": "longballPct",
@@ -41618,14 +41638,14 @@
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "17",
-            "away": "5"
+            "home": "18",
+            "away": "6"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "17",
-            "away": "5"
+            "home": "18",
+            "away": "6"
           }
         ]
       }
