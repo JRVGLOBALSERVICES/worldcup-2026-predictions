@@ -16333,6 +16333,61 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-862384769445634049",
+      "slipNo": "862384769445634049",
+      "matchId": "sui-col-2026-07-07",
+      "player": "8-leg parlay",
+      "market": "Parlay (8)",
+      "label": "REAL 1xBet slip 862384769445634049 (07/08 01:29, pre-match) — Parlay @ 32.61, RM86 -> RM2,804.46. Swi/Col: Over 0.5 · Under 5.5 · 1H Over 0.5 · BTTS · Switzerland or Colombia (double chance) · Embolo score/assist · Luis Diaz score/assist · Under 24.5 match shots.",
+      "odds": 32.61,
+      "stake": 86,
+      "placedAt": "07/08",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "btts"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Breel Embolo"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Luis Diaz"
+          },
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "totalShotsUnder",
+            "line": 24.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
@@ -52079,20 +52134,20 @@
     },
     "arg-egy-2026-07-07": {
       "corners": {
-        "home": 1,
+        "home": 6,
         "away": 1
       },
       "sot": {
-        "home": 4,
-        "away": 1
+        "home": 7,
+        "away": 2
       },
       "shots": {
-        "home": 9,
-        "away": 2
+        "home": 19,
+        "away": 5
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -52100,16 +52155,16 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "fouls": {
-        "home": 11,
-        "away": 7
+        "home": 12,
+        "away": 10
       },
       "cornersByHalf": {
         "home": [
           1,
-          0
+          5
         ],
         "away": [
           1,
@@ -52133,13 +52188,18 @@
       },
       "playerShots": {
         "Yasser Ibrahim": 1,
-        "Alexis Mac Allister": 1,
-        "Enzo Fernández": 1,
-        "Lionel Messi": 2,
+        "Alexis Mac Allister": 2,
+        "Enzo Fernández": 2,
+        "Lionel Messi": 4,
         "Karim Hafez": 1,
         "Julián Álvarez": 2,
         "Rodrigo De Paul": 1,
-        "Leandro Paredes": 1
+        "Leandro Paredes": 2,
+        "Mostafa Zico": 1,
+        "Lisandro Martínez": 1,
+        "Lautaro Martínez": 3,
+        "Trézéguet": 2,
+        "Cristian Romero": 1
       },
       "playerShotBreakdown": {
         "Yasser Ibrahim": {
@@ -52152,27 +52212,27 @@
         },
         "Alexis Mac Allister": {
           "team": "home",
-          "shots": 1,
+          "shots": 2,
           "sot": 1,
-          "off": 0,
+          "off": 1,
           "blocked": 0,
           "goals": 0
         },
         "Enzo Fernández": {
           "team": "home",
-          "shots": 1,
-          "sot": 0,
+          "shots": 2,
+          "sot": 1,
           "off": 0,
           "blocked": 1,
-          "goals": 0
+          "goals": 1
         },
         "Lionel Messi": {
           "team": "home",
-          "shots": 2,
-          "sot": 0,
+          "shots": 4,
+          "sot": 1,
           "off": 2,
-          "blocked": 0,
-          "goals": 0
+          "blocked": 1,
+          "goals": 1
         },
         "Karim Hafez": {
           "team": "away",
@@ -52200,11 +52260,51 @@
         },
         "Leandro Paredes": {
           "team": "home",
+          "shots": 2,
+          "sot": 0,
+          "off": 1,
+          "blocked": 1,
+          "goals": 0
+        },
+        "Mostafa Zico": {
+          "team": "away",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 1
+        },
+        "Lisandro Martínez": {
+          "team": "home",
           "shots": 1,
           "sot": 0,
           "off": 1,
           "blocked": 0,
           "goals": 0
+        },
+        "Lautaro Martínez": {
+          "team": "home",
+          "shots": 3,
+          "sot": 0,
+          "off": 2,
+          "blocked": 1,
+          "goals": 0
+        },
+        "Trézéguet": {
+          "team": "away",
+          "shots": 2,
+          "sot": 0,
+          "off": 1,
+          "blocked": 1,
+          "goals": 0
+        },
+        "Cristian Romero": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 1
         }
       },
       "subs": [
@@ -52214,6 +52314,41 @@
           "on": "Hamdi Fathy",
           "off": "Emam Ashour",
           "injury": true
+        },
+        {
+          "team": "home",
+          "minute": 66,
+          "on": "Nico González",
+          "off": "Nicolás Tagliafico",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 66,
+          "on": "Lautaro Martínez",
+          "off": "Rodrigo De Paul",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 73,
+          "on": "Gonzalo Montiel",
+          "off": "Nahuel Molina",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 73,
+          "on": "Trezeguet",
+          "off": "Haissem Hassan",
+          "injury": true
+        },
+        {
+          "team": "away",
+          "minute": 80,
+          "on": "Omar Marmoush",
+          "off": "Mostafa Zico",
+          "injury": false
         }
       ],
       "firstGoalMethod": "header",
@@ -52228,54 +52363,64 @@
           "firstActionMinute": 28,
           "isCorner": false,
           "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 72,
+          "firstActionType": "Shot Blocked",
+          "firstActionMinute": 73,
+          "isCorner": false,
+          "reliable": true
         }
       },
       "tempo": {
         "possession": {
-          "home": 61.1,
-          "away": 38.9
+          "home": 64.6,
+          "away": 35.4
         },
         "passes": {
-          "home": 387,
-          "away": 243
+          "home": 592,
+          "away": 330
         },
         "tackles": {
-          "home": 14,
-          "away": 7
+          "home": 20,
+          "away": 14
         },
         "saves": {
           "home": 0,
           "away": 4
         },
         "offsides": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "blockedShots": {
-          "home": 1,
-          "away": 0
+          "home": 4,
+          "away": 1
         },
         "interceptions": {
-          "home": 3,
-          "away": 7
+          "home": 7,
+          "away": 10
         },
         "clearances": {
-          "home": 11,
-          "away": 18
+          "home": 12,
+          "away": 42
         }
       },
       "full": [
         {
           "key": "foulsCommitted",
           "label": "Fouls",
-          "home": "11",
-          "away": "7"
+          "home": "12",
+          "away": "10"
         },
         {
           "key": "yellowCards",
           "label": "Yellow Cards",
           "home": "0",
-          "away": "0"
+          "away": "1"
         },
         {
           "key": "redCards",
@@ -52286,13 +52431,13 @@
         {
           "key": "offsides",
           "label": "Offsides",
-          "home": "2",
+          "home": "3",
           "away": "0"
         },
         {
           "key": "wonCorners",
           "label": "Corner Kicks",
-          "home": "1",
+          "home": "6",
           "away": "1"
         },
         {
@@ -52304,26 +52449,26 @@
         {
           "key": "possessionPct",
           "label": "POSSESSION",
-          "home": "61.1",
-          "away": "38.9"
+          "home": "64.6",
+          "away": "35.4"
         },
         {
           "key": "totalShots",
           "label": "SHOTS",
-          "home": "9",
-          "away": "2"
+          "home": "19",
+          "away": "5"
         },
         {
           "key": "shotsOnTarget",
           "label": "ON GOAL",
-          "home": "4",
-          "away": "1"
+          "home": "7",
+          "away": "2"
         },
         {
           "key": "shotPct",
           "label": "On Target %",
           "home": "0.4",
-          "away": "0.5"
+          "away": "0.4"
         },
         {
           "key": "penaltyKickGoals",
@@ -52340,14 +52485,14 @@
         {
           "key": "accuratePasses",
           "label": "Accurate Passes",
-          "home": "346",
-          "away": "205"
+          "home": "535",
+          "away": "275"
         },
         {
           "key": "totalPasses",
           "label": "Passes",
-          "home": "387",
-          "away": "243"
+          "home": "592",
+          "away": "330"
         },
         {
           "key": "passPct",
@@ -52358,80 +52503,80 @@
         {
           "key": "accurateCrosses",
           "label": "Accurate Crosses",
-          "home": "2",
-          "away": "1"
+          "home": "8",
+          "away": "2"
         },
         {
           "key": "totalCrosses",
           "label": "Crosses",
-          "home": "6",
-          "away": "5"
+          "home": "26",
+          "away": "6"
         },
         {
           "key": "crossPct",
           "label": "Cross %",
           "home": "0.3",
-          "away": "0.2"
+          "away": "0.3"
         },
         {
           "key": "totalLongBalls",
           "label": "Long Balls",
-          "home": "19",
-          "away": "25"
+          "home": "26",
+          "away": "31"
         },
         {
           "key": "accurateLongBalls",
           "label": "Accurate Long Balls",
-          "home": "12",
-          "away": "7"
+          "home": "18",
+          "away": "9"
         },
         {
           "key": "longballPct",
           "label": "Long Balls %",
-          "home": "0.6",
+          "home": "0.7",
           "away": "0.3"
         },
         {
           "key": "blockedShots",
           "label": "Blocked Shots",
-          "home": "1",
-          "away": "0"
+          "home": "4",
+          "away": "1"
         },
         {
           "key": "effectiveTackles",
           "label": "Effective Tackles",
-          "home": "11",
-          "away": "3"
+          "home": "15",
+          "away": "7"
         },
         {
           "key": "totalTackles",
           "label": "Tackles",
-          "home": "14",
-          "away": "7"
+          "home": "20",
+          "away": "14"
         },
         {
           "key": "tacklePct",
           "label": "Tackle %",
           "home": "0.8",
-          "away": "0.4"
+          "away": "0.5"
         },
         {
           "key": "interceptions",
           "label": "Interceptions",
-          "home": "3",
-          "away": "7"
+          "home": "7",
+          "away": "10"
         },
         {
           "key": "effectiveClearance",
           "label": "Effective Clearances",
-          "home": "11",
-          "away": "18"
+          "home": "12",
+          "away": "42"
         },
         {
           "key": "totalClearance",
           "label": "Clearances",
-          "home": "11",
-          "away": "18"
+          "home": "12",
+          "away": "42"
         }
       ]
     }

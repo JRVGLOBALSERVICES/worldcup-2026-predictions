@@ -568,6 +568,11 @@ export type MultiLegCond = { odds?: number } & (
   // moment the running total goes over; wins only at FT. A finished match with
   // no fouls snapshot holds pending for a human (older snapshots lack it).
   | { matchId: string; kind: "totalFoulsUnder"; line: number }
+  // Total shots by BOTH sides UNDER the line ("Under 24.5 — Total Match Shots"),
+  // from MatchStats.shots (boxscore totalShots). Shots only accrue, so it dies
+  // mid-match the moment the running total goes over; wins only at FT. A
+  // finished match with no stats snapshot holds pending for a human.
+  | { matchId: string; kind: "totalShotsUnder"; line: number }
   // Corners (both sides) in ONE half OVER the line, from MatchStats.cornersByHalf
   // (tallied per-period from ESPN commentary). Accrues → clinches mid-match the
   // moment the half's total clears the line; the H1 line locks dead at the HT
@@ -1285,6 +1290,25 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         // human (stats written before the field existed never captured it).
         const f = getStats(leg.matchId)?.fouls;
         const total = f ? f.home + f.away : null;
+        if (total != null && total > leg.line) return "lost";
+        if (finished) {
+          if (total == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          continue; // under at the whistle → leg won
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "totalShotsUnder") {
+        // Combined shots UNDER the line — mirror of totalFoulsUnder. Shots only
+        // accrue, so a running total already over the line kills the acca
+        // mid-match; the win only settles at FT. A finished match with no stats
+        // snapshot holds pending for a human.
+        const s = getStats(leg.matchId)?.shots;
+        const total = s ? s.home + s.away : null;
         if (total != null && total > leg.line) return "lost";
         if (finished) {
           if (total == null) {
