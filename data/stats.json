@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T16:20:20.742Z",
+    "generatedAt": "2026-07-07T16:30:11.948Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 78
   },
@@ -450,27 +450,27 @@
     "penaltyMissed": [
       {
         "rank": 1,
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 2
+      },
+      {
+        "rank": 2,
         "name": "Bruno Guimarães",
         "team": "Brazil",
         "flag": "🇧🇷",
         "value": 1
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Jørgen Strand Larsen",
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 1
       },
       {
-        "rank": 1,
-        "name": "Lionel Messi",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 1
-      },
-      {
-        "rank": 1,
+        "rank": 2,
         "name": "Mehdi Taremi",
         "team": "Iran",
         "flag": "🇮🇷",
@@ -484,8 +484,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 90.9,
-        "display": "90.9%",
+        "value": 91,
+        "display": "91.0%",
         "matches": 5
       },
       {
@@ -628,18 +628,18 @@
       },
       {
         "rank": 9,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 58.5,
-        "display": "58.5%",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 58.7,
+        "display": "58.7%",
         "matches": 5
       },
       {
         "rank": 10,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 58.2,
-        "display": "58.2%",
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 58.5,
+        "display": "58.5%",
         "matches": 5
       }
     ],
@@ -670,6 +670,14 @@
       },
       {
         "rank": 4,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 46.6,
+        "display": "46.6%",
+        "matches": 5
+      },
+      {
+        "rank": 5,
         "team": "Ecuador",
         "flag": "🇪🇨",
         "value": 46.3,
@@ -677,20 +685,12 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Sweden",
         "flag": "🇸🇪",
         "value": 45.5,
         "display": "45.5%",
         "matches": 3
-      },
-      {
-        "rank": 6,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 44.6,
-        "display": "44.6%",
-        "matches": 5
       },
       {
         "rank": 7,
@@ -810,19 +810,19 @@
     "crossCompletion": [
       {
         "rank": 1,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 38.7,
+        "display": "38.7%",
+        "matches": 5
+      },
+      {
+        "rank": 2,
         "team": "Curacao",
         "flag": "🇨🇼",
         "value": 37.5,
         "display": "37.5%",
         "matches": 2
-      },
-      {
-        "rank": 2,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 36.7,
-        "display": "36.7%",
-        "matches": 5
       },
       {
         "rank": 3,
@@ -902,8 +902,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 57.8,
-        "display": "57.8%",
+        "value": 58.1,
+        "display": "58.1%",
         "matches": 5
       },
       {
@@ -6971,7 +6971,12 @@
         ]
       },
       "760509": {
-        "penMiss": [],
+        "penMiss": [
+          {
+            "name": "Lionel Messi",
+            "team": "Argentina"
+          }
+        ],
         "assists": [
           {
             "name": "Marawan Attia",
@@ -6981,31 +6986,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 51.8,
-            "accuratePasses": 101,
-            "totalPasses": 114,
-            "shotsOnTarget": 0,
-            "totalShots": 0,
-            "effectiveTackles": 2,
-            "totalTackles": 4,
-            "accurateCrosses": 0,
-            "totalCrosses": 0,
-            "accurateLongBalls": 5,
-            "totalLongBalls": 8
+            "possessionPct": 54.5,
+            "accuratePasses": 134,
+            "totalPasses": 150,
+            "shotsOnTarget": 2,
+            "totalShots": 2,
+            "effectiveTackles": 4,
+            "totalTackles": 6,
+            "accurateCrosses": 1,
+            "totalCrosses": 1,
+            "accurateLongBalls": 6,
+            "totalLongBalls": 9
           },
           {
             "team": "Egypt",
-            "possessionPct": 48.2,
-            "accuratePasses": 95,
-            "totalPasses": 103,
+            "possessionPct": 45.5,
+            "accuratePasses": 114,
+            "totalPasses": 123,
             "shotsOnTarget": 1,
             "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 2,
+            "effectiveTackles": 2,
+            "totalTackles": 4,
             "accurateCrosses": 1,
             "totalCrosses": 3,
             "accurateLongBalls": 1,
-            "totalLongBalls": 4
+            "totalLongBalls": 5
           }
         ]
       }
