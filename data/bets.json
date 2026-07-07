@@ -16558,6 +16558,51 @@
         ]
       },
       "punter": "Rj + Tharma · RM30 / RM20"
+    },
+    {
+      "id": "sp-84133373233",
+      "slipNo": "84133373233",
+      "matchId": "sui-col-2026-07-07",
+      "player": "4-leg acca",
+      "market": "Accumulator (DC+BTTS x3, scorer+win)",
+      "label": "REAL 1xBet slip 84133373233 (08.07 03:42, pre-match) — 4-leg acca @ 22.481, RM15 -> RM337.22. Swi/Col @2.53: 2X & BTTS Yes. Fra/Mar @2.167: Mbappe to score & France win. Spa/Bel @2.02: 1X & BTTS Yes. Nor/Eng @2.03: 2X & BTTS Yes.",
+      "odds": 22.481,
+      "stake": 15,
+      "placedAt": "07/08 03:42",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "sui-col-2026-07-07",
+            "kind": "doubleChanceBtts",
+            "outcome": "X2",
+            "odds": 2.53
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "result",
+            "outcome": "1",
+            "odds": 2.167
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "doubleChanceBtts",
+            "outcome": "1X",
+            "odds": 2.02
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "doubleChanceBtts",
+            "outcome": "X2",
+            "odds": 2.03
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
