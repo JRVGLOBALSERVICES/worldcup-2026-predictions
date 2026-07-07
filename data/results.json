@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T01:20:24.229Z",
+    "generatedAt": "2026-07-07T01:30:03.849Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 73,
     "live": 1
@@ -14417,7 +14417,7 @@
       "finishPhase": null,
       "score": {
         "home": 1,
-        "away": 2
+        "away": 3
       },
       "advanced": null,
       "goals": [
@@ -14444,6 +14444,15 @@
           "assist": "Leandro Trossard",
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Hans Vanaken",
+          "minute": 57,
+          "assist": "Charles De Ketelaere",
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
         }
       ],
       "cards": [
@@ -14457,16 +14466,16 @@
       "updatedAt": "2026-07-07T00:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 1,
-          "away": 4
+          "home": 2,
+          "away": 5
         },
         "sot": {
           "home": 1,
-          "away": 5
+          "away": 6
         },
         "shots": {
           "home": 3,
-          "away": 11
+          "away": 13
         },
         "yellow": {
           "home": 1,
@@ -14487,11 +14496,11 @@
         "cornersByHalf": {
           "home": [
             1,
-            0
+            1
           ],
           "away": [
             3,
-            1
+            2
           ]
         },
         "sotByHalf": {
@@ -14510,7 +14519,7 @@
           "Nicolas Raskin": 1
         },
         "playerShots": {
-          "Leandro Trossard": 2,
+          "Leandro Trossard": 3,
           "Youri Tielemans": 2,
           "Timothy Castagne": 1,
           "Charles De Ketelaere": 3,
@@ -14518,7 +14527,8 @@
           "Nicolas Raskin": 1,
           "Dodi Lukébakio": 2,
           "Alex Freeman": 1,
-          "Folarin Balogun": 1
+          "Folarin Balogun": 1,
+          "Hans Vanaken": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -14536,16 +14546,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 49.8,
-            "away": 50.2
+            "home": 55.3,
+            "away": 44.7
           },
           "passes": {
-            "home": 264,
-            "away": 263
+            "home": 375,
+            "away": 298
           },
           "tackles": {
-            "home": 12,
-            "away": 15
+            "home": 13,
+            "away": 17
           },
           "saves": {
             "home": 3,
@@ -14557,15 +14567,15 @@
           },
           "blockedShots": {
             "home": 0,
-            "away": 2
+            "away": 3
           },
           "interceptions": {
             "home": 6,
-            "away": 4
+            "away": 6
           },
           "clearances": {
-            "home": 18,
-            "away": 8
+            "home": 19,
+            "away": 11
           }
         }
       }

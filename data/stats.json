@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T01:20:29.031Z",
+    "generatedAt": "2026-07-07T01:30:06.487Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 77
   },
@@ -3381,17 +3381,17 @@
           "matches": 2
         },
         {
+          "name": "Charles De Ketelaere",
+          "value": 1,
+          "matches": 1
+        },
+        {
           "name": "Hans Vanaken",
           "value": 1,
           "matches": 1
         },
         {
           "name": "Romelu Lukaku",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Thomas Meunier",
           "value": 1,
           "matches": 1
         }
@@ -6923,36 +6923,40 @@
           {
             "name": "Leandro Trossard",
             "team": "Belgium"
+          },
+          {
+            "name": "Charles De Ketelaere",
+            "team": "Belgium"
           }
         ],
         "teamBox": [
           {
             "team": "United States",
-            "possessionPct": 49.8,
-            "accuratePasses": 225,
-            "totalPasses": 264,
+            "possessionPct": 55.3,
+            "accuratePasses": 326,
+            "totalPasses": 375,
             "shotsOnTarget": 1,
             "totalShots": 3,
             "effectiveTackles": 8,
-            "totalTackles": 12,
+            "totalTackles": 13,
             "accurateCrosses": 0,
-            "totalCrosses": 3,
-            "accurateLongBalls": 12,
-            "totalLongBalls": 23
+            "totalCrosses": 4,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 26
           },
           {
             "team": "Belgium",
-            "possessionPct": 50.2,
-            "accuratePasses": 217,
-            "totalPasses": 263,
-            "shotsOnTarget": 5,
-            "totalShots": 11,
+            "possessionPct": 44.7,
+            "accuratePasses": 245,
+            "totalPasses": 298,
+            "shotsOnTarget": 6,
+            "totalShots": 13,
             "effectiveTackles": 7,
-            "totalTackles": 15,
+            "totalTackles": 17,
             "accurateCrosses": 5,
-            "totalCrosses": 12,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 37
+            "totalCrosses": 13,
+            "accurateLongBalls": 14,
+            "totalLongBalls": 43
           }
         ]
       }
