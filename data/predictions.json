@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T08:20:11.431Z",
+    "generatedAt": "2026-07-07T09:06:35.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-07T08:20:11.430Z"
+    "modelUpdatedAt": "2026-07-07T09:00:42.858Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -20761,250 +20761,125 @@
     "arg-egy-2026-07-07": {
       "win": {
         "pick": "Argentina",
-        "fairOdds": "1.46",
-        "reason": "Model: Argentina to win at 69% (Argentina 69% / draw 19% / Egypt 12%). Expected goals 2.1–0.7 from group-stage attack/defence rates (Argentina 2.2 for / 0.8 against per game, Egypt 1.6 / 1.2). Most likely score 2-0.",
-        "strength": 5
+        "fairOdds": "1.60",
+        "reason": "Argentina won Group J 3-0-0 (8 scored, 1 conceded) and Messi is the tournament's form player, while Egypt have drawn 3 of their 4 matches in 90 minutes (Belgium 1-1, Iran 1-1, Australia 1-1 before winning 4-2 on pens) and sit deep behind the ball. Squawka's model gives Argentina roughly a 75% edge to progress, but Egypt's block plus Argentina's 120-minute scare vs Cabo Verde days ago makes the 90-minute win nearer ~62% than a formality. Draw-and-cling is Egypt's proven script, so the price respects real stalemate risk."
       },
       "halfTime": {
-        "score": "0-0",
-        "fairOdds": "3.38",
-        "alt": "1-0",
-        "altOdds": "5.19"
+        "score": "1-0",
+        "fairOdds": "3.00",
+        "alt": "0-0",
+        "altOdds": "3.30"
       },
       "htft": {
-        "pick": "Draw/Argentina",
-        "fairOdds": "3.64"
+        "pick": "Argentina/Argentina",
+        "fairOdds": "2.15"
       },
       "fullTime": {
         "score": "2-0",
-        "fairOdds": "7.54"
+        "fairOdds": "7.50"
       },
       "scorers": [
         {
           "player": "Lionel Messi",
-          "team": "Argentina",
-          "fairOdds": "1.52",
+          "fairOdds": "1.85",
           "banker": true,
-          "note": "7 goals in 4 group games; 66% modelled anytime chance on 2.1 team xG.",
-          "strength": 5
+          "note": "18 World Cup goals all-time and 5 at this tournament (hat-trick vs Algeria, record-breaker vs Jordan, opener vs Cabo Verde) — scoring form at 39 genuinely supports it, the exception that earns the tag."
         },
         {
-          "player": "Giovani Lo Celso",
-          "team": "Argentina",
-          "fairOdds": "4.41",
+          "player": "Lautaro Martinez",
+          "fairOdds": "2.30",
           "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG.",
-          "strength": 1
+          "note": "Scored in consecutive group wins over Austria and Jordan; leads the line in the predicted XI and is the primary box presence against a deep Egyptian block."
         },
         {
-          "player": "Lautaro Martínez",
-          "team": "Argentina",
-          "fairOdds": "4.41",
+          "player": "Julian Alvarez",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG.",
-          "strength": 1
+          "note": "Likely impact substitute with Almada preferred in the front three; fresh legs against tiring deep-block defenders late is a classic route to a goal."
         },
         {
-          "player": "Lisandro Martínez",
-          "team": "Argentina",
-          "fairOdds": "4.41",
+          "player": "Mohamed Salah",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Emam Ashour",
-          "team": "Egypt",
-          "fairOdds": "6.13",
-          "banker": false,
-          "note": "2 goals in 4 group games; 16% modelled anytime chance on 0.7 team xG.",
-          "strength": 1
+          "note": "Egypt's talisman — scored vs New Zealand and converted in the shootout vs Australia — but he is managing a hamstring strain from the Iran game and Egypt will see little of the ball."
         }
       ],
       "assists": [
         {
-          "player": "Alexis Mac Allister",
-          "team": "Argentina",
-          "fairOdds": "2.96",
-          "banker": true,
-          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+          "player": "Lionel Messi",
+          "fairOdds": "2.60",
+          "banker": false,
+          "note": "Chief creator and set-piece taker; had a goal-and-assist involvement in most Argentina matches this tournament."
         },
         {
-          "player": "Facundo Medina",
-          "team": "Argentina",
-          "fairOdds": "2.96",
+          "player": "Thiago Almada",
+          "fairOdds": "4.00",
           "banker": false,
-          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+          "note": "Predicted starter in the front three; his left-footed delivery and combinations with Messi in the right half-space create chances vs low blocks."
         },
         {
-          "player": "Lisandro Martínez",
-          "team": "Argentina",
-          "fairOdds": "2.96",
+          "player": "Rodrigo De Paul",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "1 assist in the group stage; 34% modelled chance to set one up."
-        },
-        {
-          "player": "Mohamed Salah",
-          "team": "Egypt",
-          "fairOdds": "5.20",
-          "banker": false,
-          "note": "2 assists in the group stage; 19% modelled chance to set one up."
+          "note": "Messi's midfield connector — high touch volume and crossing from the right channel against a team that concedes territory."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Lionel Messi",
-        "backup": "Giovani Lo Celso",
-        "note": "Argentina favoured to control the game, so a penalty is less pivotal; Lionel Messi would take one if awarded."
+        "backup": "Lautaro Martinez",
+        "note": "Constant Argentina box occupation against a deep, doubt-riddled Egyptian back line (Abdelmonem ankle, Hafez muscle, Fatouh thigh) makes a spot-kick a live possibility. Messi remains first-choice despite missing vs Austria — so a switch to Lautaro mid-match is plausible."
       },
       "lineups": {
-        "home": "Emiliano Martínez, Nahuel Molina, Cristian Romero, Lisandro Martínez, Facundo Medina, Rodrigo De Paul, Alexis Mac Allister, Enzo Fernández, Thiago Almada, Lionel Messi, Lautaro Martínez",
-        "away": "Mostafa Shobeir, Hany Mohamed, Rami Rabia, Yasser Ibrahim, Karim Hafez, Hamdi Fathy, Marwan Attia, Emam Ashour, Mostafa Zico, Mohamed Salah, Omar Marmoush",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-4-2",
-          "players": [
-            {
-              "num": 23,
-              "name": "Emiliano Martínez",
-              "pos": "G"
-            },
-            {
-              "num": 26,
-              "name": "Nahuel Molina",
-              "pos": "RB"
-            },
-            {
-              "num": 13,
-              "name": "Cristian Romero",
-              "pos": "CD"
-            },
-            {
-              "num": 25,
-              "name": "Lisandro Martínez",
-              "pos": "CD"
-            },
-            {
-              "num": 8,
-              "name": "Facundo Medina",
-              "pos": "LB"
-            },
-            {
-              "num": 7,
-              "name": "Rodrigo De Paul",
-              "pos": "RM"
-            },
-            {
-              "num": 24,
-              "name": "Enzo Fernández",
-              "pos": "CM"
-            },
-            {
-              "num": 20,
-              "name": "Alexis Mac Allister",
-              "pos": "CM"
-            },
-            {
-              "num": 16,
-              "name": "Thiago Almada",
-              "pos": "LM"
-            },
-            {
-              "num": 22,
-              "name": "Lautaro Martínez",
-              "pos": "ST"
-            },
-            {
-              "num": 10,
-              "name": "Lionel Messi",
-              "pos": "ST"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 23,
-              "name": "Mostafa Shobeir",
-              "pos": "G"
-            },
-            {
-              "num": 3,
-              "name": "Hany Mohamed",
-              "pos": "RB"
-            },
-            {
-              "num": 5,
-              "name": "Rami Rabia",
-              "pos": "CD"
-            },
-            {
-              "num": 2,
-              "name": "Yasser Ibrahim",
-              "pos": "CD"
-            },
-            {
-              "num": 30,
-              "name": "Karim Hafez",
-              "pos": "LB"
-            },
-            {
-              "num": 14,
-              "name": "Hamdi Fathy",
-              "pos": "CM"
-            },
-            {
-              "num": 19,
-              "name": "Marwan Attia",
-              "pos": "CM"
-            },
-            {
-              "num": 8,
-              "name": "Emam Ashour",
-              "pos": "AM"
-            },
-            {
-              "num": 11,
-              "name": "Mostafa Zico",
-              "pos": "RW"
-            },
-            {
-              "num": 10,
-              "name": "Mohamed Salah",
-              "pos": "LW"
-            },
-            {
-              "num": 22,
-              "name": "Omar Marmoush",
-              "pos": "CF"
-            }
-          ]
-        }
+        "home": "4-3-3: E. Martinez; Molina, Romero, Lisandro Martinez, Medina; De Paul, Fernandez, Mac Allister; Messi, Lautaro Martinez, Almada",
+        "away": "4-2-3-1: Shobeir; Hany, Rabia, Ibrahim, Fatouh; Atteya, Fathy; Zico, Ashour, Salah; Marmoush",
+        "status": "probable"
       },
       "playerNotes": [
         {
           "player": "Lionel Messi",
           "team": "Argentina",
-          "note": "7 goals in 4 group games; 66% modelled anytime chance on 2.1 team xG."
+          "note": "5 goals in 4 matches this World Cup, passed Klose's record vs Jordan (now 18 WC goals) — in the form of the tournament at 39, though he missed a penalty vs Austria."
         },
         {
-          "player": "Giovani Lo Celso",
-          "team": "Argentina",
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.1 team xG."
+          "player": "Mohamed Salah",
+          "team": "Egypt",
+          "note": "Strained hamstring vs Iran, limited training before the Australia game but started and lasted the distance plus shootout — expected to start again but likely below full sprint sharpness."
         },
         {
-          "player": "Alexis Mac Allister",
+          "player": "Lautaro Martinez",
           "team": "Argentina",
-          "note": "1 assist in the group stage; 34% modelled chance to set one up."
+          "note": "Two group-stage goals (Austria, Jordan) and Argentina's focal point; the man most likely to profit from Egypt sitting deep."
+        },
+        {
+          "player": "Emiliano Martinez",
+          "team": "Argentina",
+          "note": "Argentina's shootout specialist looms large in a knockout that could go the distance; back four has knocks (Molina, Medina both withdrawn vs Cabo Verde, Medina's dismissed as cramp)."
+        },
+        {
+          "player": "Omar Marmoush",
+          "team": "Egypt",
+          "note": "Leads Egypt's line with Salah wide right; Egypt's counter-attack outlet and their best chance of stressing Romero-Lisandro on transitions."
+        },
+        {
+          "player": "Hamdi Fatouh",
+          "team": "Egypt",
+          "note": "Egypt back-line doubts: Abdelmonem (ankle) missed the Australia win, Hafez (muscle) and Fatouh (thigh) also flagged — a patched-up defence against the tournament's best attack."
         }
       ],
       "confidence": "medium",
       "strength": 5,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.rotowire.com/soccer/article/argentina-vs-egypt-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121312",
+        "https://www.squawka.com/us/news/world-cup/match-preview-argentina-vs-egypt-07-07-26-world-cup-2026-round-of-16/",
+        "https://www.si.com/soccer/argentina-predicted-lineup-vs-egypt-world-cup-round-of-16-7-7-26",
+        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/team-news/argentina-vs-egypt-injury-suspension-list-predicted-xis_600710.html",
+        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/preview/argentina-vs-egypt-prediction-team-news-lineups_600679.html",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J",
+        "https://www.aljazeera.com/sports/2026/6/22/salah-scores-as-egypt-beat-new-zealand-3-1-for-first-world-cup-win",
+        "https://www.espn.com/soccer/story/_/id/49252258/mohamed-salah-recovers-hamstring-egypt-australia",
+        "https://www.espn.com/soccer/story/_/id/49147840/lionel-messi-argentina-angry-penalty-miss-world-cup-record-double",
+        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/predicted-egypt-lineup-to-face-argentina-in-the-fifa-world-cup-2026-round-of-16-2026-07-07"
       ],
       "pitchReport": {
         "facts": [
@@ -21105,251 +20980,126 @@
     },
     "sui-col-2026-07-07": {
       "win": {
-        "pick": "Switzerland",
-        "fairOdds": "2.73",
-        "reason": "Model: Switzerland to win at 37% (Switzerland 37% / draw 29% / Colombia 34%). Expected goals 1.1–1.1 from group-stage attack/defence rates (Switzerland 2.0 for / 1.2 against per game, Colombia 1.4 / 0.8). Most likely score 1-1.",
-        "strength": 2
+        "pick": "Colombia",
+        "fairOdds": "2.40",
+        "reason": "Colombia are unbeaten in four, topped Group K ahead of Portugal, have kept three straight clean sheets and conceded once all tournament, and the Opta supercomputer makes them 41.9% winners in 90 minutes vs 28.2% for Switzerland. But this is the tightest tie of the round — two organized sides who give little away, and Opta rates extra time at ~29.9%, so the draw carries genuine weight and Colombia are only a modest favourite, not a banker."
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.59",
-        "alt": "1-0",
-        "altOdds": "4.18"
+        "fairOdds": "2.05",
+        "alt": "0-1",
+        "altOdds": "5.00"
       },
       "htft": {
-        "pick": "Draw/Switzerland",
-        "fairOdds": "6.81"
+        "pick": "Draw/Colombia",
+        "fairOdds": "4.80"
       },
       "fullTime": {
-        "score": "1-1",
-        "fairOdds": "7.44"
+        "score": "0-1",
+        "fairOdds": "6.00"
       },
       "scorers": [
         {
-          "player": "Daniel Muñoz",
-          "team": "Colombia",
-          "fairOdds": "3.19",
+          "player": "Luis Diaz",
+          "fairOdds": "3.40",
           "banker": true,
-          "note": "2 goals in 4 group games; 31% modelled anytime chance on 1.1 team xG.",
-          "strength": 2
+          "note": "Colombia's talisman: scored and assisted vs Uzbekistan, had two more chalked off for offside vs DR Congo — consistently their biggest threat and in genuine scoring form, so the banker tag is earned."
+        },
+        {
+          "player": "Luis Suarez",
+          "fairOdds": "3.60",
+          "banker": false,
+          "note": "Steps into the No.9 role with Jhon Cordoba ruled out (muscle tear vs Ghana); came off the bench and assisted the Ghana winner, likely first start since the opener."
         },
         {
           "player": "Johan Manzambi",
-          "team": "Switzerland",
-          "fairOdds": "3.36",
+          "fairOdds": "4.20",
           "banker": false,
-          "note": "3 goals in 4 group games; 30% modelled anytime chance on 1.1 team xG.",
-          "strength": 2
+          "note": "Switzerland's 20-year-old breakout star: 3 goals and 2 assists this tournament from the No.10 role, their most productive attacker."
         },
         {
           "player": "Breel Embolo",
-          "team": "Switzerland",
-          "fairOdds": "4.49",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "2 goals in 4 group games; 22% modelled anytime chance on 1.1 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Rubén Vargas",
-          "team": "Switzerland",
-          "fairOdds": "4.49",
-          "banker": false,
-          "note": "2 goals in 4 group games; 22% modelled anytime chance on 1.1 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Jáminton Campaz",
-          "team": "Colombia",
-          "fairOdds": "4.95",
-          "banker": false,
-          "note": "1 goal in 1 group game; 20% modelled anytime chance on 1.1 team xG.",
-          "strength": 1
+          "note": "Struck the opener in the 2-0 round-of-32 win over Algeria and leads the Swiss line, but Colombia's defence has conceded once in four games — not a banker."
         }
       ],
       "assists": [
         {
-          "player": "Breel Embolo",
-          "team": "Switzerland",
-          "fairOdds": "3.16",
-          "banker": true,
-          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+          "player": "James Rodriguez",
+          "fairOdds": "3.75",
+          "banker": false,
+          "note": "Colombia's set-piece and creative hub, now their all-time World Cup appearance leader; almost everything dead-ball runs through him."
         },
         {
-          "player": "Johan Manzambi",
-          "team": "Switzerland",
-          "fairOdds": "3.16",
+          "player": "Dan Ndoye",
+          "fairOdds": "4.75",
           "banker": false,
-          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+          "note": "Direct Swiss right winger, scored vs Algeria and is the primary supply line to Embolo."
         },
         {
-          "player": "Rubén Vargas",
-          "team": "Switzerland",
-          "fairOdds": "5.03",
+          "player": "Daniel Munoz",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "1 assist in the group stage; 20% modelled chance to set one up."
-        },
-        {
-          "player": "Cucho Hernández",
-          "team": "Colombia",
-          "fairOdds": "5.26",
-          "banker": false,
-          "note": "1 assist in the group stage; 19% modelled chance to set one up."
+          "note": "Marauding right-back was Colombia's group-stage standout with goals vs Uzbekistan and DR Congo — constant overlapping delivery for Diaz-side switches."
         }
       ],
       "penalty": {
         "likelihood": "medium",
-        "taker": "Johan Manzambi",
-        "backup": "Breel Embolo",
-        "note": "Tight model margin (3 pts) raises the odds a spot-kick decides it; Johan Manzambi is Switzerland's group-stage top scorer and likely taker."
+        "taker": "James Rodriguez",
+        "backup": "Luis Diaz",
+        "note": "James Rodriguez is Colombia's first-choice penalty taker with Luis Diaz next in line per WC2026 taker guides; a tight knockout with heavy box traffic from set pieces gives a VAR-era penalty a realistic medium chance. For Switzerland, captain Granit Xhaka is the likely taker."
       },
       "lineups": {
-        "home": "Gregor Kobel, Silvan Widmer, Manuel Akanji, Nico Elvedi, Ricardo Rodríguez, Remo Freuler, Granit Xhaka, Dan Ndoye, Johan Manzambi, Rubén Vargas, Breel Embolo",
-        "away": "Camilo Vargas, Daniel Muñoz, Davinson Sánchez, Jhon Lucumí, Johan Mojica, Jhon Arias, Jefferson Lerma, Gustavo Puerta, James Rodríguez, Jhon Córdoba, Luis Díaz",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Gregor Kobel",
-              "pos": "G"
-            },
-            {
-              "num": 2,
-              "name": "Silvan Widmer",
-              "pos": "RB"
-            },
-            {
-              "num": 5,
-              "name": "Manuel Akanji",
-              "pos": "CD-R"
-            },
-            {
-              "num": 4,
-              "name": "Nico Elvedi",
-              "pos": "CD-L"
-            },
-            {
-              "num": 13,
-              "name": "Ricardo Rodríguez",
-              "pos": "LB"
-            },
-            {
-              "num": 8,
-              "name": "Remo Freuler",
-              "pos": "DM-R"
-            },
-            {
-              "num": 10,
-              "name": "Granit Xhaka",
-              "pos": "DM-L"
-            },
-            {
-              "num": 20,
-              "name": "Dan Ndoye",
-              "pos": "AM-R"
-            },
-            {
-              "num": 9,
-              "name": "Johan Manzambi",
-              "pos": "AM"
-            },
-            {
-              "num": 17,
-              "name": "Rubén Vargas",
-              "pos": "AM-L"
-            },
-            {
-              "num": 7,
-              "name": "Breel Embolo",
-              "pos": "F"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 1,
-              "name": "Camilo Vargas",
-              "pos": "G"
-            },
-            {
-              "num": 4,
-              "name": "Daniel Muñoz",
-              "pos": "RB"
-            },
-            {
-              "num": 23,
-              "name": "Davinson Sánchez",
-              "pos": "CB"
-            },
-            {
-              "num": 2,
-              "name": "Jhon Lucumí",
-              "pos": "CB"
-            },
-            {
-              "num": 17,
-              "name": "Johan Mojica",
-              "pos": "LB"
-            },
-            {
-              "num": 11,
-              "name": "Jhon Arias",
-              "pos": "RM"
-            },
-            {
-              "num": 16,
-              "name": "Jefferson Lerma",
-              "pos": "DM"
-            },
-            {
-              "num": 15,
-              "name": "Gustavo Puerta",
-              "pos": "CM"
-            },
-            {
-              "num": 10,
-              "name": "James Rodríguez",
-              "pos": "AM"
-            },
-            {
-              "num": 19,
-              "name": "Jhon Córdoba",
-              "pos": "F"
-            },
-            {
-              "num": 7,
-              "name": "Luis Díaz",
-              "pos": "LW"
-            }
-          ]
-        }
+        "home": "4-2-3-1: Kobel; Zakaria, Elvedi, Akanji, Ricardo Rodriguez; Xhaka, Freuler; Ndoye, Manzambi, Ruben Vargas; Embolo",
+        "away": "4-3-3: Camilo Vargas; Munoz, Davinson Sanchez, Lucumi, Mojica; Lerma, Jhon Arias, Puerta; James Rodriguez, Luis Suarez, Luis Diaz",
+        "status": "probable"
       },
       "playerNotes": [
         {
-          "player": "Daniel Muñoz",
-          "team": "Colombia",
-          "note": "2 goals in 4 group games; 31% modelled anytime chance on 1.1 team xG."
-        },
-        {
           "player": "Johan Manzambi",
           "team": "Switzerland",
-          "note": "3 goals in 4 group games; 30% modelled anytime chance on 1.1 team xG."
+          "note": "3 goals, 2 assists at this World Cup; went from bench option to the fulcrum of the Swiss attack from the No.10 role."
         },
         {
           "player": "Breel Embolo",
           "team": "Switzerland",
-          "note": "2 assists in the group stage; 32% modelled chance to set one up."
+          "note": "Opened the scoring vs Algeria; the physical focal point Colombia's centre-backs must contain."
+        },
+        {
+          "player": "Granit Xhaka",
+          "team": "Switzerland",
+          "note": "Captain at his fourth World Cup, tempo-setter and likely Swiss penalty taker; doubtfuls are only fringe men Aebischer and Jaquez."
+        },
+        {
+          "player": "Luis Diaz",
+          "team": "Colombia",
+          "note": "Scored vs Uzbekistan plus two offside-ruled goals vs DR Congo; the matchup vs Zakaria/right side decides the tie."
+        },
+        {
+          "player": "Jhon Cordoba",
+          "team": "Colombia",
+          "note": "Ruled OUT of the tournament (muscle tear vs Ghana); Luis Suarez, who assisted the Ghana winner off the bench, starts up top."
+        },
+        {
+          "player": "Daniel Munoz",
+          "team": "Colombia",
+          "note": "Scored twice from right-back in the group stage; his overlaps vs Ruben Vargas are a key duel both ways."
         }
       ],
       "confidence": "medium",
       "strength": 2,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-colombia-prediction-team-news-lineups_600736.html",
+        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/team-news/switzerland-vs-colombia-injury-suspension-list-predicted-xis_600750.html",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-colombia-preview-live-stream-team-news-tickets",
+        "https://www.goal.com/en/news/switzerland-colombia-world-cup-preview/blt0192e703fb9da60d",
+        "https://www.aljazeera.com/news/2026/7/7/switzerland-colombia-world-cup-munoz-embolo-manzambi-prediction-news-start-time",
+        "https://www.aljazeera.com/sports/2026/7/3/switzerland-algeria-fifa-world-cup-2026-score-embolo-ndoye",
+        "https://bolavip.com/en/world-cup/jhon-cordoba-reportedly-out-of-2026-world-cup-as-colombias-striker-suffers-gruesome-injury",
+        "https://www.squawka.com/us/news/world-cup/match-preview-switzerland-vs-colombia-07-07-26-world-cup-2026-round-of-16/",
+        "https://oddspedia.com/insights/football/world-cup-2026-penalty-takers",
+        "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K"
       ],
       "pitchReport": {
         "facts": [
