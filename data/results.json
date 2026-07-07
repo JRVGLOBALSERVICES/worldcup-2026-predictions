@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T01:50:01.967Z",
+    "generatedAt": "2026-07-07T02:00:03.194Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 73,
-    "live": 1
+    "finished": 74,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -14407,19 +14407,25 @@
       "assistsChecked": true
     },
     "usa-bel-2026-07-07": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 2
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 1,
+        "away": 4
+      },
+      "ft90": {
+        "home": 1,
+        "away": 4
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 1,
-        "away": 3
+        "away": 4
       },
-      "advanced": null,
+      "advanced": "away",
       "goals": [
         {
           "team": "away",
@@ -14453,6 +14459,14 @@
           "penalty": false,
           "ownGoal": false,
           "outsideBox": true
+        },
+        {
+          "team": "away",
+          "scorer": "Romelu Lukaku",
+          "minute": 90,
+          "assist": "Hans Vanaken",
+          "penalty": false,
+          "ownGoal": false
         }
       ],
       "cards": [
@@ -14477,11 +14491,11 @@
         },
         "sot": {
           "home": 2,
-          "away": 6
+          "away": 7
         },
         "shots": {
           "home": 7,
-          "away": 13
+          "away": 15
         },
         "yellow": {
           "home": 2,
@@ -14496,8 +14510,8 @@
           "away": 0
         },
         "fouls": {
-          "home": 9,
-          "away": 8
+          "home": 11,
+          "away": 9
         },
         "cornersByHalf": {
           "home": [
@@ -14526,7 +14540,7 @@
           "Folarin Balogun": 1
         },
         "playerShots": {
-          "Leandro Trossard": 3,
+          "Leandro Trossard": 4,
           "Youri Tielemans": 2,
           "Timothy Castagne": 1,
           "Charles De Ketelaere": 3,
@@ -14536,7 +14550,8 @@
           "Alex Freeman": 2,
           "Folarin Balogun": 3,
           "Hans Vanaken": 1,
-          "Sebastian Berhalter": 1
+          "Sebastian Berhalter": 1,
+          "Romelu Lukaku": 1
         },
         "firstGoalMethod": "shot",
         "firstPenalty": null,
@@ -14564,16 +14579,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 57.2,
-            "away": 42.8
+            "home": 56.2,
+            "away": 43.8
           },
           "passes": {
-            "home": 479,
-            "away": 356
+            "home": 527,
+            "away": 410
           },
           "tackles": {
-            "home": 18,
-            "away": 20
+            "home": 21,
+            "away": 23
           },
           "saves": {
             "home": 3,
@@ -14585,18 +14600,19 @@
           },
           "blockedShots": {
             "home": 0,
-            "away": 3
+            "away": 4
           },
           "interceptions": {
             "home": 9,
             "away": 9
           },
           "clearances": {
-            "home": 21,
-            "away": 18
+            "home": 22,
+            "away": 20
           }
         }
-      }
+      },
+      "assistsChecked": true
     }
   }
 }
