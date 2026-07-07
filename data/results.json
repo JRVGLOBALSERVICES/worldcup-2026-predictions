@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T12:10:14.550Z",
+    "generatedAt": "2026-07-07T12:20:04.531Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 68,
+    "finished": 74,
     "live": 0
   },
   "results": {
@@ -21820,6 +21820,3442 @@
             "label": "Clearances",
             "home": "35",
             "away": "17"
+          }
+        ]
+      },
+      "assistsChecked": true
+    },
+    "egy-ira-2026-06-26": {
+      "state": "finished",
+      "ht": {
+        "home": 1,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 1
+      },
+      "ft90": {
+        "home": 1,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "advanced": null,
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Mahmoud Saber",
+          "minute": 4,
+          "assist": "Trézéguet",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ramin Rezaeian",
+          "minute": 13,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Hossein Kanani",
+          "minute": 18,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mahmoud Saber",
+          "minute": 19,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Yasser Ibrahim",
+          "minute": 41,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Ali Nemati",
+          "minute": 43,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Saeid Ezatolahi",
+          "minute": 79,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Mohanad Lashin",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Shoja Khalilzadeh",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-27T03:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 8,
+          "away": 2
+        },
+        "sot": {
+          "home": 3,
+          "away": 4
+        },
+        "shots": {
+          "home": 15,
+          "away": 13
+        },
+        "yellow": {
+          "home": 3,
+          "away": 4
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 3,
+          "away": 4
+        },
+        "fouls": {
+          "home": 11,
+          "away": 16
+        },
+        "cornersByHalf": {
+          "home": [
+            4,
+            4
+          ],
+          "away": [
+            0,
+            2
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            1
+          ],
+          "away": [
+            1,
+            0
+          ]
+        },
+        "playerSot": {
+          "Milad Mohammadi": 1,
+          "Trézéguet": 2
+        },
+        "playerShots": {
+          "Mohamed Salah": 1,
+          "Mahmoud Saber": 3,
+          "Saman Ghoddos": 2,
+          "Milad Mohammadi": 1,
+          "Ramin Rezaeian": 3,
+          "Mostafa Zico": 1,
+          "Mohamed Hany": 1,
+          "Trézéguet": 5,
+          "Shoja Khalilzadeh": 1,
+          "Saeid Ezatolahi": 2,
+          "Mohanad Lashin": 2,
+          "Zizo": 1,
+          "Omar Marmoush": 1,
+          "Mohammad Ghorbani": 2,
+          "Mehdi Taremi": 1
+        },
+        "playerShotBreakdown": {
+          "Mohamed Salah": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Mahmoud Saber": {
+            "team": "home",
+            "shots": 3,
+            "sot": 1,
+            "off": 2,
+            "blocked": 0,
+            "goals": 1
+          },
+          "Saman Ghoddos": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 2,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Milad Mohammadi": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Ramin Rezaeian": {
+            "team": "away",
+            "shots": 3,
+            "sot": 1,
+            "off": 1,
+            "blocked": 1,
+            "goals": 1
+          },
+          "Mostafa Zico": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Mohamed Hany": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Trézéguet": {
+            "team": "home",
+            "shots": 5,
+            "sot": 2,
+            "off": 1,
+            "blocked": 2,
+            "goals": 0
+          },
+          "Shoja Khalilzadeh": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Saeid Ezatolahi": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 2,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Mohanad Lashin": {
+            "team": "home",
+            "shots": 2,
+            "sot": 0,
+            "off": 2,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Zizo": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Omar Marmoush": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Mohammad Ghorbani": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 0,
+            "blocked": 2,
+            "goals": 0
+          },
+          "Mehdi Taremi": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          }
+        },
+        "subs": [
+          {
+            "team": "home",
+            "minute": 14,
+            "on": "Yasser Ibrahim",
+            "off": "Mohamed Abdelmonem",
+            "injury": true
+          },
+          {
+            "team": "away",
+            "minute": 45,
+            "on": "Saleh Hardani",
+            "off": "Hossein Kanani",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Marwan Attia",
+            "off": "Mahmoud Saber",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Omar Marmoush",
+            "off": "Emam Ashour",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 57,
+            "on": "Zizo",
+            "off": "Mohamed Salah",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 66,
+            "on": "Shahriyar Moghanloo",
+            "off": "Saman Ghoddos",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 76,
+            "on": "Hamza Abdelkarim",
+            "off": "Mostafa Zico",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 90,
+            "on": "Alireza Jahanbakhsh",
+            "off": "Mohammad Mohebbi",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": "shot",
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Shot On Target",
+            "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot Off Target",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
+        "tempo": {
+          "possession": {
+            "home": 61.4,
+            "away": 38.6
+          },
+          "passes": {
+            "home": 589,
+            "away": 367
+          },
+          "tackles": {
+            "home": 17,
+            "away": 22
+          },
+          "saves": {
+            "home": 2,
+            "away": 2
+          },
+          "offsides": {
+            "home": 0,
+            "away": 3
+          },
+          "blockedShots": {
+            "home": 6,
+            "away": 3
+          },
+          "interceptions": {
+            "home": 7,
+            "away": 8
+          },
+          "clearances": {
+            "home": 38,
+            "away": 32
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "11",
+            "away": "16"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "3",
+            "away": "4"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "0",
+            "away": "3"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "8",
+            "away": "2"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "2",
+            "away": "2"
+          },
+          {
+            "key": "possessionPct",
+            "label": "Possession",
+            "home": "61.4",
+            "away": "38.6"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "15",
+            "away": "13"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "3",
+            "away": "4"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.2",
+            "away": "0.3"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "0",
+            "away": "1"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "513",
+            "away": "281"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "589",
+            "away": "367"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.9",
+            "away": "0.8"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "4",
+            "away": "1"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "15",
+            "away": "10"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.3",
+            "away": "0.1"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "44",
+            "away": "66"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "18",
+            "away": "29"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.4",
+            "away": "0.4"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "6",
+            "away": "3"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "10",
+            "away": "17"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "17",
+            "away": "22"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.6",
+            "away": "0.8"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "7",
+            "away": "8"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "38",
+            "away": "32"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "38",
+            "away": "32"
+          }
+        ]
+      },
+      "assistsChecked": true
+    },
+    "new-bel-2026-06-26": {
+      "state": "finished",
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 1,
+        "away": 5
+      },
+      "ft90": {
+        "home": 1,
+        "away": 5
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 1,
+        "away": 5
+      },
+      "advanced": "away",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Leandro Trossard",
+          "minute": 27,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Leandro Trossard",
+          "minute": 50,
+          "assist": "Hans Vanaken",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Kevin De Bruyne",
+          "minute": 66,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Elijah Just",
+          "minute": 83,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Romelu Lukaku",
+          "minute": 85,
+          "assist": "Nicolas Raskin",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Alexis Saelemaekers",
+          "minute": 90,
+          "assist": "Romelu Lukaku",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Marko Stamenic",
+          "minute": 46,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Elijah Just",
+          "minute": 55,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-27T03:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 5,
+          "away": 8
+        },
+        "sot": {
+          "home": 2,
+          "away": 10
+        },
+        "shots": {
+          "home": 6,
+          "away": 35
+        },
+        "yellow": {
+          "home": 2,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 2,
+          "away": 0
+        },
+        "fouls": {
+          "home": 10,
+          "away": 7
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            4
+          ],
+          "away": [
+            4,
+            4
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            1
+          ],
+          "away": [
+            3,
+            2
+          ]
+        },
+        "playerSot": {
+          "Kevin De Bruyne": 1,
+          "Jérémy Doku": 1,
+          "Charles De Ketelaere": 1,
+          "Elijah Just": 1,
+          "Arthur Theate": 1,
+          "Maxim De Cuyper": 1
+        },
+        "playerShots": {
+          "Youri Tielemans": 1,
+          "Leandro Trossard": 7,
+          "Brandon Mechele": 1,
+          "Kevin De Bruyne": 7,
+          "Jérémy Doku": 2,
+          "Hans Vanaken": 2,
+          "Charles De Ketelaere": 1,
+          "Arthur Theate": 4,
+          "Timothy Castagne": 1,
+          "Elijah Just": 3,
+          "Tim Payne": 1,
+          "Jesse Randall": 1,
+          "Matias Fernandez-Pardo": 2,
+          "Amadou Onana": 2,
+          "Tyler Bindon": 1,
+          "Maxim De Cuyper": 2,
+          "Alexis Saelemaekers": 2,
+          "Romelu Lukaku": 1
+        },
+        "playerShotBreakdown": {
+          "Youri Tielemans": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Leandro Trossard": {
+            "team": "away",
+            "shots": 7,
+            "sot": 2,
+            "off": 1,
+            "blocked": 4,
+            "goals": 2
+          },
+          "Brandon Mechele": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Kevin De Bruyne": {
+            "team": "away",
+            "shots": 7,
+            "sot": 2,
+            "off": 2,
+            "blocked": 3,
+            "goals": 1
+          },
+          "Jérémy Doku": {
+            "team": "away",
+            "shots": 2,
+            "sot": 1,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Hans Vanaken": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 0,
+            "blocked": 2,
+            "goals": 0
+          },
+          "Charles De Ketelaere": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Arthur Theate": {
+            "team": "away",
+            "shots": 4,
+            "sot": 1,
+            "off": 3,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Timothy Castagne": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Elijah Just": {
+            "team": "home",
+            "shots": 3,
+            "sot": 2,
+            "off": 0,
+            "blocked": 1,
+            "goals": 1
+          },
+          "Tim Payne": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Jesse Randall": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Matias Fernandez-Pardo": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 1,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Amadou Onana": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 1,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Tyler Bindon": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Maxim De Cuyper": {
+            "team": "away",
+            "shots": 2,
+            "sot": 1,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Alexis Saelemaekers": {
+            "team": "away",
+            "shots": 2,
+            "sot": 1,
+            "off": 1,
+            "blocked": 0,
+            "goals": 1
+          },
+          "Romelu Lukaku": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 1
+          }
+        },
+        "subs": [
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Ben Old",
+            "off": "Ryan Thomas",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Jesse Randall",
+            "off": "Sarpreet Singh",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 56,
+            "on": "Matias Fernandez-Pardo",
+            "off": "Jérémy Doku",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 64,
+            "on": "Michael Boxall",
+            "off": "Tim Payne",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 64,
+            "on": "Callum McCowatt",
+            "off": "Joe Bell",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 71,
+            "on": "Alexis Saelemaekers",
+            "off": "Leandro Trossard",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 71,
+            "on": "Amadou Onana",
+            "off": "Kevin De Bruyne",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 78,
+            "on": "Francis de Vries",
+            "off": "Liberato Cacace",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 84,
+            "on": "Romelu Lukaku",
+            "off": "Charles De Ketelaere",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 85,
+            "on": "Nicolas Raskin",
+            "off": "Youri Tielemans",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": "shot",
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Foul",
+            "firstActionMinute": 26,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Foul",
+            "firstActionMinute": 72,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
+        "tempo": {
+          "possession": {
+            "home": 45.5,
+            "away": 54.5
+          },
+          "passes": {
+            "home": 436,
+            "away": 525
+          },
+          "tackles": {
+            "home": 10,
+            "away": 13
+          },
+          "saves": {
+            "home": 5,
+            "away": 1
+          },
+          "offsides": {
+            "home": 1,
+            "away": 1
+          },
+          "blockedShots": {
+            "home": 1,
+            "away": 12
+          },
+          "interceptions": {
+            "home": 6,
+            "away": 10
+          },
+          "clearances": {
+            "home": 35,
+            "away": 27
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "10",
+            "away": "7"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "2",
+            "away": "0"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "1",
+            "away": "1"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "5",
+            "away": "8"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "5",
+            "away": "1"
+          },
+          {
+            "key": "possessionPct",
+            "label": "Possession",
+            "home": "45.5",
+            "away": "54.5"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "6",
+            "away": "35"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "2",
+            "away": "10"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.3",
+            "away": "0.3"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "369",
+            "away": "462"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "436",
+            "away": "525"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.8",
+            "away": "0.9"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "2",
+            "away": "6"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "17",
+            "away": "16"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.1",
+            "away": "0.4"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "38",
+            "away": "46"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "16",
+            "away": "28"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.4",
+            "away": "0.6"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "1",
+            "away": "12"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "6",
+            "away": "8"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "10",
+            "away": "13"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.6",
+            "away": "0.6"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "6",
+            "away": "10"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "35",
+            "away": "27"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "35",
+            "away": "27"
+          }
+        ]
+      },
+      "assistsChecked": true
+    },
+    "cap-sau-2026-06-26": {
+      "state": "finished",
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 0,
+        "away": 0
+      },
+      "ft90": {
+        "home": 0,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "advanced": null,
+      "goals": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Saud Abdulhamid",
+          "minute": 3,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Wagner Pina",
+          "minute": 8,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Nasser Al-Dawsari",
+          "minute": 67,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Feras Al-Brikan",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-27T00:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 4,
+          "away": 2
+        },
+        "sot": {
+          "home": 2,
+          "away": 3
+        },
+        "shots": {
+          "home": 15,
+          "away": 7
+        },
+        "yellow": {
+          "home": 1,
+          "away": 3
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 3
+        },
+        "fouls": {
+          "home": 10,
+          "away": 16
+        },
+        "cornersByHalf": {
+          "home": [
+            2,
+            2
+          ],
+          "away": [
+            0,
+            2
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            2
+          ],
+          "away": [
+            1,
+            2
+          ]
+        },
+        "playerSot": {
+          "Mohamed Kanno": 1,
+          "Jamiro Monteiro": 1,
+          "Mohammed Abu Al-Shamat": 1,
+          "Laros Duarte": 1,
+          "Abdullah Al-Hamdan": 1
+        },
+        "playerShots": {
+          "Salem Al-Dawsari": 1,
+          "Willy Semedo": 2,
+          "Jamiro Monteiro": 2,
+          "João Paulo": 2,
+          "Mohamed Kanno": 1,
+          "Saud Abdulhamid": 1,
+          "Abdulelah Al-Amri": 1,
+          "Kevin Pina": 2,
+          "Ryan Mendes": 1,
+          "Deroy Duarte": 1,
+          "Mohammed Abu Al-Shamat": 1,
+          "Laros Duarte": 1,
+          "Pico Lopes": 1,
+          "Garry Rodrigues": 1,
+          "Nasser Al-Dawsari": 1,
+          "Nuno da Costa": 1,
+          "Wagner Pina": 1,
+          "Abdullah Al-Hamdan": 1
+        },
+        "playerShotBreakdown": {
+          "Salem Al-Dawsari": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Willy Semedo": {
+            "team": "home",
+            "shots": 2,
+            "sot": 0,
+            "off": 2,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Jamiro Monteiro": {
+            "team": "home",
+            "shots": 2,
+            "sot": 1,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "João Paulo": {
+            "team": "home",
+            "shots": 2,
+            "sot": 0,
+            "off": 1,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Mohamed Kanno": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Saud Abdulhamid": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Abdulelah Al-Amri": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Kevin Pina": {
+            "team": "home",
+            "shots": 2,
+            "sot": 0,
+            "off": 2,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Ryan Mendes": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Deroy Duarte": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Mohammed Abu Al-Shamat": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Laros Duarte": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Pico Lopes": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Garry Rodrigues": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Nasser Al-Dawsari": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Nuno da Costa": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Wagner Pina": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Abdullah Al-Hamdan": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          }
+        },
+        "subs": [
+          {
+            "team": "away",
+            "minute": 32,
+            "on": "Ali Lajami",
+            "off": "Hassan Al Tambakti",
+            "injury": true
+          },
+          {
+            "team": "away",
+            "minute": 45,
+            "on": "Musab Al Juwayr",
+            "off": "Abdullah Al Khaibari",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 60,
+            "on": "Nuno da Costa",
+            "off": "Dailon Livramento",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 60,
+            "on": "Hélio Varela",
+            "off": "Willy Semedo",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 65,
+            "on": "Mohammed Abu Al Shamat",
+            "off": "Salem Al Dawsari",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 65,
+            "on": "Abdullah Al Hamddan",
+            "off": "Sultan Mandash",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 71,
+            "on": "Laros Duarte",
+            "off": "Jamiro Monteiro",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 71,
+            "on": "Garry Rodrigues",
+            "off": "Ryan Mendes",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 82,
+            "on": "Moteb Al Harbi",
+            "off": "Nawaf Bu Washl",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 90,
+            "on": "Steven Moreira",
+            "off": "Wagner Pina",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": null,
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 27,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 72,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
+        "tempo": {
+          "possession": {
+            "home": 51,
+            "away": 49
+          },
+          "passes": {
+            "home": 451,
+            "away": 444
+          },
+          "tackles": {
+            "home": 15,
+            "away": 29
+          },
+          "saves": {
+            "home": 3,
+            "away": 2
+          },
+          "offsides": {
+            "home": 2,
+            "away": 0
+          },
+          "blockedShots": {
+            "home": 5,
+            "away": 3
+          },
+          "interceptions": {
+            "home": 13,
+            "away": 11
+          },
+          "clearances": {
+            "home": 29,
+            "away": 25
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "10",
+            "away": "16"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "1",
+            "away": "3"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "2",
+            "away": "0"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "4",
+            "away": "2"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "3",
+            "away": "2"
+          },
+          {
+            "key": "possessionPct",
+            "label": "Possession",
+            "home": "51",
+            "away": "49"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "15",
+            "away": "7"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "2",
+            "away": "3"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.1",
+            "away": "0.4"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "381",
+            "away": "359"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "451",
+            "away": "444"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.8",
+            "away": "0.8"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "2",
+            "away": "3"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "18",
+            "away": "11"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.1",
+            "away": "0.3"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "55",
+            "away": "50"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "29",
+            "away": "21"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.5",
+            "away": "0.4"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "5",
+            "away": "3"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "12",
+            "away": "15"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "15",
+            "away": "29"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.8",
+            "away": "0.5"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "13",
+            "away": "11"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "29",
+            "away": "25"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "29",
+            "away": "25"
+          }
+        ]
+      },
+      "assistsChecked": true
+    },
+    "uru-spa-2026-06-26": {
+      "state": "finished",
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
+      "ft": {
+        "home": 0,
+        "away": 1
+      },
+      "ft90": {
+        "home": 0,
+        "away": 1
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "advanced": "away",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Álex Baena",
+          "minute": 41,
+          "assist": "Marcos Llorente",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Álex Baena",
+          "minute": 46,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Juan Manuel Sanabria",
+          "minute": 53,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Guillermo Varela",
+          "minute": 58,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Nicolás de la Cruz",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Agustín Canobbio",
+          "minute": 90,
+          "type": "red"
+        }
+      ],
+      "updatedAt": "2026-06-27T00:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 1,
+          "away": 6
+        },
+        "sot": {
+          "home": 1,
+          "away": 1
+        },
+        "shots": {
+          "home": 5,
+          "away": 6
+        },
+        "yellow": {
+          "home": 3,
+          "away": 1
+        },
+        "red": {
+          "home": 1,
+          "away": 0
+        },
+        "cards": {
+          "home": 4,
+          "away": 1
+        },
+        "fouls": {
+          "home": 14,
+          "away": 14
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            1
+          ],
+          "away": [
+            5,
+            1
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            1
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {
+          "Nicolás de la Cruz": 1
+        },
+        "playerShots": {
+          "Lamine Yamal": 1,
+          "Pau Cubarsí": 1,
+          "Agustín Canobbio": 1,
+          "Rodrigo Bentancur": 1,
+          "Darwin Núñez": 1,
+          "Álex Baena": 1,
+          "Mikel Oyarzabal": 1,
+          "Dani Olmo": 1,
+          "Federico Viñas": 1,
+          "Nicolás de la Cruz": 1,
+          "Ferran Torres": 1
+        },
+        "playerShotBreakdown": {
+          "Lamine Yamal": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Pau Cubarsí": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Agustín Canobbio": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Rodrigo Bentancur": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Darwin Núñez": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Álex Baena": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 1
+          },
+          "Mikel Oyarzabal": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Dani Olmo": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Federico Viñas": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Nicolás de la Cruz": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Ferran Torres": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          }
+        },
+        "subs": [
+          {
+            "team": "home",
+            "minute": 44,
+            "on": "Nicolás de la Cruz",
+            "off": "Manuel Ugarte",
+            "injury": true
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Sergio Rochet",
+            "off": "Fernando Muslera",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 56,
+            "on": "Federico Viñas",
+            "off": "Federico Valverde",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 59,
+            "on": "Fabián Ruiz",
+            "off": "Pedri",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 59,
+            "on": "Dani Olmo",
+            "off": "Mikel Merino",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 66,
+            "on": "Yéremy Pino",
+            "off": "Álex Baena",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 70,
+            "on": "Brian Rodríguez",
+            "off": "Juan Manuel Sanabria",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 76,
+            "on": "Nico Williams",
+            "off": "Lamine Yamal",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 76,
+            "on": "Ferran Torres",
+            "off": "Mikel Oyarzabal",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": "shot",
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Foul",
+            "firstActionMinute": 31,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 69,
+            "firstActionType": "Foul",
+            "firstActionMinute": 74,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
+        "tempo": {
+          "possession": {
+            "home": 33.1,
+            "away": 66.9
+          },
+          "passes": {
+            "home": 301,
+            "away": 622
+          },
+          "tackles": {
+            "home": 25,
+            "away": 17
+          },
+          "saves": {
+            "home": 0,
+            "away": 2
+          },
+          "offsides": {
+            "home": 5,
+            "away": 2
+          },
+          "blockedShots": {
+            "home": 1,
+            "away": 1
+          },
+          "interceptions": {
+            "home": 14,
+            "away": 9
+          },
+          "clearances": {
+            "home": 14,
+            "away": 23
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "14",
+            "away": "14"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "3",
+            "away": "1"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "1",
+            "away": "0"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "5",
+            "away": "2"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "1",
+            "away": "6"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "0",
+            "away": "2"
+          },
+          {
+            "key": "possessionPct",
+            "label": "Possession",
+            "home": "33.1",
+            "away": "66.9"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "5",
+            "away": "6"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "1",
+            "away": "1"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.2",
+            "away": "0.2"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "228",
+            "away": "553"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "301",
+            "away": "622"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.8",
+            "away": "0.9"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "1",
+            "away": "3"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "16",
+            "away": "12"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.1",
+            "away": "0.3"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "43",
+            "away": "34"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "15",
+            "away": "18"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.3",
+            "away": "0.5"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "1",
+            "away": "1"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "15",
+            "away": "10"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "25",
+            "away": "17"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.6",
+            "away": "0.6"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "14",
+            "away": "9"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "14",
+            "away": "23"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "14",
+            "away": "23"
+          }
+        ]
+      },
+      "assistsChecked": true
+    },
+    "nor-fra-2026-06-26": {
+      "state": "finished",
+      "ht": {
+        "home": 1,
+        "away": 3
+      },
+      "ft": {
+        "home": 1,
+        "away": 4
+      },
+      "ft90": {
+        "home": 1,
+        "away": 4
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "advanced": "away",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Ousmane Dembélé",
+          "minute": 6,
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ousmane Dembélé",
+          "minute": 19,
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Thelo Aasgaard",
+          "minute": 21,
+          "assist": "Andreas Schjelderup",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Ousmane Dembélé",
+          "minute": 32,
+          "assist": "Aurélien Tchouaméni",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Désiré Doué",
+          "minute": 90,
+          "assist": "Bradley Barcola",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "home",
+          "player": "Patrick Berg",
+          "minute": 9,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Aurélien Tchouaméni",
+          "minute": 74,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-26T19:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 4,
+          "away": 5
+        },
+        "sot": {
+          "home": 4,
+          "away": 9
+        },
+        "shots": {
+          "home": 10,
+          "away": 18
+        },
+        "yellow": {
+          "home": 1,
+          "away": 1
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 1,
+          "away": 1
+        },
+        "fouls": {
+          "home": 9,
+          "away": 11
+        },
+        "cornersByHalf": {
+          "home": [
+            1,
+            3
+          ],
+          "away": [
+            3,
+            2
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            1
+          ],
+          "away": [
+            5,
+            0
+          ]
+        },
+        "playerSot": {
+          "Kylian Mbappé": 2,
+          "Manu Koné": 1,
+          "Désiré Doué": 2,
+          "Kristian Thorstvedt": 1,
+          "Oscar Bobb": 1
+        },
+        "playerShots": {
+          "Kylian Mbappé": 4,
+          "Manu Koné": 1,
+          "Désiré Doué": 4,
+          "Ousmane Dembélé": 3,
+          "Kristian Thorstvedt": 1,
+          "Michael Olise": 3,
+          "Jørgen Strand Larsen": 1,
+          "Thelo Aasgaard": 2,
+          "Theo Hernández": 2,
+          "Aurélien Tchouaméni": 1,
+          "Leo Østigard": 1,
+          "Oscar Bobb": 2,
+          "Patrick Berg": 1,
+          "Fredrik Aursnes": 1
+        },
+        "playerShotBreakdown": {
+          "Kylian Mbappé": {
+            "team": "away",
+            "shots": 4,
+            "sot": 2,
+            "off": 1,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Manu Koné": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Désiré Doué": {
+            "team": "away",
+            "shots": 4,
+            "sot": 3,
+            "off": 1,
+            "blocked": 0,
+            "goals": 1
+          },
+          "Ousmane Dembélé": {
+            "team": "away",
+            "shots": 3,
+            "sot": 3,
+            "off": 0,
+            "blocked": 0,
+            "goals": 3
+          },
+          "Kristian Thorstvedt": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Michael Olise": {
+            "team": "away",
+            "shots": 3,
+            "sot": 0,
+            "off": 1,
+            "blocked": 2,
+            "goals": 0
+          },
+          "Jørgen Strand Larsen": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Thelo Aasgaard": {
+            "team": "home",
+            "shots": 2,
+            "sot": 1,
+            "off": 0,
+            "blocked": 1,
+            "goals": 1
+          },
+          "Theo Hernández": {
+            "team": "away",
+            "shots": 2,
+            "sot": 0,
+            "off": 2,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Aurélien Tchouaméni": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Leo Østigard": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Oscar Bobb": {
+            "team": "home",
+            "shots": 2,
+            "sot": 1,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Patrick Berg": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Fredrik Aursnes": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          }
+        },
+        "subs": [
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Morten Thorsby",
+            "off": "Kristian Thorstvedt",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Marcus Pedersen",
+            "off": "Fredrik Bjørkan",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 65,
+            "on": "Rayan Cherki",
+            "off": "Michael Olise",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 65,
+            "on": "Bradley Barcola",
+            "off": "Ousmane Dembélé",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 66,
+            "on": "Sondre Langås",
+            "off": "Henrik Falchener",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 75,
+            "on": "Ibrahima Konaté",
+            "off": "Dayot Upamecano",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 83,
+            "on": "Antonio Nusa",
+            "off": "Oscar Bobb",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 83,
+            "on": "Jens Petter Hauge",
+            "off": "Andreas Schjelderup",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 86,
+            "on": "Malo Gusto",
+            "off": "Jules Koundé",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 86,
+            "on": "Jean-Philippe Mateta",
+            "off": "Kylian Mbappé",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": "shot",
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Foul",
+            "firstActionMinute": 27,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Shot On Target",
+            "firstActionMinute": 72,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
+        "tempo": {
+          "possession": {
+            "home": 43.3,
+            "away": 56.7
+          },
+          "passes": {
+            "home": 421,
+            "away": 555
+          },
+          "tackles": {
+            "home": 17,
+            "away": 17
+          },
+          "saves": {
+            "home": 5,
+            "away": 3
+          },
+          "offsides": {
+            "home": 1,
+            "away": 2
+          },
+          "blockedShots": {
+            "home": 3,
+            "away": 3
+          },
+          "interceptions": {
+            "home": 13,
+            "away": 11
+          },
+          "clearances": {
+            "home": 16,
+            "away": 19
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "9",
+            "away": "11"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "1",
+            "away": "1"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "1",
+            "away": "2"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "4",
+            "away": "5"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "5",
+            "away": "3"
+          },
+          {
+            "key": "possessionPct",
+            "label": "Possession",
+            "home": "43.3",
+            "away": "56.7"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "10",
+            "away": "18"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "4",
+            "away": "9"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.4",
+            "away": "0.5"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "1",
+            "away": "0"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "343",
+            "away": "480"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "421",
+            "away": "555"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.8",
+            "away": "0.9"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "3",
+            "away": "3"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "9",
+            "away": "10"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.3",
+            "away": "0.3"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "40",
+            "away": "53"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "18",
+            "away": "28"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.5",
+            "away": "0.5"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "3",
+            "away": "3"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "11",
+            "away": "12"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "17",
+            "away": "17"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.6",
+            "away": "0.7"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "13",
+            "away": "11"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "16",
+            "away": "19"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "16",
+            "away": "19"
+          }
+        ]
+      },
+      "assistsChecked": true
+    },
+    "sen-ira-2026-06-26": {
+      "state": "finished",
+      "ht": {
+        "home": 1,
+        "away": 0
+      },
+      "ft": {
+        "home": 5,
+        "away": 0
+      },
+      "ft90": {
+        "home": 5,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "advanced": "home",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Habib Diarra",
+          "minute": 3,
+          "assist": "Abdoulaye Seck",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Ismaïla Sarr",
+          "minute": 55,
+          "assist": "Lamine Camara",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Pape Gueye",
+          "minute": 58,
+          "assist": "Ismaïla Sarr",
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "home",
+          "scorer": "Pape Gueye",
+          "minute": 71,
+          "assist": "Iliman Ndiaye",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Iliman Ndiaye",
+          "minute": 82,
+          "assist": "Pape Gueye",
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Rebin Sulaka",
+          "minute": 13,
+          "type": "red"
+        },
+        {
+          "team": "home",
+          "player": "Abdoulaye Seck",
+          "minute": 18,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Amir Al-Ammari",
+          "minute": 75,
+          "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Pape Gueye",
+          "minute": 81,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Merchas Doski",
+          "minute": 90,
+          "type": "yellow"
+        }
+      ],
+      "updatedAt": "2026-06-26T19:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 12,
+          "away": 3
+        },
+        "sot": {
+          "home": 12,
+          "away": 1
+        },
+        "shots": {
+          "home": 28,
+          "away": 6
+        },
+        "yellow": {
+          "home": 2,
+          "away": 2
+        },
+        "red": {
+          "home": 0,
+          "away": 1
+        },
+        "cards": {
+          "home": 2,
+          "away": 3
+        },
+        "fouls": {
+          "home": 10,
+          "away": 11
+        },
+        "cornersByHalf": {
+          "home": [
+            6,
+            6
+          ],
+          "away": [
+            3,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            1,
+            6
+          ],
+          "away": [
+            0,
+            1
+          ]
+        },
+        "playerSot": {
+          "Sadio Mané": 1,
+          "Ali Jasim": 1,
+          "Ismaïla Sarr": 1,
+          "Pathé Ciss": 1,
+          "Nicolas Jackson": 2,
+          "Pape Gueye": 1,
+          "Iliman Ndiaye": 1
+        },
+        "playerShots": {
+          "Idrissa Gueye": 1,
+          "Abdoulaye Seck": 2,
+          "Habib Diarra": 2,
+          "Sadio Mané": 4,
+          "Ismaïla Sarr": 3,
+          "Ali Jasim": 4,
+          "Ismail Jakobs": 1,
+          "Merchas Doski": 1,
+          "Moussa Niakhaté": 1,
+          "Lamine Camara": 1,
+          "Pape Gueye": 6,
+          "Kevin Yakob": 1,
+          "Krépin Diatta": 1,
+          "Nicolas Jackson": 3,
+          "Pathé Ciss": 1,
+          "Iliman Ndiaye": 2
+        },
+        "playerShotBreakdown": {
+          "Idrissa Gueye": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Abdoulaye Seck": {
+            "team": "home",
+            "shots": 2,
+            "sot": 0,
+            "off": 1,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Habib Diarra": {
+            "team": "home",
+            "shots": 2,
+            "sot": 1,
+            "off": 1,
+            "blocked": 0,
+            "goals": 1
+          },
+          "Sadio Mané": {
+            "team": "home",
+            "shots": 4,
+            "sot": 1,
+            "off": 2,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Ismaïla Sarr": {
+            "team": "home",
+            "shots": 3,
+            "sot": 2,
+            "off": 1,
+            "blocked": 0,
+            "goals": 1
+          },
+          "Ali Jasim": {
+            "team": "away",
+            "shots": 4,
+            "sot": 1,
+            "off": 0,
+            "blocked": 3,
+            "goals": 0
+          },
+          "Ismail Jakobs": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Merchas Doski": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Moussa Niakhaté": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Lamine Camara": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Pape Gueye": {
+            "team": "home",
+            "shots": 6,
+            "sot": 3,
+            "off": 1,
+            "blocked": 2,
+            "goals": 2
+          },
+          "Kevin Yakob": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Krépin Diatta": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Nicolas Jackson": {
+            "team": "home",
+            "shots": 3,
+            "sot": 2,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Pathé Ciss": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Iliman Ndiaye": {
+            "team": "home",
+            "shots": 2,
+            "sot": 2,
+            "off": 0,
+            "blocked": 0,
+            "goals": 1
+          }
+        },
+        "subs": [
+          {
+            "team": "away",
+            "minute": 16,
+            "on": "Munaf Younus",
+            "off": "Ahmed Qasem",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 45,
+            "on": "Jalal Hassan",
+            "off": "Ahmed Basil",
+            "injury": true
+          },
+          {
+            "team": "home",
+            "minute": 57,
+            "on": "Iliman Ndiaye",
+            "off": "Ibrahim Mbaye",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 57,
+            "on": "Nicolas Jackson",
+            "off": "Lamine Camara",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 57,
+            "on": "Pape Gueye",
+            "off": "Habib Diarra",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 57,
+            "on": "Ahmed Maknzi",
+            "off": "Ali Jasim",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 57,
+            "on": "Ali Yousif",
+            "off": "Ali Al Hamadi",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 58,
+            "on": "Pathé Ciss",
+            "off": "Abdoulaye Seck",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 67,
+            "on": "Kevin Yakob",
+            "off": "Zidane Iqbal",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 80,
+            "on": "Assane Diao",
+            "off": "Ismaïla Sarr",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": "shot",
+        "firstPenalty": null,
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 25,
+            "firstActionType": "Foul",
+            "firstActionMinute": 29,
+            "isCorner": false,
+            "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 69,
+            "firstActionType": "Foul",
+            "firstActionMinute": 70,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
+        "tempo": {
+          "possession": {
+            "home": 69.2,
+            "away": 30.8
+          },
+          "passes": {
+            "home": 590,
+            "away": 266
+          },
+          "tackles": {
+            "home": 12,
+            "away": 20
+          },
+          "saves": {
+            "home": 1,
+            "away": 7
+          },
+          "offsides": {
+            "home": 1,
+            "away": 0
+          },
+          "blockedShots": {
+            "home": 5,
+            "away": 4
+          },
+          "interceptions": {
+            "home": 2,
+            "away": 7
+          },
+          "clearances": {
+            "home": 10,
+            "away": 34
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "10",
+            "away": "11"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "2",
+            "away": "2"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "0",
+            "away": "1"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "1",
+            "away": "0"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "12",
+            "away": "3"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "1",
+            "away": "7"
+          },
+          {
+            "key": "possessionPct",
+            "label": "Possession",
+            "home": "69.2",
+            "away": "30.8"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "28",
+            "away": "6"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "12",
+            "away": "1"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.4",
+            "away": "0.2"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "517",
+            "away": "184"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "590",
+            "away": "266"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.9",
+            "away": "0.7"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "7",
+            "away": "0"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "25",
+            "away": "6"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.3",
+            "away": "0.0"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "43",
+            "away": "68"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "23",
+            "away": "13"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.5",
+            "away": "0.2"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "5",
+            "away": "4"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "9",
+            "away": "13"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "12",
+            "away": "20"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.8",
+            "away": "0.7"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "2",
+            "away": "7"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "10",
+            "away": "34"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "10",
+            "away": "34"
           }
         ]
       },
