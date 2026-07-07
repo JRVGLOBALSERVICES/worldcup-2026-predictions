@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T00:10:03.621Z",
+    "generatedAt": "2026-07-07T00:20:03.929Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 73,
     "live": 1
@@ -14414,10 +14414,19 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Charles De Ketelaere",
+          "minute": 9,
+          "assist": "Nicolas Raskin",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-07T00:00:00.000Z",
       "stats": {
@@ -14427,11 +14436,11 @@
         },
         "sot": {
           "home": 0,
-          "away": 2
+          "away": 3
         },
         "shots": {
           "home": 0,
-          "away": 5
+          "away": 7
         },
         "yellow": {
           "home": 0,
@@ -14446,7 +14455,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "cornersByHalf": {
@@ -14474,26 +14483,26 @@
           "Charles De Ketelaere": 1
         },
         "playerShots": {
-          "Leandro Trossard": 1,
+          "Leandro Trossard": 2,
           "Youri Tielemans": 2,
           "Timothy Castagne": 1,
-          "Charles De Ketelaere": 1
+          "Charles De Ketelaere": 2
         },
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {},
         "tempo": {
           "possession": {
-            "home": 33.8,
-            "away": 66.2
+            "home": 40.5,
+            "away": 59.5
           },
           "passes": {
-            "home": 25,
-            "away": 50
+            "home": 67,
+            "away": 99
           },
           "tackles": {
-            "home": 2,
-            "away": 4
+            "home": 3,
+            "away": 7
           },
           "saves": {
             "home": 2,
@@ -14501,7 +14510,7 @@
           },
           "offsides": {
             "home": 0,
-            "away": 0
+            "away": 1
           },
           "blockedShots": {
             "home": 0,
@@ -14509,10 +14518,10 @@
           },
           "interceptions": {
             "home": 0,
-            "away": 0
+            "away": 2
           },
           "clearances": {
-            "home": 4,
+            "home": 10,
             "away": 2
           }
         }
