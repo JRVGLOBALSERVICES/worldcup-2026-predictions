@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T01:30:03.849Z",
+    "generatedAt": "2026-07-07T01:40:03.740Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 73,
     "live": 1
@@ -14461,6 +14461,12 @@
           "player": "Weston McKennie",
           "minute": 34,
           "type": "yellow"
+        },
+        {
+          "team": "home",
+          "player": "Malik Tillman",
+          "minute": 68,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-07T00:00:00.000Z",
@@ -14474,11 +14480,11 @@
           "away": 6
         },
         "shots": {
-          "home": 3,
+          "home": 4,
           "away": 13
         },
         "yellow": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "red": {
@@ -14486,12 +14492,12 @@
           "away": 0
         },
         "cards": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "fouls": {
-          "home": 5,
-          "away": 5
+          "home": 7,
+          "away": 6
         },
         "cornersByHalf": {
           "home": [
@@ -14526,7 +14532,7 @@
           "Malik Tillman": 1,
           "Nicolas Raskin": 1,
           "Dodi Lukébakio": 2,
-          "Alex Freeman": 1,
+          "Alex Freeman": 2,
           "Folarin Balogun": 1,
           "Hans Vanaken": 1
         },
@@ -14542,20 +14548,30 @@
             "firstActionMinute": 29,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 74,
+            "isCorner": false,
+            "reliable": true
           }
         },
         "tempo": {
           "possession": {
-            "home": 55.3,
-            "away": 44.7
+            "home": 55.5,
+            "away": 44.5
           },
           "passes": {
-            "home": 375,
-            "away": 298
+            "home": 410,
+            "away": 323
           },
           "tackles": {
             "home": 13,
-            "away": 17
+            "away": 18
           },
           "saves": {
             "home": 3,
@@ -14570,12 +14586,12 @@
             "away": 3
           },
           "interceptions": {
-            "home": 6,
+            "home": 7,
             "away": 6
           },
           "clearances": {
-            "home": 19,
-            "away": 11
+            "home": 21,
+            "away": 13
           }
         }
       }
