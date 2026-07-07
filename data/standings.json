@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T18:10:06.198Z",
+    "generatedAt": "2026-07-07T18:30:06.223Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -978,7 +978,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Quarter-final",
+            "opponent": "R16-8 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-12T01:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "Austria",
