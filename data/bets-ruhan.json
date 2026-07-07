@@ -624,6 +624,34 @@
      }
     ]
    }
+  },
+  {
+   "id": "sp-84120799103",
+   "slipNo": "84120799103",
+   "matchId": "sui-col-2026-07-07",
+   "player": "—",
+   "market": "Acca · 2 legs",
+   "label": "Acca — Switzerland/Colombia: X2 + both teams to score + Argentina/Egypt: Over 1.5 total goals",
+   "odds": 3.3,
+   "stake": 50,
+   "placedAt": "08/07 00:05",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "sui-col-2026-07-07",
+      "kind": "doubleChanceBtts",
+      "outcome": "X2",
+      "odds": 2.5
+     },
+     {
+      "matchId": "arg-egy-2026-07-07",
+      "kind": "totalOver",
+      "line": 1.5,
+      "odds": 1.32
+     }
+    ]
+   }
   }
  ]
 }
