@@ -720,10 +720,18 @@ async function main() {
   const fixById = Object.fromEntries(fixtures.map((f) => [f.id, f]));
   // Refetch a finished match's summary until its stats snapshot exists, its
   // goals have been assist-checked once, AND the snapshot carries the tempo
-  // block (possession / passes / tackles — added 2026-07-06; earlier snapshots
-  // lack it → one-time backfill fetch, then locked).
+  // block (possession / passes / tackles — added 2026-07-06) AND the per-player
+  // shot breakdown + subs log (added 2026-07-07); earlier snapshots lack them →
+  // one-time backfill fetch, then locked.
   const needStats = Object.entries(results).filter(
-    ([id, r]) => r.eventId && !(r.state === "finished" && prevStats[id]?.tempo && prevChecked[id]),
+    ([id, r]) =>
+      r.eventId &&
+      !(
+        r.state === "finished" &&
+        prevStats[id]?.tempo &&
+        prevStats[id]?.playerShotBreakdown &&
+        prevChecked[id]
+      ),
   );
   const fetchedStats = await Promise.allSettled(
     needStats.map(([, r]) => fetchSummary(r.eventId)),
