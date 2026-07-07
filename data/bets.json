@@ -16068,6 +16068,70 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-862196710024871937",
+      "slipNo": "862196710024871937",
+      "matchId": "arg-egy-2026-07-07",
+      "player": "Match Parlay (9)",
+      "market": "Match Parlay (9) — Arg/Egy: DC + Qualify + Totals + Scorer + Shots + Score/Assist",
+      "label": "REAL 1xBet slip 862196710024871937 (07/07) — Arg/Egy Match Parlay @14.35, RM200 -> RM2870. Argentina or Tie (Double Chance) · Argentina To Qualify · Under 5.5 Total Goals · Lionel Messi Anytime Scorer · Over 1.5 Total Goals · Mahmoud Saber 1+ Shots · Mohamed Salah 1+ Shots · Emam Ashour 1+ Shots · Alexis Mac Allister To Score Or Assist.",
+      "odds": 14.35,
+      "stake": 200,
+      "placedAt": "07/07 04:35",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "playerShotsOver",
+            "line": 0.5,
+            "player": "Mahmoud Saber"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "playerShotsOver",
+            "line": 0.5,
+            "player": "Mohamed Salah"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "playerShotsOver",
+            "line": 0.5,
+            "player": "Emam Ashour"
+          },
+          {
+            "matchId": "arg-egy-2026-07-07",
+            "kind": "scoredOrAssisted",
+            "player": "Alexis Mac Allister"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
