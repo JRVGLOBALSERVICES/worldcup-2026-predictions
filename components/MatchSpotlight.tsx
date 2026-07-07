@@ -13,10 +13,11 @@ import { diffLiveEvents, type LiveEvent, type LiveEventKind } from "@/lib/liveEv
  *     (days / hours / mins / secs), the two sides, venue + MYT time. On your slip
  *     matches carry a tag.
  *   • the moment it starts → the same card flips to LIVE: big scoreline, match
- *     minute, and a rolling inline feed of what's happening (goals, shots on
- *     target, corners, cards, whistles) diffed straight off the /api/live poll —
- *     the same deltas that drive the full-screen firecracker FX, kept here as a
- *     persistent play-by-play.
+ *     minute, a verified stats grid (possession / shots / SOT / corners / fouls /
+ *     cards straight off ESPN's summary), and a rolling inline feed of what's
+ *     happening (goals, shots on target, corners, cards, whistles) diffed off
+ *     the /api/live poll — the same deltas that drive the full-screen
+ *     firecracker FX, kept here as a persistent play-by-play.
  * Fixtures are static, so kickoff picking is deterministic; the live half reads
  * the poll map the tracker already holds. Countdown digits render only after
  * mount so SSR and client agree (no hydration drift on the clock).
@@ -134,6 +135,75 @@ function Versus({
           <p className="mt-1 truncate font-mono text-[0.6rem] uppercase tracking-wider text-faint/60">{away.name}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+/** One mirrored stat row for the spotlight — bars grow toward the centre label,
+ *  home in acid on the left, away in mint on the right. Transform-only motion
+ *  (scaleX) so each 5s poll eases the bars without layout work. */
+function SpotStatRow({ label, h, a }: { label: string; h: number; a: number }) {
+  const max = Math.max(h, a, 1);
+  return (
+    <div className="grid grid-cols-[2rem_1fr_minmax(5rem,auto)_1fr_2rem] items-center gap-2">
+      <span className="tnum text-right font-mono text-[0.74rem] font-semibold text-acid">{h}</span>
+      <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
+        <span
+          className="block h-full origin-right rounded-full bg-acid transition-transform duration-700 ease-out"
+          style={{ transform: `scaleX(${h / max})` }}
+        />
+      </div>
+      <span className="text-center font-mono text-[0.56rem] uppercase tracking-[0.14em] text-faint/70">{label}</span>
+      <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
+        <span
+          className="block h-full origin-left rounded-full bg-mint/80 transition-transform duration-700 ease-out"
+          style={{ transform: `scaleX(${a / max})` }}
+        />
+      </div>
+      <span className="tnum font-mono text-[0.74rem] font-semibold text-mint">{a}</span>
+    </div>
+  );
+}
+
+/** Live stats block for the spotlight — the settling counts (shots / SOT /
+ *  corners / fouls / cards) plus a possession strip when ESPN's summary carries
+ *  tempo. Reads the LiveMatch the tracker already polls (no provider needed —
+ *  the tracker isn't wrapped in LiveProvider, so no useLiveMatch here). Renders
+ *  nothing until the summary endpoint has verified numbers. */
+function SpotStats({ lm }: { lm: LiveMatch }) {
+  const s = lm.stats;
+  if (!s) return null;
+  const t = s.tempo;
+  const hasPossession = t && (t.possession.home > 0 || t.possession.away > 0);
+  const posTotal = hasPossession ? t.possession.home + t.possession.away || 1 : 1;
+  return (
+    <div className="mt-4 border-t border-white/[0.07] pt-4">
+      {hasPossession && (
+        <div className="mb-3">
+          <div className="mb-1 flex items-baseline justify-between font-mono text-[0.58rem] uppercase tracking-[0.16em]">
+            <span className="tnum text-[0.72rem] font-semibold text-acid">{Math.round(t.possession.home)}</span>
+            <span className="text-faint/60">Possession %</span>
+            <span className="tnum text-[0.72rem] font-semibold text-mint">{Math.round(t.possession.away)}</span>
+          </div>
+          <div className="relative h-1.5 overflow-hidden rounded-full bg-mint/70">
+            <span
+              className="absolute inset-0 origin-left rounded-full bg-acid transition-transform duration-700 ease-out"
+              style={{ transform: `scaleX(${t.possession.home / posTotal})` }}
+            />
+          </div>
+        </div>
+      )}
+      <div className="space-y-2">
+        <SpotStatRow label="Shots" h={s.shots.home} a={s.shots.away} />
+        <SpotStatRow label="On target" h={s.sot.home} a={s.sot.away} />
+        <SpotStatRow label="Corners" h={s.corners.home} a={s.corners.away} />
+        {s.fouls && <SpotStatRow label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
+        {t && <SpotStatRow label="Offsides" h={t.offsides.home} a={t.offsides.away} />}
+        <SpotStatRow label="Cards" h={s.cards.home} a={s.cards.away} />
+      </div>
+      <p className="mt-2.5 text-center font-mono text-[0.52rem] uppercase tracking-[0.14em] text-faint/40">
+        Verified vs ESPN · ticks live every 5s
+      </p>
     </div>
   );
 }
@@ -282,6 +352,8 @@ export default function MatchSpotlight({
           {fx.round ?? `Group ${fx.group}`} · {fx.venue}, {fx.city}
         </p>
 
+        <SpotStats lm={spotlightLive} />
+
         <LiveFeed lm={spotlightLive} home={fx.home} away={fx.away} />
       </section>
     );
@@ -334,7 +406,7 @@ export default function MatchSpotlight({
       </div>
 
       <p className="mt-5 border-t border-white/[0.06] pt-3.5 text-center font-mono text-[0.58rem] uppercase tracking-[0.14em] text-faint/45">
-        The moment it kicks off, this section goes live — goals, shots, cards, every event as it happens.{" "}
+        The moment it kicks off, this section goes live — score, full match stats (shots, corners, fouls, cards, possession) and every event as it happens.{" "}
         <Link href={`/match/${fx.id}`} className="text-acid/70 underline-offset-2 hover:underline">
           Match preview →
         </Link>
