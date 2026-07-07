@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-07T15:10:06.098Z",
+    "generatedAt": "2026-07-07T16:10:07.982Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 78
   },
@@ -484,9 +484,9 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 91,
-        "display": "91.0%",
-        "matches": 4
+        "value": 90.9,
+        "display": "90.9%",
+        "matches": 5
       },
       {
         "rank": 2,
@@ -628,18 +628,18 @@
       },
       {
         "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 59.8,
-        "display": "59.8%",
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "team": "Portugal",
         "flag": "🇵🇹",
         "value": 58.5,
         "display": "58.5%",
+        "matches": 5
+      },
+      {
+        "rank": 10,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 58.4,
+        "display": "58.4%",
         "matches": 5
       }
     ],
@@ -690,7 +690,7 @@
         "flag": "🇦🇷",
         "value": 44.6,
         "display": "44.6%",
-        "matches": 4
+        "matches": 5
       },
       {
         "rank": 7,
@@ -822,7 +822,7 @@
         "flag": "🇦🇷",
         "value": 36.7,
         "display": "36.7%",
-        "matches": 4
+        "matches": 5
       },
       {
         "rank": 3,
@@ -902,9 +902,9 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 57.5,
-        "display": "57.5%",
-        "matches": 4
+        "value": 57.9,
+        "display": "57.9%",
+        "matches": 5
       },
       {
         "rank": 3,
@@ -6967,6 +6967,40 @@
             "totalCrosses": 14,
             "accurateLongBalls": 17,
             "totalLongBalls": 55
+          }
+        ]
+      },
+      "760509": {
+        "penMiss": [],
+        "assists": [],
+        "teamBox": [
+          {
+            "team": "Argentina",
+            "possessionPct": 52.8,
+            "accuratePasses": 48,
+            "totalPasses": 56,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 1,
+            "totalTackles": 3,
+            "accurateCrosses": 0,
+            "totalCrosses": 0,
+            "accurateLongBalls": 4,
+            "totalLongBalls": 6
+          },
+          {
+            "team": "Egypt",
+            "possessionPct": 47.2,
+            "accuratePasses": 48,
+            "totalPasses": 49,
+            "shotsOnTarget": 0,
+            "totalShots": 0,
+            "effectiveTackles": 0,
+            "totalTackles": 1,
+            "accurateCrosses": 0,
+            "totalCrosses": 1,
+            "accurateLongBalls": 1,
+            "totalLongBalls": 1
           }
         ]
       }
