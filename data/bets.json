@@ -16719,6 +16719,174 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-862643967945744385",
+      "slipNo": "862643967945744385",
+      "matchId": "fra-mar-2026-07-09",
+      "player": "—",
+      "market": "Match Parlay · 10 legs",
+      "label": "FRA-MAR Match Parlay — U5.5 · France or draw · O0.5 · France qualify · Olise score/assist · Mbappe scores · Rabiot 1+ shot · BTTS · Bouaddi 1+ SOT · Over 3.5 cards (10 legs)",
+      "odds": 54.04,
+      "stake": 50,
+      "placedAt": "08/07 18:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Michael Olise"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "btts"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerSotOver",
+            "player": "Ayyoub Bouaddi",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "cardsTotalOver",
+            "line": 3.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-862640332998410241",
+      "slipNo": "862640332998410241",
+      "matchId": "fra-mar-2026-07-09",
+      "player": "—",
+      "market": "4-fold · 4 match parlays · 16 legs",
+      "label": "4-fold of match parlays — FRA-MAR @3.82 (Olise score/assist · Mbappe scores · Bounou 2+ saves · France or draw · O1.5 · France qualify) · NOR-ENG @5.04 (Kane score/assist · Haaland score/assist · Nusa 1+ shot · U5.5) · ARG-SUI @2.09 (Messi scores · Argentina or draw · Argentina qualify) · ESP-BEL @1.17 (Courtois 2+ saves · O0.5 · U5.5). Per-parlay prices as on the slip; per-leg prices not shown by the book.",
+      "odds": 47.07,
+      "stake": 50,
+      "placedAt": "08/07 18:24",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Michael Olise"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "gkSavesOver",
+            "player": "Yassine Bounou",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerShotsOver",
+            "player": "Antonio Nusa",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "gkSavesOver",
+            "player": "Thibaut Courtois",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalUnder",
+            "line": 5.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {

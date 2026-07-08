@@ -594,6 +594,19 @@ export type MultiLegCond = { odds?: number } & (
   // so no whole-line push arises.
   | { matchId: string; kind: "cornersTotalOver"; line: number }
   | { matchId: string; kind: "cornersTotalUnder"; line: number }
+  // Named GOALKEEPER's saves strictly over `line` ("Yassine Bounou Over 1.5 —
+  // Goalkeeper Over Saves" → line:1.5 → won at 2+). ESPN has no per-player save
+  // tally, but a team's saves ARE its keeper's saves, so it settles off
+  // MatchStats.tempo.saves for the keeper's `side`. `player` is display/audit.
+  // Saves only accrue → clinches mid-match the moment the count clears the
+  // line; at FT still short it's dead; no tempo snapshot (pre-2026-07-06 shape)
+  // → holds pending for a human rather than blind-grading.
+  | { matchId: string; kind: "gkSavesOver"; player: string; side: "home" | "away"; line: number }
+  // Total cards BOTH sides (yellow + red, same MatchStats.cards count the combo
+  // cardsTotalOver StatCond settles on) strictly over `line` ("Over 3.5 — Cards
+  // FT O/U"). Cards only accrue → clinches mid-match once the running total
+  // clears the line; at FT still short it's dead; no stats snapshot → pending.
+  | { matchId: string; kind: "cardsTotalOver"; line: number }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -1405,6 +1418,43 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
             continue;
           }
           continue; // total stayed under → won
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "gkSavesOver") {
+        // Named keeper's saves over the line — settled off his side's team save
+        // count (a team's saves are its keeper's saves). Saves only accrue, so
+        // it clinches mid-match once the count clears the line; at FT still
+        // short it's dead; no tempo snapshot → pending for a human.
+        const sv = getStats(leg.matchId)?.tempo?.saves;
+        const n = sv ? sv[leg.side] : null;
+        if (n != null && n > leg.line) continue; // cleared → leg won, even mid-match
+        if (finished) {
+          if (n == null) {
+            pending = true; // tempo never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "cardsTotalOver") {
+        // Combined cards (yellow + red, both sides) over the line. Cards only
+        // accrue → clinches the moment the total clears the line; at FT a total
+        // still short is dead; no stats snapshot → pending for a human.
+        const cd = getStats(leg.matchId)?.cards;
+        const tot = cd ? cd.home + cd.away : null;
+        if (tot != null && tot > leg.line) continue; // cleared → won, even mid-match
+        if (finished) {
+          if (tot == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
         }
         pending = true;
         continue;

@@ -206,6 +206,10 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — Under ${leg.line} corners`;
     case "playerSotOver":
       return `${leg.player} — ${plus(leg.line)} shots on target`;
+    case "gkSavesOver":
+      return `${leg.player} — ${plus(leg.line)} saves`;
+    case "cardsTotalOver":
+      return `${m} — Over ${leg.line} cards`;
     case "firstToScore":
       return leg.outcome === "X"
         ? `${m} — goalless (neither side scores first)`
@@ -1444,6 +1448,43 @@ export function inPlayMultiLeg(
       } else if (total != null) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "gkSavesOver") {
+      // Named keeper's saves over the line — his side's team save count IS his
+      // count. Saves only accrue, so it locks WON the moment the tally clears
+      // the line; while short it's neutral; dead at the true whistle if short.
+      // No tempo snapshot → neutral (static holds pending for a human).
+      const sv = lm.stats?.tempo?.saves;
+      const n = sv ? sv[leg.side] : null;
+      if (n != null && n > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && n != null) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "cardsTotalOver") {
+      // Combined cards (yellow + red, both sides) over the line — cards only
+      // accrue, so it locks WON the moment the running total clears the line;
+      // while short it's neutral; dead at FT if short. No snapshot → neutral.
+      const cd = lm.stats?.cards;
+      const total = cd ? cd.home + cd.away : null;
+      if (total != null && total > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && total != null) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
       } else {
         parts.push(`${legLabel} —`);
       }
