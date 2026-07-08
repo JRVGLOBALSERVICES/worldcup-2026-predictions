@@ -16655,6 +16655,70 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-862537809734123520",
+      "slipNo": "862537809734123520",
+      "matchId": "fra-mar-2026-07-09",
+      "player": "—",
+      "market": "Match Parlay · 9 legs",
+      "label": "FRA-MAR Match Parlay — U5.5 · Mbappe scores · France or draw · France qualify · Morocco U2.5 · France O0.5 · Olise score/assist · B.Diaz 1+ shot · O1.5 (9 legs)",
+      "odds": 6.17,
+      "stake": 275,
+      "placedAt": "08/07 05:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "individualTotalUnder",
+            "side": "away",
+            "line": 2.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Michael Olise"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Brahim Diaz",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalOver",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
