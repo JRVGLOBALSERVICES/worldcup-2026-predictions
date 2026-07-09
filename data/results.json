@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T21:30:08.245Z",
+    "generatedAt": "2026-07-09T21:40:06.500Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 76,
     "live": 1
@@ -90507,7 +90507,7 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "advanced": null,
@@ -90519,6 +90519,15 @@
           "assist": "Désiré Doué",
           "penalty": false,
           "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Ousmane Dembélé",
+          "minute": 65,
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
         }
       ],
       "cards": [
@@ -90533,14 +90542,14 @@
       "stats": {
         "corners": {
           "home": 3,
-          "away": 2
+          "away": 3
         },
         "sot": {
-          "home": 5,
+          "home": 6,
           "away": 0
         },
         "shots": {
-          "home": 16,
+          "home": 17,
           "away": 2
         },
         "yellow": {
@@ -90557,7 +90566,7 @@
         },
         "fouls": {
           "home": 7,
-          "away": 8
+          "away": 9
         },
         "cornersByHalf": {
           "home": [
@@ -90566,7 +90575,7 @@
           ],
           "away": [
             1,
-            1
+            2
           ]
         },
         "sotByHalf": {
@@ -90587,7 +90596,7 @@
           "Kylian Mbappé": 3,
           "Dayot Upamecano": 1,
           "Désiré Doué": 3,
-          "Ousmane Dembélé": 3,
+          "Ousmane Dembélé": 4,
           "Adrien Rabiot": 1,
           "Jules Koundé": 1,
           "Manu Koné": 1,
@@ -90623,11 +90632,11 @@
           },
           "Ousmane Dembélé": {
             "team": "home",
-            "shots": 3,
-            "sot": 0,
+            "shots": 4,
+            "sot": 1,
             "off": 2,
             "blocked": 1,
-            "goals": 0
+            "goals": 1
           },
           "Adrien Rabiot": {
             "team": "home",
@@ -90708,7 +90717,7 @@
             "gc": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 9
           },
           {
             "team": "home",
@@ -90728,7 +90737,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 49
+            "ps": 54
           },
           {
             "team": "home",
@@ -90746,9 +90755,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 1,
+            "tk": 2,
             "bk": 0,
-            "ps": 44
+            "ps": 50
           },
           {
             "team": "home",
@@ -90768,7 +90777,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 31
+            "ps": 37
           },
           {
             "team": "home",
@@ -90788,7 +90797,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 25
+            "ps": 26
           },
           {
             "team": "home",
@@ -90808,7 +90817,7 @@
             "off": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 36
+            "ps": 40
           },
           {
             "team": "home",
@@ -90828,7 +90837,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 33
+            "ps": 38
           },
           {
             "team": "home",
@@ -90848,7 +90857,7 @@
             "off": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 32
+            "ps": 35
           },
           {
             "team": "home",
@@ -90858,7 +90867,7 @@
             "starter": true,
             "aid": "231388",
             "g": 1,
-            "a": 0,
+            "a": 1,
             "sh": 4,
             "sot": 2,
             "fc": 0,
@@ -90868,7 +90877,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 22
+            "ps": 27
           },
           {
             "team": "home",
@@ -90882,13 +90891,13 @@
             "sh": 3,
             "sot": 2,
             "fc": 2,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 2,
             "bk": 1,
-            "ps": 31
+            "ps": 39
           },
           {
             "team": "home",
@@ -90897,10 +90906,10 @@
             "num": 7,
             "starter": true,
             "aid": "229744",
-            "g": 0,
+            "g": 1,
             "a": 0,
-            "sh": 3,
-            "sot": 0,
+            "sh": 4,
+            "sot": 1,
             "fc": 0,
             "fs": 0,
             "yc": 0,
@@ -90908,7 +90917,24 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 22
+            "ps": 28
+          },
+          {
+            "team": "home",
+            "name": "Warren Zaïre-Emery",
+            "pos": "SUB",
+            "num": 18,
+            "starter": false,
+            "aid": "345581",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           },
           {
             "team": "away",
@@ -90928,10 +90954,10 @@
             "rc": 0,
             "off": 0,
             "sv": 4,
-            "gc": 1,
+            "gc": 2,
             "tk": 0,
             "bk": 0,
-            "ps": 26
+            "ps": 29
           },
           {
             "team": "away",
@@ -90951,7 +90977,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 27
+            "ps": 29
           },
           {
             "team": "away",
@@ -90971,7 +90997,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 36
+            "ps": 41
           },
           {
             "team": "away",
@@ -90991,7 +91017,7 @@
             "off": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 33
+            "ps": 36
           },
           {
             "team": "away",
@@ -91011,7 +91037,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 35
+            "ps": 38
           },
           {
             "team": "away",
@@ -91031,7 +91057,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 39
+            "ps": 45
           },
           {
             "team": "away",
@@ -91051,7 +91077,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 37
+            "ps": 42
           },
           {
             "team": "away",
@@ -91091,7 +91117,7 @@
             "off": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 25
+            "ps": 26
           },
           {
             "team": "away",
@@ -91111,7 +91137,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 17
           },
           {
             "team": "away",
@@ -91131,7 +91157,24 @@
             "off": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 22
+            "ps": 25
+          },
+          {
+            "team": "away",
+            "name": "Gessime Yassine",
+            "pos": "SUB",
+            "num": 16,
+            "starter": false,
+            "aid": "379012",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 1,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           },
           {
             "team": "away",
@@ -91148,7 +91191,10 @@
             "fs": 0,
             "yc": 0,
             "rc": 0,
-            "off": 0
+            "off": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 3
           },
           {
             "team": "away",
@@ -91157,6 +91203,26 @@
             "num": 9,
             "starter": false,
             "aid": "276139",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
+          },
+          {
+            "team": "away",
+            "name": "Zakaria El Ouahdi",
+            "pos": "SUB",
+            "num": 13,
+            "starter": false,
+            "aid": "325024",
             "g": 0,
             "a": 0,
             "sh": 0,
@@ -91182,6 +91248,27 @@
             "on": "Sofyan Amrabat",
             "off": "Ayyoub Bouaddi",
             "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 70,
+            "on": "Warren Zaïre-Emery",
+            "off": "Manu Koné",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 73,
+            "on": "Zakaria El Ouahdi",
+            "off": "Anass Salah-Eddine",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 73,
+            "on": "Gessime Yassine",
+            "off": "Brahim Díaz",
+            "injury": false
           }
         ],
         "firstGoalMethod": "shot",
@@ -91196,20 +91283,30 @@
             "firstActionMinute": 23,
             "isCorner": true,
             "reliable": false
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 70,
+            "firstActionType": "Corner Awarded",
+            "firstActionMinute": 72,
+            "isCorner": true,
+            "reliable": false
           }
         },
         "tempo": {
           "possession": {
-            "home": 51,
-            "away": 49
+            "home": 51.3,
+            "away": 48.7
           },
           "passes": {
-            "home": 383,
-            "away": 371
+            "home": 419,
+            "away": 399
           },
           "tackles": {
             "home": 8,
-            "away": 13
+            "away": 16
           },
           "saves": {
             "home": 0,
@@ -91224,12 +91321,12 @@
             "away": 1
           },
           "interceptions": {
-            "home": 8,
+            "home": 9,
             "away": 6
           },
           "clearances": {
-            "home": 12,
-            "away": 9
+            "home": 13,
+            "away": 11
           }
         },
         "full": [
@@ -91237,7 +91334,7 @@
             "key": "foulsCommitted",
             "label": "Fouls",
             "home": "7",
-            "away": "8"
+            "away": "9"
           },
           {
             "key": "yellowCards",
@@ -91261,7 +91358,7 @@
             "key": "wonCorners",
             "label": "Corner Kicks",
             "home": "3",
-            "away": "2"
+            "away": "3"
           },
           {
             "key": "saves",
@@ -91272,25 +91369,25 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "51",
-            "away": "49"
+            "home": "51.3",
+            "away": "48.7"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "16",
+            "home": "17",
             "away": "2"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
-            "home": "5",
+            "home": "6",
             "away": "0"
           },
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "0.3",
+            "home": "0.4",
             "away": "0.0"
           },
           {
@@ -91308,14 +91405,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "342",
-            "away": "309"
+            "home": "373",
+            "away": "334"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "383",
-            "away": "371"
+            "home": "419",
+            "away": "399"
           },
           {
             "key": "passPct",
@@ -91327,37 +91424,37 @@
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
             "home": "4",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
             "home": "9",
-            "away": "5"
+            "away": "7"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
             "home": "0.4",
-            "away": "0.0"
+            "away": "0.1"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "22",
-            "away": "34"
+            "home": "25",
+            "away": "36"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "12",
-            "away": "8"
+            "home": "13",
+            "away": "9"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
             "home": "0.5",
-            "away": "0.2"
+            "away": "0.3"
           },
           {
             "key": "blockedShots",
@@ -91375,36 +91472,36 @@
             "key": "totalTackles",
             "label": "Tackles",
             "home": "8",
-            "away": "13"
+            "away": "16"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
             "home": "0.9",
-            "away": "0.5"
+            "away": "0.4"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "8",
+            "home": "9",
             "away": "6"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "12",
-            "away": "9"
+            "home": "13",
+            "away": "11"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "12",
-            "away": "9"
+            "home": "13",
+            "away": "11"
           }
         ],
         "playerTackles": {
-          "Achraf Hakimi": 1,
-          "Dayot Upamecano": 2
+          "Dayot Upamecano": 2,
+          "Achraf Hakimi": 1
         }
       }
     }
