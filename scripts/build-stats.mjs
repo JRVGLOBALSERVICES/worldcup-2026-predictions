@@ -241,6 +241,100 @@ function buildTeamStats(byEvent, flagFor, alive) {
   };
 }
 
+/**
+ * Per-team squad stat sheets. For every ALIVE team, one row per player who has
+ * featured (or scored/assisted/been booked), with their counting stats compiled
+ * across every game they've played:
+ *   • apps            — games featured in (starter or used sub), from byEvent players[]
+ *   • goals / assists — the merged tournament tallies (name|team keyed)
+ *   • tackles/blocks/passes/saves — Σ of the per-match core-API values
+ *   • yellow/red/penScored/penMissed — the discipline + penalty tallies
+ * Teams sorted A→Z; players sorted goals → assists → apps → tackles → name.
+ */
+function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red, penScored, penMissed, alive, flagFor }) {
+  const lines = {}; // "name|team" → line
+  const get = (name, team) =>
+    (lines[`${name}|${team}`] ??= {
+      name,
+      team,
+      apps: 0,
+      goals: 0,
+      assists: 0,
+      tackles: 0,
+      blocks: 0,
+      passes: 0,
+      saves: 0,
+      yellow: 0,
+      red: 0,
+      penScored: 0,
+      penMissed: 0,
+      gk: false,
+    });
+
+  // Per-match player records → appearances + tackles/blocks/passes/saves.
+  for (const rec of Object.values(byEvent)) {
+    for (const p of rec.players ?? []) {
+      if (!p.n || !p.t) continue;
+      const l = get(p.n, p.t);
+      l.apps += 1;
+      if (p.gk) l.gk = true;
+      if (p.tk != null) l.tackles += p.tk;
+      if (p.bk != null) l.blocks += p.bk;
+      if (p.ps != null) l.passes += p.ps;
+      if (p.sv != null) l.saves += p.sv;
+    }
+  }
+  // Goals / assists / cards / penalties (all name|team keyed).
+  for (const r of Object.values(mergedScorers)) if (r.name && r.team) get(r.name, r.team).goals = r.value;
+  for (const r of Object.values(mergedAssists)) if (r.name && r.team) get(r.name, r.team).assists = r.value;
+  for (const r of Object.values(yellow)) if (r.name && r.team) get(r.name, r.team).yellow = r.value;
+  for (const r of Object.values(red)) if (r.name && r.team) get(r.name, r.team).red = r.value;
+  for (const r of Object.values(penScored)) if (r.name && r.team) get(r.name, r.team).penScored = r.value;
+  for (const r of Object.values(penMissed)) if (r.name && r.team) get(r.name, r.team).penMissed = r.value;
+
+  // Group by alive team. Empty alive set (data glitch) → keep everyone.
+  const teams = {};
+  for (const l of Object.values(lines)) {
+    const key = norm(l.team);
+    if (alive && alive.size > 0 && !alive.has(key)) continue;
+    (teams[key] ??= { team: l.team, flag: flagFor(l.team), players: [] }).players.push(l);
+  }
+
+  return Object.values(teams)
+    .map((t) => ({
+      team: t.team,
+      flag: t.flag,
+      players: t.players
+        // Drop ghosts with literally nothing recorded yet.
+        .filter((p) => p.apps > 0 || p.goals > 0 || p.assists > 0 || p.yellow > 0 || p.red > 0)
+        .sort(
+          (a, b) =>
+            b.goals - a.goals ||
+            b.assists - a.assists ||
+            b.apps - a.apps ||
+            b.tackles - a.tackles ||
+            a.name.localeCompare(b.name),
+        )
+        .map((p) => ({
+          name: p.name,
+          apps: p.apps,
+          goals: p.goals,
+          assists: p.assists,
+          tackles: p.tackles,
+          blocks: p.blocks,
+          passes: p.passes,
+          saves: p.saves,
+          yellow: p.yellow,
+          red: p.red,
+          penScored: p.penScored,
+          penMissed: p.penMissed,
+          gk: p.gk,
+        })),
+    }))
+    .filter((t) => t.players.length > 0)
+    .sort((a, b) => a.team.localeCompare(b.team));
+}
+
 async function main() {
   const fixtures = JSON.parse(readFileSync(FIXTURES_PATH, "utf8"));
   // Leaderboards only feature teams still in the competition — a top scorer whose
@@ -705,6 +799,17 @@ async function main() {
   }
 
   const teamStats = buildTeamStats(byEvent, flagFor, alive);
+  const playersByTeam = buildPlayersByTeam({
+    byEvent,
+    mergedScorers,
+    mergedAssists,
+    yellow,
+    red,
+    penScored,
+    penMissed,
+    alive,
+    flagFor,
+  });
 
   const payload = {
     meta: {
@@ -715,11 +820,13 @@ async function main() {
     categories,
     teamStats,
     byTeam,
+    playersByTeam,
     cache: { byEvent },
   };
 
   // Change-detection ignores the timestamp + cache (cache is plumbing, not output).
-  const sig = (p) => JSON.stringify({ categories: p.categories, teamStats: p.teamStats, byTeam: p.byTeam });
+  const sig = (p) =>
+    JSON.stringify({ categories: p.categories, teamStats: p.teamStats, byTeam: p.byTeam, playersByTeam: p.playersByTeam });
   let prevSig = "";
   try {
     prevSig = sig(JSON.parse(readFileSync(STATS_PATH, "utf8")));

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { SiteNav } from "@/components/SiteNav";
-import { StatsBoards } from "@/components/StatsBoards";
+import { StatsExplorer } from "@/components/StatsExplorer";
 import { getStats } from "@/lib/stats";
 
 // Snapshotted from ESPN by scripts/build-stats.mjs and committed; re-read the
 // file every 30 min on Vercel so a fresh push surfaces without a full redeploy.
-// The in-page "Force update" button recomputes the boards live via /api/stats.
+// The in-page "Force update" button recomputes everything live via /api/stats.
 export const revalidate = 1800;
 
 export const metadata: Metadata = {
-  title: "Team Completion Stats — World Cup 2026 Control & Accuracy",
+  title: "Player & Team Stats — World Cup 2026 Squad Sheets",
   description:
-    "Live World Cup 2026 team completion stats in Malaysia time — pass completion, possession, shot accuracy, tackle success, cross and long-ball accuracy. True aggregates across every finished match, pulled from the official feed. Player leaderboards live on the Standings page.",
+    "Every World Cup 2026 player's stats compiled across all games played — goals, assists, tackles, blocks, passes, keeper saves and cards, grouped by team, for the sides still alive in the competition. Plus tournament leaderboards and team completion boards, straight from the official feed in Malaysia time.",
 };
 
 export default function StatsPage() {
@@ -33,28 +33,24 @@ export default function StatsPage() {
 
       <section className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-10">
         <p className="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-acid">
-          World Cup 2026 · completion &amp; control
+          World Cup 2026 · player &amp; team stats
         </p>
         <h1 className="max-w-3xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl">
-          Who keeps the ball — and finds the target.
+          Every player. Every number.
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          Pass completion, possession, shot accuracy, tackle success, cross and long-ball accuracy —
-          every percentage aggregated across all of a side&apos;s finished matches, not a single-game
-          flash. Ranked top ten per board, highest first, in Malaysia time. Looking for top scorers
-          and the cards table? They&apos;ve moved to the{" "}
-          <a href="/standings" className="text-acid underline underline-offset-2 hover:text-ink">
-            Standings page
-          </a>
-          .
+          One stat sheet per team still in the competition — every player&apos;s goals, assists,
+          tackles, blocks, passes, keeper saves and cards, added up across every game they&apos;ve
+          played so far. Lose today and you&apos;re off the board tomorrow. Tap Force update for the
+          numbers as of now.
         </p>
       </section>
 
-      <StatsBoards initial={initial} />
+      <StatsExplorer initial={initial} />
 
       <p className="mt-10 font-mono text-[0.62rem] uppercase leading-relaxed tracking-[0.1em] text-ink/35">
-        Source: {initial.meta.source}. Completion boards are true aggregates — total completed ÷
-        total attempted across every finished match, not an average of per-game rates. Boards refresh
+        Source: {initial.meta.source}. Player sheets compile counting stats across every game a
+        player has featured in; only teams still alive in the competition are shown. Numbers refresh
         as results come in — tap Force update for the latest.
       </p>
     </main>

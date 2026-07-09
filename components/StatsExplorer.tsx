@@ -2,6 +2,8 @@
 
 import { useCallback, useState } from "react";
 import { ForceRefreshButton } from "./RefreshCountdown";
+import { StatLeaderboards } from "./StatLeaderboards";
+import { TeamPlayerSheets } from "./TeamPlayerSheets";
 import {
   TEAM_PERF_CATEGORIES,
   type StatsFile,
@@ -96,14 +98,26 @@ function PerfBoard({
   );
 }
 
+function SectionHead({ kicker, title, sub }: { kicker: string; title: string; sub: string }) {
+  return (
+    <div className="mb-6">
+      <p className="mb-2 font-mono text-[0.66rem] uppercase tracking-[0.24em] text-acid">{kicker}</p>
+      <h2 className="max-w-3xl font-display text-2xl font-black uppercase leading-[0.98] tracking-tight sm:text-3xl">
+        {title}
+      </h2>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">{sub}</p>
+    </div>
+  );
+}
+
 /**
- * The team completion/control boards (pass %, possession, shot/tackle/cross/
- * long-ball accuracy) + a "Force update" button that recomputes them from ESPN
- * on demand (via /api/stats). The tournament leaderboards (scorers, assists,
- * cards, penalties) now live on the Standings page. SSR renders the committed
- * cron snapshot for SEO/first paint; the button swaps in the as-of-now numbers.
+ * The whole Stats page body: per-team player stat sheets (the hero), the
+ * tournament leaderboards, and the team completion/control boards — all fed
+ * from one StatsFile and all refreshable together via the "Force update"
+ * button, which recomputes everything from ESPN as-of-now (via /api/stats).
+ * SSR renders the committed cron snapshot for SEO/first paint.
  */
-export function StatsBoards({ initial }: { initial: StatsFile }) {
+export function StatsExplorer({ initial }: { initial: StatsFile }) {
   const [stats, setStats] = useState<StatsFile>(initial);
   const [refreshing, setRefreshing] = useState(false);
   const [stale, setStale] = useState(false);
@@ -115,7 +129,9 @@ export function StatsBoards({ initial }: { initial: StatsFile }) {
       const res = await fetch("/api/stats", { cache: "no-store" });
       if (res.ok) {
         const data = (await res.json()) as StatsFile & { stale?: boolean };
-        setStats({ meta: data.meta, categories: data.categories });
+        // Keep the whole file — dropping teamStats/playersByTeam here would blank
+        // those sections after a refresh.
+        setStats(data);
         setStale(Boolean(data.stale));
       }
     } catch {
@@ -125,7 +141,7 @@ export function StatsBoards({ initial }: { initial: StatsFile }) {
     }
   }, [refreshing]);
 
-  const { meta, teamStats } = stats;
+  const { meta, categories, teamStats, playersByTeam } = stats;
 
   return (
     <>
@@ -144,23 +160,45 @@ export function StatsBoards({ initial }: { initial: StatsFile }) {
         )}
       </div>
 
-      {teamStats ? (
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM_PERF_CATEGORIES.map((c) => (
-            <PerfBoard
-              key={c.key}
-              label={c.label}
-              unit={c.unit}
-              accent={c.accent}
-              rows={teamStats[c.key] ?? []}
-            />
-          ))}
-        </div>
-      ) : (
-        <p className="mt-10 rounded-2xl border border-line bg-card/40 p-6 text-center font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink/40">
-          No completion stats counted yet — boards fill as matches finish
-        </p>
-      )}
+      {/* ── Hero: per-team squad stat sheets ─────────────────────────────── */}
+      <section className="mt-10">
+        <SectionHead
+          kicker="World Cup 2026 · squad sheets"
+          title="Every player. Every number."
+          sub="One table per team still in the competition — goals, assists, tackles, blocks, passes, keeper saves and cards, compiled across every game each player has featured in. A knocked-out side drops off entirely."
+        />
+        <TeamPlayerSheets teams={playersByTeam ?? []} />
+      </section>
+
+      {/* ── Tournament leaderboards ──────────────────────────────────────── */}
+      <section className="mt-16 border-t border-line/60 pt-10">
+        <SectionHead
+          kicker="World Cup 2026 · tournament leaders"
+          title="The race for the Golden Boot."
+          sub="Top scorers, assists, clean sheets, the cards table, penalties scored vs missed, tackles, blocks and keeper saves — ranked top ten among the sides still alive."
+        />
+        <StatLeaderboards categories={categories} />
+      </section>
+
+      {/* ── Team completion / control boards ─────────────────────────────── */}
+      <section className="mt-16 border-t border-line/60 pt-10">
+        <SectionHead
+          kicker="World Cup 2026 · completion & control"
+          title="Who keeps the ball — and finds the target."
+          sub="Pass completion, possession, shot accuracy, tackle success, cross and long-ball accuracy — true aggregates across every finished match, not an average of per-game rates."
+        />
+        {teamStats ? (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {TEAM_PERF_CATEGORIES.map((c) => (
+              <PerfBoard key={c.key} label={c.label} unit={c.unit} accent={c.accent} rows={teamStats[c.key] ?? []} />
+            ))}
+          </div>
+        ) : (
+          <p className="rounded-2xl border border-line bg-card/40 p-6 text-center font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink/40">
+            No completion stats counted yet — boards fill as matches finish
+          </p>
+        )}
+      </section>
     </>
   );
 }

@@ -47,6 +47,33 @@ export type TeamPerfKey =
 // One player line on a per-team mini-board (no rank/flag — the team owns those).
 export type TeamStatLeader = { name: string; value: number; matches?: number };
 
+// A single player's full stat line, compiled across every game they've played
+// so far. Counting stats only (no derived %); `apps` is games featured in.
+// `gk` flags a keeper so the table can surface saves prominently for them.
+export type PlayerStatLine = {
+  name: string;
+  apps: number;
+  goals: number;
+  assists: number;
+  tackles: number;
+  blocks: number;
+  passes: number;
+  saves: number;
+  yellow: number;
+  red: number;
+  penScored: number;
+  penMissed: number;
+  gk: boolean;
+};
+
+// One alive team's full squad with per-player stat lines. Teams sorted
+// alphabetically; players sorted by goals → assists → apps within the team.
+export type TeamPlayerSheet = {
+  team: string;
+  flag: string;
+  players: PlayerStatLine[];
+};
+
 // A single team's current top-5 boards, for the match prediction pages.
 export type TeamStatBoards = {
   team: string;
@@ -67,6 +94,10 @@ export type StatsFile = {
   // Keyed on the normalised team name (see teamKey below). Optional so an older
   // stats.json snapshot without the block still type-checks.
   byTeam?: Record<string, TeamStatBoards>;
+  // Per-team squad stat sheets — every player on every alive team with their
+  // full counting-stat line compiled across all games played. The hero of the
+  // /stats page. Optional so an older snapshot without it still type-checks.
+  playersByTeam?: TeamPlayerSheet[];
 };
 
 // `cache` (penalty-miss plumbing for the builder) is intentionally not typed —

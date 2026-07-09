@@ -2,7 +2,15 @@ import fixturesJson from "@/data/fixtures.json";
 import resultsJson from "@/data/results.json";
 import statsJson from "@/data/stats.json";
 import { aliveTeamKeys } from "./tournament";
-import type { StatRow, StatCategoryKey, StatsFile, TeamPerfKey, TeamPerfRow } from "./stats";
+import type {
+  StatRow,
+  StatCategoryKey,
+  StatsFile,
+  TeamPerfKey,
+  TeamPerfRow,
+  PlayerStatLine,
+  TeamPlayerSheet,
+} from "./stats";
 
 /**
  * On-demand recompute of the tournament stat leaderboards (the /stats boards:
@@ -697,6 +705,70 @@ export async function computeStats(now: number): Promise<StatsFile> {
     gkSaves: topN(Object.values(gkSaves).filter(aliveRow), flagFor),
   };
 
+  // ── Per-team squad stat sheets (mirrors build-stats.mjs buildPlayersByTeam) ──
+  // Every player on every alive team, counting stats compiled across all games.
+  const lines: Record<string, PlayerStatLine & { team: string }> = {};
+  const line = (name: string, team: string) =>
+    (lines[`${name}|${team}`] ??= {
+      name,
+      apps: 0,
+      goals: 0,
+      assists: 0,
+      tackles: 0,
+      blocks: 0,
+      passes: 0,
+      saves: 0,
+      yellow: 0,
+      red: 0,
+      penScored: 0,
+      penMissed: 0,
+      gk: false,
+      team,
+    });
+  for (const rec of Object.values(byEvent)) {
+    for (const p of rec.players ?? []) {
+      if (!p.n || !p.t) continue;
+      const l = line(p.n, p.t);
+      l.apps += 1;
+      if (p.gk) l.gk = true;
+      if (p.tk != null) l.tackles += p.tk;
+      if (p.bk != null) l.blocks += p.bk;
+      if (p.ps != null) l.passes += p.ps;
+      if (p.sv != null) l.saves += p.sv;
+    }
+  }
+  for (const r of Object.values(mergedScorers)) if (r.name && r.team) line(r.name, r.team).goals = r.value;
+  for (const r of Object.values(mergedAssists)) if (r.name && r.team) line(r.name, r.team).assists = r.value;
+  for (const r of Object.values(yellow)) if (r.name && r.team) line(r.name, r.team).yellow = r.value;
+  for (const r of Object.values(red)) if (r.name && r.team) line(r.name, r.team).red = r.value;
+  for (const r of Object.values(penScored)) if (r.name && r.team) line(r.name, r.team).penScored = r.value;
+  for (const r of Object.values(penMissed)) if (r.name && r.team) line(r.name, r.team).penMissed = r.value;
+
+  const teamsMap: Record<string, TeamPlayerSheet> = {};
+  for (const l of Object.values(lines)) {
+    const key = norm(l.team);
+    if (alive.size > 0 && !alive.has(key)) continue;
+    const { team, ...rest } = l;
+    (teamsMap[key] ??= { team, flag: flagFor(team), players: [] }).players.push(rest);
+  }
+  const playersByTeam: TeamPlayerSheet[] = Object.values(teamsMap)
+    .map((t) => ({
+      team: t.team,
+      flag: t.flag,
+      players: t.players
+        .filter((p) => p.apps > 0 || p.goals > 0 || p.assists > 0 || p.yellow > 0 || p.red > 0)
+        .sort(
+          (a, b) =>
+            b.goals - a.goals ||
+            b.assists - a.assists ||
+            b.apps - a.apps ||
+            b.tackles - a.tackles ||
+            a.name.localeCompare(b.name),
+        ),
+    }))
+    .filter((t) => t.players.length > 0)
+    .sort((a, b) => a.team.localeCompare(b.team));
+
   return {
     meta: {
       generatedAt: new Date(now).toISOString(),
@@ -705,5 +777,6 @@ export async function computeStats(now: number): Promise<StatsFile> {
     },
     categories,
     teamStats: buildTeamStats(byEvent, flagFor, alive),
+    playersByTeam,
   };
 }

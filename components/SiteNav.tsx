@@ -1,10 +1,9 @@
 import Link from "next/link";
 
-export type NavKey = "predictions" | "standings" | "stats" | "rj" | "ruhan" | "tharma";
+export type NavKey = "predictions" | "stats" | "rj" | "ruhan" | "tharma";
 
 const ITEMS: { key: NavKey; href: string; label: string }[] = [
   { key: "predictions", href: "/", label: "Predictions" },
-  { key: "standings", href: "/standings", label: "Standings" },
   { key: "stats", href: "/stats", label: "Stats" },
   { key: "rj", href: "/tracker", label: "Rj's Tracker" },
   { key: "ruhan", href: "/tracker/ruhan", label: "Ruhan's Tracker" },
