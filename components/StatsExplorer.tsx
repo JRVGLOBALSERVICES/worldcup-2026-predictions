@@ -77,11 +77,13 @@ function PerfBoard({
   const max = rows.length ? rows[0].value : 1;
   return (
     <section className="rounded-2xl border border-line bg-card/40 p-4 sm:p-5">
-      <header className="mb-1 flex items-baseline justify-between gap-2 border-b border-line/60 pb-3">
-        <h3 className={["font-display text-base font-black uppercase tracking-tight", a.text].join(" ")}>
+      <header className="mb-1 border-b border-line/60 pb-3">
+        <h3 className={["font-display text-base font-black uppercase leading-tight tracking-tight", a.text].join(" ")}>
           {label}
         </h3>
-        <span className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink/45">{unit}</span>
+        <span className="mt-1 block text-[0.72rem] leading-relaxed text-ink/60">
+          % {unit}
+        </span>
       </header>
       {rows.length === 0 ? (
         <p className="py-6 text-center font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink/40">

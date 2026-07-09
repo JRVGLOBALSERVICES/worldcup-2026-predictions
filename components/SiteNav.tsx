@@ -14,7 +14,7 @@ const ITEMS: { key: NavKey; href: string; label: string }[] = [
  *  Mobile: full-width evenly-spaced row. Desktop: compact top-right cluster. */
 export function SiteNav({ active }: { active: NavKey }) {
   return (
-    <nav className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1.5 font-mono text-[0.66rem] uppercase tracking-[0.1em] sm:w-auto sm:flex-nowrap sm:justify-end sm:gap-x-4 sm:gap-y-1 sm:tracking-[0.18em]">
+    <nav className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] sm:w-auto sm:flex-nowrap sm:justify-end sm:gap-x-4 sm:gap-y-1 sm:tracking-[0.18em]">
       {ITEMS.map((it) =>
         it.key === active ? (
           <span key={it.key} className="whitespace-nowrap text-acid">

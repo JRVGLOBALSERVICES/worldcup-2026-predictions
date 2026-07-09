@@ -14,6 +14,7 @@ import { SiteNav, type NavKey } from "./SiteNav";
 import { SpotlightCard, type SpotTone } from "./SpotlightCard";
 import MatchSpotlight from "./MatchSpotlight";
 import { PlayerSheetBody, PlayerSheetFootnote } from "./LiveScore";
+import { StatAbbr, StatCell, Legend } from "./atoms";
 
 /** Keys of legs that just settled this poll — the tracker fills it and every
  * rendered leg row reads it to flash. Empty by default (e.g. the leg grid on
@@ -449,11 +450,13 @@ function sentenceCase(s: string): string {
 /** Small stat cell for the live stat strip (home-acid / away-warm). */
 function MiniStat({ label, h, a }: { label: string; h: number; a: number }) {
   return (
-    <span className="inline-flex items-baseline gap-1">
-      <span className="uppercase tracking-wider text-faint/60">{label}</span>
-      <span className="tnum font-semibold text-acid">{h}</span>
-      <span className="text-faint/50">·</span>
-      <span className="tnum font-semibold text-mint">{a}</span>
+    <span className="inline-flex flex-col items-center gap-1">
+      <span className="inline-flex items-baseline gap-1.5">
+        <span className="tnum font-semibold text-acid">{h}</span>
+        <span className="text-faint/50">–</span>
+        <span className="tnum font-semibold text-mint">{a}</span>
+      </span>
+      <StatAbbr code={label} className="text-[0.7rem] text-ink/55" />
     </span>
   );
 }
@@ -538,19 +541,25 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
         </span>
       </div>
       {stats && (
-        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-0.5 font-mono text-[0.58rem]">
-          <MiniStat label="On tgt" h={stats.sot.home} a={stats.sot.away} />
-          <MiniStat label="Corners" h={stats.corners.home} a={stats.corners.away} />
-          <MiniStat label="Shots" h={stats.shots.home} a={stats.shots.away} />
-          {stats.tempo && (
-            <>
-              <MiniStat label="Tackles" h={stats.tempo.tackles.home} a={stats.tempo.tackles.away} />
-              <MiniStat label="Blocks" h={stats.tempo.blockedShots.home} a={stats.tempo.blockedShots.away} />
-              <MiniStat label="Saves" h={stats.tempo.saves.home} a={stats.tempo.saves.away} />
-            </>
-          )}
-          {stats.fouls && <MiniStat label="Fouls" h={stats.fouls.home} a={stats.fouls.away} />}
-          <MiniStat label="Cards" h={stats.cards.home} a={stats.cards.away} />
+        <div className="mt-2.5">
+          <div className="mb-1.5 font-mono text-[0.7rem] uppercase tracking-[0.14em] text-ink/50">
+            Match stats — <span className="text-acid">{meta.home.code}</span> vs{" "}
+            <span className="text-mint">{meta.away.code}</span>
+          </div>
+          <div className="flex flex-wrap items-start gap-x-5 gap-y-2.5 font-mono">
+            <MiniStat label="On tgt" h={stats.sot.home} a={stats.sot.away} />
+            <MiniStat label="Corners" h={stats.corners.home} a={stats.corners.away} />
+            <MiniStat label="Shots" h={stats.shots.home} a={stats.shots.away} />
+            {stats.tempo && (
+              <>
+                <MiniStat label="Tackles" h={stats.tempo.tackles.home} a={stats.tempo.tackles.away} />
+                <MiniStat label="Blocks" h={stats.tempo.blockedShots.home} a={stats.tempo.blockedShots.away} />
+                <MiniStat label="Saves" h={stats.tempo.saves.home} a={stats.tempo.saves.away} />
+              </>
+            )}
+            {stats.fouls && <MiniStat label="Fouls" h={stats.fouls.home} a={stats.fouls.away} />}
+            <MiniStat label="Cards" h={stats.cards.home} a={stats.cards.away} />
+          </div>
         </div>
       )}
       {stats?.players?.length ? (
@@ -578,8 +587,9 @@ function LegLine({ leg, lm, flash }: { leg: { label: string; glyph: string; play
         {sentenceCase(leg.label)}
       </span>
       {tally && (
-        <span className="shrink-0 whitespace-nowrap rounded border border-mint/25 bg-mint/[0.06] px-1.5 py-0.5 font-mono text-[0.58rem] font-semibold text-mint tnum">
-          {tally.goals}G{tally.assists > 0 ? ` ${tally.assists}A` : ""}
+        <span className="shrink-0 whitespace-nowrap rounded border border-mint/25 bg-mint/[0.06] px-2 py-0.5 font-mono text-[0.7rem] font-semibold text-mint tnum">
+          {tally.goals} goal{tally.goals === 1 ? "" : "s"}
+          {tally.assists > 0 ? ` · ${tally.assists} assist${tally.assists === 1 ? "" : "s"}` : ""}
         </span>
       )}
       <span className={`shrink-0 font-mono text-sm font-bold leading-none ${g.cls}`}>{leg.glyph}</span>
@@ -710,7 +720,7 @@ function AccaCard({
               @{special.odds.toFixed(2)} · {money(special.potential, currency)}
             </span>
           </div>
-          <p className="mt-1 text-[0.58rem] leading-snug text-faint/50">{special.reprice.note}</p>
+          <p className="mt-1 text-[0.7rem] leading-snug text-faint/60">{special.reprice.note}</p>
         </div>
       )}
       {legCount > 1 && (parsed?.length ?? 0) > 0 && (
@@ -721,7 +731,7 @@ function AccaCard({
               style={{ width: `${Math.round((landed / legCount) * 100)}%` }}
             />
           </span>
-          <span className="tnum font-mono text-[0.56rem] uppercase tracking-wider text-faint/60">{landed}/{legCount} in</span>
+          <span className="tnum font-mono text-[0.7rem] uppercase tracking-wider text-faint/60">{landed}/{legCount} in</span>
         </div>
       )}
       {groups.length > 0 ? (
@@ -796,10 +806,10 @@ function GlobalParlays({
             {graded.length}
           </span>
           {(liveCount > 0 || won > 0 || lost > 0) && (
-            <span className="flex items-center gap-1.5 font-mono text-[0.62rem] uppercase tracking-wider">
+            <span className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-wider">
               {liveCount > 0 && <span className="text-acid">{liveCount} live</span>}
-              {won > 0 && <span className="text-acid">{won}W</span>}
-              {lost > 0 && <span className="text-rose">{lost}L</span>}
+              {won > 0 && <span className="text-acid">{won} <StatAbbr code="W" className="text-acid" /></span>}
+              {lost > 0 && <span className="text-rose">{lost} <StatAbbr code="L" className="text-rose" /></span>}
             </span>
           )}
         </div>
@@ -862,9 +872,9 @@ function GlobalParlays({
             <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-faint">
               Settled · {settled.length}
             </span>
-            <span className="flex items-center gap-2.5 font-mono text-[0.62rem] uppercase tracking-wider">
-              {won > 0 && <span className="text-acid">{won}W</span>}
-              {lost > 0 && <span className="text-rose">{lost}L</span>}
+            <span className="flex items-center gap-2.5 font-mono text-[0.7rem] uppercase tracking-wider">
+              {won > 0 && <span className="text-acid">{won} <StatAbbr code="W" className="text-acid" /></span>}
+              {lost > 0 && <span className="text-rose">{lost} <StatAbbr code="L" className="text-rose" /></span>}
               <span className="text-faint/70">{showSettled ? "Hide" : "Show"}</span>
             </span>
           </button>
@@ -1029,8 +1039,8 @@ function RoundGames({
                     className={`tnum font-mono text-sm font-semibold ${finished ? "text-ink" : onNow ? "text-amber" : "text-faint"}`}
                   >
                     {sc.home}–{sc.away}
-                    <span className="ml-1.5 text-[0.56rem] uppercase tracking-wider text-faint/70">
-                      {finished ? "FT" : onNow ? (lm?.minute ? `${lm.minute}'` : "live") : ""}
+                    <span className="ml-1.5 text-[0.7rem] uppercase tracking-wider text-faint/70">
+                      {finished ? <StatAbbr code="FT" className="text-faint/70" /> : onNow ? (lm?.minute ? `${lm.minute}'` : "live") : ""}
                     </span>
                   </span>
                 ) : (
@@ -1094,8 +1104,8 @@ function PropCard({
       <p className="mt-3 text-sm text-ink">{special.label}</p>
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
         {tally && (
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-mint/30 bg-mint/[0.07] px-2 py-0.5 font-mono text-[0.62rem] font-semibold text-mint tnum">
-            {player}: {tally.goals} G · {tally.assists} A
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-mint/30 bg-mint/[0.07] px-2 py-0.5 font-mono text-[0.7rem] font-semibold text-mint tnum">
+            {player}: {tally.goals} goal{tally.goals === 1 ? "" : "s"} · {tally.assists} assist{tally.assists === 1 ? "" : "s"}
           </span>
         )}
         {verdict.note && (
@@ -1221,8 +1231,8 @@ function GoalLog({ live, m }: { live: LiveMatch; m: MatchRow }) {
             {g.team === "home" ? m.home.code : m.away.code}
           </span>
           <span className="text-ink">{g.scorer}</span>
-          {g.penalty && <span className="text-amber">(P)</span>}
-          {g.ownGoal && <span className="text-rose">(OG)</span>}
+          {g.penalty && <span className="text-amber" title="Penalty">(pen)</span>}
+          {g.ownGoal && <span className="text-rose" title="Own goal">(own goal)</span>}
           {g.assist && <span className="text-faint">· {g.assist}</span>}
         </li>
       ))}
@@ -1234,12 +1244,14 @@ function GoalLog({ live, m }: { live: LiveMatch; m: MatchRow }) {
  *  StatLine) so React doesn't remount it — and lint doesn't flag it — per render. */
 function Cell({ label, h, a, sub }: { label: string; h: number; a: number; sub?: string }) {
   return (
-    <span className="inline-flex items-baseline gap-1.5">
-      <span className="text-faint uppercase tracking-wider">{label}</span>
-      <span className="text-acid tnum">{h}</span>
-      <span className="text-faint">–</span>
-      <span className="text-mint tnum">{a}</span>
-      {sub && <span className="text-faint">{sub}</span>}
+    <span className="inline-flex flex-col items-center gap-1">
+      <span className="inline-flex items-baseline gap-1.5">
+        <span className="text-acid tnum font-semibold">{h}</span>
+        <span className="text-faint">–</span>
+        <span className="text-mint tnum font-semibold">{a}</span>
+      </span>
+      <StatAbbr code={label} className="text-[0.7rem] text-ink/55" />
+      {sub && <span className="text-[0.7rem] text-ink/50">{sub}</span>}
     </span>
   );
 }
@@ -1250,23 +1262,30 @@ function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
   if (!s) return null;
   const yel = s.yellow.home + s.yellow.away;
   const red = s.red.home + s.red.away;
+  const cardSub = [
+    yel > 0 ? `${yel} yellow` : null,
+    red > 0 ? `${red} red` : null,
+  ].filter(Boolean).join(" · ");
   return (
-    <div className="mt-2.5 flex flex-wrap items-center gap-x-5 gap-y-1.5 font-mono text-[0.66rem]">
-      <span className="text-faint uppercase tracking-[0.16em]">
-        {m.home.code} <span className="text-acid">▮</span> · <span className="text-mint">▮</span> {m.away.code}
-      </span>
-      <Cell label="Corners" h={s.corners.home} a={s.corners.away} />
-      <Cell label="On target" h={s.sot.home} a={s.sot.away} />
-      <Cell label="Shots" h={s.shots.home} a={s.shots.away} />
-      {s.tempo && (
-        <>
-          <Cell label="Tackles" h={s.tempo.tackles.home} a={s.tempo.tackles.away} />
-          <Cell label="Blocks" h={s.tempo.blockedShots.home} a={s.tempo.blockedShots.away} />
-          <Cell label="Saves" h={s.tempo.saves.home} a={s.tempo.saves.away} />
-        </>
-      )}
-      {s.fouls && <Cell label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
-      <Cell label="Cards" h={s.cards.home} a={s.cards.away} sub={`(${yel}Y ${red}R)`} />
+    <div className="mt-2.5 font-mono">
+      <div className="mb-1.5 text-[0.7rem] uppercase tracking-[0.14em] text-ink/55">
+        Match stats — <span className="text-acid">{m.home.code}</span> (home) vs{" "}
+        <span className="text-mint">{m.away.code}</span> (away)
+      </div>
+      <div className="flex flex-wrap items-start gap-x-5 gap-y-2.5 text-[0.66rem]">
+        <Cell label="Corners" h={s.corners.home} a={s.corners.away} />
+        <Cell label="On target" h={s.sot.home} a={s.sot.away} />
+        <Cell label="Shots" h={s.shots.home} a={s.shots.away} />
+        {s.tempo && (
+          <>
+            <Cell label="Tackles" h={s.tempo.tackles.home} a={s.tempo.tackles.away} />
+            <Cell label="Blocks" h={s.tempo.blockedShots.home} a={s.tempo.blockedShots.away} />
+            <Cell label="Saves" h={s.tempo.saves.home} a={s.tempo.saves.away} />
+          </>
+        )}
+        {s.fouls && <Cell label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
+        <Cell label="Cards" h={s.cards.home} a={s.cards.away} sub={cardSub || undefined} />
+      </div>
     </div>
   );
 }
@@ -1276,9 +1295,16 @@ function Performance({ rows }: { rows: InPlay[] }) {
   const lost = rows.filter((r) => r.verdict === "lost" || r.verdict === "dead").length;
   const refunded = rows.filter((r) => r.verdict === "void").length;
   return (
-    <span className="font-mono text-[0.66rem] uppercase tracking-wider">
-      <span className="text-acid">{won}W</span> · <span className="text-rose">{lost}L</span>
-      {refunded > 0 && <> · <span className="text-amber">{refunded}R</span></>}
+    <span className="inline-flex items-center gap-1.5 font-mono text-[0.72rem] uppercase tracking-wider">
+      <span className="text-acid">{won} <StatAbbr code="W" className="text-acid" /></span>
+      <span className="text-faint">·</span>
+      <span className="text-rose">{lost} <StatAbbr code="L" className="text-rose" /></span>
+      {refunded > 0 && (
+        <>
+          <span className="text-faint">·</span>
+          <span className="text-amber">{refunded} <StatAbbr code="R" className="text-amber" /></span>
+        </>
+      )}
     </span>
   );
 }
@@ -1763,12 +1789,19 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                         {lm && (lm.state === "live" || lm.state === "halftime") && (
                           <div className="border-b border-line bg-pitch-2/40 px-5 py-4">
                             <div className="flex flex-wrap items-center justify-between gap-2">
-                              <span className="inline-flex items-center gap-1.5 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-amber">
+                              <span className="inline-flex items-center gap-1.5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-amber">
                                 <span className="size-1.5 animate-pulse rounded-full bg-amber motion-reduce:animate-none" />
                                 {lm.state === "halftime" ? "Half-time" : `Live ${lm.statusDetail}`} · goals so far
                               </span>
                               <Performance rows={allV} />
                             </div>
+                            <Legend
+                              items={[
+                                { swatch: "acid", term: "W — legs won" },
+                                { swatch: "rose", term: "L — legs lost" },
+                                { swatch: "amber", term: "R — refunded (void)" },
+                              ]}
+                            />
                             <div className="mt-2.5">
                               <GoalLog live={lm} m={m} />
                             </div>
@@ -1783,9 +1816,16 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                         {finished && lm && (
                           <div className="border-b border-line bg-pitch-2/50 px-5 py-4">
                             <div className="flex flex-wrap items-center justify-between gap-2">
-                              <span className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-acid">Full-time · how it landed</span>
+                              <span className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-acid">Full-time · how it landed</span>
                               <Performance rows={allV} />
                             </div>
+                            <Legend
+                              items={[
+                                { swatch: "acid", term: "W — legs won" },
+                                { swatch: "rose", term: "L — legs lost" },
+                                { swatch: "amber", term: "R — refunded (void)" },
+                              ]}
+                            />
                             <div className="mt-2.5">
                               <GoalLog live={lm} m={m} />
                             </div>

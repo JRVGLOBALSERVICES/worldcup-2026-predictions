@@ -6,6 +6,7 @@ import type { LiveMatch } from "@/lib/live";
 import { fixtures } from "@/lib/data";
 import { diffLiveEvents, type LiveEvent, type LiveEventKind } from "@/lib/liveEvents";
 import { buildFullStatRows, buildShotRows, ShotRowsBlock } from "./LiveScore";
+import { StatAbbr, Legend } from "./atoms";
 
 /**
  * The match-FX section — the tracker's live centrepiece. It always fronts ONE
@@ -86,7 +87,7 @@ function Seg({ value, label, dim }: { value: number; label: string; dim?: boolea
       >
         {String(value).padStart(2, "0")}
       </div>
-      <span className="font-mono text-[0.52rem] font-semibold uppercase tracking-[0.18em] text-faint/60">
+      <span className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-faint/60">
         {label}
       </span>
     </div>
@@ -112,7 +113,7 @@ function Versus({
           <p className="tnum font-display text-lg font-black uppercase leading-none tracking-tight text-ink sm:text-xl">
             {teamCode(home.name)}
           </p>
-          <p className="mt-1 truncate font-mono text-[0.6rem] uppercase tracking-wider text-faint/60">{home.name}</p>
+          <p className="mt-1 truncate font-mono text-[0.7rem] uppercase tracking-wider text-faint/60">{home.name}</p>
         </div>
         <span aria-hidden className="text-[1.65rem] leading-none sm:text-[2rem]">{home.flag}</span>
       </div>
@@ -135,7 +136,7 @@ function Versus({
           <p className="tnum font-display text-lg font-black uppercase leading-none tracking-tight text-ink sm:text-xl">
             {teamCode(away.name)}
           </p>
-          <p className="mt-1 truncate font-mono text-[0.6rem] uppercase tracking-wider text-faint/60">{away.name}</p>
+          <p className="mt-1 truncate font-mono text-[0.7rem] uppercase tracking-wider text-faint/60">{away.name}</p>
         </div>
       </div>
     </div>
@@ -159,7 +160,7 @@ function SpotStatRow({ label, h, a, pct }: { label: string; h: number; a: number
           style={{ transform: `scaleX(${h / max})` }}
         />
       </div>
-      <span className="text-center font-mono text-[0.56rem] uppercase tracking-[0.14em] text-faint/70">{label}</span>
+      <span className="text-center font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint/70">{label}</span>
       <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
         <span
           className="block h-full origin-left rounded-full bg-mint/80 transition-transform duration-700 ease-out"
@@ -191,12 +192,12 @@ function SpotStats({ lm }: { lm: LiveMatch }) {
   const posTotal = hasPossession ? t.possession.home + t.possession.away || 1 : 1;
   return (
     <div className="mt-4 border-t border-white/[0.07] pt-4">
-      <p className="mb-3 text-center font-mono text-[0.56rem] uppercase tracking-[0.16em] text-faint/60">
+      <p className="mb-3 text-center font-mono text-[0.7rem] uppercase tracking-[0.16em] text-faint/60">
         {full ? "All match stats" : "Match stats"} · live
       </p>
       {hasPossession && (
         <div className="mb-3">
-          <div className="mb-1 flex items-baseline justify-between font-mono text-[0.58rem] uppercase tracking-[0.16em]">
+          <div className="mb-1 flex items-baseline justify-between font-mono text-[0.7rem] uppercase tracking-[0.16em]">
             <span className="tnum text-[0.72rem] font-semibold text-acid">{Math.round(t.possession.home)}</span>
             <span className="text-faint/60">Possession %</span>
             <span className="tnum text-[0.72rem] font-semibold text-mint">{Math.round(t.possession.away)}</span>
@@ -225,7 +226,13 @@ function SpotStats({ lm }: { lm: LiveMatch }) {
           <SpotStatRow label="Cards" h={s.cards.home} a={s.cards.away} />
         </div>
       )}
-      <p className="mt-2.5 text-center font-mono text-[0.52rem] uppercase tracking-[0.14em] text-faint/40">
+      <Legend
+        items={[
+          { swatch: "acid", term: "Home team" },
+          { swatch: "mint", term: "Away team" },
+        ]}
+      />
+      <p className="mt-2.5 text-center font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint/40">
         Verified vs ESPN · ticks live every 5s
       </p>
     </div>
@@ -243,12 +250,21 @@ function SpotPlayerShots({ lm, labels }: { lm: LiveMatch; labels: string[] }) {
   const shown = rows.slice(0, 10);
   return (
     <div className="mt-4 border-t border-white/[0.07] pt-4">
-      <p className="mb-2 text-center font-mono text-[0.56rem] uppercase tracking-[0.16em] text-faint/60">
-        Player shots · Sh / On / Off / Blk / ⚽ · settles the shots props
+      <p className="mb-2 text-center font-mono text-[0.7rem] uppercase tracking-[0.16em] text-faint/60">
+        Player shots · settles the shots props
       </p>
-      <ShotRowsBlock rows={shown} />
+      <div className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[0.7rem] leading-relaxed text-ink/55">
+        <span className="inline-flex items-center gap-1"><StatAbbr code="Sh" /> shots</span>
+        <span className="inline-flex items-center gap-1"><StatAbbr code="On" /> on target</span>
+        <span className="inline-flex items-center gap-1"><StatAbbr code="Off" /> off target</span>
+        <span className="inline-flex items-center gap-1"><StatAbbr code="Blk" /> blocked</span>
+        <span className="inline-flex items-center gap-1" aria-hidden>⚽ goals</span>
+      </div>
+      <div className="mt-2">
+        <ShotRowsBlock rows={shown} />
+      </div>
       {rows.length > shown.length && (
-        <p className="mt-1.5 text-center font-mono text-[0.52rem] uppercase tracking-[0.14em] text-faint/40">
+        <p className="mt-1.5 text-center font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint/40">
           +{rows.length - shown.length} more shooters on the match page
         </p>
       )}
@@ -274,7 +290,8 @@ function ConfirmedXIs({
       <p className="mb-1.5 flex items-center gap-1.5 font-mono text-[0.6rem] font-semibold uppercase tracking-wider">
         <span aria-hidden>{team.flag}</span>
         <span className={side === "home" ? "text-acid" : "text-mint"}>{teamCode(team.name)}</span>
-        <span className="tnum rounded-full border border-line px-1.5 text-[0.54rem] text-faint">
+        <span className="tnum rounded-full border border-line px-1.5 text-[0.7rem] text-faint">
+          <span className="mr-1 not-italic text-faint/60">Formation</span>
           {lu[side].formation}
         </span>
       </p>
@@ -445,12 +462,12 @@ export default function MatchSpotlight({
           </span>
           <div className="flex items-center gap-2">
             {liveOnes.length > 1 && (
-              <span className="rounded-full border border-line px-2 py-0.5 font-mono text-[0.56rem] uppercase tracking-wider text-faint/70">
+              <span className="rounded-full border border-line px-2 py-0.5 font-mono text-[0.7rem] uppercase tracking-wider text-faint/70">
                 +{liveOnes.length - 1} more live
               </span>
             )}
             {onSlip && (
-              <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+              <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.7rem] font-semibold uppercase tracking-wider text-acid">
                 On your slip
               </span>
             )}
@@ -490,7 +507,7 @@ export default function MatchSpotlight({
           Next up · {fx.round ?? `Group ${fx.group}`}
         </span>
         {onSlip && (
-          <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-acid">
+          <span className="rounded-full border border-acid-dim/50 bg-acid/10 px-2 py-0.5 font-mono text-[0.7rem] font-semibold uppercase tracking-wider text-acid">
             On your slip
           </span>
         )}
@@ -514,15 +531,17 @@ export default function MatchSpotlight({
         )}
 
         <div className="text-center sm:text-left">
-          <p className="font-mono text-[0.56rem] uppercase tracking-[0.18em] text-faint/55">Kicks off</p>
-          <p className="mt-1 font-mono text-[0.8rem] font-semibold tracking-wide text-ink tnum">{mytTime(fx.kickoffUTC)} MYT</p>
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint/55">Kicks off</p>
+          <p className="mt-1 font-mono text-[0.8rem] font-semibold tracking-wide text-ink tnum">
+            {mytTime(fx.kickoffUTC)} <StatAbbr code="MYT" className="text-[0.72rem] font-normal text-faint/70" />
+          </p>
           <p className="mt-0.5 font-mono text-[0.62rem] text-faint/60">{fx.venue}, {fx.city}</p>
         </div>
       </div>
 
       {live[fx.id]?.lineups && <ConfirmedXIs lm={live[fx.id]!} home={fx.home} away={fx.away} />}
 
-      <p className="mt-5 border-t border-white/[0.06] pt-3.5 text-center font-mono text-[0.58rem] uppercase tracking-[0.14em] text-faint/45">
+      <p className="mt-5 border-t border-white/[0.06] pt-3.5 text-center font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint/45">
         {live[fx.id]?.lineups
           ? "The moment it kicks off, this goes live — score, full match stats, per-player shots (on/off target) and every goal, sub and card as it happens."
           : "Confirmed line-ups land here the moment ESPN posts the team sheets (~1h before KO). At kickoff it goes live — score, full match stats, per-player shots and every event."}{" "}

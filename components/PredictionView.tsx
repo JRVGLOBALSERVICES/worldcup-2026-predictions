@@ -1,6 +1,6 @@
 import type { Fixture, Prediction, Pick, Resolution } from "@/lib/types";
 import { strengthFromOdds, strengthLabel, overallStrength } from "@/lib/data";
-import { SectionLabel, Banker, Confidence, StrengthMeter } from "./atoms";
+import { SectionLabel, Banker, Confidence, StrengthMeter, StatAbbr } from "./atoms";
 import { LiveLineup } from "./LiveLineup";
 
 /** Split a penalty-likelihood string into a short grade token + optional reason.
@@ -35,6 +35,7 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
       <div className="grid gap-3 sm:grid-cols-2">
         <MarketTile
           label="Match result"
+          caption="Who wins, or a draw"
           big={pred.win.pick}
           strength={strengthFromOdds(pred.win.fairOdds, pred.win.strength)}
           tone="acid"
@@ -43,21 +44,24 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
         </MarketTile>
         <MarketTile
           label="Full-time score"
+          caption="Exact score after 90 minutes"
           big={pred.fullTime.score}
           strength={strengthFromOdds(pred.fullTime.fairOdds, pred.fullTime.strength)}
         />
         <MarketTile
           label="Half-time score"
+          caption="Exact score at the half"
           big={pred.halfTime.score}
           strength={strengthFromOdds(pred.halfTime.fairOdds, pred.halfTime.strength)}
         >
           <span className="inline-flex items-center gap-2">
-            Alt: {pred.halfTime.alt}
+            <span className="text-faint">Alternative:</span> {pred.halfTime.alt}
             <StrengthMeter value={strengthFromOdds(pred.halfTime.altOdds)} size="sm" />
           </span>
         </MarketTile>
         <MarketTile
-          label="Half-time / full-time"
+          label={<><StatAbbr code="HT/FT" /> — half-time / full-time</>}
+          caption="Who leads at the half, then who wins"
           big={pred.htft.pick.replace(/\s*\/\s*/g, " → ")}
           strength={strengthFromOdds(pred.htft.fairOdds, pred.htft.strength)}
         />
@@ -91,11 +95,11 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
             </div>
             {reason && <p className="mb-2 text-sm leading-relaxed text-muted">{reason}</p>}
             <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-              <span className="text-sm text-muted">Taker</span>
+              <span className="text-sm text-muted">Penalty taker</span>
               <span className="font-display text-xl font-extrabold uppercase tracking-tight text-amber">
                 {pred.penalty.taker}
               </span>
-              <span className="text-sm text-faint">backup: {pred.penalty.backup}</span>
+              <span className="text-sm text-faint">Backup taker: {pred.penalty.backup}</span>
             </div>
             <p className="mt-2 text-sm leading-relaxed text-muted">{pred.penalty.note}</p>
           </div>
@@ -113,7 +117,7 @@ export function PredictionView({ fixture, pred }: { fixture: Fixture; pred: Pred
             <div key={p.player} className="rounded-xl border border-line bg-card/50 p-3.5">
               <div className="mb-1 flex items-baseline justify-between gap-2">
                 <span className="font-semibold text-ink">{p.player}</span>
-                <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
+                <span className="font-mono text-[0.7rem] uppercase tracking-wider text-ink/50">
                   {p.team}
                 </span>
               </div>
@@ -191,12 +195,14 @@ function ResolutionPanel({ res }: { res: Resolution }) {
 
 function MarketTile({
   label,
+  caption,
   big,
   strength,
   tone = "default",
   children,
 }: {
-  label: string;
+  label: React.ReactNode;
+  caption?: string;
   big: string;
   strength: number;
   tone?: "default" | "acid";
@@ -205,7 +211,10 @@ function MarketTile({
   return (
     <div className="rounded-2xl border border-line bg-card/50 p-5">
       <div className="mb-2 flex items-start justify-between gap-3">
-        <SectionLabel>{label}</SectionLabel>
+        <div>
+          <SectionLabel>{label}</SectionLabel>
+          {caption && <p className="-mt-2 mb-1 text-[0.72rem] leading-snug text-ink/55">{caption}</p>}
+        </div>
         <StrengthMeter value={strength} size="sm" />
       </div>
       <div

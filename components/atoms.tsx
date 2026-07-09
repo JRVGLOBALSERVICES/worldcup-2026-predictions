@@ -54,9 +54,126 @@ export function StrengthMeter({
 
 export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
+    <h3 className="mb-3 font-mono text-[0.78rem] uppercase tracking-[0.18em] text-ink/70">
       {children}
     </h3>
+  );
+}
+
+/**
+ * Plain-English names for the cryptic football / betting shorthand that used to
+ * appear bare across the app ("3sh", "Gls·Ast·Sh·On·Pas…", "HTFT", "MYT"). Every
+ * abbreviation renders through <StatAbbr> so hover / long-press spells it out and
+ * screen readers announce the full term — the single source of truth for labels.
+ */
+export const STAT_TERMS: Record<string, string> = {
+  Gls: "Goals",
+  Ast: "Assists",
+  Sh: "Shots",
+  Shots: "Shots",
+  On: "Shots on target",
+  "On tgt": "Shots on target",
+  Off: "Shots off target",
+  Blk: "Blocks",
+  Blocks: "Blocks",
+  Pas: "Passes completed",
+  Tkl: "Tackles",
+  Tackles: "Tackles",
+  Sv: "Saves",
+  Saves: "Saves",
+  Fls: "Fouls",
+  Fouls: "Fouls",
+  Crd: "Cards (yellow / red)",
+  Cards: "Cards (yellow / red)",
+  Cor: "Corners",
+  Corners: "Corners",
+  SOT: "Shots on target",
+  Pos: "Possession",
+  W: "Won",
+  D: "Drawn",
+  L: "Lost",
+  R: "Refunded",
+  Y: "Yellow card",
+  G: "Goals",
+  A: "Assists",
+  MYT: "Malaysia time (GMT+8)",
+  ET: "US Eastern time",
+  HT: "Half-time",
+  FT: "Full-time",
+  "HT/FT": "Half-time result then full-time result",
+  H2H: "Head-to-head — recent meetings",
+};
+
+/**
+ * A stat abbreviation rendered as a real <abbr>: the full term is one hover /
+ * long-press away and read out by assistive tech, so the column can stay compact
+ * without being a mystery. Use for every 2–3 letter code in a header or chip.
+ */
+export function StatAbbr({ code, className = "" }: { code: string; className?: string }) {
+  const full = STAT_TERMS[code] ?? code;
+  return (
+    <abbr
+      title={full}
+      className={`cursor-help font-mono uppercase tracking-[0.08em] no-underline decoration-dotted underline-offset-2 hover:underline ${className}`}
+    >
+      {code}
+    </abbr>
+  );
+}
+
+/**
+ * A tabular number paired with its own small caption underneath — the pattern
+ * that replaces jammed notation like "3sh" or "≈2(3)". The number leads, the
+ * label sits quietly below it, so a value is never ambiguous about what it counts.
+ */
+export function StatCell({
+  value,
+  label,
+  tone = "plain",
+  hint,
+}: {
+  value: React.ReactNode;
+  label: string;
+  tone?: "plain" | "acid" | "amber" | "mint" | "muted";
+  hint?: string;
+}) {
+  const text = {
+    plain: "text-ink",
+    acid: "text-acid",
+    amber: "text-amber",
+    mint: "text-mint",
+    muted: "text-ink/45",
+  }[tone];
+  return (
+    <span className="inline-flex flex-col items-center gap-0.5" title={hint}>
+      <span className={`tnum font-mono text-[0.95rem] font-semibold leading-none ${text}`}>{value}</span>
+      <span className="text-[0.6rem] uppercase leading-none tracking-[0.1em] text-ink/40">{label}</span>
+    </span>
+  );
+}
+
+/**
+ * A visible, readable legend row — chips that spell out what a colour or code
+ * means, replacing the near-invisible `text-ink/35` footnotes. Pass swatch tones
+ * to draw the dot in that colour.
+ */
+export function Legend({ items }: { items: { swatch?: "acid" | "amber" | "mint" | "rose" | "muted"; term: string }[] }) {
+  const dot = {
+    acid: "bg-acid",
+    amber: "bg-amber",
+    mint: "bg-mint",
+    rose: "bg-rose",
+    muted: "bg-ink/40",
+  };
+  return (
+    <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[0.72rem] leading-relaxed text-ink/55">
+      {items.map((it, i) => (
+        <span key={i} className="inline-flex items-center gap-1.5">
+          {it.swatch && <span className={`size-1.5 rounded-full ${dot[it.swatch]}`} aria-hidden />}
+          {it.term}
+        </span>
+      ))}
+    </div>
   );
 }
 

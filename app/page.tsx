@@ -5,6 +5,7 @@ import { LiveRefreshPill } from "@/components/RefreshCountdown";
 import { SiteNav } from "@/components/SiteNav";
 import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
 import { isMatchFinished } from "@/lib/live";
+import { StatAbbr } from "@/components/atoms";
 
 export const revalidate = 1800; // re-pick "today" every 30 min on Vercel
 
@@ -85,7 +86,7 @@ export default function Home() {
           when line-ups drop.
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-2 font-mono text-[0.7rem] text-faint">
-          <span className="rounded-full border border-line px-2.5 py-1">Updated {updated} MYT</span>
+          <span className="rounded-full border border-line px-2.5 py-1">Updated {updated} <StatAbbr code="MYT" className="text-faint" /></span>
           <span className="rounded-full border border-line px-2.5 py-1">
             {Object.keys(predictionFile.predictions).length} matches called
           </span>
@@ -130,14 +131,14 @@ export default function Home() {
                     {d.label}
                   </h3>
                   {dayFinished && (
-                    <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
+                    <span className="font-mono text-[0.7rem] uppercase tracking-wider text-faint">
                       finished
                     </span>
                   )}
                 </span>
                 <span className="flex items-center gap-3">
-                  <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
-                    {d.fixtures.filter((f) => hasPrediction(f.id)).length} of {d.fixtures.length} called
+                  <span className="font-mono text-[0.7rem] uppercase tracking-wider text-faint">
+                    {d.fixtures.filter((f) => hasPrediction(f.id)).length} of {d.fixtures.length} matches predicted
                   </span>
                   <Chevron />
                 </span>

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T17:50:09.068Z",
+    "generatedAt": "2026-07-09T19:08:09.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-09T17:50:09.067Z"
@@ -22766,63 +22766,55 @@
     "fra-mar-2026-07-09": {
       "win": {
         "pick": "France",
-        "fairOdds": "1.53",
-        "reason": "Model: France to win at 65% (France 65% / draw 19% / Morocco 16%). Expected goals 2.3–1.0 from group-stage attack/defence rates (France 2.6 for / 1.0 against per game, Morocco 1.8 / 1.2). Most likely score 2-1.",
-        "strength": 5
+        "fairOdds": "1.67",
+        "reason": "Confirmed XIs change the read. France name their full attack — Mbappé, Dembélé, Olise, Doué (Barcola benched). Morocco field NO recognised striker (Saibari out injured, Rahimi benched, Halhal & Riad unavailable): Talbi + Anass Salah-Eddine in, a false-nine front of Díaz/Ounahi/El Khannouss with Hakimi overlapping. That's a deep-block-and-counter setup, so this leans France ~60% / draw ~24% / Morocco ~16%. France should make the running; the 2022 semi (France 2-0 on fewer touches) is the template — but a strikerless low block is a genuine draw/under trap.",
+        "strength": 4
       },
       "halfTime": {
-        "score": "1-0",
-        "fairOdds": "4.31",
-        "alt": "0-0",
-        "altOdds": "5.74"
+        "score": "0-0",
+        "fairOdds": "2.45",
+        "alt": "1-0",
+        "altOdds": "3.60"
       },
       "htft": {
         "pick": "France/France",
-        "fairOdds": "1.91"
+        "fairOdds": "2.35"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "10.27"
+        "score": "1-0",
+        "fairOdds": "5.60"
       },
       "scorers": [
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "fairOdds": "1.52",
-          "banker": true,
-          "note": "7 goals in 5 group games; 66% modelled anytime chance on 2.3 team xG.",
+          "fairOdds": "2.05",
+          "banker": false,
+          "note": "Golden Boot leader: 7 goals in 5, France's penalty taker. Prime pick, but Bounou + a compact Diop/Mazraoui block and a strikerless game script keep anytime nearer a coin-flip than a lock.",
           "strength": 5
         },
         {
           "player": "Ousmane Dembélé",
           "team": "France",
-          "fairOdds": "2.09",
+          "fairOdds": "2.75",
           "banker": false,
-          "note": "4 goals in 5 group games; 48% modelled anytime chance on 2.3 team xG.",
+          "note": "4 goals this tournament; direct at Morocco's reshuffled left side (debutant-slot LB Anass Salah-Eddine). Secondary penalty option behind Mbappé.",
           "strength": 4
         },
         {
-          "player": "Bradley Barcola",
+          "player": "Michael Olise",
           "team": "France",
-          "fairOdds": "3.30",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "2 goals in 5 group games; 30% modelled anytime chance on 2.3 team xG.",
-          "strength": 2
+          "note": "Assist leader (5) cutting in from the right; a real secondary goal threat if Morocco over-commit to stopping Mbappé.",
+          "strength": 3
         },
         {
-          "player": "Ismael Saibari",
+          "player": "Azzedine Ounahi",
           "team": "Morocco",
-          "fairOdds": "3.79",
+          "fairOdds": "5.40",
           "banker": false,
-          "note": "3 goals in 5 group games; 26% modelled anytime chance on 1.0 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Soufiane Rahimi",
-          "team": "Morocco",
-          "fairOdds": "3.79",
-          "banker": false,
-          "note": "3 goals in 5 group games; 26% modelled anytime chance on 1.0 team xG.",
+          "note": "Morocco's most credible scorer now Saibari is out — bagged a double vs Canada, turns in the box. But strikerless + Koné tasked to smother his between-lines receiving makes it a long-shot on ~1.0 team xG.",
           "strength": 2
         }
       ],
@@ -22830,44 +22822,37 @@
         {
           "player": "Michael Olise",
           "team": "France",
-          "fairOdds": "1.72",
+          "fairOdds": "1.85",
           "banker": true,
-          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Tournament assist leader with 5 — France's chief creator from inside-right."
         },
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "fairOdds": "2.88",
+          "fairOdds": "3.00",
           "banker": false,
-          "note": "2 assists in the group stage; 35% modelled chance to set one up."
+          "note": "2 assists so far; drags defenders and lays off for Dembélé/Doué runs."
         },
         {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "fairOdds": "2.88",
-          "banker": false,
-          "note": "2 assists in the group stage; 35% modelled chance to set one up."
-        },
-        {
-          "player": "Brahim Díaz",
+          "player": "Achraf Hakimi",
           "team": "Morocco",
-          "fairOdds": "2.92",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "4 assists in the group stage; 34% modelled chance to set one up."
+          "note": "3 WC assists from RB and Morocco's main set-piece deliverer — the overlap/cut-back that set up Ounahi vs Canada is their primary route."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Kylian Mbappé",
         "backup": "Ousmane Dembélé",
-        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
+        "note": "Cagey knockout vs a deep block invites box contact, so a spot-kick is live. France's is settled: Mbappé (scored the winner vs Paraguay), Dembélé backup. Morocco's is UNSETTLED post-Saibari — Hakimi is senior but missed his last shootout pen vs the Netherlands, so treat their taker (Hakimi/Díaz) as a doubt."
       },
       "lineups": {
-        "home": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Manu Koné, Adrien Rabiot, Michael Olise, Ousmane Dembélé, Kylian Mbappé, Bradley Barcola",
-        "away": "Yassine Bounou, Achraf Hakimi, Issa Diop, Redouane Halhal, Noussair Mazraoui, Neil El Aynaoui, Ayyoub Bouaddi, Brahim Díaz, Azzedine Ounahi, Bilal El Khannouss, Ismael Saibari",
-        "status": "unconfirmed",
+        "home": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Manu Koné, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Désiré Doué, Kylian Mbappé",
+        "away": "Yassine Bounou, Achraf Hakimi, Issa Diop, Noussair Mazraoui, Anass Salah-Eddine, Neil El Aynaoui, Ayyoub Bouaddi, Chemsdine Talbi, Azzedine Ounahi, Brahim Díaz, Bilal El Khannouss",
+        "status": "confirmed",
         "homeXI": {
-          "formation": "4-3-3",
+          "formation": "4-2-3-1",
           "players": [
             {
               "num": 16,
@@ -22905,29 +22890,29 @@
               "pos": "CM-L"
             },
             {
-              "num": 11,
-              "name": "Michael Olise",
-              "pos": "AM"
-            },
-            {
               "num": 7,
               "name": "Ousmane Dembélé",
               "pos": "RW"
             },
             {
-              "num": 10,
-              "name": "Kylian Mbappé",
-              "pos": "CF"
+              "num": 11,
+              "name": "Michael Olise",
+              "pos": "AM"
             },
             {
               "num": 20,
-              "name": "Bradley Barcola",
+              "name": "Désiré Doué",
               "pos": "LW"
+            },
+            {
+              "num": 10,
+              "name": "Kylian Mbappé",
+              "pos": "CF"
             }
           ]
         },
         "awayXI": {
-          "formation": "4-2-3-1",
+          "formation": "4-2-3-1 (false 9)",
           "players": [
             {
               "num": 1,
@@ -22945,13 +22930,13 @@
               "pos": "CD-R"
             },
             {
-              "num": 25,
-              "name": "Redouane Halhal",
+              "num": 3,
+              "name": "Noussair Mazraoui",
               "pos": "CD-L"
             },
             {
-              "num": 3,
-              "name": "Noussair Mazraoui",
+              "num": 5,
+              "name": "Anass Salah-Eddine",
               "pos": "LB"
             },
             {
@@ -22965,24 +22950,24 @@
               "pos": "CM-L"
             },
             {
-              "num": 10,
-              "name": "Brahim Díaz",
-              "pos": "AM-R"
+              "num": 7,
+              "name": "Chemsdine Talbi",
+              "pos": "RW"
             },
             {
-              "num": 8,
-              "name": "Azzedine Ounahi",
+              "num": 10,
+              "name": "Brahim Díaz",
               "pos": "AM"
             },
             {
               "num": 23,
               "name": "Bilal El Khannouss",
-              "pos": "AM-L"
+              "pos": "LW"
             },
             {
-              "num": 11,
-              "name": "Ismael Saibari",
-              "pos": "F"
+              "num": 8,
+              "name": "Azzedine Ounahi",
+              "pos": "CF"
             }
           ]
         }
@@ -22991,111 +22976,130 @@
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "note": "7 goals in 5 group games; 66% modelled anytime chance on 2.3 team xG."
-        },
-        {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "note": "4 goals in 5 group games; 48% modelled anytime chance on 2.3 team xG."
+          "note": "Golden Boot leader (7 goals, 2 assists), captain and penalty taker — France's central match-winner against a strikerless block."
         },
         {
           "player": "Michael Olise",
           "team": "France",
-          "note": "5 assists in the group stage; 58% modelled chance to set one up."
+          "note": "Tournament assist leader (5); record-setting creator from inside-right, the man who unlocks a low block."
+        },
+        {
+          "player": "Désiré Doué",
+          "team": "France",
+          "note": "Promoted to start on the left over Barcola — direct young runner giving France a fresh wide threat."
+        },
+        {
+          "player": "Achraf Hakimi",
+          "team": "Morocco",
+          "note": "Captain and attacking engine from RB: 3 WC assists, main set-piece deliverer, and Morocco's chief width/final-ball source with no striker ahead."
+        },
+        {
+          "player": "Azzedine Ounahi",
+          "team": "Morocco",
+          "note": "Morocco's most credible goal threat now Saibari's out — scored twice vs Canada, operates as the false-nine tip; Koné is detailed to stop him receiving."
+        },
+        {
+          "player": "Brahim Díaz",
+          "team": "Morocco",
+          "note": "4 WC assists (a record for an African player) but streaky; the de-facto central creator, more provider than finisher in a strikerless front."
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 4,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed XIs: FFF / Morocco team sheets released ~60 min pre-kickoff, 2026-07-09",
+        "https://khelnow.com/football/france-starting-lineup-vs-morocco-fifa-world-cup-2026",
+        "https://www.101greatgoals.com/news/france-v-morocco-line-ups-confirmed-for-opening-world-cup-quarter-final/",
+        "https://www.aljazeera.com/sports/2026/7/9/france-morocco-world-cup-quarterfinal-mbappe-saibari-prediction-start-time-lineups",
+        "https://theanalyst.com/articles/france-vs-morocco-prediction-world-cup-2026-match-preview",
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + confirmed-XI adjustment"
       ],
       "pitchReport": {
         "facts": [
-          "France: 9 pts, +8 GD across 3 group games (10 for / 2 against).",
-          "Morocco: 7 pts, +3 GD across 3 group games (6 for / 3 against).",
-          "France's Kylian Mbappé leads them with 7 goals in 5 games.",
-          "Morocco's Ismael Saibari leads them with 3 goals in 5 games."
+          "France: 5/5 wins, Golden Boot leader Mbappé on 7 goals; full attack named (Doué in for Barcola).",
+          "Morocco: unbeaten run (beat the Netherlands on pens in the R32) but field NO recognised striker.",
+          "Saibari (hamstring, their in-form scorer), Rahimi (benched), Halhal (dropped) and Riad (knee) all absent from Morocco's XI.",
+          "2022 semi-final: France beat Morocco 2-0 despite less of the ball — the clinical-in-the-box template."
         ],
         "assumptions": [
-          "Model projects France to carry more of the ball and the better chances (higher attack rating); Morocco to sit compact and play on the break.",
-          "Goal expectancy 2.3–1.0 (France–Morocco) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+          "Morocco set up as a deep block + counter through Hakimi overlaps and Talbi pace, false-nine front (Díaz/Ounahi/El Khannouss).",
+          "Goal expectancy ~1.9–0.9 (France–Morocco): France's cutting edge vs a compact, striker-less side that should create little in open play."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "France shade the chance-creation (2.3 vs 1.0 xG) — they should make the running.",
-        "drawRisk": "Moderate — 18.6% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
-        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "lineups": "BOTH XIs CONFIRMED. France 4-2-3-1: Maignan; Koundé, Upamecano, Saliba, Digne; Koné, Rabiot; Dembélé, Olise, Doué; Mbappé. Morocco strikerless: Bounou; Hakimi, Diop, Mazraoui, Salah-Eddine; El Aynaoui, Bouaddi; Talbi, Díaz, El Khannouss; Ounahi false-9.",
+        "motivation": "Knockout — win or out. Morocco's strikerless block accepts a cagey, low-goal game and backs itself on transitions/set-pieces and, if needed, a shootout (they already beat the Dutch on pens).",
+        "xgRead": "France shade chance-creation comfortably; Morocco's ceiling is lowered without a No.9, so their goal is likelier from a Hakimi set-piece (Diop header) or a Talbi/Hakimi counter than sustained pressure.",
+        "drawRisk": "Real — a strikerless low block vs a possession favourite is the classic out-xG / stalemate trap; give the draw, DNB and under-2.5 genuine weight and downgrade France win-to-nil/correct-score.",
+        "travel": "Temperate Foxborough venue — neutral conditions; quality decides it.",
         "caseFor": [
-          "France are the model's 65.3% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Kylian Mbappé carrying the scoring load.",
-          "Neutral conditions let the better side's quality tell."
+          "France name their strongest attack and are the model's ~60% pick with the tournament's best scorer and creator.",
+          "Morocco carry NO recognised striker — their box presence and open-play ceiling are lowered.",
+          "2022 semi shows France can win this profile of game on fewer touches."
         ],
         "caseAgainst": [
-          "18.6% draw + Morocco's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; France's number may be inflated by one result."
+          "Strikerless deep block + counter = a real draw/under trap; Morocco already knocked out the Netherlands.",
+          "Bounou, Diop and Morocco's organisation can frustrate; ~60% is not certainty — draw+underdog is ~40%."
         ],
         "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Kylian Mbappé, or news the underdog is missing a defensive linchpin."
+        "changeMind": "Already priced the confirmed XIs in. A very early France goal would kill the draw angle; an hour of 0-0 amplifies it toward extra time."
       },
       "valueSpot": null,
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
-            "why": "Not priced — can't confirm the favourite is good value."
+            "tripped": false,
+            "why": "Model call, not name value — but no live price to confirm value."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name strongest XI, no rotation."
+            "why": "Knockout — France name their strongest XI; no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
             "tripped": false,
-            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+            "why": "France's scoring is spread across the run, not one rout."
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
+            "tripped": true,
+            "why": "Morocco field NO striker and sit deep — a low-goal, draw-leaning script is live."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "BOTH XIs now confirmed — scorer/lineup props are locked to the real starters."
           },
           {
             "name": "Ignoring the draw",
-            "tripped": false,
-            "why": "Draw chance (18.6%) is low enough to discount."
+            "tripped": true,
+            "why": "Strikerless block vs possession favourite is the out-xG/stalemate profile — the draw earns weight."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+            "why": "Model read — no tilt. (Only you can answer this for your own stake.)"
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 2,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
-        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+        "discipline": "France are better, but a strikerless low block is built to produce few goals — respect the draw, fade the win-to-nil/correct-score, and never chase goals here."
       },
       "brainSummary": {
         "verdict": "PLAYABLE",
-        "call": "France to win is a clean call.",
+        "call": "France to win, but respect the draw against a strikerless block.",
         "read": {
           "tag": "Bet",
-          "line": "France are the model's 65% pick."
+          "line": "France ~60% with their full attack; Morocco field no striker."
         },
         "price": {
-          "tag": "Not priced yet",
-          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+          "tag": "Model-only",
+          "line": "No live market yet — a model call off the confirmed XIs."
         },
         "trap": {
           "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+          "line": "Strikerless deep-block Morocco is a genuine draw/under trap — don't overpay France or the win-to-nil."
         }
       },
       "resolution": {
@@ -23105,7 +23109,7 @@
         "mostLikely": "Regulation",
         "etWinner": "France",
         "shootout": "Near coin-flip, with the marginal nerve edge to France.",
-        "note": "Most likely settled inside 90 (81.4%). But a 18.6% level 90 keeps extra time (10.8%) and penalties (7.8%) live — in a knockout, that's the bit a straight win bet ignores."
+        "note": "Most likely settled in regulation, but a strikerless Morocco block raises extra-time/shootout risk — and they already won one shootout this tournament (vs the Netherlands)."
       }
     },
     "nor-eng-2026-07-11": {

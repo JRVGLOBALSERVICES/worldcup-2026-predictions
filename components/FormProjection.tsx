@@ -1,5 +1,6 @@
 import type { MatchForm, TeamForm, FormLeader } from "@/lib/form";
 import { SectionLabel } from "./atoms";
+import { Fragment } from "react";
 
 /**
  * Pre-match "form going in" panel for the prediction pages — for each side, the
@@ -12,22 +13,17 @@ export function FormProjection({ form }: { form: MatchForm }) {
   if (!form) return null;
   return (
     <div>
-      <SectionLabel>Form going in — last game & projection</SectionLabel>
+      <SectionLabel>Form going in — last game &amp; what to expect</SectionLabel>
       <div className="grid gap-4 sm:grid-cols-2">
         <TeamCard team={form.home} tone="acid" />
         <TeamCard team={form.away} tone="mint" />
       </div>
-      <p className="mt-3 font-mono text-[0.68rem] leading-relaxed tracking-[0.08em] text-muted">
-        <span className="text-faint">How to read a row: </span>
-        <span className="text-ink">3sh</span> = last game
-        {" · "}
-        <span className="text-acid">≈2</span> = projected next game
-        {" · "}
-        <span className="text-ink">(3)</span> = ceiling, their best single game.
-        <br className="hidden sm:block" />
-        <span className="text-faint">
-          Projection = recency-weighted mean (60% per-game average · 40% last game).
-        </span>
+      <p className="mt-3 text-[0.78rem] leading-relaxed text-ink/55">
+        Each row reads left to right: how many the player managed in their{" "}
+        <span className="text-ink/80">last game</span>, our{" "}
+        <span className="text-acid">estimate for the next one</span>, and their{" "}
+        <span className="text-ink/80">best in any single game</span> so far. The estimate
+        leans on recent form (60% season average, 40% last game).
       </p>
     </div>
   );
@@ -63,14 +59,14 @@ function TeamCard({ team, tone }: { team: TeamForm; tone: "acid" | "mint" }) {
       </div>
 
       {team.lastMatch ? (
-        <div className="space-y-4">
-          <Board title="Shots" unit="sh" rows={team.shooters} accent={accent} />
-          <Board title="On target" unit="on" rows={team.onTarget} accent={accent} />
-          <Board title="Tackles" unit="tk" rows={team.tacklers} accent={accent} />
-          <Board title="Keeper saves" unit="sv" rows={team.keepers} accent={accent} />
+        <div className="space-y-5">
+          <Board title="Shots" rows={team.shooters} accent={accent} />
+          <Board title="Shots on target" rows={team.onTarget} accent={accent} />
+          <Board title="Tackles" rows={team.tacklers} accent={accent} />
+          <Board title="Keeper saves" rows={team.keepers} accent={accent} />
         </div>
       ) : (
-        <p className="text-sm text-muted">No completed match yet.</p>
+        <p className="text-sm text-ink/50">No completed match yet.</p>
       )}
     </div>
   );
@@ -78,48 +74,36 @@ function TeamCard({ team, tone }: { team: TeamForm; tone: "acid" | "mint" }) {
 
 function Board({
   title,
-  unit,
   rows,
   accent,
 }: {
   title: string;
-  unit: string;
   rows: FormLeader[];
   accent: string;
 }) {
   if (rows.length === 0) return null;
   return (
     <div>
-      <div className="mb-1.5 flex items-baseline justify-between">
-        <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-faint">
-          {title}
-        </span>
-        <span className="font-mono text-[0.58rem] uppercase tracking-[0.12em] text-faint">
-          last · <span className="text-muted">next</span>
-        </span>
-      </div>
-      <div className="space-y-1">
+      <h4 className="mb-2 font-mono text-[0.7rem] font-bold uppercase tracking-[0.14em] text-ink/60">
+        {title}
+      </h4>
+      <div className="grid grid-cols-[1fr_auto_auto_auto] items-baseline gap-x-4 gap-y-1.5">
+        <span aria-hidden />
+        <span className="text-right text-[0.62rem] uppercase tracking-[0.1em] text-ink/40">Last</span>
+        <span className={`text-right text-[0.62rem] uppercase tracking-[0.1em] ${accent}/90`}>Est</span>
+        <span className="text-right text-[0.62rem] uppercase tracking-[0.1em] text-ink/40">Best</span>
         {rows.map((r) => (
-          <div key={r.name} className="flex items-center justify-between gap-2">
-            <span className="flex min-w-0 items-baseline gap-1.5">
+          <Fragment key={r.name}>
+            <span className="flex min-w-0 items-baseline gap-2">
               {r.num != null && (
-                <span className="tnum shrink-0 font-mono text-[0.62rem] text-faint">{r.num}</span>
+                <span className="tnum w-5 shrink-0 text-right font-mono text-[0.72rem] text-ink/35">{r.num}</span>
               )}
-              <span className="truncate text-[0.84rem] text-ink">{r.name}</span>
+              <span className="truncate text-[0.9rem] text-ink">{r.name}</span>
             </span>
-            <span className="flex shrink-0 items-center gap-2.5 font-mono text-[0.72rem] leading-none">
-              <span className="tnum text-muted">
-                {r.last}
-                <span className="ml-0.5 text-[0.6rem] text-faint">{unit}</span>
-              </span>
-              <span className={`tnum ${accent}`}>
-                ≈{r.proj}
-                {r.high > r.proj && (
-                  <span className="ml-0.5 text-[0.6rem] text-faint">({r.high})</span>
-                )}
-              </span>
-            </span>
-          </div>
+            <span className="tnum text-right font-mono text-[0.92rem] text-ink/70">{r.last}</span>
+            <span className={`tnum text-right font-mono text-[0.92rem] font-semibold ${accent}`}>{r.proj}</span>
+            <span className="tnum text-right font-mono text-[0.92rem] text-ink/50">{r.high}</span>
+          </Fragment>
         ))}
       </div>
     </div>

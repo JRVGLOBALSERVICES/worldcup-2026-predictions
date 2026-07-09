@@ -6,6 +6,7 @@ import { KickoffClock } from "./KickoffClock";
 import type { LiveMatch } from "@/lib/live";
 import type { FullStatLine, PlayerShotLine, PlayerStatLine, Substitution } from "@/lib/bets";
 import { nameMatch } from "@/lib/bets";
+import { StatAbbr, Legend } from "./atoms";
 
 /**
  * A live number that pops (scale + brightness flash) whenever its value
@@ -84,7 +85,7 @@ export function LiveScore({ matchId }: { matchId: string }) {
         </ul>
       )}
       {lm.stats && (
-        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 border-t border-line/50 pt-2 font-mono text-[0.58rem] uppercase leading-none tracking-wider">
+        <div className="mt-2 flex flex-wrap gap-x-3.5 gap-y-1.5 border-t border-line/50 pt-2 text-[0.68rem] leading-none">
           <StatPair label="Cor" h={lm.stats.corners.home} a={lm.stats.corners.away} />
           <StatPair label="SOT" h={lm.stats.sot.home} a={lm.stats.sot.away} />
           <StatPair label="Sh" h={lm.stats.shots.home} a={lm.stats.shots.away} />
@@ -114,12 +115,12 @@ export function LiveScore({ matchId }: { matchId: string }) {
  * Values animate (pop) when a live poll moves them. */
 function StatPair({ label, h, a, sub }: { label: string; h: number; a: number; sub?: string }) {
   return (
-    <span className="inline-flex items-baseline gap-1">
-      <span className="text-faint">{label}</span>
-      <AnimatedNum value={h} className="tnum text-acid" />
-      <span className="text-faint">–</span>
-      <AnimatedNum value={a} className="tnum text-mint" />
-      {sub && <span className="text-faint">({sub})</span>}
+    <span className="inline-flex items-baseline gap-1.5">
+      <StatAbbr code={label} className="text-[0.62rem] text-ink/45" />
+      <AnimatedNum value={h} className="tnum font-mono font-semibold text-acid" />
+      <span className="text-ink/30">–</span>
+      <AnimatedNum value={a} className="tnum font-mono font-semibold text-mint" />
+      {sub && <span className="font-mono text-[0.6rem] text-ink/40">({sub})</span>}
     </span>
   );
 }
@@ -279,10 +280,17 @@ export function LiveStats({ matchId }: { matchId: string }) {
         </div>
       )}
 
-      <p className="mt-3 border-t border-line/50 pt-2 font-mono text-[0.56rem] uppercase tracking-[0.14em] text-ink/35">
-        {s.yellow.home + s.yellow.away} yellow · {s.red.home + s.red.away} red
-        {lm.state !== "finished" ? " · numbers tick live every 5s" : ""}
-      </p>
+      <div className="mt-3 border-t border-line/50 pt-2.5">
+        <Legend
+          items={[
+            { swatch: "acid", term: "Home team (left)" },
+            { swatch: "mint", term: "Away team (right)" },
+            { swatch: "amber", term: `${s.yellow.home + s.yellow.away} yellow cards` },
+            { swatch: "rose", term: `${s.red.home + s.red.away} red cards` },
+            ...(lm.state !== "finished" ? [{ term: "numbers update live every 5s" }] : []),
+          ]}
+        />
+      </div>
     </div>
   );
 }
@@ -378,7 +386,7 @@ function ShotRowLine({ row }: { row: ShotRow }) {
   const tone = row.line.team === "home" ? "text-acid" : "text-mint";
   return (
     <div
-      className={`grid grid-cols-[1fr_repeat(5,2.1rem)] items-center gap-1 rounded-lg px-2 py-1.5 ${
+      className={`grid grid-cols-[1fr_repeat(5,2.3rem)] items-center gap-1 rounded-lg px-2 py-1.5 ${
         row.tracked ? "border border-acid-dim/40 bg-acid/[0.06]" : ""
       }`}
     >
@@ -418,13 +426,13 @@ function ShotRowLine({ row }: { row: ShotRow }) {
 /** Column header shared by the board wherever it renders. */
 function ShotBoardHead() {
   return (
-    <div className="grid grid-cols-[1fr_repeat(5,2.1rem)] gap-1 px-2 font-mono text-[0.54rem] uppercase tracking-[0.14em] text-faint">
-      <span>Player</span>
-      <span className="text-center">Sh</span>
-      <span className="text-center">On</span>
-      <span className="text-center">Off</span>
-      <span className="text-center">Blk</span>
-      <span className="text-center">⚽</span>
+    <div className="grid grid-cols-[1fr_repeat(5,2.3rem)] gap-1 px-2 pb-1 text-[0.64rem] text-ink/45">
+      <span className="uppercase tracking-[0.12em]">Player</span>
+      <StatAbbr code="Sh" className="text-center" />
+      <StatAbbr code="On" className="text-center" />
+      <StatAbbr code="Off" className="text-center" />
+      <StatAbbr code="Blk" className="text-center" />
+      <span className="text-center" title="Goals">Gls</span>
     </div>
   );
 }
@@ -458,10 +466,19 @@ export function PlayerShotsBoard({ matchId, trackedNames }: { matchId: string; t
         Player shots {lm.state === "finished" ? "(full time)" : "(live)"} · settles the shots props
       </h3>
       <ShotRowsBlock rows={rows} />
-      <p className="mt-3 border-t border-line/50 pt-2 font-mono text-[0.56rem] uppercase tracking-[0.14em] text-ink/35">
-        Sh total · On target (goals count) · Off target · Blocked · Goals
-        {lm.state !== "finished" ? " · ticks live every 5s" : ""} · ⬇ subbed off · ✚ injury
-      </p>
+      <div className="mt-3 border-t border-line/50 pt-2.5">
+        <Legend
+          items={[
+            { term: "Sh — total shots" },
+            { swatch: "acid", term: "On — on target" },
+            { term: "Off — off target" },
+            { term: "Blk — blocked" },
+            { swatch: "amber", term: "Gls — goals" },
+            { term: "⬇ subbed off · ✚ injury" },
+            ...(lm.state !== "finished" ? [{ term: "updates live every 5s" }] : []),
+          ]}
+        />
+      </div>
     </div>
   );
 }
@@ -506,7 +523,7 @@ export function SubsLog({ matchId }: { matchId: string }) {
  * them into the persisted snapshot). Starters first in sheet order (GK on
  * top), subs used beneath with their ⬆ minute. */
 
-const SHEET_COLS = "grid-cols-[minmax(8.5rem,1fr)_repeat(10,1.9rem)]";
+const SHEET_COLS = "grid-cols-[minmax(8.5rem,1fr)_repeat(10,2.15rem)]";
 
 /** A count that may not be fetched yet — "–" (faint) instead of a lying 0. */
 function MaybeNum({ value, className }: { value: number | undefined; className?: string }) {
@@ -572,18 +589,18 @@ function PlayerSheetRow({ p, subs }: { p: PlayerStatLine; subs: Substitution[] |
 /** Column header shared by both team blocks. */
 function PlayerSheetHead() {
   return (
-    <div className={`grid ${SHEET_COLS} gap-1 px-2 font-mono text-[0.52rem] uppercase tracking-[0.12em] text-faint`}>
-      <span>Player</span>
-      <span className="text-center">Gls</span>
-      <span className="text-center">Ast</span>
-      <span className="text-center">Sh</span>
-      <span className="text-center">On</span>
-      <span className="text-center">Pas</span>
-      <span className="text-center">Tkl</span>
-      <span className="text-center">Blk</span>
-      <span className="text-center">Sv</span>
-      <span className="text-center">Fls</span>
-      <span className="text-center">Crd</span>
+    <div className={`grid ${SHEET_COLS} items-end gap-1 px-2 pb-1 text-[0.64rem] text-ink/45`}>
+      <span className="uppercase tracking-[0.1em]">Player</span>
+      <StatAbbr code="Gls" className="text-center" />
+      <StatAbbr code="Ast" className="text-center" />
+      <StatAbbr code="Sh" className="text-center" />
+      <StatAbbr code="On" className="text-center" />
+      <StatAbbr code="Pas" className="text-center" />
+      <StatAbbr code="Tkl" className="text-center" />
+      <StatAbbr code="Blk" className="text-center" />
+      <StatAbbr code="Sv" className="text-center" />
+      <StatAbbr code="Fls" className="text-center" />
+      <StatAbbr code="Crd" className="text-center" />
     </div>
   );
 }
@@ -643,7 +660,7 @@ export function PlayerSheetBody({
   const subs = lm.stats?.subs;
   return (
     <div className="overflow-x-auto">
-      <div className="min-w-[28rem] space-y-4">
+      <div className="min-w-[30rem] space-y-4">
         <PlayerSheetTeam
           flag={home.flag}
           name={home.name}
@@ -666,11 +683,24 @@ export function PlayerSheetBody({
 /** Footnote shared wherever the sheet renders. */
 export function PlayerSheetFootnote({ finished }: { finished: boolean }) {
   return (
-    <p className="mt-3 border-t border-line/50 pt-2 font-mono text-[0.56rem] uppercase tracking-[0.14em] text-ink/35">
-      Gls goals · Ast assists · Sh shots · On target · Pas passes · Tkl tackles · Blk blocked
-      shots · Sv saves · Fls fouls · Crd cards
-      {finished ? "" : " · ticks live every 5s"} · – = Opta count not swept yet (fills hourly)
-    </p>
+    <div className="mt-3 border-t border-line/50 pt-2.5">
+      <Legend
+        items={[
+          { swatch: "amber", term: "Gls — goals" },
+          { swatch: "mint", term: "Ast — assists" },
+          { term: "Sh — shots" },
+          { swatch: "acid", term: "On — on target" },
+          { term: "Pas — passes" },
+          { term: "Tkl — tackles" },
+          { term: "Blk — blocked" },
+          { term: "Sv — saves" },
+          { term: "Fls — fouls" },
+          { term: "Crd — cards" },
+          { term: "– = not swept yet (fills hourly)" },
+          ...(finished ? [] : [{ term: "updates live every 5s" }]),
+        ]}
+      />
+    </div>
   );
 }
 
@@ -743,8 +773,8 @@ export function MatchHeaderScore({
   return (
     <div className="shrink-0 text-center">
       <div className="tnum font-display text-3xl font-black text-acid sm:text-4xl">{mytLabel}</div>
-      <div className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
-        MYT · {etLabel} ET
+      <div className="mt-1 flex items-center justify-center gap-1.5 font-mono text-[0.66rem] uppercase tracking-wider text-ink/55">
+        <StatAbbr code="MYT" /> · {etLabel} <StatAbbr code="ET" />
       </div>
     </div>
   );

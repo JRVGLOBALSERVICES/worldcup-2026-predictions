@@ -41,9 +41,16 @@ function Row({
           {entity === "team" ? row.team : row.name}
         </span>
         {entity === "player" && (
-          <span className="block truncate font-mono text-[0.62rem] uppercase tracking-[0.12em] text-ink/45">
+          <span className="block truncate font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink/55">
             {row.team}
-            {row.matches != null ? ` · ${row.matches} app` : ""}
+            {row.matches != null ? (
+              <span title={`${row.matches} appearances this tournament`}>
+                {" · "}
+                {row.matches} {row.matches === 1 ? "app" : "apps"}
+              </span>
+            ) : (
+              ""
+            )}
           </span>
         )}
       </span>
@@ -85,11 +92,13 @@ function Board({
         featured ? "sm:col-span-2 lg:col-span-3" : "",
       ].join(" ")}
     >
-      <header className="mb-1 flex items-baseline justify-between gap-2 border-b border-line/60 pb-3">
-        <h3 className={["font-display text-base font-black uppercase tracking-tight", a.text].join(" ")}>
+      <header className="mb-1 border-b border-line/60 pb-3">
+        <h3 className={["font-display text-base font-black uppercase leading-tight tracking-tight", a.text].join(" ")}>
           {label}
         </h3>
-        <span className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink/45">{unit}</span>
+        <span className="mt-1 block font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink/55">
+          Ranked by {unit}
+        </span>
       </header>
       {rows.length === 0 ? (
         <p className="py-6 text-center font-mono text-[0.7rem] uppercase tracking-[0.12em] text-ink/40">

@@ -76,9 +76,10 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
 
       {/* match header */}
       <header className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-8">
-        <div className="mb-5 flex items-center justify-between font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-y-1 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint">
           <span>
-            {fixture.round ?? `Group ${fixture.group}`} · {fixture.venue}, {fixture.city}
+            {fixture.round ?? `Group ${fixture.group}`}
+            <span className="text-faint/50"> · {fixture.venue}, {fixture.city}</span>
           </span>
           <span>{mytDayLabel(fixture.kickoffUTC)}</span>
         </div>

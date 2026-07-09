@@ -29,18 +29,21 @@ export function BrainSummaryCard({ pred }: { pred: Prediction }) {
           </h2>
           <VerdictStamp v={s.verdict} />
         </div>
+        <p className="mt-1.5 text-[0.72rem] leading-snug text-ink/50">
+          {verdictGloss[s.verdict]}
+        </p>
         <p className="mt-3 max-w-2xl text-[0.95rem] leading-relaxed text-ink sm:text-base">{s.call}</p>
       </div>
 
       {/* three one-liners: read · price · filter */}
       <dl className="divide-y divide-line/60">
-        <SummaryRow n="1" label="The read" tag={s.read.tag} tagTone={pitchTone(s.read.tag)}>
+        <SummaryRow n="1" label="The read" caption="What we expect to happen" tag={s.read.tag} tagTone={pitchTone(s.read.tag)}>
           {s.read.line}
         </SummaryRow>
-        <SummaryRow n="2" label="The price" tag={s.price.tag} tagTone={priceTone(s.price.tag)}>
+        <SummaryRow n="2" label="The price" caption="Whether the odds are worth it" tag={s.price.tag} tagTone={priceTone(s.price.tag)}>
           {s.price.line}
         </SummaryRow>
-        <SummaryRow n="3" label="The catch" tag={s.trap.tag} tagTone={trapTone(s.trap.tag)}>
+        <SummaryRow n="3" label="The catch" caption="What could go wrong" tag={s.trap.tag} tagTone={trapTone(s.trap.tag)}>
           {s.trap.line}
         </SummaryRow>
       </dl>
@@ -66,12 +69,14 @@ export function BrainSummaryCard({ pred }: { pred: Prediction }) {
 function SummaryRow({
   n,
   label,
+  caption,
   tag,
   tagTone,
   children,
 }: {
   n: string;
   label: string;
+  caption?: string;
   tag: string;
   tagTone: string;
   children: React.ReactNode;
@@ -81,16 +86,23 @@ function SummaryRow({
       <span className="tnum mt-0.5 shrink-0 font-mono text-[0.78rem] font-bold text-acid">{n}</span>
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-          <dt className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-faint">{label}</dt>
-          <span className={`rounded-full border px-2 py-0.5 font-mono text-[0.6rem] font-semibold uppercase tracking-wider ${tagTone}`}>
+          <dt className="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-ink/60">{label}</dt>
+          <span className={`rounded-full border px-2 py-0.5 font-mono text-[0.7rem] font-semibold uppercase tracking-wider ${tagTone}`}>
             {tag}
           </span>
         </div>
+        {caption && <p className="mt-1 text-[0.72rem] leading-snug text-ink/50">{caption}</p>}
         <dd className="mt-1 text-sm leading-relaxed text-muted">{children}</dd>
       </div>
     </div>
   );
 }
+
+const verdictGloss: Record<BrainSummary["verdict"], string> = {
+  PLAYABLE: "Playable — worth a bet at these odds.",
+  LEAN: "Lean — a mild edge; keep the stake small.",
+  PASS: "Pass — no edge here; sit this one out.",
+};
 
 function VerdictStamp({ v }: { v: BrainSummary["verdict"] }) {
   const map = {
@@ -159,11 +171,11 @@ function DetailValue({ v }: { v: ValueSpot }) {
               }`}
             >
               <div className="flex min-w-0 items-center gap-2">
-                <span className="font-mono text-[0.56rem] uppercase tracking-wider text-faint">{l.market}</span>
+                <span className="font-mono text-[0.7rem] uppercase tracking-wider text-ink/50">{l.market}</span>
                 <span className={`truncate font-semibold ${tone}`}>{l.side}</span>
               </div>
               <div className="flex shrink-0 items-center gap-3">
-                <span className={`font-mono text-[0.58rem] uppercase tracking-wider ${tone}`}>{tag}</span>
+                <span className={`font-mono text-[0.7rem] uppercase tracking-wider ${tone}`}>{tag}</span>
                 <span className="tnum font-display text-base font-extrabold leading-none text-ink">{l.price}</span>
               </div>
             </li>
@@ -210,7 +222,7 @@ function DetailTrap({ t }: { t: TrapDetector }) {
 
 function DetailHead({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mb-3 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-faint">{children}</h3>
+    <h3 className="mb-3 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-ink/60">{children}</h3>
   );
 }
 

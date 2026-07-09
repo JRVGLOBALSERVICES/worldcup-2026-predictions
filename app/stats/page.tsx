@@ -48,7 +48,7 @@ export default function StatsPage() {
 
       <StatsExplorer initial={initial} />
 
-      <p className="mt-10 font-mono text-[0.62rem] uppercase leading-relaxed tracking-[0.1em] text-ink/35">
+      <p className="mt-10 font-mono text-[0.7rem] uppercase leading-relaxed tracking-[0.1em] text-ink/50">
         Source: {initial.meta.source}. Player sheets compile counting stats across every game a
         player has featured in; only teams still alive in the competition are shown. Numbers refresh
         as results come in — tap Force update for the latest.

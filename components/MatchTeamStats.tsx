@@ -1,6 +1,6 @@
 import type { Fixture } from "@/lib/types";
 import { getTeamStats, type TeamStatBoards, type TeamStatLeader } from "@/lib/stats";
-import { SectionLabel } from "./atoms";
+import { SectionLabel, Legend } from "./atoms";
 
 // Accent → static class strings (no dynamic concatenation, so Tailwind keeps
 // them). Mirrors components/StatsBoards.tsx so the per-team boards read as the
@@ -36,11 +36,19 @@ export function MatchTeamStats({ fixture }: { fixture: Fixture }) {
 
   return (
     <section className="mt-10 space-y-5 border-t border-line pt-8">
-      <div className="flex items-center gap-3">
+      <div>
         <SectionLabel>Team leaders</SectionLabel>
-        <span className="font-mono text-[0.6rem] uppercase tracking-wider text-faint">
-          Top 5 · this tournament · scorers · assists · cards
-        </span>
+        <p className="mt-1 text-[0.8rem] leading-relaxed text-ink/60">
+          Each side&rsquo;s top 5 this tournament — top scorers, assists and cards.
+        </p>
+        <Legend
+          items={[
+            { swatch: "acid", term: "Goals" },
+            { swatch: "mint", term: "Assists" },
+            { swatch: "amber", term: "Yellow cards" },
+            { swatch: "rose", term: "Red cards" },
+          ]}
+        />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
@@ -97,11 +105,11 @@ function Board({
   const max = rows.length ? rows[0].value : 1;
   return (
     <div>
-      <header className="mb-1.5 flex items-baseline justify-between gap-2">
+      <header className="mb-1.5 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
         <h3 className={["font-display text-[0.8rem] font-black uppercase tracking-tight", a.text].join(" ")}>
           {label}
         </h3>
-        <span className="font-mono text-[0.56rem] uppercase tracking-[0.16em] text-ink/45">{unit}</span>
+        <span className="font-mono text-[0.7rem] normal-case tracking-normal text-ink/55">— {unit}</span>
       </header>
       {rows.length === 0 ? (
         <p className="py-1.5 font-mono text-[0.64rem] uppercase tracking-[0.12em] text-ink/40">
@@ -144,8 +152,11 @@ function Row({
       <span className="min-w-0 flex-1 truncate text-[0.82rem] font-semibold text-ink">
         {row.name}
         {row.matches != null ? (
-          <span className="ml-1.5 font-mono text-[0.58rem] uppercase tracking-[0.1em] text-ink/40">
-            {row.matches} app
+          <span
+            className="ml-1.5 font-mono text-[0.7rem] normal-case tracking-normal text-ink/55"
+            title={`${row.matches} appearances this tournament`}
+          >
+            {row.matches} {row.matches === 1 ? "app" : "apps"}
           </span>
         ) : null}
       </span>

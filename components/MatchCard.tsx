@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Fixture } from "@/lib/types";
 import { mytTime, etTime, getPrediction, overallStrength } from "@/lib/data";
 import { LiveScore, LiveStatusLine } from "./LiveScore";
-import { StrengthMeter, StatusBadge } from "./atoms";
+import { StrengthMeter, StatusBadge, StatAbbr } from "./atoms";
 import { BrainVerdictChip } from "./BrainPanel";
 
 export function MatchCard({ fixture }: { fixture: Fixture }) {
@@ -14,11 +14,14 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
       className="group block rounded-2xl border border-line bg-card/60 p-4 transition-colors hover:border-acid-dim hover:bg-card sm:p-5"
     >
       <div className="mb-3 flex items-center justify-between text-[0.7rem] text-faint">
-        <span className="font-mono uppercase tracking-[0.18em]">
+        <span
+          className="font-mono uppercase tracking-[0.18em]"
+          title="Tournament stage (QF = quarter-final, SF = semi-final) and host city"
+        >
           {fixture.round ?? `Group ${fixture.group}`} · {fixture.city}
         </span>
         <span className="tnum font-mono">
-          {mytTime(fixture.kickoffUTC)} <span className="text-acid-dim">MYT</span>
+          {mytTime(fixture.kickoffUTC)} <StatAbbr code="MYT" className="text-acid-dim" />
         </span>
       </div>
 
@@ -31,12 +34,12 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
         <div className="max-w-[46%] shrink-0 text-right sm:max-w-[50%]">
           {pred ? (
             <div className="flex flex-col items-end space-y-1">
-              <div className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">Pick</div>
+              <div className="font-mono text-[0.7rem] uppercase tracking-wider text-ink/55">Our pick</div>
               <div className="text-balance text-sm font-semibold leading-tight text-acid">{pred.win.pick}</div>
               <StrengthMeter value={overallStrength(pred)} size="sm" />
             </div>
           ) : (
-            <span className="font-mono text-[0.66rem] uppercase tracking-wider text-faint">
+            <span className="font-mono text-[0.7rem] uppercase tracking-wider text-ink/55">
               Prediction soon
             </span>
           )}
@@ -50,7 +53,9 @@ export function MatchCard({ fixture }: { fixture: Fixture }) {
         <div className="flex items-center gap-2">
           {pred && <BrainVerdictChip pred={pred} />}
           {pred && <StatusBadge status={pred.lineups.status} />}
-          <span className="tnum font-mono text-faint">{etTime(fixture.kickoffUTC)} ET</span>
+          <span className="tnum font-mono text-faint">
+            {etTime(fixture.kickoffUTC)} <StatAbbr code="ET" />
+          </span>
         </div>
       </div>
     </Link>

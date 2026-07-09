@@ -1,6 +1,6 @@
 import type { Fixture, Prediction } from "@/lib/types";
 import { getResult, gradePrediction, type Verdict as V } from "@/lib/results";
-import { SectionLabel } from "./atoms";
+import { SectionLabel, Legend } from "./atoms";
 
 /**
  * "How the AI call landed" — renders the model's prediction graded against the
@@ -33,7 +33,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
                 g.hitCount >= 2 ? "bg-acid/15 text-acid" : "bg-card text-muted"
               }`}
             >
-              {g.hitCount} of {g.gradedCount} markets hit
+              {g.hitCount} of {g.gradedCount} predictions correct
             </span>
           )}
         </div>
@@ -43,6 +43,9 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
       </div>
 
       {/* markets graded */}
+      <p className="mb-2.5 text-[0.72rem] leading-snug text-ink/55">
+        Each row is one prediction (result, score, etc.) checked against the real result.
+      </p>
       <ul className="space-y-px overflow-hidden rounded-2xl border border-line">
         {g.markets.map((m) => (
           <li
@@ -50,7 +53,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
             className="flex items-center gap-3 bg-card/50 px-4 py-3 [&:not(:last-child)]:border-b [&:not(:last-child)]:border-line/70"
           >
             <VerdictMark v={m.verdict} />
-            <span className="w-28 shrink-0 font-mono text-[0.66rem] uppercase tracking-wider text-faint sm:w-36">
+            <span className="w-28 shrink-0 font-mono text-[0.72rem] uppercase tracking-wider text-ink/55 sm:w-36">
               {m.label}
             </span>
             <span
@@ -61,7 +64,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
               {m.predicted}
             </span>
             <span className="ml-auto text-right">
-              <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
+              <span className="font-mono text-[0.72rem] uppercase tracking-wider text-ink/50">
                 {m.verdict === "pending" ? "so far" : "actual"}{" "}
               </span>
               <span className="tnum font-semibold text-ink">{m.actual}</span>
@@ -70,11 +73,20 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
         ))}
       </ul>
 
+      {/* what the colours / marks mean */}
+      <Legend
+        items={[
+          { swatch: "acid", term: "Hit — prediction was right" },
+          { swatch: "rose", term: "Miss — prediction was wrong" },
+          { swatch: "muted", term: "Pending — not settled yet" },
+        ]}
+      />
+
       {/* anytime scorers graded */}
       <div className="mt-5">
         <div className="mb-2.5 flex items-baseline justify-between">
           <SectionLabel>Anytime scorers</SectionLabel>
-          <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
+          <span className="font-mono text-[0.72rem] uppercase tracking-wider text-ink/55">
             {scored} of {g.scorers.length} {live ? "scored so far" : "landed"}
           </span>
         </div>
@@ -95,7 +107,7 @@ export function VerdictBlock({ fixture, pred }: { fixture: Fixture; pred: Predic
         </div>
         {g.surprises.length > 0 && (
           <p className="mt-3 text-sm text-muted">
-            <span className="font-mono text-[0.62rem] uppercase tracking-wider text-faint">
+            <span className="font-mono text-[0.72rem] uppercase tracking-wider text-ink/55">
               Also scored ·{" "}
             </span>
             {g.surprises.join(", ")}
