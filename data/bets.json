@@ -17016,6 +17016,65 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863079469257764864",
+      "slipNo": "863079469257764864",
+      "matchId": "fra-mar-2026-07-09",
+      "player": "—",
+      "market": "Same-match parlay · 8 legs · shots x3 + U5.5 + qualify + Mbappe + BTTS + Olise S/A",
+      "label": "REAL 1xBet slip 863079469257764864 (09/07) — 8-leg same-match parlay on FRA-MAR @16.64, RM170 -> RM2,828.80. SHARED: Rj + Tharma, RM85 each. Legs: Rabiot Over 0.5 shots · Total Under 5.5 · France To Qualify · Mbappe anytime scorer · Hakimi Over 0.5 shots · Ounahi Over 0.5 shots · BTTS Yes · Olise to score or assist.",
+      "odds": 16.64,
+      "stake": 170,
+      "placedAt": "09/07",
+      "punter": "Rj + Tharma · RM85 each",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Achraf Hakimi",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Azzedine Ounahi",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "btts"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Michael Olise"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
