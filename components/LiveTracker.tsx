@@ -508,6 +508,13 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
           <MiniStat label="On tgt" h={stats.sot.home} a={stats.sot.away} />
           <MiniStat label="Corners" h={stats.corners.home} a={stats.corners.away} />
           <MiniStat label="Shots" h={stats.shots.home} a={stats.shots.away} />
+          {stats.tempo && (
+            <>
+              <MiniStat label="Tackles" h={stats.tempo.tackles.home} a={stats.tempo.tackles.away} />
+              <MiniStat label="Blocks" h={stats.tempo.blockedShots.home} a={stats.tempo.blockedShots.away} />
+              <MiniStat label="Saves" h={stats.tempo.saves.home} a={stats.tempo.saves.away} />
+            </>
+          )}
           {stats.fouls && <MiniStat label="Fouls" h={stats.fouls.home} a={stats.fouls.away} />}
           <MiniStat label="Cards" h={stats.cards.home} a={stats.cards.away} />
         </div>
@@ -1182,11 +1189,10 @@ function GoalLog({ live, m }: { live: LiveMatch; m: MatchRow }) {
   );
 }
 
-/** Verified ESPN counts (corners / on-target / shots / cards) for a match. */
-function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
-  const s = live.stats;
-  if (!s) return null;
-  const Cell = ({ label, h, a, sub }: { label: string; h: number; a: number; sub?: string }) => (
+/** One home–away count cell in the StatLine strip. Module-scope (not inline in
+ *  StatLine) so React doesn't remount it — and lint doesn't flag it — per render. */
+function Cell({ label, h, a, sub }: { label: string; h: number; a: number; sub?: string }) {
+  return (
     <span className="inline-flex items-baseline gap-1.5">
       <span className="text-faint uppercase tracking-wider">{label}</span>
       <span className="text-acid tnum">{h}</span>
@@ -1195,6 +1201,12 @@ function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
       {sub && <span className="text-faint">{sub}</span>}
     </span>
   );
+}
+
+/** Verified ESPN counts (corners / on-target / shots / cards) for a match. */
+function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
+  const s = live.stats;
+  if (!s) return null;
   const yel = s.yellow.home + s.yellow.away;
   const red = s.red.home + s.red.away;
   return (
@@ -1205,6 +1217,13 @@ function StatLine({ live, m }: { live: LiveMatch; m: MatchRow }) {
       <Cell label="Corners" h={s.corners.home} a={s.corners.away} />
       <Cell label="On target" h={s.sot.home} a={s.sot.away} />
       <Cell label="Shots" h={s.shots.home} a={s.shots.away} />
+      {s.tempo && (
+        <>
+          <Cell label="Tackles" h={s.tempo.tackles.home} a={s.tempo.tackles.away} />
+          <Cell label="Blocks" h={s.tempo.blockedShots.home} a={s.tempo.blockedShots.away} />
+          <Cell label="Saves" h={s.tempo.saves.home} a={s.tempo.saves.away} />
+        </>
+      )}
       {s.fouls && <Cell label="Fouls" h={s.fouls.home} a={s.fouls.away} />}
       <Cell label="Cards" h={s.cards.home} a={s.cards.away} sub={`(${yel}Y ${red}R)`} />
     </div>
