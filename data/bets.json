@@ -16979,6 +16979,43 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863077516947718145",
+      "slipNo": "863077516947718145",
+      "matchId": "fra-mar-2026-07-09",
+      "player": "—",
+      "market": "Same-match parlay · Over 0.5 + France to qualify + Under 5.5 + Mbappe anytime",
+      "label": "REAL 1xBet slip 863077516947718145 (09/07 23:21) — same-match parlay on FRA-MAR @2.10, RM60 -> RM126. Legs: Total Goals Over 0.5 · France To Qualify (any means incl. ET/pens) · Total Goals Under 5.5 · Kylian Mbappe anytime scorer.",
+      "odds": 2.1,
+      "stake": 60,
+      "placedAt": "09/07 23:21",
+      "punter": "Suriyati",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
