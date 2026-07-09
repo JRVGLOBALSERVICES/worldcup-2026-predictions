@@ -1,11 +1,19 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T21:20:52.557Z",
+    "generatedAt": "2026-07-09T21:30:12.894Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 80
   },
   "categories": {
     "scorers": [
+      {
+        "rank": 1,
+        "name": "Kylian Mbappé",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 8,
+        "matches": 5
+      },
       {
         "rank": 1,
         "name": "Lionel Messi",
@@ -15,20 +23,12 @@
         "matches": 5
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Erling Haaland",
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 7,
         "matches": 4
-      },
-      {
-        "rank": 2,
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 7,
-        "matches": 5
       },
       {
         "rank": 4,
@@ -216,23 +216,23 @@
     "yellowCards": [
       {
         "rank": 1,
+        "name": "Issa Diop",
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 3
+      },
+      {
+        "rank": 2,
         "name": "Declan Rice",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 2
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Granit Xhaka",
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 2
-      },
-      {
-        "rank": 1,
-        "name": "Issa Diop",
-        "team": "Morocco",
-        "flag": "🇲🇦",
         "value": 2
       },
       {
@@ -431,6 +431,14 @@
       },
       {
         "rank": 4,
+        "name": "Dayot Upamecano",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 13,
+        "matches": 6
+      },
+      {
+        "rank": 4,
         "name": "Jules Koundé",
         "team": "France",
         "flag": "🇫🇷",
@@ -446,15 +454,7 @@
         "matches": 5
       },
       {
-        "rank": 7,
-        "name": "Dayot Upamecano",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 12,
-        "matches": 6
-      },
-      {
-        "rank": 7,
+        "rank": 8,
         "name": "Jude Bellingham",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -673,8 +673,8 @@
         "rank": 5,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 88,
-        "display": "88.0%",
+        "value": 87.8,
+        "display": "87.8%",
         "matches": 5
       },
       {
@@ -715,8 +715,8 @@
         "rank": 2,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 60.7,
-        "display": "60.7%",
+        "value": 60.5,
+        "display": "60.5%",
         "matches": 5
       },
       {
@@ -731,8 +731,8 @@
         "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 58.7,
-        "display": "58.7%",
+        "value": 58.9,
+        "display": "58.9%",
         "matches": 6
       },
       {
@@ -795,19 +795,19 @@
       },
       {
         "rank": 4,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 42.3,
+        "display": "42.3%",
+        "matches": 6
+      },
+      {
+        "rank": 4,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 42.3,
         "display": "42.3%",
         "matches": 5
-      },
-      {
-        "rank": 5,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 42.2,
-        "display": "42.2%",
-        "matches": 6
       },
       {
         "rank": 6,
@@ -855,8 +855,8 @@
         "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 66.3,
-        "display": "66.3%",
+        "value": 66.7,
+        "display": "66.7%",
         "matches": 6
       },
       {
@@ -953,8 +953,8 @@
         "rank": 7,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 17.9,
-        "display": "17.9%",
+        "value": 17.3,
+        "display": "17.3%",
         "matches": 6
       },
       {
@@ -987,8 +987,8 @@
         "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 51.6,
-        "display": "51.6%",
+        "value": 52.2,
+        "display": "52.2%",
         "matches": 6
       },
       {
@@ -1027,8 +1027,8 @@
         "rank": 8,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 37,
-        "display": "37.0%",
+        "value": 36.5,
+        "display": "36.5%",
         "matches": 5
       }
     ]
@@ -1040,7 +1040,7 @@
       "scorers": [
         {
           "name": "Kylian Mbappé",
-          "value": 7,
+          "value": 8,
           "matches": 5
         },
         {
@@ -2376,7 +2376,7 @@
       "yellowCards": [
         {
           "name": "Issa Diop",
-          "value": 2
+          "value": 3
         },
         {
           "name": "Achraf Hakimi",
@@ -4683,11 +4683,11 @@
         {
           "name": "Kylian Mbappé",
           "apps": 6,
-          "goals": 7,
+          "goals": 8,
           "assists": 2,
           "tackles": 1,
           "blocks": 2,
-          "passes": 177,
+          "passes": 182,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4702,7 +4702,7 @@
           "assists": 2,
           "tackles": 3,
           "blocks": 5,
-          "passes": 219,
+          "passes": 225,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4729,10 +4729,10 @@
           "name": "Désiré Doué",
           "apps": 6,
           "goals": 1,
-          "assists": 0,
+          "assists": 1,
           "tackles": 7,
           "blocks": 2,
-          "passes": 152,
+          "passes": 160,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4747,7 +4747,7 @@
           "assists": 5,
           "tackles": 6,
           "blocks": 6,
-          "passes": 307,
+          "passes": 311,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4762,7 +4762,7 @@
           "assists": 1,
           "tackles": 3,
           "blocks": 1,
-          "passes": 285,
+          "passes": 290,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4786,13 +4786,13 @@
           "gk": false
         },
         {
-          "name": "Jules Koundé",
+          "name": "Dayot Upamecano",
           "apps": 6,
           "goals": 0,
           "assists": 0,
           "tackles": 13,
-          "blocks": 2,
-          "passes": 281,
+          "blocks": 1,
+          "passes": 366,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4801,13 +4801,13 @@
           "gk": false
         },
         {
-          "name": "Dayot Upamecano",
+          "name": "Jules Koundé",
           "apps": 6,
           "goals": 0,
           "assists": 0,
-          "tackles": 12,
-          "blocks": 1,
-          "passes": 360,
+          "tackles": 13,
+          "blocks": 2,
+          "passes": 282,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4822,7 +4822,7 @@
           "assists": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 130,
+          "passes": 131,
           "saves": 8,
           "yellow": 0,
           "red": 0,
@@ -4837,7 +4837,7 @@
           "assists": 0,
           "tackles": 2,
           "blocks": 0,
-          "passes": 304,
+          "passes": 309,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4867,7 +4867,7 @@
           "assists": 0,
           "tackles": 7,
           "blocks": 2,
-          "passes": 230,
+          "passes": 233,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4882,7 +4882,7 @@
           "assists": 0,
           "tackles": 5,
           "blocks": 0,
-          "passes": 187,
+          "passes": 193,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5003,7 +5003,7 @@
       "players": [
         {
           "name": "Soufiane Rahimi",
-          "apps": 4,
+          "apps": 5,
           "goals": 3,
           "assists": 1,
           "tackles": 2,
@@ -5038,7 +5038,7 @@
           "assists": 0,
           "tackles": 3,
           "blocks": 1,
-          "passes": 247,
+          "passes": 253,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5053,7 +5053,7 @@
           "assists": 2,
           "tackles": 6,
           "blocks": 3,
-          "passes": 330,
+          "passes": 333,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5068,7 +5068,7 @@
           "assists": 1,
           "tackles": 2,
           "blocks": 1,
-          "passes": 41,
+          "passes": 42,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5083,9 +5083,9 @@
           "assists": 0,
           "tackles": 1,
           "blocks": 0,
-          "passes": 271,
+          "passes": 276,
           "saves": 0,
-          "yellow": 2,
+          "yellow": 3,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -5113,7 +5113,7 @@
           "assists": 4,
           "tackles": 4,
           "blocks": 2,
-          "passes": 139,
+          "passes": 142,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5143,7 +5143,7 @@
           "assists": 0,
           "tackles": 13,
           "blocks": 0,
-          "passes": 369,
+          "passes": 374,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5158,7 +5158,7 @@
           "assists": 0,
           "tackles": 10,
           "blocks": 0,
-          "passes": 202,
+          "passes": 203,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5173,7 +5173,7 @@
           "assists": 0,
           "tackles": 8,
           "blocks": 0,
-          "passes": 199,
+          "passes": 201,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5188,7 +5188,7 @@
           "assists": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 146,
+          "passes": 149,
           "saves": 9,
           "yellow": 0,
           "red": 0,
@@ -5233,7 +5233,7 @@
           "assists": 0,
           "tackles": 7,
           "blocks": 1,
-          "passes": 135,
+          "passes": 138,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5243,12 +5243,12 @@
         },
         {
           "name": "Sofyan Amrabat",
-          "apps": 2,
+          "apps": 3,
           "goals": 0,
           "assists": 0,
           "tackles": 2,
           "blocks": 0,
-          "passes": 80,
+          "passes": 83,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -33134,27 +33134,32 @@
             "team": "France"
           }
         ],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Désiré Doué",
+            "team": "France"
+          }
+        ],
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 49.8,
-            "accuratePasses": 296,
-            "totalPasses": 333,
-            "shotsOnTarget": 4,
-            "totalShots": 14,
-            "effectiveTackles": 6,
-            "totalTackles": 7,
+            "possessionPct": 51,
+            "accuratePasses": 342,
+            "totalPasses": 383,
+            "shotsOnTarget": 5,
+            "totalShots": 16,
+            "effectiveTackles": 7,
+            "totalTackles": 8,
             "accurateCrosses": 4,
-            "totalCrosses": 6,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 19
+            "totalCrosses": 9,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 22
           },
           {
             "team": "Morocco",
-            "possessionPct": 50.2,
-            "accuratePasses": 284,
-            "totalPasses": 336,
+            "possessionPct": 49,
+            "accuratePasses": 309,
+            "totalPasses": 371,
             "shotsOnTarget": 0,
             "totalShots": 2,
             "effectiveTackles": 6,
@@ -33162,7 +33167,7 @@
             "accurateCrosses": 0,
             "totalCrosses": 5,
             "accurateLongBalls": 8,
-            "totalLongBalls": 31
+            "totalLongBalls": 34
           }
         ],
         "players": [
@@ -33175,7 +33180,7 @@
             "sv": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 9
           },
           {
             "n": "William Saliba",
@@ -33184,16 +33189,16 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 49
+            "ps": 54
           },
           {
             "n": "Dayot Upamecano",
             "t": "France",
             "aid": "222793",
             "tid": "478",
-            "tk": 1,
+            "tk": 2,
             "bk": 0,
-            "ps": 44
+            "ps": 50
           },
           {
             "n": "Lucas Digne",
@@ -33202,7 +33207,7 @@
             "tid": "478",
             "tk": 1,
             "bk": 0,
-            "ps": 31
+            "ps": 37
           },
           {
             "n": "Jules Koundé",
@@ -33211,7 +33216,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 1,
-            "ps": 25
+            "ps": 26
           },
           {
             "n": "Michael Olise",
@@ -33220,7 +33225,7 @@
             "tid": "478",
             "tk": 1,
             "bk": 1,
-            "ps": 36
+            "ps": 40
           },
           {
             "n": "Adrien Rabiot",
@@ -33229,7 +33234,7 @@
             "tid": "478",
             "tk": 1,
             "bk": 0,
-            "ps": 33
+            "ps": 38
           },
           {
             "n": "Manu Koné",
@@ -33238,7 +33243,7 @@
             "tid": "478",
             "tk": 1,
             "bk": 1,
-            "ps": 32
+            "ps": 35
           },
           {
             "n": "Kylian Mbappé",
@@ -33247,7 +33252,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 22
+            "ps": 27
           },
           {
             "n": "Désiré Doué",
@@ -33256,7 +33261,7 @@
             "tid": "478",
             "tk": 2,
             "bk": 1,
-            "ps": 31
+            "ps": 39
           },
           {
             "n": "Ousmane Dembélé",
@@ -33265,7 +33270,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 1,
-            "ps": 22
+            "ps": 28
           },
           {
             "n": "Yassine Bounou",
@@ -33276,7 +33281,7 @@
             "sv": 4,
             "tk": 0,
             "bk": 0,
-            "ps": 26
+            "ps": 29
           },
           {
             "n": "Noussair Mazraoui",
@@ -33285,7 +33290,7 @@
             "tid": "2869",
             "tk": 0,
             "bk": 0,
-            "ps": 27
+            "ps": 29
           },
           {
             "n": "Issa Diop",
@@ -33294,7 +33299,7 @@
             "tid": "2869",
             "tk": 1,
             "bk": 0,
-            "ps": 36
+            "ps": 41
           },
           {
             "n": "Anass Salah-Eddine",
@@ -33303,7 +33308,7 @@
             "tid": "2869",
             "tk": 3,
             "bk": 0,
-            "ps": 33
+            "ps": 36
           },
           {
             "n": "Achraf Hakimi",
@@ -33312,7 +33317,7 @@
             "tid": "2869",
             "tk": 1,
             "bk": 0,
-            "ps": 35
+            "ps": 38
           },
           {
             "n": "Azzedine Ounahi",
@@ -33321,7 +33326,7 @@
             "tid": "2869",
             "tk": 2,
             "bk": 0,
-            "ps": 39
+            "ps": 45
           },
           {
             "n": "Neil El Aynaoui",
@@ -33330,7 +33335,7 @@
             "tid": "2869",
             "tk": 1,
             "bk": 0,
-            "ps": 37
+            "ps": 42
           },
           {
             "n": "Ayyoub Bouaddi",
@@ -33348,7 +33353,7 @@
             "tid": "2869",
             "tk": 3,
             "bk": 0,
-            "ps": 25
+            "ps": 26
           },
           {
             "n": "Chemsdine Talbi",
@@ -33357,7 +33362,7 @@
             "tid": "2869",
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 17
           },
           {
             "n": "Brahim Díaz",
@@ -33366,7 +33371,25 @@
             "tid": "2869",
             "tk": 1,
             "bk": 1,
-            "ps": 22
+            "ps": 25
+          },
+          {
+            "n": "Sofyan Amrabat",
+            "t": "Morocco",
+            "aid": "195226",
+            "tid": "2869",
+            "tk": 0,
+            "bk": 0,
+            "ps": 3
+          },
+          {
+            "n": "Soufiane Rahimi",
+            "t": "Morocco",
+            "aid": "276139",
+            "tid": "2869",
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T21:20:45.585Z",
+    "generatedAt": "2026-07-09T21:30:08.245Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 76,
     "live": 1
@@ -90507,12 +90507,28 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "advanced": null,
-      "goals": [],
-      "cards": [],
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 59,
+          "assist": "Désiré Doué",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Issa Diop",
+          "minute": 63,
+          "type": "yellow"
+        }
+      ],
       "updatedAt": "2026-07-09T20:00:00.000Z",
       "stats": {
         "corners": {
@@ -90520,16 +90536,16 @@
           "away": 2
         },
         "sot": {
-          "home": 4,
+          "home": 5,
           "away": 0
         },
         "shots": {
-          "home": 14,
+          "home": 16,
           "away": 2
         },
         "yellow": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "red": {
           "home": 0,
@@ -90537,11 +90553,11 @@
         },
         "cards": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fouls": {
-          "home": 6,
-          "away": 7
+          "home": 7,
+          "away": 8
         },
         "cornersByHalf": {
           "home": [
@@ -90568,7 +90584,7 @@
           "Désiré Doué": 2
         },
         "playerShots": {
-          "Kylian Mbappé": 1,
+          "Kylian Mbappé": 3,
           "Dayot Upamecano": 1,
           "Désiré Doué": 3,
           "Ousmane Dembélé": 3,
@@ -90583,11 +90599,11 @@
         "playerShotBreakdown": {
           "Kylian Mbappé": {
             "team": "home",
-            "shots": 1,
-            "sot": 0,
-            "off": 1,
+            "shots": 3,
+            "sot": 1,
+            "off": 2,
             "blocked": 0,
-            "goals": 0
+            "goals": 1
           },
           "Dayot Upamecano": {
             "team": "home",
@@ -90732,7 +90748,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 41
+            "ps": 44
           },
           {
             "team": "home",
@@ -90765,7 +90781,7 @@
             "a": 0,
             "sh": 1,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -90812,7 +90828,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 32
+            "ps": 33
           },
           {
             "team": "home",
@@ -90841,12 +90857,12 @@
             "num": 10,
             "starter": true,
             "aid": "231388",
-            "g": 0,
+            "g": 1,
             "a": 0,
-            "sh": 2,
-            "sot": 1,
+            "sh": 4,
+            "sot": 2,
             "fc": 0,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -90862,7 +90878,7 @@
             "starter": true,
             "aid": "336388",
             "g": 0,
-            "a": 0,
+            "a": 1,
             "sh": 3,
             "sot": 2,
             "fc": 2,
@@ -90912,7 +90928,7 @@
             "rc": 0,
             "off": 0,
             "sv": 4,
-            "gc": 0,
+            "gc": 1,
             "tk": 0,
             "bk": 0,
             "ps": 26
@@ -90948,9 +90964,9 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
-            "yc": 0,
+            "yc": 1,
             "rc": 0,
             "off": 0,
             "tk": 1,
@@ -91116,10 +91132,59 @@
             "tk": 1,
             "bk": 1,
             "ps": 22
+          },
+          {
+            "team": "away",
+            "name": "Sofyan Amrabat",
+            "pos": "SUB",
+            "num": 4,
+            "starter": false,
+            "aid": "195226",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Soufiane Rahimi",
+            "pos": "SUB",
+            "num": 9,
+            "starter": false,
+            "aid": "276139",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           }
         ],
-        "subs": [],
-        "firstGoalMethod": null,
+        "subs": [
+          {
+            "team": "away",
+            "minute": 61,
+            "on": "Soufiane Rahimi",
+            "off": "Bilal El Khannouss",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 61,
+            "on": "Sofyan Amrabat",
+            "off": "Ayyoub Bouaddi",
+            "injury": false
+          }
+        ],
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
@@ -91135,15 +91200,15 @@
         },
         "tempo": {
           "possession": {
-            "home": 49.8,
-            "away": 50.2
+            "home": 51,
+            "away": 49
           },
           "passes": {
-            "home": 333,
-            "away": 336
+            "home": 383,
+            "away": 371
           },
           "tackles": {
-            "home": 7,
+            "home": 8,
             "away": 13
           },
           "saves": {
@@ -91159,26 +91224,26 @@
             "away": 1
           },
           "interceptions": {
-            "home": 6,
+            "home": 8,
             "away": 6
           },
           "clearances": {
-            "home": 9,
-            "away": 8
+            "home": 12,
+            "away": 9
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "6",
-            "away": "7"
+            "home": "7",
+            "away": "8"
           },
           {
             "key": "yellowCards",
             "label": "Yellow Cards",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "redCards",
@@ -91207,19 +91272,19 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "49.8",
-            "away": "50.2"
+            "home": "51",
+            "away": "49"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "14",
+            "home": "16",
             "away": "2"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
-            "home": "4",
+            "home": "5",
             "away": "0"
           },
           {
@@ -91243,14 +91308,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "296",
-            "away": "284"
+            "home": "342",
+            "away": "309"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "333",
-            "away": "336"
+            "home": "383",
+            "away": "371"
           },
           {
             "key": "passPct",
@@ -91267,32 +91332,32 @@
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "6",
+            "home": "9",
             "away": "5"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
-            "home": "0.7",
+            "home": "0.4",
             "away": "0.0"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "19",
-            "away": "31"
+            "home": "22",
+            "away": "34"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "9",
+            "home": "12",
             "away": "8"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
             "home": "0.5",
-            "away": "0.3"
+            "away": "0.2"
           },
           {
             "key": "blockedShots",
@@ -91303,13 +91368,13 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "6",
+            "home": "7",
             "away": "6"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "7",
+            "home": "8",
             "away": "13"
           },
           {
@@ -91321,25 +91386,25 @@
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "6",
+            "home": "8",
             "away": "6"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "9",
-            "away": "8"
+            "home": "12",
+            "away": "9"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "9",
-            "away": "8"
+            "home": "12",
+            "away": "9"
           }
         ],
         "playerTackles": {
-          "Dayot Upamecano": 1,
-          "Achraf Hakimi": 1
+          "Achraf Hakimi": 1,
+          "Dayot Upamecano": 2
         }
       }
     }
