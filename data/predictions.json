@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T19:08:09.000Z",
+    "generatedAt": "2026-07-09T19:10:08.621Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-09T17:50:09.067Z"
+    "modelUpdatedAt": "2026-07-09T19:10:08.619Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -23016,90 +23016,89 @@
       ],
       "pitchReport": {
         "facts": [
-          "France: 5/5 wins, Golden Boot leader Mbappé on 7 goals; full attack named (Doué in for Barcola).",
-          "Morocco: unbeaten run (beat the Netherlands on pens in the R32) but field NO recognised striker.",
-          "Saibari (hamstring, their in-form scorer), Rahimi (benched), Halhal (dropped) and Riad (knee) all absent from Morocco's XI.",
-          "2022 semi-final: France beat Morocco 2-0 despite less of the ball — the clinical-in-the-box template."
+          "France: 9 pts, +8 GD across 3 group games (10 for / 2 against).",
+          "Morocco: 7 pts, +3 GD across 3 group games (6 for / 3 against).",
+          "France's Kylian Mbappé leads them with 7 goals in 5 games.",
+          "Morocco's Ismael Saibari leads them with 3 goals in 5 games."
         ],
         "assumptions": [
-          "Morocco set up as a deep block + counter through Hakimi overlaps and Talbi pace, false-nine front (Díaz/Ounahi/El Khannouss).",
-          "Goal expectancy ~1.9–0.9 (France–Morocco): France's cutting edge vs a compact, striker-less side that should create little in open play."
+          "Model projects France to carry more of the ball and the better chances (higher attack rating); Morocco to sit compact and play on the break.",
+          "Goal expectancy 2.3–1.0 (France–Morocco) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "BOTH XIs CONFIRMED. France 4-2-3-1: Maignan; Koundé, Upamecano, Saliba, Digne; Koné, Rabiot; Dembélé, Olise, Doué; Mbappé. Morocco strikerless: Bounou; Hakimi, Diop, Mazraoui, Salah-Eddine; El Aynaoui, Bouaddi; Talbi, Díaz, El Khannouss; Ounahi false-9.",
-        "motivation": "Knockout — win or out. Morocco's strikerless block accepts a cagey, low-goal game and backs itself on transitions/set-pieces and, if needed, a shootout (they already beat the Dutch on pens).",
-        "xgRead": "France shade chance-creation comfortably; Morocco's ceiling is lowered without a No.9, so their goal is likelier from a Hakimi set-piece (Diop header) or a Talbi/Hakimi counter than sustained pressure.",
-        "drawRisk": "Real — a strikerless low block vs a possession favourite is the classic out-xG / stalemate trap; give the draw, DNB and under-2.5 genuine weight and downgrade France win-to-nil/correct-score.",
-        "travel": "Temperate Foxborough venue — neutral conditions; quality decides it.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "France shade the chance-creation (2.3 vs 1.0 xG) — they should make the running.",
+        "drawRisk": "Moderate — 18.6% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
         "caseFor": [
-          "France name their strongest attack and are the model's ~60% pick with the tournament's best scorer and creator.",
-          "Morocco carry NO recognised striker — their box presence and open-play ceiling are lowered.",
-          "2022 semi shows France can win this profile of game on fewer touches."
+          "France are the model's 65.3% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Kylian Mbappé carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
         ],
         "caseAgainst": [
-          "Strikerless deep block + counter = a real draw/under trap; Morocco already knocked out the Netherlands.",
-          "Bounou, Diop and Morocco's organisation can frustrate; ~60% is not certainty — draw+underdog is ~40%."
+          "18.6% draw + Morocco's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; France's number may be inflated by one result."
         ],
         "verdict": "Bet",
-        "changeMind": "Already priced the confirmed XIs in. A very early France goal would kill the draw angle; an hour of 0-0 amplifies it toward extra time."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
         "flags": [
           {
             "name": "Favourite on reputation / at a poor price",
-            "tripped": false,
-            "why": "Model call, not name value — but no live price to confirm value."
+            "why": "Not priced — can't confirm the favourite is good value."
           },
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — France name their strongest XI; no rotation."
+            "why": "Knockout — both name strongest XI, no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
             "tripped": false,
-            "why": "France's scoring is spread across the run, not one rout."
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": true,
-            "why": "Morocco field NO striker and sit deep — a low-goal, draw-leaning script is live."
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "BOTH XIs now confirmed — scorer/lineup props are locked to the real starters."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
-            "tripped": true,
-            "why": "Strikerless block vs possession favourite is the out-xG/stalemate profile — the draw earns weight."
+            "tripped": false,
+            "why": "Draw chance (18.6%) is low enough to discount."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model read — no tilt. (Only you can answer this for your own stake.)"
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 2,
+        "trapsTripped": 0,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
-        "discipline": "France are better, but a strikerless low block is built to produce few goals — respect the draw, fade the win-to-nil/correct-score, and never chase goals here."
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "PLAYABLE",
-        "call": "France to win, but respect the draw against a strikerless block.",
+        "call": "France to win is a clean call.",
         "read": {
           "tag": "Bet",
-          "line": "France ~60% with their full attack; Morocco field no striker."
+          "line": "France are the model's 65% pick."
         },
         "price": {
-          "tag": "Model-only",
-          "line": "No live market yet — a model call off the confirmed XIs."
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "Strikerless deep-block Morocco is a genuine draw/under trap — don't overpay France or the win-to-nil."
+          "tag": "Clean",
+          "line": "Nothing trips the filter — about as solid as a call gets."
         }
       },
       "resolution": {
@@ -23109,7 +23108,7 @@
         "mostLikely": "Regulation",
         "etWinner": "France",
         "shootout": "Near coin-flip, with the marginal nerve edge to France.",
-        "note": "Most likely settled in regulation, but a strikerless Morocco block raises extra-time/shootout risk — and they already won one shootout this tournament (vs the Netherlands)."
+        "note": "Most likely settled inside 90 (81.4%). But a 18.6% level 90 keeps extra time (10.8%) and penalties (7.8%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "nor-eng-2026-07-11": {
