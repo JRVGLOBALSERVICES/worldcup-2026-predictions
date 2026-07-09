@@ -42,8 +42,8 @@ export function ThemeToggle() {
       className="group inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-line text-faint transition-colors hover:border-acid-dim hover:text-acid"
     >
       {/* Sun when dark (tap → light) · Moon when light (tap → dark). Before mount,
-       * show the moon (matches the light default) so there's no visible swap. */}
-      {mounted && dark ? (
+       * show the sun (matches the broadcast-night default) so there's no swap. */}
+      {(mounted ? dark : true) ? (
         <svg viewBox="0 0 24 24" fill="none" className="size-4" aria-hidden>
           <circle cx="12" cy="12" r="4" fill="currentColor" />
           <g stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">

@@ -38,17 +38,18 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-/* Light is the default surface; the dark toggle repaints the chrome bar to ink. */
+/* Broadcast-night is the default surface; the light toggle repaints to newsprint. */
 export const viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f1ea" },
+    { media: "(prefers-color-scheme: light)", color: "#0d1020" },
     { media: "(prefers-color-scheme: dark)", color: "#0d1020" },
   ],
 };
 
-/* Runs before first paint: apply the saved theme so there's no light→dark flash
- * on reload. Light is the default — dark is applied ONLY when explicitly saved. */
-const THEME_INIT = `(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
+/* Runs before first paint: apply the saved theme so there's no flash on reload.
+ * Broadcast-night (dark) is the default — light is applied ONLY when explicitly
+ * saved via the toggle. Add `.dark` unless the visitor has opted into light. */
+const THEME_INIT = `(function(){try{if(localStorage.getItem('theme')!=='light'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

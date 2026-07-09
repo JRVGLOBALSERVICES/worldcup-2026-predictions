@@ -159,11 +159,50 @@
       radial-gradient(115% 62% at 50% -12%, var(--color-bloom), transparent 58%),
       linear-gradient(180deg, oklch(0.985 0.006 85), var(--color-pitch) 46%);
   }
-  /* DARK: the original cool lime whisper at the crown settling into deep ink. */
+  /* DARK: broadcast-night — twin stadium floodlights raking in from the top
+   * corners (cool-white + a lime cast), a deep ink field, and a settled vignette
+   * at the foot. This is the atmospheric depth the flat gradient lacked; it reads
+   * as a lit stadium bowl at night rather than a flat dark panel. */
   :root.dark body::before {
     background:
-      radial-gradient(115% 65% at 50% -12%, var(--color-bloom), transparent 58%),
-      linear-gradient(180deg, oklch(0.175 0.02 265), var(--color-pitch) 42%);
+      radial-gradient(60% 45% at 8% -8%, oklch(0.86 0.02 230 / 0.10), transparent 60%),
+      radial-gradient(60% 45% at 92% -8%, var(--color-bloom), transparent 60%),
+      radial-gradient(120% 80% at 50% 120%, oklch(0.10 0.02 265 / 0.9), transparent 55%),
+      linear-gradient(180deg, oklch(0.185 0.021 265), var(--color-pitch) 46%);
+  }
+  /* Film grain — a fixed, click-through noise field laid over the WHOLE page so
+   * surfaces stop reading as flat vector fills (the single biggest "AI-slop"
+   * tell the references dodge). SVG fractal-noise data-URI, blended soft, whisper
+   * opacity; pointer-events:none so it never eats a click. This is the tactile
+   * texture layer — present in every reference (Colon's metal grain, Genesis's
+   * cinematic dither), absent from the old build. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 2147483000;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 140px 140px;
+  }
+  :root.dark body::after {
+    opacity: 0.075;
+    mix-blend-mode: soft-light;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    /* the grain drifts a hair so it never looks like a frozen JPEG texture */
+    body::after {
+      animation: grain-drift 7s steps(6) infinite;
+    }
+  }
+  @keyframes grain-drift {
+    0%, 100% { transform: translate(0, 0); }
+    20% { transform: translate(-4%, 3%); }
+    40% { transform: translate(3%, -5%); }
+    60% { transform: translate(-3%, 4%); }
+    80% { transform: translate(4%, -2%); }
   }
   ::selection {
     background: var(--color-acid);
@@ -508,6 +547,80 @@
   width: 3px;
   border-radius: 2px;
   background: var(--color-acid);
+}
+
+/* Halftone dot screen — the printed-programme / broadcast-graphics dot texture
+ * (Colon's ⣿ motif). A tiled radial-dot pattern used as a faint overlay on the
+ * masthead so the display band reads as ink-on-press, not a flat fill. Masked to
+ * fade top→bottom so it never fights the type. */
+.halftone {
+  position: relative;
+  isolation: isolate;
+}
+.halftone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(var(--color-ink) 0.9px, transparent 1px);
+  background-size: 7px 7px;
+  opacity: 0.05;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+}
+:root.dark .halftone::before {
+  background-image: radial-gradient(var(--color-acid) 0.9px, transparent 1px);
+  opacity: 0.08;
+}
+
+/* Floodlight band — twin stadium-light cones raking down into a display band
+ * (the masthead / a hero). Cool-white left, lime-cast right, so the dark band
+ * looks LIT rather than filled. Sits behind the band's content. */
+.floodlit {
+  position: relative;
+  isolation: isolate;
+}
+.floodlit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(80% 120% at 12% -20%, oklch(0.9 0.02 230 / 0.10), transparent 55%),
+    radial-gradient(80% 120% at 88% -20%, var(--color-bloom-acid), transparent 55%);
+}
+:root:not(.dark) .floodlit::after {
+  background:
+    radial-gradient(80% 120% at 12% -20%, oklch(0.55 0.12 142 / 0.05), transparent 55%),
+    radial-gradient(80% 120% at 88% -20%, oklch(0.55 0.12 142 / 0.05), transparent 55%);
+}
+
+/* On-air sweep — an electric accent line that wipes across under the hero title,
+ * the broadcast "we're live" tell. A thin acid bar with a travelling highlight. */
+.onair-sweep {
+  position: relative;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-acid) 20%, var(--color-acid) 80%, transparent);
+  overflow: hidden;
+}
+.onair-sweep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.9), transparent);
+  width: 40%;
+  transform: translateX(-120%);
+  animation: onair-wipe 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .onair-sweep::after { animation: none; opacity: 0; }
+}
+@keyframes onair-wipe {
+  0% { transform: translateX(-120%); }
+  55%, 100% { transform: translateX(320%); }
 }
 
 /* Broadcast channel-strip nav — the active tab carries a bottom accent rail, the

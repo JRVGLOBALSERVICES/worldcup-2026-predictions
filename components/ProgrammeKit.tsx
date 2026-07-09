@@ -25,16 +25,18 @@ export function Masthead({
   meta?: string;
 }) {
   return (
-    <div className="stripes surface-2 overflow-hidden rounded-3xl border border-line">
+    <div className="floodlit surface-2 overflow-hidden rounded-3xl border border-line">
       {/* fixture-board strip — the scoreboard info rail, cells split by grooves */}
       <div className="board-strip flex items-stretch justify-between border-b border-line/70 font-mono text-[0.6rem] uppercase tracking-[0.22em]">
-        <span className="flex items-center gap-2 px-4 py-2.5 sm:px-7">
-          <span className="flap px-1.5 py-0.5 text-[0.7rem]" aria-hidden>
-            ⚽
+        <span className="flex items-center gap-2.5 px-4 py-2.5 sm:px-7">
+          {/* ON AIR bug — the broadcast "we're live" tell replacing the tofu ball */}
+          <span className="live-bug size-1.5" aria-hidden>
+            <span className="size-1.5 rounded-full bg-acid" />
           </span>
-          <span className="text-faint/70">Official Programme</span>
+          <span className="font-bold text-acid">On Air</span>
+          <span className="hidden text-faint/60 sm:inline">· Official Programme</span>
         </span>
-        <span className="flex items-center px-4 py-2.5 text-acid sm:px-7">{edition}</span>
+        <span className="flex items-center px-4 py-2.5 text-ink sm:px-7">{edition}</span>
         {meta ? (
           <span className="hidden items-center px-4 py-2.5 text-faint/70 sm:flex sm:px-7">
             {meta}
@@ -42,22 +44,16 @@ export function Masthead({
         ) : null}
       </div>
 
-      {/* masthead body — stadium-bold display lock-up */}
-      <div className="px-5 py-9 text-center sm:px-8 sm:py-14">
-        <p className="mb-4 font-mono text-[0.66rem] uppercase tracking-[0.3em] text-acid">
+      {/* masthead body — stadium-bold display lock-up over a halftone dot screen */}
+      <div className="halftone px-5 py-11 text-center sm:px-8 sm:py-16">
+        <p className="mb-5 font-mono text-[0.66rem] uppercase tracking-[0.32em] text-acid">
           {kicker}
         </p>
-        <h1 className="mx-auto max-w-4xl font-display text-[2.6rem] font-black uppercase leading-[0.88] tracking-[-0.02em] [overflow-wrap:anywhere] sm:text-6xl lg:text-7xl">
+        <h1 className="mx-auto max-w-4xl font-display text-[2.7rem] font-black uppercase leading-[0.86] tracking-[-0.02em] [overflow-wrap:anywhere] [text-wrap:balance] sm:text-6xl lg:text-[5.2rem]">
           {title}
         </h1>
-        {/* centred rule + ball, programme-cover style */}
-        <div className="mx-auto mt-7 flex max-w-xs items-center gap-3">
-          <span className="h-px flex-1 bg-line" />
-          <span className="text-sm leading-none text-faint/70" aria-hidden>
-            ⚽
-          </span>
-          <span className="h-px flex-1 bg-line" />
-        </div>
+        {/* electric on-air sweep — the broadcast underline replaces the twee ball */}
+        <div className="onair-sweep mx-auto mt-8 w-40 sm:w-56" aria-hidden />
       </div>
     </div>
   );
