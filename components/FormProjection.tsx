@@ -17,9 +17,17 @@ export function FormProjection({ form }: { form: MatchForm }) {
         <TeamCard team={form.home} tone="acid" />
         <TeamCard team={form.away} tone="mint" />
       </div>
-      <p className="mt-3 font-mono text-[0.6rem] uppercase tracking-[0.14em] text-ink/35">
-        Last = that stat in the team&apos;s last game · Next ≈ projection for this match
-        (recency-weighted average) · (n) = ceiling, their best single game
+      <p className="mt-3 font-mono text-[0.68rem] leading-relaxed tracking-[0.08em] text-muted">
+        <span className="text-faint">How to read a row: </span>
+        <span className="text-ink">3sh</span> = last game
+        {" · "}
+        <span className="text-acid">≈2</span> = projected next game
+        {" · "}
+        <span className="text-ink">(3)</span> = ceiling, their best single game.
+        <br className="hidden sm:block" />
+        <span className="text-faint">
+          Projection = recency-weighted mean (60% per-game average · 40% last game).
+        </span>
       </p>
     </div>
   );
@@ -86,8 +94,8 @@ function Board({
         <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-faint">
           {title}
         </span>
-        <span className="font-mono text-[0.55rem] uppercase tracking-[0.12em] text-ink/30">
-          last · next
+        <span className="font-mono text-[0.58rem] uppercase tracking-[0.12em] text-faint">
+          last · <span className="text-muted">next</span>
         </span>
       </div>
       <div className="space-y-1">
