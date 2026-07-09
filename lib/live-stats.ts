@@ -1,5 +1,7 @@
 import fixturesJson from "@/data/fixtures.json";
+import resultsJson from "@/data/results.json";
 import statsJson from "@/data/stats.json";
+import { aliveTeamKeys } from "./tournament";
 import type { StatRow, StatCategoryKey, StatsFile, TeamPerfKey, TeamPerfRow } from "./stats";
 
 /**
@@ -277,8 +279,14 @@ const ratio = (num: number, den: number) => (den > 0 ? (num / den) * 100 : null)
 function buildTeamStats(
   byEvent: Record<string, { teamBox?: TeamBox[] }>,
   flagFor: (t: string) => string,
+  alive: Set<string>,
 ): Record<TeamPerfKey, TeamPerfRow[]> {
   const agg = aggregateTeamBox(byEvent);
+  // Keep only sides still in the competition (agg is keyed on the normalised
+  // team name). Empty set → leave everything, so a glitch never blanks the boards.
+  if (alive.size > 0) {
+    for (const key of Object.keys(agg)) if (!alive.has(key)) delete agg[key];
+  }
   return {
     passCompletion: pctBoard(agg, (a) => ratio(a.accuratePasses, a.totalPasses), flagFor),
     possession: pctBoard(agg, (a) => (a.possessionN > 0 ? a.possessionSum / a.possessionN : null), flagFor),
@@ -305,6 +313,15 @@ export async function computeStats(now: number): Promise<StatsFile> {
     }
   }
   const flagFor = (team: string) => flagByTeam[norm(team)] ?? "🏳️";
+
+  // Leaderboards only feature teams still in the competition — a top scorer whose
+  // side is knocked out drops off the board. Mirrors scripts/build-stats.mjs.
+  const alive = aliveTeamKeys(
+    fixturesJson as Parameters<typeof aliveTeamKeys>[0],
+    (resultsJson.results ?? {}) as Parameters<typeof aliveTeamKeys>[1],
+    norm,
+  );
+  const aliveRow = (r: { team: string }) => alive.size === 0 || alive.has(norm(r.team));
 
   const dates = new Set<string>();
   for (const f of fixtures) {
@@ -440,6 +457,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
     sv?: number;
     tk?: number;
     bk?: number;
+    ps?: number;
   };
   type EventCache = {
     penMiss?: { name: string; team: string }[];
@@ -540,6 +558,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
         const prev = prevPlayers.get(aid);
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;
+        if (prev?.ps != null) rec.ps = prev.ps;
         players.push(rec);
       }
     }
@@ -555,9 +574,13 @@ export async function computeStats(now: number): Promise<StatsFile> {
   const coreJobs: { id: string; p: PlayerRec }[] = [];
   for (const [id, rec] of Object.entries(byEvent)) {
     const live = liveEventIds.includes(id);
-    if (!rec.players?.length || (rec.coreDone && !live)) continue;
+    // ps (passes — added 2026-07-09) postdates many coreDone-frozen matches;
+    // treat a freeze as valid only when every player carries it (mirrors
+    // build-stats.mjs unfreeze).
+    const frozen = rec.coreDone && (rec.players ?? []).every((p) => p.ps != null);
+    if (!rec.players?.length || (frozen && !live)) continue;
     for (const p of rec.players) {
-      if (!live && p.tk != null && p.bk != null) continue;
+      if (!live && p.tk != null && p.bk != null && p.ps != null) continue;
       coreJobs.push({ id, p });
     }
   }
@@ -576,6 +599,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
         ban403 = 0;
         p.tk = 0;
         p.bk = 0;
+        p.ps = 0;
         return;
       }
       if (res.status === 403) {
@@ -586,13 +610,16 @@ export async function computeStats(now: number): Promise<StatsFile> {
       const data = (await res.json()) as {
         splits?: { categories?: { name?: string; stats?: { name?: string; value?: number }[] }[] };
       };
-      const def = (data.splits?.categories ?? []).find((c) => c.name === "defensive");
-      const stat = (n: string) => {
-        const v = (def?.stats ?? []).find((s) => s.name === n)?.value;
+      const cat = (name: string) =>
+        (data.splits?.categories ?? []).find((c) => c.name === name);
+      const stat = (c: ReturnType<typeof cat>, n: string) => {
+        const v = (c?.stats ?? []).find((s) => s.name === n)?.value;
         return typeof v === "number" && Number.isFinite(v) ? v : 0;
       };
-      p.tk = stat("totalTackles");
-      p.bk = stat("blockedShots");
+      const def = cat("defensive");
+      p.tk = stat(def, "totalTackles");
+      p.bk = stat(def, "blockedShots");
+      p.ps = stat(cat("offensive"), "totalPasses");
       ban403 = 0;
     } catch {
       /* leave null — the cron backfills */
@@ -655,17 +682,19 @@ export async function computeStats(now: number): Promise<StatsFile> {
     }
   }
 
+  // Filter each pool to alive teams BEFORE topN slices to ten, so every board is
+  // the true top ten among sides still in the tournament.
   const categories: Record<StatCategoryKey, StatRow[]> = {
-    scorers: topN(Object.values(mergedScorers), flagFor),
-    assists: topN(Object.values(mergedAssists), flagFor),
-    cleanSheets: topTeams(Object.values(cleanSheets), flagFor),
-    yellowCards: topN(Object.values(yellow), flagFor),
-    redCards: topN(Object.values(red), flagFor),
-    penaltyScored: topN(Object.values(penScored), flagFor),
-    penaltyMissed: topN(Object.values(penMissed), flagFor),
-    tackles: topN(Object.values(tackles), flagFor),
-    blocks: topN(Object.values(blocksTally), flagFor),
-    gkSaves: topN(Object.values(gkSaves), flagFor),
+    scorers: topN(Object.values(mergedScorers).filter(aliveRow), flagFor),
+    assists: topN(Object.values(mergedAssists).filter(aliveRow), flagFor),
+    cleanSheets: topTeams(Object.values(cleanSheets).filter(aliveRow), flagFor),
+    yellowCards: topN(Object.values(yellow).filter(aliveRow), flagFor),
+    redCards: topN(Object.values(red).filter(aliveRow), flagFor),
+    penaltyScored: topN(Object.values(penScored).filter(aliveRow), flagFor),
+    penaltyMissed: topN(Object.values(penMissed).filter(aliveRow), flagFor),
+    tackles: topN(Object.values(tackles).filter(aliveRow), flagFor),
+    blocks: topN(Object.values(blocksTally).filter(aliveRow), flagFor),
+    gkSaves: topN(Object.values(gkSaves).filter(aliveRow), flagFor),
   };
 
   return {
@@ -675,6 +704,6 @@ export async function computeStats(now: number): Promise<StatsFile> {
       finished: finishedEventIds.length,
     },
     categories,
-    teamStats: buildTeamStats(byEvent, flagFor),
+    teamStats: buildTeamStats(byEvent, flagFor, alive),
   };
 }

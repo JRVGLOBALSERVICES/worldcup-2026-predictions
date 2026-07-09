@@ -38,9 +38,11 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { aliveTeamKeys } from "./lib/alive.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const FIXTURES_PATH = join(__dirname, "..", "data", "fixtures.json");
+const RESULTS_PATH = join(__dirname, "..", "data", "results.json");
 const STATS_PATH = join(__dirname, "..", "data", "stats.json");
 
 const ESPN_BASE =
@@ -221,8 +223,14 @@ function pctBoard(agg, pick, flagFor, n = TOP_N) {
 
 const ratio = (num, den) => (den > 0 ? (num / den) * 100 : null);
 
-function buildTeamStats(byEvent, flagFor) {
+function buildTeamStats(byEvent, flagFor, alive) {
   const agg = aggregateTeamBox(byEvent);
+  // Keep only sides still in the competition (agg is keyed on the normalised
+  // team name). Empty alive set → leave everything, so a glitch never blanks the
+  // completion boards.
+  if (alive && alive.size > 0) {
+    for (const key of Object.keys(agg)) if (!alive.has(key)) delete agg[key];
+  }
   return {
     passCompletion: pctBoard(agg, (a) => ratio(a.accuratePasses, a.totalPasses), flagFor),
     possession: pctBoard(agg, (a) => (a.possessionN > 0 ? a.possessionSum / a.possessionN : null), flagFor),
@@ -235,6 +243,18 @@ function buildTeamStats(byEvent, flagFor) {
 
 async function main() {
   const fixtures = JSON.parse(readFileSync(FIXTURES_PATH, "utf8"));
+  // Leaderboards only feature teams still in the competition — a top scorer whose
+  // side is knocked out drops off the board. `results` carries knockout advancement.
+  let results = {};
+  try {
+    results = JSON.parse(readFileSync(RESULTS_PATH, "utf8")).results ?? {};
+  } catch {
+    /* no results snapshot yet (pre-tournament) → everyone stays alive */
+  }
+  const alive = aliveTeamKeys(fixtures, results, norm);
+  // Keep a row only if its team is still alive. Empty set (data glitch) → no filter,
+  // so a snapshot hiccup never blanks every board.
+  const aliveRow = (r) => alive.size === 0 || alive.has(norm(r.team));
 
   // Flag lookup, keyed on the normalised team name so ESPN's spelling resolves.
   const flagByTeam = {};
@@ -482,6 +502,7 @@ async function main() {
         const prev = prevPlayers.get(aid);
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;
+        if (prev?.ps != null) rec.ps = prev.ps;
         players.push(rec);
       }
     }
@@ -496,12 +517,18 @@ async function main() {
   // player has data, then frozen (`coreDone`); live matches re-sweep every run so
   // the boards move with the game. A 404 (no stat page) counts as 0 — it adds
   // nothing and stops eternal refetching; network errors stay null and retry.
+  // ps (passes — added 2026-07-09 for the per-match player sheets) postdates
+  // many frozen matches: unfreeze any whose players lack it so the sweep
+  // backfills the new field (tk/bk already fetched are kept — only ps refetches).
+  for (const rec of Object.values(byEvent)) {
+    if (rec.coreDone && !(rec.players ?? []).every((p) => p.ps != null)) delete rec.coreDone;
+  }
   const coreJobs = [];
   for (const [id, rec] of Object.entries(byEvent)) {
     const live = liveEventIds.includes(id);
     if (!rec.players?.length || (rec.coreDone && !live)) continue;
     for (const p of rec.players) {
-      if (!live && p.tk != null && p.bk != null) continue; // finished + already fetched
+      if (!live && p.tk != null && p.bk != null && p.ps != null) continue; // finished + already fetched
       coreJobs.push({ id, p });
     }
   }
@@ -518,6 +545,7 @@ async function main() {
         ban403 = 0;
         p.tk = 0;
         p.bk = 0;
+        p.ps = 0;
         return;
       }
       if (res.status === 403) {
@@ -527,13 +555,15 @@ async function main() {
       if (!res.ok) throw new Error(`ESPN ${res.status}`);
       const data = await res.json();
       ban403 = 0;
-      const def = (data.splits?.categories ?? []).find((c) => c.name === "defensive");
-      const stat = (n) => {
-        const v = (def?.stats ?? []).find((s) => s.name === n)?.value;
+      const cat = (name) => (data.splits?.categories ?? []).find((c) => c.name === name);
+      const stat = (c, n) => {
+        const v = (c?.stats ?? []).find((s) => s.name === n)?.value;
         return typeof v === "number" && Number.isFinite(v) ? v : 0;
       };
-      p.tk = stat("totalTackles");
-      p.bk = stat("blockedShots");
+      const def = cat("defensive");
+      p.tk = stat(def, "totalTackles");
+      p.bk = stat(def, "blockedShots");
+      p.ps = stat(cat("offensive"), "totalPasses");
     } catch {
       coreFailed++; // leave null → pending, retried next run
     }
@@ -559,7 +589,7 @@ async function main() {
   // Freeze finished matches once complete so they never cost requests again.
   for (const [id, rec] of Object.entries(byEvent)) {
     if (liveEventIds.includes(id) || !rec.players?.length) continue;
-    if (rec.players.every((p) => p.tk != null && p.bk != null)) rec.coreDone = 1;
+    if (rec.players.every((p) => p.tk != null && p.bk != null && p.ps != null)) rec.coreDone = 1;
   }
 
   const penMissed = {};
@@ -614,17 +644,20 @@ async function main() {
   }
 
   // ── Assemble payload ────────────────────────────────────────────────────────
+  // Filter each pool to alive teams BEFORE topN slices to ten, so every board is
+  // the true top ten among sides still in the tournament (not a truncated top ten
+  // with the eliminated players simply blanked out).
   const categories = {
-    scorers: topN(Object.values(mergedScorers), flagFor),
-    assists: topN(Object.values(mergedAssists), flagFor),
-    cleanSheets: topTeams(Object.values(cleanSheets), flagFor),
-    yellowCards: topN(Object.values(yellow), flagFor),
-    redCards: topN(Object.values(red), flagFor),
-    penaltyScored: topN(Object.values(penScored), flagFor),
-    penaltyMissed: topN(Object.values(penMissed), flagFor),
-    tackles: topN(Object.values(tackles), flagFor),
-    blocks: topN(Object.values(blocks), flagFor),
-    gkSaves: topN(Object.values(gkSaves), flagFor),
+    scorers: topN(Object.values(mergedScorers).filter(aliveRow), flagFor),
+    assists: topN(Object.values(mergedAssists).filter(aliveRow), flagFor),
+    cleanSheets: topTeams(Object.values(cleanSheets).filter(aliveRow), flagFor),
+    yellowCards: topN(Object.values(yellow).filter(aliveRow), flagFor),
+    redCards: topN(Object.values(red).filter(aliveRow), flagFor),
+    penaltyScored: topN(Object.values(penScored).filter(aliveRow), flagFor),
+    penaltyMissed: topN(Object.values(penMissed).filter(aliveRow), flagFor),
+    tackles: topN(Object.values(tackles).filter(aliveRow), flagFor),
+    blocks: topN(Object.values(blocks).filter(aliveRow), flagFor),
+    gkSaves: topN(Object.values(gkSaves).filter(aliveRow), flagFor),
   };
 
   // ── Per-team top-5 boards (for the match prediction "team form" panels) ─────
@@ -671,7 +704,7 @@ async function main() {
     };
   }
 
-  const teamStats = buildTeamStats(byEvent, flagFor);
+  const teamStats = buildTeamStats(byEvent, flagFor, alive);
 
   const payload = {
     meta: {
