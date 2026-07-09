@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T16:40:35.419Z",
+    "generatedAt": "2026-07-09T16:50:12.129Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 80
   },
@@ -519,7 +519,31 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
+        "name": "Rodri",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 16,
+        "matches": 4
+      },
+      {
+        "rank": 7,
+        "name": "Alexis Mac Allister",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 15,
+        "matches": 5
+      },
+      {
+        "rank": 7,
+        "name": "Jhon Arias",
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 15,
+        "matches": 5
+      },
+      {
+        "rank": 9,
         "name": "Elliot Anderson",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -527,54 +551,30 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 9,
         "name": "Samuel Moutoussamy",
         "team": "Congo DR",
         "flag": "🇨🇩",
         "value": 14,
         "matches": 4
-      },
-      {
-        "rank": 8,
-        "name": "Aurélien Tchouaméni",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 13,
-        "matches": 3
-      },
-      {
-        "rank": 8,
-        "name": "Casemiro",
-        "team": "Brazil",
-        "flag": "🇧🇷",
-        "value": 13,
-        "matches": 4
-      },
-      {
-        "rank": 8,
-        "name": "Gustaf Lagerbielke",
-        "team": "Sweden",
-        "flag": "🇸🇪",
-        "value": 13,
-        "matches": 3
       }
     ],
     "blocks": [
       {
         "rank": 1,
-        "name": "Luis Díaz",
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 7,
-        "matches": 4
-      },
-      {
-        "rank": 2,
         "name": "Leandro Trossard",
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 6,
-        "matches": 3
+        "value": 9,
+        "matches": 4
+      },
+      {
+        "rank": 1,
+        "name": "Luis Díaz",
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 9,
+        "matches": 5
       },
       {
         "rank": 3,
@@ -590,7 +590,7 @@
         "team": "Colombia",
         "flag": "🇨🇴",
         "value": 5,
-        "matches": 4
+        "matches": 5
       },
       {
         "rank": 3,
@@ -27000,43 +27000,57 @@
             "n": "João Félix",
             "t": "Portugal",
             "aid": "276350",
-            "tid": "482"
+            "tid": "482",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Pedro Neto",
             "t": "Portugal",
             "aid": "256115",
-            "tid": "482"
+            "tid": "482",
+            "tk": 1,
+            "bk": 1
           },
           {
             "n": "Diogo Dalot",
             "t": "Portugal",
             "aid": "238902",
-            "tid": "482"
+            "tid": "482",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Bernardo Silva",
             "t": "Portugal",
             "aid": "199833",
-            "tid": "482"
+            "tid": "482",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Nélson Semedo",
             "t": "Portugal",
             "aid": "222670",
-            "tid": "482"
+            "tid": "482",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Francisco Conceição",
             "t": "Portugal",
             "aid": "312659",
-            "tid": "482"
+            "tid": "482",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Rafael Leão",
             "t": "Portugal",
             "aid": "258917",
-            "tid": "482"
+            "tid": "482",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Unai Simón",
@@ -27044,93 +27058,124 @@
             "aid": "222375",
             "tid": "164",
             "gk": 1,
-            "sv": 2
+            "sv": 2,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Aymeric Laporte",
             "t": "Spain",
             "aid": "159317",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Pau Cubarsí",
             "t": "Spain",
             "aid": "368992",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Marc Cucurella",
             "t": "Spain",
             "aid": "259910",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Pedro Porro",
             "t": "Spain",
             "aid": "268533",
-            "tid": "164"
+            "tid": "164",
+            "tk": 4,
+            "bk": 0
           },
           {
             "n": "Dani Olmo",
             "t": "Spain",
             "aid": "227765",
-            "tid": "164"
+            "tid": "164",
+            "tk": 1,
+            "bk": 1
           },
           {
             "n": "Pedri",
             "t": "Spain",
             "aid": "250465",
-            "tid": "164"
+            "tid": "164",
+            "tk": 1,
+            "bk": 1
           },
           {
             "n": "Rodri",
             "t": "Spain",
             "aid": "231828",
-            "tid": "164"
+            "tid": "164",
+            "tk": 4,
+            "bk": 0
           },
           {
             "n": "Mikel Oyarzabal",
             "t": "Spain",
             "aid": "229018",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Álex Baena",
             "t": "Spain",
             "aid": "297373",
-            "tid": "164"
+            "tid": "164",
+            "tk": 3,
+            "bk": 0
           },
           {
             "n": "Lamine Yamal",
             "t": "Spain",
             "aid": "362150",
-            "tid": "164"
+            "tid": "164",
+            "tk": 5,
+            "bk": 1
           },
           {
             "n": "Mikel Merino",
             "t": "Spain",
             "aid": "209581",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Borja Iglesias",
             "t": "Spain",
             "aid": "214995",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Ferran Torres",
             "t": "Spain",
             "aid": "265869",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Fabián Ruiz",
             "t": "Spain",
             "aid": "214596",
-            "tid": "164"
+            "tid": "164",
+            "tk": 0,
+            "bk": 0
           }
-        ]
+        ],
+        "coreDone": 1
       },
       "760507": {
         "penMiss": [],
@@ -27189,97 +27234,129 @@
             "aid": "252974",
             "tid": "660",
             "gk": 1,
-            "sv": 3
+            "sv": 3,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Tim Ream",
             "t": "United States",
             "aid": "146290",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Chris Richards",
             "t": "United States",
             "aid": "272585",
-            "tid": "660"
+            "tid": "660",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Antonee Robinson",
             "t": "United States",
             "aid": "222396",
-            "tid": "660"
+            "tid": "660",
+            "tk": 7,
+            "bk": 0
           },
           {
             "n": "Alex Freeman",
             "t": "United States",
             "aid": "248276",
-            "tid": "660"
+            "tid": "660",
+            "tk": 6,
+            "bk": 0
           },
           {
             "n": "Tyler Adams",
             "t": "United States",
             "aid": "222776",
-            "tid": "660"
+            "tid": "660",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Malik Tillman",
             "t": "United States",
             "aid": "301416",
-            "tid": "660"
+            "tid": "660",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Weston McKennie",
             "t": "United States",
             "aid": "256715",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Folarin Balogun",
             "t": "United States",
             "aid": "282643",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Christian Pulisic",
             "t": "United States",
             "aid": "225607",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Sergiño Dest",
             "t": "United States",
             "aid": "266291",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Ricardo Pepi",
             "t": "United States",
             "aid": "289120",
-            "tid": "660"
+            "tid": "660",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Max Arfsten",
             "t": "United States",
             "aid": "359542",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Giovanni Reyna",
             "t": "United States",
             "aid": "290230",
-            "tid": "660"
+            "tid": "660",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Haji Wright",
             "t": "United States",
             "aid": "220474",
-            "tid": "660"
+            "tid": "660",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Sebastian Berhalter",
             "t": "United States",
             "aid": "295771",
-            "tid": "660"
+            "tid": "660",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Thibaut Courtois",
@@ -27287,99 +27364,132 @@
             "aid": "134283",
             "tid": "459",
             "gk": 1,
-            "sv": 1
+            "sv": 1,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Brandon Mechele",
             "t": "Belgium",
             "aid": "191222",
-            "tid": "459"
+            "tid": "459",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Nathan Ngoy",
             "t": "Belgium",
             "aid": "318577",
-            "tid": "459"
+            "tid": "459",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Maxim De Cuyper",
             "t": "Belgium",
             "aid": "301327",
-            "tid": "459"
+            "tid": "459",
+            "tk": 3,
+            "bk": 0
           },
           {
             "n": "Timothy Castagne",
             "t": "Belgium",
             "aid": "197163",
-            "tid": "459"
+            "tid": "459",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Youri Tielemans",
             "t": "Belgium",
             "aid": "193297",
-            "tid": "459"
+            "tid": "459",
+            "tk": 3,
+            "bk": 1
           },
           {
             "n": "Nicolas Raskin",
             "t": "Belgium",
             "aid": "260027",
-            "tid": "459"
+            "tid": "459",
+            "tk": 4,
+            "bk": 0
           },
           {
             "n": "Amadou Onana",
             "t": "Belgium",
             "aid": "304799",
-            "tid": "459"
+            "tid": "459",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Charles De Ketelaere",
             "t": "Belgium",
             "aid": "296319",
-            "tid": "459"
+            "tid": "459",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Leandro Trossard",
             "t": "Belgium",
             "aid": "174980",
-            "tid": "459"
+            "tid": "459",
+            "tk": 1,
+            "bk": 3
           },
           {
             "n": "Dodi Lukébakio",
             "t": "Belgium",
             "aid": "229443",
-            "tid": "459"
+            "tid": "459",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Romelu Lukaku",
             "t": "Belgium",
             "aid": "139437",
-            "tid": "459"
+            "tid": "459",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Alexis Saelemaekers",
             "t": "Belgium",
             "aid": "271132",
-            "tid": "459"
+            "tid": "459",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Hans Vanaken",
             "t": "Belgium",
             "aid": "193849",
-            "tid": "459"
+            "tid": "459",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Jérémy Doku",
             "t": "Belgium",
             "aid": "283672",
-            "tid": "459"
+            "tid": "459",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Axel Witsel",
             "t": "Belgium",
             "aid": "164895",
-            "tid": "459"
+            "tid": "459",
+            "tk": 0,
+            "bk": 0
           }
-        ]
+        ],
+        "coreDone": 1
       },
       "760508": {
         "penMiss": [],
@@ -27421,103 +27531,137 @@
             "aid": "238544",
             "tid": "475",
             "gk": 1,
-            "sv": 3
+            "sv": 3,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Manuel Akanji",
             "t": "Switzerland",
             "aid": "214562",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Nico Elvedi",
             "t": "Switzerland",
             "aid": "212237",
-            "tid": "475"
+            "tid": "475",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Ricardo Rodríguez",
             "t": "Switzerland",
             "aid": "136865",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Denis Zakaria",
             "t": "Switzerland",
             "aid": "222628",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Ardon Jashari",
             "t": "Switzerland",
             "aid": "303973",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Granit Xhaka",
             "t": "Switzerland",
             "aid": "149981",
-            "tid": "475"
+            "tid": "475",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Remo Freuler",
             "t": "Switzerland",
             "aid": "152600",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Breel Embolo",
             "t": "Switzerland",
             "aid": "202099",
-            "tid": "475"
+            "tid": "475",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Dan Ndoye",
             "t": "Switzerland",
             "aid": "275842",
-            "tid": "475"
+            "tid": "475",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Fabian Rieder",
             "t": "Switzerland",
             "aid": "308908",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 1
           },
           {
             "n": "Zeki Amdouni",
             "t": "Switzerland",
             "aid": "320757",
-            "tid": "475"
+            "tid": "475",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Rubén Vargas",
             "t": "Switzerland",
             "aid": "259513",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Cedric Itten",
             "t": "Switzerland",
             "aid": "234153",
-            "tid": "475"
+            "tid": "475",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Silvan Widmer",
             "t": "Switzerland",
             "aid": "175905",
-            "tid": "475"
+            "tid": "475",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Miro Muheim",
             "t": "Switzerland",
             "aid": "243626",
-            "tid": "475"
+            "tid": "475",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Djibril Sow",
             "t": "Switzerland",
             "aid": "222446",
-            "tid": "475"
+            "tid": "475",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Camilo Vargas",
@@ -27525,99 +27669,132 @@
             "aid": "185147",
             "tid": "208",
             "gk": 1,
-            "sv": 2
+            "sv": 2,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Jhon Lucumí",
             "t": "Colombia",
             "aid": "227697",
-            "tid": "208"
+            "tid": "208",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Davinson Sánchez",
             "t": "Colombia",
             "aid": "197105",
-            "tid": "208"
+            "tid": "208",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Johan Mojica",
             "t": "Colombia",
             "aid": "173247",
-            "tid": "208"
+            "tid": "208",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Daniel Muñoz",
             "t": "Colombia",
             "aid": "146679",
-            "tid": "208"
+            "tid": "208",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Gustavo Puerta",
             "t": "Colombia",
             "aid": "341736",
-            "tid": "208"
+            "tid": "208",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Jefferson Lerma",
             "t": "Colombia",
             "aid": "197399",
-            "tid": "208"
+            "tid": "208",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Luis Díaz",
             "t": "Colombia",
             "aid": "257390",
-            "tid": "208"
+            "tid": "208",
+            "tk": 1,
+            "bk": 2
           },
           {
             "n": "Jhon Arias",
             "t": "Colombia",
             "aid": "239566",
-            "tid": "208"
+            "tid": "208",
+            "tk": 5,
+            "bk": 1
           },
           {
             "n": "Luis Suárez",
             "t": "Colombia",
             "aid": "272722",
-            "tid": "208"
+            "tid": "208",
+            "tk": 0,
+            "bk": 1
           },
           {
             "n": "James Rodríguez",
             "t": "Colombia",
             "aid": "82816",
-            "tid": "208"
+            "tid": "208",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Richard Ríos",
             "t": "Colombia",
             "aid": "301520",
-            "tid": "208"
+            "tid": "208",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Cucho Hernández",
             "t": "Colombia",
             "aid": "336809",
-            "tid": "208"
+            "tid": "208",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Jáminton Campaz",
             "t": "Colombia",
             "aid": "255295",
-            "tid": "208"
+            "tid": "208",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Juan Fernando Quintero",
             "t": "Colombia",
             "aid": "177780",
-            "tid": "208"
+            "tid": "208",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Yerry Mina",
             "t": "Colombia",
             "aid": "196901",
-            "tid": "208"
+            "tid": "208",
+            "tk": 0,
+            "bk": 0
           }
-        ]
+        ],
+        "coreDone": 1
       },
       "760509": {
         "penMiss": [
@@ -27683,31 +27860,41 @@
             "n": "Lautaro Martínez",
             "t": "Argentina",
             "aid": "219713",
-            "tid": "202"
+            "tid": "202",
+            "tk": 0,
+            "bk": 1
           },
           {
             "n": "Facundo Medina",
             "t": "Argentina",
             "aid": "249663",
-            "tid": "202"
+            "tid": "202",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Gonzalo Montiel",
             "t": "Argentina",
             "aid": "228262",
-            "tid": "202"
+            "tid": "202",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Nicolás Otamendi",
             "t": "Argentina",
             "aid": "119289",
-            "tid": "202"
+            "tid": "202",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Nico González",
             "t": "Argentina",
             "aid": "76017",
-            "tid": "202"
+            "tid": "202",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Emiliano Martínez",
@@ -27715,67 +27902,89 @@
             "aid": "158626",
             "tid": "202",
             "gk": 1,
-            "sv": 0
+            "sv": 0,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Lisandro Martínez",
             "t": "Argentina",
             "aid": "233937",
-            "tid": "202"
+            "tid": "202",
+            "tk": 4,
+            "bk": 0
           },
           {
             "n": "Cristian Romero",
             "t": "Argentina",
             "aid": "96970",
-            "tid": "202"
+            "tid": "202",
+            "tk": 3,
+            "bk": 0
           },
           {
             "n": "Leandro Paredes",
             "t": "Argentina",
             "aid": "153115",
-            "tid": "202"
+            "tid": "202",
+            "tk": 3,
+            "bk": 1
           },
           {
             "n": "Nicolás Tagliafico",
             "t": "Argentina",
             "aid": "145190",
-            "tid": "202"
+            "tid": "202",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Nahuel Molina",
             "t": "Argentina",
             "aid": "164826",
-            "tid": "202"
+            "tid": "202",
+            "tk": 3,
+            "bk": 0
           },
           {
             "n": "Alexis Mac Allister",
             "t": "Argentina",
             "aid": "249299",
-            "tid": "202"
+            "tid": "202",
+            "tk": 3,
+            "bk": 0
           },
           {
             "n": "Enzo Fernández",
             "t": "Argentina",
             "aid": "285450",
-            "tid": "202"
+            "tid": "202",
+            "tk": 1,
+            "bk": 1
           },
           {
             "n": "Rodrigo De Paul",
             "t": "Argentina",
             "aid": "174466",
-            "tid": "202"
+            "tid": "202",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Julián Álvarez",
             "t": "Argentina",
             "aid": "277206",
-            "tid": "202"
+            "tid": "202",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Lionel Messi",
             "t": "Argentina",
             "aid": "45843",
-            "tid": "202"
+            "tid": "202",
+            "tk": 1,
+            "bk": 1
           },
           {
             "n": "Mostafa Shoubir",
@@ -27783,93 +27992,124 @@
             "aid": "308915",
             "tid": "2620",
             "gk": 1,
-            "sv": 4
+            "sv": 4,
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Ramy Rabia",
             "t": "Egypt",
             "aid": "187571",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 4,
+            "bk": 0
           },
           {
             "n": "Yasser Ibrahim",
             "t": "Egypt",
             "aid": "265417",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Karim Hafez",
             "t": "Egypt",
             "aid": "216119",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Mohamed Hany",
             "t": "Egypt",
             "aid": "119993",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Marawan Attia",
             "t": "Egypt",
             "aid": "357112",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 2,
+            "bk": 0
           },
           {
             "n": "Mohanad Lashin",
             "t": "Egypt",
             "aid": "328932",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 3,
+            "bk": 0
           },
           {
             "n": "Emam Ashour",
             "t": "Egypt",
             "aid": "299365",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Haissem Hassan",
             "t": "Egypt",
             "aid": "276440",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Mostafa Zico",
             "t": "Egypt",
             "aid": "378495",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 1,
+            "bk": 0
           },
           {
             "n": "Mohamed Salah",
             "t": "Egypt",
             "aid": "173896",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Trézéguet",
             "t": "Egypt",
             "aid": "157825",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Zizo",
             "t": "Egypt",
             "aid": "195154",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           },
           {
             "n": "Hamdy Fathy",
             "t": "Egypt",
             "aid": "285057",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 4,
+            "bk": 0
           },
           {
             "n": "Omar Marmoush",
             "t": "Egypt",
             "aid": "303745",
-            "tid": "2620"
+            "tid": "2620",
+            "tk": 0,
+            "bk": 0
           }
-        ]
+        ],
+        "coreDone": 1
       }
     }
   }
