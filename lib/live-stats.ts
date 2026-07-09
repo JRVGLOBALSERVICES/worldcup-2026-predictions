@@ -326,7 +326,11 @@ export async function computeStats(now: number): Promise<StatsFile> {
   // side is knocked out drops off the board. Mirrors scripts/build-stats.mjs.
   const alive = aliveTeamKeys(
     fixturesJson as Parameters<typeof aliveTeamKeys>[0],
-    (resultsJson.results ?? {}) as Parameters<typeof aliveTeamKeys>[1],
+    // Cast through `unknown`: a scheduled match legitimately carries `ft: null`
+    // (not yet played), which no longer structurally matches MinResult's optional
+    // `ft`. aliveTeamKeys only reads team identity, never the scoreline, so this
+    // is runtime-safe — the strict overlap check was the only thing failing.
+    (resultsJson.results ?? {}) as unknown as Parameters<typeof aliveTeamKeys>[1],
     norm,
   );
   const aliveRow = (r: { team: string }) => alive.size === 0 || alive.has(norm(r.team));

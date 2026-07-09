@@ -35,7 +35,7 @@ export function MatchTeamStats({ fixture }: { fixture: Fixture }) {
   if (!any(home) && !any(away)) return null;
 
   return (
-    <section className="mt-10 space-y-5 border-t border-line pt-8">
+    <section className="space-y-5">
       <div>
         <SectionLabel>Team leaders</SectionLabel>
         <p className="mt-1 text-[0.8rem] leading-relaxed text-ink/60">

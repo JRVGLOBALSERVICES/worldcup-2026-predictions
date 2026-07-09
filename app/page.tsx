@@ -3,7 +3,7 @@ import { LiveProvider } from "@/components/LiveProvider";
 import { AllMatchesEventFX } from "@/components/LiveFX";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 import { SiteNav } from "@/components/SiteNav";
-import { Masthead } from "@/components/ProgrammeKit";
+import { Masthead, ChapterHead, Contents } from "@/components/ProgrammeKit";
 import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
 import { isMatchFinished } from "@/lib/live";
 
@@ -85,19 +85,26 @@ export default function Home() {
         line-ups drop.
       </p>
 
+      {/* Programme contents — same jump strip as the stats programme. */}
+      <div className="mt-6">
+        <Contents
+          items={[
+            { no: "01", label: isToday(featured.key) ? "Today" : "Next Up", href: "#chapter-today" },
+            { no: "02", label: "Full Schedule", href: "#chapter-schedule" },
+          ]}
+        />
+      </div>
+
       <LiveProvider kickoffs={fixtures.map((f) => f.kickoffUTC)}>
       {/* Live-event reactions across today's grid — goals firecracker, the rest chip in. */}
       <AllMatchesEventFX />
-      <section className="mt-12">
-        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
-          <div className="flex items-baseline gap-3">
-            <h2 className="font-display text-2xl font-black uppercase tracking-tight text-acid">
-              {isToday(featured.key) ? "Today" : "Next up"}
-            </h2>
-            <span className="font-mono text-sm text-muted">{featured.label}</span>
-          </div>
-          <LiveRefreshPill />
-        </div>
+      <section id="chapter-today" className="mt-14 scroll-mt-24">
+        <ChapterHead
+          no="01"
+          title={isToday(featured.key) ? "Today" : "Next Up"}
+          sub={featured.label}
+          action={<LiveRefreshPill />}
+        />
         <div className="grid gap-3 sm:grid-cols-2">
           {featured.fixtures.map((f) => (
             <MatchCard key={f.id} fixture={f} />
@@ -105,9 +112,12 @@ export default function Home() {
         </div>
       </section>
 
-      <h2 className="mb-4 mt-14 font-display text-sm font-bold uppercase tracking-[0.18em] text-faint">
-        Full tournament schedule
-      </h2>
+      <section id="chapter-schedule" className="mt-16 scroll-mt-24 border-t-2 border-line/60 pt-10">
+        <ChapterHead
+          no="02"
+          title="Full Tournament Schedule"
+          sub="Every fixture, grouped by matchday in Malaysia time — live and upcoming days lead, finished days settle below."
+        />
       <div className="space-y-5">
         {upcoming.map((d) => {
           const dayFinished = dayHasEnded(d);
@@ -144,6 +154,7 @@ export default function Home() {
           );
         })}
       </div>
+      </section>
       </LiveProvider>
 
       <footer className="mt-20 border-t border-line pt-8 text-sm text-faint">

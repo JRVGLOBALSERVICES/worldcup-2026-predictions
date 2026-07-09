@@ -11,6 +11,7 @@ import { RefreshCountdown, ForceRefreshButton } from "./RefreshCountdown";
 import { LiveEventFX } from "./LiveFX";
 import { diffLegEvents, legKey, type LegSnap, type LegEvent } from "@/lib/legEvents";
 import { SiteNav, type NavKey } from "./SiteNav";
+import { ChapterHead } from "./ProgrammeKit";
 import { SpotlightCard, type SpotTone } from "./SpotlightCard";
 import MatchSpotlight from "./MatchSpotlight";
 import { PlayerSheetBody, PlayerSheetFootnote } from "./LiveScore";
@@ -1624,9 +1625,14 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       )}
 
       {!empty && allParlays.length > 0 && (
-        <div className="mt-10">
+        <section id="chapter-parlays" className="mt-14 scroll-mt-24">
+          <ChapterHead
+            no="01"
+            title="The Parlays"
+            sub="Every multi-leg slip across the tournament, biggest potential return first — running slips lead, settled ones tuck into the drawer."
+          />
           <GlobalParlays parlays={allParlays} live={live} currency={cur} />
-        </div>
+        </section>
       )}
 
       {/* Every game in the current knockout round, including ties with no bet on
@@ -1643,13 +1649,27 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
               .find((r) => FIXTURES.some((f) => f.round === r && live[f.id]?.state !== "finished")) ??
             knockoutRounds.sort((a, b) => roundRank(a) - roundRank(b))[0];
           return (
-            <div className="mt-10">
+            <section id="chapter-round" className="mt-16 scroll-mt-24 border-t-2 border-line/60 pt-10">
+              <ChapterHead
+                no="02"
+                title="The Round"
+                sub="Every tie in the live knockout round — live score when a match is on, kickoff time otherwise, and which of them your latest slip is riding on."
+              />
               <RoundGames round={activeRound} live={live} days={base.days} parlays={allParlays} />
-            </div>
+            </section>
           );
         })()}
 
-      <div className="mt-10 space-y-12">
+      {!empty && (
+        <div id="chapter-slips" className="mt-16 scroll-mt-24 border-t-2 border-line/60 pt-10">
+          <ChapterHead
+            no="03"
+            title="The Daily Slips"
+            sub="Your slate broken out day by day in Malaysia time — each match card settles line by line off the live score, biggest potential return on top."
+          />
+        </div>
+      )}
+      <div className="mt-8 space-y-12">
         {(() => {
           const renderDay = (day: DayRow) => {
           // Order cards by their biggest potential winning (high → low) so the

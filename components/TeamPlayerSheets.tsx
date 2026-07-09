@@ -62,7 +62,7 @@ function TeamCard({
   return (
     <section
       id={`team-${slug(sheet.team)}`}
-      className="scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-card/40"
+      className="cv-card scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-card/40"
     >
       <header className="flex items-center justify-between gap-2 border-b border-line/70 bg-pitch/30 px-4 py-3">
         <h3 className="flex items-center gap-2.5">
@@ -80,7 +80,7 @@ function TeamCard({
         <table className="w-full min-w-[30rem] border-collapse">
           <thead>
             <tr className="border-b border-line/60">
-              <th className="sticky left-0 z-10 bg-card/95 px-4 py-2 text-left font-mono text-[0.58rem] uppercase tracking-[0.14em] text-ink/45 backdrop-blur">
+              <th className="sticky left-0 z-10 bg-card px-4 py-2 text-left font-mono text-[0.58rem] uppercase tracking-[0.14em] text-ink/45">
                 Player
               </th>
               {STAT_COLUMNS.map((c) => {
@@ -120,7 +120,7 @@ function TeamCard({
                   key={`${p.name}-${i}`}
                   className="[&:not(:last-child)]:border-b [&:not(:last-child)]:border-line/40"
                 >
-                  <td className="sticky left-0 z-10 bg-card/95 px-4 py-2 backdrop-blur">
+                  <td className="sticky left-0 z-10 bg-card px-4 py-2">
                     <span className="flex items-center gap-1.5">
                       <span className="truncate font-display text-[0.86rem] font-bold uppercase tracking-tight text-ink">
                         {p.name}

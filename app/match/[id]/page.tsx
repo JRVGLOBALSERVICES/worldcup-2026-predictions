@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { ChapterHead } from "@/components/ProgrammeKit";
 import { fixtures, getFixture, getPrediction, getResearch, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
 import { FormProjection } from "@/components/FormProjection";
@@ -114,47 +116,87 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
 
       <SubsLog matchId={fixture.id} />
 
-      {form && (
-        <div className="mt-8">
-          <FormProjection form={form} />
-        </div>
-      )}
-
-      {pred && (
-        <div className="mt-8">
-          <VerdictBlock fixture={fixture} pred={pred} />
-        </div>
-      )}
-
-      {pred?.brainSummary && (
-        <div className="mt-8">
-          <BrainPanel pred={pred} />
-        </div>
-      )}
-
-      <div className="mt-8">
-        {pred ? (
-          <PredictionView fixture={fixture} pred={pred} />
-        ) : (
-          <div className="rounded-2xl border border-line bg-card/50 p-8 text-center">
-            <p className="font-display text-xl font-extrabold uppercase tracking-tight">
-              Prediction dropping soon
-            </p>
-            <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted">
-              Full call lands the morning of the match and refreshes when the line-ups are confirmed
-              — win, HT/FT, scorers, assists and the penalty taker, all from live squad research.
-            </p>
-          </div>
-        )}
-      </div>
-
-      <MatchTeamStats fixture={fixture} />
-
-      {research && (
-        <div className="mt-10 border-t border-line pt-8">
-          <ResearchPanel fixture={fixture} research={research} />
-        </div>
-      )}
+      {/* Analytical blocks as numbered programme chapters — same masthead-and-
+       * chapters system as the stats & predictions pages. Built as an ordered
+       * list so the numbering stays contiguous whichever blocks are present
+       * (pre-match shows Form; a called match shows the Verdict/Brain, etc.). */}
+      {(() => {
+        const chapters: { key: string; title: string; sub?: string; node: ReactNode }[] = [];
+        if (form)
+          chapters.push({
+            key: "form",
+            title: "Form Guide",
+            sub: "How both sides arrive — last-ten record, recent results and the projection into this tie.",
+            node: <FormProjection form={form} />,
+          });
+        if (pred)
+          chapters.push({
+            key: "verdict",
+            title: "The Verdict",
+            sub: "The headline call — who takes it, the scoreline, and the confidence behind it.",
+            node: <VerdictBlock fixture={fixture} pred={pred} />,
+          });
+        if (pred?.brainSummary)
+          chapters.push({
+            key: "brain",
+            title: "The Brain Room",
+            sub: "The read behind the call — the pitch, the value, and the trap to avoid.",
+            node: <BrainPanel pred={pred} />,
+          });
+        chapters.push(
+          pred
+            ? {
+                key: "card",
+                title: "The Full Card",
+                sub: "Every market called — win, HT/FT scores, scorers, assists and the penalty taker.",
+                node: <PredictionView fixture={fixture} pred={pred} />,
+              }
+            : {
+                key: "card",
+                title: "The Full Card",
+                sub: "The full call lands the morning of the match and refreshes when line-ups drop.",
+                node: (
+                  <div className="rounded-2xl border border-line bg-card/50 p-8 text-center">
+                    <p className="font-display text-xl font-extrabold uppercase tracking-tight">
+                      Prediction dropping soon
+                    </p>
+                    <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted">
+                      Full call lands the morning of the match and refreshes when the line-ups are
+                      confirmed — win, HT/FT, scorers, assists and the penalty taker, all from live
+                      squad research.
+                    </p>
+                  </div>
+                ),
+              },
+        );
+        chapters.push({
+          key: "team",
+          title: "Team Numbers",
+          sub: "Each side's tournament leaders and board-by-board form, side by side.",
+          node: <MatchTeamStats fixture={fixture} />,
+        });
+        if (research)
+          chapters.push({
+            key: "research",
+            title: "The Research",
+            sub: "The squad-news and form notes the call was built from.",
+            node: <ResearchPanel fixture={fixture} research={research} />,
+          });
+        return chapters.map((c, i) => (
+          <section
+            key={c.key}
+            id={`chapter-${c.key}`}
+            className={
+              i === 0
+                ? "mt-10 scroll-mt-24"
+                : "mt-14 scroll-mt-24 border-t-2 border-line/60 pt-10"
+            }
+          >
+            <ChapterHead no={String(i + 1).padStart(2, "0")} title={c.title} sub={c.sub} />
+            {c.node}
+          </section>
+        ));
+      })()}
 
       <footer className="mt-12 border-t border-line pt-6 text-sm text-faint">
         <p className="leading-relaxed text-muted">⚠️ {predictionFile.meta.disclaimer}</p>
