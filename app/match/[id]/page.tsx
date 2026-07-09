@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { fixtures, getFixture, getPrediction, getResearch, mytTime, mytDayLabel, etTime, predictionFile } from "@/lib/data";
 import { PredictionView } from "@/components/PredictionView";
+import { FormProjection } from "@/components/FormProjection";
 import { BrainPanel } from "@/components/BrainPanel";
+import { matchForm } from "@/lib/form";
+import { getResult } from "@/lib/results";
 import { MatchTeamStats } from "@/components/MatchTeamStats";
 import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
@@ -37,6 +40,10 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   if (!fixture) notFound();
   const pred = getPrediction(id);
   const research = getResearch(id);
+  // Pre-match form + projection: only for matches that haven't finished (it's a
+  // "going into this game" read; a finished match already shows its own sheet).
+  const result = getResult(id);
+  const form = !result || result.state !== "finished" ? matchForm(fixture) : null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -105,6 +112,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       />
 
       <SubsLog matchId={fixture.id} />
+
+      {form && (
+        <div className="mt-8">
+          <FormProjection form={form} />
+        </div>
+      )}
 
       {pred && (
         <div className="mt-8">

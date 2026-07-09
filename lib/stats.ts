@@ -167,7 +167,7 @@ const ALIAS: Record<string, string> = {
   bosniaherzegovina: "bosnia",
   curaao: "curacao",
 };
-const teamKey = (s: string): string => {
+export const teamKey = (s: string): string => {
   const a = s.toLowerCase().replace(/[^a-z]/g, "");
   return ALIAS[a] ?? a;
 };
