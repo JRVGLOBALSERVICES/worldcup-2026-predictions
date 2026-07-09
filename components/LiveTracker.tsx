@@ -1956,7 +1956,37 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
             );
           // Settled history stays newest-first inside the folded "Earlier rounds" —
           // trimmed to the 7-day window; anything older is gone from view.
-          const past = base.days.filter((d) => !d.isFeatured && isPast(d) && inDayWindow(d));
+          // Rj (2026-07-09): hide LOST slips from earlier (pre-today) days — settled
+          // losses on past rounds just clutter the history. Wins / pushes / voids on
+          // those days stay; today's (featured) day keeps its losses visible so the
+          // running result reads true. Money summaries still grade the full slip, so
+          // this is display-only — a faint tally below keeps the pruning honest.
+          const isLostBet = (b: BetRow) => b.staticStatus === "lost";
+          const isLostSpecial = (s: SpecialRow) => s.staticStatus === "lost";
+          const stripLostDay = (d: DayRow): DayRow => ({
+            ...d,
+            matches: d.matches
+              .map((m) => ({
+                ...m,
+                bets: m.bets.filter((b) => !isLostBet(b)),
+                specials: m.specials.filter((s) => !isLostSpecial(s)),
+              }))
+              .filter((m) => m.bets.length + m.specials.length > 0),
+          });
+          const pastRaw = base.days.filter((d) => !d.isFeatured && isPast(d) && inDayWindow(d));
+          const hiddenLost = pastRaw.reduce(
+            (s, d) =>
+              s +
+              d.matches.reduce(
+                (x, m) =>
+                  x +
+                  m.bets.filter(isLostBet).length +
+                  m.specials.filter((sp) => !sp.mirror && isLostSpecial(sp)).length,
+                0,
+              ),
+            0,
+          );
+          const past = pastRaw.map(stripLostDay).filter((d) => d.matches.length > 0);
           const pastBets = past.reduce(
             (s, d) => s + d.matches.reduce((x, m) => x + m.bets.length + m.specials.filter((sp) => !sp.mirror).length, 0),
             0,
@@ -1985,6 +2015,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
               {olderBets > 0 && (
                 <p className="font-mono text-[0.62rem] uppercase tracking-wider text-faint/70">
                   {olderBets} older bet{olderBets > 1 ? "s" : ""} hidden · showing last {WINDOW_DAYS} days
+                </p>
+              )}
+              {hiddenLost > 0 && (
+                <p className="font-mono text-[0.62rem] uppercase tracking-wider text-faint/70">
+                  {hiddenLost} lost bet{hiddenLost > 1 ? "s" : ""} from earlier days hidden
                 </p>
               )}
             </>
