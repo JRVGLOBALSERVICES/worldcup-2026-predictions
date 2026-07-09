@@ -62,6 +62,80 @@
         ]
       },
       "punter": "Tharma · share w/ Rj"
+    },
+    {
+      "id": "sp-tharma-863140524923166720",
+      "slipNo": "863140524923166720",
+      "matchId": "fra-mar-2026-07-09",
+      "player": "—",
+      "market": "Same-match parlay · 10 legs · France TTG O0.5 + Rabiot/Bouaddi/Doué/Koné shots + Mbappe S/A + France DC + qualify + Upamecano tackles + Morocco cards",
+      "label": "Shared 1xBet slip 863140524923166720 with Rj (09/07, pre-match) — 10-leg same-match parlay on FRA-MAR @11.22. Full slip RM250 -> RM2,805; Tharma's share RM125 -> RM1,402.50. Legs: France Total Team Goals Over 0.5 · Adrien Rabiot O0.5 shots · Ayyoub Bouaddi O0.5 shots · Désiré Doué O0.5 shots · Manu Koné O0.5 shots · Kylian Mbappe to score or assist · France or Tie (DC) · France To Qualify · Dayot Upamecano O0.5 tackles (auto — ESPN core API per-player Opta tackles) · Morocco team cards O1.5.",
+      "odds": 11.22,
+      "stake": 125,
+      "placedAt": "09/07",
+      "punter": "Tharma · share w/ Rj",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Ayyoub Bouaddi",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Désiré Doué",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerShotsOver",
+            "player": "Manu Koné",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "scoredOrAssisted",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "playerTacklesOver",
+            "player": "Dayot Upamecano",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-mar-2026-07-09",
+            "kind": "teamCardsOver",
+            "side": "away",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ]
 }
