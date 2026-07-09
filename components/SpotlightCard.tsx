@@ -7,22 +7,22 @@ import { useCallback, useRef, type CSSProperties, type PointerEvent as ReactPoin
  *  light behind the card. Electric lime = winning, amber = still-on, coral = lost.
  *  Values are the OKLCH accent tokens expressed as alpha tints. */
 const SPOT: Record<string, string> = {
-  acid: "oklch(0.88 0.205 123 / 0.16)",
-  amber: "oklch(0.80 0.125 78 / 0.15)",
-  rose: "oklch(0.64 0.165 22 / 0.15)",
-  none: "rgb(255 255 255 / 0.06)",
+  acid: "color-mix(in oklch, var(--color-acid) 16%, transparent)",
+  amber: "color-mix(in oklch, var(--color-amber) 15%, transparent)",
+  rose: "color-mix(in oklch, var(--color-rose) 15%, transparent)",
+  none: "var(--ui-fill)",
 };
 const EDGE: Record<string, string> = {
-  acid: "oklch(0.88 0.205 123 / 0.95)",
-  amber: "oklch(0.80 0.125 78 / 0.9)",
-  rose: "oklch(0.64 0.165 22 / 0.9)",
-  none: "rgb(255 255 255 / 0.3)",
+  acid: "var(--color-acid)",
+  amber: "color-mix(in oklch, var(--color-amber) 90%, transparent)",
+  rose: "color-mix(in oklch, var(--color-rose) 90%, transparent)",
+  none: "var(--ui-border-strong)",
 };
 const GLOW: Record<string, string> = {
-  acid: "oklch(0.88 0.19 123 / 0.14)",
-  amber: "oklch(0.80 0.125 78 / 0.13)",
-  rose: "oklch(0.64 0.165 22 / 0.12)",
-  none: "oklch(0.78 0.06 265 / 0.09)",
+  acid: "color-mix(in oklch, var(--color-acid) 14%, transparent)",
+  amber: "color-mix(in oklch, var(--color-amber) 13%, transparent)",
+  rose: "color-mix(in oklch, var(--color-rose) 12%, transparent)",
+  none: "color-mix(in oklch, var(--color-slate) 10%, transparent)",
 };
 
 export type SpotTone = keyof typeof SPOT;

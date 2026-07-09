@@ -581,7 +581,7 @@ function LegLine({ leg, lm, flash }: { leg: { label: string; glyph: string; play
   const g = LEG_GLYPH[leg.glyph] ?? LEG_GLYPH["—"];
   const tally = leg.player && lm && lm.state !== "scheduled" ? playerTally(lm, leg.player) : null;
   return (
-    <li className={`leg-line flex items-center gap-2.5 px-3.5 py-2 transition-colors hover:bg-white/[0.03] ${flash ? "leg-flash" : ""}`}>
+    <li className={`leg-line flex items-center gap-2.5 px-3.5 py-2 transition-colors hover:bg-[var(--ui-fill)] ${flash ? "leg-flash" : ""}`}>
       <span className={`size-1.5 shrink-0 rounded-full ${g.dot} ${g.pulse ? "animate-pulse motion-reduce:animate-none" : ""}`} />
       <span className="min-w-0 flex-1 break-words text-[0.82rem] leading-snug text-ink">
         {sentenceCase(leg.label)}
@@ -725,7 +725,7 @@ function AccaCard({
       )}
       {legCount > 1 && (parsed?.length ?? 0) > 0 && (
         <div className="flex items-center gap-2 px-4 pb-3 pl-5 sm:px-5 sm:pl-6">
-          <span className="h-1 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
+          <span className="h-1 flex-1 overflow-hidden rounded-full bg-[var(--ui-track)]">
             <span
               className="block h-full rounded-full bg-gradient-to-r from-acid-dim to-acid transition-[width] duration-500"
               style={{ width: `${Math.round((landed / legCount) * 100)}%` }}

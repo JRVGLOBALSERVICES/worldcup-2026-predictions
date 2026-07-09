@@ -154,14 +154,14 @@ function SpotStatRow({ label, h, a, pct }: { label: string; h: number; a: number
         {h}
         {pct && <span className="text-[0.56rem] text-acid/70">%</span>}
       </span>
-      <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
+      <div className="h-1 overflow-hidden rounded-full bg-[var(--ui-track)]">
         <span
           className="block h-full origin-right rounded-full bg-acid transition-transform duration-700 ease-out"
           style={{ transform: `scaleX(${h / max})` }}
         />
       </div>
       <span className="text-center font-mono text-[0.7rem] uppercase tracking-[0.14em] text-faint/70">{label}</span>
-      <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
+      <div className="h-1 overflow-hidden rounded-full bg-[var(--ui-track)]">
         <span
           className="block h-full origin-left rounded-full bg-mint/80 transition-transform duration-700 ease-out"
           style={{ transform: `scaleX(${a / max})` }}
@@ -379,7 +379,7 @@ function LiveFeed({ lm, home, away }: { lm: LiveMatch; home: { flag: string; nam
                 ? "border border-acid-dim/40 bg-acid/[0.08]"
                 : isInjurySub
                   ? "border border-rose/30 bg-rose/[0.06]"
-                  : "bg-white/[0.025]"
+                  : "bg-[var(--ui-fill)]"
             }`}
           >
             <span className="text-sm leading-none">{meta.glyph}</span>

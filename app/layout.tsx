@@ -38,12 +38,28 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+/* Light is the default surface; the dark toggle repaints the chrome bar to ink. */
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f1ea" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d1020" },
+  ],
+};
+
+/* Runs before first paint: apply the saved theme so there's no light→dark flash
+ * on reload. Light is the default — dark is applied ONLY when explicitly saved. */
+const THEME_INIT = `(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
+      </head>
       <body className="min-h-full">{children}</body>
     </html>
   );

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Class-based dark mode — the toggle adds `.dark` to <html>. Components use
+ * semantic tokens (bg-pitch / text-ink / text-acid), never `dark:` utilities,
+ * so the whole app re-themes by overriding the `--color-*` vars under :root.dark.
+ * Light is the default (:root); dark is the opt-in look. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Twemoji country flags — Windows Chrome/Edge render regional-indicator emoji as
  * two-letter tofu boxes (no native flag glyphs). This font supplies real flag
  * glyphs; `unicode-range` scopes it to flag codepoints ONLY, so it never touches
@@ -12,61 +18,116 @@
   font-display: swap;
 }
 
-/* Hallmark · redesign: disciplined dark system · tone: premium-terminal
- * anchor hue: ink-blue 265 ground · electric-lime 122 single hero accent
+/* ═══════════════════════════════════════════════════════════════════════════
+ * LIGHT theme = default (:root). A printed matchday-programme / newsprint look:
+ * warm cream paper, deep ink-blue type, one spot colour (pitch-green) doing the
+ * win / key-figure / CTA work — the daylight twin of the dark ink-blue system.
+ * The SAME token names carry both themes, so every component flips for free.
  *
- * The prior system failed on colour discipline: four competing accent hues
- * (emerald + orange + gold + rose) over a 58%-opacity slate glass on near-black
- * — which reads as grey mud with no hierarchy. This rebuild follows the
- * reference-dark playbook (Linear / Polymarket / Vercel):
- *   1. ONE cohesive base hue (ink-blue 265, very low chroma).
- *   2. A real elevation LADDER — bg → surface → card → raised each step
- *      meaningfully lighter, so a card sits clearly above its ground.
- *   3. ONE loud accent (electric lime) doing all the "win / key / profit" work.
- *   4. Everything else demoted to quiet functional STATUS signals (amber = live,
- *      coral = lost, cyan = secondary info) — desaturated so they never fight
- *      the lime.
- *   5. Near-opaque elevated surfaces, not heavy translucency — glass gets its
- *      depth from the ladder + a whisper of same-hue gradient, never from
- *      dumping 40% black-see-through over black. */
+ * Colour discipline (mirrors the dark system):
+ *   1. ONE base hue family — warm paper cream (hue 85) ground, ink-blue (265) type.
+ *   2. A real elevation ladder — cream ground → lighter panels → white cards, with
+ *      ink-tinted hairlines carrying the separation (print gets depth from rules,
+ *      not glow).
+ *   3. ONE loud accent (pitch-green) doing all the win / key / profit work,
+ *      dark enough to read as TEXT on cream and to take white text as a FILL.
+ *   4. Status signals (amber = live, coral = lost, teal = secondary) darkened so
+ *      they read on paper without fighting the green.
+ * ═══════════════════════════════════════════════════════════════════════════ */
 @theme {
-  /* ── Elevation ladder — ink-blue (hue 265), low chroma, real lightness steps */
-  --color-pitch:   oklch(0.155 0.018 265); /* app background — deepest ink */
-  --color-pitch-2: oklch(0.205 0.021 265); /* raised section / sub-panel */
-  --color-card:    oklch(0.255 0.024 265); /* slip card surface */
-  --color-raised:  oklch(0.305 0.026 265); /* chip / raised control on a card */
-  --color-line:    oklch(0.44 0.03 264);   /* visible hairline / divider */
-  --color-slate:   oklch(0.52 0.03 263);   /* raised chrome / secondary stroke */
+  /* ── Elevation ladder — warm cream paper (hue 85), monotonic lighter up */
+  --color-pitch:   oklch(0.962 0.008 85);  /* app background — warm newsprint cream */
+  --color-pitch-2: oklch(0.978 0.006 85);  /* raised section / masthead band */
+  --color-card:    oklch(0.993 0.004 85);  /* slip card surface — near-white paper */
+  --color-raised:  oklch(1 0 0);           /* chip / raised control on a card */
+  --color-line:    oklch(0.86 0.012 265);  /* visible ink-tinted hairline / divider */
+  --color-slate:   oklch(0.70 0.02 264);   /* raised chrome / secondary stroke */
 
-  /* ── Text — pure white, muted via opacity utilities (no coloured greys) */
-  --color-ink:   oklch(1 0 0);
-  --color-muted: oklch(1 0 0);
-  --color-faint: oklch(1 0 0);
+  /* ── Text — deep warm ink, muted via opacity utilities (no coloured greys) */
+  --color-ink:   oklch(0.24 0.021 265);
+  --color-muted: oklch(0.24 0.021 265);
+  --color-faint: oklch(0.24 0.021 265);
 
-  /* ── THE accent. Electric lime — win, profit, key figure, primary CTA, focus.
-   * This is the only loud colour in the system; it earns its loudness by being
-   * alone. Ink text sits on lime fills (never white). */
-  --color-acid:     oklch(0.88 0.205 123);       /* #b9f227-ish electric lime */
-  --color-acid-dim: oklch(0.55 0.135 125);       /* pressed / bar tail */
-  --color-on-acid:  oklch(0.20 0.02 265);        /* ink text on lime fills */
+  /* ── THE accent. Pitch-green — win, profit, key figure, primary CTA, focus.
+   * Darkened from the dark-theme lime so it reads as TEXT on cream AND carries
+   * white text as a FILL. Still the only loud colour in the system. */
+  --color-acid:     oklch(0.545 0.155 142);      /* deep pitch-green */
+  --color-acid-dim: oklch(0.66 0.135 142);       /* pressed / bar tail / accent stroke */
+  --color-on-acid:  oklch(0.99 0.015 142);       /* near-white text on green fills */
 
-  /* ── Quiet status signals — desaturated, functional, never decorative.
-   * They read as "state", not as brand colour, so they don't fight the lime. */
-  --color-amber: oklch(0.80 0.125 78);           /* LIVE — a warm pulse only */
-  --color-mint:  oklch(0.78 0.09 215);           /* secondary info / player prop (cool cyan) */
-  --color-mint-dim: oklch(0.54 0.08 215);
-  --color-rose:  oklch(0.64 0.165 22);           /* LOST / P&L down (coral) */
-  --color-rose-dim: oklch(0.50 0.13 22);
+  /* ── Quiet status signals — darkened to read on paper, still functional. */
+  --color-amber: oklch(0.62 0.14 66);            /* LIVE — warm ochre pulse */
+  --color-mint:  oklch(0.52 0.10 220);           /* secondary info / player prop (teal) */
+  --color-mint-dim: oklch(0.60 0.085 220);
+  --color-rose:  oklch(0.55 0.18 22);            /* LOST / P&L down (coral) */
+  --color-rose-dim: oklch(0.62 0.15 22);
 
-  /* ── Ambient blooms — same-hue, whisper-low. Cool lime cast top, ink below. */
-  --color-bloom:         oklch(0.88 0.18 123 / 0.05);  /* faint lime cast behind hero */
-  --color-hairline:      oklch(1 0 0 / 0.02);          /* .stripes pitch markings */
-  --color-bloom-acid:    oklch(0.88 0.18 123 / 0.09);  /* card corner — lime */
-  --color-bloom-mintcast:oklch(0.78 0.10 215 / 0.06);  /* card corner — cyan */
+  /* ── Ambient blooms — warm, whisper-low. Green cast top, paper below. */
+  --color-bloom:         oklch(0.60 0.15 142 / 0.06);
+  --color-hairline:      oklch(0.24 0.02 265 / 0.035); /* .stripes pitch markings (ink) */
+  --color-bloom-acid:    oklch(0.60 0.15 142 / 0.07);
+  --color-bloom-mintcast:oklch(0.52 0.10 220 / 0.05);
 
   --font-display: "Twemoji Country Flags", var(--font-archivo), system-ui, sans-serif;
   --font-sans: "Twemoji Country Flags", var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: "Twemoji Country Flags", var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* Surface primitives used by the custom card/panel CSS below (NOT Tailwind
+ * utilities). Light defaults = ink-tinted translucency over paper. */
+:root {
+  --ui-border:        rgb(28 32 52 / 0.11);
+  --ui-border-strong: rgb(28 32 52 / 0.15);
+  --ui-fill:          rgb(28 32 52 / 0.028);
+  --ui-hi:            rgb(255 255 255 / 0.75);
+  --ui-divider:       rgb(28 32 52 / 0.08);
+  --ui-sweep:         rgb(28 32 52 / 0.35);
+  --ui-track:         rgb(28 32 52 / 0.11);
+  color-scheme: light;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * DARK theme = opt-in (:root.dark). The original ink-blue "premium-terminal"
+ * system, preserved exactly and moved behind the toggle. ONE ink-blue base,
+ * a real elevation ladder, electric-lime as the single loud accent, quiet
+ * desaturated status signals. `:root.dark` beats `:root` on specificity, so
+ * these override the light defaults whenever <html> carries `.dark`.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+:root.dark {
+  --color-pitch:   oklch(0.155 0.018 265);
+  --color-pitch-2: oklch(0.205 0.021 265);
+  --color-card:    oklch(0.255 0.024 265);
+  --color-raised:  oklch(0.305 0.026 265);
+  --color-line:    oklch(0.44 0.03 264);
+  --color-slate:   oklch(0.52 0.03 263);
+
+  --color-ink:   oklch(1 0 0);
+  --color-muted: oklch(1 0 0);
+  --color-faint: oklch(1 0 0);
+
+  --color-acid:     oklch(0.88 0.205 123);
+  --color-acid-dim: oklch(0.55 0.135 125);
+  --color-on-acid:  oklch(0.20 0.02 265);
+
+  --color-amber: oklch(0.80 0.125 78);
+  --color-mint:  oklch(0.78 0.09 215);
+  --color-mint-dim: oklch(0.54 0.08 215);
+  --color-rose:  oklch(0.64 0.165 22);
+  --color-rose-dim: oklch(0.50 0.13 22);
+
+  --color-bloom:         oklch(0.88 0.18 123 / 0.05);
+  --color-hairline:      oklch(1 0 0 / 0.02);
+  --color-bloom-acid:    oklch(0.88 0.18 123 / 0.09);
+  --color-bloom-mintcast:oklch(0.78 0.10 215 / 0.06);
+
+  --ui-border:        rgb(255 255 255 / 0.06);
+  --ui-border-strong: rgb(255 255 255 / 0.10);
+  --ui-fill:          rgb(255 255 255 / 0.038);
+  --ui-hi:            rgb(255 255 255 / 0.04);
+  --ui-divider:       rgb(255 255 255 / 0.055);
+  --ui-sweep:         rgb(255 255 255 / 0.5);
+  --ui-track:         rgb(255 255 255 / 0.08);
+  color-scheme: dark;
 }
 
 @layer base {
@@ -74,17 +135,26 @@
     background: var(--color-pitch);
     color: var(--color-ink);
   }
+  /* LIGHT body — clean warm paper with a whisper of green at the crown and a
+   * faint newsprint tint settling in, so the ground reads as one considered
+   * sheet rather than flat white. */
   body {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    /* Cool lime whisper at the crown, settling into deep ink — same hue family,
-     * so the ground reads as one considered gradient, not two clashing tints. */
+    background:
+      radial-gradient(115% 62% at 50% -12%, var(--color-bloom), transparent 58%),
+      linear-gradient(180deg, oklch(0.985 0.006 85), var(--color-pitch) 46%),
+      var(--color-pitch);
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+  /* DARK body — the original cool lime whisper at the crown settling into deep ink. */
+  :root.dark body {
     background:
       radial-gradient(115% 65% at 50% -12%, var(--color-bloom), transparent 58%),
       linear-gradient(180deg, oklch(0.175 0.02 265), var(--color-pitch) 42%),
       var(--color-pitch);
     background-attachment: fixed;
-    min-height: 100dvh;
   }
   ::selection {
     background: var(--color-acid);
@@ -113,7 +183,7 @@
 }
 
 /* Slip-card chrome — two soft same-family corner blooms behind the tracker hero.
- * Lime top-right, cool cyan bottom-left; both whisper-low so they lift the
+ * Green top-right, cool teal bottom-left; both whisper-low so they lift the
  * surface without muddying it. */
 .slip-bloom {
   background-image:
@@ -121,30 +191,23 @@
     radial-gradient(700px 460px at -8% 116%, var(--color-bloom-mintcast), transparent 55%);
 }
 
-/* Left energy bar down a slip header — the single lime accent, vertical. */
+/* Left energy bar down a slip header — the single accent, vertical. */
 .accent-bar {
   background-image: linear-gradient(180deg, var(--color-acid), var(--color-acid-dim));
 }
 
 /* ── Card surface system ──────────────────────────────────────────────────────
- * NOT translucent-glass-over-black (that was the mud). A near-opaque elevated
- * ink surface that sits clearly above the ground via the lightness ladder, with
- * a 1px top highlight and a soft drop shadow for lift. A light backdrop-blur
- * only affects whatever peeks through the ~12% transparency at the edges — the
- * body stays solid, so it can never turn grey. The per-card verdict tone glow
- * gives it a breath of its own colour without a second hue entering the palette. */
-/* No card surface. The accumulator "card" is a transparent group — only its
- * inner match-panels carry a surface, so there's no box-in-box mud and no
- * patchy verdict glow behind the whole slip. A single hairline holds the group
- * together; the left verdict edge and the hover spotlight still do the accent
- * work. */
+ * The accumulator "card" is a transparent group — only its inner match-panels
+ * carry a surface, so there's no box-in-box mud. A single hairline holds the
+ * group together; the left verdict edge and the hover spotlight do the accent
+ * work. Surface strokes/fills come from the --ui-* vars so they flip per theme
+ * (white-translucent on dark ink, ink-translucent on cream paper). */
 .glass {
   position: relative;
   isolation: isolate;
   background: transparent;
-  border: 1px solid rgb(255 255 255 / 0.06);
+  border: 1px solid var(--ui-border);
 }
-/* Tone glow removed — it was the patchy coloured bloom behind the card. */
 .glass > .slip-glow {
   display: none;
 }
@@ -161,9 +224,8 @@
 
 /* ── Cursor spotlight + conic border glow — adapted from Aceternity's
  * `card-spotlight` (cursor fill) and `glowing-effect` (angled border ring),
- * both re-implemented canvas- and dependency-free (CSS custom properties + one
- * rAF-throttled pointer handler) so they cost ~nothing across a page full of
- * live slips. Pointer-fine only; frozen under reduced-motion. */
+ * re-implemented dependency-free (CSS custom properties + one rAF-throttled
+ * pointer handler). Pointer-fine only; frozen under reduced-motion. */
 .spot {
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
 }
@@ -176,13 +238,12 @@
   transition: opacity 0.35s ease;
   background: radial-gradient(
     320px circle at var(--mx, 50%) var(--my, 50%),
-    var(--spot, oklch(0.88 0.18 123 / 0.14)),
+    var(--spot, oklch(0.6 0.15 142 / 0.14)),
     transparent 66%
   );
 }
 /* Aceternity glowing-effect border: a conic sweep masked to a 1px ring that
- * rotates to the pointer angle (--ang, set by the same handler). Border-only via
- * mask-composite; fades in on hover so the resting card stays calm. */
+ * rotates to the pointer angle (--ang). Border-only via mask-composite. */
 .spot > .border-glow {
   position: absolute;
   inset: 0;
@@ -195,7 +256,7 @@
     from calc(var(--ang, 0) * 1deg) at var(--mx, 50%) var(--my, 50%),
     transparent 0deg,
     var(--edge, transparent) 55deg,
-    rgb(255 255 255 / 0.5) 90deg,
+    var(--ui-sweep) 90deg,
     var(--edge, transparent) 125deg,
     transparent 180deg
   );
@@ -207,7 +268,7 @@
 @media (pointer: fine) {
   .spot:hover {
     transform: translateY(-2px);
-    border-color: rgb(255 255 255 / 0.14);
+    border-color: var(--ui-border-strong);
   }
   .spot:hover > .spot-glow {
     opacity: 1;
@@ -228,14 +289,13 @@
 }
 
 /* ── Match panel — one cohesive unit per game inside an accumulator. The score
- * header and that game's legs live in ONE bordered panel (not two floating
- * bars), so a leg reads as belonging to its match. Amber-tinted while live. */
+ * header and that game's legs live in ONE bordered panel. Amber-tinted while live. */
 .match-panel {
-  border: 1px solid rgb(255 255 255 / 0.10);
-  background: rgb(255 255 255 / 0.038);
+  border: 1px solid var(--ui-border-strong);
+  background: var(--ui-fill);
   border-radius: 0.85rem;
   overflow: hidden;
-  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 0.04);
+  box-shadow: inset 0 1px 0 0 var(--ui-hi);
 }
 .match-panel--hot {
   border-color: color-mix(in oklch, var(--color-amber) 40%, transparent);
@@ -244,13 +304,12 @@
 }
 .leg-line + .leg-line,
 .match-scoreline + .leg-line {
-  border-top: 1px solid rgb(255 255 255 / 0.055);
+  border-top: 1px solid var(--ui-divider);
 }
 
 /* ── Live-event FX (components/LiveFX.tsx) ───────────────────────────────────
- * Goal banner punches in with a slight overshoot; event chips slide up from
- * the bottom edge; changed stat numbers pop. All killed by the reduced-motion
- * block below (duration → 0.001ms), so they degrade to instant state changes. */
+ * Goal banner punches in; event chips slide up; changed stat numbers pop. All
+ * killed by the reduced-motion block below, degrading to instant state changes. */
 @keyframes goal-banner-in {
   0% { opacity: 0; transform: scale(0.6) translateY(10px); filter: blur(6px); }
   55% { opacity: 1; transform: scale(1.07) translateY(0); filter: blur(0); }
@@ -266,8 +325,6 @@
 .chip-in {
   animation: chip-in 0.38s cubic-bezier(0.18, 1.25, 0.4, 1) both;
 }
-/* A live number that just changed — quick scale-up + brightness flash. Applied
- * via a React key remount so consecutive changes replay it. */
 @keyframes stat-pop {
   0% { transform: scale(1); filter: brightness(1); }
   35% { transform: scale(1.45); filter: brightness(1.75); }
@@ -277,9 +334,6 @@
   display: inline-block;
   animation: stat-pop 0.65s cubic-bezier(0.2, 1.3, 0.4, 1);
 }
-/* A leg row whose verdict just settled this poll — a brief acid wash + inset
- * edge sweeping the row, so the eye is pulled to the exact pick a live event
- * moved. Applied by LiveTracker's flash set; killed by reduced-motion below. */
 @keyframes leg-flash {
   0% { background: color-mix(in oklch, var(--color-acid) 22%, transparent); box-shadow: inset 3px 0 0 0 var(--color-acid); }
   100% { background: transparent; box-shadow: inset 3px 0 0 0 transparent; }

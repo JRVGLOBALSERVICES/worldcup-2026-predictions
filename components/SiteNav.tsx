@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 export type NavKey = "predictions" | "stats" | "rj" | "ruhan" | "tharma";
 
@@ -30,6 +31,7 @@ export function SiteNav({ active }: { active: NavKey }) {
           </Link>
         ),
       )}
+      <ThemeToggle />
     </nav>
   );
 }
