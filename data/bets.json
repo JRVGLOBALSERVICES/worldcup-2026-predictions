@@ -1211,6 +1211,22 @@
       },
       "finishPhase": "penalties",
       "advanced": "home"
+    },
+    "fra-mar-2026-07-09": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": {
+        "home": 2,
+        "away": 0
+      },
+      "ft90": {
+        "home": 2,
+        "away": 0
+      },
+      "finishPhase": "regulation",
+      "advanced": "home"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -4745,6 +4761,36 @@
           "team": "home",
           "player": "Miro Muheim",
           "minute": 105,
+          "type": "yellow"
+        }
+      ]
+    },
+    "fra-mar-2026-07-09": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 59,
+          "assist": "Désiré Doué",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Ousmane Dembélé",
+          "minute": 65,
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        }
+      ],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Issa Diop",
+          "minute": 63,
           "type": "yellow"
         }
       ]
@@ -102595,20 +102641,20 @@
     },
     "fra-mar-2026-07-09": {
       "corners": {
-        "home": 3,
-        "away": 2
+        "home": 5,
+        "away": 5
       },
       "sot": {
-        "home": 4,
-        "away": 0
+        "home": 8,
+        "away": 1
       },
       "shots": {
-        "home": 14,
-        "away": 2
+        "home": 22,
+        "away": 5
       },
       "yellow": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "red": {
         "home": 0,
@@ -102616,57 +102662,65 @@
       },
       "cards": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "fouls": {
-        "home": 6,
-        "away": 7
+        "home": 10,
+        "away": 13
       },
       "cornersByHalf": {
         "home": [
           3,
-          0
+          2
         ],
         "away": [
           1,
-          1
+          4
         ]
       },
       "sotByHalf": {
         "home": [
           2,
-          1
+          3
         ],
         "away": [
           0,
-          0
+          1
         ]
       },
       "playerSot": {
         "Dayot Upamecano": 1,
-        "Désiré Doué": 2
+        "Désiré Doué": 2,
+        "Azzedine Ounahi": 1,
+        "Bradley Barcola": 1,
+        "Jean-Philippe Mateta": 1
       },
       "playerShots": {
-        "Kylian Mbappé": 1,
+        "Kylian Mbappé": 3,
         "Dayot Upamecano": 1,
         "Désiré Doué": 3,
-        "Ousmane Dembélé": 3,
+        "Ousmane Dembélé": 4,
         "Adrien Rabiot": 1,
         "Jules Koundé": 1,
         "Manu Koné": 1,
-        "Michael Olise": 1,
+        "Michael Olise": 3,
         "Lucas Digne": 1,
         "Achraf Hakimi": 1,
-        "Brahim Díaz": 1
+        "Brahim Díaz": 1,
+        "Azzedine Ounahi": 1,
+        "Neil El Aynaoui": 1,
+        "Bradley Barcola": 1,
+        "Jean-Philippe Mateta": 2,
+        "Gessime Yassine": 1
       },
       "playerShotBreakdown": {
         "Kylian Mbappé": {
           "team": "home",
-          "shots": 1,
-          "sot": 0,
-          "off": 1,
+          "shots": 3,
+          "sot": 1,
+          "off": 2,
           "blocked": 0,
-          "goals": 0
+          "goals": 1
         },
         "Dayot Upamecano": {
           "team": "home",
@@ -102686,11 +102740,11 @@
         },
         "Ousmane Dembélé": {
           "team": "home",
-          "shots": 3,
-          "sot": 0,
+          "shots": 4,
+          "sot": 1,
           "off": 2,
           "blocked": 1,
-          "goals": 0
+          "goals": 1
         },
         "Adrien Rabiot": {
           "team": "home",
@@ -102718,9 +102772,9 @@
         },
         "Michael Olise": {
           "team": "home",
-          "shots": 1,
+          "shots": 3,
           "sot": 0,
-          "off": 0,
+          "off": 2,
           "blocked": 1,
           "goals": 0
         },
@@ -102747,6 +102801,46 @@
           "off": 0,
           "blocked": 1,
           "goals": 0
+        },
+        "Azzedine Ounahi": {
+          "team": "away",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Neil El Aynaoui": {
+          "team": "away",
+          "shots": 1,
+          "sot": 0,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Bradley Barcola": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Jean-Philippe Mateta": {
+          "team": "home",
+          "shots": 2,
+          "sot": 1,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Gessime Yassine": {
+          "team": "away",
+          "shots": 1,
+          "sot": 0,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
         }
       },
       "players": [
@@ -102767,11 +102861,11 @@
           "yc": 0,
           "rc": 0,
           "off": 0,
-          "sv": 0,
+          "sv": 1,
           "gc": 0,
           "tk": 0,
           "bk": 0,
-          "ps": 8
+          "ps": 17
         },
         {
           "team": "home",
@@ -102791,7 +102885,7 @@
           "off": 0,
           "tk": 0,
           "bk": 0,
-          "ps": 49
+          "ps": 60
         },
         {
           "team": "home",
@@ -102809,9 +102903,9 @@
           "yc": 0,
           "rc": 0,
           "off": 0,
-          "tk": 1,
+          "tk": 3,
           "bk": 0,
-          "ps": 41
+          "ps": 62
         },
         {
           "team": "home",
@@ -102831,7 +102925,7 @@
           "off": 0,
           "tk": 1,
           "bk": 0,
-          "ps": 31
+          "ps": 46
         },
         {
           "team": "home",
@@ -102844,14 +102938,14 @@
           "a": 0,
           "sh": 1,
           "sot": 0,
-          "fc": 0,
+          "fc": 2,
           "fs": 0,
           "yc": 0,
           "rc": 0,
           "off": 0,
           "tk": 0,
           "bk": 1,
-          "ps": 25
+          "ps": 31
         },
         {
           "team": "home",
@@ -102862,16 +102956,16 @@
           "aid": "286831",
           "g": 0,
           "a": 0,
-          "sh": 1,
+          "sh": 3,
           "sot": 0,
           "fc": 0,
-          "fs": 2,
+          "fs": 4,
           "yc": 0,
           "rc": 0,
           "off": 0,
-          "tk": 1,
+          "tk": 2,
           "bk": 1,
-          "ps": 36
+          "ps": 49
         },
         {
           "team": "home",
@@ -102884,14 +102978,14 @@
           "a": 0,
           "sh": 1,
           "sot": 0,
-          "fc": 1,
+          "fc": 2,
           "fs": 1,
           "yc": 0,
           "rc": 0,
           "off": 0,
           "tk": 1,
           "bk": 0,
-          "ps": 32
+          "ps": 48
         },
         {
           "team": "home",
@@ -102911,7 +103005,7 @@
           "off": 0,
           "tk": 1,
           "bk": 1,
-          "ps": 32
+          "ps": 38
         },
         {
           "team": "home",
@@ -102920,18 +103014,18 @@
           "num": 10,
           "starter": true,
           "aid": "231388",
-          "g": 0,
-          "a": 0,
-          "sh": 2,
-          "sot": 1,
+          "g": 1,
+          "a": 1,
+          "sh": 4,
+          "sot": 2,
           "fc": 0,
-          "fs": 1,
+          "fs": 2,
           "yc": 0,
           "rc": 0,
           "off": 0,
           "tk": 0,
           "bk": 0,
-          "ps": 22
+          "ps": 31
         },
         {
           "team": "home",
@@ -102941,17 +103035,17 @@
           "starter": true,
           "aid": "336388",
           "g": 0,
-          "a": 0,
+          "a": 1,
           "sh": 3,
           "sot": 2,
           "fc": 2,
-          "fs": 0,
+          "fs": 1,
           "yc": 0,
           "rc": 0,
           "off": 0,
           "tk": 2,
           "bk": 1,
-          "ps": 31
+          "ps": 39
         },
         {
           "team": "home",
@@ -102960,10 +103054,10 @@
           "num": 7,
           "starter": true,
           "aid": "229744",
-          "g": 0,
+          "g": 1,
           "a": 0,
-          "sh": 3,
-          "sot": 0,
+          "sh": 4,
+          "sot": 1,
           "fc": 0,
           "fs": 0,
           "yc": 0,
@@ -102971,7 +103065,87 @@
           "off": 0,
           "tk": 0,
           "bk": 1,
-          "ps": 22
+          "ps": 36
+        },
+        {
+          "team": "home",
+          "name": "Bradley Barcola",
+          "pos": "SUB",
+          "num": 12,
+          "starter": false,
+          "aid": "328238",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 6
+        },
+        {
+          "team": "home",
+          "name": "Warren Zaïre-Emery",
+          "pos": "SUB",
+          "num": 18,
+          "starter": false,
+          "aid": "345581",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 12
+        },
+        {
+          "team": "home",
+          "name": "Jean-Philippe Mateta",
+          "pos": "SUB",
+          "num": 22,
+          "starter": false,
+          "aid": "241187",
+          "g": 0,
+          "a": 0,
+          "sh": 2,
+          "sot": 1,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 1
+        },
+        {
+          "team": "home",
+          "name": "Malo Gusto",
+          "pos": "SUB",
+          "num": 2,
+          "starter": false,
+          "aid": "308947",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 5
         },
         {
           "team": "away",
@@ -102990,11 +103164,11 @@
           "yc": 0,
           "rc": 0,
           "off": 0,
-          "sv": 4,
-          "gc": 0,
+          "sv": 6,
+          "gc": 2,
           "tk": 0,
           "bk": 0,
-          "ps": 26
+          "ps": 34
         },
         {
           "team": "away",
@@ -103012,9 +103186,9 @@
           "yc": 0,
           "rc": 0,
           "off": 0,
-          "tk": 0,
+          "tk": 1,
           "bk": 0,
-          "ps": 27
+          "ps": 52
         },
         {
           "team": "away",
@@ -103027,14 +103201,14 @@
           "a": 0,
           "sh": 0,
           "sot": 0,
-          "fc": 0,
+          "fc": 1,
           "fs": 0,
-          "yc": 0,
+          "yc": 1,
           "rc": 0,
           "off": 0,
           "tk": 1,
           "bk": 0,
-          "ps": 36
+          "ps": 50
         },
         {
           "team": "away",
@@ -103054,7 +103228,7 @@
           "off": 0,
           "tk": 3,
           "bk": 0,
-          "ps": 33
+          "ps": 39
         },
         {
           "team": "away",
@@ -103067,14 +103241,14 @@
           "a": 0,
           "sh": 1,
           "sot": 0,
-          "fc": 0,
-          "fs": 1,
+          "fc": 1,
+          "fs": 2,
           "yc": 0,
           "rc": 0,
           "off": 0,
           "tk": 1,
           "bk": 0,
-          "ps": 35
+          "ps": 57
         },
         {
           "team": "away",
@@ -103085,8 +103259,8 @@
           "aid": "291552",
           "g": 0,
           "a": 0,
-          "sh": 0,
-          "sot": 0,
+          "sh": 1,
+          "sot": 1,
           "fc": 1,
           "fs": 1,
           "yc": 0,
@@ -103094,7 +103268,7 @@
           "off": 0,
           "tk": 2,
           "bk": 0,
-          "ps": 39
+          "ps": 70
         },
         {
           "team": "away",
@@ -103105,16 +103279,16 @@
           "aid": "323807",
           "g": 0,
           "a": 0,
-          "sh": 0,
+          "sh": 1,
           "sot": 0,
           "fc": 4,
           "fs": 0,
           "yc": 0,
           "rc": 0,
           "off": 0,
-          "tk": 1,
+          "tk": 3,
           "bk": 0,
-          "ps": 37
+          "ps": 57
         },
         {
           "team": "away",
@@ -103154,7 +103328,7 @@
           "off": 0,
           "tk": 3,
           "bk": 0,
-          "ps": 25
+          "ps": 26
         },
         {
           "team": "away",
@@ -103174,7 +103348,7 @@
           "off": 0,
           "tk": 0,
           "bk": 0,
-          "ps": 16
+          "ps": 20
         },
         {
           "team": "away",
@@ -103194,11 +103368,175 @@
           "off": 0,
           "tk": 1,
           "bk": 1,
-          "ps": 22
+          "ps": 26
+        },
+        {
+          "team": "away",
+          "name": "Gessime Yassine",
+          "pos": "SUB",
+          "num": 16,
+          "starter": false,
+          "aid": "379012",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 0,
+          "fc": 1,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 8
+        },
+        {
+          "team": "away",
+          "name": "Sofyan Amrabat",
+          "pos": "SUB",
+          "num": 4,
+          "starter": false,
+          "aid": "195226",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 27
+        },
+        {
+          "team": "away",
+          "name": "Soufiane Rahimi",
+          "pos": "SUB",
+          "num": 9,
+          "starter": false,
+          "aid": "276139",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 4
+        },
+        {
+          "team": "away",
+          "name": "Amine Sbaï",
+          "pos": "SUB",
+          "num": 17,
+          "starter": false,
+          "aid": "314388",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 2,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 4
+        },
+        {
+          "team": "away",
+          "name": "Zakaria El Ouahdi",
+          "pos": "SUB",
+          "num": 13,
+          "starter": false,
+          "aid": "325024",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 7
         }
       ],
-      "subs": [],
-      "firstGoalMethod": null,
+      "subs": [
+        {
+          "team": "away",
+          "minute": 61,
+          "on": "Soufiane Rahimi",
+          "off": "Bilal El Khannouss",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 61,
+          "on": "Sofyan Amrabat",
+          "off": "Ayyoub Bouaddi",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 70,
+          "on": "Warren Zaïre-Emery",
+          "off": "Manu Koné",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 73,
+          "on": "Zakaria El Ouahdi",
+          "off": "Anass Salah-Eddine",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 73,
+          "on": "Gessime Yassine",
+          "off": "Brahim Díaz",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 77,
+          "on": "Jean-Philippe Mateta",
+          "off": "Kylian Mbappé",
+          "injury": true
+        },
+        {
+          "team": "home",
+          "minute": 77,
+          "on": "Bradley Barcola",
+          "off": "Désiré Doué",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 84,
+          "on": "Amine Sbaï",
+          "off": "Chemsdine Talbi",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 86,
+          "on": "Malo Gusto",
+          "off": "Jules Koundé",
+          "injury": false
+        }
+      ],
+      "firstGoalMethod": "shot",
       "firstPenalty": null,
       "waterBreak": {
         "h1": {
@@ -103210,24 +103548,34 @@
           "firstActionMinute": 23,
           "isCorner": true,
           "reliable": false
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Corner Awarded",
+          "firstActionMinute": 72,
+          "isCorner": true,
+          "reliable": false
         }
       },
       "tempo": {
         "possession": {
-          "home": 49.8,
-          "away": 50.2
+          "home": 48.1,
+          "away": 51.9
         },
         "passes": {
-          "home": 333,
-          "away": 336
+          "home": 485,
+          "away": 524
         },
         "tackles": {
-          "home": 7,
-          "away": 13
+          "home": 11,
+          "away": 17
         },
         "saves": {
-          "home": 0,
-          "away": 4
+          "home": 1,
+          "away": 6
         },
         "offsides": {
           "home": 0,
@@ -103238,26 +103586,26 @@
           "away": 1
         },
         "interceptions": {
-          "home": 6,
+          "home": 11,
           "away": 6
         },
         "clearances": {
-          "home": 9,
-          "away": 8
+          "home": 22,
+          "away": 12
         }
       },
       "full": [
         {
           "key": "foulsCommitted",
           "label": "Fouls",
-          "home": "6",
-          "away": "7"
+          "home": "10",
+          "away": "13"
         },
         {
           "key": "yellowCards",
           "label": "Yellow Cards",
           "home": "0",
-          "away": "0"
+          "away": "1"
         },
         {
           "key": "redCards",
@@ -103274,38 +103622,38 @@
         {
           "key": "wonCorners",
           "label": "Corner Kicks",
-          "home": "3",
-          "away": "2"
+          "home": "5",
+          "away": "5"
         },
         {
           "key": "saves",
           "label": "Saves",
-          "home": "0",
-          "away": "4"
+          "home": "1",
+          "away": "6"
         },
         {
           "key": "possessionPct",
-          "label": "POSSESSION",
-          "home": "49.8",
-          "away": "50.2"
+          "label": "Possession",
+          "home": "48.1",
+          "away": "51.9"
         },
         {
           "key": "totalShots",
           "label": "SHOTS",
-          "home": "14",
-          "away": "2"
+          "home": "22",
+          "away": "5"
         },
         {
           "key": "shotsOnTarget",
           "label": "ON GOAL",
-          "home": "4",
-          "away": "0"
+          "home": "8",
+          "away": "1"
         },
         {
           "key": "shotPct",
           "label": "On Target %",
-          "home": "0.3",
-          "away": "0.0"
+          "home": "0.4",
+          "away": "0.2"
         },
         {
           "key": "penaltyKickGoals",
@@ -103322,50 +103670,50 @@
         {
           "key": "accuratePasses",
           "label": "Accurate Passes",
-          "home": "296",
-          "away": "284"
+          "home": "432",
+          "away": "452"
         },
         {
           "key": "totalPasses",
           "label": "Passes",
-          "home": "333",
-          "away": "336"
+          "home": "485",
+          "away": "524"
         },
         {
           "key": "passPct",
           "label": "Pass Completion %",
           "home": "0.9",
-          "away": "0.8"
+          "away": "0.9"
         },
         {
           "key": "accurateCrosses",
           "label": "Accurate Crosses",
-          "home": "4",
-          "away": "0"
+          "home": "5",
+          "away": "2"
         },
         {
           "key": "totalCrosses",
           "label": "Crosses",
-          "home": "6",
-          "away": "5"
+          "home": "12",
+          "away": "13"
         },
         {
           "key": "crossPct",
           "label": "Cross %",
-          "home": "0.7",
-          "away": "0.0"
+          "home": "0.4",
+          "away": "0.2"
         },
         {
           "key": "totalLongBalls",
           "label": "Long Balls",
-          "home": "19",
-          "away": "31"
+          "home": "30",
+          "away": "39"
         },
         {
           "key": "accurateLongBalls",
           "label": "Accurate Long Balls",
-          "home": "9",
-          "away": "8"
+          "home": "14",
+          "away": "12"
         },
         {
           "key": "longballPct",
@@ -103382,42 +103730,42 @@
         {
           "key": "effectiveTackles",
           "label": "Effective Tackles",
-          "home": "6",
+          "home": "8",
           "away": "6"
         },
         {
           "key": "totalTackles",
           "label": "Tackles",
-          "home": "7",
-          "away": "13"
+          "home": "11",
+          "away": "17"
         },
         {
           "key": "tacklePct",
           "label": "Tackle %",
-          "home": "0.9",
-          "away": "0.5"
+          "home": "0.7",
+          "away": "0.4"
         },
         {
           "key": "interceptions",
           "label": "Interceptions",
-          "home": "6",
+          "home": "11",
           "away": "6"
         },
         {
           "key": "effectiveClearance",
           "label": "Effective Clearances",
-          "home": "9",
-          "away": "8"
+          "home": "22",
+          "away": "12"
         },
         {
           "key": "totalClearance",
           "label": "Clearances",
-          "home": "9",
-          "away": "8"
+          "home": "22",
+          "away": "12"
         }
       ],
       "playerTackles": {
-        "Dayot Upamecano": 1,
+        "Dayot Upamecano": 3,
         "Achraf Hakimi": 1
       }
     }
