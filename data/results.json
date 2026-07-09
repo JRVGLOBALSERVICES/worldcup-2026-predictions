@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T21:10:04.909Z",
+    "generatedAt": "2026-07-09T21:20:06.208Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 76,
     "live": 1
@@ -90499,7 +90499,10 @@
     },
     "fra-mar-2026-07-09": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -90514,7 +90517,7 @@
       "stats": {
         "corners": {
           "home": 3,
-          "away": 1
+          "away": 2
         },
         "sot": {
           "home": 3,
@@ -90522,7 +90525,7 @@
         },
         "shots": {
           "home": 13,
-          "away": 1
+          "away": 2
         },
         "yellow": {
           "home": 0,
@@ -90547,13 +90550,13 @@
           ],
           "away": [
             1,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             0,
@@ -90562,19 +90565,20 @@
         },
         "playerSot": {
           "Dayot Upamecano": 1,
-          "Désiré Doué": 1
+          "Désiré Doué": 2
         },
         "playerShots": {
           "Kylian Mbappé": 1,
           "Dayot Upamecano": 1,
-          "Désiré Doué": 2,
+          "Désiré Doué": 3,
           "Ousmane Dembélé": 3,
           "Adrien Rabiot": 1,
           "Jules Koundé": 1,
           "Manu Koné": 1,
           "Michael Olise": 1,
           "Lucas Digne": 1,
-          "Achraf Hakimi": 1
+          "Achraf Hakimi": 1,
+          "Brahim Díaz": 1
         },
         "playerShotBreakdown": {
           "Kylian Mbappé": {
@@ -90595,8 +90599,8 @@
           },
           "Désiré Doué": {
             "team": "home",
-            "shots": 2,
-            "sot": 1,
+            "shots": 3,
+            "sot": 2,
             "off": 0,
             "blocked": 1,
             "goals": 0
@@ -90655,6 +90659,14 @@
             "sot": 0,
             "off": 1,
             "blocked": 0,
+            "goals": 0
+          },
+          "Brahim Díaz": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
             "goals": 0
           }
         },
@@ -91094,7 +91106,7 @@
             "aid": "246532",
             "g": 0,
             "a": 0,
-            "sh": 0,
+            "sh": 1,
             "sot": 0,
             "fc": 0,
             "fs": 2,
@@ -91123,15 +91135,15 @@
         },
         "tempo": {
           "possession": {
-            "home": 49,
-            "away": 51
+            "home": 49.4,
+            "away": 50.6
           },
           "passes": {
-            "home": 263,
-            "away": 274
+            "home": 322,
+            "away": 330
           },
           "tackles": {
-            "home": 5,
+            "home": 7,
             "away": 13
           },
           "saves": {
@@ -91144,15 +91156,15 @@
           },
           "blockedShots": {
             "home": 5,
-            "away": 0
+            "away": 1
           },
           "interceptions": {
-            "home": 3,
-            "away": 5
+            "home": 4,
+            "away": 6
           },
           "clearances": {
-            "home": 8,
-            "away": 6
+            "home": 9,
+            "away": 8
           }
         },
         "full": [
@@ -91184,7 +91196,7 @@
             "key": "wonCorners",
             "label": "Corner Kicks",
             "home": "3",
-            "away": "1"
+            "away": "2"
           },
           {
             "key": "saves",
@@ -91195,14 +91207,14 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "49",
-            "away": "51"
+            "home": "49.4",
+            "away": "50.6"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
             "home": "13",
-            "away": "1"
+            "away": "2"
           },
           {
             "key": "shotsOnTarget",
@@ -91231,14 +91243,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "236",
-            "away": "235"
+            "home": "286",
+            "away": "281"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "263",
-            "away": "274"
+            "home": "322",
+            "away": "330"
           },
           {
             "key": "passPct",
@@ -91256,7 +91268,7 @@
             "key": "totalCrosses",
             "label": "Crosses",
             "home": "6",
-            "away": "4"
+            "away": "5"
           },
           {
             "key": "crossPct",
@@ -91267,13 +91279,13 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "15",
-            "away": "26"
+            "home": "19",
+            "away": "30"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "7",
+            "home": "9",
             "away": "8"
           },
           {
@@ -91286,48 +91298,48 @@
             "key": "blockedShots",
             "label": "Blocked Shots",
             "home": "5",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "5",
+            "home": "6",
             "away": "6"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "5",
+            "home": "7",
             "away": "13"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "1.0",
+            "home": "0.9",
             "away": "0.5"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "3",
-            "away": "5"
+            "home": "4",
+            "away": "6"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "8",
-            "away": "6"
+            "home": "9",
+            "away": "8"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "8",
-            "away": "6"
+            "home": "9",
+            "away": "8"
           }
         ],
         "playerTackles": {
-          "Dayot Upamecano": 0,
-          "Achraf Hakimi": 1
+          "Achraf Hakimi": 1,
+          "Dayot Upamecano": 1
         }
       }
     }
