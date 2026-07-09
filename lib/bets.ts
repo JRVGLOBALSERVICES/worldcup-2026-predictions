@@ -600,6 +600,12 @@ export type MultiLegCond = { odds?: number } & (
   // so no whole-line push arises.
   | { matchId: string; kind: "cornersTotalOver"; line: number }
   | { matchId: string; kind: "cornersTotalUnder"; line: number }
+  // ONE side's own corner count strictly over `line` ("Morocco: Total Team
+  // Corners Over (3.5)" → side:"away", line:3.5), from that side's
+  // MatchStats.corners tally. Corners accrue → clinches mid-match the moment
+  // the side's count clears the line; at FT still short it's dead; no stats
+  // snapshot → pending for a human.
+  | { matchId: string; kind: "teamCornersOver"; side: "home" | "away"; line: number }
   // Named GOALKEEPER's saves strictly over `line` ("Yassine Bounou Over 1.5 —
   // Goalkeeper Over Saves" → line:1.5 → won at 2+). ESPN has no per-player save
   // tally, but a team's saves ARE its keeper's saves, so it settles off
@@ -613,6 +619,11 @@ export type MultiLegCond = { odds?: number } & (
   // FT O/U"). Cards only accrue → clinches mid-match once the running total
   // clears the line; at FT still short it's dead; no stats snapshot → pending.
   | { matchId: string; kind: "cardsTotalOver"; line: number }
+  // ONE side's own cards (yellow + red) strictly over `line` ("Morocco: Team
+  // Total Cards Over (1.5)" → side:"away", line:1.5), from that side's
+  // MatchStats.cards count. Same accrue clinch/dead logic as cardsTotalOver,
+  // side-scoped.
+  | { matchId: string; kind: "teamCardsOver"; side: "home" | "away"; line: number }
   // Truly unverifiable from ESPN (e.g. "penalty FOR A FOUL ON <player>" — the
   // pen + scorer are in the feed but not who was fouled). Never blind-grades —
   // holds the acca pending for a human to settle by hand.
@@ -1443,6 +1454,24 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         continue;
       }
 
+      if (leg.kind === "teamCornersOver") {
+        // One side's own corner count over `line` — corners accrue, so it
+        // clinches the moment the side's tally clears the line; at FT still
+        // short it's dead; no stats snapshot → pending for a human.
+        const cs = getStats(leg.matchId)?.corners;
+        const n = cs ? cs[leg.side] : null;
+        if (n != null && n > leg.line) continue; // cleared → won, even mid-match
+        if (finished) {
+          if (n == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
       if (leg.kind === "gkSavesOver") {
         // Named keeper's saves over the line — settled off his side's team save
         // count (a team's saves are its keeper's saves). Saves only accrue, so
@@ -1471,6 +1500,24 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         if (tot != null && tot > leg.line) continue; // cleared → won, even mid-match
         if (finished) {
           if (tot == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "teamCardsOver") {
+        // One side's own cards (yellow + red) over `line` — cards accrue, so it
+        // clinches the moment the side's count clears the line; at FT still
+        // short it's dead; no stats snapshot → pending for a human.
+        const cd = getStats(leg.matchId)?.cards;
+        const n = cd ? cd[leg.side] : null;
+        if (n != null && n > leg.line) continue; // cleared → won, even mid-match
+        if (finished) {
+          if (n == null) {
             pending = true; // stats never snapshotted → manual settle
             continue;
           }

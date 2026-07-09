@@ -1,715 +1,778 @@
 {
-  "meta": {
-    "owner": "Ruhan",
-    "placedAt": "2026-06-19T15:01:00.000Z",
-    "currency": "RM",
-    "unitStake": 10,
-    "note": "9 bets on the night slate. Match-result, goals, BTTS, corners, SOT and card legs all auto-settle against verified ESPN match stats. Belgium-to-win single (RM1000) added 21/06 — odds 1.72 is an estimate pending Ruhan confirming his book price.",
-    "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Corner / shots-on-target / card counts are taken from ESPN's official per-match statistics."
+ "meta": {
+  "owner": "Ruhan",
+  "placedAt": "2026-06-19T15:01:00.000Z",
+  "currency": "RM",
+  "unitStake": 10,
+  "note": "9 bets on the night slate. Match-result, goals, BTTS, corners, SOT and card legs all auto-settle against verified ESPN match stats. Belgium-to-win single (RM1000) added 21/06 — odds 1.72 is an estimate pending Ruhan confirming his book price.",
+  "disclaimer": "Fun-money tracking only. Returns shown are stake × odds (includes the stake back). Corner / shots-on-target / card counts are taken from ESPN's official per-match statistics."
+ },
+ "results": {},
+ "matchEvents": {},
+ "bets": [],
+ "specials": [
+  {
+   "id": "sp-83302159249",
+   "slipNo": "83302159249",
+   "matchId": "bra-hai-2026-06-19",
+   "player": "Brazil v Haiti",
+   "market": "Total Over 2.5",
+   "label": "Brazil/Haiti: Over 2.5 total goals",
+   "odds": 1.3,
+   "stake": 40,
+   "placedAt": "19/06 22:58",
+   "grade": {
+    "type": "matchGoalsOver",
+    "line": 2.5
+   }
   },
-  "results": {},
-  "matchEvents": {},
-  "bets": [],
-  "specials": [
-    {
-      "id": "sp-83302159249",
-      "slipNo": "83302159249",
-      "matchId": "bra-hai-2026-06-19",
-      "player": "Brazil v Haiti",
-      "market": "Total Over 2.5",
-      "label": "Brazil/Haiti: Over 2.5 total goals",
-      "odds": 1.3,
-      "stake": 40,
-      "placedAt": "19/06 22:58",
-      "grade": {
-        "type": "matchGoalsOver",
-        "line": 2.5
-      }
-    },
-    {
-      "id": "sp-83302245427",
-      "slipNo": "83302245427",
-      "matchId": "tur-par-2026-06-19",
-      "player": "Turkiye v Paraguay",
-      "market": "Goals + corners + cards",
-      "label": "Turkiye/Paraguay: Over 2.5 goals + Over 5.5 corners + Over 2.5 cards",
-      "odds": 2.75,
-      "stake": 40,
-      "placedAt": "19/06 23:01",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "goalsOver",
-            "line": 2.5
-          },
-          {
-            "c": "cornersTotalOver",
-            "line": 5.5
-          },
-          {
-            "c": "cardsTotalOver",
-            "line": 2.5
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83302263409",
-      "slipNo": "83302263409",
-      "matchId": "tur-par-2026-06-19",
-      "player": "Turkiye v Paraguay",
-      "market": "Win + cards + corners",
-      "label": "Paraguay to win + Turkiye most cards + Paraguay most corners",
-      "odds": 34,
-      "stake": 28,
-      "placedAt": "19/06 23:01",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "result",
-            "outcome": "2"
-          },
-          {
-            "c": "mostCards",
-            "side": "home"
-          },
-          {
-            "c": "mostCorners",
-            "side": "away"
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83302217877",
-      "slipNo": "83302217877",
-      "matchId": "bra-hai-2026-06-19",
-      "player": "Brazil v Haiti",
-      "market": "Win + BTTS + corners + cards",
-      "label": "Brazil to win + both teams to score + each team 2+ corners + each team 1+ cards",
-      "odds": 29,
-      "stake": 20,
-      "placedAt": "19/06 23:00",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "result",
-            "outcome": "1"
-          },
-          {
-            "c": "btts"
-          },
-          {
-            "c": "eachTeamCornersAtLeast",
-            "n": 2
-          },
-          {
-            "c": "eachTeamCardsAtLeast",
-            "n": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83302184773",
-      "slipNo": "83302184773",
-      "matchId": "bra-hai-2026-06-19",
-      "player": "Brazil v Haiti",
-      "market": "Goals + corners + cards",
-      "label": "Brazil/Haiti: Over 2.5 goals + Over 8.5 corners + Over 3.5 cards",
-      "odds": 5,
-      "stake": 40,
-      "placedAt": "19/06 22:59",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "goalsOver",
-            "line": 2.5
-          },
-          {
-            "c": "cornersTotalOver",
-            "line": 8.5
-          },
-          {
-            "c": "cardsTotalOver",
-            "line": 3.5
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83302121279",
-      "slipNo": "83302121279",
-      "matchId": "sco-mor-2026-06-19",
-      "player": "Scotland v Morocco",
-      "market": "Win + corners + cards",
-      "label": "Morocco to win + 10–12 corners + fewer than 4 cards",
-      "odds": 8.5,
-      "stake": 40,
-      "placedAt": "19/06 22:58",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "result",
-            "outcome": "2"
-          },
-          {
-            "c": "cornersTotalBetween",
-            "lo": 10,
-            "hi": 12
-          },
-          {
-            "c": "cardsTotalUnder",
-            "line": 4
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83302094539",
-      "slipNo": "83302094539",
-      "matchId": "usa-aus-2026-06-19",
-      "player": "USA v Australia",
-      "market": "Corners + SOT each half",
-      "label": "USA/Australia: each team 1+ corners and 1+ shots on target in each half",
-      "odds": 2.88,
-      "stake": 40,
-      "placedAt": "19/06 22:57",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "eachTeamCornersEachHalfAtLeast",
-            "n": 1
-          },
-          {
-            "c": "eachTeamSotEachHalfAtLeast",
-            "n": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83302065805",
-      "slipNo": "83302065805",
-      "matchId": "usa-aus-2026-06-19",
-      "player": "USA v Australia",
-      "market": "BTTS + corners + cards",
-      "label": "USA/Australia: both teams to score + each team 2+ corners + each team 1+ cards",
-      "odds": 8.5,
-      "stake": 40,
-      "placedAt": "19/06 22:56",
-      "grade": {
-        "type": "combo",
-        "conds": [
-          {
-            "c": "btts"
-          },
-          {
-            "c": "eachTeamCornersAtLeast",
-            "n": 2
-          },
-          {
-            "c": "eachTeamCardsAtLeast",
-            "n": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": "rb-1782067452",
-      "slipNo": "1782067452",
-      "matchId": "bel-ira-2026-06-21",
-      "player": "Belgium v Iran",
-      "market": "Match result (1X2)",
-      "label": "Belgium to win",
-      "odds": 1.72,
-      "stake": 1000,
-      "placedAt": "22/06 02:44",
-      "grade": {
-        "type": "matchResult",
-        "outcome": "1"
-      }
-    },
-    {
-      "id": "rb-83429036539",
-      "slipNo": "83429036539",
-      "matchId": "arg-aus-2026-06-22",
-      "player": "—",
-      "market": "Match result (1X2)",
-      "label": "Argentina to win (vs Austria)",
-      "odds": 1.515,
-      "stake": 1000,
-      "placedAt": "22/06 18:41",
-      "grade": {
-        "type": "matchResult",
-        "outcome": "1"
-      }
-    },
-    {
-      "id": "rb-83430355325",
-      "slipNo": "83430355325",
-      "matchId": "arg-aus-2026-06-22",
-      "player": "Lionel Messi",
-      "market": "Win each half + scorer + corners each half",
-      "label": "Argentina to win each half + Messi to score + Argentina most corners each half",
-      "odds": 17,
-      "stake": 32,
-      "placedAt": "22/06 19:32",
-      "grade": {
-        "type": "comboWithScorer",
-        "player": "Lionel Messi",
-        "conds": [
-          {
-            "c": "winEachHalf",
-            "side": "home"
-          },
-          {
-            "c": "mostCornersEachHalf",
-            "side": "home"
-          }
-        ]
-      }
-    },
-    {
-      "id": "rb-83430245057",
-      "slipNo": "83430245057",
-      "matchId": "arg-aus-2026-06-22",
-      "player": "Lionel Messi",
-      "market": "First scorer + correct score",
-      "label": "Messi to score first + match score 3-1 (Argentina)",
-      "odds": 50,
-      "stake": 19,
-      "placedAt": "22/06 19:28",
-      "grade": {
-        "type": "firstScorerAndScore",
-        "player": "Lionel Messi",
-        "home": 3,
-        "away": 1
-      }
-    },
-    {
-      "id": "rb-83422120581",
-      "slipNo": "83422120581",
-      "matchId": "arg-aus-2026-06-22",
-      "player": "Lionel Messi",
-      "market": "First scorer + correct score",
-      "label": "Messi to score first + match score 3-0 (Argentina)",
-      "odds": 38,
-      "stake": 20,
-      "placedAt": "22/06 11:52",
-      "grade": {
-        "type": "firstScorerAndScore",
-        "player": "Lionel Messi",
-        "home": 3,
-        "away": 0
-      }
-    },
-    {
-      "id": "sp-83787652141",
-      "slipNo": "83787652141",
+  {
+   "id": "sp-83302245427",
+   "slipNo": "83302245427",
+   "matchId": "tur-par-2026-06-19",
+   "player": "Turkiye v Paraguay",
+   "market": "Goals + corners + cards",
+   "label": "Turkiye/Paraguay: Over 2.5 goals + Over 5.5 corners + Over 2.5 cards",
+   "odds": 2.75,
+   "stake": 40,
+   "placedAt": "19/06 23:01",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "goalsOver",
+      "line": 2.5
+     },
+     {
+      "c": "cornersTotalOver",
+      "line": 5.5
+     },
+     {
+      "c": "cardsTotalOver",
+      "line": 2.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83302263409",
+   "slipNo": "83302263409",
+   "matchId": "tur-par-2026-06-19",
+   "player": "Turkiye v Paraguay",
+   "market": "Win + cards + corners",
+   "label": "Paraguay to win + Turkiye most cards + Paraguay most corners",
+   "odds": 34,
+   "stake": 28,
+   "placedAt": "19/06 23:01",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "result",
+      "outcome": "2"
+     },
+     {
+      "c": "mostCards",
+      "side": "home"
+     },
+     {
+      "c": "mostCorners",
+      "side": "away"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83302217877",
+   "slipNo": "83302217877",
+   "matchId": "bra-hai-2026-06-19",
+   "player": "Brazil v Haiti",
+   "market": "Win + BTTS + corners + cards",
+   "label": "Brazil to win + both teams to score + each team 2+ corners + each team 1+ cards",
+   "odds": 29,
+   "stake": 20,
+   "placedAt": "19/06 23:00",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "result",
+      "outcome": "1"
+     },
+     {
+      "c": "btts"
+     },
+     {
+      "c": "eachTeamCornersAtLeast",
+      "n": 2
+     },
+     {
+      "c": "eachTeamCardsAtLeast",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83302184773",
+   "slipNo": "83302184773",
+   "matchId": "bra-hai-2026-06-19",
+   "player": "Brazil v Haiti",
+   "market": "Goals + corners + cards",
+   "label": "Brazil/Haiti: Over 2.5 goals + Over 8.5 corners + Over 3.5 cards",
+   "odds": 5,
+   "stake": 40,
+   "placedAt": "19/06 22:59",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "goalsOver",
+      "line": 2.5
+     },
+     {
+      "c": "cornersTotalOver",
+      "line": 8.5
+     },
+     {
+      "c": "cardsTotalOver",
+      "line": 3.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83302121279",
+   "slipNo": "83302121279",
+   "matchId": "sco-mor-2026-06-19",
+   "player": "Scotland v Morocco",
+   "market": "Win + corners + cards",
+   "label": "Morocco to win + 10–12 corners + fewer than 4 cards",
+   "odds": 8.5,
+   "stake": 40,
+   "placedAt": "19/06 22:58",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "result",
+      "outcome": "2"
+     },
+     {
+      "c": "cornersTotalBetween",
+      "lo": 10,
+      "hi": 12
+     },
+     {
+      "c": "cardsTotalUnder",
+      "line": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83302094539",
+   "slipNo": "83302094539",
+   "matchId": "usa-aus-2026-06-19",
+   "player": "USA v Australia",
+   "market": "Corners + SOT each half",
+   "label": "USA/Australia: each team 1+ corners and 1+ shots on target in each half",
+   "odds": 2.88,
+   "stake": 40,
+   "placedAt": "19/06 22:57",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "eachTeamCornersEachHalfAtLeast",
+      "n": 1
+     },
+     {
+      "c": "eachTeamSotEachHalfAtLeast",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83302065805",
+   "slipNo": "83302065805",
+   "matchId": "usa-aus-2026-06-19",
+   "player": "USA v Australia",
+   "market": "BTTS + corners + cards",
+   "label": "USA/Australia: both teams to score + each team 2+ corners + each team 1+ cards",
+   "odds": 8.5,
+   "stake": 40,
+   "placedAt": "19/06 22:56",
+   "grade": {
+    "type": "combo",
+    "conds": [
+     {
+      "c": "btts"
+     },
+     {
+      "c": "eachTeamCornersAtLeast",
+      "n": 2
+     },
+     {
+      "c": "eachTeamCardsAtLeast",
+      "n": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "rb-1782067452",
+   "slipNo": "1782067452",
+   "matchId": "bel-ira-2026-06-21",
+   "player": "Belgium v Iran",
+   "market": "Match result (1X2)",
+   "label": "Belgium to win",
+   "odds": 1.72,
+   "stake": 1000,
+   "placedAt": "22/06 02:44",
+   "grade": {
+    "type": "matchResult",
+    "outcome": "1"
+   }
+  },
+  {
+   "id": "rb-83429036539",
+   "slipNo": "83429036539",
+   "matchId": "arg-aus-2026-06-22",
+   "player": "—",
+   "market": "Match result (1X2)",
+   "label": "Argentina to win (vs Austria)",
+   "odds": 1.515,
+   "stake": 1000,
+   "placedAt": "22/06 18:41",
+   "grade": {
+    "type": "matchResult",
+    "outcome": "1"
+   }
+  },
+  {
+   "id": "rb-83430355325",
+   "slipNo": "83430355325",
+   "matchId": "arg-aus-2026-06-22",
+   "player": "Lionel Messi",
+   "market": "Win each half + scorer + corners each half",
+   "label": "Argentina to win each half + Messi to score + Argentina most corners each half",
+   "odds": 17,
+   "stake": 32,
+   "placedAt": "22/06 19:32",
+   "grade": {
+    "type": "comboWithScorer",
+    "player": "Lionel Messi",
+    "conds": [
+     {
+      "c": "winEachHalf",
+      "side": "home"
+     },
+     {
+      "c": "mostCornersEachHalf",
+      "side": "home"
+     }
+    ]
+   }
+  },
+  {
+   "id": "rb-83430245057",
+   "slipNo": "83430245057",
+   "matchId": "arg-aus-2026-06-22",
+   "player": "Lionel Messi",
+   "market": "First scorer + correct score",
+   "label": "Messi to score first + match score 3-1 (Argentina)",
+   "odds": 50,
+   "stake": 19,
+   "placedAt": "22/06 19:28",
+   "grade": {
+    "type": "firstScorerAndScore",
+    "player": "Lionel Messi",
+    "home": 3,
+    "away": 1
+   }
+  },
+  {
+   "id": "rb-83422120581",
+   "slipNo": "83422120581",
+   "matchId": "arg-aus-2026-06-22",
+   "player": "Lionel Messi",
+   "market": "First scorer + correct score",
+   "label": "Messi to score first + match score 3-0 (Argentina)",
+   "odds": 38,
+   "stake": 20,
+   "placedAt": "22/06 11:52",
+   "grade": {
+    "type": "firstScorerAndScore",
+    "player": "Lionel Messi",
+    "home": 3,
+    "away": 0
+   }
+  },
+  {
+   "id": "sp-83787652141",
+   "slipNo": "83787652141",
+   "matchId": "civ-nor-2026-06-30",
+   "player": "12-leg acca",
+   "market": "Accumulator (12) — all Unders",
+   "label": "12-fold all-Unders — CIV/NOR U3.5 + FRA/SWE U3.5 + MEX/ECU U2.5 + ENG/COD U2.5 + BEL/SEN U3.5 + USA/BIH U4 + ESP/AUT U3.5 + POR/CRO U3.5 + SUI U4.5 + AUS/EGY U2.5 + ARG/CPV U2.5 + COL/GHA U2.5",
+   "odds": 80.847,
+   "stake": 50,
+   "placedAt": "30/06 23:53",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
       "matchId": "civ-nor-2026-06-30",
-      "player": "12-leg acca",
-      "market": "Accumulator (12) — all Unders",
-      "label": "12-fold all-Unders — CIV/NOR U3.5 + FRA/SWE U3.5 + MEX/ECU U2.5 + ENG/COD U2.5 + BEL/SEN U3.5 + USA/BIH U4 + ESP/AUT U3.5 + POR/CRO U3.5 + SUI U4.5 + AUS/EGY U2.5 + ARG/CPV U2.5 + COL/GHA U2.5",
-      "odds": 80.847,
-      "stake": 50,
-      "placedAt": "30/06 23:53",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "civ-nor-2026-06-30",
-            "kind": "totalUnder",
-            "line": 3.5
-          },
-          {
-            "matchId": "fra-swe-2026-06-30",
-            "kind": "totalUnder",
-            "line": 3.5
-          },
-          {
-            "matchId": "mex-ecu-2026-07-01",
-            "kind": "totalUnder",
-            "line": 2.5
-          },
-          {
-            "matchId": "eng-cod-2026-07-01",
-            "kind": "totalUnder",
-            "line": 2.5
-          },
-          {
-            "matchId": "bel-sen-2026-07-01",
-            "kind": "totalUnder",
-            "line": 3.5
-          },
-          {
-            "matchId": "usa-bih-2026-07-02",
-            "kind": "totalUnder",
-            "line": 4
-          },
-          {
-            "matchId": "esp-aut-2026-07-02",
-            "kind": "totalUnder",
-            "line": 3.5
-          },
-          {
-            "matchId": "por-cro-2026-07-02",
-            "kind": "totalUnder",
-            "line": 3.5
-          },
-          {
-            "matchId": "sui-alg-2026-07-03",
-            "kind": "totalUnder",
-            "line": 4.5
-          },
-          {
-            "matchId": "aus-egy-2026-07-03",
-            "kind": "totalUnder",
-            "line": 2.5
-          },
-          {
-            "matchId": "arg-cpv-2026-07-03",
-            "kind": "totalUnder",
-            "line": 2.5
-          },
-          {
-            "matchId": "col-gha-2026-07-04",
-            "kind": "totalUnder",
-            "line": 2.5
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83787672233",
-      "slipNo": "83787672233",
+      "kind": "totalUnder",
+      "line": 3.5
+     },
+     {
+      "matchId": "fra-swe-2026-06-30",
+      "kind": "totalUnder",
+      "line": 3.5
+     },
+     {
+      "matchId": "mex-ecu-2026-07-01",
+      "kind": "totalUnder",
+      "line": 2.5
+     },
+     {
+      "matchId": "eng-cod-2026-07-01",
+      "kind": "totalUnder",
+      "line": 2.5
+     },
+     {
+      "matchId": "bel-sen-2026-07-01",
+      "kind": "totalUnder",
+      "line": 3.5
+     },
+     {
+      "matchId": "usa-bih-2026-07-02",
+      "kind": "totalUnder",
+      "line": 4
+     },
+     {
+      "matchId": "esp-aut-2026-07-02",
+      "kind": "totalUnder",
+      "line": 3.5
+     },
+     {
+      "matchId": "por-cro-2026-07-02",
+      "kind": "totalUnder",
+      "line": 3.5
+     },
+     {
+      "matchId": "sui-alg-2026-07-03",
+      "kind": "totalUnder",
+      "line": 4.5
+     },
+     {
+      "matchId": "aus-egy-2026-07-03",
+      "kind": "totalUnder",
+      "line": 2.5
+     },
+     {
+      "matchId": "arg-cpv-2026-07-03",
+      "kind": "totalUnder",
+      "line": 2.5
+     },
+     {
+      "matchId": "col-gha-2026-07-04",
+      "kind": "totalUnder",
+      "line": 2.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83787672233",
+   "slipNo": "83787672233",
+   "matchId": "civ-nor-2026-06-30",
+   "player": "12-leg acca",
+   "market": "Accumulator (12) — mixed",
+   "label": "12-fold mixed — CIV/NOR O1.5 + FRA/SWE O2.5 + MEX/ECU 2X + ENG/COD U3 + BEL/SEN BTTS + USA/BIH O1.5 + ESP/AUT U3.25 + POR/CRO O1.5 + SUI O2.5 + AUS/EGY U3 + ARG/CPV U3 + COL/GHA O1.5",
+   "odds": 106.511,
+   "stake": 25,
+   "placedAt": "30/06 23:53",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
       "matchId": "civ-nor-2026-06-30",
-      "player": "12-leg acca",
-      "market": "Accumulator (12) — mixed",
-      "label": "12-fold mixed — CIV/NOR O1.5 + FRA/SWE O2.5 + MEX/ECU 2X + ENG/COD U3 + BEL/SEN BTTS + USA/BIH O1.5 + ESP/AUT U3.25 + POR/CRO O1.5 + SUI O2.5 + AUS/EGY U3 + ARG/CPV U3 + COL/GHA O1.5",
-      "odds": 106.511,
-      "stake": 25,
-      "placedAt": "30/06 23:53",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "civ-nor-2026-06-30",
-            "kind": "totalOver",
-            "line": 1.5
-          },
-          {
-            "matchId": "fra-swe-2026-06-30",
-            "kind": "totalOver",
-            "line": 2.5
-          },
-          {
-            "matchId": "mex-ecu-2026-07-01",
-            "kind": "doubleChance",
-            "outcome": "X2"
-          },
-          {
-            "matchId": "eng-cod-2026-07-01",
-            "kind": "totalUnder",
-            "line": 3
-          },
-          {
-            "matchId": "bel-sen-2026-07-01",
-            "kind": "btts"
-          },
-          {
-            "matchId": "usa-bih-2026-07-02",
-            "kind": "totalOver",
-            "line": 1.5
-          },
-          {
-            "matchId": "esp-aut-2026-07-02",
-            "kind": "totalUnder",
-            "line": 3.25
-          },
-          {
-            "matchId": "por-cro-2026-07-02",
-            "kind": "totalOver",
-            "line": 1.5
-          },
-          {
-            "matchId": "sui-alg-2026-07-03",
-            "kind": "totalOver",
-            "line": 2.5
-          },
-          {
-            "matchId": "aus-egy-2026-07-03",
-            "kind": "totalUnder",
-            "line": 3
-          },
-          {
-            "matchId": "arg-cpv-2026-07-03",
-            "kind": "totalUnder",
-            "line": 3
-          },
-          {
-            "matchId": "col-gha-2026-07-04",
-            "kind": "totalOver",
-            "line": 1.5
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83787691205",
-      "slipNo": "83787691205",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "fra-swe-2026-06-30",
+      "kind": "totalOver",
+      "line": 2.5
+     },
+     {
+      "matchId": "mex-ecu-2026-07-01",
+      "kind": "doubleChance",
+      "outcome": "X2"
+     },
+     {
+      "matchId": "eng-cod-2026-07-01",
+      "kind": "totalUnder",
+      "line": 3
+     },
+     {
+      "matchId": "bel-sen-2026-07-01",
+      "kind": "btts"
+     },
+     {
+      "matchId": "usa-bih-2026-07-02",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "esp-aut-2026-07-02",
+      "kind": "totalUnder",
+      "line": 3.25
+     },
+     {
+      "matchId": "por-cro-2026-07-02",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "sui-alg-2026-07-03",
+      "kind": "totalOver",
+      "line": 2.5
+     },
+     {
+      "matchId": "aus-egy-2026-07-03",
+      "kind": "totalUnder",
+      "line": 3
+     },
+     {
+      "matchId": "arg-cpv-2026-07-03",
+      "kind": "totalUnder",
+      "line": 3
+     },
+     {
+      "matchId": "col-gha-2026-07-04",
+      "kind": "totalOver",
+      "line": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83787691205",
+   "slipNo": "83787691205",
+   "matchId": "civ-nor-2026-06-30",
+   "player": "12-leg acca",
+   "market": "Accumulator (12) — mixed",
+   "label": "12-fold mixed — CIV/NOR O1.5 + FRA/SWE O2.5 + MEX/ECU 1X + ENG/COD U3 + BEL/SEN BTTS + USA/BIH O1.5 + ESP/AUT U3.25 + POR/CRO O1.5 + SUI O2.5 + AUS/EGY U3 + ARG/CPV U3 + COL/GHA O1.5",
+   "odds": 79.789,
+   "stake": 25,
+   "placedAt": "30/06 23:53",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
       "matchId": "civ-nor-2026-06-30",
-      "player": "12-leg acca",
-      "market": "Accumulator (12) — mixed",
-      "label": "12-fold mixed — CIV/NOR O1.5 + FRA/SWE O2.5 + MEX/ECU 1X + ENG/COD U3 + BEL/SEN BTTS + USA/BIH O1.5 + ESP/AUT U3.25 + POR/CRO O1.5 + SUI O2.5 + AUS/EGY U3 + ARG/CPV U3 + COL/GHA O1.5",
-      "odds": 79.789,
-      "stake": 25,
-      "placedAt": "30/06 23:53",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "civ-nor-2026-06-30",
-            "kind": "totalOver",
-            "line": 1.5
-          },
-          {
-            "matchId": "fra-swe-2026-06-30",
-            "kind": "totalOver",
-            "line": 2.5
-          },
-          {
-            "matchId": "mex-ecu-2026-07-01",
-            "kind": "doubleChance",
-            "outcome": "1X"
-          },
-          {
-            "matchId": "eng-cod-2026-07-01",
-            "kind": "totalUnder",
-            "line": 3
-          },
-          {
-            "matchId": "bel-sen-2026-07-01",
-            "kind": "btts"
-          },
-          {
-            "matchId": "usa-bih-2026-07-02",
-            "kind": "totalOver",
-            "line": 1.5
-          },
-          {
-            "matchId": "esp-aut-2026-07-02",
-            "kind": "totalUnder",
-            "line": 3.25
-          },
-          {
-            "matchId": "por-cro-2026-07-02",
-            "kind": "totalOver",
-            "line": 1.5
-          },
-          {
-            "matchId": "sui-alg-2026-07-03",
-            "kind": "totalOver",
-            "line": 2.5
-          },
-          {
-            "matchId": "aus-egy-2026-07-03",
-            "kind": "totalUnder",
-            "line": 3
-          },
-          {
-            "matchId": "arg-cpv-2026-07-03",
-            "kind": "totalUnder",
-            "line": 3
-          },
-          {
-            "matchId": "col-gha-2026-07-04",
-            "kind": "totalOver",
-            "line": 1.5
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-83979201059",
-      "slipNo": "83979201059",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "fra-swe-2026-06-30",
+      "kind": "totalOver",
+      "line": 2.5
+     },
+     {
+      "matchId": "mex-ecu-2026-07-01",
+      "kind": "doubleChance",
+      "outcome": "1X"
+     },
+     {
+      "matchId": "eng-cod-2026-07-01",
+      "kind": "totalUnder",
+      "line": 3
+     },
+     {
+      "matchId": "bel-sen-2026-07-01",
+      "kind": "btts"
+     },
+     {
+      "matchId": "usa-bih-2026-07-02",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "esp-aut-2026-07-02",
+      "kind": "totalUnder",
+      "line": 3.25
+     },
+     {
+      "matchId": "por-cro-2026-07-02",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "sui-alg-2026-07-03",
+      "kind": "totalOver",
+      "line": 2.5
+     },
+     {
+      "matchId": "aus-egy-2026-07-03",
+      "kind": "totalUnder",
+      "line": 3
+     },
+     {
+      "matchId": "arg-cpv-2026-07-03",
+      "kind": "totalUnder",
+      "line": 3
+     },
+     {
+      "matchId": "col-gha-2026-07-04",
+      "kind": "totalOver",
+      "line": 1.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-83979201059",
+   "slipNo": "83979201059",
+   "matchId": "can-mar-2026-07-04",
+   "player": "—",
+   "market": "Acca · 5 legs · Scorer+Team-Not-Lose / Player Over 1.5 / DC+BTTS",
+   "label": "5-fold @ 758.947, SHARED 3-way (RM5 each, RM15 total) — Ruhan share RM5 -> RM3,794.74. Can/Mar Jonathan David to score AND Canada not to lose (5.92) · Par/Fra Kylian Mbappe to score over 1.5 goals / 2+ (3.4) · Bra/Nor Vinicius Junior to score AND Brazil not to lose (2.204) · Mex/Eng Harry Kane to score AND Mexico not to lose (6.11) · Por/Esp 1X + Both Teams To Score Yes (2.8).",
+   "odds": 758.947,
+   "stake": 5,
+   "punter": "3-way split · RM5 each (with Rj)",
+   "placedAt": "04/07 22:57",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
       "matchId": "can-mar-2026-07-04",
-      "player": "—",
-      "market": "Acca · 5 legs · Scorer+Team-Not-Lose / Player Over 1.5 / DC+BTTS",
-      "label": "5-fold @ 758.947, SHARED 3-way (RM5 each, RM15 total) — Ruhan share RM5 -> RM3,794.74. Can/Mar Jonathan David to score AND Canada not to lose (5.92) · Par/Fra Kylian Mbappe to score over 1.5 goals / 2+ (3.4) · Bra/Nor Vinicius Junior to score AND Brazil not to lose (2.204) · Mex/Eng Harry Kane to score AND Mexico not to lose (6.11) · Por/Esp 1X + Both Teams To Score Yes (2.8).",
-      "odds": 758.947,
-      "stake": 5,
-      "punter": "3-way split · RM5 each (with Rj)",
-      "placedAt": "04/07 22:57",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "can-mar-2026-07-04",
-            "kind": "scored",
-            "player": "Jonathan David",
-            "odds": 5.92
-          },
-          {
-            "matchId": "can-mar-2026-07-04",
-            "kind": "doubleChance",
-            "outcome": "1X"
-          },
-          {
-            "matchId": "par-fra-2026-07-04",
-            "kind": "goalsOver",
-            "player": "Kylian Mbappe",
-            "line": 1.5
-          },
-          {
-            "matchId": "bra-nor-2026-07-05",
-            "kind": "scored",
-            "player": "Vinicius Junior",
-            "odds": 2.204
-          },
-          {
-            "matchId": "bra-nor-2026-07-05",
-            "kind": "doubleChance",
-            "outcome": "1X"
-          },
-          {
-            "matchId": "mex-eng-2026-07-06",
-            "kind": "scored",
-            "player": "Harry Kane",
-            "odds": 6.11
-          },
-          {
-            "matchId": "mex-eng-2026-07-06",
-            "kind": "doubleChance",
-            "outcome": "1X"
-          },
-          {
-            "matchId": "por-esp-2026-07-06",
-            "kind": "doubleChanceBtts",
-            "outcome": "1X"
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-84120758681",
-      "slipNo": "84120758681",
+      "kind": "scored",
+      "player": "Jonathan David",
+      "odds": 5.92
+     },
+     {
+      "matchId": "can-mar-2026-07-04",
+      "kind": "doubleChance",
+      "outcome": "1X"
+     },
+     {
+      "matchId": "par-fra-2026-07-04",
+      "kind": "goalsOver",
+      "player": "Kylian Mbappe",
+      "line": 1.5
+     },
+     {
+      "matchId": "bra-nor-2026-07-05",
+      "kind": "scored",
+      "player": "Vinicius Junior",
+      "odds": 2.204
+     },
+     {
+      "matchId": "bra-nor-2026-07-05",
+      "kind": "doubleChance",
+      "outcome": "1X"
+     },
+     {
+      "matchId": "mex-eng-2026-07-06",
+      "kind": "scored",
+      "player": "Harry Kane",
+      "odds": 6.11
+     },
+     {
+      "matchId": "mex-eng-2026-07-06",
+      "kind": "doubleChance",
+      "outcome": "1X"
+     },
+     {
+      "matchId": "por-esp-2026-07-06",
+      "kind": "doubleChanceBtts",
+      "outcome": "1X"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-84120758681",
+   "slipNo": "84120758681",
+   "matchId": "arg-egy-2026-07-07",
+   "player": "—",
+   "market": "Acca · 2 legs",
+   "label": "Acca — Argentina to win (90 min) + Colombia to win (90 min)",
+   "odds": 3.248,
+   "stake": 100,
+   "placedAt": "08/07 00:05",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
       "matchId": "arg-egy-2026-07-07",
-      "player": "—",
-      "market": "Acca · 2 legs",
-      "label": "Acca — Argentina to win (90 min) + Colombia to win (90 min)",
-      "odds": 3.248,
-      "stake": 100,
-      "placedAt": "08/07 00:05",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "arg-egy-2026-07-07",
-            "kind": "result",
-            "outcome": "1",
-            "odds": 1.4
-          },
-          {
-            "matchId": "sui-col-2026-07-07",
-            "kind": "result",
-            "outcome": "2",
-            "odds": 2.32
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-84120799103",
-      "slipNo": "84120799103",
+      "kind": "result",
+      "outcome": "1",
+      "odds": 1.4
+     },
+     {
       "matchId": "sui-col-2026-07-07",
-      "player": "—",
-      "market": "Acca · 2 legs",
-      "label": "Acca — Switzerland/Colombia: X2 + both teams to score + Argentina/Egypt: Over 1.5 total goals",
-      "odds": 3.3,
-      "stake": 50,
-      "placedAt": "08/07 00:05",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "sui-col-2026-07-07",
-            "kind": "doubleChanceBtts",
-            "outcome": "X2",
-            "odds": 2.5
-          },
-          {
-            "matchId": "arg-egy-2026-07-07",
-            "kind": "totalOver",
-            "line": 1.5,
-            "odds": 1.32
-          }
-        ]
-      }
-    },
-    {
-      "id": "sp-863046603840823297",
-      "slipNo": "863046603840823297",
+      "kind": "result",
+      "outcome": "2",
+      "odds": 2.32
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-84120799103",
+   "slipNo": "84120799103",
+   "matchId": "sui-col-2026-07-07",
+   "player": "—",
+   "market": "Acca · 2 legs",
+   "label": "Acca — Switzerland/Colombia: X2 + both teams to score + Argentina/Egypt: Over 1.5 total goals",
+   "odds": 3.3,
+   "stake": 50,
+   "placedAt": "08/07 00:05",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "sui-col-2026-07-07",
+      "kind": "doubleChanceBtts",
+      "outcome": "X2",
+      "odds": 2.5
+     },
+     {
+      "matchId": "arg-egy-2026-07-07",
+      "kind": "totalOver",
+      "line": 1.5,
+      "odds": 1.32
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-863046603840823297",
+   "slipNo": "863046603840823297",
+   "matchId": "fra-mar-2026-07-09",
+   "player": "France v Morocco",
+   "market": "8-leg match parlay (BK8)",
+   "label": "FRA/MAR: France to qualify + Rabiot 1+ shots + Under 5.5 goals + Mbappe anytime scorer + Hakimi 1+ shots + Brahim Diaz 1+ shots + BTTS Yes + Olise to score or assist",
+   "odds": 17.85,
+   "stake": 100,
+   "placedAt": "09/07 21:19",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
       "matchId": "fra-mar-2026-07-09",
-      "player": "France v Morocco",
-      "market": "8-leg match parlay (BK8)",
-      "label": "FRA/MAR: France to qualify + Rabiot 1+ shots + Under 5.5 goals + Mbappe anytime scorer + Hakimi 1+ shots + Brahim Diaz 1+ shots + BTTS Yes + Olise to score or assist",
-      "odds": 17.85,
-      "stake": 100,
-      "placedAt": "09/07 21:19",
-      "grade": {
-        "type": "multiLeg",
-        "legs": [
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "qualify",
-            "side": "home"
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "playerShotsOver",
-            "player": "Adrien Rabiot",
-            "line": 0.5
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "totalUnder",
-            "line": 5.5
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "scored",
-            "player": "Kylian Mbappe"
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "playerShotsOver",
-            "player": "Achraf Hakimi",
-            "line": 0.5
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "playerShotsOver",
-            "player": "Brahim Diaz",
-            "line": 0.5
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "btts"
-          },
-          {
-            "matchId": "fra-mar-2026-07-09",
-            "kind": "scoredOrAssisted",
-            "player": "Michael Olise"
-          }
-        ]
-      }
-    }
-  ]
+      "kind": "qualify",
+      "side": "home"
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "playerShotsOver",
+      "player": "Adrien Rabiot",
+      "line": 0.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "totalUnder",
+      "line": 5.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "scored",
+      "player": "Kylian Mbappe"
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "playerShotsOver",
+      "player": "Achraf Hakimi",
+      "line": 0.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "playerShotsOver",
+      "player": "Brahim Diaz",
+      "line": 0.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "btts"
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "scoredOrAssisted",
+      "player": "Michael Olise"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sp-bk8-fra-mar-1105",
+   "slipNo": "bk8-1105",
+   "matchId": "fra-mar-2026-07-09",
+   "player": "France v Morocco",
+   "market": "9-leg match parlay (BK8)",
+   "label": "FRA/MAR: France or draw (DC) + France to qualify + Over 1.5 goals + Morocco 4+ corners + Hakimi 2+ tackles + Morocco 2+ cards + Hakimi 1+ shots + Under 5.5 goals + Mbappe to score or assist",
+   "odds": 11.05,
+   "stake": 60,
+   "placedAt": "09/07 22:45",
+   "grade": {
+    "type": "multiLeg",
+    "legs": [
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "doubleChance",
+      "outcome": "1X"
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "qualify",
+      "side": "home"
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "totalOver",
+      "line": 1.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "teamCornersOver",
+      "side": "away",
+      "line": 3.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "manual"
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "teamCardsOver",
+      "side": "away",
+      "line": 1.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "playerShotsOver",
+      "player": "Achraf Hakimi",
+      "line": 0.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "totalUnder",
+      "line": 5.5
+     },
+     {
+      "matchId": "fra-mar-2026-07-09",
+      "kind": "scoredOrAssisted",
+      "player": "Kylian Mbappe"
+     }
+    ]
+   }
+  }
+ ]
 }

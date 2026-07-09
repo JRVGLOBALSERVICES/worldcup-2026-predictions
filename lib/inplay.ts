@@ -206,12 +206,16 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — Over ${leg.line} corners`;
     case "cornersTotalUnder":
       return `${m} — Under ${leg.line} corners`;
+    case "teamCornersOver":
+      return `${side(leg.side)} — Over ${leg.line} team corners`;
     case "playerSotOver":
       return `${leg.player} — ${plus(leg.line)} shots on target`;
     case "gkSavesOver":
       return `${leg.player} — ${plus(leg.line)} saves`;
     case "cardsTotalOver":
       return `${m} — Over ${leg.line} cards`;
+    case "teamCardsOver":
+      return `${side(leg.side)} — Over ${leg.line} team cards`;
     case "firstToScore":
       return leg.outcome === "X"
         ? `${m} — goalless (neither side scores first)`
@@ -1456,6 +1460,24 @@ export function inPlayMultiLeg(
       continue;
     }
 
+    if (leg.kind === "teamCornersOver") {
+      // One side's own corner count over the line — corners only accrue, so it
+      // locks WON the moment the side's tally clears the line; while short it's
+      // neutral; dead at FT if short. No corners snapshot → neutral.
+      const c = lm.stats?.corners;
+      const n = c ? c[leg.side] : null;
+      if (n != null && n > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && n != null) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
     if (leg.kind === "gkSavesOver") {
       // Named keeper's saves over the line — his side's team save count IS his
       // count. Saves only accrue, so it locks WON the moment the tally clears
@@ -1485,6 +1507,24 @@ export function inPlayMultiLeg(
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (doneFull && total != null) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "teamCardsOver") {
+      // One side's own cards (yellow + red) over the line — cards only accrue,
+      // so it locks WON the moment the side's count clears the line; while
+      // short it's neutral; dead at FT if short. No snapshot → neutral.
+      const cd = lm.stats?.cards;
+      const n = cd ? cd[leg.side] : null;
+      if (n != null && n > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && n != null) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
