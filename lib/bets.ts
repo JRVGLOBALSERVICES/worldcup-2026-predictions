@@ -415,6 +415,12 @@ export type SpecialGrade =
  */
 export type MultiLegCond = { odds?: number } & (
   | { matchId: string; kind: "scored"; player: string; negate?: boolean }
+  // EITHER of the named players scores at any time ("Who Will Score A Goal At
+  // Any Time: A Or B — Yes"). 1xBet settles this off "Player stats (including
+  // extra time)", so ET goals COUNT (unlike `scored`, a 90-minute market) —
+  // own goals still don't. Clinches the moment either player scores; dead only
+  // at the true final whistle with both blank.
+  | { matchId: string; kind: "eitherScored"; players: string[] }
   | {
       matchId: string;
       kind: "scoredAndScoreOneOf";
@@ -1168,6 +1174,20 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         }
         if (scoredIt) continue; // leg won, even mid-match
         if (finished) return "lost"; // his match ended, no goal → whole acca dead
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "eitherScored") {
+        // Either named player scores anytime — book settles on player stats
+        // INCLUDING extra time, so ET goals count (own goals never). Clinches
+        // mid-match on either's first goal; dead only at the true final
+        // whistle with both blank.
+        const scoredIt = ev.goals.some(
+          (gl) => !gl.ownGoal && leg.players.some((p) => nameMatch(gl.scorer, p)),
+        );
+        if (scoredIt) continue; // leg won, even mid-match
+        if (finished) return "lost"; // tie fully over (incl. ET), both blank → acca dead
         pending = true;
         continue;
       }

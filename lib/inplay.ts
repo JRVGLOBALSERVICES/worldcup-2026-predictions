@@ -190,6 +190,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — a team to blank + Over ${leg.line} goals (${totalThreshold(leg.line, "over")})`;
     case "scored":
       return leg.negate ? `${leg.player} not to score` : `${leg.player} to score`;
+    case "eitherScored":
+      return `${leg.players.join(" or ")} to score (incl. ET)`;
     case "playerShotsOver":
       return `${leg.player} — ${plus(leg.line)} shots`;
     case "totalFoulsUnder":
@@ -2116,6 +2118,25 @@ export function inPlayMultiLeg(
         continue;
       }
       if (assisted) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "eitherScored") {
+      // Either named player scores anytime — ET goals count (book settles on
+      // player stats incl. extra time), own goals never. Clinches WON on
+      // either's first goal; dies only at the true final whistle, both blank.
+      const either = lm.goals.some(
+        (gl) => !gl.ownGoal && leg.players.some((p) => nameMatch(gl.scorer, p)),
+      );
+      if (either) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
       } else if (doneFull) {
