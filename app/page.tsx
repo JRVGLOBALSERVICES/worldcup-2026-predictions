@@ -3,9 +3,9 @@ import { LiveProvider } from "@/components/LiveProvider";
 import { AllMatchesEventFX } from "@/components/LiveFX";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 import { SiteNav } from "@/components/SiteNav";
+import { Masthead } from "@/components/ProgrammeKit";
 import { fixtures, fixturesByMytDay, predictionFile, mytDayKey, hasPrediction } from "@/lib/data";
 import { isMatchFinished } from "@/lib/live";
-import { StatAbbr } from "@/components/atoms";
 
 export const revalidate = 1800; // re-pick "today" every 30 min on Vercel
 
@@ -73,25 +73,17 @@ export default function Home() {
         <SiteNav active="predictions" />
       </header>
 
-      <section className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-10">
-        <p className="mb-4 font-mono text-[0.72rem] uppercase tracking-[0.24em] text-acid">
-          World Cup 2026 · daily predictions
-        </p>
-        <h1 className="max-w-3xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-6xl">
-          Every fixture, called the way you bet it.
-        </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          Win, half-time &amp; full-time scores, anytime scorers, assists and penalty takers — built
-          from live team-news research on both squads, in Malaysia time, refreshed daily and again
-          when line-ups drop.
-        </p>
-        <div className="mt-6 flex flex-wrap items-center gap-2 font-mono text-[0.7rem] text-faint">
-          <span className="rounded-full border border-line px-2.5 py-1">Updated {updated} <StatAbbr code="MYT" className="text-faint" /></span>
-          <span className="rounded-full border border-line px-2.5 py-1">
-            {Object.keys(predictionFile.predictions).length} matches called
-          </span>
-        </div>
-      </section>
+      <Masthead
+        kicker="World Cup 2026 · the matchday programme"
+        title="Every Fixture, Called the Way You Bet It."
+        edition={`${Object.keys(predictionFile.predictions).length} matches called`}
+        meta={`Updated ${updated} MYT`}
+      />
+      <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-muted sm:text-lg">
+        Win, half-time &amp; full-time scores, anytime scorers, assists and penalty takers — built
+        from live team-news research on both squads, in Malaysia time, refreshed daily and again when
+        line-ups drop.
+      </p>
 
       <LiveProvider kickoffs={fixtures.map((f) => f.kickoffUTC)}>
       {/* Live-event reactions across today's grid — goals firecracker, the rest chip in. */}

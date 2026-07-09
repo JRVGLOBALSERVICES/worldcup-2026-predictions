@@ -4,6 +4,8 @@ import { useCallback, useState } from "react";
 import { ForceRefreshButton } from "./RefreshCountdown";
 import { StatLeaderboards } from "./StatLeaderboards";
 import { TeamPlayerSheets } from "./TeamPlayerSheets";
+import { PlayerIndex } from "./PlayerIndex";
+import { ChapterHead, Contents } from "./ProgrammeKit";
 import {
   TEAM_PERF_CATEGORIES,
   type StatsFile,
@@ -100,18 +102,6 @@ function PerfBoard({
   );
 }
 
-function SectionHead({ kicker, title, sub }: { kicker: string; title: string; sub: string }) {
-  return (
-    <div className="mb-6">
-      <p className="mb-2 font-mono text-[0.66rem] uppercase tracking-[0.24em] text-acid">{kicker}</p>
-      <h2 className="max-w-3xl font-display text-2xl font-black uppercase leading-[0.98] tracking-tight sm:text-3xl">
-        {title}
-      </h2>
-      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">{sub}</p>
-    </div>
-  );
-}
-
 /**
  * The whole Stats page body: per-team player stat sheets (the hero), the
  * tournament leaderboards, and the team completion/control boards — all fed
@@ -162,31 +152,53 @@ export function StatsExplorer({ initial }: { initial: StatsFile }) {
         )}
       </div>
 
-      {/* ── Hero: per-team squad stat sheets ─────────────────────────────── */}
-      <section className="mt-10">
-        <SectionHead
-          kicker="World Cup 2026 · squad sheets"
-          title="Every player. Every number."
-          sub="One table per team still in the competition — goals, assists, tackles, blocks, passes, keeper saves and cards, compiled across every game each player has featured in. A knocked-out side drops off entirely."
+      {/* Programme contents — jump to any chapter. */}
+      <div className="mt-6">
+        <Contents
+          items={[
+            { no: "01", label: "Player Index", href: "#chapter-index" },
+            { no: "02", label: "Squad Sheets", href: "#chapter-squads" },
+            { no: "03", label: "Tournament Leaders", href: "#chapter-leaders" },
+            { no: "04", label: "Completion & Control", href: "#chapter-control" },
+          ]}
+        />
+      </div>
+
+      {/* ── 01 · Player Index — the sortable / filterable master table ────── */}
+      <section id="chapter-index" className="mt-14 scroll-mt-24">
+        <ChapterHead
+          no="01"
+          title="The Player Index"
+          sub="Every player still in the competition, in one sortable sheet. Click a column — goals, assists, tackles, passes, cards — to rank the whole field by it, filter to a single nation or the keepers, or search a name."
+        />
+        <PlayerIndex teams={playersByTeam ?? []} />
+      </section>
+
+      {/* ── 02 · Squad Sheets — per team, sortable ───────────────────────── */}
+      <section id="chapter-squads" className="mt-16 scroll-mt-24 border-t-2 border-line/60 pt-10">
+        <ChapterHead
+          no="02"
+          title="Squad Sheets"
+          sub="One card per nation still alive — every player's counting stats across every game they've featured in. Tap any column header to re-rank all eight squads by that stat at once."
         />
         <TeamPlayerSheets teams={playersByTeam ?? []} />
       </section>
 
-      {/* ── Tournament leaderboards ──────────────────────────────────────── */}
-      <section className="mt-16 border-t border-line/60 pt-10">
-        <SectionHead
-          kicker="World Cup 2026 · tournament leaders"
-          title="The race for the Golden Boot."
-          sub="Top scorers, assists, clean sheets, the cards table, penalties scored vs missed, tackles, blocks and keeper saves — ranked top ten among the sides still alive."
+      {/* ── 03 · Tournament leaders ──────────────────────────────────────── */}
+      <section id="chapter-leaders" className="mt-16 scroll-mt-24 border-t-2 border-line/60 pt-10">
+        <ChapterHead
+          no="03"
+          title="Tournament Leaders"
+          sub="The race for the Golden Boot and the rest of the honours — top scorers, assists, clean sheets, the cards table, penalties scored vs missed, tackles, blocks and keeper saves — ranked among the sides still alive."
         />
         <StatLeaderboards categories={categories} />
       </section>
 
-      {/* ── Team completion / control boards ─────────────────────────────── */}
-      <section className="mt-16 border-t border-line/60 pt-10">
-        <SectionHead
-          kicker="World Cup 2026 · completion & control"
-          title="Who keeps the ball — and finds the target."
+      {/* ── 04 · Completion & control boards ─────────────────────────────── */}
+      <section id="chapter-control" className="mt-16 scroll-mt-24 border-t-2 border-line/60 pt-10">
+        <ChapterHead
+          no="04"
+          title="Completion & Control"
           sub="Pass completion, possession, shot accuracy, tackle success, cross and long-ball accuracy — true aggregates across every finished match, not an average of per-game rates."
         />
         {teamStats ? (
