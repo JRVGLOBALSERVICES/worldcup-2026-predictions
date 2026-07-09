@@ -190,7 +190,7 @@ export function PlayerIndex({ teams }: { teams: TeamPlayerSheet[] }) {
       </div>
 
       {/* ── The table ─────────────────────────────────────────────────────── */}
-      <div className="overflow-hidden rounded-2xl border border-line bg-card/40">
+      <div className="cv-index surface overflow-hidden rounded-2xl border border-line">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[44rem] border-collapse">
             <thead>

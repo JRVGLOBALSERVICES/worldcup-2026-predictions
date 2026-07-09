@@ -76,29 +76,31 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
         </Link>
       </div>
 
-      {/* match header */}
-      <header className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60 p-6 sm:p-8">
-        <div className="mb-5 flex flex-wrap items-center justify-between gap-y-1 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint">
-          <span>
+      {/* match header — broadcast scorebug: fixture-board rail + big scoreline */}
+      <header className="scorebug stripes overflow-hidden rounded-3xl border border-line">
+        <div className="board-strip flex items-stretch justify-between border-b border-line/70 font-mono text-[0.66rem] uppercase tracking-[0.16em] text-faint">
+          <span className="min-w-0 truncate px-5 py-2.5 sm:px-8">
             {fixture.round ?? `Group ${fixture.group}`}
             <span className="text-faint/50"> · {fixture.venue}, {fixture.city}</span>
           </span>
-          <span>{mytDayLabel(fixture.kickoffUTC)}</span>
+          <span className="shrink-0 px-5 py-2.5 text-ink/70 sm:px-8">{mytDayLabel(fixture.kickoffUTC)}</span>
         </div>
 
-        <div className="flex items-center justify-between gap-4">
-          <Team flag={fixture.home.flag} name={fixture.home.name} />
-          <MatchHeaderScore
-            matchId={fixture.id}
-            mytLabel={mytTime(fixture.kickoffUTC)}
-            etLabel={etTime(fixture.kickoffUTC)}
-          />
-          <Team flag={fixture.away.flag} name={fixture.away.name} align="right" />
-        </div>
+        <div className="p-6 sm:p-8">
+          <div className="flex items-center justify-between gap-4">
+            <Team flag={fixture.home.flag} name={fixture.home.name} />
+            <MatchHeaderScore
+              matchId={fixture.id}
+              mytLabel={mytTime(fixture.kickoffUTC)}
+              etLabel={etTime(fixture.kickoffUTC)}
+            />
+            <Team flag={fixture.away.flag} name={fixture.away.name} align="right" />
+          </div>
 
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-line/70 pt-3 text-center text-sm">
-          <LiveStatusLine matchId={fixture.id} kickoffUTC={fixture.kickoffUTC} />
-          <LiveRefreshPill />
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-line/70 pt-4 text-center text-sm">
+            <LiveStatusLine matchId={fixture.id} kickoffUTC={fixture.kickoffUTC} />
+            <LiveRefreshPill />
+          </div>
         </div>
       </header>
 

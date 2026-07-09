@@ -78,7 +78,7 @@ function PerfBoard({
   const a = ACCENT[accent];
   const max = rows.length ? rows[0].value : 1;
   return (
-    <section className="rounded-2xl border border-line bg-card/40 p-4 sm:p-5">
+    <section className="surface rounded-2xl border border-line p-4 sm:p-5">
       <header className="mb-1 border-b border-line/60 pb-3">
         <h3 className={["font-display text-base font-black uppercase leading-tight tracking-tight", a.text].join(" ")}>
           {label}

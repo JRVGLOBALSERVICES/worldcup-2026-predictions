@@ -88,7 +88,7 @@ function Board({
   return (
     <section
       className={[
-        "rounded-2xl border border-line bg-card/40 p-4 sm:p-5",
+        "surface rounded-2xl border border-line p-4 sm:p-5",
         featured ? "sm:col-span-2 lg:col-span-3" : "",
       ].join(" ")}
     >

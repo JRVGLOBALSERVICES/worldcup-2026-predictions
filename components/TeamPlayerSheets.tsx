@@ -62,7 +62,7 @@ function TeamCard({
   return (
     <section
       id={`team-${slug(sheet.team)}`}
-      className="cv-card scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-card/40"
+      className="cv-card surface scroll-mt-24 overflow-hidden rounded-2xl border border-line"
     >
       <header className="flex items-center justify-between gap-2 border-b border-line/70 bg-pitch/30 px-4 py-3">
         <h3 className="flex items-center gap-2.5">

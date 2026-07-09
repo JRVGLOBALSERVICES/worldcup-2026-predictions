@@ -188,7 +188,16 @@
  * intrinsic-size estimate keeps the scrollbar stable before a block renders. */
 .cv-card {
   content-visibility: auto;
-  contain-intrinsic-size: auto 560px;
+  contain-intrinsic-size: auto 900px;
+}
+/* The tournament Player Index is the one always-tall, always-mounted block that
+ * leads the page — ~200 rows. `content-visibility:auto` lets the browser skip
+ * its paint/layout entirely once you've scrolled past it (it's chapter 01, so
+ * the other three chapters scroll for free without repainting those 200 rows).
+ * A generous intrinsic-size keeps the scrollbar honest before it renders. */
+.cv-index {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1400px;
 }
 
 .stripes {
@@ -368,4 +377,152 @@
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * BROADCAST LAYER — stadium-bold × broadcast-night graphics
+ * A TV sports-graphics vocabulary layered on the matchday-programme skeleton:
+ * a persistent scorebug, a split-flap fixture board, lower-third nameplates and
+ * a broadcast LIVE pulse. Every piece is built on the existing --color-* /
+ * --ui-* tokens, so it flips for free between the cream-programme (light) and
+ * ink-broadcast (dark) themes. Programme = rounded editorial skeleton; broadcast
+ * = the sharp rails, flap cells and mono lock-ups laid over it.
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Opaque card surface — the perf twin of `bg-card/40`. Translucent panels blend
+ * against the fixed ambient gradient on EVERY scroll frame; an opaque fill plus
+ * paint/layout containment lets the compositor cache the tile. Use on the big
+ * always-on-screen surfaces (tables, control bars, boards) where the translucent
+ * look bought nothing but overdraw. */
+.surface {
+  background: var(--color-card);
+  contain: layout paint style;
+}
+.surface-2 {
+  background: var(--color-pitch-2);
+  contain: layout paint style;
+}
+
+/* Broadcast LIVE — an amber bug that pings like a TV lower-third "LIVE" flag. */
+.live-bug {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+}
+.live-bug::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--color-amber);
+  opacity: 0.55;
+  animation: live-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes live-ping {
+  0% { transform: scale(1); opacity: 0.5; }
+  70%, 100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* Split-flap board cell — the mechanical departure-board tile used for edition
+ * numbers / scores. A recessed dark chip with a hairline seam across the middle,
+ * as if the top and bottom flaps meet. Tabular, uppercase, broadcast-cold. */
+.flap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in oklch, var(--color-ink) 82%, var(--color-pitch));
+  color: var(--color-pitch);
+  border-radius: 0.28rem;
+  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 0.12), inset 0 -1px 0 0 rgb(0 0 0 / 0.35);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.flap::after {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-0.5px);
+  background: rgb(0 0 0 / 0.45);
+  pointer-events: none;
+}
+:root.dark .flap {
+  background: color-mix(in oklch, var(--color-pitch) 60%, #000);
+  color: var(--color-ink);
+  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 0.06), inset 0 -1px 0 0 rgb(0 0 0 / 0.6);
+}
+
+/* Fixture-board strip — the mono metadata rail that heads the masthead: cells
+ * separated by vertical hairline grooves, like a stadium scoreboard's info row. */
+.board-strip {
+  background: color-mix(in oklch, var(--color-ink) 4%, var(--color-pitch-2));
+}
+.board-strip > * + * {
+  border-left: 1px solid var(--ui-divider);
+}
+
+/* Scorebug — the broadcast scoreline container. A crisp panel with a hairline
+ * accent bar across the top edge (the "bug" tab) and paint containment. Sits
+ * inside the rounded programme card; the sharp top bar is the broadcast tell. */
+.scorebug {
+  position: relative;
+  background: var(--color-card);
+  contain: layout paint style;
+}
+.scorebug::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-acid), var(--color-acid-dim) 55%, transparent);
+  border-radius: inherit;
+}
+.scorebug--live::before {
+  background: linear-gradient(90deg, var(--color-amber), color-mix(in oklch, var(--color-amber) 40%, transparent));
+}
+
+/* Team rail — the 3px colour edge down a team row in a scorebug. Neutral by
+ * default (we carry no per-nation colours); the winner/pick side lights acid. */
+.team-rail {
+  box-shadow: inset 3px 0 0 0 var(--ui-border-strong);
+}
+.team-rail--pick {
+  box-shadow: inset 3px 0 0 0 var(--color-acid);
+}
+
+/* Lower-third — the broadcast nameplate: a mono kicker sitting on a short accent
+ * tick, the horizontal strip that slides under a talking head on TV. */
+.lower-third {
+  position: relative;
+  padding-left: 0.85rem;
+}
+.lower-third::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--color-acid);
+}
+
+/* Broadcast channel-strip nav — the active tab carries a bottom accent rail, the
+ * rest are quiet mono labels. The underline is the on-air tell. */
+.chan {
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+.chan[data-on="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-acid);
 }

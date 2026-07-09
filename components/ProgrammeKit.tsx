@@ -25,34 +25,33 @@ export function Masthead({
   meta?: string;
 }) {
   return (
-    <div className="stripes overflow-hidden rounded-3xl border border-line bg-pitch-2/60">
-      {/* top edition strip */}
-      <div className="flex items-center justify-between gap-3 border-b border-line/70 px-5 py-2.5 sm:px-8">
-        <span className="font-mono text-[0.6rem] uppercase tracking-[0.24em] text-acid">
-          {edition}
+    <div className="stripes surface-2 overflow-hidden rounded-3xl border border-line">
+      {/* fixture-board strip — the scoreboard info rail, cells split by grooves */}
+      <div className="board-strip flex items-stretch justify-between border-b border-line/70 font-mono text-[0.6rem] uppercase tracking-[0.22em]">
+        <span className="flex items-center gap-2 px-4 py-2.5 sm:px-7">
+          <span className="flap px-1.5 py-0.5 text-[0.7rem]" aria-hidden>
+            ⚽
+          </span>
+          <span className="text-faint/70">Official Programme</span>
         </span>
-        <span className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-faint/70">
-          Official Programme
-        </span>
+        <span className="flex items-center px-4 py-2.5 text-acid sm:px-7">{edition}</span>
         {meta ? (
-          <span className="hidden font-mono text-[0.6rem] uppercase tracking-[0.2em] text-faint/70 sm:inline">
+          <span className="hidden items-center px-4 py-2.5 text-faint/70 sm:flex sm:px-7">
             {meta}
           </span>
-        ) : (
-          <span className="hidden sm:inline sm:w-24" aria-hidden />
-        )}
+        ) : null}
       </div>
 
-      {/* masthead body */}
-      <div className="px-5 py-8 text-center sm:px-8 sm:py-12">
-        <p className="mb-3 font-mono text-[0.66rem] uppercase tracking-[0.28em] text-acid">
+      {/* masthead body — stadium-bold display lock-up */}
+      <div className="px-5 py-9 text-center sm:px-8 sm:py-14">
+        <p className="mb-4 font-mono text-[0.66rem] uppercase tracking-[0.3em] text-acid">
           {kicker}
         </p>
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-black uppercase leading-[0.92] tracking-tight [overflow-wrap:anywhere] sm:text-6xl">
+        <h1 className="mx-auto max-w-4xl font-display text-[2.6rem] font-black uppercase leading-[0.88] tracking-[-0.02em] [overflow-wrap:anywhere] sm:text-6xl lg:text-7xl">
           {title}
         </h1>
         {/* centred rule + ball, programme-cover style */}
-        <div className="mx-auto mt-6 flex max-w-xs items-center gap-3">
+        <div className="mx-auto mt-7 flex max-w-xs items-center gap-3">
           <span className="h-px flex-1 bg-line" />
           <span className="text-sm leading-none text-faint/70" aria-hidden>
             ⚽
