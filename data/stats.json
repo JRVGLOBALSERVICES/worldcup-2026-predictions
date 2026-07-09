@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T09:10:08.404Z",
+    "generatedAt": "2026-07-09T12:20:08.850Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 80
+    "finished": 73
   },
   "categories": {
     "scorers": [
@@ -172,24 +172,24 @@
     "cleanSheets": [
       {
         "rank": 1,
-        "team": "Colombia",
-        "flag": "🇨🇴",
-        "value": 4
-      },
-      {
-        "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 4
       },
       {
-        "rank": 3,
+        "rank": 2,
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 3
+      },
+      {
+        "rank": 2,
         "team": "France",
         "flag": "🇫🇷",
         "value": 3
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "Mexico",
         "flag": "🇲🇽",
         "value": 3
@@ -208,18 +208,6 @@
       },
       {
         "rank": 5,
-        "team": "Canada",
-        "flag": "🇨🇦",
-        "value": 2
-      },
-      {
-        "rank": 5,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 2
-      },
-      {
-        "rank": 5,
         "team": "Ghana",
         "flag": "🇬🇭",
         "value": 2
@@ -229,16 +217,21 @@
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 2
+      },
+      {
+        "rank": 5,
+        "team": "Paraguay",
+        "flag": "🇵🇾",
+        "value": 2
+      },
+      {
+        "rank": 5,
+        "team": "Switzerland",
+        "flag": "🇨🇭",
+        "value": 2
       }
     ],
     "yellowCards": [
-      {
-        "rank": 1,
-        "name": "Abdukodir Khusanov",
-        "team": "Uzbekistan",
-        "flag": "🇺🇿",
-        "value": 2
-      },
       {
         "rank": 1,
         "name": "Ahmed Fathy",
@@ -300,6 +293,13 @@
         "name": "Gervane Kastaneer",
         "team": "Curacao",
         "flag": "🇨🇼",
+        "value": 2
+      },
+      {
+        "rank": 1,
+        "name": "Granit Xhaka",
+        "team": "Switzerland",
+        "flag": "🇨🇭",
         "value": 2
       }
     ],
@@ -484,9 +484,9 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 90.9,
-        "display": "90.9%",
-        "matches": 5
+        "value": 90.6,
+        "display": "90.6%",
+        "matches": 4
       },
       {
         "rank": 2,
@@ -497,15 +497,15 @@
         "matches": 4
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 90.1,
-        "display": "90.1%",
-        "matches": 5
+        "value": 90,
+        "display": "90.0%",
+        "matches": 4
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 90,
@@ -514,14 +514,14 @@
       },
       {
         "rank": 5,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 89.9,
-        "display": "89.9%",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 88.9,
+        "display": "88.9%",
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Germany",
         "flag": "🇩🇪",
         "value": 88.9,
@@ -530,14 +530,6 @@
       },
       {
         "rank": 7,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 88.6,
-        "display": "88.6%",
-        "matches": 5
-      },
-      {
-        "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
         "value": 88.4,
@@ -545,7 +537,15 @@
         "matches": 5
       },
       {
-        "rank": 9,
+        "rank": 8,
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 88.3,
+        "display": "88.3%",
+        "matches": 3
+      },
+      {
+        "rank": 8,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 88.3,
@@ -553,7 +553,7 @@
         "matches": 4
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 88.3,
@@ -604,14 +604,14 @@
       },
       {
         "rank": 6,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 61.2,
-        "display": "61.2%",
+        "team": "Portugal",
+        "flag": "🇵🇹",
+        "value": 61.8,
+        "display": "61.8%",
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "France",
         "flag": "🇫🇷",
         "value": 61.2,
@@ -620,27 +620,27 @@
       },
       {
         "rank": 8,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 60.7,
-        "display": "60.7%",
-        "matches": 5
+        "team": "Algeria",
+        "flag": "🇩🇿",
+        "value": 59.9,
+        "display": "59.9%",
+        "matches": 3
       },
       {
         "rank": 9,
-        "team": "Portugal",
-        "flag": "🇵🇹",
-        "value": 58.5,
-        "display": "58.5%",
-        "matches": 5
+        "team": "Colombia",
+        "flag": "🇨🇴",
+        "value": 58.1,
+        "display": "58.1%",
+        "matches": 4
       },
       {
         "rank": 10,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 58.2,
-        "display": "58.2%",
-        "matches": 5
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 57.6,
+        "display": "57.6%",
+        "matches": 4
       }
     ],
     "shotAccuracy": [
@@ -664,9 +664,9 @@
         "rank": 3,
         "team": "Croatia",
         "flag": "🇭🇷",
-        "value": 47.2,
-        "display": "47.2%",
-        "matches": 4
+        "value": 46.4,
+        "display": "46.4%",
+        "matches": 3
       },
       {
         "rank": 4,
@@ -686,6 +686,14 @@
       },
       {
         "rank": 6,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 44.4,
+        "display": "44.4%",
+        "matches": 4
+      },
+      {
+        "rank": 6,
         "team": "Netherlands",
         "flag": "🇳🇱",
         "value": 44.4,
@@ -693,7 +701,7 @@
         "matches": 3
       },
       {
-        "rank": 7,
+        "rank": 8,
         "team": "France",
         "flag": "🇫🇷",
         "value": 43.5,
@@ -701,7 +709,7 @@
         "matches": 5
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team": "Morocco",
         "flag": "🇲🇦",
         "value": 42.9,
@@ -709,19 +717,11 @@
         "matches": 4
       },
       {
-        "rank": 9,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 42.7,
-        "display": "42.7%",
-        "matches": 5
-      },
-      {
         "rank": 10,
-        "team": "New Zealand",
-        "flag": "🇳🇿",
-        "value": 41.2,
-        "display": "41.2%",
+        "team": "Jordan",
+        "flag": "🇯🇴",
+        "value": 42.1,
+        "display": "42.1%",
         "matches": 2
       }
     ],
@@ -735,7 +735,15 @@
         "matches": 2
       },
       {
-        "rank": 2,
+        "rank": 1,
+        "team": "Uzbekistan",
+        "flag": "🇺🇿",
+        "value": 71.4,
+        "display": "71.4%",
+        "matches": 2
+      },
+      {
+        "rank": 3,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 70.3,
@@ -743,7 +751,7 @@
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team": "Australia",
         "flag": "🇦🇺",
         "value": 69.8,
@@ -751,7 +759,7 @@
         "matches": 3
       },
       {
-        "rank": 4,
+        "rank": 5,
         "team": "Cape Verde",
         "flag": "🇨🇻",
         "value": 69.4,
@@ -759,7 +767,7 @@
         "matches": 3
       },
       {
-        "rank": 5,
+        "rank": 6,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 68.9,
@@ -767,20 +775,12 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team": "Iran",
         "flag": "🇮🇷",
         "value": 68.3,
         "display": "68.3%",
         "matches": 2
-      },
-      {
-        "rank": 7,
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 67.1,
-        "display": "67.1%",
-        "matches": 5
       },
       {
         "rank": 8,
@@ -791,20 +791,20 @@
         "matches": 3
       },
       {
-        "rank": 8,
-        "team": "Uzbekistan",
-        "flag": "🇺🇿",
-        "value": 66.7,
-        "display": "66.7%",
-        "matches": 3
-      },
-      {
-        "rank": 10,
+        "rank": 9,
         "team": "Paraguay",
         "flag": "🇵🇾",
         "value": 65.7,
         "display": "65.7%",
         "matches": 4
+      },
+      {
+        "rank": 10,
+        "team": "South Korea",
+        "flag": "🇰🇷",
+        "value": 65.5,
+        "display": "65.5%",
+        "matches": 2
       }
     ],
     "crossCompletion": [
@@ -834,14 +834,6 @@
       },
       {
         "rank": 4,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 33.9,
-        "display": "33.9%",
-        "matches": 5
-      },
-      {
-        "rank": 5,
         "team": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "value": 33.3,
@@ -849,12 +841,20 @@
         "matches": 2
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 32.8,
         "display": "32.8%",
         "matches": 5
+      },
+      {
+        "rank": 6,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 31.4,
+        "display": "31.4%",
+        "matches": 4
       },
       {
         "rank": 7,
@@ -868,9 +868,9 @@
         "rank": 8,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 29.2,
-        "display": "29.2%",
-        "matches": 5
+        "value": 29.5,
+        "display": "29.5%",
+        "matches": 4
       },
       {
         "rank": 9,
@@ -902,9 +902,9 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 59.6,
-        "display": "59.6%",
-        "matches": 5
+        "value": 59.5,
+        "display": "59.5%",
+        "matches": 4
       },
       {
         "rank": 3,
@@ -918,9 +918,9 @@
         "rank": 4,
         "team": "Portugal",
         "flag": "🇵🇹",
-        "value": 56.1,
-        "display": "56.1%",
-        "matches": 5
+        "value": 54.2,
+        "display": "54.2%",
+        "matches": 4
       },
       {
         "rank": 5,
@@ -958,17 +958,17 @@
         "rank": 9,
         "team": "Colombia",
         "flag": "🇨🇴",
-        "value": 50.3,
-        "display": "50.3%",
-        "matches": 5
+        "value": 49.6,
+        "display": "49.6%",
+        "matches": 4
       },
       {
         "rank": 10,
-        "team": "Algeria",
-        "flag": "🇩🇿",
-        "value": 49.1,
-        "display": "49.1%",
-        "matches": 4
+        "team": "Ivory Coast",
+        "flag": "🇨🇮",
+        "value": 48.5,
+        "display": "48.5%",
+        "matches": 3
       }
     ]
   },
@@ -1240,12 +1240,7 @@
           "matches": 1
         },
         {
-          "name": "Giovani Lo Celso",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Lautaro Martínez",
+          "name": "Lisandro Martínez",
           "value": 1,
           "matches": 1
         }
@@ -1303,37 +1298,12 @@
           "matches": 4
         },
         {
-          "name": "Marcel Sabitzer",
-          "value": 1,
-          "matches": 1
-        },
-        {
           "name": "Romano Schmid",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Sasa Kalajdzic",
           "value": 1,
           "matches": 1
         }
       ],
       "assists": [
-        {
-          "name": "David Alaba",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Konrad Laimer",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Michael Gregoritsch",
-          "value": 1,
-          "matches": 1
-        },
         {
           "name": "Xaver Schlager",
           "value": 1,
@@ -1352,10 +1322,6 @@
         {
           "name": "Marcel Sabitzer",
           "value": 1
-        },
-        {
-          "name": "Marko Arnautovic",
-          "value": 1
         }
       ],
       "redCards": []
@@ -1370,22 +1336,12 @@
           "matches": 1
         },
         {
-          "name": "Mousa Al-Tamari",
-          "value": 1,
-          "matches": 1
-        },
-        {
           "name": "Nizar Al-Rashdan",
           "value": 1,
           "matches": 1
         }
       ],
       "assists": [
-        {
-          "name": "Ehsan Haddad",
-          "value": 1,
-          "matches": 1
-        },
         {
           "name": "Mousa Al-Tamari",
           "value": 1,
@@ -1400,18 +1356,6 @@
       "yellowCards": [
         {
           "name": "Husam Abu Dahab",
-          "value": 1
-        },
-        {
-          "name": "Mohammed Abu Zraiq",
-          "value": 1
-        },
-        {
-          "name": "Mohannad Abu Taha",
-          "value": 1
-        },
-        {
-          "name": "Yazan Al-Arab",
           "value": 1
         }
       ],
@@ -1506,11 +1450,6 @@
           "name": "Brian Cipenga",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Fiston Mayele",
-          "value": 1,
-          "matches": 1
         }
       ],
       "assists": [
@@ -1523,18 +1462,9 @@
           "name": "Chancel Mbemba",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Meschack Elia",
-          "value": 1,
-          "matches": 1
         }
       ],
       "yellowCards": [
-        {
-          "name": "Noah Sadiki",
-          "value": 2
-        },
         {
           "name": "Chancel Mbemba",
           "value": 1
@@ -1544,11 +1474,7 @@
           "value": 1
         },
         {
-          "name": "Nathanaël Mbuku",
-          "value": 1
-        },
-        {
-          "name": "Samuel Moutoussamy",
+          "name": "Noah Sadiki",
           "value": 1
         }
       ],
@@ -1607,10 +1533,6 @@
           "value": 2
         },
         {
-          "name": "Jarell Quansah",
-          "value": 1
-        },
-        {
           "name": "Jordan Henderson",
           "value": 1
         },
@@ -1620,6 +1542,10 @@
         },
         {
           "name": "Marc Guéhi",
+          "value": 1
+        },
+        {
+          "name": "Nico O'Reilly",
           "value": 1
         }
       ],
@@ -1650,11 +1576,6 @@
           "matches": 1
         },
         {
-          "name": "Nikola Vlasic",
-          "value": 1,
-          "matches": 1
-        },
-        {
           "name": "Petar Musa",
           "value": 1,
           "matches": 1
@@ -1672,16 +1593,6 @@
           "matches": 1
         },
         {
-          "name": "Luka Modric",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Mateo Kovacic",
-          "value": 1,
-          "matches": 1
-        },
-        {
           "name": "Petar Sucic",
           "value": 1,
           "matches": 1
@@ -1690,7 +1601,7 @@
       "yellowCards": [
         {
           "name": "Ivan Perisic",
-          "value": 2
+          "value": 1
         },
         {
           "name": "Luka Modric",
@@ -1711,21 +1622,11 @@
           "name": "Caleb Yirenkyi",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Derrick Luckassen",
-          "value": 1,
-          "matches": 1
         }
       ],
       "assists": [
         {
           "name": "Brandon Thomas-Asante",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Ernest Nuamah",
           "value": 1,
           "matches": 1
         }
@@ -1745,10 +1646,6 @@
         },
         {
           "name": "Iñaki Williams",
-          "value": 1
-        },
-        {
-          "name": "Kojo Peprah Oppong",
           "value": 1
         }
       ],
@@ -1817,10 +1714,6 @@
           "value": 1
         },
         {
-          "name": "Gustavo Puerta",
-          "value": 1
-        },
-        {
           "name": "Jefferson Lerma",
           "value": 1
         },
@@ -1830,6 +1723,10 @@
         },
         {
           "name": "Jhon Lucumí",
+          "value": 1
+        },
+        {
+          "name": "Johan Mojica",
           "value": 1
         }
       ],
@@ -1843,31 +1740,16 @@
           "name": "Abbosbek Fayzullaev",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Eldor Shomurodov",
-          "value": 1,
-          "matches": 1
         }
       ],
-      "assists": [
-        {
-          "name": "Akmal Mozgovoy",
-          "value": 1,
-          "matches": 1
-        }
-      ],
+      "assists": [],
       "yellowCards": [
         {
           "name": "Abdukodir Khusanov",
-          "value": 2
-        },
-        {
-          "name": "Odiljon Xamrobekov",
           "value": 1
         },
         {
-          "name": "Sherzod Nasrullaev",
+          "name": "Odiljon Xamrobekov",
           "value": 1
         }
       ],
@@ -2076,11 +1958,6 @@
         },
         {
           "name": "Promise David",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Stephen Eustáquio",
           "value": 1,
           "matches": 1
         }
@@ -3109,11 +2986,6 @@
           "name": "Nadhir Benbouali",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Rafik Belghali",
-          "value": 1,
-          "matches": 1
         }
       ],
       "assists": [
@@ -3487,10 +3359,6 @@
       "assists": [],
       "yellowCards": [
         {
-          "name": "Andrés Andrade",
-          "value": 1
-        },
-        {
           "name": "Carlos Harvey",
           "value": 1
         },
@@ -3500,10 +3368,6 @@
         },
         {
           "name": "Édgar Yoel Bárcenas",
-          "value": 1
-        },
-        {
-          "name": "José Fajardo",
           "value": 1
         }
       ],
@@ -5795,301 +5659,6 @@
             "totalCrosses": 12,
             "accurateLongBalls": 18,
             "totalLongBalls": 34
-          }
-        ]
-      },
-      "760480": {
-        "penMiss": [],
-        "assists": [
-          {
-            "name": "Mateo Kovacic",
-            "team": "Croatia"
-          },
-          {
-            "name": "Ernest Nuamah",
-            "team": "Ghana"
-          },
-          {
-            "name": "Luka Modric",
-            "team": "Croatia"
-          }
-        ],
-        "teamBox": [
-          {
-            "team": "Croatia",
-            "possessionPct": 53.3,
-            "accuratePasses": 477,
-            "totalPasses": 523,
-            "shotsOnTarget": 4,
-            "totalShots": 8,
-            "effectiveTackles": 8,
-            "totalTackles": 14,
-            "accurateCrosses": 3,
-            "totalCrosses": 15,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 38
-          },
-          {
-            "team": "Ghana",
-            "possessionPct": 46.7,
-            "accuratePasses": 402,
-            "totalPasses": 455,
-            "shotsOnTarget": 1,
-            "totalShots": 6,
-            "effectiveTackles": 7,
-            "totalTackles": 13,
-            "accurateCrosses": 3,
-            "totalCrosses": 12,
-            "accurateLongBalls": 18,
-            "totalLongBalls": 39
-          }
-        ]
-      },
-      "760481": {
-        "penMiss": [],
-        "assists": [],
-        "teamBox": [
-          {
-            "team": "Colombia",
-            "possessionPct": 54.6,
-            "accuratePasses": 485,
-            "totalPasses": 544,
-            "shotsOnTarget": 6,
-            "totalShots": 24,
-            "effectiveTackles": 8,
-            "totalTackles": 15,
-            "accurateCrosses": 3,
-            "totalCrosses": 11,
-            "accurateLongBalls": 25,
-            "totalLongBalls": 46
-          },
-          {
-            "team": "Portugal",
-            "possessionPct": 45.4,
-            "accuratePasses": 405,
-            "totalPasses": 446,
-            "shotsOnTarget": 2,
-            "totalShots": 13,
-            "effectiveTackles": 5,
-            "totalTackles": 9,
-            "accurateCrosses": 2,
-            "totalCrosses": 13,
-            "accurateLongBalls": 20,
-            "totalLongBalls": 29
-          }
-        ]
-      },
-      "760482": {
-        "penMiss": [],
-        "assists": [
-          {
-            "name": "Akmal Mozgovoy",
-            "team": "Uzbekistan"
-          },
-          {
-            "name": "Meschack Elia",
-            "team": "Congo DR"
-          }
-        ],
-        "teamBox": [
-          {
-            "team": "Congo DR",
-            "possessionPct": 57.6,
-            "accuratePasses": 400,
-            "totalPasses": 485,
-            "shotsOnTarget": 4,
-            "totalShots": 19,
-            "effectiveTackles": 13,
-            "totalTackles": 20,
-            "accurateCrosses": 6,
-            "totalCrosses": 22,
-            "accurateLongBalls": 28,
-            "totalLongBalls": 60
-          },
-          {
-            "team": "Uzbekistan",
-            "possessionPct": 42.4,
-            "accuratePasses": 269,
-            "totalPasses": 355,
-            "shotsOnTarget": 1,
-            "totalShots": 3,
-            "effectiveTackles": 18,
-            "totalTackles": 29,
-            "accurateCrosses": 2,
-            "totalCrosses": 16,
-            "accurateLongBalls": 21,
-            "totalLongBalls": 59
-          }
-        ]
-      },
-      "760483": {
-        "penMiss": [],
-        "assists": [
-          {
-            "name": "Ehsan Haddad",
-            "team": "Jordan"
-          }
-        ],
-        "teamBox": [
-          {
-            "team": "Jordan",
-            "possessionPct": 26.7,
-            "accuratePasses": 228,
-            "totalPasses": 285,
-            "shotsOnTarget": 1,
-            "totalShots": 5,
-            "effectiveTackles": 8,
-            "totalTackles": 16,
-            "accurateCrosses": 2,
-            "totalCrosses": 7,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 36
-          },
-          {
-            "team": "Argentina",
-            "possessionPct": 73.3,
-            "accuratePasses": 737,
-            "totalPasses": 801,
-            "shotsOnTarget": 4,
-            "totalShots": 12,
-            "effectiveTackles": 5,
-            "totalTackles": 14,
-            "accurateCrosses": 3,
-            "totalCrosses": 5,
-            "accurateLongBalls": 15,
-            "totalLongBalls": 25
-          }
-        ]
-      },
-      "760484": {
-        "penMiss": [],
-        "assists": [
-          {
-            "name": "David Alaba",
-            "team": "Austria"
-          },
-          {
-            "name": "Konrad Laimer",
-            "team": "Austria"
-          },
-          {
-            "name": "Houssem Aouar",
-            "team": "Algeria"
-          },
-          {
-            "name": "Houssem Aouar",
-            "team": "Algeria"
-          },
-          {
-            "name": "Michael Gregoritsch",
-            "team": "Austria"
-          }
-        ],
-        "teamBox": [
-          {
-            "team": "Algeria",
-            "possessionPct": 65,
-            "accuratePasses": 706,
-            "totalPasses": 754,
-            "shotsOnTarget": 5,
-            "totalShots": 12,
-            "effectiveTackles": 5,
-            "totalTackles": 11,
-            "accurateCrosses": 0,
-            "totalCrosses": 5,
-            "accurateLongBalls": 26,
-            "totalLongBalls": 44
-          },
-          {
-            "team": "Austria",
-            "possessionPct": 35,
-            "accuratePasses": 346,
-            "totalPasses": 396,
-            "shotsOnTarget": 3,
-            "totalShots": 10,
-            "effectiveTackles": 4,
-            "totalTackles": 11,
-            "accurateCrosses": 3,
-            "totalCrosses": 13,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 32
-          }
-        ]
-      },
-      "760485": {
-        "penMiss": [],
-        "assists": [
-          {
-            "name": "Bukayo Saka",
-            "team": "England"
-          },
-          {
-            "name": "Jude Bellingham",
-            "team": "England"
-          }
-        ],
-        "teamBox": [
-          {
-            "team": "Panama",
-            "possessionPct": 32.9,
-            "accuratePasses": 202,
-            "totalPasses": 268,
-            "shotsOnTarget": 2,
-            "totalShots": 13,
-            "effectiveTackles": 11,
-            "totalTackles": 16,
-            "accurateCrosses": 3,
-            "totalCrosses": 9,
-            "accurateLongBalls": 25,
-            "totalLongBalls": 54
-          },
-          {
-            "team": "England",
-            "possessionPct": 67.1,
-            "accuratePasses": 490,
-            "totalPasses": 558,
-            "shotsOnTarget": 6,
-            "totalShots": 17,
-            "effectiveTackles": 17,
-            "totalTackles": 18,
-            "accurateCrosses": 4,
-            "totalCrosses": 25,
-            "accurateLongBalls": 20,
-            "totalLongBalls": 36
-          }
-        ]
-      },
-      "760486": {
-        "penMiss": [],
-        "assists": [],
-        "teamBox": [
-          {
-            "team": "South Africa",
-            "possessionPct": 59.7,
-            "accuratePasses": 295,
-            "totalPasses": 348,
-            "shotsOnTarget": 1,
-            "totalShots": 3,
-            "effectiveTackles": 8,
-            "totalTackles": 14,
-            "accurateCrosses": 1,
-            "totalCrosses": 3,
-            "accurateLongBalls": 25,
-            "totalLongBalls": 49
-          },
-          {
-            "team": "Canada",
-            "possessionPct": 40.3,
-            "accuratePasses": 173,
-            "totalPasses": 225,
-            "shotsOnTarget": 4,
-            "totalShots": 7,
-            "effectiveTackles": 6,
-            "totalTackles": 10,
-            "accurateCrosses": 4,
-            "totalCrosses": 7,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 18
           }
         ]
       },
