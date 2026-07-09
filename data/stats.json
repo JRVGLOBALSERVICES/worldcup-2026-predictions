@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T20:20:12.412Z",
+    "generatedAt": "2026-07-09T20:20:26.099Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 80
   },
@@ -706,6 +706,14 @@
       },
       {
         "rank": 2,
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 60.6,
+        "display": "60.6%",
+        "matches": 6
+      },
+      {
+        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 60.4,
@@ -713,19 +721,11 @@
         "matches": 5
       },
       {
-        "rank": 2,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 60.4,
-        "display": "60.4%",
-        "matches": 6
-      },
-      {
         "rank": 4,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 58.7,
-        "display": "58.7%",
+        "value": 58.5,
+        "display": "58.5%",
         "matches": 5
       },
       {
@@ -4725,7 +4725,7 @@
           "assists": 0,
           "tackles": 5,
           "blocks": 2,
-          "passes": 132,
+          "passes": 135,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4740,7 +4740,7 @@
           "assists": 5,
           "tackles": 5,
           "blocks": 5,
-          "passes": 284,
+          "passes": 285,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4755,7 +4755,7 @@
           "assists": 1,
           "tackles": 2,
           "blocks": 1,
-          "passes": 268,
+          "passes": 270,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4800,7 +4800,7 @@
           "assists": 0,
           "tackles": 11,
           "blocks": 1,
-          "passes": 332,
+          "passes": 333,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4830,7 +4830,7 @@
           "assists": 0,
           "tackles": 2,
           "blocks": 0,
-          "passes": 277,
+          "passes": 279,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4860,7 +4860,7 @@
           "assists": 0,
           "tackles": 6,
           "blocks": 1,
-          "passes": 207,
+          "passes": 208,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4875,7 +4875,7 @@
           "assists": 0,
           "tackles": 4,
           "blocks": 0,
-          "passes": 169,
+          "passes": 170,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5046,7 +5046,7 @@
           "assists": 2,
           "tackles": 5,
           "blocks": 3,
-          "passes": 304,
+          "passes": 305,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5181,7 +5181,7 @@
           "assists": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 127,
+          "passes": 128,
           "saves": 6,
           "yellow": 0,
           "red": 0,
@@ -33126,9 +33126,9 @@
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 59.7,
-            "accuratePasses": 123,
-            "totalPasses": 138,
+            "possessionPct": 61,
+            "accuratePasses": 133,
+            "totalPasses": 149,
             "shotsOnTarget": 1,
             "totalShots": 4,
             "effectiveTackles": 0,
@@ -33140,9 +33140,9 @@
           },
           {
             "team": "Morocco",
-            "possessionPct": 40.3,
-            "accuratePasses": 77,
-            "totalPasses": 94,
+            "possessionPct": 39,
+            "accuratePasses": 78,
+            "totalPasses": 96,
             "shotsOnTarget": 0,
             "totalShots": 0,
             "effectiveTackles": 1,
@@ -33172,7 +33172,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 22
+            "ps": 24
           },
           {
             "n": "Dayot Upamecano",
@@ -33181,7 +33181,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 17
           },
           {
             "n": "Lucas Digne",
@@ -33190,7 +33190,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 13
+            "ps": 14
           },
           {
             "n": "Jules Koundé",
@@ -33208,7 +33208,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 13
+            "ps": 14
           },
           {
             "n": "Adrien Rabiot",
@@ -33217,7 +33217,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 18
           },
           {
             "n": "Manu Koné",
@@ -33226,7 +33226,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 10
           },
           {
             "n": "Kylian Mbappé",
@@ -33244,7 +33244,7 @@
             "tid": "478",
             "tk": 0,
             "bk": 1,
-            "ps": 11
+            "ps": 14
           },
           {
             "n": "Ousmane Dembélé",
@@ -33264,7 +33264,7 @@
             "sv": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 7
+            "ps": 8
           },
           {
             "n": "Noussair Mazraoui",
@@ -33300,7 +33300,7 @@
             "tid": "2869",
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 10
           },
           {
             "n": "Azzedine Ounahi",

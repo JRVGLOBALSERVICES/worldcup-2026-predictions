@@ -17023,9 +17023,9 @@
       "matchId": "fra-mar-2026-07-09",
       "player": "—",
       "market": "Same-match parlay · 8 legs · shots x3 + U5.5 + qualify + Mbappe + BTTS + Olise S/A",
-      "label": "REAL 1xBet slip 863079469257764864 (09/07) — 8-leg same-match parlay on FRA-MAR @16.64, RM170 -> RM2,828.80. SHARED: Rj + Tharma, RM85 each. Legs: Rabiot Over 0.5 shots · Total Under 5.5 · France To Qualify · Mbappe anytime scorer · Hakimi Over 0.5 shots · Ounahi Over 0.5 shots · BTTS Yes · Olise to score or assist.",
+      "label": "REAL 1xBet slip 863079469257764864 (09/07) — 8-leg same-match parlay on FRA-MAR @16.64, RM170 -> RM2,828.80. SHARED: Rj + Tharma, RM85 each (Rj RM85 -> RM1,414.40). Legs: Rabiot Over 0.5 shots · Total Under 5.5 · France To Qualify · Mbappe anytime scorer · Hakimi Over 0.5 shots · Ounahi Over 0.5 shots · BTTS Yes · Olise to score or assist.",
       "odds": 16.64,
-      "stake": 170,
+      "stake": 85,
       "placedAt": "09/07",
       "punter": "Rj + Tharma · RM85 each",
       "grade": {
@@ -17082,9 +17082,9 @@
       "matchId": "fra-mar-2026-07-09",
       "player": "—",
       "market": "Same-match parlay · 10 legs · 1X + qualify + O1.5 + MAR corners/cards + Bounou saves + Hakimi tackles (auto) + U5.5 + Mbappe S/A + Rabiot shots",
-      "label": "REAL 1xBet slip 863081028750323712 (09/07) — 10-leg same-match parlay on FRA-MAR @11.98, RM120 -> RM1,437.60. SHARED: Rj + Tharma, RM60 each. Legs: France or Tie (DC) · France To Qualify · Over 1.5 total goals · Morocco team corners O3.5 · Bounou O1.5 saves · Morocco team cards O1.5 · Hakimi O1.5 tackles (auto — ESPN core API per-player Opta tackles) · Under 5.5 total goals · Mbappe to score or assist · Rabiot O0.5 shots.",
+      "label": "REAL 1xBet slip 863081028750323712 (09/07) — 10-leg same-match parlay on FRA-MAR @11.98, RM120 -> RM1,437.60. SHARED: Rj + Tharma, RM60 each (Rj RM60 -> RM718.80). Legs: France or Tie (DC) · France To Qualify · Over 1.5 total goals · Morocco team corners O3.5 · Bounou O1.5 saves · Morocco team cards O1.5 · Hakimi O1.5 tackles (auto — ESPN core API per-player Opta tackles) · Under 5.5 total goals · Mbappe to score or assist · Rabiot O0.5 shots.",
       "odds": 11.98,
-      "stake": 120,
+      "stake": 60,
       "placedAt": "09/07",
       "punter": "Rj + Tharma · RM60 each",
       "grade": {
@@ -102592,6 +102592,759 @@
           "away": "22"
         }
       ]
+    },
+    "fra-mar-2026-07-09": {
+      "corners": {
+        "home": 1,
+        "away": 0
+      },
+      "sot": {
+        "home": 1,
+        "away": 0
+      },
+      "shots": {
+        "home": 4,
+        "away": 0
+      },
+      "yellow": {
+        "home": 0,
+        "away": 0
+      },
+      "red": {
+        "home": 0,
+        "away": 0
+      },
+      "cards": {
+        "home": 0,
+        "away": 0
+      },
+      "fouls": {
+        "home": 2,
+        "away": 2
+      },
+      "cornersByHalf": {
+        "home": [
+          1,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          1,
+          0
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {
+        "Dayot Upamecano": 1
+      },
+      "playerShots": {
+        "Kylian Mbappé": 1,
+        "Dayot Upamecano": 1,
+        "Désiré Doué": 1,
+        "Ousmane Dembélé": 1
+      },
+      "playerShotBreakdown": {
+        "Kylian Mbappé": {
+          "team": "home",
+          "shots": 1,
+          "sot": 0,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Dayot Upamecano": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Désiré Doué": {
+          "team": "home",
+          "shots": 1,
+          "sot": 0,
+          "off": 0,
+          "blocked": 1,
+          "goals": 0
+        },
+        "Ousmane Dembélé": {
+          "team": "home",
+          "shots": 1,
+          "sot": 0,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        }
+      },
+      "players": [
+        {
+          "team": "home",
+          "name": "Mike Maignan",
+          "pos": "G",
+          "num": 16,
+          "starter": true,
+          "aid": "189026",
+          "gk": true,
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "sv": 0,
+          "gc": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 5
+        },
+        {
+          "team": "home",
+          "name": "William Saliba",
+          "pos": "CD-L",
+          "num": 17,
+          "starter": true,
+          "aid": "277385",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 22
+        },
+        {
+          "team": "home",
+          "name": "Dayot Upamecano",
+          "pos": "CD-R",
+          "num": 4,
+          "starter": true,
+          "aid": "222793",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 16
+        },
+        {
+          "team": "home",
+          "name": "Lucas Digne",
+          "pos": "LB",
+          "num": 3,
+          "starter": true,
+          "aid": "160115",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 13
+        },
+        {
+          "team": "home",
+          "name": "Jules Koundé",
+          "pos": "RB",
+          "num": 5,
+          "starter": true,
+          "aid": "231692",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 14
+        },
+        {
+          "team": "home",
+          "name": "Michael Olise",
+          "pos": "AM",
+          "num": 11,
+          "starter": true,
+          "aid": "286831",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 13
+        },
+        {
+          "team": "home",
+          "name": "Adrien Rabiot",
+          "pos": "LM",
+          "num": 14,
+          "starter": true,
+          "aid": "176203",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 16
+        },
+        {
+          "team": "home",
+          "name": "Manu Koné",
+          "pos": "RM",
+          "num": 6,
+          "starter": true,
+          "aid": "285226",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 9
+        },
+        {
+          "team": "home",
+          "name": "Kylian Mbappé",
+          "pos": "F",
+          "num": 10,
+          "starter": true,
+          "aid": "231388",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 9
+        },
+        {
+          "team": "home",
+          "name": "Désiré Doué",
+          "pos": "AM-L",
+          "num": 20,
+          "starter": true,
+          "aid": "336388",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 0,
+          "fc": 1,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 1,
+          "ps": 11
+        },
+        {
+          "team": "home",
+          "name": "Ousmane Dembélé",
+          "pos": "AM-R",
+          "num": 7,
+          "starter": true,
+          "aid": "229744",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 10
+        },
+        {
+          "team": "away",
+          "name": "Yassine Bounou",
+          "pos": "G",
+          "num": 1,
+          "starter": true,
+          "aid": "175149",
+          "gk": true,
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "sv": 1,
+          "gc": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 7
+        },
+        {
+          "team": "away",
+          "name": "Noussair Mazraoui",
+          "pos": "CD-L",
+          "num": 3,
+          "starter": true,
+          "aid": "239350",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 9
+        },
+        {
+          "team": "away",
+          "name": "Issa Diop",
+          "pos": "CD-R",
+          "num": 14,
+          "starter": true,
+          "aid": "230963",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 16
+        },
+        {
+          "team": "away",
+          "name": "Anass Salah-Eddine",
+          "pos": "LB",
+          "num": 26,
+          "starter": true,
+          "aid": "297296",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 6
+        },
+        {
+          "team": "away",
+          "name": "Achraf Hakimi",
+          "pos": "RB",
+          "num": 2,
+          "starter": true,
+          "aid": "240233",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 9
+        },
+        {
+          "team": "away",
+          "name": "Azzedine Ounahi",
+          "pos": "AM",
+          "num": 8,
+          "starter": true,
+          "aid": "291552",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 10
+        },
+        {
+          "team": "away",
+          "name": "Neil El Aynaoui",
+          "pos": "LM",
+          "num": 24,
+          "starter": true,
+          "aid": "323807",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 2,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 9
+        },
+        {
+          "team": "away",
+          "name": "Ayyoub Bouaddi",
+          "pos": "RM",
+          "num": 6,
+          "starter": true,
+          "aid": "373927",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 15
+        },
+        {
+          "team": "away",
+          "name": "Bilal El Khannouss",
+          "pos": "F",
+          "num": 23,
+          "starter": true,
+          "aid": "336595",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 5
+        },
+        {
+          "team": "away",
+          "name": "Chemsdine Talbi",
+          "pos": "AM-L",
+          "num": 7,
+          "starter": true,
+          "aid": "360062",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 2
+        },
+        {
+          "team": "away",
+          "name": "Brahim Díaz",
+          "pos": "AM-R",
+          "num": 10,
+          "starter": true,
+          "aid": "246532",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 6
+        }
+      ],
+      "subs": [],
+      "firstGoalMethod": null,
+      "firstPenalty": null,
+      "waterBreak": {},
+      "tempo": {
+        "possession": {
+          "home": 59.7,
+          "away": 40.3
+        },
+        "passes": {
+          "home": 138,
+          "away": 94
+        },
+        "tackles": {
+          "home": 0,
+          "away": 2
+        },
+        "saves": {
+          "home": 0,
+          "away": 1
+        },
+        "offsides": {
+          "home": 0,
+          "away": 0
+        },
+        "blockedShots": {
+          "home": 1,
+          "away": 0
+        },
+        "interceptions": {
+          "home": 1,
+          "away": 4
+        },
+        "clearances": {
+          "home": 1,
+          "away": 4
+        }
+      },
+      "full": [
+        {
+          "key": "foulsCommitted",
+          "label": "Fouls",
+          "home": "2",
+          "away": "2"
+        },
+        {
+          "key": "yellowCards",
+          "label": "Yellow Cards",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "redCards",
+          "label": "Red Cards",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "offsides",
+          "label": "Offsides",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "wonCorners",
+          "label": "Corner Kicks",
+          "home": "1",
+          "away": "0"
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "home": "0",
+          "away": "1"
+        },
+        {
+          "key": "possessionPct",
+          "label": "POSSESSION",
+          "home": "59.7",
+          "away": "40.3"
+        },
+        {
+          "key": "totalShots",
+          "label": "SHOTS",
+          "home": "4",
+          "away": "0"
+        },
+        {
+          "key": "shotsOnTarget",
+          "label": "ON GOAL",
+          "home": "1",
+          "away": "0"
+        },
+        {
+          "key": "shotPct",
+          "label": "On Target %",
+          "home": "0.3",
+          "away": "0.0"
+        },
+        {
+          "key": "penaltyKickGoals",
+          "label": "Penalty Goals",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "penaltyKickShots",
+          "label": "Penalty Kicks Taken",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "accuratePasses",
+          "label": "Accurate Passes",
+          "home": "123",
+          "away": "77"
+        },
+        {
+          "key": "totalPasses",
+          "label": "Passes",
+          "home": "138",
+          "away": "94"
+        },
+        {
+          "key": "passPct",
+          "label": "Pass Completion %",
+          "home": "0.9",
+          "away": "0.8"
+        },
+        {
+          "key": "accurateCrosses",
+          "label": "Accurate Crosses",
+          "home": "2",
+          "away": "0"
+        },
+        {
+          "key": "totalCrosses",
+          "label": "Crosses",
+          "home": "3",
+          "away": "1"
+        },
+        {
+          "key": "crossPct",
+          "label": "Cross %",
+          "home": "0.7",
+          "away": "0.0"
+        },
+        {
+          "key": "totalLongBalls",
+          "label": "Long Balls",
+          "home": "6",
+          "away": "14"
+        },
+        {
+          "key": "accurateLongBalls",
+          "label": "Accurate Long Balls",
+          "home": "3",
+          "away": "5"
+        },
+        {
+          "key": "longballPct",
+          "label": "Long Balls %",
+          "home": "0.5",
+          "away": "0.4"
+        },
+        {
+          "key": "blockedShots",
+          "label": "Blocked Shots",
+          "home": "1",
+          "away": "0"
+        },
+        {
+          "key": "effectiveTackles",
+          "label": "Effective Tackles",
+          "home": "0",
+          "away": "1"
+        },
+        {
+          "key": "totalTackles",
+          "label": "Tackles",
+          "home": "0",
+          "away": "2"
+        },
+        {
+          "key": "tacklePct",
+          "label": "Tackle %",
+          "home": "0.0",
+          "away": "0.5"
+        },
+        {
+          "key": "interceptions",
+          "label": "Interceptions",
+          "home": "1",
+          "away": "4"
+        },
+        {
+          "key": "effectiveClearance",
+          "label": "Effective Clearances",
+          "home": "1",
+          "away": "4"
+        },
+        {
+          "key": "totalClearance",
+          "label": "Clearances",
+          "home": "1",
+          "away": "4"
+        }
+      ],
+      "playerTackles": {
+        "Achraf Hakimi": 0,
+        "Dayot Upamecano": 0
+      }
     }
   }
 }
