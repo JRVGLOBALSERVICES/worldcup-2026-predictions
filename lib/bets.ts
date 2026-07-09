@@ -233,6 +233,58 @@ export type MatchStats = {
    * 2026-07-07 never captured it.
    */
   full?: FullStatLine[];
+  /**
+   * Per-player match sheet — one line per player who FEATURED (started or came
+   * on), both teams, oriented to our home/away. The G/A/shots/SOT/fouls/cards/
+   * saves counts come off the summary team sheet (`rosters[].roster[].stats`)
+   * so they tick live on the poll; passes/tackles/blocks only exist in ESPN's
+   * core API (one fetch per athlete — see lib/live-stats.ts core sweep) and are
+   * merged in by scripts/build-results.mjs from the data/stats.json cache, so
+   * they're absent (`undefined`, render "–") until the hourly sweep covers the
+   * match. Display-only; settlement keeps reading the maps above. Optional —
+   * snapshots before 2026-07-09 never captured it.
+   */
+  players?: PlayerStatLine[];
+};
+
+/**
+ * One player's line on the per-match sheet — see MatchStats.players. Compact
+ * keys on purpose: ~30 lines ride every match in results.json AND the 5s
+ * /api/live payload. A missing tk/bk/ps means "core sweep hasn't covered this
+ * match yet" (0 is a real verified count), mirroring the playerTackles rule.
+ */
+export type PlayerStatLine = {
+  team: "home" | "away";
+  name: string;
+  /** Position code off the team sheet (G/D/M/F). */
+  pos: string;
+  /** Shirt number (null if unlisted). */
+  num: number | null;
+  /** true = started; false = came on as a sub. */
+  starter: boolean;
+  /** ESPN athlete id — the merge key for the core-API sweep backfill. */
+  aid?: string;
+  /** Keeper flag — sv/gc only carry meaning on these lines. */
+  gk?: boolean;
+  /** Goals · assists · total shots · shots on target. */
+  g: number;
+  a: number;
+  sh: number;
+  sot: number;
+  /** Fouls committed · fouls suffered · yellows · reds · offsides. */
+  fc: number;
+  fs: number;
+  yc: number;
+  rc: number;
+  off: number;
+  og?: number;
+  /** Keeper: saves · goals conceded. */
+  sv?: number;
+  gc?: number;
+  /** Core-sweep Opta counts: tackles · blocked shots · passes. */
+  tk?: number;
+  bk?: number;
+  ps?: number;
 };
 
 /** One line of the complete ESPN boxscore — see MatchStats.full. */

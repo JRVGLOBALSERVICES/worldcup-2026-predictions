@@ -7,6 +7,7 @@ import type {
   GoalMethod,
   WaterBreakAction,
   PlayerShotLine,
+  PlayerStatLine,
   Substitution,
 } from "./bets";
 import type { LineupXI } from "./types";
@@ -160,6 +161,7 @@ async function fetchStats(
   const homeName = norm(fx.home.name);
   const goals = goalsFromKeyEvents(data.keyEvents, homeName);
   const lineups = lineupsFromRosters(data.rosters, homeName);
+  const players = playersFromRosters(data.rosters, homeName);
 
   const teams = data.boxscore?.teams;
   if (!Array.isArray(teams) || teams.length < 2) return { stats: null, goals, lineups };
@@ -315,10 +317,63 @@ async function fetchStats(
         clearances: { home: stat(h, "effectiveClearance"), away: stat(a, "effectiveClearance") },
       },
       ...(full.length ? { full } : {}),
+      ...(players.length ? { players } : {}),
     },
     goals,
     lineups,
   };
+}
+
+/**
+ * Per-player match sheet — every player who FEATURED (started or came on),
+ * both teams, off the summary team sheet's live per-player stats. These tick
+ * on every poll like the boxscore. Tackles/blocks/passes are NOT here — they
+ * only exist in the core API (one fetch per athlete, unaffordable on a 5s
+ * poll); finished matches get them merged into the persisted sheet by
+ * scripts/build-results.mjs from the stats-cron sweep. Mirrors the `players`
+ * block in scripts/build-results.mjs statsFromSummary — keep in sync.
+ */
+function playersFromRosters(
+  rosters: EspnRosterTeam[] | undefined,
+  homeName: string,
+): PlayerStatLine[] {
+  const players: PlayerStatLine[] = [];
+  for (const t of rosters ?? []) {
+    const side: "home" | "away" =
+      norm(t.team?.displayName ?? "") === homeName ? "home" : "away";
+    for (const p of t.roster ?? []) {
+      if (!p.starter && !p.subbedIn) continue; // unused bench — no match stats
+      const name = p.athlete?.displayName;
+      if (!name) continue;
+      const sv = (n: string): number => {
+        const v = (p.stats ?? []).find((s) => s.name === n)?.value;
+        return typeof v === "number" && Number.isFinite(v) ? v : 0;
+      };
+      const gk = p.position?.abbreviation === "G";
+      const num = parseInt(p.jersey ?? p.athlete?.jersey ?? "", 10);
+      players.push({
+        team: side,
+        name,
+        pos: p.position?.abbreviation ?? "",
+        num: Number.isFinite(num) ? num : null,
+        starter: p.starter === true,
+        ...(p.athlete?.id ? { aid: p.athlete.id } : {}),
+        ...(gk ? { gk: true } : {}),
+        g: sv("totalGoals"),
+        a: sv("goalAssists"),
+        sh: sv("totalShots"),
+        sot: sv("shotsOnTarget"),
+        fc: sv("foulsCommitted"),
+        fs: sv("foulsSuffered"),
+        yc: sv("yellowCards"),
+        rc: sv("redCards"),
+        off: sv("offsides"),
+        ...(sv("ownGoals") > 0 ? { og: sv("ownGoals") } : {}),
+        ...(gk ? { sv: sv("saves"), gc: sv("goalsConceded") } : {}),
+      });
+    }
+  }
+  return players;
 }
 
 /**
@@ -558,15 +613,19 @@ type EspnKeyEvent = {
 };
 // Team-sheet roster block (line-ups). `starter` marks the XI; formation is real.
 // `team.id` + `athlete.id` feed the core-API per-athlete statistics URL (the
-// per-player tackle fetch); the summary itself carries no per-player tackles.
+// per-player tackle fetch); the summary itself carries no per-player tackles —
+// but each roster entry DOES carry live per-player stats (goals / assists /
+// shots / SOT / fouls / cards / keeper saves), which feed the player sheet.
 type EspnRosterTeam = {
   team?: { id?: string; displayName?: string };
   formation?: string;
   roster?: {
     starter?: boolean;
+    subbedIn?: boolean;
     jersey?: string;
     athlete?: { id?: string; displayName?: string; fullName?: string; jersey?: string };
     position?: { abbreviation?: string };
+    stats?: { name?: string; value?: number }[];
   }[];
 };
 type EspnSummary = {

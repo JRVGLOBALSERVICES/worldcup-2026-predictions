@@ -23,6 +23,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const FIXTURES_PATH = join(__dirname, "..", "data", "fixtures.json");
 const RESULTS_PATH = join(__dirname, "..", "data", "results.json");
 const BETS_PATH = join(__dirname, "..", "data", "bets.json");
+const STATS_PATH = join(__dirname, "..", "data", "stats.json");
 const ESPN_BASE =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
 const ESPN_SUMMARY =
@@ -282,9 +283,52 @@ function statsFromSummary(summary, fixture) {
     }];
   });
 
+  // Per-player match sheet — every player who FEATURED (started or came on),
+  // both teams, off the summary team sheet (rosters[].roster[].stats): goals /
+  // assists / shots / SOT / fouls / cards / saves. No tackles or passes here —
+  // those live only in the core API; main() merges them from the stats-cron
+  // sweep cache (data/stats.json) by athlete id. Mirrors lib/live.ts
+  // playersFromRosters — keep in sync.
+  const players = [];
+  for (const t of summary.rosters ?? []) {
+    const side = ours(t.team?.displayName ?? "");
+    for (const p of t.roster ?? []) {
+      if (!p.starter && !p.subbedIn) continue; // unused bench — no match stats
+      const name = p.athlete?.displayName;
+      if (!name) continue;
+      const sv = (n) => {
+        const v = (p.stats ?? []).find((s) => s.name === n)?.value;
+        return typeof v === "number" && Number.isFinite(v) ? v : 0;
+      };
+      const gk = p.position?.abbreviation === "G";
+      const num = parseInt(p.jersey ?? p.athlete?.jersey ?? "", 10);
+      players.push({
+        team: side,
+        name,
+        pos: p.position?.abbreviation ?? "",
+        num: Number.isFinite(num) ? num : null,
+        starter: p.starter === true,
+        ...(p.athlete?.id ? { aid: p.athlete.id } : {}),
+        ...(gk ? { gk: true } : {}),
+        g: sv("totalGoals"),
+        a: sv("goalAssists"),
+        sh: sv("totalShots"),
+        sot: sv("shotsOnTarget"),
+        fc: sv("foulsCommitted"),
+        fs: sv("foulsSuffered"),
+        yc: sv("yellowCards"),
+        rc: sv("redCards"),
+        off: sv("offsides"),
+        ...(sv("ownGoals") > 0 ? { og: sv("ownGoals") } : {}),
+        ...(gk ? { sv: sv("saves"), gc: sv("goalsConceded") } : {}),
+      });
+    }
+  }
+
   return {
     corners, sot, shots, yellow, red, cards, fouls, cornersByHalf, sotByHalf, playerSot, playerShots,
     playerShotBreakdown,
+    ...(players.length ? { players } : {}),
     subs: subs.sort((x, y) => (x.minute ?? 999) - (y.minute ?? 999)),
     firstGoalMethod: firstGoalMethod(summary.keyEvents),
     firstPenalty: firstPenaltyTeam(summary.keyEvents, ours),
@@ -813,8 +857,9 @@ async function main() {
   // Refetch a finished match's summary until its stats snapshot exists, its
   // goals have been assist-checked once, AND the snapshot carries the tempo
   // block (possession / passes / tackles — added 2026-07-06), the per-player
-  // shot breakdown + subs log (added 2026-07-07) AND the complete boxscore
-  // list (`full` — added 2026-07-07); earlier snapshots lack them →
+  // shot breakdown + subs log (added 2026-07-07), the complete boxscore
+  // list (`full` — added 2026-07-07) AND the per-player match sheet
+  // (`players` — added 2026-07-09); earlier snapshots lack them →
   // one-time backfill fetch, then locked.
   // Matches a playerTacklesOver leg names: keep refetching a finished match
   // until EVERY named player has a verified entry in the persisted tackle map
@@ -834,6 +879,7 @@ async function main() {
         prevStats[id]?.tempo &&
         prevStats[id]?.playerShotBreakdown &&
         prevStats[id]?.full &&
+        prevStats[id]?.players &&
         prevChecked[id] &&
         tacklesSatisfied(id)
       ),
@@ -896,6 +942,33 @@ async function main() {
       r.assistsChecked = true;
     }
   }
+  // ── Player-sheet tackles / blocks / passes backfill (no fetch) ─────────────
+  // The stats cron's core-API sweep (data/stats.json cache.byEvent[eventId]
+  // .players: {aid, tk, bk, ps}) covers every player who featured; merge those
+  // verified Opta counts into each match's player sheet by athlete id. Runs
+  // every build off the LOCAL file, so sheets converge as the sweep's
+  // historical backfill completes — live matches pick up the freshest
+  // mid-match sweep values too. A null in the cache stays absent here
+  // (absent = not yet fetched; 0 is a real count).
+  try {
+    const sweep =
+      JSON.parse(readFileSync(STATS_PATH, "utf8")).cache?.byEvent ?? {};
+    for (const r of Object.values(results)) {
+      const swept = r.eventId ? sweep[r.eventId]?.players : undefined;
+      if (!swept?.length || !r.stats?.players) continue;
+      const byAid = new Map(swept.map((p) => [p.aid, p]));
+      for (const line of r.stats.players) {
+        const hit = line.aid ? byAid.get(line.aid) : undefined;
+        if (!hit) continue;
+        if (hit.tk != null) line.tk = hit.tk;
+        if (hit.bk != null) line.bk = hit.bk;
+        if (hit.ps != null) line.ps = hit.ps;
+      }
+    }
+  } catch {
+    /* no stats cache yet — sheets stay summary-only until the cron writes it */
+  }
+
   // eventId was only needed for the summary fetch — drop it from the persisted shape.
   for (const r of Object.values(results)) delete r.eventId;
 

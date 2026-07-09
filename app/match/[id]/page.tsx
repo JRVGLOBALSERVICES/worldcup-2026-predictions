@@ -8,7 +8,7 @@ import { MatchTeamStats } from "@/components/MatchTeamStats";
 import { ResearchPanel } from "@/components/ResearchPanel";
 import { VerdictBlock } from "@/components/Verdict";
 import { LiveProvider } from "@/components/LiveProvider";
-import { MatchHeaderScore, LiveStatusLine, LiveGoalLog, LiveStats, PlayerShotsBoard, SubsLog } from "@/components/LiveScore";
+import { MatchHeaderScore, LiveStatusLine, LiveGoalLog, LiveStats, PlayerShotsBoard, PlayerMatchSheet, SubsLog } from "@/components/LiveScore";
 import { LiveRefreshPill } from "@/components/RefreshCountdown";
 
 export function generateStaticParams() {
@@ -97,6 +97,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       <LiveStats matchId={fixture.id} />
 
       <PlayerShotsBoard matchId={fixture.id} />
+
+      <PlayerMatchSheet
+        matchId={fixture.id}
+        home={{ name: fixture.home.name, flag: fixture.home.flag }}
+        away={{ name: fixture.away.name, flag: fixture.away.flag }}
+      />
 
       <SubsLog matchId={fixture.id} />
 

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLiveMatch } from "./LiveProvider";
 import { KickoffClock } from "./KickoffClock";
 import type { LiveMatch } from "@/lib/live";
-import type { FullStatLine, PlayerShotLine, Substitution } from "@/lib/bets";
+import type { FullStatLine, PlayerShotLine, PlayerStatLine, Substitution } from "@/lib/bets";
 import { nameMatch } from "@/lib/bets";
 
 /**
@@ -493,6 +493,209 @@ export function SubsLog({ matchId }: { matchId: string }) {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+/* ── Per-player match sheet ─────────────────────────────────────────────────
+ * Every player who featured, split by team — the full per-match line: goals /
+ * assists / shots / on target / passes / tackles / blocks / saves / fouls /
+ * cards. G/A/shots/saves tick live off the team sheet on every poll; passes,
+ * tackles and blocks only exist in ESPN's core API (one fetch per athlete), so
+ * they read "–" until the hourly sweep covers the match (build-results merges
+ * them into the persisted snapshot). Starters first in sheet order (GK on
+ * top), subs used beneath with their ⬆ minute. */
+
+const SHEET_COLS = "grid-cols-[minmax(8.5rem,1fr)_repeat(10,1.9rem)]";
+
+/** A count that may not be fetched yet — "–" (faint) instead of a lying 0. */
+function MaybeNum({ value, className }: { value: number | undefined; className?: string }) {
+  if (value == null) return <span className="text-center font-mono text-[0.72rem] text-ink/25">–</span>;
+  return <AnimatedNum value={value} className={className} />;
+}
+
+/** Cards cell — "1Y" amber / "1R" rose / both / faint dash. */
+function CardsCell({ yc, rc }: { yc: number; rc: number }) {
+  if (yc === 0 && rc === 0)
+    return <span className="text-center font-mono text-[0.72rem] text-ink/25">–</span>;
+  return (
+    <span className="whitespace-nowrap text-center font-mono text-[0.68rem] font-semibold">
+      {yc > 0 && <span className="text-amber">{yc}Y</span>}
+      {yc > 0 && rc > 0 && " "}
+      {rc > 0 && <span className="text-rose">{rc}R</span>}
+    </span>
+  );
+}
+
+/** One player row — shirt no. + name (+ sub/injury markers) and the ten counts. */
+function PlayerSheetRow({ p, subs }: { p: PlayerStatLine; subs: Substitution[] | undefined }) {
+  const marks = subMarks(subs, p.name);
+  const num = "text-center font-mono text-[0.72rem]";
+  return (
+    <div className={`grid ${SHEET_COLS} items-center gap-1 rounded-lg px-2 py-1`}>
+      <span className="flex min-w-0 items-center gap-1.5">
+        <span className="w-4 shrink-0 text-right font-mono text-[0.6rem] text-faint/60 tnum">
+          {p.num ?? ""}
+        </span>
+        <span className="truncate text-[0.76rem] font-semibold text-ink">{p.name}</span>
+        {p.pos && (
+          <span className="shrink-0 font-mono text-[0.54rem] uppercase text-faint/60">{p.pos}</span>
+        )}
+        {marks.subbedOff != null && (
+          <span
+            className={`shrink-0 font-mono text-[0.56rem] ${marks.injuredOff ? "text-rose" : "text-amber"}`}
+            title={marks.injuredOff ? "Subbed off injured" : "Subbed off"}
+          >
+            ⬇{marks.subbedOff}&apos;{marks.injuredOff ? " ✚" : ""}
+          </span>
+        )}
+        {marks.subbedOn != null && marks.subbedOff == null && (
+          <span className="shrink-0 font-mono text-[0.56rem] text-mint" title="Came on">
+            ⬆{marks.subbedOn}&apos;
+          </span>
+        )}
+      </span>
+      <AnimatedNum value={p.g} className={`${num} font-bold text-amber`} />
+      <AnimatedNum value={p.a} className={`${num} font-semibold text-mint`} />
+      <AnimatedNum value={p.sh} className={`${num} text-ink`} />
+      <AnimatedNum value={p.sot} className={`${num} font-semibold text-acid`} />
+      <MaybeNum value={p.ps} className={`${num} text-muted`} />
+      <MaybeNum value={p.tk} className={`${num} text-muted`} />
+      <MaybeNum value={p.bk} className={`${num} text-muted`} />
+      <MaybeNum value={p.gk ? (p.sv ?? 0) : undefined} className={`${num} font-semibold text-acid`} />
+      <AnimatedNum value={p.fc} className={`${num} text-muted`} />
+      <CardsCell yc={p.yc} rc={p.rc} />
+    </div>
+  );
+}
+
+/** Column header shared by both team blocks. */
+function PlayerSheetHead() {
+  return (
+    <div className={`grid ${SHEET_COLS} gap-1 px-2 font-mono text-[0.52rem] uppercase tracking-[0.12em] text-faint`}>
+      <span>Player</span>
+      <span className="text-center">Gls</span>
+      <span className="text-center">Ast</span>
+      <span className="text-center">Sh</span>
+      <span className="text-center">On</span>
+      <span className="text-center">Pas</span>
+      <span className="text-center">Tkl</span>
+      <span className="text-center">Blk</span>
+      <span className="text-center">Sv</span>
+      <span className="text-center">Fls</span>
+      <span className="text-center">Crd</span>
+    </div>
+  );
+}
+
+/** One team's table — starters in sheet order (GK first), then subs used. */
+function PlayerSheetTeam({
+  flag,
+  name,
+  players,
+  subs,
+  tone,
+}: {
+  flag: string;
+  name: string;
+  players: PlayerStatLine[];
+  subs: Substitution[] | undefined;
+  tone: "home" | "away";
+}) {
+  const starters = players.filter((p) => p.starter);
+  const cameOn = players.filter((p) => !p.starter);
+  return (
+    <div>
+      <div className="mb-1.5 flex items-center gap-1.5 px-2">
+        <span aria-hidden className="text-sm leading-none">{flag}</span>
+        <span className={`font-mono text-[0.66rem] font-bold uppercase tracking-[0.16em] ${tone === "home" ? "text-acid" : "text-mint"}`}>
+          {name}
+        </span>
+      </div>
+      <PlayerSheetHead />
+      <div className="space-y-0">
+        {starters.map((p) => (
+          <PlayerSheetRow key={p.aid ?? p.name} p={p} subs={subs} />
+        ))}
+        {cameOn.length > 0 && (
+          <div className="mt-1 border-t border-line/40 pt-1">
+            {cameOn.map((p) => (
+              <PlayerSheetRow key={p.aid ?? p.name} p={p} subs={subs} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** Both team tables — the shared body (detail-page card + tracker toggle). */
+export function PlayerSheetBody({
+  lm,
+  home,
+  away,
+}: {
+  lm: LiveMatch;
+  home: { name: string; flag: string };
+  away: { name: string; flag: string };
+}) {
+  const players = lm.stats?.players ?? [];
+  const subs = lm.stats?.subs;
+  return (
+    <div className="overflow-x-auto">
+      <div className="min-w-[28rem] space-y-4">
+        <PlayerSheetTeam
+          flag={home.flag}
+          name={home.name}
+          players={players.filter((p) => p.team === "home")}
+          subs={subs}
+          tone="home"
+        />
+        <PlayerSheetTeam
+          flag={away.flag}
+          name={away.name}
+          players={players.filter((p) => p.team === "away")}
+          subs={subs}
+          tone="away"
+        />
+      </div>
+    </div>
+  );
+}
+
+/** Footnote shared wherever the sheet renders. */
+export function PlayerSheetFootnote({ finished }: { finished: boolean }) {
+  return (
+    <p className="mt-3 border-t border-line/50 pt-2 font-mono text-[0.56rem] uppercase tracking-[0.14em] text-ink/35">
+      Gls goals · Ast assists · Sh shots · On target · Pas passes · Tkl tackles · Blk blocked
+      shots · Sv saves · Fls fouls · Crd cards
+      {finished ? "" : " · ticks live every 5s"} · – = Opta count not swept yet (fills hourly)
+    </p>
+  );
+}
+
+/**
+ * Per-player match sheet card for the match-detail page — both teams, whoever
+ * featured, live and after full time.
+ */
+export function PlayerMatchSheet({
+  matchId,
+  home,
+  away,
+}: {
+  matchId: string;
+  home: { name: string; flag: string };
+  away: { name: string; flag: string };
+}) {
+  const lm = useLiveMatch(matchId);
+  if (!lm || lm.state === "scheduled" || !lm.stats?.players?.length) return null;
+  return (
+    <div className="mt-6 rounded-2xl border border-line bg-card/50 p-5">
+      <h3 className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-faint">
+        Player stats {lm.state === "finished" ? "(full time)" : "(live)"} · by team, whole sheet
+      </h3>
+      <PlayerSheetBody lm={lm} home={home} away={away} />
+      <PlayerSheetFootnote finished={lm.state === "finished"} />
     </div>
   );
 }

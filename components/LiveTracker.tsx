@@ -13,6 +13,7 @@ import { diffLegEvents, legKey, type LegSnap, type LegEvent } from "@/lib/legEve
 import { SiteNav, type NavKey } from "./SiteNav";
 import { SpotlightCard, type SpotTone } from "./SpotlightCard";
 import MatchSpotlight from "./MatchSpotlight";
+import { PlayerSheetBody, PlayerSheetFootnote } from "./LiveScore";
 
 /** Keys of legs that just settled this poll — the tracker fills it and every
  * rendered leg row reads it to flash. Empty by default (e.g. the leg grid on
@@ -457,6 +458,39 @@ function MiniStat({ label, h, a }: { label: string; h: number; a: number }) {
   );
 }
 
+/** Collapsed-by-default per-player sheet under a match's stat strip. The body
+ *  only MOUNTS while open — with several matches on the feed, ~300 ticking
+ *  cells per sheet would otherwise re-render on every 5s poll for nothing. */
+function PlayerSheetToggle({
+  lm,
+  home,
+  away,
+}: {
+  lm: LiveMatch;
+  home: { name: string; flag: string };
+  away: { name: string; flag: string };
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mt-2">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="inline-flex items-center gap-1 rounded-full border border-line bg-card/40 px-2 py-0.5 font-mono text-[0.56rem] font-semibold uppercase tracking-wider text-muted transition-colors hover:text-acid"
+      >
+        Player stats
+        <span className={`transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
+      </button>
+      {open && (
+        <div className="mt-2 rounded-xl border border-line/60 bg-card/30 p-2.5">
+          <PlayerSheetBody lm={lm} home={home} away={away} />
+          <PlayerSheetFootnote finished={lm.state === "finished"} />
+        </div>
+      )}
+    </div>
+  );
+}
+
 /** The score header row that opens a match panel — NOT a boxed strip, but the
  *  top row of one cohesive panel whose legs sit beneath it. Score dominates
  *  (the live number is the point); a flag + quiet team code flanks each side. Reads
@@ -519,6 +553,13 @@ function MatchScoreLine({ matchId, live }: { matchId: string; live: Record<strin
           <MiniStat label="Cards" h={stats.cards.home} a={stats.cards.away} />
         </div>
       )}
+      {stats?.players?.length ? (
+        <PlayerSheetToggle
+          lm={lm!}
+          home={{ name: meta.home.name, flag: meta.home.flag }}
+          away={{ name: meta.away.name, flag: meta.away.flag }}
+        />
+      ) : null}
     </div>
   );
 }
@@ -1732,6 +1773,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                               <GoalLog live={lm} m={m} />
                             </div>
                             <StatLine live={lm} m={m} />
+                            {lm.stats?.players?.length ? (
+                              <PlayerSheetToggle lm={lm} home={m.home} away={m.away} />
+                            ) : null}
                           </div>
                         )}
 
@@ -1746,6 +1790,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
                               <GoalLog live={lm} m={m} />
                             </div>
                             <StatLine live={lm} m={m} />
+                            {lm.stats?.players?.length ? (
+                              <PlayerSheetToggle lm={lm} home={m.home} away={m.away} />
+                            ) : null}
                             <p className="mt-2.5 font-mono text-[0.66rem] uppercase tracking-wider text-faint tnum">
                               Staked {money(matchStaked, cur)} ·{" "}
                               {matchReturned > 0 ? <span className="text-acid">returned {money(matchReturned, cur)}</span> : <span className="text-rose">returned {money(0, cur)}</span>}
