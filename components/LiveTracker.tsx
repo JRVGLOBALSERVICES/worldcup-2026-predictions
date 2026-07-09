@@ -1461,6 +1461,23 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   // cross-match mirrors) and excludes lone 1-leg "accas", which stay inline on
   // their own game card. Anchored to the match the real copy lives on. Parlays
   // whose every leg predates the 7-day window are dropped from view here.
+  // Latest MYT betting day across a parlay's legs (same basis as inWindow).
+  const latestDay = (matchIds: string[]) =>
+    matchIds.reduce((mx, id) => {
+      const k = dayKeyByMatch.get(id) ?? "";
+      return k > mx ? k : mx;
+    }, "");
+  // Rj (2026-07-09): the per-day "Earlier rounds" list hides pre-today LOSSES, but
+  // this whole-tournament parlay roll-up kept its OWN "Settled · N" drawer listing
+  // every busted group-stage acca — that's the "76 settled bets" still showing. Drop
+  // pre-today LOST parlays here too so the two surfaces agree. Today's (featured-day)
+  // losses stay visible; money summaries still grade the full slip (display-only).
+  const isPastLostParlay = (special: SpecialRow, legIds: string[]) => {
+    if (special.staticStatus !== "lost") return false;
+    const day = latestDay(legIds.length > 0 ? legIds : []);
+    return day !== "" && day < base.featuredKey;
+  };
+  let hiddenLostParlays = 0;
   const allParlays = base.days
     .flatMap((d) =>
       d.matches.flatMap((m) =>
@@ -1471,7 +1488,12 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       const legIds = ((p.special.grade as { legs?: { matchId?: string }[] }).legs ?? [])
         .map((l) => l.matchId)
         .filter((id): id is string => Boolean(id));
-      return inWindow(legIds.length > 0 ? legIds : [p.anchorMatchId]);
+      if (!inWindow(legIds.length > 0 ? legIds : [p.anchorMatchId])) return false;
+      if (isPastLostParlay(p.special, legIds.length > 0 ? legIds : [p.anchorMatchId])) {
+        hiddenLostParlays += 1;
+        return false;
+      }
+      return true;
     });
 
   // Live "if it ended now" P&L — scoped to today's featured slate, matching the
@@ -1632,6 +1654,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
             sub="Every multi-leg slip across the tournament, biggest potential return first — running slips lead, settled ones tuck into the drawer."
           />
           <GlobalParlays parlays={allParlays} live={live} currency={cur} />
+          {hiddenLostParlays > 0 && (
+            <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-wider text-faint/70">
+              {hiddenLostParlays} lost parlay{hiddenLostParlays > 1 ? "s" : ""} from earlier days hidden
+            </p>
+          )}
         </section>
       )}
 
