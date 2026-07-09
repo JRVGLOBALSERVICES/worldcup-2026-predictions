@@ -9,7 +9,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "Group Standings & Player Leaders — World Cup 2026 Tables",
   description:
-    "Live World Cup 2026 group standings — all twelve groups A–L with points, played, goal difference and recent form — plus the player leaderboards: top scorers, assists, clean sheets, cards and penalties. Built straight from the official match feed.",
+    "Live World Cup 2026 group standings — all twelve groups A–L with points, played, goal difference and recent form — plus the player leaderboards: top scorers, assists, clean sheets, cards, penalties, tackles, blocks and keeper saves. Built straight from the official match feed.",
 };
 
 export default function StandingsPage() {
@@ -77,8 +77,9 @@ export default function StandingsPage() {
           The race for the Golden Boot.
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-          Top scorers, assists, clean sheets, the cards table and penalties scored vs missed — every
-          name ranked top ten straight from the official match feed.{" "}
+          Top scorers, assists, clean sheets, the cards table, penalties scored vs missed, tackles,
+          blocks and keeper saves — every name ranked top ten straight from the official match
+          feed.{" "}
           <span className="text-ink">{stats.meta.finished}</span> matches counted so far.
         </p>
 

@@ -181,9 +181,10 @@ script own them.
 
 ## Tournament stat leaderboards (`data/stats.json`, the `/stats` page)
 
-The `/stats` page renders seven top-10 boards (scorers, assists, clean sheets,
-yellow cards, red cards, penalties scored, penalties missed). A deterministic
-script pulls them from ESPN — never hand-edit `data/stats.json`:
+The leaderboards (rendered on `/standings`) are ten top-10 boards (scorers,
+assists, clean sheets, yellow cards, red cards, penalties scored, penalties
+missed, tackles, blocks, keeper saves). A deterministic script pulls them from
+ESPN — never hand-edit `data/stats.json`:
 
     node scripts/build-stats.mjs            # write data/stats.json
     node scripts/build-stats.mjs --check     # report only (exit 2 on change)
@@ -191,7 +192,13 @@ script pulls them from ESPN — never hand-edit `data/stats.json`:
 Sources: season `/statistics` leaders (scorers + assists, with appearances);
 per-date scoreboard `competitions[].details` (yellow/red cards, penalties scored,
 clean sheets from final scores); per-match `/summary` `keyEvents` for penalties
-missed (cached per event so the cron only fetches each match's summary once).
+missed + `rosters` for who featured and per-keeper saves (cached per event so the
+cron only fetches each match's summary once); the **core API** per-athlete event
+statistics for tackles + blocks (the only keyless per-player source — swept once
+per finished match, frozen under `coreDone`). The core host 403-bans an IP after
+a ~1000-request burst, so the sweep runs 6-wide, caps at 800 fetches/run, and
+bails on consecutive 403s — failed players stay `null` (never counted as 0) and
+retry next run until the backfill converges.
 Same ALIAS/normalise rules as `lib/live.ts` — keep the ALIAS maps in sync.
 
 The hourly **WC2026 result settlement** cron runs this right after

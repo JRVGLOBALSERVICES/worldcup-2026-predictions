@@ -22,6 +22,15 @@
  *                             / "Penalty - Missed" play is never in `details`).
  *                             Assists + penalty-misses share one per-event summary
  *                             cache so the cron only hits a summary once per match.
+ *   • tackles, blocks        → ESPN core API per-athlete event statistics (Opta
+ *                             defensive totalTackles / blockedShots) — the summary
+ *                             feed carries NO per-player tackle/block data. One
+ *                             request per player who featured, swept once per
+ *                             finished match and cached (`coreDone`), so only new
+ *                             + live matches cost requests on later runs.
+ *   • gkSaves                → per-keeper `saves` off the summary `rosters` player
+ *                             stats (verified equal to the core API goalKeeping
+ *                             count) — rides the existing summary fetch for free.
  *
  * Reuses the exact ALIAS/normalise rules as lib/live.ts & build-results.mjs —
  * keep the ALIAS maps in sync.
@@ -40,6 +49,17 @@ const ESPN_SUMMARY =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 const ESPN_STATS =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/statistics";
+// Core API — per-athlete per-event Opta stats (same endpoint lib/live.ts uses to
+// grade playerTacklesOver legs). The only keyless source of tackles + blocks.
+const ESPN_CORE_EVENT =
+  "https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/events";
+// The core host temp-bans an IP (403 on everything) after a burst of ~1000
+// requests, so the sweep stays polite: low concurrency, a hard per-run cap, and
+// an early bail once the ban pattern (consecutive 403s) shows. Failures stay
+// null and retry, so the historical backfill just converges across cron runs.
+const CORE_CONCURRENCY = 6;
+const CORE_MAX_JOBS_PER_RUN = 800;
+const CORE_BAN_TRIP = 25; // consecutive 403s → we're banned, stop wasting the window
 
 const CHECK_ONLY = process.argv.includes("--check");
 const TOP_N = 10;
@@ -373,14 +393,15 @@ async function main() {
   const liveEventIds = [...eventById.values()]
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id);
-  // Refetch a summary when the match is live, never cached, cached before assists
-  // existed (migrated penMiss-only entry), or cached before teamBox existed — so
-  // assists and the per-match team boxscore each backfill exactly once.
+  // Refetch a summary when the match is live, never cached, or cached before one
+  // of the newer blocks (assists / teamBox / players) existed — so each block
+  // backfills exactly once.
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
     (id) =>
       liveEventIds.includes(id) ||
       byEvent[id]?.assists == null ||
-      byEvent[id]?.teamBox == null,
+      byEvent[id]?.teamBox == null ||
+      byEvent[id]?.players == null,
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -434,11 +455,112 @@ async function main() {
         totalLongBalls: get("totalLongBalls"),
       };
     });
-    byEvent[id] = { penMiss: misses, assists: assistsArr, teamBox }; // [] is a valid "checked, none"
+    // Players who featured (starter or sub used), off the summary team sheet:
+    // identity for the core tackles/blocks sweep below + per-keeper saves (`sv`,
+    // stored for keepers only — verified identical to the core goalKeeping count).
+    // tk/bk (tackles/blocks) start absent and are filled by the core sweep;
+    // carry any previously-swept values across a live-match refetch.
+    const prevPlayers = new Map(
+      (byEvent[id]?.players ?? []).map((p) => [p.aid, p]),
+    );
+    const players = [];
+    for (const t of b.value?.rosters ?? []) {
+      const tid = t.team?.id;
+      const team = (tid && teamName[tid]) || teamName[t.team?.displayName] || "";
+      if (!tid) continue;
+      for (const p of t.roster ?? []) {
+        if (!p.starter && !p.subbedIn) continue; // unused subs have no match stats
+        const name = p.athlete?.displayName;
+        const aid = p.athlete?.id;
+        if (!name || !aid) continue;
+        const gk = p.position?.abbreviation === "G";
+        const rec = { n: name, t: team, aid, tid, ...(gk ? { gk: 1 } : {}) };
+        if (gk) {
+          const sv = (p.stats ?? []).find((s) => s.name === "saves")?.value;
+          if (typeof sv === "number" && Number.isFinite(sv)) rec.sv = sv;
+        }
+        const prev = prevPlayers.get(aid);
+        if (prev?.tk != null) rec.tk = prev.tk;
+        if (prev?.bk != null) rec.bk = prev.bk;
+        players.push(rec);
+      }
+    }
+    byEvent[id] = { penMiss: misses, assists: assistsArr, teamBox, players }; // [] is a valid "checked, none"
   });
   // Drop cache entries for events no longer in our window (keeps the file tight).
   const validIds = new Set([...eventById.keys()]);
   for (const id of Object.keys(byEvent)) if (!validIds.has(id)) delete byEvent[id];
+
+  // ── Pass 4: per-player tackles + blocks off the core API (cached per event) ──
+  // One request per player who featured. A finished match is swept until every
+  // player has data, then frozen (`coreDone`); live matches re-sweep every run so
+  // the boards move with the game. A 404 (no stat page) counts as 0 — it adds
+  // nothing and stops eternal refetching; network errors stay null and retry.
+  const coreJobs = [];
+  for (const [id, rec] of Object.entries(byEvent)) {
+    const live = liveEventIds.includes(id);
+    if (!rec.players?.length || (rec.coreDone && !live)) continue;
+    for (const p of rec.players) {
+      if (!live && p.tk != null && p.bk != null) continue; // finished + already fetched
+      coreJobs.push({ id, p });
+    }
+  }
+  let coreFailed = 0;
+  let ban403 = 0; // consecutive 403 counter — resets on any success
+  const fetchCore = async ({ id, p }) => {
+    const url = `${ESPN_CORE_EVENT}/${id}/competitions/${id}/competitors/${p.tid}/roster/${p.aid}/statistics/0`;
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": "matchday-edge/1.0" },
+        signal: AbortSignal.timeout(10000),
+      });
+      if (res.status === 404) {
+        ban403 = 0;
+        p.tk = 0;
+        p.bk = 0;
+        return;
+      }
+      if (res.status === 403) {
+        ban403++;
+        throw new Error("ESPN 403");
+      }
+      if (!res.ok) throw new Error(`ESPN ${res.status}`);
+      const data = await res.json();
+      ban403 = 0;
+      const def = (data.splits?.categories ?? []).find((c) => c.name === "defensive");
+      const stat = (n) => {
+        const v = (def?.stats ?? []).find((s) => s.name === n)?.value;
+        return typeof v === "number" && Number.isFinite(v) ? v : 0;
+      };
+      p.tk = stat("totalTackles");
+      p.bk = stat("blockedShots");
+    } catch {
+      coreFailed++; // leave null → pending, retried next run
+    }
+  };
+  // Small worker pool. Live-match players jump the queue so an in-play board
+  // never starves behind historical backfill under the per-run cap.
+  if (coreJobs.length) {
+    coreJobs.sort((a, b) => Number(liveEventIds.includes(b.id)) - Number(liveEventIds.includes(a.id)));
+    const jobs = coreJobs.slice(0, CORE_MAX_JOBS_PER_RUN);
+    let next = 0;
+    const worker = async () => {
+      while (next < jobs.length && ban403 < CORE_BAN_TRIP) await fetchCore(jobs[next++]);
+    };
+    await Promise.all(Array.from({ length: Math.min(CORE_CONCURRENCY, jobs.length) }, worker));
+    const attempted = Math.min(next, jobs.length);
+    const deferred = coreJobs.length - attempted;
+    console.log(
+      `Core sweep: ${attempted} attempted, ${attempted - coreFailed} ok, ${coreFailed} failed${
+        ban403 >= CORE_BAN_TRIP ? " (403-banned, bailed early)" : ""
+      }${deferred ? `, ${deferred} deferred to next run` : ""}.`,
+    );
+  }
+  // Freeze finished matches once complete so they never cost requests again.
+  for (const [id, rec] of Object.entries(byEvent)) {
+    if (liveEventIds.includes(id) || !rec.players?.length) continue;
+    if (rec.players.every((p) => p.tk != null && p.bk != null)) rec.coreDone = 1;
+  }
 
   const penMissed = {};
   const assistsByPlayer = {}; // "name|team" → { name, team, value, matchIds:Set }
@@ -470,6 +592,27 @@ async function main() {
     }
   }
 
+  // ── Tackles / blocks / keeper saves — tournament totals per player ──────────
+  // Summed over the per-event player records; `matches` counts only games where
+  // that stat was actually fetched, so a null (failed fetch) never reads as a 0.
+  const tackles = {};
+  const blocks = {};
+  const gkSaves = {};
+  const statAdd = (map, p, v) => {
+    if (v == null) return;
+    const key = `${p.n}|${p.t}`;
+    const row = (map[key] ??= { name: p.n, team: p.t, value: 0, matches: 0 });
+    row.value += v;
+    row.matches += 1;
+  };
+  for (const rec of Object.values(byEvent)) {
+    for (const p of rec.players ?? []) {
+      statAdd(tackles, p, p.tk);
+      statAdd(blocks, p, p.bk);
+      if (p.gk) statAdd(gkSaves, p, p.sv);
+    }
+  }
+
   // ── Assemble payload ────────────────────────────────────────────────────────
   const categories = {
     scorers: topN(Object.values(mergedScorers), flagFor),
@@ -479,6 +622,9 @@ async function main() {
     redCards: topN(Object.values(red), flagFor),
     penaltyScored: topN(Object.values(penScored), flagFor),
     penaltyMissed: topN(Object.values(penMissed), flagFor),
+    tackles: topN(Object.values(tackles), flagFor),
+    blocks: topN(Object.values(blocks), flagFor),
+    gkSaves: topN(Object.values(gkSaves), flagFor),
   };
 
   // ── Per-team top-5 boards (for the match prediction "team form" panels) ─────

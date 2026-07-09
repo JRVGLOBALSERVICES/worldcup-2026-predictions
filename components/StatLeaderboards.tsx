@@ -125,7 +125,7 @@ export function StatLeaderboards({
         unit={scorers.unit}
         entity={scorers.entity}
         accent={scorers.accent}
-        rows={categories[scorers.key]}
+        rows={categories[scorers.key] ?? []}
         featured
       />
       {rest.map((c) => (
@@ -135,7 +135,7 @@ export function StatLeaderboards({
           unit={c.unit}
           entity={c.entity}
           accent={c.accent}
-          rows={categories[c.key]}
+          rows={categories[c.key] ?? []}
         />
       ))}
     </div>

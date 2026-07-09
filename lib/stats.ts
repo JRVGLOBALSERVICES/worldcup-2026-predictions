@@ -19,7 +19,10 @@ export type StatCategoryKey =
   | "yellowCards"
   | "redCards"
   | "penaltyScored"
-  | "penaltyMissed";
+  | "penaltyMissed"
+  | "tackles"
+  | "blocks"
+  | "gkSaves";
 
 // One team row on a completion/accuracy board. `value` is the numeric % (for
 // sort + the share bar), `display` is the formatted "87.4%", `matches` is how
@@ -86,6 +89,11 @@ export const STAT_CATEGORIES: {
   { key: "redCards", label: "Red Cards", unit: "reds", entity: "player", accent: "rose" },
   { key: "penaltyScored", label: "Penalties Scored", unit: "scored", entity: "player", accent: "acid" },
   { key: "penaltyMissed", label: "Penalties Missed", unit: "missed", entity: "player", accent: "rose" },
+  // Per-player Opta counts off ESPN's core API (tackles/blocks) + the summary
+  // team-sheet saves stat — see build-stats.mjs Pass 4.
+  { key: "tackles", label: "Tackles", unit: "tackles made", entity: "player", accent: "mint" },
+  { key: "blocks", label: "Blocks", unit: "shots blocked", entity: "player", accent: "amber" },
+  { key: "gkSaves", label: "Keeper Saves", unit: "saves", entity: "player", accent: "acid" },
 ];
 
 // Display order + copy for the completion / control boards. Every value is a

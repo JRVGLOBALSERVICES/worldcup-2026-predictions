@@ -28,6 +28,13 @@ const ESPN_SUMMARY =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
 const ESPN_STATS =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/statistics";
+// Core API — per-athlete per-event Opta stats (tackles/blocks; see build-stats.mjs).
+const ESPN_CORE_EVENT =
+  "https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/events";
+const CORE_CONCURRENCY = 12;
+// The cron owns the historical backfill; a live recompute must stay inside one
+// serverless invocation, so cap the per-player sweep at roughly one matchday.
+const CORE_MAX_JOBS = 150;
 
 const TOP_N = 10;
 
@@ -103,7 +110,19 @@ type EspnBoxTeam = {
   team?: { displayName?: string };
   statistics?: { name?: string; displayValue?: string }[];
 };
-type EspnSummary = { keyEvents?: EspnKeyEvent[]; boxscore?: { teams?: EspnBoxTeam[] } };
+type EspnRosterEntry = {
+  starter?: boolean;
+  subbedIn?: boolean;
+  position?: { abbreviation?: string };
+  athlete?: { id?: string; displayName?: string };
+  stats?: { name?: string; value?: number }[];
+};
+type EspnRosterTeam = { team?: { id?: string; displayName?: string }; roster?: EspnRosterEntry[] };
+type EspnSummary = {
+  keyEvents?: EspnKeyEvent[];
+  boxscore?: { teams?: EspnBoxTeam[] };
+  rosters?: EspnRosterTeam[];
+};
 
 type Tally = { name: string; team: string; value: number; matches?: number | null };
 
@@ -409,10 +428,25 @@ export async function computeStats(now: number): Promise<StatsFile> {
   // The assister isn't in the cheap scoreboard `details` (only the scorer is), so
   // assists are read from each match's keyEvents (participant[1] of a non-own
   // Goal) alongside penalty-miss plays. Both ride one per-event summary cache.
+  // Compact per-player record (mirrors build-stats.mjs): n/t name+team, aid/tid
+  // the core-API ids, gk keeper flag, sv saves, tk/bk tackles+blocks (null until
+  // the core sweep fills them).
+  type PlayerRec = {
+    n: string;
+    t: string;
+    aid: string;
+    tid: string;
+    gk?: number;
+    sv?: number;
+    tk?: number;
+    bk?: number;
+  };
   type EventCache = {
     penMiss?: { name: string; team: string }[];
     assists?: { name: string; team: string }[];
     teamBox?: TeamBox[];
+    players?: PlayerRec[];
+    coreDone?: number;
   };
   const rawCache =
     (statsJson as {
@@ -426,10 +460,13 @@ export async function computeStats(now: number): Promise<StatsFile> {
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id!)
     .filter(Boolean);
-  // Refetch when live, never cached, or cached before assists / teamBox existed.
+  // Refetch when live, never cached, or cached before assists / teamBox / players existed.
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
     (id) =>
-      liveEventIds.includes(id) || byEvent[id]?.assists == null || byEvent[id]?.teamBox == null,
+      liveEventIds.includes(id) ||
+      byEvent[id]?.assists == null ||
+      byEvent[id]?.teamBox == null ||
+      byEvent[id]?.players == null,
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -480,10 +517,94 @@ export async function computeStats(now: number): Promise<StatsFile> {
         totalLongBalls: get("totalLongBalls"),
       };
     });
-    byEvent[id] = { penMiss: misses, assists: assistsArr, teamBox };
+    // Players who featured — identity for the core tackles/blocks sweep + keeper
+    // saves. Carry previously-swept tk/bk across a live-match refetch.
+    const prevPlayers = new Map((byEvent[id]?.players ?? []).map((p) => [p.aid, p]));
+    const players: PlayerRec[] = [];
+    for (const t of b.value?.rosters ?? []) {
+      const tid = t.team?.id;
+      const disp = t.team?.displayName ?? "";
+      const team = (tid && teamName[tid]) || nameByTeam[norm(disp)] || disp;
+      if (!tid) continue;
+      for (const p of t.roster ?? []) {
+        if (!p.starter && !p.subbedIn) continue; // unused subs have no match stats
+        const name = p.athlete?.displayName;
+        const aid = p.athlete?.id;
+        if (!name || !aid) continue;
+        const gk = p.position?.abbreviation === "G";
+        const rec: PlayerRec = { n: name, t: team, aid, tid, ...(gk ? { gk: 1 } : {}) };
+        if (gk) {
+          const sv = (p.stats ?? []).find((s) => s.name === "saves")?.value;
+          if (typeof sv === "number" && Number.isFinite(sv)) rec.sv = sv;
+        }
+        const prev = prevPlayers.get(aid);
+        if (prev?.tk != null) rec.tk = prev.tk;
+        if (prev?.bk != null) rec.bk = prev.bk;
+        players.push(rec);
+      }
+    }
+    byEvent[id] = { penMiss: misses, assists: assistsArr, teamBox, players };
   });
   const validIds = new Set([...eventById.keys()]);
   for (const id of Object.keys(byEvent)) if (!validIds.has(id)) delete byEvent[id];
+
+  // ── Core sweep: per-player tackles + blocks (mirrors build-stats.mjs Pass 4) ──
+  // The committed cron cache normally carries every finished match (`coreDone`),
+  // so this only pays for live matches + anything that finished since the last
+  // cron run — capped so a cold cache can't blow the serverless budget.
+  const coreJobs: { id: string; p: PlayerRec }[] = [];
+  for (const [id, rec] of Object.entries(byEvent)) {
+    const live = liveEventIds.includes(id);
+    if (!rec.players?.length || (rec.coreDone && !live)) continue;
+    for (const p of rec.players) {
+      if (!live && p.tk != null && p.bk != null) continue;
+      coreJobs.push({ id, p });
+    }
+  }
+  coreJobs.sort((a, b) => Number(liveEventIds.includes(b.id)) - Number(liveEventIds.includes(a.id)));
+  const capped = coreJobs.slice(0, CORE_MAX_JOBS);
+  let ban403 = 0; // consecutive 403s → the core host has temp-banned this IP; stop
+  const fetchCore = async ({ id, p }: { id: string; p: PlayerRec }) => {
+    const url = `${ESPN_CORE_EVENT}/${id}/competitions/${id}/competitors/${p.tid}/roster/${p.aid}/statistics/0`;
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": "matchday-edge/1.0" },
+        signal: AbortSignal.timeout(10000),
+        cache: "no-store",
+      });
+      if (res.status === 404) {
+        ban403 = 0;
+        p.tk = 0;
+        p.bk = 0;
+        return;
+      }
+      if (res.status === 403) {
+        ban403++;
+        return; // leave null → that game just doesn't count yet
+      }
+      if (!res.ok) return; // leave null → that game just doesn't count yet
+      const data = (await res.json()) as {
+        splits?: { categories?: { name?: string; stats?: { name?: string; value?: number }[] }[] };
+      };
+      const def = (data.splits?.categories ?? []).find((c) => c.name === "defensive");
+      const stat = (n: string) => {
+        const v = (def?.stats ?? []).find((s) => s.name === n)?.value;
+        return typeof v === "number" && Number.isFinite(v) ? v : 0;
+      };
+      p.tk = stat("totalTackles");
+      p.bk = stat("blockedShots");
+      ban403 = 0;
+    } catch {
+      /* leave null — the cron backfills */
+    }
+  };
+  if (capped.length) {
+    let next = 0;
+    const worker = async () => {
+      while (next < capped.length && ban403 < 25) await fetchCore(capped[next++]);
+    };
+    await Promise.all(Array.from({ length: Math.min(CORE_CONCURRENCY, capped.length) }, worker));
+  }
 
   const penMissed: Record<string, Tally> = {};
   const assistsByPlayer: Record<string, { name: string; team: string; value: number; matchIds: Set<string> }> = {};
@@ -515,6 +636,25 @@ export async function computeStats(now: number): Promise<StatsFile> {
     }
   }
 
+  // Tackles / blocks / keeper saves — tournament totals per player. `matches`
+  // counts only games where the stat was actually fetched (null ≠ 0).
+  const tackles: Record<string, Tally> = {};
+  const blocksTally: Record<string, Tally> = {};
+  const gkSaves: Record<string, Tally> = {};
+  const statAdd = (map: Record<string, Tally>, p: PlayerRec, v: number | undefined) => {
+    if (v == null) return;
+    const row = (map[`${p.n}|${p.t}`] ??= { name: p.n, team: p.t, value: 0, matches: 0 });
+    row.value += v;
+    row.matches = (row.matches ?? 0) + 1;
+  };
+  for (const rec of Object.values(byEvent)) {
+    for (const p of rec.players ?? []) {
+      statAdd(tackles, p, p.tk);
+      statAdd(blocksTally, p, p.bk);
+      if (p.gk) statAdd(gkSaves, p, p.sv);
+    }
+  }
+
   const categories: Record<StatCategoryKey, StatRow[]> = {
     scorers: topN(Object.values(mergedScorers), flagFor),
     assists: topN(Object.values(mergedAssists), flagFor),
@@ -523,6 +663,9 @@ export async function computeStats(now: number): Promise<StatsFile> {
     redCards: topN(Object.values(red), flagFor),
     penaltyScored: topN(Object.values(penScored), flagFor),
     penaltyMissed: topN(Object.values(penMissed), flagFor),
+    tackles: topN(Object.values(tackles), flagFor),
+    blocks: topN(Object.values(blocksTally), flagFor),
+    gkSaves: topN(Object.values(gkSaves), flagFor),
   };
 
   return {
