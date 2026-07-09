@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-09T21:20:12.188Z",
+    "generatedAt": "2026-07-09T21:20:52.557Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 80
   },
@@ -586,7 +586,15 @@
         "matches": 5
       },
       {
-        "rank": 4,
+        "rank": 3,
+        "name": "Yassine Bounou",
+        "team": "Morocco",
+        "flag": "🇲🇦",
+        "value": 9,
+        "matches": 5
+      },
+      {
+        "rank": 5,
         "name": "Mike Maignan",
         "team": "France",
         "flag": "🇫🇷",
@@ -594,20 +602,12 @@
         "matches": 6
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "Thibaut Courtois",
         "team": "Belgium",
         "flag": "🇧🇪",
         "value": 8,
         "matches": 4
-      },
-      {
-        "rank": 4,
-        "name": "Yassine Bounou",
-        "team": "Morocco",
-        "flag": "🇲🇦",
-        "value": 8,
-        "matches": 5
       },
       {
         "rank": 7,
@@ -662,11 +662,11 @@
         "matches": 5
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 88.3,
-        "display": "88.3%",
+        "value": 88.4,
+        "display": "88.4%",
         "matches": 6
       },
       {
@@ -715,8 +715,8 @@
         "rank": 2,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 60.8,
-        "display": "60.8%",
+        "value": 60.7,
+        "display": "60.7%",
         "matches": 5
       },
       {
@@ -805,8 +805,8 @@
         "rank": 5,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 41.6,
-        "display": "41.6%",
+        "value": 42.2,
+        "display": "42.2%",
         "matches": 6
       },
       {
@@ -1027,8 +1027,8 @@
         "rank": 8,
         "team": "Morocco",
         "flag": "🇲🇦",
-        "value": 37.2,
-        "display": "37.2%",
+        "value": 37,
+        "display": "37.0%",
         "matches": 5
       }
     ]
@@ -4762,7 +4762,7 @@
           "assists": 1,
           "tackles": 3,
           "blocks": 1,
-          "passes": 284,
+          "passes": 285,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4807,7 +4807,7 @@
           "assists": 0,
           "tackles": 12,
           "blocks": 1,
-          "passes": 357,
+          "passes": 360,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5189,7 +5189,7 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 146,
-          "saves": 8,
+          "saves": 9,
           "yellow": 0,
           "red": 0,
           "penScored": 0,
@@ -33138,11 +33138,11 @@
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 49.4,
-            "accuratePasses": 286,
-            "totalPasses": 322,
-            "shotsOnTarget": 3,
-            "totalShots": 13,
+            "possessionPct": 49.8,
+            "accuratePasses": 296,
+            "totalPasses": 333,
+            "shotsOnTarget": 4,
+            "totalShots": 14,
             "effectiveTackles": 6,
             "totalTackles": 7,
             "accurateCrosses": 4,
@@ -33152,9 +33152,9 @@
           },
           {
             "team": "Morocco",
-            "possessionPct": 50.6,
-            "accuratePasses": 281,
-            "totalPasses": 330,
+            "possessionPct": 50.2,
+            "accuratePasses": 284,
+            "totalPasses": 336,
             "shotsOnTarget": 0,
             "totalShots": 2,
             "effectiveTackles": 6,
@@ -33162,7 +33162,7 @@
             "accurateCrosses": 0,
             "totalCrosses": 5,
             "accurateLongBalls": 8,
-            "totalLongBalls": 30
+            "totalLongBalls": 31
           }
         ],
         "players": [
@@ -33193,7 +33193,7 @@
             "tid": "478",
             "tk": 1,
             "bk": 0,
-            "ps": 41
+            "ps": 44
           },
           {
             "n": "Lucas Digne",
@@ -33229,7 +33229,7 @@
             "tid": "478",
             "tk": 1,
             "bk": 0,
-            "ps": 32
+            "ps": 33
           },
           {
             "n": "Manu Koné",
@@ -33273,7 +33273,7 @@
             "aid": "175149",
             "tid": "2869",
             "gk": 1,
-            "sv": 3,
+            "sv": 4,
             "tk": 0,
             "bk": 0,
             "ps": 26
