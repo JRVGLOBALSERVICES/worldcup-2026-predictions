@@ -1,4 +1,5 @@
 import { fixtures } from "./data";
+import { betSlip, ruhanSlip, tharmaSlip, nameMatch } from "./bets";
 import type {
   Goal,
   Card,
@@ -58,6 +59,73 @@ export function isMatchFinished(matchId: string): boolean {
 
 const ESPN_SUMMARY =
   "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/summary";
+
+// ── Per-player tackles (ESPN core API) ───────────────────────────────────────
+// The summary boxscore/commentary carry NO per-player tackle data, but ESPN's
+// core API publishes full Opta per-athlete stats per event — defensive block
+// incl. totalTackles. One request per athlete, so we fetch ONLY the players a
+// playerTacklesOver leg actually names (bounded: typically 1–3 per match).
+const ESPN_CORE_EVENT =
+  "https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/events";
+
+/** matchId → players named in a playerTacklesOver leg, across every slip. */
+function tackleTargetsFor(matchId: string): string[] {
+  const names = new Set<string>();
+  for (const slip of [betSlip, ruhanSlip, tharmaSlip]) {
+    for (const sp of slip.specials ?? []) {
+      if (sp.grade?.type !== "multiLeg") continue;
+      for (const leg of sp.grade.legs) {
+        if (leg.kind === "playerTacklesOver" && leg.matchId === matchId) names.add(leg.player);
+      }
+    }
+  }
+  return [...names];
+}
+
+/**
+ * Verified per-player tackle counts (Opta totalTackles) for the named players,
+ * from the core API's per-athlete event statistics. Keys are ESPN displayNames;
+ * only players whose fetch succeeded get an entry — graders treat an absent key
+ * as "no data → pending", so a partial map is safe to persist.
+ */
+async function fetchPlayerTackles(
+  eventId: string,
+  rosters: EspnRosterTeam[] | undefined,
+  targets: string[],
+): Promise<Record<string, number>> {
+  const out: Record<string, number> = {};
+  if (!targets.length || !Array.isArray(rosters)) return out;
+  // Resolve each target to (teamId, athleteId, displayName) off the team sheet.
+  const found: { teamId: string; athleteId: string; name: string }[] = [];
+  for (const t of rosters) {
+    const teamId = t.team?.id;
+    if (!teamId) continue;
+    for (const p of t.roster ?? []) {
+      const name = p.athlete?.displayName;
+      const athleteId = p.athlete?.id;
+      if (!name || !athleteId) continue;
+      if (targets.some((want) => nameMatch(name, want))) found.push({ teamId, athleteId, name });
+    }
+  }
+  await Promise.allSettled(
+    found.map(async ({ teamId, athleteId, name }) => {
+      const url = `${ESPN_CORE_EVENT}/${eventId}/competitions/${eventId}/competitors/${teamId}/roster/${athleteId}/statistics/0`;
+      const res = await fetch(url, {
+        cache: "no-store",
+        headers: { "User-Agent": "matchday-edge/1.0" },
+        signal: AbortSignal.timeout(8000),
+      });
+      if (!res.ok) return;
+      const data = (await res.json()) as {
+        splits?: { categories?: { name?: string; stats?: { name?: string; value?: number }[] }[] };
+      };
+      const def = (data.splits?.categories ?? []).find((c) => c.name === "defensive");
+      const v = (def?.stats ?? []).find((s) => s.name === "totalTackles")?.value;
+      if (typeof v === "number" && Number.isFinite(v)) out[name] = v;
+    }),
+  );
+  return out;
+}
 
 /** Confirmed XIs off ESPN's published team sheet, oriented to our home/away. */
 export type LiveLineups = { home: LineupXI; away: LineupXI };
@@ -206,6 +274,13 @@ async function fetchStats(
     ];
   });
 
+  // Per-player tackles from the core API — only for players a tackle leg names.
+  const playerTackles = await fetchPlayerTackles(
+    eventId,
+    data.rosters,
+    tackleTargetsFor(matchId),
+  );
+
   return {
     stats: {
       corners: { home: stat(h, "wonCorners"), away: stat(a, "wonCorners") },
@@ -220,6 +295,7 @@ async function fetchStats(
       playerSot,
       playerShots,
       playerShotBreakdown,
+      ...(Object.keys(playerTackles).length ? { playerTackles } : {}),
       // Commentary arrives newest-first; the subs log reads oldest-first.
       subs: subs.sort((x, y) => (x.minute ?? 999) - (y.minute ?? 999)),
       firstGoalMethod: firstGoalMethod(data.keyEvents),
@@ -481,13 +557,15 @@ type EspnKeyEvent = {
   participants?: { athlete?: { displayName?: string } }[];
 };
 // Team-sheet roster block (line-ups). `starter` marks the XI; formation is real.
+// `team.id` + `athlete.id` feed the core-API per-athlete statistics URL (the
+// per-player tackle fetch); the summary itself carries no per-player tackles.
 type EspnRosterTeam = {
-  team?: { displayName?: string };
+  team?: { id?: string; displayName?: string };
   formation?: string;
   roster?: {
     starter?: boolean;
     jersey?: string;
-    athlete?: { displayName?: string; fullName?: string; jersey?: string };
+    athlete?: { id?: string; displayName?: string; fullName?: string; jersey?: string };
     position?: { abbreviation?: string };
   }[];
 };

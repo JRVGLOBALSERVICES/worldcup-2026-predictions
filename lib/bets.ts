@@ -166,6 +166,17 @@ export type MatchStats = {
    */
   playerShotBreakdown?: Record<string, PlayerShotLine>;
   /**
+   * Per-player TACKLE counts (Opta totalTackles) — keyed by ESPN displayName.
+   * The summary boxscore/commentary carry NO per-player tackle data; these come
+   * from ESPN's core API (sports.core.api.espn.com …/competitors/<team>/roster/
+   * <athleteId>/statistics/0 → defensive.totalTackles), fetched ONLY for players
+   * named in a playerTacklesOver leg (bounded request count). A key that's
+   * PRESENT is a verified count (0 included); a missing key means the core fetch
+   * hasn't landed — graders must hold pending, never blind-lose, on absence.
+   * Written by scripts/build-results.mjs (final) and lib/live.ts (in-play).
+   */
+  playerTackles?: Record<string, number>;
+  /**
    * Substitutions in match order — who came on / went off, the minute, and
    * whether ESPN's prose flags an injury. Drives the subs log + feed chips
    * (a subbed-off player's shot line is frozen — critical for shots props).
@@ -521,6 +532,15 @@ export type MultiLegCond = { odds?: number } & (
   // list as a backstop — a goal is always a shot). Clinches mid-match; if the
   // per-shooter tally never lands, holds pending rather than blind-grading.
   | { matchId: string; kind: "playerShotsOver"; player: string; line: number }
+  // Named player's TACKLES strictly over `line` ("Achraf Hakimi Over 1.5 —
+  // Player Over Tackles" → line:1.5 → won at 2+). Graded off
+  // MatchStats.playerTackles — ESPN's core API per-athlete defensive stats
+  // (Opta totalTackles), fetched per targeted player since the summary carries
+  // no per-player tackle data. Tackles only accrue → clinches mid-match once
+  // the count clears the line; dies when the player subs off still under it
+  // (tally frozen, no re-entry); a missing entry (core fetch never landed)
+  // holds pending rather than blind-grading.
+  | { matchId: string; kind: "playerTacklesOver"; player: string; line: number }
   // Named player's shots ON TARGET strictly over `line` ("Mikel Oyarzabal Over
   // 1.5 — Player Over Shots on Target" → line:1.5 → won at 2+). Graded off
   // MatchStats.playerSot, tallied per-shooter from ESPN "Shot On Target"
@@ -900,6 +920,20 @@ export const playerShotsCount = (stats: MatchStats | null, player: string): numb
     (n, [name, count]) => (nameMatch(name, player) ? n + count : n),
     0,
   );
+};
+
+/**
+ * A player's verified TACKLE count from the core-API map, or null when his
+ * entry hasn't landed (fetch failed / not yet run). Null ≠ 0: a present key is
+ * a verified count, an absent one means "no data — hold pending". Matching is
+ * accent-safe (nameMatch), same as the shots/SOT lookups.
+ */
+export const playerTacklesCount = (stats: MatchStats | null, player: string): number | null => {
+  const map = stats?.playerTackles;
+  if (!map) return null;
+  const hits = Object.entries(map).filter(([name]) => nameMatch(name, player));
+  if (hits.length === 0) return null;
+  return hits.reduce((n, [, count]) => n + count, 0);
 };
 
 /** Was `player` substituted OFF (per the subs log)? Football has no re-entry,
@@ -1319,6 +1353,27 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         if (finished) {
           if (!st?.playerSot) {
             pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost";
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "playerTacklesOver") {
+        // Player's TACKLES over the line, from the core-API per-athlete map.
+        // A present entry is a verified count (0 included); an absent one means
+        // the core fetch never landed → hold pending, never blind-lose.
+        const st = getStats(leg.matchId);
+        const tackles = playerTacklesCount(st, leg.player);
+        if (tackles != null && tackles > leg.line) continue; // leg won, even mid-match
+        // Subbed off still under the line → his tally is frozen, acca dead —
+        // but only trust it when his tackle count was actually verified.
+        if (tackles != null && subbedOff(st, leg.player)) return "lost";
+        if (finished) {
+          if (tackles == null) {
+            pending = true; // count never landed → manual settle
             continue;
           }
           return "lost";

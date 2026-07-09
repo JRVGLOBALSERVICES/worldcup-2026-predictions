@@ -17081,8 +17081,8 @@
       "slipNo": "863081028750323712",
       "matchId": "fra-mar-2026-07-09",
       "player": "—",
-      "market": "Same-match parlay · 10 legs · 1X + qualify + O1.5 + MAR corners/cards + Bounou saves + Hakimi tackles + U5.5 + Mbappe S/A + Rabiot shots",
-      "label": "REAL 1xBet slip 863081028750323712 (09/07) — 10-leg same-match parlay on FRA-MAR @11.98, RM120 -> RM1,437.60. SHARED: Rj + Tharma, RM60 each. Legs: France or Tie (DC) · France To Qualify · Over 1.5 total goals · Morocco team corners O3.5 · Bounou O1.5 saves · Morocco team cards O1.5 · Hakimi O1.5 tackles (MANUAL — ESPN has no per-player tackles) · Under 5.5 total goals · Mbappe to score or assist · Rabiot O0.5 shots.",
+      "market": "Same-match parlay · 10 legs · 1X + qualify + O1.5 + MAR corners/cards + Bounou saves + Hakimi tackles (auto) + U5.5 + Mbappe S/A + Rabiot shots",
+      "label": "REAL 1xBet slip 863081028750323712 (09/07) — 10-leg same-match parlay on FRA-MAR @11.98, RM120 -> RM1,437.60. SHARED: Rj + Tharma, RM60 each. Legs: France or Tie (DC) · France To Qualify · Over 1.5 total goals · Morocco team corners O3.5 · Bounou O1.5 saves · Morocco team cards O1.5 · Hakimi O1.5 tackles (auto — ESPN core API per-player Opta tackles) · Under 5.5 total goals · Mbappe to score or assist · Rabiot O0.5 shots.",
       "odds": 11.98,
       "stake": 120,
       "placedAt": "09/07",
@@ -17126,8 +17126,9 @@
           },
           {
             "matchId": "fra-mar-2026-07-09",
-            "kind": "manual",
-            "note": "Achraf Hakimi Over 1.5 tackles — ESPN publishes no per-player tackle counts; settle by hand off 1xBet/opta at FT"
+            "kind": "playerTacklesOver",
+            "player": "Achraf Hakimi",
+            "line": 1.5
           },
           {
             "matchId": "fra-mar-2026-07-09",

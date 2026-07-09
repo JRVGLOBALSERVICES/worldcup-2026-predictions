@@ -5,6 +5,7 @@ import {
   playerShotsCount,
   playerSotCount,
   playerStarted,
+  playerTacklesCount,
   subbedOff,
   wholeLinePush,
 } from "./bets";
@@ -194,6 +195,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.players.join(" or ")} to score (incl. ET)`;
     case "playerShotsOver":
       return `${leg.player} — ${plus(leg.line)} shots`;
+    case "playerTacklesOver":
+      return `${leg.player} — ${plus(leg.line)} tackles`;
     case "totalFoulsUnder":
       return `${m} — under ${leg.line} fouls`;
     case "totalShotsUnder":
@@ -1315,6 +1318,29 @@ export function inPlayMultiLeg(
         dead = true;
         parts.push(`${legLabel} (subbed off) ✗`);
       } else if (doneFull && lm.stats?.playerSot) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "playerTacklesOver") {
+      // Player's TACKLES over the line — from the core-API per-athlete map
+      // (Opta totalTackles). Accrues monotonically, so it locks WON the moment
+      // the verified count clears the line. Dies at the whistle if short — or
+      // the moment the player is SUBBED OFF still under it (tally frozen; no
+      // re-entry) — but ONLY off a verified entry; an absent key means the
+      // core fetch hasn't landed → stays neutral (static holds pending).
+      const tackles = playerTacklesCount(lm.stats ?? null, leg.player);
+      if (tackles != null && tackles > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (tackles != null && subbedOff(lm.stats ?? null, leg.player)) {
+        dead = true;
+        parts.push(`${legLabel} (subbed off) ✗`);
+      } else if (doneFull && tackles != null) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {

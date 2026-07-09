@@ -84,6 +84,83 @@ async function fetchSummary(eventId) {
   return res.json();
 }
 
+// ── Per-player tackles (ESPN core API) ───────────────────────────────────────
+// The summary boxscore/commentary carry NO per-player tackle data, but ESPN's
+// core API publishes full Opta per-athlete stats per event (defensive block
+// incl. totalTackles). One request per athlete → fetch ONLY the players a
+// playerTacklesOver leg names. Mirrors lib/live.ts fetchPlayerTackles — keep
+// in sync.
+const ESPN_CORE_EVENT =
+  "https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/events";
+
+/** Strip diacritics — mirror of lib/bets.ts deburr/nameMatch. */
+const deburr = (s) =>
+  String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
+const nameMatch = (a, b) => {
+  const x = deburr(a);
+  const y = deburr(b);
+  return x === y || x.includes(y) || y.includes(x);
+};
+
+/** matchId → players named in a playerTacklesOver leg, across every slip file. */
+function loadTackleTargets() {
+  const byMatch = {};
+  for (const file of ["bets.json", "bets-ruhan.json", "bets-tharma.json"]) {
+    let slip;
+    try {
+      slip = JSON.parse(readFileSync(join(__dirname, "..", "data", file), "utf8"));
+    } catch {
+      continue;
+    }
+    for (const sp of slip.specials ?? []) {
+      if (sp.grade?.type !== "multiLeg") continue;
+      for (const leg of sp.grade.legs ?? []) {
+        if (leg.kind === "playerTacklesOver" && leg.matchId && leg.player) {
+          (byMatch[leg.matchId] ??= new Set()).add(leg.player);
+        }
+      }
+    }
+  }
+  return byMatch;
+}
+
+/**
+ * Verified per-player tackle counts (Opta totalTackles) for the named players,
+ * from the core API's per-athlete event statistics. Keys are ESPN displayNames;
+ * only players whose fetch succeeded get an entry — the graders treat an absent
+ * key as "no data → hold pending", so a partial map is safe to persist.
+ */
+async function fetchPlayerTackles(eventId, rosters, targets) {
+  const out = {};
+  if (!targets.length || !Array.isArray(rosters)) return out;
+  const found = [];
+  for (const t of rosters) {
+    const teamId = t.team?.id;
+    if (!teamId) continue;
+    for (const p of t.roster ?? []) {
+      const name = p.athlete?.displayName;
+      const athleteId = p.athlete?.id;
+      if (!name || !athleteId) continue;
+      if (targets.some((want) => nameMatch(name, want))) found.push({ teamId, athleteId, name });
+    }
+  }
+  await Promise.allSettled(
+    found.map(async ({ teamId, athleteId, name }) => {
+      const url = `${ESPN_CORE_EVENT}/${eventId}/competitions/${eventId}/competitors/${teamId}/roster/${athleteId}/statistics/0`;
+      const res = await fetch(url, {
+        headers: { "User-Agent": "matchday-edge/1.0" },
+        signal: AbortSignal.timeout(12000),
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      const def = (data.splits?.categories ?? []).find((c) => c.name === "defensive");
+      const v = (def?.stats ?? []).find((s) => s.name === "totalTackles")?.value;
+      if (typeof v === "number" && Number.isFinite(v)) out[name] = v;
+    }),
+  );
+  return out;
+}
+
 /** Pull a named stat (e.g. "wonCorners") off one boxscore team, as a number. */
 function statVal(team, name) {
   const s = (team?.statistics ?? []).find((x) => x.name === name);
@@ -739,6 +816,16 @@ async function main() {
   // shot breakdown + subs log (added 2026-07-07) AND the complete boxscore
   // list (`full` — added 2026-07-07); earlier snapshots lack them →
   // one-time backfill fetch, then locked.
+  // Matches a playerTacklesOver leg names: keep refetching a finished match
+  // until EVERY named player has a verified entry in the persisted tackle map
+  // (the core-API fetch can fail per-athlete; absent = still ungraded).
+  const tackleTargets = loadTackleTargets();
+  const tacklesSatisfied = (id) => {
+    const targets = tackleTargets[id];
+    if (!targets) return true;
+    const map = prevStats[id]?.playerTackles ?? {};
+    return [...targets].every((want) => Object.keys(map).some((n) => nameMatch(n, want)));
+  };
   const needStats = Object.entries(results).filter(
     ([id, r]) =>
       r.eventId &&
@@ -747,7 +834,8 @@ async function main() {
         prevStats[id]?.tempo &&
         prevStats[id]?.playerShotBreakdown &&
         prevStats[id]?.full &&
-        prevChecked[id]
+        prevChecked[id] &&
+        tacklesSatisfied(id)
       ),
   );
   const fetchedStats = await Promise.allSettled(
@@ -774,6 +862,19 @@ async function main() {
       r.assistsChecked = true;
     }
   });
+  // Per-player tackles (core API) for any refetched match a tackle leg names.
+  // Merged over the previously verified map so a one-off per-athlete fetch
+  // failure never erases an already-verified count.
+  await Promise.all(
+    needStats.map(async ([id, r], i) => {
+      const b = fetchedStats[i];
+      const targets = [...(tackleTargets[id] ?? [])];
+      if (b.status !== "fulfilled" || !r.stats || !targets.length) return;
+      const fresh = await fetchPlayerTackles(r.eventId, b.value?.rosters, targets);
+      const merged = { ...(prevStats[id]?.playerTackles ?? {}), ...fresh };
+      if (Object.keys(merged).length) r.stats.playerTackles = merged;
+    }),
+  );
   // Carry forward reused final snapshots for matches we deliberately didn't refetch.
   for (const [id, r] of Object.entries(results)) {
     if (!r.stats && prevStats[id]) r.stats = prevStats[id];
