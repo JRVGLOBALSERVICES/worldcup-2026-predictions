@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T19:20:53.189Z",
+    "generatedAt": "2026-07-10T19:30:05.132Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 77,
     "live": 1
@@ -91701,7 +91701,7 @@
           "away": 0
         },
         "shots": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "yellow": {
@@ -91717,8 +91717,8 @@
           "away": 0
         },
         "fouls": {
-          "home": 2,
-          "away": 3
+          "home": 3,
+          "away": 4
         },
         "cornersByHalf": {
           "home": [
@@ -91744,7 +91744,8 @@
         "playerShots": {
           "Rodri": 1,
           "Álex Baena": 1,
-          "Charles De Ketelaere": 1
+          "Charles De Ketelaere": 1,
+          "Lamine Yamal": 1
         },
         "playerShotBreakdown": {
           "Rodri": {
@@ -91769,6 +91770,14 @@
             "sot": 0,
             "off": 0,
             "blocked": 1,
+            "goals": 0
+          },
+          "Lamine Yamal": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
             "goals": 0
           }
         },
@@ -91814,7 +91823,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 22
           },
           {
             "team": "home",
@@ -91894,7 +91903,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 10
           },
           {
             "team": "home",
@@ -91948,7 +91957,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -91967,14 +91976,14 @@
             "a": 0,
             "sh": 1,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 7
+            "ps": 8
           },
           {
             "team": "home",
@@ -91985,7 +91994,7 @@
             "aid": "362150",
             "g": 0,
             "a": 0,
-            "sh": 0,
+            "sh": 1,
             "sot": 0,
             "fc": 1,
             "fs": 2,
@@ -92017,7 +92026,7 @@
             "gc": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 13
+            "ps": 14
           },
           {
             "team": "away",
@@ -92050,7 +92059,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -92091,7 +92100,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -92117,7 +92126,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 5
           },
           {
             "team": "away",
@@ -92223,18 +92232,29 @@
         "subs": [],
         "firstGoalMethod": null,
         "firstPenalty": null,
-        "waterBreak": {},
+        "waterBreak": {
+          "h1": {
+            "half": 1,
+            "anchorMinute": 22,
+            "source": "delay",
+            "breakEndMinute": 26,
+            "firstActionType": "Foul",
+            "firstActionMinute": 28,
+            "isCorner": false,
+            "reliable": true
+          }
+        },
         "tempo": {
           "possession": {
-            "home": 64.9,
-            "away": 35.1
+            "home": 65,
+            "away": 35
           },
           "passes": {
-            "home": 155,
-            "away": 84
+            "home": 197,
+            "away": 105
           },
           "tackles": {
-            "home": 4,
+            "home": 6,
             "away": 1
           },
           "saves": {
@@ -92250,20 +92270,20 @@
             "away": 1
           },
           "interceptions": {
-            "home": 1,
+            "home": 2,
             "away": 5
           },
           "clearances": {
             "home": 2,
-            "away": 8
+            "away": 10
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "2",
-            "away": "3"
+            "home": "3",
+            "away": "4"
           },
           {
             "key": "yellowCards",
@@ -92298,13 +92318,13 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "64.9",
-            "away": "35.1"
+            "home": "65",
+            "away": "35"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "2",
+            "home": "3",
             "away": "1"
           },
           {
@@ -92334,14 +92354,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "135",
-            "away": "68"
+            "home": "173",
+            "away": "84"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "155",
-            "away": "84"
+            "home": "197",
+            "away": "105"
           },
           {
             "key": "passPct",
@@ -92358,7 +92378,7 @@
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "3",
+            "home": "4",
             "away": "2"
           },
           {
@@ -92370,19 +92390,19 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "10",
-            "away": "13"
+            "home": "13",
+            "away": "15"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "6",
-            "away": "5"
+            "home": "7",
+            "away": "6"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.6",
+            "home": "0.5",
             "away": "0.4"
           },
           {
@@ -92394,43 +92414,43 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "1",
+            "home": "3",
             "away": "1"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "4",
+            "home": "6",
             "away": "1"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.3",
+            "home": "0.5",
             "away": "1.0"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "1",
+            "home": "2",
             "away": "5"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
             "home": "2",
-            "away": "8"
+            "away": "10"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
             "home": "2",
-            "away": "8"
+            "away": "10"
           }
         ],
         "playerTackles": {
-          "Pedro Porro": 1,
-          "Rodri": 0
+          "Rodri": 0,
+          "Pedro Porro": 2
         }
       }
     }
