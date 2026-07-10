@@ -260,6 +260,7 @@ function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red
       apps: 0,
       goals: 0,
       assists: 0,
+      shots: 0,
       tackles: 0,
       blocks: 0,
       passes: 0,
@@ -271,13 +272,14 @@ function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red
       gk: false,
     });
 
-  // Per-match player records → appearances + tackles/blocks/passes/saves.
+  // Per-match player records → appearances + shots/tackles/blocks/passes/saves.
   for (const rec of Object.values(byEvent)) {
     for (const p of rec.players ?? []) {
       if (!p.n || !p.t) continue;
       const l = get(p.n, p.t);
       l.apps += 1;
       if (p.gk) l.gk = true;
+      if (p.sh != null) l.shots += p.sh;
       if (p.tk != null) l.tackles += p.tk;
       if (p.bk != null) l.blocks += p.bk;
       if (p.ps != null) l.passes += p.ps;
@@ -320,6 +322,7 @@ function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red
           apps: p.apps,
           goals: p.goals,
           assists: p.assists,
+          shots: p.shots,
           tackles: p.tackles,
           blocks: p.blocks,
           passes: p.passes,
@@ -614,15 +617,17 @@ async function main() {
   // ps (passes — added 2026-07-09 for the per-match player sheets) postdates
   // many frozen matches: unfreeze any whose players lack it so the sweep
   // backfills the new field (tk/bk already fetched are kept — only ps refetches).
+  // sh (shots — added 2026-07-10 for the player index) postdates many frozen
+  // matches too; unfreeze any whose players lack it so the sweep backfills it.
   for (const rec of Object.values(byEvent)) {
-    if (rec.coreDone && !(rec.players ?? []).every((p) => p.ps != null)) delete rec.coreDone;
+    if (rec.coreDone && !(rec.players ?? []).every((p) => p.ps != null && p.sh != null)) delete rec.coreDone;
   }
   const coreJobs = [];
   for (const [id, rec] of Object.entries(byEvent)) {
     const live = liveEventIds.includes(id);
     if (!rec.players?.length || (rec.coreDone && !live)) continue;
     for (const p of rec.players) {
-      if (!live && p.tk != null && p.bk != null && p.ps != null) continue; // finished + already fetched
+      if (!live && p.tk != null && p.bk != null && p.ps != null && p.sh != null) continue; // finished + already fetched
       coreJobs.push({ id, p });
     }
   }
@@ -640,6 +645,7 @@ async function main() {
         p.tk = 0;
         p.bk = 0;
         p.ps = 0;
+        p.sh = 0;
         return;
       }
       if (res.status === 403) {
@@ -655,9 +661,11 @@ async function main() {
         return typeof v === "number" && Number.isFinite(v) ? v : 0;
       };
       const def = cat("defensive");
+      const off = cat("offensive");
       p.tk = stat(def, "totalTackles");
       p.bk = stat(def, "blockedShots");
-      p.ps = stat(cat("offensive"), "totalPasses");
+      p.ps = stat(off, "totalPasses");
+      p.sh = stat(off, "totalShots");
     } catch {
       coreFailed++; // leave null → pending, retried next run
     }
@@ -683,7 +691,7 @@ async function main() {
   // Freeze finished matches once complete so they never cost requests again.
   for (const [id, rec] of Object.entries(byEvent)) {
     if (liveEventIds.includes(id) || !rec.players?.length) continue;
-    if (rec.players.every((p) => p.tk != null && p.bk != null && p.ps != null)) rec.coreDone = 1;
+    if (rec.players.every((p) => p.tk != null && p.bk != null && p.ps != null && p.sh != null)) rec.coreDone = 1;
   }
 
   const penMissed = {};

@@ -470,6 +470,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
     tk?: number;
     bk?: number;
     ps?: number;
+    sh?: number;
   };
   type EventCache = {
     penMiss?: { name: string; team: string }[];
@@ -571,6 +572,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;
         if (prev?.ps != null) rec.ps = prev.ps;
+        if (prev?.sh != null) rec.sh = prev.sh;
         players.push(rec);
       }
     }
@@ -589,10 +591,10 @@ export async function computeStats(now: number): Promise<StatsFile> {
     // ps (passes — added 2026-07-09) postdates many coreDone-frozen matches;
     // treat a freeze as valid only when every player carries it (mirrors
     // build-stats.mjs unfreeze).
-    const frozen = rec.coreDone && (rec.players ?? []).every((p) => p.ps != null);
+    const frozen = rec.coreDone && (rec.players ?? []).every((p) => p.ps != null && p.sh != null);
     if (!rec.players?.length || (frozen && !live)) continue;
     for (const p of rec.players) {
-      if (!live && p.tk != null && p.bk != null && p.ps != null) continue;
+      if (!live && p.tk != null && p.bk != null && p.ps != null && p.sh != null) continue;
       coreJobs.push({ id, p });
     }
   }
@@ -612,6 +614,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
         p.tk = 0;
         p.bk = 0;
         p.ps = 0;
+        p.sh = 0;
         return;
       }
       if (res.status === 403) {
@@ -629,9 +632,11 @@ export async function computeStats(now: number): Promise<StatsFile> {
         return typeof v === "number" && Number.isFinite(v) ? v : 0;
       };
       const def = cat("defensive");
+      const off = cat("offensive");
       p.tk = stat(def, "totalTackles");
       p.bk = stat(def, "blockedShots");
-      p.ps = stat(cat("offensive"), "totalPasses");
+      p.ps = stat(off, "totalPasses");
+      p.sh = stat(off, "totalShots");
       ban403 = 0;
     } catch {
       /* leave null — the cron backfills */
@@ -718,6 +723,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
       apps: 0,
       goals: 0,
       assists: 0,
+      shots: 0,
       tackles: 0,
       blocks: 0,
       passes: 0,
@@ -735,6 +741,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
       const l = line(p.n, p.t);
       l.apps += 1;
       if (p.gk) l.gk = true;
+      if (p.sh != null) l.shots += p.sh;
       if (p.tk != null) l.tackles += p.tk;
       if (p.bk != null) l.blocks += p.bk;
       if (p.ps != null) l.passes += p.ps;

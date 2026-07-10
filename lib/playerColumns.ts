@@ -19,6 +19,7 @@ export const STAT_COLUMNS: StatColumn[] = [
   { key: "apps", short: "Apps", full: "Appearances" },
   { key: "goals", short: "Goals", full: "Goals", accent: "acid" },
   { key: "assists", short: "Assists", full: "Assists", accent: "mint" },
+  { key: "shots", short: "Shots", full: "Shots taken" },
   { key: "tackles", short: "Tackles", full: "Tackles" },
   { key: "blocks", short: "Blocks", full: "Blocks" },
   { key: "passes", short: "Passes", full: "Passes completed" },
