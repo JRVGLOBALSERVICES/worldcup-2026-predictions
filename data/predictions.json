@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T09:03:12.591Z",
+    "generatedAt": "2026-07-10T09:10:09.187Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-10T09:00:46.418Z"
+    "modelUpdatedAt": "2026-07-10T09:10:09.186Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -23459,97 +23459,106 @@
     "esp-bel-2026-07-10": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "1.95",
-        "reason": "Spain arrive on six straight World Cup clean sheets with an unchanged, in-form XI and midfield control through Rodri and Pedri. Belgium's counter (De Bruyne restored, Doku, De Ketelaere) is a genuine threat, but their defence has looked porous and Lukaku is short of fitness, so Spain are rightful favourites while a tight one-goal game is very live.",
+        "fairOdds": "2.01",
+        "reason": "Model: Spain to win at 50% (Spain 50% / draw 31% / Belgium 20%). Expected goals 1.2–0.6 from group-stage attack/defence rates (Spain 1.6 for / 0.6 against per game, Belgium 1.8 / 1.0). Most likely score 1-0.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.5",
+        "fairOdds": "2.24",
         "alt": "1-0",
-        "altOdds": "3.6",
-        "strength": 3
+        "altOdds": "3.88"
       },
       "htft": {
         "pick": "Draw/Spain",
-        "fairOdds": "4.5",
-        "strength": 2
+        "fairOdds": "5.03"
       },
       "fullTime": {
         "score": "1-0",
-        "fairOdds": "6.5",
-        "strength": 2
+        "fairOdds": "5.21"
       },
       "scorers": [
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "fairOdds": "3.1",
+          "fairOdds": "2.40",
           "banker": true,
-          "note": "Tournament-leading 4 goals, first-choice penalty taker, 17 in last 16 starts — most reliable Spain scorer; tagged medium not certainty vs a resilient block.",
+          "note": "4 goals in 5 group games; 42% modelled anytime chance on 1.2 team xG.",
           "strength": 3
+        },
+        {
+          "player": "Romelu Lukaku",
+          "team": "Belgium",
+          "fairOdds": "5.92",
+          "banker": false,
+          "note": "3 goals in 5 group games; 17% modelled anytime chance on 0.6 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "fairOdds": "6.09",
+          "banker": false,
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.2 team xG.",
+          "strength": 1
         },
         {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "3.6",
+          "fairOdds": "6.09",
           "banker": false,
-          "note": "Set-piece and free-kick threat, scored earlier in the tournament; can unlock a low-block on the right.",
-          "strength": 3
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.2 team xG.",
+          "strength": 1
         },
         {
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "fairOdds": "5.0",
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "fairOdds": "6.09",
           "banker": false,
-          "note": "Restored to the XI after a rest; scored vs New Zealand from range and Belgium's chief creator/finisher on the break.",
-          "strength": 2
-        },
-        {
-          "player": "Charles De Ketelaere",
-          "team": "Belgium",
-          "fairOdds": "5.5",
-          "banker": false,
-          "note": "Bagged a brace last time out, continues as false nine with Lukaku not match-fit.",
-          "strength": 2
+          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.2 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Kevin De Bruyne",
+          "player": "Marc Cucurella",
+          "team": "Spain",
+          "fairOdds": "3.32",
+          "banker": true,
+          "note": "2 assists in the group stage; 30% modelled chance to set one up."
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "fairOdds": "5.29",
+          "banker": false,
+          "note": "1 assist in the group stage; 19% modelled chance to set one up."
+        },
+        {
+          "player": "Aymeric Laporte",
+          "team": "Spain",
+          "fairOdds": "5.29",
+          "banker": false,
+          "note": "1 assist in the group stage; 19% modelled chance to set one up."
+        },
+        {
+          "player": "Hans Vanaken",
           "team": "Belgium",
-          "fairOdds": "4.0",
+          "fairOdds": "7.09",
           "banker": false,
-          "note": "Belgium's primary chance creator; supplies Doku/De Ketelaere on transitions.",
-          "strength": 3
-        },
-        {
-          "player": "Pedri",
-          "team": "Spain",
-          "fairOdds": "4.5",
-          "banker": false,
-          "note": "Central to Spain's build-up and free-kick delivery, feeds Yamal and Oyarzabal.",
-          "strength": 2
-        },
-        {
-          "player": "Lamine Yamal",
-          "team": "Spain",
-          "fairOdds": "4.5",
-          "banker": false,
-          "note": "Corner and free-kick taker plus open-play creativity from the right.",
-          "strength": 2
+          "note": "2 assists in the group stage; 14% modelled chance to set one up."
         }
       ],
       "penalty": {
-        "likelihood": "medium",
+        "likelihood": "low",
         "taker": "Mikel Oyarzabal",
-        "backup": "Lamine Yamal",
-        "note": "Spain pens: Oyarzabal first, Yamal next. Belgium pens: De Bruyne / Tielemans (Tielemans already converted a decisive spot-kick vs Senegal), Lukaku if on. This is a knockout — a cagey possession-vs-counter game can easily go to extra time and a penalty shootout, where Courtois vs Unai Simon and both sides' takers become pivotal."
+        "backup": "Álex Baena",
+        "note": "Spain favoured to control the game, so a penalty is less pivotal; Mikel Oyarzabal would take one if awarded."
       },
       "lineups": {
-        "home": "Unai Simon, Porro, Cubarsi, Laporte, Cucurella, Rodri, Pedri, Yamal, Dani Olmo, Baena, Oyarzabal",
-        "away": "Courtois, Castagne, Ngoy, Mechele, De Cuyper, Tielemans, Vanaken, Trossard, De Bruyne, De Ketelaere, Doku",
-        "status": "probable",
+        "home": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Lamine Yamal, Dani Olmo, Alex Baena, Mikel Oyarzabal",
+        "away": "Thibaut Courtois, Timothy Castagne, Brandon Mechele, Arthur Theate, Maxim De Cuyper, Youri Tielemans, Kevin De Bruyne, Hans Vanaken, Jérémy Doku, Charles De Ketelaere, Leandro Trossard",
+        "status": "unconfirmed",
         "homeXI": {
           "formation": "4-3-3",
           "players": [
@@ -23673,44 +23682,27 @@
       },
       "playerNotes": [
         {
-          "player": "Kevin De Bruyne",
-          "team": "Belgium",
-          "note": "Rested vs USA, expected to return to the starting XI in a central creative role — Belgium's key man."
-        },
-        {
-          "player": "Amadou Onana",
-          "team": "Belgium",
-          "note": "Out — tournament-ending ACL injury in the Round of 16; forces a reshaped midfield (Tielemans deeper alongside Vanaken)."
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "note": "4 goals in 5 group games; 42% modelled anytime chance on 1.2 team xG."
         },
         {
           "player": "Romelu Lukaku",
           "team": "Belgium",
-          "note": "Short of match fitness; De Ketelaere continues as false nine, Lukaku likely bench/impact and a penalty option."
+          "note": "3 goals in 5 group games; 17% modelled anytime chance on 0.6 team xG."
         },
         {
-          "player": "Jeremy Doku",
-          "team": "Belgium",
-          "note": "Selection toss-up — may start on the left (pushing Trossard right) or be used as an impact sub; explosive counter threat either way."
-        },
-        {
-          "player": "Mikel Oyarzabal",
+          "player": "Marc Cucurella",
           "team": "Spain",
-          "note": "Tournament top scorer (4), first-choice penalty taker, exceptional recent scoring run."
-        },
-        {
-          "player": "Unai Simon",
-          "team": "Spain",
-          "note": "Yet to concede at the tournament; Spain on six consecutive World Cup clean sheets."
+          "note": "2 assists in the group stage; 30% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/preview/spain-vs-belgium-prediction-team-news-lineups_600878.html",
-        "https://www.espn.com/soccer/story/_/id/49305374/world-cup-quarterfinal-injury-tracker-england-norway-france-spain-belgium",
-        "https://www.rotowire.com/soccer/article/spain-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121774",
-        "https://www.skysports.com/football/news/29908/13558804/world-cup-2026-belgium-3-2-senegal-aet-youri-tielemans-extra-time-penalty-winner-wins-last-32-clash",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
