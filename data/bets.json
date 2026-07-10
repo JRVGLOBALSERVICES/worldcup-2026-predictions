@@ -17268,6 +17268,135 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863380507516870657",
+      "slipNo": "863380507516870657",
+      "matchId": "esp-bel-2026-07-10",
+      "player": "Spain v Belgium",
+      "market": "Acca · 9 legs",
+      "label": "Acca (QF) — Oyarzabal to score/assist · Unai Simón O0.5 saves · Rodri O2.5 tackles · Courtois O1.5 saves · Spain-or-tie DC · Spain TTG O0.5 · Total O1.5 · Spain corners O6.5 · Spain to win either half (9 legs)",
+      "odds": 8.83,
+      "stake": 200,
+      "placedAt": "10/07 19:25",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "scoredOrAssisted",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "gkSavesOver",
+            "player": "Unai Simon",
+            "side": "home",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "playerTacklesOver",
+            "player": "Rodrigo Hernandez Cascante",
+            "line": 2.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "gkSavesOver",
+            "player": "Thibaut Courtois",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "teamCornersOver",
+            "side": "home",
+            "line": 6.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "winsAtLeastOneHalf",
+            "side": "home"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-863379014030082049",
+      "slipNo": "863379014030082049",
+      "matchId": "esp-bel-2026-07-10",
+      "player": "Spain v Belgium",
+      "market": "Acca · 8 legs",
+      "label": "Acca (QF) — Total O0.5 · Spain to qualify · Oyarzabal anytime scorer · Trossard O0.5 shots · De Ketelaere O0.5 shots · Courtois O2.5 saves · Total U4.5 · Spain TTG O0.5 (8 legs)",
+      "odds": 5.61,
+      "stake": 500,
+      "placedAt": "10/07 19:19",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "scored",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "playerShotsOver",
+            "player": "Leandro Trossard",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "playerShotsOver",
+            "player": "Charles De Ketelaere",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "gkSavesOver",
+            "player": "Thibaut Courtois",
+            "side": "away",
+            "line": 2.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 0.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
