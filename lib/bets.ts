@@ -1,6 +1,7 @@
 import betsJson from "@/data/bets.json";
 import ruhanJson from "@/data/bets-ruhan.json";
 import tharmaJson from "@/data/bets-tharma.json";
+import suriyatiJson from "@/data/bets-suriyati.json";
 import { getFixture, getPrediction } from "./data";
 import type { Fixture } from "./types";
 
@@ -792,6 +793,9 @@ export const ruhanSlip = ruhanJson as BetSlipFile;
 
 // Tharma's slip — own meta/specials, reads the shared truth above.
 export const tharmaSlip = tharmaJson as BetSlipFile;
+
+// Suriyati's slip — own meta/specials, reads the shared truth above.
+export const suriyatiSlip = suriyatiJson as BetSlipFile;
 
 export function getResult(matchId: string): MatchResult {
   return betSlip.results[matchId] ?? { ht: null, ft: null };

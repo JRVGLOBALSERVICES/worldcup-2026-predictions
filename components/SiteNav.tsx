@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 
-export type NavKey = "predictions" | "stats" | "rj" | "ruhan" | "tharma";
+export type NavKey = "predictions" | "stats" | "rj" | "ruhan" | "tharma" | "suriyati";
 
 const ITEMS: { key: NavKey; href: string; label: string }[] = [
   { key: "predictions", href: "/", label: "Predictions" },
@@ -9,6 +9,7 @@ const ITEMS: { key: NavKey; href: string; label: string }[] = [
   { key: "rj", href: "/tracker", label: "Rj's Tracker" },
   { key: "ruhan", href: "/tracker/ruhan", label: "Ruhan's Tracker" },
   { key: "tharma", href: "/tracker/tharma", label: "Tharma's Tracker" },
+  { key: "suriyati", href: "/tracker/suriyati", label: "Suriyati's Tracker" },
 ];
 
 /** Shared site nav — Predictions + both bet trackers, active one in acid.
