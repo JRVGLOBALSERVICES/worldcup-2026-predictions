@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T09:10:09.187Z",
+    "generatedAt": "2026-07-10T18:06:15.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-10T09:10:09.186Z"
+    "modelUpdatedAt": "2026-07-10T18:06:15.000Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -23459,106 +23459,91 @@
     "esp-bel-2026-07-10": {
       "win": {
         "pick": "Spain",
-        "fairOdds": "2.01",
-        "reason": "Model: Spain to win at 50% (Spain 50% / draw 31% / Belgium 20%). Expected goals 1.2–0.6 from group-stage attack/defence rates (Spain 1.6 for / 0.6 against per game, Belgium 1.8 / 1.0). Most likely score 1-0.",
+        "fairOdds": "2.02",
+        "reason": "Confirmed XIs in. Model: Spain 50% / draw 30% / Belgium 20%. Spain unchanged in quality (Fabian Ruiz in for Pedri = a more physical pivot built to shadow De Bruyne, not weaker). Belgium lose Lukaku's target man (bench, fitness) and Onana (ACL) so they sit deeper and counter via a FRESH De Bruyne. Spain shade xG ~1.2-0.7; likeliest 1-0. But a 30% draw is very much alive — win-or-out compresses the game.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.24",
+        "fairOdds": "2.20",
         "alt": "1-0",
-        "altOdds": "3.88"
+        "altOdds": "3.80"
       },
       "htft": {
         "pick": "Draw/Spain",
-        "fairOdds": "5.03"
+        "fairOdds": "4.95"
       },
       "fullTime": {
         "score": "1-0",
-        "fairOdds": "5.21"
+        "fairOdds": "5.10"
       },
       "scorers": [
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "fairOdds": "2.40",
+          "fairOdds": "2.30",
           "banker": true,
-          "note": "4 goals in 5 group games; 42% modelled anytime chance on 1.2 team xG.",
+          "note": "Spain's hot hand: 4 goals (braces vs Saudi Arabia & Austria) + confirmed primary penalty taker. Leads the line, arrives in the box — the cleanest scorer angle on the card.",
           "strength": 3
         },
         {
-          "player": "Romelu Lukaku",
+          "player": "Charles De Ketelaere",
           "team": "Belgium",
-          "fairOdds": "5.92",
+          "fairOdds": "4.40",
           "banker": false,
-          "note": "3 goals in 5 group games; 17% modelled anytime chance on 0.6 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Álex Baena",
-          "team": "Spain",
-          "fairOdds": "6.09",
-          "banker": false,
-          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.2 team xG.",
-          "strength": 1
+          "note": "Now Belgium's LONE striker with Lukaku benched. In-form: 2 goals + 1 assist (vs USA). More mobile false-9 than Lukaku — less a box focal point, but the confirmed spearhead of Belgium's transitions.",
+          "strength": 2
         },
         {
           "player": "Lamine Yamal",
           "team": "Spain",
-          "fairOdds": "6.09",
+          "fairOdds": "4.80",
           "banker": false,
-          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.2 team xG.",
-          "strength": 1
+          "note": "Matchup edge: attacks De Cuyper, Belgium's most exposed defender. Output cold (1 goal, still sharpening after a thigh injury) but the softest seam on the pitch is his.",
+          "strength": 2
         },
         {
-          "player": "Mikel Merino",
-          "team": "Spain",
-          "fairOdds": "6.09",
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "fairOdds": "5.40",
           "banker": false,
-          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.2 team xG.",
-          "strength": 1
+          "note": "Belgium's standout: 2 goals + 2 assists and the tournament's most chances created (17). Left of the front three — their likeliest scorer-or-creator if a counter lands.",
+          "strength": 2
         }
       ],
       "assists": [
         {
+          "player": "Alex Baena",
+          "team": "Spain",
+          "fairOdds": "3.40",
+          "banker": true,
+          "note": "Spain's dead-ball hub (19 set-piece deliveries) and with Pedri benched he owns the delivery. Spain will win a stack of corners against Belgium's block — his to feed."
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "team": "Belgium",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Fresh (rested vs USA) and Belgium's clear set-piece taker (13 deliveries) + open-play fulcrum. If Belgium create, it runs through him."
+        },
+        {
           "player": "Marc Cucurella",
           "team": "Spain",
-          "fairOdds": "3.32",
-          "banker": true,
-          "note": "2 assists in the group stage; 30% modelled chance to set one up."
-        },
-        {
-          "player": "Álex Baena",
-          "team": "Spain",
-          "fairOdds": "5.29",
+          "fairOdds": "5.20",
           "banker": false,
-          "note": "1 assist in the group stage; 19% modelled chance to set one up."
-        },
-        {
-          "player": "Aymeric Laporte",
-          "team": "Spain",
-          "fairOdds": "5.29",
-          "banker": false,
-          "note": "1 assist in the group stage; 19% modelled chance to set one up."
-        },
-        {
-          "player": "Hans Vanaken",
-          "team": "Belgium",
-          "fairOdds": "7.09",
-          "banker": false,
-          "note": "2 assists in the group stage; 14% modelled chance to set one up."
+          "note": "Overlapping left-back with 2 group-stage assists; supplies the left channel behind Baena/Yamal."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Mikel Oyarzabal",
-        "backup": "Álex Baena",
-        "note": "Spain favoured to control the game, so a penalty is less pivotal; Mikel Oyarzabal would take one if awarded."
+        "backup": "Lamine Yamal",
+        "note": "Spain's spot-kick is Oyarzabal (converted vs Netherlands & Bulgaria in 2025), backup Yamal. Belgium's is now UNCERTAIN with Lukaku benched — the list ranks De Bruyne first, but Tielemans took AND scored the extra-time winner vs Senegal in the R32, so a Belgium pen is a genuine De Bruyne/Tielemans split, not locked."
       },
       "lineups": {
-        "home": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Rodri, Pedri, Lamine Yamal, Dani Olmo, Alex Baena, Mikel Oyarzabal",
-        "away": "Thibaut Courtois, Timothy Castagne, Brandon Mechele, Arthur Theate, Maxim De Cuyper, Youri Tielemans, Kevin De Bruyne, Hans Vanaken, Jérémy Doku, Charles De Ketelaere, Leandro Trossard",
-        "status": "unconfirmed",
+        "home": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Fabian Ruiz, Rodri, Dani Olmo, Lamine Yamal, Mikel Oyarzabal, Alex Baena",
+        "away": "Thibaut Courtois, Timothy Castagne, Nathan Ngoy, Brandon Mechele, Maxim De Cuyper, Kevin De Bruyne, Nicolas Raskin, Jeremy Doku, Youri Tielemans, Leandro Trossard, Charles De Ketelaere",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-3-3",
           "players": [
@@ -23593,8 +23578,13 @@
               "pos": "DM"
             },
             {
-              "num": 20,
-              "name": "Pedri",
+              "num": 8,
+              "name": "Fabian Ruiz",
+              "pos": "CM-R"
+            },
+            {
+              "num": 21,
+              "name": "Dani Olmo",
               "pos": "CM-L"
             },
             {
@@ -23603,24 +23593,19 @@
               "pos": "RW"
             },
             {
-              "num": 21,
-              "name": "Dani Olmo",
-              "pos": "AM"
+              "num": 9,
+              "name": "Mikel Oyarzabal",
+              "pos": "F"
             },
             {
               "num": 10,
               "name": "Alex Baena",
               "pos": "LW"
-            },
-            {
-              "num": 9,
-              "name": "Mikel Oyarzabal",
-              "pos": "F"
             }
           ]
         },
         "awayXI": {
-          "formation": "4-3-3",
+          "formation": "4-2-3-1",
           "players": [
             {
               "num": 1,
@@ -23633,14 +23618,14 @@
               "pos": "RB"
             },
             {
-              "num": 4,
-              "name": "Brandon Mechele",
-              "pos": "CD-R"
+              "num": 15,
+              "name": "Nathan Ngoy",
+              "pos": "CB-R"
             },
             {
-              "num": 3,
-              "name": "Arthur Theate",
-              "pos": "CD-L"
+              "num": 4,
+              "name": "Brandon Mechele",
+              "pos": "CB-L"
             },
             {
               "num": 5,
@@ -23648,34 +23633,34 @@
               "pos": "LB"
             },
             {
-              "num": 8,
-              "name": "Youri Tielemans",
+              "num": 7,
+              "name": "Kevin De Bruyne",
               "pos": "CM-R"
             },
             {
-              "num": 7,
-              "name": "Kevin De Bruyne",
-              "pos": "CM"
-            },
-            {
               "num": 6,
-              "name": "Hans Vanaken",
-              "pos": "CM-L"
-            },
-            {
-              "num": 22,
-              "name": "Jérémy Doku",
-              "pos": "RW"
+              "name": "Nicolas Raskin",
+              "pos": "DM"
             },
             {
               "num": 11,
-              "name": "Charles De Ketelaere",
-              "pos": "ST"
+              "name": "Jeremy Doku",
+              "pos": "RW"
+            },
+            {
+              "num": 8,
+              "name": "Youri Tielemans",
+              "pos": "AM"
             },
             {
               "num": 17,
               "name": "Leandro Trossard",
               "pos": "LW"
+            },
+            {
+              "num": 22,
+              "name": "Charles De Ketelaere",
+              "pos": "F"
             }
           ]
         }
@@ -23684,53 +23669,70 @@
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "note": "4 goals in 5 group games; 42% modelled anytime chance on 1.2 team xG."
+          "note": "Red-hot: 4 goals + an assist, and Spain's confirmed penalty taker. The scoring load runs through him."
         },
         {
-          "player": "Romelu Lukaku",
-          "team": "Belgium",
-          "note": "3 goals in 5 group games; 17% modelled anytime chance on 0.6 team xG."
-        },
-        {
-          "player": "Marc Cucurella",
+          "player": "Fabian Ruiz",
           "team": "Spain",
-          "note": "2 assists in the group stage; 30% modelled chance to set one up."
+          "note": "Starts ahead of Pedri — a more physical, ball-winning pivot alongside Rodri, built to control Belgium's transitions rather than create between the lines."
+        },
+        {
+          "player": "Lamine Yamal",
+          "team": "Spain",
+          "note": "Cold on output (1 goal, still sharpening post-thigh injury) but holds the game's clearest mismatch attacking De Cuyper."
+        },
+        {
+          "player": "Charles De Ketelaere",
+          "team": "Belgium",
+          "note": "Belgium's lone striker now Lukaku is benched (fitness). In-form (2G+1A vs USA) and more mobile — Belgium lose their aerial out-ball but gain movement."
+        },
+        {
+          "player": "Kevin De Bruyne",
+          "team": "Belgium",
+          "note": "Fresh after being rested vs USA; Belgium's creative fulcrum and dead-ball taker. Rodri is tasked to shadow him — that duel likely decides Belgium's ceiling."
+        },
+        {
+          "player": "Leandro Trossard",
+          "team": "Belgium",
+          "note": "Belgium's best performer: 2G+2A and the tournament's most chances created (17). The most dangerous man in their front line."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed XIs (official lineup release, 2026-07-10)",
+        "https://sports.yahoo.com/articles/world-cup-2026-quarter-final-174000733.html",
+        "https://www.101greatgoals.com/football/world-cup-news/spain-vs-belgium-live-teams-line-ups-tv-channel-live-online-stream-stats/",
+        "https://www.rotowire.com/soccer/article/spain-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121774",
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form"
       ],
       "pitchReport": {
         "facts": [
-          "Spain: 7 pts, +5 GD across 3 group games (5 for / 0 against).",
-          "Belgium: 5 pts, +4 GD across 3 group games (6 for / 2 against).",
-          "Spain's Mikel Oyarzabal leads them with 4 goals in 5 games.",
-          "Belgium's Romelu Lukaku leads them with 3 goals in 5 games."
+          "Confirmed: Spain start Fabian Ruiz over Pedri (4-3-3); Oyarzabal leads the line with 4 tournament goals.",
+          "Confirmed: Belgium bench Lukaku (fitness) — De Ketelaere is the lone striker; De Bruyne & Doku both start.",
+          "Amadou Onana is OUT for Belgium (ACL), thinning their midfield press.",
+          "Spain have not conceded across the tournament; Trossard has created a tournament-high 17 chances for Belgium."
         ],
         "assumptions": [
-          "Model projects Spain to carry more of the ball and the better chances (higher attack rating); Belgium to sit compact and play on the break.",
-          "Goal expectancy 1.2–0.6 (Spain–Belgium) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+          "Belgium sit slightly deeper than they'd like without Onana's pressing and Lukaku's hold-up, and spring De Bruyne on the counter.",
+          "Spain carry the ball and the better chances (~1.2 vs 0.7 xG); the Rodri-vs-De Bruyne duel is the swing factor."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "Spain shade the chance-creation (1.2 vs 0.6 xG) — they should make the running.",
-        "drawRisk": "High. Low combined xG (1.8) and a 30.7% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
-        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "lineups": "CONFIRMED. Spain 4-3-3 (Fabian Ruiz in for Pedri). Belgium 4-2-3-1 with De Ketelaere up top, Lukaku benched. Lineup-dependent props are now firm, not provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both accept a cagey, low-risk game, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Spain shade chance-creation (1.2 vs 0.7). Belgium's box threat is trimmed without Lukaku's aerial focal point — more transition, less direct service.",
+        "drawRisk": "Elevated. ~30% modelled draw, low combined xG, and a knockout tempo — profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Temperate, controlled SoFi Stadium — climate neutral; football decides it.",
         "caseFor": [
-          "Spain are the model's 49.7% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Mikel Oyarzabal carrying the scoring load.",
-          "Neutral conditions let the better side's quality tell."
+          "Spain are the model's ~50% pick, unbeaten and clean-sheet all tournament.",
+          "Oyarzabal is a genuine in-form match-winner carrying the scoring load.",
+          "Fabian Ruiz's pivot is purpose-built to smother De Bruyne's between-lines threat."
         ],
         "caseAgainst": [
-          "30.7% draw + Belgium's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Spain's number may be inflated by one result."
+          "~30% draw + a Belgium side happy to sit and spring De Bruyne to Trossard/Doku — the possession-favourite out-xG trap is live.",
+          "Yamal is cold and Spain's finishing has leaned heavily on Oyarzabal."
         ],
         "verdict": "Lean",
-        "changeMind": "A confirmed XI resting Mikel Oyarzabal, or news the underdog is missing a defensive linchpin."
+        "changeMind": "Belgium scoring first and forcing Spain to chase against a low block, or an early Oyarzabal knock."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -23742,63 +23744,63 @@
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name strongest XI, no rotation."
+            "why": "Knockout — both name strongest available XI, no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
             "tripped": false,
-            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+            "why": "Spain's clean-sheet run and Oyarzabal's goals span games, not one rout."
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
+            "tripped": true,
+            "why": "Both sides accept a low-tempo game; Belgium sit deep without Lukaku/Onana — goals may be scarce."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs are CONFIRMED — lineup-dependent angles are firm now."
           },
           {
             "name": "Ignoring the draw",
             "tripped": true,
-            "why": "30.7% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
+            "why": "~30% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+            "why": "Model call — no tilt, no chase. (Only you can answer this one for your own stake.)"
           }
         ],
         "trapsTripped": 2,
         "edge": "edge-leaning",
         "verdict": "LEAN",
-        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+        "discipline": "Lineups are in and Lukaku's on the bench — respect the draw, don't overpay the favourite, and don't chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "LEAN",
-        "call": "Spain to win is a lean, not a lock. Respect the live draw.",
+        "call": "Spain to win is a lean, not a lock. XIs confirmed, Lukaku benched — respect the live draw.",
         "read": {
           "tag": "Lean",
-          "line": "Spain are the model's 50% pick, but a 30.7% draw is very much alive."
+          "line": "Spain ~50% with confirmed strongest XI, but a ~30% draw is very much alive."
         },
         "price": {
           "tag": "Not priced yet",
-          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+          "line": "No live odds landed yet — model-only call until the market lands."
         },
         "trap": {
           "tag": "2 warnings",
-          "line": "The draw is live and a level game kills a straight win bet."
+          "line": "The draw is live and a cagey low-block knockout can starve the favourite of goals."
         }
       },
       "resolution": {
-        "ninety": 69.3,
-        "extraTime": 12.6,
-        "penalties": 18.1,
+        "ninety": 69.5,
+        "extraTime": 12.5,
+        "penalties": 18.0,
         "mostLikely": "Regulation",
         "etWinner": "Spain",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Spain.",
-        "note": "Most likely settled inside 90 (69.3%). But a 30.7% level 90 keeps extra time (12.6%) and penalties (18.1%) live — in a knockout, that's the bit a straight win bet ignores."
+        "shootout": "Near coin-flip; marginal nerve edge to Spain, though Courtois is an elite shootout keeper.",
+        "note": "Most likely settled inside 90 (69.5%). But a ~30% level 90 keeps extra time (12.5%) and penalties (18.0%) live — the bit a straight win bet ignores in a knockout."
       }
     },
     "arg-swi-2026-07-12": {
