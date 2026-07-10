@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T21:00:06.484Z",
+    "generatedAt": "2026-07-10T21:10:04.455Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
-    "finished": 77,
-    "live": 1
+    "finished": 78,
+    "live": 0
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -91678,19 +91678,25 @@
       "assistsChecked": true
     },
     "esp-bel-2026-07-10": {
-      "state": "live",
+      "state": "finished",
       "ht": {
         "home": 1,
         "away": 1
       },
-      "ft": null,
-      "ft90": null,
-      "finishPhase": null,
+      "ft": {
+        "home": 2,
+        "away": 1
+      },
+      "ft90": {
+        "home": 2,
+        "away": 1
+      },
+      "finishPhase": "regulation",
       "score": {
         "home": 2,
         "away": 1
       },
-      "advanced": null,
+      "advanced": "home",
       "goals": [
         {
           "team": "home",
@@ -92712,7 +92718,7 @@
           },
           {
             "key": "possessionPct",
-            "label": "POSSESSION",
+            "label": "Possession",
             "home": "67.8",
             "away": "32.2"
           },
@@ -92844,10 +92850,11 @@
           }
         ],
         "playerTackles": {
-          "Rodri": 1,
-          "Pedro Porro": 2
+          "Pedro Porro": 2,
+          "Rodri": 1
         }
-      }
+      },
+      "assistsChecked": true
     }
   }
 }
