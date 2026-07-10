@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T20:00:07.245Z",
+    "generatedAt": "2026-07-10T20:10:05.020Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 77,
     "live": 1
@@ -91679,7 +91679,10 @@
     },
     "esp-bel-2026-07-10": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 1,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -91741,7 +91744,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 6,
+          "home": 7,
           "away": 6
         },
         "cornersByHalf": {
@@ -91857,7 +91860,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 13
+            "ps": 14
           },
           {
             "team": "home",
@@ -91910,7 +91913,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -91951,7 +91954,7 @@
             "sh": 1,
             "sot": 1,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -92080,7 +92083,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 23
+            "ps": 24
           },
           {
             "team": "away",
@@ -92100,7 +92103,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 17
+            "ps": 18
           },
           {
             "team": "away",
@@ -92174,13 +92177,13 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 12
+            "ps": 13
           },
           {
             "team": "away",
@@ -92200,7 +92203,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 20
+            "ps": 22
           },
           {
             "team": "away",
@@ -92220,7 +92223,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 12
+            "ps": 13
           },
           {
             "team": "away",
@@ -92240,7 +92243,7 @@
             "off": 1,
             "tk": 0,
             "bk": 1,
-            "ps": 15
+            "ps": 16
           },
           {
             "team": "away",
@@ -92274,7 +92277,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 1,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -92300,12 +92303,12 @@
         },
         "tempo": {
           "possession": {
-            "home": 61.9,
-            "away": 38.1
+            "home": 63.3,
+            "away": 36.7
           },
           "passes": {
-            "home": 303,
-            "away": 184
+            "home": 325,
+            "away": 186
           },
           "tackles": {
             "home": 8,
@@ -92336,7 +92339,7 @@
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "6",
+            "home": "7",
             "away": "6"
           },
           {
@@ -92372,8 +92375,8 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "61.9",
-            "away": "38.1"
+            "home": "63.3",
+            "away": "36.7"
           },
           {
             "key": "totalShots",
@@ -92408,14 +92411,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "268",
-            "away": "150"
+            "home": "289",
+            "away": "152"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "303",
-            "away": "184"
+            "home": "325",
+            "away": "186"
           },
           {
             "key": "passPct",
@@ -92445,13 +92448,13 @@
             "key": "totalLongBalls",
             "label": "Long Balls",
             "home": "18",
-            "away": "22"
+            "away": "23"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
             "home": "8",
-            "away": "11"
+            "away": "12"
           },
           {
             "key": "longballPct",
@@ -92503,8 +92506,8 @@
           }
         ],
         "playerTackles": {
-          "Rodri": 0,
-          "Pedro Porro": 2
+          "Pedro Porro": 2,
+          "Rodri": 0
         }
       }
     }
