@@ -1443,6 +1443,22 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   // than the cutoff key don't render. Keyed off base.featuredKey so the same
   // HTML comes out of the server and the client.
   const cutoffKey = windowCutoffKey(base.featuredKey);
+  // Rj (2026-07-10): the lost-slip hiding must key off the latest COMPLETED day,
+  // NOT featuredKey. featuredKey is the next slate still to be played — the moment
+  // a day's only games finish (e.g. France v Morocco, the sole 07-10 MYT fixture),
+  // featuredKey rolls forward to the next date (07-11), and a "hide day < featuredKey"
+  // rule wrongly swallows the day that just finished — exactly the slips he's still
+  // reviewing. reviewKey = the most recent completed day: since featuredKey is the
+  // FIRST not-ended day, every dated key before it is ended, so the largest such key
+  // IS the last completed day. Hide losses only STRICTLY before it → the freshest
+  // finished slate stays fully visible; older busted rounds stay hidden. Deterministic
+  // (derived from base keys, no Date()) so SSR and client HTML match.
+  const reviewKey =
+    base.days
+      .map((d) => d.key)
+      .filter((k) => k !== "tbd" && k < base.featuredKey)
+      .sort()
+      .pop() ?? base.featuredKey;
   // Which MYT betting day each match sits on — parlays are windowed by their
   // LATEST leg's day, so a slip stays visible as long as any leg is recent.
   const dayKeyByMatch = new Map<string, string>();
@@ -1475,7 +1491,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   const isPastLostParlay = (special: SpecialRow, legIds: string[]) => {
     if (special.staticStatus !== "lost") return false;
     const day = latestDay(legIds.length > 0 ? legIds : []);
-    return day !== "" && day < base.featuredKey;
+    return day !== "" && day < reviewKey;
   };
   let hiddenLostParlays = 0;
   const allParlays = base.days
@@ -2001,7 +2017,11 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
               .filter((m) => m.bets.length + m.specials.length > 0),
           });
           const pastRaw = base.days.filter((d) => !d.isFeatured && isPast(d) && inDayWindow(d));
-          const hiddenLost = pastRaw.reduce(
+          // Only strip losses from days STRICTLY older than the last completed slate
+          // (reviewKey) — the freshest finished day keeps its losses so Rj can review
+          // it (e.g. yesterday/today's France slips), matching the parlay roll-up above.
+          const stripsLosses = (d: DayRow) => d.key !== "tbd" && d.key < reviewKey;
+          const hiddenLost = pastRaw.filter(stripsLosses).reduce(
             (s, d) =>
               s +
               d.matches.reduce(
@@ -2013,7 +2033,9 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
               ),
             0,
           );
-          const past = pastRaw.map(stripLostDay).filter((d) => d.matches.length > 0);
+          const past = pastRaw
+            .map((d) => (stripsLosses(d) ? stripLostDay(d) : d))
+            .filter((d) => d.matches.length > 0);
           const pastBets = past.reduce(
             (s, d) => s + d.matches.reduce((x, m) => x + m.bets.length + m.specials.filter((sp) => !sp.mirror).length, 0),
             0,
