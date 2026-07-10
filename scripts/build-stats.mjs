@@ -261,6 +261,7 @@ function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red
       goals: 0,
       assists: 0,
       shots: 0,
+      sot: 0,
       tackles: 0,
       blocks: 0,
       passes: 0,
@@ -280,6 +281,7 @@ function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red
       l.apps += 1;
       if (p.gk) l.gk = true;
       if (p.sh != null) l.shots += p.sh;
+      if (p.st != null) l.sot += p.st;
       if (p.tk != null) l.tackles += p.tk;
       if (p.bk != null) l.blocks += p.bk;
       if (p.ps != null) l.passes += p.ps;
@@ -323,6 +325,7 @@ function buildPlayersByTeam({ byEvent, mergedScorers, mergedAssists, yellow, red
           goals: p.goals,
           assists: p.assists,
           shots: p.shots,
+          sot: p.sot,
           tackles: p.tackles,
           blocks: p.blocks,
           passes: p.passes,
@@ -522,7 +525,7 @@ async function main() {
       byEvent[id]?.assists == null ||
       byEvent[id]?.teamBox == null ||
       byEvent[id]?.players == null ||
-      (byEvent[id]?.players ?? []).some((p) => p.sh == null),
+      (byEvent[id]?.players ?? []).some((p) => p.sh == null || p.st == null),
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -583,13 +586,22 @@ async function main() {
     // index no longer waits on the rate-limited per-player core sweep.
     const isShotPlay = (t) =>
       t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
+    // On target = a scored non-own goal, a scored penalty, or an explicit
+    // "Shot On Target" play (boxscore convention: a goal counts on target;
+    // woodwork/blocked/off-target do not). Same feed as the total-shots tally.
+    const isOnTarget = (t) =>
+      (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored" || t === "Shot On Target";
     const shotsByName = {};
+    const sotByName = {};
     for (const c of b.value?.commentary ?? []) {
       const pl = c.play;
       const t = pl?.type?.text;
       if (!t || !pl?.team?.displayName || !isShotPlay(t)) continue;
       const taker = pl.participants?.[0]?.athlete?.displayName;
-      if (taker) shotsByName[taker] = (shotsByName[taker] ?? 0) + 1;
+      if (taker) {
+        shotsByName[taker] = (shotsByName[taker] ?? 0) + 1;
+        if (isOnTarget(t)) sotByName[taker] = (sotByName[taker] ?? 0) + 1;
+      }
     }
     // Players who featured (starter or sub used), off the summary team sheet:
     // identity for the core tackles/blocks sweep below + per-keeper saves (`sv`,
@@ -617,6 +629,7 @@ async function main() {
           if (typeof sv === "number" && Number.isFinite(sv)) rec.sv = sv;
         }
         rec.sh = shotsByName[name] ?? 0;
+        rec.st = sotByName[name] ?? 0;
         const prev = prevPlayers.get(aid);
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;

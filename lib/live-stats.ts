@@ -479,6 +479,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
     bk?: number;
     ps?: number;
     sh?: number;
+    st?: number;
   };
   type EventCache = {
     penMiss?: { name: string; team: string }[];
@@ -507,7 +508,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
       byEvent[id]?.assists == null ||
       byEvent[id]?.teamBox == null ||
       byEvent[id]?.players == null ||
-      (byEvent[id]?.players ?? []).some((p) => p.sh == null),
+      (byEvent[id]?.players ?? []).some((p) => p.sh == null || p.st == null),
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -564,13 +565,21 @@ export async function computeStats(now: number): Promise<StatsFile> {
     // per-player core sweep.
     const isShotPlay = (t: string) =>
       t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
+    // On target = scored non-own goal, scored penalty, or explicit "Shot On
+    // Target" (a goal counts on target; woodwork/blocked/off-target do not).
+    const isOnTarget = (t: string) =>
+      (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored" || t === "Shot On Target";
     const shotsByName: Record<string, number> = {};
+    const sotByName: Record<string, number> = {};
     for (const c of b.value?.commentary ?? []) {
       const pl = c.play;
       const t = pl?.type?.text;
       if (!t || !pl?.team?.displayName || !isShotPlay(t)) continue;
       const taker = pl.participants?.[0]?.athlete?.displayName;
-      if (taker) shotsByName[taker] = (shotsByName[taker] ?? 0) + 1;
+      if (taker) {
+        shotsByName[taker] = (shotsByName[taker] ?? 0) + 1;
+        if (isOnTarget(t)) sotByName[taker] = (sotByName[taker] ?? 0) + 1;
+      }
     }
     // Players who featured — identity for the core tackles/blocks sweep + keeper
     // saves. sh set from the commentary tally; carry previously-swept tk/bk/ps
@@ -594,6 +603,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
           if (typeof sv === "number" && Number.isFinite(sv)) rec.sv = sv;
         }
         rec.sh = shotsByName[name] ?? 0;
+        rec.st = sotByName[name] ?? 0;
         const prev = prevPlayers.get(aid);
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;
@@ -747,6 +757,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
       goals: 0,
       assists: 0,
       shots: 0,
+      sot: 0,
       tackles: 0,
       blocks: 0,
       passes: 0,
@@ -765,6 +776,7 @@ export async function computeStats(now: number): Promise<StatsFile> {
       l.apps += 1;
       if (p.gk) l.gk = true;
       if (p.sh != null) l.shots += p.sh;
+      if (p.st != null) l.sot += p.st;
       if (p.tk != null) l.tackles += p.tk;
       if (p.bk != null) l.blocks += p.bk;
       if (p.ps != null) l.passes += p.ps;

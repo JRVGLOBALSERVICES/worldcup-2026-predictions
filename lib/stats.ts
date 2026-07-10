@@ -56,6 +56,7 @@ export type PlayerStatLine = {
   goals: number;
   assists: number;
   shots: number;
+  sot: number;
   tackles: number;
   blocks: number;
   passes: number;
