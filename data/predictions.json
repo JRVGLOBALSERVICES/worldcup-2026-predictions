@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T18:06:15.000Z",
+    "generatedAt": "2026-07-10T18:10:08.055Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-10T18:06:15.000Z"
+    "modelUpdatedAt": "2026-07-10T18:10:08.054Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -23708,31 +23708,31 @@
       ],
       "pitchReport": {
         "facts": [
-          "Confirmed: Spain start Fabian Ruiz over Pedri (4-3-3); Oyarzabal leads the line with 4 tournament goals.",
-          "Confirmed: Belgium bench Lukaku (fitness) — De Ketelaere is the lone striker; De Bruyne & Doku both start.",
-          "Amadou Onana is OUT for Belgium (ACL), thinning their midfield press.",
-          "Spain have not conceded across the tournament; Trossard has created a tournament-high 17 chances for Belgium."
+          "Spain: 7 pts, +5 GD across 3 group games (5 for / 0 against).",
+          "Belgium: 5 pts, +4 GD across 3 group games (6 for / 2 against).",
+          "Spain's Mikel Oyarzabal leads them with 4 goals in 5 games.",
+          "Belgium's Romelu Lukaku leads them with 3 goals in 5 games."
         ],
         "assumptions": [
-          "Belgium sit slightly deeper than they'd like without Onana's pressing and Lukaku's hold-up, and spring De Bruyne on the counter.",
-          "Spain carry the ball and the better chances (~1.2 vs 0.7 xG); the Rodri-vs-De Bruyne duel is the swing factor."
+          "Model projects Spain to carry more of the ball and the better chances (higher attack rating); Belgium to sit compact and play on the break.",
+          "Goal expectancy 1.2–0.6 (Spain–Belgium) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "CONFIRMED. Spain 4-3-3 (Fabian Ruiz in for Pedri). Belgium 4-2-3-1 with De Ketelaere up top, Lukaku benched. Lineup-dependent props are now firm, not provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both accept a cagey, low-risk game, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "Spain shade chance-creation (1.2 vs 0.7). Belgium's box threat is trimmed without Lukaku's aerial focal point — more transition, less direct service.",
-        "drawRisk": "Elevated. ~30% modelled draw, low combined xG, and a knockout tempo — profiles as a 1-0 / 1-1 that can drift to extra time.",
-        "travel": "Temperate, controlled SoFi Stadium — climate neutral; football decides it.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Spain shade the chance-creation (1.2 vs 0.6 xG) — they should make the running.",
+        "drawRisk": "High. Low combined xG (1.8) and a 30.7% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
         "caseFor": [
-          "Spain are the model's ~50% pick, unbeaten and clean-sheet all tournament.",
-          "Oyarzabal is a genuine in-form match-winner carrying the scoring load.",
-          "Fabian Ruiz's pivot is purpose-built to smother De Bruyne's between-lines threat."
+          "Spain are the model's 49.7% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Mikel Oyarzabal carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
         ],
         "caseAgainst": [
-          "~30% draw + a Belgium side happy to sit and spring De Bruyne to Trossard/Doku — the possession-favourite out-xG trap is live.",
-          "Yamal is cold and Spain's finishing has leaned heavily on Oyarzabal."
+          "30.7% draw + Belgium's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Spain's number may be inflated by one result."
         ],
         "verdict": "Lean",
-        "changeMind": "Belgium scoring first and forcing Spain to chase against a low block, or an early Oyarzabal knock."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -23744,63 +23744,63 @@
           {
             "name": "Dead rubber / rotation risk",
             "tripped": false,
-            "why": "Knockout — both name strongest available XI, no rotation."
+            "why": "Knockout — both name strongest XI, no rotation."
           },
           {
             "name": "Built on one result / a short hot streak",
             "tripped": false,
-            "why": "Spain's clean-sheet run and Oyarzabal's goals span games, not one rout."
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
           },
           {
             "name": "Cagey knockout the market underrates",
-            "tripped": true,
-            "why": "Both sides accept a low-tempo game; Belgium sit deep without Lukaku/Onana — goals may be scarce."
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs are CONFIRMED — lineup-dependent angles are firm now."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
             "tripped": true,
-            "why": "~30% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
+            "why": "30.7% draw is live — and a level 90 then pens kills a straight win bet even if your side advances."
           },
           {
             "name": "Emotional / a chase / just for action",
             "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one for your own stake.)"
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 2,
+        "trapsTripped": 1,
         "edge": "edge-leaning",
         "verdict": "LEAN",
-        "discipline": "Lineups are in and Lukaku's on the bench — respect the draw, don't overpay the favourite, and don't chase goals in a game built to produce few."
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "LEAN",
-        "call": "Spain to win is a lean, not a lock. XIs confirmed, Lukaku benched — respect the live draw.",
+        "call": "Spain to win is a lean, not a lock. Respect the live draw.",
         "read": {
           "tag": "Lean",
-          "line": "Spain ~50% with confirmed strongest XI, but a ~30% draw is very much alive."
+          "line": "Spain are the model's 50% pick, but a 30.7% draw is very much alive."
         },
         "price": {
           "tag": "Not priced yet",
-          "line": "No live odds landed yet — model-only call until the market lands."
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "2 warnings",
-          "line": "The draw is live and a cagey low-block knockout can starve the favourite of goals."
+          "tag": "1 warning",
+          "line": "The draw is live and a level game kills a straight win bet."
         }
       },
       "resolution": {
-        "ninety": 69.5,
-        "extraTime": 12.5,
-        "penalties": 18.0,
+        "ninety": 69.3,
+        "extraTime": 12.6,
+        "penalties": 18.1,
         "mostLikely": "Regulation",
         "etWinner": "Spain",
-        "shootout": "Near coin-flip; marginal nerve edge to Spain, though Courtois is an elite shootout keeper.",
-        "note": "Most likely settled inside 90 (69.5%). But a ~30% level 90 keeps extra time (12.5%) and penalties (18.0%) live — the bit a straight win bet ignores in a knockout."
+        "shootout": "Near coin-flip, with the marginal nerve edge to Spain.",
+        "note": "Most likely settled inside 90 (69.3%). But a 30.7% level 90 keeps extra time (12.6%) and penalties (18.1%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     },
     "arg-swi-2026-07-12": {
