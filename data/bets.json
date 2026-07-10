@@ -17397,6 +17397,161 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863423200079003649",
+      "slipNo": "863423200079003649",
+      "matchId": "esp-bel-2026-07-10",
+      "player": "Treble · Spain/Belgium + Norway/England + Argentina/Switzerland",
+      "market": "Treble (3 parlays) · 17 legs",
+      "label": "REAL 1xBet TREBLE 863423200079003649 (10/07 22:15) @25.95, RM100 -> RM2,595.55. 3 same-match parlays: [ESP-BEL @1.55] Unai Simón O0.5 saves · Pedro Porro O1.5 tackles · Spain-or-tie DC · Total U5.5 · Total O0.5 · Spain to qualify. [NOR-ENG @5.35] Kane score/assist · Total U5.5 · Nusa O0.5 shots · Nyland O1.5 saves · Haaland score/assist. [ARG-SWI @3.13] Messi score/assist · Mac Allister O0.5 tackles · Arg-or-tie DC · Argentina to qualify · Total U5.5 · Argentina corners O4.5.",
+      "odds": 25.95,
+      "stake": 100,
+      "placedAt": "10/07 22:15",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "gkSavesOver",
+            "player": "Unai Simon",
+            "side": "home",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "playerTacklesOver",
+            "player": "Pedro Porro",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerShotsOver",
+            "player": "Antonio Nusa",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "gkSavesOver",
+            "player": "Orjan Nyland",
+            "side": "home",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerTacklesOver",
+            "player": "Alexis Mac Allister",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "teamCornersOver",
+            "side": "home",
+            "line": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-863424127393554433",
+      "slipNo": "863424127393554433",
+      "matchId": "esp-bel-2026-07-10",
+      "player": "Treble · Spain/Belgium + Norway/England + Argentina/Switzerland",
+      "market": "Treble (3 parlays) · 6 scorer legs",
+      "label": "REAL 1xBet TREBLE 863424127393554433 (10/07 22:19) @74.06, RM10 -> RM740.68. 3 to-score-or-assist parlays: [ESP-BEL @5.01] Lamine Yamal · Leandro Trossard. [NOR-ENG @3.36] Harry Kane · Erling Haaland. [ARG-SWI @4.40] Messi anytime scorer · Lautaro Martínez score/assist.",
+      "odds": 74.06,
+      "stake": 10,
+      "placedAt": "10/07 22:19",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "scoredOrAssisted",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "esp-bel-2026-07-10",
+            "kind": "scoredOrAssisted",
+            "player": "Leandro Trossard"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scoredOrAssisted",
+            "player": "Lautaro Martinez"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
