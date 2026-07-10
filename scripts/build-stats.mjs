@@ -511,14 +511,18 @@ async function main() {
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id);
   // Refetch a summary when the match is live, never cached, or cached before one
-  // of the newer blocks (assists / teamBox / players) existed — so each block
-  // backfills exactly once.
+  // of the newer blocks (assists / teamBox / players / per-player shots) existed —
+  // so each block backfills exactly once. `sh` (per-player shots, added 2026-07-10)
+  // is tallied straight off the commentary feed below, so a match cached before it
+  // existed is refetched once here to fill it (cheap — one hit per match on the
+  // unthrottled site.api host, vs the rate-limited per-player core sweep).
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
     (id) =>
       liveEventIds.includes(id) ||
       byEvent[id]?.assists == null ||
       byEvent[id]?.teamBox == null ||
-      byEvent[id]?.players == null,
+      byEvent[id]?.players == null ||
+      (byEvent[id]?.players ?? []).some((p) => p.sh == null),
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -572,11 +576,27 @@ async function main() {
         totalLongBalls: get("totalLongBalls"),
       };
     });
+    // Per-player TOTAL shots off the commentary plays feed — the same tally
+    // lib/live.ts uses for prop grading (attempt = any "Shot …" play or a
+    // non-own goal / scored penalty), which matches the boxscore totalShots.
+    // Filling shots from this single cheap per-event summary means the player
+    // index no longer waits on the rate-limited per-player core sweep.
+    const isShotPlay = (t) =>
+      t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
+    const shotsByName = {};
+    for (const c of b.value?.commentary ?? []) {
+      const pl = c.play;
+      const t = pl?.type?.text;
+      if (!t || !pl?.team?.displayName || !isShotPlay(t)) continue;
+      const taker = pl.participants?.[0]?.athlete?.displayName;
+      if (taker) shotsByName[taker] = (shotsByName[taker] ?? 0) + 1;
+    }
     // Players who featured (starter or sub used), off the summary team sheet:
     // identity for the core tackles/blocks sweep below + per-keeper saves (`sv`,
     // stored for keepers only — verified identical to the core goalKeeping count).
-    // tk/bk (tackles/blocks) start absent and are filled by the core sweep;
-    // carry any previously-swept values across a live-match refetch.
+    // sh (shots) is set here from the commentary tally; tk/bk/ps (tackles/blocks/
+    // passes) start absent and are filled by the core sweep — carry any
+    // previously-swept values across a live-match refetch.
     const prevPlayers = new Map(
       (byEvent[id]?.players ?? []).map((p) => [p.aid, p]),
     );
@@ -596,6 +616,7 @@ async function main() {
           const sv = (p.stats ?? []).find((s) => s.name === "saves")?.value;
           if (typeof sv === "number" && Number.isFinite(sv)) rec.sv = sv;
         }
+        rec.sh = shotsByName[name] ?? 0;
         const prev = prevPlayers.get(aid);
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;
@@ -617,17 +638,17 @@ async function main() {
   // ps (passes — added 2026-07-09 for the per-match player sheets) postdates
   // many frozen matches: unfreeze any whose players lack it so the sweep
   // backfills the new field (tk/bk already fetched are kept — only ps refetches).
-  // sh (shots — added 2026-07-10 for the player index) postdates many frozen
-  // matches too; unfreeze any whose players lack it so the sweep backfills it.
+  // (sh/shots is filled from the commentary feed in Pass 3, not here — so it
+  // never forces a core-sweep unfreeze.)
   for (const rec of Object.values(byEvent)) {
-    if (rec.coreDone && !(rec.players ?? []).every((p) => p.ps != null && p.sh != null)) delete rec.coreDone;
+    if (rec.coreDone && !(rec.players ?? []).every((p) => p.ps != null)) delete rec.coreDone;
   }
   const coreJobs = [];
   for (const [id, rec] of Object.entries(byEvent)) {
     const live = liveEventIds.includes(id);
     if (!rec.players?.length || (rec.coreDone && !live)) continue;
     for (const p of rec.players) {
-      if (!live && p.tk != null && p.bk != null && p.ps != null && p.sh != null) continue; // finished + already fetched
+      if (!live && p.tk != null && p.bk != null && p.ps != null) continue; // finished + already fetched
       coreJobs.push({ id, p });
     }
   }
@@ -645,7 +666,6 @@ async function main() {
         p.tk = 0;
         p.bk = 0;
         p.ps = 0;
-        p.sh = 0;
         return;
       }
       if (res.status === 403) {
@@ -665,7 +685,6 @@ async function main() {
       p.tk = stat(def, "totalTackles");
       p.bk = stat(def, "blockedShots");
       p.ps = stat(off, "totalPasses");
-      p.sh = stat(off, "totalShots");
     } catch {
       coreFailed++; // leave null → pending, retried next run
     }
@@ -691,7 +710,7 @@ async function main() {
   // Freeze finished matches once complete so they never cost requests again.
   for (const [id, rec] of Object.entries(byEvent)) {
     if (liveEventIds.includes(id) || !rec.players?.length) continue;
-    if (rec.players.every((p) => p.tk != null && p.bk != null && p.ps != null && p.sh != null)) rec.coreDone = 1;
+    if (rec.players.every((p) => p.tk != null && p.bk != null && p.ps != null)) rec.coreDone = 1;
   }
 
   const penMissed = {};

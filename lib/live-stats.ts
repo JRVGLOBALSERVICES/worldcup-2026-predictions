@@ -128,10 +128,18 @@ type EspnRosterEntry = {
   stats?: { name?: string; value?: number }[];
 };
 type EspnRosterTeam = { team?: { id?: string; displayName?: string }; roster?: EspnRosterEntry[] };
+type EspnCommentaryEntry = {
+  play?: {
+    type?: { text?: string };
+    team?: { displayName?: string };
+    participants?: { athlete?: { displayName?: string } }[];
+  };
+};
 type EspnSummary = {
   keyEvents?: EspnKeyEvent[];
   boxscore?: { teams?: EspnBoxTeam[] };
   rosters?: EspnRosterTeam[];
+  commentary?: EspnCommentaryEntry[];
 };
 
 type Tally = { name: string; team: string; value: number; matches?: number | null };
@@ -491,13 +499,15 @@ export async function computeStats(now: number): Promise<StatsFile> {
     .filter((ev) => (ev.status?.type?.state ?? "pre") === "in")
     .map((ev) => ev.id!)
     .filter(Boolean);
-  // Refetch when live, never cached, or cached before assists / teamBox / players existed.
+  // Refetch when live, never cached, cached before assists / teamBox / players
+  // existed, or cached before per-player shots (sh, filled from commentary below).
   const needSummary = [...new Set([...finishedEventIds, ...liveEventIds])].filter(
     (id) =>
       liveEventIds.includes(id) ||
       byEvent[id]?.assists == null ||
       byEvent[id]?.teamBox == null ||
-      byEvent[id]?.players == null,
+      byEvent[id]?.players == null ||
+      (byEvent[id]?.players ?? []).some((p) => p.sh == null),
   );
   const summaries = await Promise.allSettled(needSummary.map(fetchSummary));
   const PEN_MISS = /penalty\s*-\s*(missed|saved)/i;
@@ -548,8 +558,23 @@ export async function computeStats(now: number): Promise<StatsFile> {
         totalLongBalls: get("totalLongBalls"),
       };
     });
+    // Per-player TOTAL shots off the commentary plays feed — the same tally
+    // lib/live.ts uses for prop grading (matches the boxscore totalShots). Filled
+    // from this cheap per-event summary so shots never wait on the rate-limited
+    // per-player core sweep.
+    const isShotPlay = (t: string) =>
+      t.startsWith("Shot") || (t.startsWith("Goal") && !t.includes("Own")) || t === "Penalty - Scored";
+    const shotsByName: Record<string, number> = {};
+    for (const c of b.value?.commentary ?? []) {
+      const pl = c.play;
+      const t = pl?.type?.text;
+      if (!t || !pl?.team?.displayName || !isShotPlay(t)) continue;
+      const taker = pl.participants?.[0]?.athlete?.displayName;
+      if (taker) shotsByName[taker] = (shotsByName[taker] ?? 0) + 1;
+    }
     // Players who featured — identity for the core tackles/blocks sweep + keeper
-    // saves. Carry previously-swept tk/bk across a live-match refetch.
+    // saves. sh set from the commentary tally; carry previously-swept tk/bk/ps
+    // across a live-match refetch.
     const prevPlayers = new Map((byEvent[id]?.players ?? []).map((p) => [p.aid, p]));
     const players: PlayerRec[] = [];
     for (const t of b.value?.rosters ?? []) {
@@ -568,11 +593,11 @@ export async function computeStats(now: number): Promise<StatsFile> {
           const sv = (p.stats ?? []).find((s) => s.name === "saves")?.value;
           if (typeof sv === "number" && Number.isFinite(sv)) rec.sv = sv;
         }
+        rec.sh = shotsByName[name] ?? 0;
         const prev = prevPlayers.get(aid);
         if (prev?.tk != null) rec.tk = prev.tk;
         if (prev?.bk != null) rec.bk = prev.bk;
         if (prev?.ps != null) rec.ps = prev.ps;
-        if (prev?.sh != null) rec.sh = prev.sh;
         players.push(rec);
       }
     }
@@ -591,10 +616,10 @@ export async function computeStats(now: number): Promise<StatsFile> {
     // ps (passes — added 2026-07-09) postdates many coreDone-frozen matches;
     // treat a freeze as valid only when every player carries it (mirrors
     // build-stats.mjs unfreeze).
-    const frozen = rec.coreDone && (rec.players ?? []).every((p) => p.ps != null && p.sh != null);
+    const frozen = rec.coreDone && (rec.players ?? []).every((p) => p.ps != null);
     if (!rec.players?.length || (frozen && !live)) continue;
     for (const p of rec.players) {
-      if (!live && p.tk != null && p.bk != null && p.ps != null && p.sh != null) continue;
+      if (!live && p.tk != null && p.bk != null && p.ps != null) continue;
       coreJobs.push({ id, p });
     }
   }
@@ -614,7 +639,6 @@ export async function computeStats(now: number): Promise<StatsFile> {
         p.tk = 0;
         p.bk = 0;
         p.ps = 0;
-        p.sh = 0;
         return;
       }
       if (res.status === 403) {
@@ -636,7 +660,6 @@ export async function computeStats(now: number): Promise<StatsFile> {
       p.tk = stat(def, "totalTackles");
       p.bk = stat(def, "blockedShots");
       p.ps = stat(off, "totalPasses");
-      p.sh = stat(off, "totalShots");
       ban403 = 0;
     } catch {
       /* leave null — the cron backfills */
