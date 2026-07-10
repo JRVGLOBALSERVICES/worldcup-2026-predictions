@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T20:40:07.973Z",
+    "generatedAt": "2026-07-10T20:50:08.881Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 81
   },
@@ -469,6 +469,14 @@
       },
       {
         "rank": 2,
+        "name": "Kevin De Bruyne",
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 6,
+        "matches": 4
+      },
+      {
+        "rank": 2,
         "name": "Michael Olise",
         "team": "France",
         "flag": "🇫🇷",
@@ -476,15 +484,7 @@
         "matches": 6
       },
       {
-        "rank": 3,
-        "name": "Kevin De Bruyne",
-        "team": "Belgium",
-        "flag": "🇧🇪",
-        "value": 5,
-        "matches": 4
-      },
-      {
-        "rank": 3,
+        "rank": 4,
         "name": "Lamine Yamal",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -492,7 +492,7 @@
         "matches": 5
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -621,8 +621,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 90.1,
-        "display": "90.1%",
+        "value": 90.2,
+        "display": "90.2%",
         "matches": 5
       },
       {
@@ -661,8 +661,8 @@
         "rank": 7,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 84.8,
-        "display": "84.8%",
+        "value": 84.7,
+        "display": "84.7%",
         "matches": 5
       }
     ],
@@ -671,8 +671,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 64.4,
-        "display": "64.4%",
+        "value": 64.3,
+        "display": "64.3%",
         "matches": 5
       },
       {
@@ -719,8 +719,8 @@
         "rank": 7,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 50.6,
-        "display": "50.6%",
+        "value": 50.7,
+        "display": "50.7%",
         "matches": 5
       }
     ],
@@ -777,8 +777,8 @@
         "rank": 7,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 32.3,
-        "display": "32.3%",
+        "value": 32,
+        "display": "32.0%",
         "matches": 5
       }
     ],
@@ -835,8 +835,8 @@
         "rank": 7,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 50.7,
-        "display": "50.7%",
+        "value": 51.5,
+        "display": "51.5%",
         "matches": 5
       }
     ],
@@ -877,8 +877,8 @@
         "rank": 5,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 22.7,
-        "display": "22.7%",
+        "value": 22.2,
+        "display": "22.2%",
         "matches": 5
       },
       {
@@ -903,8 +903,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 59.6,
-        "display": "59.6%",
+        "value": 60.8,
+        "display": "60.8%",
         "matches": 5
       },
       {
@@ -951,8 +951,8 @@
         "rank": 7,
         "team": "Belgium",
         "flag": "🇧🇪",
-        "value": 44.7,
-        "display": "44.7%",
+        "value": 44,
+        "display": "44.0%",
         "matches": 5
       }
     ]
@@ -3413,6 +3413,10 @@
           "value": 1
         },
         {
+          "name": "Kevin De Bruyne",
+          "value": 1
+        },
+        {
           "name": "Romelu Lukaku",
           "value": 1
         }
@@ -4099,13 +4103,13 @@
           "apps": 4,
           "goals": 1,
           "assists": 0,
-          "shots": 15,
+          "shots": 16,
           "sot": 4,
           "tackles": 3,
-          "blocks": 5,
-          "passes": 145,
+          "blocks": 6,
+          "passes": 149,
           "saves": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -4113,7 +4117,7 @@
         },
         {
           "name": "Alexis Saelemaekers",
-          "apps": 3,
+          "apps": 4,
           "goals": 1,
           "assists": 0,
           "shots": 4,
@@ -4137,7 +4141,7 @@
           "sot": 1,
           "tackles": 8,
           "blocks": 0,
-          "passes": 201,
+          "passes": 205,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4154,7 +4158,7 @@
           "sot": 1,
           "tackles": 10,
           "blocks": 0,
-          "passes": 193,
+          "passes": 196,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4188,7 +4192,7 @@
           "sot": 0,
           "tackles": 5,
           "blocks": 1,
-          "passes": 341,
+          "passes": 344,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4239,7 +4243,7 @@
           "sot": 1,
           "tackles": 0,
           "blocks": 0,
-          "passes": 68,
+          "passes": 69,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4256,7 +4260,7 @@
           "sot": 0,
           "tackles": 5,
           "blocks": 0,
-          "passes": 146,
+          "passes": 150,
           "saves": 0,
           "yellow": 0,
           "red": 1,
@@ -4341,7 +4345,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 6,
+          "passes": 8,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4373,9 +4377,9 @@
           "assists": 0,
           "shots": 0,
           "sot": 0,
-          "tackles": 0,
+          "tackles": 1,
           "blocks": 0,
-          "passes": 4,
+          "passes": 6,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4392,7 +4396,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 4,
+          "passes": 10,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5589,7 +5593,7 @@
           "sot": 9,
           "tackles": 4,
           "blocks": 1,
-          "passes": 104,
+          "passes": 105,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5623,7 +5627,7 @@
           "sot": 9,
           "tackles": 8,
           "blocks": 5,
-          "passes": 157,
+          "passes": 167,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5649,15 +5653,15 @@
           "gk": false
         },
         {
-          "name": "Pedro Porro",
-          "apps": 4,
+          "name": "Mikel Merino",
+          "apps": 5,
           "goals": 1,
           "assists": 0,
-          "shots": 5,
-          "sot": 2,
-          "tackles": 10,
-          "blocks": 0,
-          "passes": 224,
+          "shots": 2,
+          "sot": 1,
+          "tackles": 1,
+          "blocks": 1,
+          "passes": 60,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5666,15 +5670,15 @@
           "gk": false
         },
         {
-          "name": "Mikel Merino",
+          "name": "Pedro Porro",
           "apps": 4,
           "goals": 1,
           "assists": 0,
-          "shots": 2,
-          "sot": 1,
-          "tackles": 1,
-          "blocks": 1,
-          "passes": 60,
+          "shots": 5,
+          "sot": 2,
+          "tackles": 10,
+          "blocks": 0,
+          "passes": 233,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5691,7 +5695,7 @@
           "sot": 1,
           "tackles": 2,
           "blocks": 0,
-          "passes": 226,
+          "passes": 233,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5708,7 +5712,7 @@
           "sot": 1,
           "tackles": 6,
           "blocks": 4,
-          "passes": 165,
+          "passes": 167,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5725,7 +5729,7 @@
           "sot": 0,
           "tackles": 5,
           "blocks": 0,
-          "passes": 372,
+          "passes": 378,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5742,7 +5746,7 @@
           "sot": 1,
           "tackles": 0,
           "blocks": 0,
-          "passes": 36,
+          "passes": 39,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5776,7 +5780,7 @@
           "sot": 0,
           "tackles": 17,
           "blocks": 2,
-          "passes": 489,
+          "passes": 506,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5793,7 +5797,7 @@
           "sot": 0,
           "tackles": 7,
           "blocks": 1,
-          "passes": 273,
+          "passes": 284,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5810,7 +5814,7 @@
           "sot": 0,
           "tackles": 4,
           "blocks": 0,
-          "passes": 420,
+          "passes": 427,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5827,7 +5831,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 151,
+          "passes": 155,
           "saves": 6,
           "yellow": 0,
           "red": 0,
@@ -5837,14 +5841,14 @@
         },
         {
           "name": "Nico Williams",
-          "apps": 2,
+          "apps": 3,
           "goals": 0,
           "assists": 0,
           "shots": 0,
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 16,
+          "passes": 20,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -38547,31 +38551,31 @@
         "teamBox": [
           {
             "team": "Spain",
-            "possessionPct": 68.1,
-            "accuratePasses": 481,
-            "totalPasses": 533,
+            "possessionPct": 67.7,
+            "accuratePasses": 546,
+            "totalPasses": 603,
             "shotsOnTarget": 5,
             "totalShots": 14,
             "effectiveTackles": 5,
             "totalTackles": 11,
             "accurateCrosses": 2,
-            "totalCrosses": 14,
-            "accurateLongBalls": 14,
-            "totalLongBalls": 26
+            "totalCrosses": 16,
+            "accurateLongBalls": 19,
+            "totalLongBalls": 31
           },
           {
             "team": "Belgium",
-            "possessionPct": 31.9,
-            "accuratePasses": 195,
-            "totalPasses": 247,
+            "possessionPct": 32.3,
+            "accuratePasses": 226,
+            "totalPasses": 286,
             "shotsOnTarget": 2,
-            "totalShots": 4,
-            "effectiveTackles": 4,
-            "totalTackles": 8,
+            "totalShots": 5,
+            "effectiveTackles": 5,
+            "totalTackles": 9,
             "accurateCrosses": 2,
             "totalCrosses": 8,
-            "accurateLongBalls": 18,
-            "totalLongBalls": 35
+            "accurateLongBalls": 19,
+            "totalLongBalls": 41
           }
         ],
         "players": [
@@ -38586,7 +38590,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 23
+            "ps": 27
           },
           {
             "n": "Aymeric Laporte",
@@ -38597,7 +38601,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 58
+            "ps": 64
           },
           {
             "n": "Pau Cubarsí",
@@ -38608,7 +38612,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 80
+            "ps": 87
           },
           {
             "n": "Marc Cucurella",
@@ -38619,7 +38623,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 34
+            "ps": 41
           },
           {
             "n": "Pedro Porro",
@@ -38630,7 +38634,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 65
+            "ps": 74
           },
           {
             "n": "Dani Olmo",
@@ -38641,7 +38645,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 40
+            "ps": 42
           },
           {
             "n": "Fabián Ruiz",
@@ -38663,7 +38667,7 @@
             "st": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 81
+            "ps": 98
           },
           {
             "n": "Mikel Oyarzabal",
@@ -38674,7 +38678,7 @@
             "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 24
+            "ps": 25
           },
           {
             "n": "Álex Baena",
@@ -38696,7 +38700,29 @@
             "st": 2,
             "tk": 1,
             "bk": 2,
-            "ps": 35
+            "ps": 45
+          },
+          {
+            "n": "Nico Williams",
+            "t": "Spain",
+            "aid": "312146",
+            "tid": "164",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 4
+          },
+          {
+            "n": "Mikel Merino",
+            "t": "Spain",
+            "aid": "209581",
+            "tid": "164",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
           },
           {
             "n": "Pedri",
@@ -38707,7 +38733,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 24
+            "ps": 35
           },
           {
             "n": "Ferran Torres",
@@ -38718,7 +38744,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 12
           },
           {
             "n": "Thibaut Courtois",
@@ -38742,7 +38768,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 27
+            "ps": 30
           },
           {
             "n": "Nathan Ngoy",
@@ -38753,7 +38779,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 33
+            "ps": 37
           },
           {
             "n": "Maxim De Cuyper",
@@ -38775,18 +38801,18 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 21
+            "ps": 24
           },
           {
             "n": "Kevin De Bruyne",
             "t": "Belgium",
             "aid": "134947",
             "tid": "459",
-            "sh": 1,
+            "sh": 2,
             "st": 1,
             "tk": 1,
-            "bk": 0,
-            "ps": 20
+            "bk": 1,
+            "ps": 24
           },
           {
             "n": "Nicolas Raskin",
@@ -38797,7 +38823,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 30
+            "ps": 34
           },
           {
             "n": "Hans Vanaken",
@@ -38830,7 +38856,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 17
           },
           {
             "n": "Leandro Trossard",
@@ -38844,15 +38870,26 @@
             "ps": 12
           },
           {
+            "n": "Alexis Saelemaekers",
+            "t": "Belgium",
+            "aid": "271132",
+            "tid": "459",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
+          },
+          {
             "n": "Joaquin Seys",
             "t": "Belgium",
             "aid": "363068",
             "tid": "459",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 4
+            "ps": 6
           },
           {
             "n": "Senne Lammens",
@@ -38863,7 +38900,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 10
           },
           {
             "n": "Axel Witsel",
@@ -38874,7 +38911,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 4
           },
           {
             "n": "Romelu Lukaku",
