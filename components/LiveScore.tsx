@@ -558,6 +558,14 @@ function PlayerSheetRow({ p, subs }: { p: PlayerStatLine; subs: Substitution[] |
         {p.pos && (
           <span className="shrink-0 font-mono text-[0.54rem] uppercase text-faint/60">{p.pos}</span>
         )}
+        {p.gk && p.sv != null && (
+          <span
+            className="shrink-0 rounded bg-acid/12 px-1 font-mono text-[0.56rem] font-semibold text-acid"
+            title="Saves"
+          >
+            {p.sv} SV
+          </span>
+        )}
         {marks.subbedOff != null && (
           <span
             className={`shrink-0 font-mono text-[0.56rem] ${marks.injuredOff ? "text-rose" : "text-amber"}`}
