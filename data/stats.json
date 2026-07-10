@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T20:50:08.881Z",
+    "generatedAt": "2026-07-10T21:00:11.482Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 81
+    "finished": 82
   },
   "categories": {
     "scorers": [
@@ -245,6 +245,20 @@
       },
       {
         "rank": 3,
+        "name": "Axel Witsel",
+        "team": "Belgium",
+        "flag": "🇧🇪",
+        "value": 1
+      },
+      {
+        "rank": 3,
+        "name": "Aymeric Laporte",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 1
+      },
+      {
+        "rank": 3,
         "name": "Bradley Barcola",
         "team": "France",
         "flag": "🇫🇷",
@@ -262,20 +276,6 @@
         "name": "Denis Zakaria",
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 1
-      },
-      {
-        "rank": 3,
-        "name": "Facundo Medina",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 1
-      },
-      {
-        "rank": 3,
-        "name": "Ferran Torres",
-        "team": "Spain",
-        "flag": "🇪🇸",
         "value": 1
       }
     ],
@@ -2776,6 +2776,11 @@
           "matches": 5
         },
         {
+          "name": "Mikel Merino",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Álex Baena",
           "value": 1,
           "matches": 1
@@ -2787,11 +2792,6 @@
         },
         {
           "name": "Lamine Yamal",
-          "value": 1,
-          "matches": 1
-        },
-        {
-          "name": "Mikel Merino",
           "value": 1,
           "matches": 1
         }
@@ -2826,6 +2826,10 @@
       "yellowCards": [
         {
           "name": "Álex Baena",
+          "value": 1
+        },
+        {
+          "name": "Aymeric Laporte",
           "value": 1
         },
         {
@@ -3408,6 +3412,10 @@
         }
       ],
       "yellowCards": [
+        {
+          "name": "Axel Witsel",
+          "value": 1
+        },
         {
           "name": "Brandon Mechele",
           "value": 1
@@ -4347,7 +4355,7 @@
           "blocks": 0,
           "passes": 8,
           "saves": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -5602,6 +5610,23 @@
           "gk": false
         },
         {
+          "name": "Mikel Merino",
+          "apps": 5,
+          "goals": 2,
+          "assists": 0,
+          "shots": 2,
+          "sot": 1,
+          "tackles": 1,
+          "blocks": 1,
+          "passes": 60,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
           "name": "Álex Baena",
           "apps": 5,
           "goals": 1,
@@ -5645,23 +5670,6 @@
           "tackles": 1,
           "blocks": 1,
           "passes": 102,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Mikel Merino",
-          "apps": 5,
-          "goals": 1,
-          "assists": 0,
-          "shots": 2,
-          "sot": 1,
-          "tackles": 1,
-          "blocks": 1,
-          "passes": 60,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5731,7 +5739,7 @@
           "blocks": 0,
           "passes": 378,
           "saves": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -38924,7 +38932,8 @@
             "bk": 0,
             "ps": 3
           }
-        ]
+        ],
+        "coreDone": 1
       }
     }
   }
