@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T09:00:16.000Z",
+    "generatedAt": "2026-07-11T20:04:48.535Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-10T21:10:07.996Z"
@@ -23115,14 +23115,14 @@
       "win": {
         "pick": "England",
         "fairOdds": "2.15",
-        "reason": "England arrive unbeaten in five and with more tournament depth, but they carry real fitness doubts (Guehi hamstring, Rice sickness, Quansah suspended) that thin the spine tasked with containing Haaland. Norway will likely cede the ball, sit in a low block and hunt lightning transitions to feed Haaland (7 goals) and Nusa, which makes this a genuine ~55% England lean rather than a formality. Draw-and-Norway equity together is close to 45%, so the price stays honest.",
+        "reason": "Confirmed XIs firm up two things. Guehi passed his fitness test and starts, so the Stones-Guehi-Konsa spine England want against Haaland stays intact — the 'defensive chaos' angle is gone. But Ezri Konsa, a centre-back, is deputising at right-back for the suspended Quansah: far less overlap, England's width funnels left onto Gordon, and that seam is exactly where Norway's Wolfe-Schjelderup left side will attack. Norway sit deep and counter through Odegaard->Haaland (Schjelderup, who set up both Haaland goals vs Brazil, now starts over Nusa). Genuine ~55% England lean, not a formality — draw-and-Norway equity together is close to 45%, so the price stays honest and the win-to-nil lines get downgraded.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
         "fairOdds": "2.50",
         "alt": "0-1",
-        "altOdds": "4.20",
+        "altOdds": "4.30",
         "strength": 3
       },
       "htft": {
@@ -23134,124 +23134,126 @@
         "fairOdds": "7.50"
       },
       "resolution": {
-        "ninety": 63,
+        "ninety": 62,
         "extraTime": 22,
-        "penalties": 15,
+        "penalties": 16,
         "mostLikely": "Regulation",
         "etWinner": "England",
-        "shootout": "Near coin-flip — England carry recent shootout scars; Nyland gives Norway real hope.",
-        "note": "Most likely settled inside 90 (63%), but Norway.s low block makes a 37% level-90 real — extra time (22%) and pens (15%) are live in this knockout."
+        "shootout": "Near coin-flip — England carry recent shootout scars; Nyland (penalty save vs Brazil) gives Norway real hope, Pickford answers for England.",
+        "note": "Most likely settled inside 90 (62%), but Norway's deep block plus the Konsa-at-RB seam makes a ~38% level-90 real — extra time (22%) and pens (16%) are live in this knockout."
       },
       "scorers": [
-        {
-          "player": "Harry Kane",
-          "team": "England",
-          "fairOdds": "2.60",
-          "banker": false,
-          "note": "England's penalty taker and record WC scorer (14), but service may be limited vs a deep block; not a banker at 32",
-          "strength": 3
-        },
         {
           "player": "Erling Haaland",
           "team": "Norway",
           "fairOdds": "2.80",
           "banker": false,
-          "note": "7 goals this WC and Norway's whole plan; even one clear transition can be enough",
+          "note": "Tournament co-Golden Boot (7 goals, brace vs Brazil), converting 39% of shots; Norway's whole plan and penalty taker — one clean Odegaard release can be enough. Not a banker vs a set spine, but the headline threat",
           "strength": 4
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "3.60",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "3 goals incl. brace vs Mexico; arrives late from midfield, prime second-phase threat",
+          "note": "Quickfire brace vs Mexico; with Saka benched, England's cutting edge concentrates centrally through him — strongest England scorer pick, arrives late into the box",
           "strength": 3
         },
         {
-          "player": "Bukayo Saka",
+          "player": "Harry Kane",
           "team": "England",
-          "fairOdds": "3.80",
+          "fairOdds": "2.70",
           "banker": false,
-          "note": "3 goals in 7; cutting in against Norway's left flank is a repeatable route",
+          "note": "England's penalty taker and record WC scorer; deep-drop link + finishing, but service may be limited vs a low block — live, not a banker",
           "strength": 3
+        },
+        {
+          "player": "Andreas Schjelderup",
+          "team": "Norway",
+          "fairOdds": "4.60",
+          "banker": false,
+          "note": "Promoted to a start over Nusa; 3 assists in 183 min and set up both Haaland goals vs Brazil — now a live scorer/assist name himself off the left",
+          "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Martin Odegaard",
           "team": "Norway",
-          "fairOdds": "3.40",
-          "banker": true,
-          "note": "3 assists this WC; the sole creative hub who releases Haaland — safest creator pick on the board"
+          "fairOdds": "3.30",
+          "banker": false,
+          "note": "7 assists in 5 games, the free-kick and corner taker and Norway's sole creative hub who springs Haaland behind the line — top creator on the board, but Norway may see little ball so not banked"
         },
         {
-          "player": "Bukayo Saka",
-          "team": "England",
-          "fairOdds": "4.20",
+          "player": "Andreas Schjelderup",
+          "team": "Norway",
+          "fairOdds": "4.40",
           "banker": false,
-          "note": "Chance creator from the right; deliveries and cutbacks for Kane"
+          "note": "Now starting; assisted both Haaland goals vs Brazil, most creative Norwegian per 90 — his left-side link with Wolfe targets the Konsa seam"
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "4.80",
+          "fairOdds": "4.60",
           "banker": false,
-          "note": "Links play and arrives to combine around the box"
+          "note": "Links play centrally and arrives to combine around the box; England's creative load shifts to him with Saka on the bench"
         }
       ],
       "penalty": {
         "likelihood": "medium",
         "taker": "Harry Kane",
-        "backup": "Jude Bellingham",
-        "note": "Kane converts England pens (6 across WCs); for Norway, Haaland would take. Knockout tension + reviews raise spot-kick odds"
+        "backup": "Declan Rice",
+        "note": "Kane is England's designated penalty taker (converts across WCs); Rice is the backup on-field option, Toney the shootout specialist off the bench. For Norway, Haaland takes. Knockout tension + VAR reviews raise spot-kick odds"
       },
       "lineups": {
-        "home": "Nyland, Ryerson, Ajer, Heggem, Moller-Wolfe, Berge, Berg, Odegaard, Sorloth, Haaland, Nusa",
-        "away": "Pickford, Spence, Konsa, Guehi, O'Reilly, Rice, Anderson, Saka, Bellingham, Gordon, Kane",
-        "status": "probable"
+        "home": "Nyland, Ryerson, Ajer, Heggem, Moller-Wolfe, Berge, Berg, Odegaard, Schjelderup, Sorloth, Haaland",
+        "away": "Pickford, Konsa, Stones, Guehi, O'Reilly, Rice, Anderson, Madueke, Bellingham, Gordon, Kane",
+        "status": "confirmed"
       },
       "playerNotes": [
         {
+          "player": "Ezri Konsa",
+          "team": "England",
+          "note": "A centre-back starting at right-back for the suspended Quansah — solid defensively but far less forward thrust; England's width funnels left and Norway's Wolfe-Schjelderup can attack this seam. The match's key tactical variable"
+        },
+        {
           "player": "Marc Guehi",
           "team": "England",
-          "note": "Minor hamstring strain, serious doubt but hopeful; if out, Stones partners Konsa vs Haaland"
+          "note": "Passed his hamstring fitness test and STARTS — the Konsa-Guehi pairing (England's best of the tournament) stays intact vs Haaland, removing the defensive-chaos angle"
         },
         {
-          "player": "Declan Rice",
+          "player": "Noni Madueke",
           "team": "England",
-          "note": "Sickness bug and played through pain in prior round; fitness monitored but expected to feature"
+          "note": "Starts at right wing OVER Bukayo Saka; direct but a thinner scoring record, so England's right-side end-product drops — cutting edge now runs through Bellingham centrally and Gordon left"
         },
         {
-          "player": "Jarell Quansah",
-          "team": "England",
-          "note": "Suspended (2-match ban) after red card vs Mexico — unavailable for this QF"
+          "player": "Andreas Schjelderup",
+          "team": "Norway",
+          "note": "Starts ahead of Antonio Nusa; set up both of Haaland's goals vs Brazil and is Norway's most creative man per 90 — trades Nusa's raw pace for higher chance-creation"
         },
         {
           "player": "Erling Haaland",
           "team": "Norway",
-          "note": "7 goals in 5, Norway record 62 international goals; the single most decisive threat, thrives in transition"
+          "note": "7 goals this WC, 39% shot conversion, brace vs Brazil; the single most decisive threat and Norway's penalty taker, thrives on Odegaard releases in transition"
         },
         {
           "player": "Martin Odegaard",
           "team": "Norway",
-          "note": "Captain and creative hub with 3 assists; Norway's threat drops sharply if he is stifled"
-        },
-        {
-          "player": "Orjan Nyland",
-          "team": "Norway",
-          "note": "35yo keeper saved a penalty vs Brazil; calm behind the low block, key to any Norway upset"
+          "note": "Captain, 7 assists in 5, free-kick and corner taker; Norway's threat drops sharply if England's double pivot (Rice-Anderson) smothers his half-turns"
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.rotowire.com/soccer/article/norway-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121923",
-        "https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/world-cup-quarter-final-norway-england-predictions",
-        "https://www.squawka.com/us/news/world-cup/match-preview-norway-vs-england-07-11-26-world-cup-2026-quarterfinals/",
-        "https://www.si.com/soccer/norway-vs-england-world-cup-preview-predictions-lineups-7-11-26",
-        "https://www.espn.com/soccer/story/_/id/49322481/england-marc-guehi-declan-rice-fitness-concerns-norway-world-cup-quarterfinal-sources",
-        "https://www.skysports.com/football/news/12040/13561872/norway-vs-england-how-thomas-tuchels-side-stop-erling-haaland",
-        "Model baseline: bivariate-Poisson xG from ESPN group-stage GF/GA + probable-XI research (FIRST card, XIs not yet confirmed)"
+        "https://sports.yahoo.com/soccer/live/world-cup-bracket-schedule-scores-results-live-updates-quarterfinals-203257966.html",
+        "https://www.sportsmole.co.uk/football/norway/world-cup-2026/predicted-lineups/schjelderup-in-sorloth-out-predicted-norway-xi-vs-england_600928.html",
+        "https://www.skysports.com/football/news/12016/13560879/norway-vs-england-tactical-dossier-how-thomas-tuchel-s-side-can-stop-erling-haaland-and-reach-the-world-cup-semi-finals",
+        "https://www.skysports.com/football/news/12016/13562168/world-cup-2026-england-defender-marc-guehi-a-serious-doubt-for-quarter-final-clash-with-norway",
+        "https://theanalyst.com/articles/martin-odegaard-norway-world-cup-stats-captain-creator-everything-in-between",
+        "https://www.espn.com/soccer/story/_/id/49313872/harry-kane-erling-haaland-comparison-key-stats-england-norway-world-cup-quarterfinal",
+        "https://www.squawka.com/en/news/world-cup/world-cup-2026-every-teams-set-piece-takers/",
+        "https://worldsoccertalk.com/world-cup/why-isnt-bukayo-saka-starting-for-england-against-dr-congo-at-the-2026-world-cup/",
+        "Confirmed-XI in-depth research pass (both official starting XIs out ~60 min pre-kickoff)"
       ]
     },
     "esp-bel-2026-07-10": {
