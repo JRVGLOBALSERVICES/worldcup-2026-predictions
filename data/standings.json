@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T23:40:03.602Z",
+    "generatedAt": "2026-07-11T23:50:04.154Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -1162,7 +1162,14 @@
             "D",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Semi-final",
+            "opponent": "Quarterfinal 4 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-15T19:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "Croatia",

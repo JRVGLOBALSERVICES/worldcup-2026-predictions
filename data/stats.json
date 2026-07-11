@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T23:40:10.180Z",
+    "generatedAt": "2026-07-11T23:50:09.412Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 82
+    "finished": 83
   },
   "categories": {
     "scorers": [
@@ -24,14 +24,6 @@
       },
       {
         "rank": 3,
-        "name": "Erling Haaland",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 7,
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -39,7 +31,7 @@
         "matches": 5
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "Jude Bellingham",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -47,7 +39,7 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 5,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -55,7 +47,7 @@
         "matches": 6
       },
       {
-        "rank": 7,
+        "rank": 6,
         "name": "Mikel Oyarzabal",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -63,7 +55,7 @@
         "matches": 6
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "Johan Manzambi",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -71,7 +63,7 @@
         "matches": 4
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "Rubén Vargas",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -79,12 +71,20 @@
         "matches": 5
       },
       {
-        "rank": 10,
+        "rank": 9,
         "name": "Bradley Barcola",
         "team": "France",
         "flag": "🇫🇷",
         "value": 2,
         "matches": 6
+      },
+      {
+        "rank": 9,
+        "name": "Breel Embolo",
+        "team": "Switzerland",
+        "flag": "🇨🇭",
+        "value": 2,
+        "matches": 5
       }
     ],
     "assists": [
@@ -98,22 +98,6 @@
       },
       {
         "rank": 2,
-        "name": "Martin Ødegaard",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 4,
-        "matches": 4
-      },
-      {
-        "rank": 3,
-        "name": "Andreas Schjelderup",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 3,
-        "matches": 5
-      },
-      {
-        "rank": 3,
         "name": "Anthony Gordon",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -121,7 +105,7 @@
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -129,7 +113,7 @@
         "matches": 5
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
@@ -137,7 +121,7 @@
         "matches": 6
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "Breel Embolo",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -145,7 +129,7 @@
         "matches": 5
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "Johan Manzambi",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -153,7 +137,7 @@
         "matches": 4
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "Marc Cucurella",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -161,12 +145,28 @@
         "matches": 6
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
         "value": 2,
         "matches": 6
+      },
+      {
+        "rank": 9,
+        "name": "Adrien Rabiot",
+        "team": "France",
+        "flag": "🇫🇷",
+        "value": 1,
+        "matches": 5
+      },
+      {
+        "rank": 9,
+        "name": "Álex Baena",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 1,
+        "matches": 1
       }
     ],
     "cleanSheets": [
@@ -225,13 +225,6 @@
       },
       {
         "rank": 3,
-        "name": "Antonio Nusa",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 1
-      },
-      {
-        "rank": 3,
         "name": "Aurélien Tchouaméni",
         "team": "France",
         "flag": "🇫🇷",
@@ -270,6 +263,13 @@
         "name": "Ferran Torres",
         "team": "Spain",
         "flag": "🇪🇸",
+        "value": 1
+      },
+      {
+        "rank": 3,
+        "name": "Gonzalo Montiel",
+        "team": "Argentina",
+        "flag": "🇦🇷",
         "value": 1
       }
     ],
@@ -343,13 +343,6 @@
       },
       {
         "rank": 2,
-        "name": "Jørgen Strand Larsen",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 1
-      },
-      {
-        "rank": 2,
         "name": "Kylian Mbappé",
         "team": "France",
         "flag": "🇫🇷",
@@ -415,27 +408,27 @@
       },
       {
         "rank": 8,
-        "name": "Fredrik Aursnes",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 12,
-        "matches": 6
-      },
-      {
-        "rank": 9,
-        "name": "Julian Ryerson",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 11,
-        "matches": 4
-      },
-      {
-        "rank": 10,
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 10,
         "matches": 6
+      },
+      {
+        "rank": 8,
+        "name": "Pedro Porro",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 10,
+        "matches": 4
+      },
+      {
+        "rank": 10,
+        "name": "Nahuel Molina",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 9,
+        "matches": 4
       }
     ],
     "blocks": [
@@ -505,32 +498,24 @@
       },
       {
         "rank": 8,
-        "name": "Alexander Sørloth",
-        "team": "Norway",
-        "flag": "🇳🇴",
+        "name": "Elliot Anderson",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 3,
-        "matches": 5
+        "matches": 6
       },
       {
         "rank": 8,
-        "name": "Antonio Nusa",
-        "team": "Norway",
-        "flag": "🇳🇴",
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "flag": "🇦🇷",
         "value": 3,
-        "matches": 6
+        "matches": 5
       }
     ],
     "gkSaves": [
       {
         "rank": 1,
-        "name": "Ørjan Nyland",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 16,
-        "matches": 5
-      },
-      {
-        "rank": 2,
         "name": "Gregor Kobel",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -538,7 +523,7 @@
         "matches": 4
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Jordan Pickford",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -546,7 +531,7 @@
         "matches": 6
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "Mike Maignan",
         "team": "France",
         "flag": "🇫🇷",
@@ -554,7 +539,7 @@
         "matches": 6
       },
       {
-        "rank": 5,
+        "rank": 4,
         "name": "Unai Simón",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -562,15 +547,7 @@
         "matches": 5
       },
       {
-        "rank": 6,
-        "name": "Egil Selvik",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 5,
-        "matches": 1
-      },
-      {
-        "rank": 7,
+        "rank": 5,
         "name": "Emiliano Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -615,14 +592,6 @@
       },
       {
         "rank": 5,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 86.5,
-        "display": "86.5%",
-        "matches": 6
-      },
-      {
-        "rank": 6,
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 85.2,
@@ -670,14 +639,6 @@
         "value": 53.9,
         "display": "53.9%",
         "matches": 4
-      },
-      {
-        "rank": 6,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 52.1,
-        "display": "52.1%",
-        "matches": 6
       }
     ],
     "shotAccuracy": [
@@ -691,14 +652,6 @@
       },
       {
         "rank": 2,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 43.9,
-        "display": "43.9%",
-        "matches": 6
-      },
-      {
-        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 42.7,
@@ -706,7 +659,7 @@
         "matches": 5
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "France",
         "flag": "🇫🇷",
         "value": 42.7,
@@ -714,7 +667,7 @@
         "matches": 6
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 42.6,
@@ -722,7 +675,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 37.5,
@@ -749,14 +702,6 @@
       },
       {
         "rank": 3,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 64.3,
-        "display": "64.3%",
-        "matches": 6
-      },
-      {
-        "rank": 4,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 64,
@@ -764,7 +709,7 @@
         "matches": 5
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 61.2,
@@ -772,7 +717,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 60.6,
@@ -791,14 +736,6 @@
       },
       {
         "rank": 2,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 28.6,
-        "display": "28.6%",
-        "matches": 6
-      },
-      {
-        "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 26.5,
@@ -806,7 +743,7 @@
         "matches": 6
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 22.2,
@@ -814,7 +751,7 @@
         "matches": 5
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
         "value": 17.9,
@@ -822,7 +759,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 12.1,
@@ -865,14 +802,6 @@
       },
       {
         "rank": 5,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 47.3,
-        "display": "47.3%",
-        "matches": 6
-      },
-      {
-        "rank": 6,
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 45.5,
@@ -1082,6 +1011,10 @@
       "yellowCards": [
         {
           "name": "Antonio Nusa",
+          "value": 1
+        },
+        {
+          "name": "Kristoffer Ajer",
           "value": 1
         },
         {
@@ -4675,437 +4608,6 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 12,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        }
-      ]
-    },
-    {
-      "team": "Norway",
-      "flag": "🇳🇴",
-      "players": [
-        {
-          "name": "Erling Haaland",
-          "apps": 5,
-          "goals": 7,
-          "assists": 0,
-          "shots": 20,
-          "sot": 13,
-          "tackles": 1,
-          "blocks": 3,
-          "passes": 56,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Andreas Schjelderup",
-          "apps": 6,
-          "goals": 1,
-          "assists": 3,
-          "shots": 3,
-          "sot": 2,
-          "tackles": 8,
-          "blocks": 0,
-          "passes": 102,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Antonio Nusa",
-          "apps": 6,
-          "goals": 1,
-          "assists": 0,
-          "shots": 6,
-          "sot": 2,
-          "tackles": 4,
-          "blocks": 3,
-          "passes": 82,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Leo Østigard",
-          "apps": 5,
-          "goals": 1,
-          "assists": 0,
-          "shots": 3,
-          "sot": 1,
-          "tackles": 3,
-          "blocks": 0,
-          "passes": 103,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Marcus Holmgren Pedersen",
-          "apps": 4,
-          "goals": 1,
-          "assists": 0,
-          "shots": 1,
-          "sot": 1,
-          "tackles": 2,
-          "blocks": 0,
-          "passes": 79,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Thelo Aasgaard",
-          "apps": 1,
-          "goals": 1,
-          "assists": 0,
-          "shots": 2,
-          "sot": 1,
-          "tackles": 3,
-          "blocks": 1,
-          "passes": 42,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Martin Ødegaard",
-          "apps": 5,
-          "goals": 0,
-          "assists": 4,
-          "shots": 9,
-          "sot": 3,
-          "tackles": 6,
-          "blocks": 3,
-          "passes": 353,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Patrick Berg",
-          "apps": 6,
-          "goals": 0,
-          "assists": 2,
-          "shots": 3,
-          "sot": 0,
-          "tackles": 10,
-          "blocks": 1,
-          "passes": 175,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "David Møller Wolfe",
-          "apps": 5,
-          "goals": 0,
-          "assists": 1,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 5,
-          "blocks": 0,
-          "passes": 170,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Fredrik Aursnes",
-          "apps": 6,
-          "goals": 0,
-          "assists": 0,
-          "shots": 2,
-          "sot": 0,
-          "tackles": 12,
-          "blocks": 0,
-          "passes": 159,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Oscar Bobb",
-          "apps": 6,
-          "goals": 0,
-          "assists": 0,
-          "shots": 4,
-          "sot": 1,
-          "tackles": 4,
-          "blocks": 1,
-          "passes": 105,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Kristoffer Ajer",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 2,
-          "sot": 1,
-          "tackles": 9,
-          "blocks": 0,
-          "passes": 282,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Torbjørn Heggem",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 1,
-          "sot": 0,
-          "tackles": 8,
-          "blocks": 0,
-          "passes": 301,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Sander Berge",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 6,
-          "blocks": 0,
-          "passes": 427,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Alexander Sørloth",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 5,
-          "sot": 0,
-          "tackles": 1,
-          "blocks": 3,
-          "passes": 121,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Ørjan Nyland",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 184,
-          "saves": 16,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": true
-        },
-        {
-          "name": "Julian Ryerson",
-          "apps": 4,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 11,
-          "blocks": 0,
-          "passes": 128,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Kristian Thorstvedt",
-          "apps": 2,
-          "goals": 0,
-          "assists": 0,
-          "shots": 3,
-          "sot": 1,
-          "tackles": 2,
-          "blocks": 1,
-          "passes": 24,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Jørgen Strand Larsen",
-          "apps": 2,
-          "goals": 0,
-          "assists": 0,
-          "shots": 1,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 25,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 1,
-          "gk": false
-        },
-        {
-          "name": "Egil Selvik",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 1,
-          "blocks": 0,
-          "passes": 25,
-          "saves": 5,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": true
-        },
-        {
-          "name": "Fredrik André Bjørkan",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 1,
-          "blocks": 0,
-          "passes": 18,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Morten Thorsby",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 1,
-          "blocks": 0,
-          "passes": 18,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Henrik Falchener",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 24,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Jens Petter Hauge",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 3,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Sondre Langas",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 10,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -38883,7 +38385,8 @@
             "bk": 0,
             "ps": 29
           }
-        ]
+        ],
+        "coreDone": 1
       }
     }
   }
