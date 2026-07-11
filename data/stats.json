@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T21:40:09.809Z",
+    "generatedAt": "2026-07-11T21:50:08.917Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 82
   },
@@ -40,6 +40,14 @@
       },
       {
         "rank": 5,
+        "name": "Jude Bellingham",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 5,
+        "matches": 5
+      },
+      {
+        "rank": 5,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -47,15 +55,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
-        "name": "Jude Bellingham",
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 4,
-        "matches": 5
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "name": "Mikel Oyarzabal",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -114,6 +114,14 @@
       },
       {
         "rank": 3,
+        "name": "Anthony Gordon",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 3,
+        "matches": 4
+      },
+      {
+        "rank": 3,
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -129,15 +137,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
-        "name": "Anthony Gordon",
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 2,
-        "matches": 4
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "name": "Breel Embolo",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -145,7 +145,7 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Johan Manzambi",
         "team": "Switzerland",
         "flag": "🇨🇭",
@@ -153,7 +153,7 @@
         "matches": 4
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Marc Cucurella",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -161,7 +161,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "Ousmane Dembélé",
         "team": "France",
         "flag": "🇫🇷",
@@ -505,19 +505,19 @@
       },
       {
         "rank": 8,
+        "name": "Alexander Sørloth",
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 3,
+        "matches": 5
+      },
+      {
+        "rank": 8,
         "name": "Elliot Anderson",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 3,
         "matches": 6
-      },
-      {
-        "rank": 8,
-        "name": "Erling Haaland",
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 3,
-        "matches": 5
       }
     ],
     "gkSaves": [
@@ -534,11 +534,11 @@
         "name": "Jordan Pickford",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 10,
+        "value": 11,
         "matches": 6
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Ørjan Nyland",
         "team": "Norway",
         "flag": "🇳🇴",
@@ -601,8 +601,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 89.1,
-        "display": "89.1%",
+        "value": 89.3,
+        "display": "89.3%",
         "matches": 6
       },
       {
@@ -617,8 +617,8 @@
         "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 86.6,
-        "display": "86.6%",
+        "value": 86.4,
+        "display": "86.4%",
         "matches": 6
       },
       {
@@ -651,8 +651,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 59.2,
-        "display": "59.2%",
+        "value": 59.7,
+        "display": "59.7%",
         "matches": 6
       },
       {
@@ -675,27 +675,27 @@
         "rank": 6,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 50.2,
-        "display": "50.2%",
+        "value": 49.7,
+        "display": "49.7%",
         "matches": 6
       }
     ],
     "shotAccuracy": [
       {
         "rank": 1,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 49.1,
-        "display": "49.1%",
-        "matches": 6
-      },
-      {
-        "rank": 2,
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 48.6,
         "display": "48.6%",
         "matches": 4
+      },
+      {
+        "rank": 2,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 48.3,
+        "display": "48.3%",
+        "matches": 6
       },
       {
         "rank": 3,
@@ -717,8 +717,8 @@
         "rank": 5,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 39.5,
-        "display": "39.5%",
+        "value": 39.8,
+        "display": "39.8%",
         "matches": 6
       },
       {
@@ -743,8 +743,8 @@
         "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 66.2,
-        "display": "66.2%",
+        "value": 66.7,
+        "display": "66.7%",
         "matches": 6
       },
       {
@@ -801,8 +801,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 23.8,
-        "display": "23.8%",
+        "value": 24.2,
+        "display": "24.2%",
         "matches": 6
       },
       {
@@ -851,8 +851,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 51.5,
-        "display": "51.5%",
+        "value": 52,
+        "display": "52.0%",
         "matches": 6
       },
       {
@@ -867,8 +867,8 @@
         "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 47.8,
-        "display": "47.8%",
+        "value": 48.1,
+        "display": "48.1%",
         "matches": 6
       },
       {
@@ -1474,7 +1474,7 @@
         },
         {
           "name": "Jude Bellingham",
-          "value": 4,
+          "value": 5,
           "matches": 5
         },
         {
@@ -1485,14 +1485,14 @@
       ],
       "assists": [
         {
+          "name": "Anthony Gordon",
+          "value": 3,
+          "matches": 4
+        },
+        {
           "name": "Bukayo Saka",
           "value": 3,
           "matches": 5
-        },
-        {
-          "name": "Anthony Gordon",
-          "value": 2,
-          "matches": 4
         },
         {
           "name": "Declan Rice",
@@ -3965,13 +3965,13 @@
         {
           "name": "Jude Bellingham",
           "apps": 6,
-          "goals": 4,
+          "goals": 5,
           "assists": 1,
-          "shots": 12,
-          "sot": 9,
+          "shots": 14,
+          "sot": 10,
           "tackles": 12,
-          "blocks": 1,
-          "passes": 179,
+          "blocks": 2,
+          "passes": 185,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4017,12 +4017,12 @@
           "name": "Anthony Gordon",
           "apps": 5,
           "goals": 0,
-          "assists": 2,
+          "assists": 3,
           "shots": 5,
           "sot": 3,
           "tackles": 5,
           "blocks": 1,
-          "passes": 81,
+          "passes": 86,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4039,7 +4039,7 @@
           "sot": 1,
           "tackles": 14,
           "blocks": 3,
-          "passes": 334,
+          "passes": 343,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4056,7 +4056,7 @@
           "sot": 1,
           "tackles": 2,
           "blocks": 1,
-          "passes": 205,
+          "passes": 212,
           "saves": 0,
           "yellow": 2,
           "red": 0,
@@ -4073,7 +4073,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 0,
-          "passes": 188,
+          "passes": 199,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4090,7 +4090,7 @@
           "sot": 1,
           "tackles": 2,
           "blocks": 1,
-          "passes": 400,
+          "passes": 403,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4107,8 +4107,8 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 174,
-          "saves": 10,
+          "passes": 177,
+          "saves": 11,
           "yellow": 0,
           "red": 0,
           "penScored": 0,
@@ -4124,7 +4124,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 357,
+          "passes": 372,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4156,9 +4156,9 @@
           "assists": 0,
           "shots": 6,
           "sot": 1,
-          "tackles": 4,
+          "tackles": 5,
           "blocks": 4,
-          "passes": 87,
+          "passes": 91,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4192,7 +4192,7 @@
           "sot": 0,
           "tackles": 1,
           "blocks": 0,
-          "passes": 107,
+          "passes": 117,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4714,7 +4714,7 @@
           "sot": 2,
           "tackles": 4,
           "blocks": 0,
-          "passes": 93,
+          "passes": 96,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4795,11 +4795,11 @@
           "apps": 5,
           "goals": 0,
           "assists": 4,
-          "shots": 8,
-          "sot": 2,
+          "shots": 9,
+          "sot": 3,
           "tackles": 6,
           "blocks": 3,
-          "passes": 286,
+          "passes": 291,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4816,7 +4816,7 @@
           "sot": 0,
           "tackles": 9,
           "blocks": 1,
-          "passes": 153,
+          "passes": 155,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4901,7 +4901,7 @@
           "sot": 0,
           "tackles": 6,
           "blocks": 0,
-          "passes": 352,
+          "passes": 353,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4931,11 +4931,11 @@
           "apps": 5,
           "goals": 0,
           "assists": 0,
-          "shots": 3,
+          "shots": 5,
           "sot": 0,
           "tackles": 1,
-          "blocks": 2,
-          "passes": 111,
+          "blocks": 3,
+          "passes": 114,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4952,7 +4952,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 150,
+          "passes": 154,
           "saves": 10,
           "yellow": 0,
           "red": 0,
@@ -38468,36 +38468,40 @@
           {
             "name": "Martin Ødegaard",
             "team": "Norway"
+          },
+          {
+            "name": "Anthony Gordon",
+            "team": "England"
           }
         ],
         "teamBox": [
           {
             "team": "Norway",
-            "possessionPct": 35.6,
-            "accuratePasses": 134,
-            "totalPasses": 155,
-            "shotsOnTarget": 2,
-            "totalShots": 2,
+            "possessionPct": 32.5,
+            "accuratePasses": 146,
+            "totalPasses": 173,
+            "shotsOnTarget": 3,
+            "totalShots": 5,
             "effectiveTackles": 6,
             "totalTackles": 11,
             "accurateCrosses": 1,
             "totalCrosses": 1,
-            "accurateLongBalls": 3,
-            "totalLongBalls": 9
+            "accurateLongBalls": 7,
+            "totalLongBalls": 16
           },
           {
             "team": "England",
-            "possessionPct": 64.4,
-            "accuratePasses": 261,
-            "totalPasses": 274,
-            "shotsOnTarget": 0,
-            "totalShots": 1,
-            "effectiveTackles": 1,
-            "totalTackles": 1,
-            "accurateCrosses": 2,
-            "totalCrosses": 7,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 18
+            "possessionPct": 67.5,
+            "accuratePasses": 332,
+            "totalPasses": 349,
+            "shotsOnTarget": 1,
+            "totalShots": 3,
+            "effectiveTackles": 2,
+            "totalTackles": 2,
+            "accurateCrosses": 3,
+            "totalCrosses": 9,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 20
           }
         ],
         "players": [
@@ -38512,7 +38516,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 12
           },
           {
             "n": "Torbjørn Heggem",
@@ -38567,7 +38571,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 28
+            "ps": 29
           },
           {
             "n": "Patrick Berg",
@@ -38578,18 +38582,18 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 12
+            "ps": 14
           },
           {
             "n": "Martin Ødegaard",
             "t": "Norway",
             "aid": "203669",
             "tid": "464",
-            "sh": 0,
-            "st": 0,
+            "sh": 1,
+            "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 23
+            "ps": 28
           },
           {
             "n": "Erling Haaland",
@@ -38611,18 +38615,18 @@
             "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 11
+            "ps": 14
           },
           {
             "n": "Alexander Sørloth",
             "t": "Norway",
             "aid": "188230",
             "tid": "464",
-            "sh": 0,
+            "sh": 2,
             "st": 0,
             "tk": 0,
-            "bk": 0,
-            "ps": 11
+            "bk": 1,
+            "ps": 14
           },
           {
             "n": "Jordan Pickford",
@@ -38630,12 +38634,12 @@
             "aid": "159443",
             "tid": "448",
             "gk": 1,
-            "sv": 1,
+            "sv": 2,
             "sh": 0,
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 6
+            "ps": 9
           },
           {
             "n": "Marc Guéhi",
@@ -38646,7 +38650,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 40
+            "ps": 55
           },
           {
             "n": "John Stones",
@@ -38657,7 +38661,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 41
+            "ps": 51
           },
           {
             "n": "Nico O'Reilly",
@@ -38668,7 +38672,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 32
           },
           {
             "n": "Ezri Konsa",
@@ -38679,18 +38683,18 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 37
+            "ps": 40
           },
           {
             "n": "Jude Bellingham",
             "t": "England",
             "aid": "291281",
             "tid": "448",
-            "sh": 0,
-            "st": 0,
+            "sh": 2,
+            "st": 1,
             "tk": 0,
-            "bk": 0,
-            "ps": 18
+            "bk": 1,
+            "ps": 24
           },
           {
             "n": "Elliot Anderson",
@@ -38701,7 +38705,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 38
+            "ps": 47
           },
           {
             "n": "Declan Rice",
@@ -38712,7 +38716,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 39
+            "ps": 46
           },
           {
             "n": "Harry Kane",
@@ -38734,7 +38738,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 17
+            "ps": 22
           },
           {
             "n": "Noni Madueke",
@@ -38743,9 +38747,9 @@
             "tid": "448",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 12
+            "ps": 16
           }
         ]
       }
