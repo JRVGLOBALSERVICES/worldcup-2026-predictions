@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T23:00:09.136Z",
+    "generatedAt": "2026-07-11T23:10:06.155Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 78,
     "live": 1
@@ -92893,7 +92893,7 @@
       "stats": {
         "corners": {
           "home": 5,
-          "away": 3
+          "away": 4
         },
         "sot": {
           "home": 4,
@@ -93070,7 +93070,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 27
+            "ps": 35
           },
           {
             "team": "home",
@@ -93090,7 +93090,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 39
+            "ps": 42
           },
           {
             "team": "home",
@@ -93110,7 +93110,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 34
+            "ps": 37
           },
           {
             "team": "home",
@@ -93170,7 +93170,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 60
+            "ps": 64
           },
           {
             "team": "home",
@@ -93190,7 +93190,7 @@
             "off": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 22
+            "ps": 23
           },
           {
             "team": "home",
@@ -93210,7 +93210,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 57
+            "ps": 61
           },
           {
             "team": "home",
@@ -93230,7 +93230,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 10
+            "ps": 12
           },
           {
             "team": "home",
@@ -93290,7 +93290,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 20
+            "ps": 22
           },
           {
             "team": "home",
@@ -93314,6 +93314,23 @@
           },
           {
             "team": "home",
+            "name": "Leo Østigard",
+            "pos": "SUB",
+            "num": 4,
+            "starter": false,
+            "aid": "281736",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
             "name": "Oscar Bobb",
             "pos": "SUB",
             "num": 22,
@@ -93330,7 +93347,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 7
+            "ps": 9
           },
           {
             "team": "home",
@@ -93347,7 +93364,10 @@
             "fs": 0,
             "yc": 0,
             "rc": 0,
-            "off": 0
+            "off": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
           },
           {
             "team": "away",
@@ -93390,7 +93410,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 72
+            "ps": 76
           },
           {
             "team": "away",
@@ -93410,7 +93430,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 69
+            "ps": 74
           },
           {
             "team": "away",
@@ -93470,7 +93490,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 35
+            "ps": 36
           },
           {
             "team": "away",
@@ -93490,7 +93510,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 66
+            "ps": 72
           },
           {
             "team": "away",
@@ -93530,7 +93550,7 @@
             "off": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 11
+            "ps": 13
           },
           {
             "team": "away",
@@ -93587,7 +93607,10 @@
             "fs": 0,
             "yc": 0,
             "rc": 0,
-            "off": 0
+            "off": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 3
           },
           {
             "team": "away",
@@ -93607,7 +93630,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 7
+            "ps": 9
           },
           {
             "team": "away",
@@ -93627,7 +93650,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 7
           },
           {
             "team": "away",
@@ -93647,7 +93670,7 @@
             "off": 0,
             "tk": 2,
             "bk": 1,
-            "ps": 9
+            "ps": 13
           },
           {
             "team": "away",
@@ -93667,7 +93690,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 13
+            "ps": 18
           }
         ],
         "subs": [
@@ -93733,6 +93756,13 @@
             "on": "Marcus Pedersen",
             "off": "David Møller Wolfe",
             "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 90,
+            "on": "Leo Østigård",
+            "off": "Torbjørn Heggem",
+            "injury": true
           }
         ],
         "firstGoalMethod": "shot",
@@ -93761,15 +93791,15 @@
         },
         "tempo": {
           "possession": {
-            "home": 42.2,
-            "away": 57.8
+            "home": 41.8,
+            "away": 58.2
           },
           "passes": {
-            "home": 384,
-            "away": 521
+            "home": 388,
+            "away": 535
           },
           "tackles": {
-            "home": 19,
+            "home": 21,
             "away": 8
           },
           "saves": {
@@ -93790,7 +93820,7 @@
           },
           "clearances": {
             "home": 15,
-            "away": 19
+            "away": 21
           }
         },
         "full": [
@@ -93822,7 +93852,7 @@
             "key": "wonCorners",
             "label": "Corner Kicks",
             "home": "5",
-            "away": "3"
+            "away": "4"
           },
           {
             "key": "saves",
@@ -93833,8 +93863,8 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "42.2",
-            "away": "57.8"
+            "home": "41.8",
+            "away": "58.2"
           },
           {
             "key": "totalShots",
@@ -93869,14 +93899,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "326",
-            "away": "481"
+            "home": "328",
+            "away": "495"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "384",
-            "away": "521"
+            "home": "388",
+            "away": "535"
           },
           {
             "key": "passPct",
@@ -93888,13 +93918,13 @@
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
             "home": "3",
-            "away": "6"
+            "away": "7"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
             "home": "13",
-            "away": "17"
+            "away": "18"
           },
           {
             "key": "crossPct",
@@ -93905,14 +93935,14 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "34",
-            "away": "33"
+            "home": "35",
+            "away": "34"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
             "home": "14",
-            "away": "21"
+            "away": "22"
           },
           {
             "key": "longballPct",
@@ -93929,13 +93959,13 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "9",
+            "home": "10",
             "away": "7"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "19",
+            "home": "21",
             "away": "8"
           },
           {
@@ -93954,18 +93984,18 @@
             "key": "effectiveClearance",
             "label": "Effective Clearances",
             "home": "15",
-            "away": "19"
+            "away": "21"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
             "home": "15",
-            "away": "19"
+            "away": "21"
           }
         ],
         "playerTackles": {
-          "Elliot Anderson": 2,
-          "Patrick Berg": 3
+          "Patrick Berg": 3,
+          "Elliot Anderson": 2
         }
       }
     }
