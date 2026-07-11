@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-10T21:10:07.996Z",
+    "generatedAt": "2026-07-11T09:00:16.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-10T21:10:07.996Z"
@@ -23114,347 +23114,145 @@
     "nor-eng-2026-07-11": {
       "win": {
         "pick": "England",
-        "fairOdds": "1.80",
-        "reason": "Model: England to win at 56% (Norway 24% / draw 20% / England 56%). Expected goals 1.5–2.3 from group-stage attack/defence rates (Norway 2.2 for / 2.0 against per game, England 1.8 / 1.0). Most likely score 1-2.",
-        "strength": 4
+        "fairOdds": "2.15",
+        "reason": "England arrive unbeaten in five and with more tournament depth, but they carry real fitness doubts (Guehi hamstring, Rice sickness, Quansah suspended) that thin the spine tasked with containing Haaland. Norway will likely cede the ball, sit in a low block and hunt lightning transitions to feed Haaland (7 goals) and Nusa, which makes this a genuine ~55% England lean rather than a formality. Draw-and-Norway equity together is close to 45%, so the price stays honest.",
+        "strength": 3
       },
       "halfTime": {
-        "score": "0-1",
-        "fairOdds": "5.26",
-        "alt": "0-0",
-        "altOdds": "5.97"
+        "score": "0-0",
+        "fairOdds": "2.50",
+        "alt": "0-1",
+        "altOdds": "4.20",
+        "strength": 3
       },
       "htft": {
-        "pick": "England/England",
-        "fairOdds": "2.25"
+        "pick": "Draw/England",
+        "fairOdds": "4.00"
       },
       "fullTime": {
         "score": "1-2",
-        "fairOdds": "11.29"
+        "fairOdds": "7.50"
+      },
+      "resolution": {
+        "ninety": 63,
+        "extraTime": 22,
+        "penalties": 15,
+        "mostLikely": "Regulation",
+        "etWinner": "England",
+        "shootout": "Near coin-flip — England carry recent shootout scars; Nyland gives Norway real hope.",
+        "note": "Most likely settled inside 90 (63%), but Norway.s low block makes a 37% level-90 real — extra time (22%) and pens (15%) are live in this knockout."
       },
       "scorers": [
         {
           "player": "Harry Kane",
           "team": "England",
-          "fairOdds": "1.52",
-          "banker": true,
-          "note": "6 goals in 5 group games; 66% modelled anytime chance on 2.3 team xG.",
-          "strength": 5
+          "fairOdds": "2.60",
+          "banker": false,
+          "note": "England's penalty taker and record WC scorer (14), but service may be limited vs a deep block; not a banker at 32",
+          "strength": 3
         },
         {
           "player": "Erling Haaland",
           "team": "Norway",
-          "fairOdds": "1.73",
+          "fairOdds": "2.80",
           "banker": false,
-          "note": "7 goals in 4 group games; 58% modelled anytime chance on 1.5 team xG.",
-          "strength": 5
+          "note": "7 goals this WC and Norway's whole plan; even one clear transition can be enough",
+          "strength": 4
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "1.82",
+          "fairOdds": "3.60",
           "banker": false,
-          "note": "4 goals in 5 group games; 55% modelled anytime chance on 2.3 team xG.",
-          "strength": 5
+          "note": "3 goals incl. brace vs Mexico; arrives late from midfield, prime second-phase threat",
+          "strength": 3
         },
         {
-          "player": "Marcus Rashford",
+          "player": "Bukayo Saka",
           "team": "England",
-          "fairOdds": "4.27",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "1 goal in 1 group game; 23% modelled anytime chance on 2.3 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Antonio Nusa",
-          "team": "Norway",
-          "fairOdds": "6.29",
-          "banker": false,
-          "note": "1 goal in 1 group game; 16% modelled anytime chance on 1.5 team xG.",
-          "strength": 1
+          "note": "3 goals in 7; cutting in against Norway's left flank is a repeatable route",
+          "strength": 3
         }
       ],
       "assists": [
         {
+          "player": "Martin Odegaard",
+          "team": "Norway",
+          "fairOdds": "3.40",
+          "banker": true,
+          "note": "3 assists this WC; the sole creative hub who releases Haaland — safest creator pick on the board"
+        },
+        {
           "player": "Bukayo Saka",
           "team": "England",
-          "fairOdds": "1.84",
-          "banker": true,
-          "note": "3 assists in the group stage; 54% modelled chance to set one up."
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Chance creator from the right; deliveries and cutbacks for Kane"
         },
         {
-          "player": "Anthony Gordon",
+          "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "2.35",
+          "fairOdds": "4.80",
           "banker": false,
-          "note": "2 assists in the group stage; 43% modelled chance to set one up."
-        },
-        {
-          "player": "Andreas Schjelderup",
-          "team": "Norway",
-          "fairOdds": "2.69",
-          "banker": false,
-          "note": "3 assists in the group stage; 37% modelled chance to set one up."
-        },
-        {
-          "player": "Martin Ødegaard",
-          "team": "Norway",
-          "fairOdds": "2.69",
-          "banker": false,
-          "note": "3 assists in the group stage; 37% modelled chance to set one up."
+          "note": "Links play and arrives to combine around the box"
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Harry Kane",
         "backup": "Jude Bellingham",
-        "note": "England favoured to control the game, so a penalty is less pivotal; Harry Kane would take one if awarded."
+        "note": "Kane converts England pens (6 across WCs); for Norway, Haaland would take. Knockout tension + reviews raise spot-kick odds"
       },
       "lineups": {
-        "home": "Orjan Nyland, Marcus Holmgren Pedersen, Kristoffer Ajer, Torbjorn Heggem, David Moller Wolfe, Sander Berge, Patrick Berg, Martin Odegaard, Antonio Nusa, Erling Haaland, Alexander Sorloth",
-        "away": "Jordan Pickford, Jarell Quansah, Ezri Konsa, Marc Guéhi, Nico O'Reilly, Declan Rice, Elliot Anderson, Bukayo Saka, Jude Bellingham, Anthony Gordon, Harry Kane",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 12,
-              "name": "Orjan Nyland",
-              "pos": "G"
-            },
-            {
-              "num": 5,
-              "name": "Marcus Holmgren Pedersen",
-              "pos": "RB"
-            },
-            {
-              "num": 6,
-              "name": "Kristoffer Ajer",
-              "pos": "CB"
-            },
-            {
-              "num": 15,
-              "name": "Torbjorn Heggem",
-              "pos": "CB"
-            },
-            {
-              "num": 3,
-              "name": "David Moller Wolfe",
-              "pos": "LB"
-            },
-            {
-              "num": 8,
-              "name": "Sander Berge",
-              "pos": "CM"
-            },
-            {
-              "num": 18,
-              "name": "Patrick Berg",
-              "pos": "CM"
-            },
-            {
-              "num": 10,
-              "name": "Martin Odegaard",
-              "pos": "CM/AM"
-            },
-            {
-              "num": 20,
-              "name": "Antonio Nusa",
-              "pos": "RW"
-            },
-            {
-              "num": 9,
-              "name": "Erling Haaland",
-              "pos": "ST"
-            },
-            {
-              "num": 11,
-              "name": "Alexander Sorloth",
-              "pos": "LW"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 1,
-              "name": "Jordan Pickford",
-              "pos": "G"
-            },
-            {
-              "num": 16,
-              "name": "Jarell Quansah",
-              "pos": "RB"
-            },
-            {
-              "num": 2,
-              "name": "Ezri Konsa",
-              "pos": "CD-R"
-            },
-            {
-              "num": 6,
-              "name": "Marc Guéhi",
-              "pos": "CD-L"
-            },
-            {
-              "num": 3,
-              "name": "Nico O'Reilly",
-              "pos": "LB"
-            },
-            {
-              "num": 4,
-              "name": "Declan Rice",
-              "pos": "DM-R"
-            },
-            {
-              "num": 8,
-              "name": "Elliot Anderson",
-              "pos": "DM-L"
-            },
-            {
-              "num": 7,
-              "name": "Bukayo Saka",
-              "pos": "RM"
-            },
-            {
-              "num": 10,
-              "name": "Jude Bellingham",
-              "pos": "AM"
-            },
-            {
-              "num": 19,
-              "name": "Anthony Gordon",
-              "pos": "LM"
-            },
-            {
-              "num": 9,
-              "name": "Harry Kane",
-              "pos": "F"
-            }
-          ]
-        }
+        "home": "Nyland, Ryerson, Ajer, Heggem, Moller-Wolfe, Berge, Berg, Odegaard, Sorloth, Haaland, Nusa",
+        "away": "Pickford, Spence, Konsa, Guehi, O'Reilly, Rice, Anderson, Saka, Bellingham, Gordon, Kane",
+        "status": "probable"
       },
       "playerNotes": [
         {
-          "player": "Harry Kane",
+          "player": "Marc Guehi",
           "team": "England",
-          "note": "6 goals in 5 group games; 66% modelled anytime chance on 2.3 team xG."
+          "note": "Minor hamstring strain, serious doubt but hopeful; if out, Stones partners Konsa vs Haaland"
+        },
+        {
+          "player": "Declan Rice",
+          "team": "England",
+          "note": "Sickness bug and played through pain in prior round; fitness monitored but expected to feature"
+        },
+        {
+          "player": "Jarell Quansah",
+          "team": "England",
+          "note": "Suspended (2-match ban) after red card vs Mexico — unavailable for this QF"
         },
         {
           "player": "Erling Haaland",
           "team": "Norway",
-          "note": "7 goals in 4 group games; 58% modelled anytime chance on 1.5 team xG."
+          "note": "7 goals in 5, Norway record 62 international goals; the single most decisive threat, thrives in transition"
         },
         {
-          "player": "Bukayo Saka",
-          "team": "England",
-          "note": "3 assists in the group stage; 54% modelled chance to set one up."
+          "player": "Martin Odegaard",
+          "team": "Norway",
+          "note": "Captain and creative hub with 3 assists; Norway's threat drops sharply if he is stifled"
+        },
+        {
+          "player": "Orjan Nyland",
+          "team": "Norway",
+          "note": "35yo keeper saved a penalty vs Brazil; calm behind the low block, key to any Norway upset"
         }
       ],
       "confidence": "medium",
-      "strength": 4,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
-      ],
-      "pitchReport": {
-        "facts": [
-          "Norway: 6 pts, +1 GD across 3 group games (8 for / 7 against).",
-          "England: 7 pts, +4 GD across 3 group games (6 for / 2 against).",
-          "Norway's Erling Haaland leads them with 7 goals in 4 games.",
-          "England's Harry Kane leads them with 6 goals in 5 games."
-        ],
-        "assumptions": [
-          "Model projects England to carry more of the ball and the better chances (higher attack rating); Norway to sit compact and play on the break.",
-          "Goal expectancy 1.5–2.3 (Norway–England) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
-        ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "England shade the chance-creation (2.3 vs 1.5 xG) — they should make the running.",
-        "drawRisk": "Moderate — 19.7% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
-        "travel": "Miami humidity drags the second-half tempo; hydration breaks reset momentum.",
-        "caseFor": [
-          "England are the model's 55.5% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Harry Kane carrying the scoring load.",
-          "Conditions (heat) suit a controlled game England can manage."
-        ],
-        "caseAgainst": [
-          "19.7% draw + Norway's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; England's number may be inflated by one result."
-        ],
-        "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Harry Kane, or news the underdog is missing a defensive linchpin."
-      },
-      "valueSpot": null,
-      "trapDetector": {
-        "flags": [
-          {
-            "name": "Favourite on reputation / at a poor price",
-            "why": "Not priced — can't confirm the favourite is good value."
-          },
-          {
-            "name": "Dead rubber / rotation risk",
-            "tripped": false,
-            "why": "Knockout — both name strongest XI, no rotation."
-          },
-          {
-            "name": "Built on one result / a short hot streak",
-            "tripped": false,
-            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
-          },
-          {
-            "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
-          },
-          {
-            "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
-          },
-          {
-            "name": "Ignoring the draw",
-            "tripped": false,
-            "why": "Draw chance (19.7%) is low enough to discount."
-          },
-          {
-            "name": "Emotional / a chase / just for action",
-            "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
-          }
-        ],
-        "trapsTripped": 1,
-        "edge": "edge-leaning",
-        "verdict": "PLAYABLE",
-        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
-      },
-      "brainSummary": {
-        "verdict": "PLAYABLE",
-        "call": "England to win is a clean call.",
-        "read": {
-          "tag": "Bet",
-          "line": "England are the model's 56% pick."
-        },
-        "price": {
-          "tag": "Not priced yet",
-          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
-        },
-        "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
-        }
-      },
-      "resolution": {
-        "ninety": 80.3,
-        "extraTime": 11.8,
-        "penalties": 7.9,
-        "mostLikely": "Regulation",
-        "etWinner": "England",
-        "shootout": "Near coin-flip, with the marginal nerve edge to England.",
-        "note": "Most likely settled inside 90 (80.3%). But a 19.7% level 90 keeps extra time (11.8%) and penalties (7.9%) live — in a knockout, that's the bit a straight win bet ignores."
-      }
+        "https://www.rotowire.com/soccer/article/norway-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121923",
+        "https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/world-cup-quarter-final-norway-england-predictions",
+        "https://www.squawka.com/us/news/world-cup/match-preview-norway-vs-england-07-11-26-world-cup-2026-quarterfinals/",
+        "https://www.si.com/soccer/norway-vs-england-world-cup-preview-predictions-lineups-7-11-26",
+        "https://www.espn.com/soccer/story/_/id/49322481/england-marc-guehi-declan-rice-fitness-concerns-norway-world-cup-quarterfinal-sources",
+        "https://www.skysports.com/football/news/12040/13561872/norway-vs-england-how-thomas-tuchels-side-stop-erling-haaland",
+        "Model baseline: bivariate-Poisson xG from ESPN group-stage GF/GA + probable-XI research (FIRST card, XIs not yet confirmed)"
+      ]
     },
     "esp-bel-2026-07-10": {
       "win": {
@@ -23806,347 +23604,145 @@
     "arg-swi-2026-07-12": {
       "win": {
         "pick": "Argentina",
-        "fairOdds": "1.65",
-        "reason": "Model: Argentina to win at 61% (Argentina 61% / draw 22% / Switzerland 18%). Expected goals 1.9–0.9 from group-stage attack/defence rates (Argentina 2.2 for / 0.8 against per game, Switzerland 2.0 / 1.2). Most likely score 1-0.",
-        "strength": 5
+        "fairOdds": "1.80",
+        "reason": "Argentina are reigning champions and clear favourites (Opta ~57% to win in 90, bet365 -270 to advance), but the knockout run has been shaky — they conceded in both KO games and needed late comebacks vs Cape Verde (ET) and Egypt (from 2-0 down). Switzerland reach the QF for the first time since 1954 by defending deep and low, drawing 0-0 with Colombia before winning on penalties; Xhaka anchors a compact block built to frustrate a possession side. This is a genuine draw/upset risk (~45% between a Swiss win/draw), so back Argentina but do not treat it as a formality.",
+        "strength": 3
       },
       "halfTime": {
-        "score": "0-0",
-        "fairOdds": "3.54",
-        "alt": "1-0",
-        "altOdds": "5.12"
+        "score": "1-0",
+        "fairOdds": "3.10",
+        "alt": "0-0",
+        "altOdds": "2.90",
+        "strength": 2
       },
       "htft": {
         "pick": "Draw/Argentina",
-        "fairOdds": "4.13"
+        "fairOdds": "4.20"
       },
       "fullTime": {
-        "score": "1-0",
-        "fairOdds": "9.16"
+        "score": "2-1",
+        "fairOdds": "7.50"
+      },
+      "resolution": {
+        "ninety": 60,
+        "extraTime": 22,
+        "penalties": 18,
+        "mostLikely": "Regulation",
+        "etWinner": "Argentina",
+        "shootout": "Slight edge Argentina (E. Martinez pedigree), but Switzerland just beat Colombia on pens — genuinely tight.",
+        "note": "Argentina favoured to win the 90 (60%), yet a Swiss deep block + shootout record push extra time (22%) and penalties (18%) into play."
       },
       "scorers": [
         {
           "player": "Lionel Messi",
           "team": "Argentina",
-          "fairOdds": "1.52",
-          "banker": true,
-          "note": "8 goals in 5 group games; 66% modelled anytime chance on 1.9 team xG.",
-          "strength": 5
-        },
-        {
-          "player": "Johan Manzambi",
-          "team": "Switzerland",
-          "fairOdds": "4.47",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "3 goals in 4 group games; 22% modelled anytime chance on 0.9 team xG.",
-          "strength": 1
+          "note": "Tournament top-scorer (8), 8-game scoring streak — but 39 and vs a deep block; NOT a banker at his age",
+          "strength": 4
         },
         {
-          "player": "Rubén Vargas",
-          "team": "Switzerland",
-          "fairOdds": "4.47",
-          "banker": false,
-          "note": "3 goals in 5 group games; 22% modelled anytime chance on 0.9 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Cristian Romero",
+          "player": "Lautaro Martinez",
           "team": "Argentina",
-          "fairOdds": "5.34",
+          "fairOdds": "3.00",
           "banker": false,
-          "note": "1 goal in 1 group game; 19% modelled anytime chance on 1.9 team xG.",
-          "strength": 1
+          "note": "In pole to start ahead of Alvarez; on the mark this tournament + set up the late Egypt winner",
+          "strength": 3
         },
         {
-          "player": "Enzo Fernández",
+          "player": "Julian Alvarez",
           "team": "Argentina",
-          "fairOdds": "5.34",
+          "fairOdds": "3.20",
           "banker": false,
-          "note": "1 goal in 1 group game; 19% modelled anytime chance on 1.9 team xG.",
-          "strength": 1
-        }
-      ],
-      "assists": [
-        {
-          "player": "Alexis Mac Allister",
-          "team": "Argentina",
-          "fairOdds": "3.12",
-          "banker": true,
-          "note": "1 assist in the group stage; 32% modelled chance to set one up."
-        },
-        {
-          "player": "Facundo Medina",
-          "team": "Argentina",
-          "fairOdds": "3.12",
-          "banker": false,
-          "note": "1 assist in the group stage; 32% modelled chance to set one up."
-        },
-        {
-          "player": "Gonzalo Montiel",
-          "team": "Argentina",
-          "fairOdds": "3.12",
-          "banker": false,
-          "note": "1 assist in the group stage; 32% modelled chance to set one up."
+          "note": "Started vs Egypt; ankle issue eased; movement can unlock a low block whether he starts or comes on",
+          "strength": 3
         },
         {
           "player": "Breel Embolo",
           "team": "Switzerland",
-          "fairOdds": "3.63",
+          "fairOdds": "4.50",
           "banker": false,
-          "note": "2 assists in the group stage; 28% modelled chance to set one up."
+          "note": "Swiss focal point — 13 G/A in last 17 internationals — but was starved vs Colombia (1 touch in box); relies on rare counters",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Primary creator; the deep block invites him to supply rather than finish"
+        },
+        {
+          "player": "Rodrigo De Paul",
+          "team": "Argentina",
+          "fairOdds": "5.00",
+          "banker": false,
+          "note": "Right-side link and delivery into the box"
+        },
+        {
+          "player": "Dan Ndoye",
+          "team": "Switzerland",
+          "fairOdds": "6.50",
+          "banker": false,
+          "note": "Swiss counter outlet; pace to exploit Argentina's high line if a break arrives"
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Lionel Messi",
-        "backup": "Cristian Romero",
-        "note": "Argentina favoured to control the game, so a penalty is less pivotal; Lionel Messi would take one if awarded."
+        "backup": "Lautaro Martinez",
+        "note": "Messi is Argentina's designated taker; Lautaro converted vs Jordan when Messi was rested and is the backup. Against a deep block, spot-kicks/handballs are a real route to the opener."
       },
       "lineups": {
-        "home": "Emiliano Martínez, Nahuel Molina, Cristian Romero, Lisandro Martínez, Nicolás Tagliafico, Rodrigo De Paul, Leandro Paredes, Alexis Mac Allister, Enzo Fernández, Lionel Messi, Julián Álvarez",
-        "away": "Gregor Kobel, Denis Zakaria, Nico Elvedi, Manuel Akanji, Ricardo Rodríguez, Granit Xhaka, Remo Freuler, Ardon Jashari, Fabian Rieder, Breel Embolo, Dan Ndoye",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-4-2",
-          "players": [
-            {
-              "num": 23,
-              "name": "Emiliano Martínez",
-              "pos": "G"
-            },
-            {
-              "num": 26,
-              "name": "Nahuel Molina",
-              "pos": "RB"
-            },
-            {
-              "num": 13,
-              "name": "Cristian Romero",
-              "pos": "CD"
-            },
-            {
-              "num": 25,
-              "name": "Lisandro Martínez",
-              "pos": "CD"
-            },
-            {
-              "num": null,
-              "name": "Nicolás Tagliafico",
-              "pos": "LB"
-            },
-            {
-              "num": 7,
-              "name": "Rodrigo De Paul",
-              "pos": "RM"
-            },
-            {
-              "num": null,
-              "name": "Leandro Paredes",
-              "pos": "CM"
-            },
-            {
-              "num": 20,
-              "name": "Alexis Mac Allister",
-              "pos": "CM"
-            },
-            {
-              "num": 24,
-              "name": "Enzo Fernández",
-              "pos": "LM"
-            },
-            {
-              "num": 10,
-              "name": "Lionel Messi",
-              "pos": "ST"
-            },
-            {
-              "num": null,
-              "name": "Julián Álvarez",
-              "pos": "ST"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 1,
-              "name": "Gregor Kobel",
-              "pos": "G"
-            },
-            {
-              "num": 6,
-              "name": "Denis Zakaria",
-              "pos": "RB"
-            },
-            {
-              "num": 4,
-              "name": "Nico Elvedi",
-              "pos": "CD-R"
-            },
-            {
-              "num": 5,
-              "name": "Manuel Akanji",
-              "pos": "CD-L"
-            },
-            {
-              "num": 13,
-              "name": "Ricardo Rodríguez",
-              "pos": "LB"
-            },
-            {
-              "num": 8,
-              "name": "Remo Freuler",
-              "pos": "CM-R"
-            },
-            {
-              "num": 10,
-              "name": "Granit Xhaka",
-              "pos": "DM"
-            },
-            {
-              "num": 14,
-              "name": "Ardon Jashari",
-              "pos": "CM-L"
-            },
-            {
-              "num": 22,
-              "name": "Fabian Rieder",
-              "pos": "AM-R"
-            },
-            {
-              "num": 11,
-              "name": "Dan Ndoye",
-              "pos": "AM-L"
-            },
-            {
-              "num": 7,
-              "name": "Breel Embolo",
-              "pos": "F"
-            }
-          ]
-        }
+        "home": "Emiliano Martinez, Nahuel Molina, Cristian Romero, Lisandro Martinez, Nicolas Tagliafico, Rodrigo De Paul, Leandro Paredes, Alexis Mac Allister, Enzo Fernandez, Lionel Messi, Lautaro Martinez",
+        "away": "Gregor Kobel, Denis Zakaria, Nico Elvedi, Manuel Akanji, Ricardo Rodriguez, Remo Freuler, Granit Xhaka, Dan Ndoye, Djibril Sow, Ruben Vargas, Breel Embolo",
+        "status": "probable"
       },
       "playerNotes": [
         {
           "player": "Lionel Messi",
           "team": "Argentina",
-          "note": "8 goals in 5 group games; 66% modelled anytime chance on 1.9 team xG."
+          "note": "WC all-time top scorer (20), 8 this tournament, scoring in 8 straight — but 39 vs a low block, upgrade creator over finisher"
+        },
+        {
+          "player": "Julian Alvarez",
+          "team": "Argentina",
+          "note": "Ankle issue from Atletico duty; started vs Egypt but rotates with Lautaro for the Messi partner slot"
+        },
+        {
+          "player": "Cristian Romero",
+          "team": "Argentina",
+          "note": "Scored in the late Egypt comeback; leader of a defence that has conceded in both KO games"
+        },
+        {
+          "player": "Granit Xhaka",
+          "team": "Switzerland",
+          "note": "146-cap captain, most final-third line-breaking passes at the tournament (50); Argentina will press him early"
         },
         {
           "player": "Johan Manzambi",
           "team": "Switzerland",
-          "note": "3 goals in 4 group games; 22% modelled anytime chance on 0.9 team xG."
+          "note": "RULED OUT — knee injury; Swiss breakout (3 goals, 2 assists) confirmed unavailable, a major blow"
         },
         {
-          "player": "Alexis Mac Allister",
-          "team": "Argentina",
-          "note": "1 assist in the group stage; 32% modelled chance to set one up."
+          "player": "Breel Embolo",
+          "team": "Switzerland",
+          "note": "Lone-striker focal point (13 G/A in last 17) but isolated vs deep-set opponents — 1 box touch across 87 mins vs Colombia"
         }
       ],
       "confidence": "medium",
-      "strength": 5,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
-      ],
-      "pitchReport": {
-        "facts": [
-          "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
-          "Switzerland: 7 pts, +4 GD across 3 group games (7 for / 3 against).",
-          "Argentina's Lionel Messi leads them with 8 goals in 5 games.",
-          "Switzerland's Johan Manzambi leads them with 3 goals in 4 games."
-        ],
-        "assumptions": [
-          "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Switzerland to sit compact and play on the break.",
-          "Goal expectancy 1.9–0.9 (Argentina–Switzerland) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
-        ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
-        "xgRead": "Argentina shade the chance-creation (1.9 vs 0.9 xG) — they should make the running.",
-        "drawRisk": "Moderate — 21.6% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
-        "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
-        "caseFor": [
-          "Argentina are the model's 60.5% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Lionel Messi carrying the scoring load.",
-          "Conditions (heat) suit a controlled game Argentina can manage."
-        ],
-        "caseAgainst": [
-          "21.6% draw + Switzerland's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result."
-        ],
-        "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Lionel Messi, or news the underdog is missing a defensive linchpin."
-      },
-      "valueSpot": null,
-      "trapDetector": {
-        "flags": [
-          {
-            "name": "Favourite on reputation / at a poor price",
-            "why": "Not priced — can't confirm the favourite is good value."
-          },
-          {
-            "name": "Dead rubber / rotation risk",
-            "tripped": false,
-            "why": "Knockout — both name strongest XI, no rotation."
-          },
-          {
-            "name": "Built on one result / a short hot streak",
-            "tripped": false,
-            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
-          },
-          {
-            "name": "Cagey knockout the market underrates",
-            "tripped": false,
-            "why": "Goals/margin profile doesn't scream stalemate."
-          },
-          {
-            "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
-          },
-          {
-            "name": "Ignoring the draw",
-            "tripped": false,
-            "why": "Draw chance (21.6%) is low enough to discount."
-          },
-          {
-            "name": "Emotional / a chase / just for action",
-            "tripped": false,
-            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
-          }
-        ],
-        "trapsTripped": 1,
-        "edge": "edge-leaning",
-        "verdict": "PLAYABLE",
-        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
-      },
-      "brainSummary": {
-        "verdict": "PLAYABLE",
-        "call": "Argentina to win is a clean call.",
-        "read": {
-          "tag": "Bet",
-          "line": "Argentina are the model's 61% pick."
-        },
-        "price": {
-          "tag": "Not priced yet",
-          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
-        },
-        "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
-        }
-      },
-      "resolution": {
-        "ninety": 78.4,
-        "extraTime": 11.6,
-        "penalties": 10.1,
-        "mostLikely": "Regulation",
-        "etWinner": "Argentina",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Argentina.",
-        "note": "Most likely settled inside 90 (78.4%). But a 21.6% level 90 keeps extra time (11.6%) and penalties (10.1%) live — in a knockout, that's the bit a straight win bet ignores."
-      }
+        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/preview/argentina-vs-switzerland-prediction-team-news-lineups_600947.html",
+        "https://www.rotowire.com/soccer/article/argentina-vs-switzerland-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121924",
+        "https://news.bet365.com/en-us/article/argentina-vs-switzerland-quarterfinal-preview-lineup-predictions/2026070916124631618",
+        "https://theanalyst.com/articles/argentina-vs-switzerland-prediction-world-cup-2026-match-preview",
+        "https://www.si.com/soccer/argentina-predicted-lineup-vs-switzerland-world-cup-quarterfinal-7-11-26",
+        "https://www.cbssports.com/soccer/news/argentina-switzerland-odds-prediction-time-2026-world-cup-quarterfinal-picks-lionel-messi-props/",
+        "Model baseline: bivariate-Poisson xG from ESPN group-stage GF/GA + probable-XI research (FIRST card, XIs not yet confirmed)"
+      ]
     }
   }
 }
