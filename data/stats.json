@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T22:20:11.947Z",
+    "generatedAt": "2026-07-11T22:30:17.133Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 82
   },
@@ -427,7 +427,7 @@
         "team": "Norway",
         "flag": "🇳🇴",
         "value": 10,
-        "matches": 5
+        "matches": 6
       },
       {
         "rank": 9,
@@ -530,15 +530,15 @@
         "matches": 4
       },
       {
-        "rank": 1,
+        "rank": 2,
         "name": "Jordan Pickford",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 13,
+        "value": 11,
         "matches": 6
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Ørjan Nyland",
         "team": "Norway",
         "flag": "🇳🇴",
@@ -617,8 +617,8 @@
         "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 86.4,
-        "display": "86.4%",
+        "value": 86.3,
+        "display": "86.3%",
         "matches": 6
       },
       {
@@ -651,8 +651,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 59.1,
-        "display": "59.1%",
+        "value": 58.6,
+        "display": "58.6%",
         "matches": 6
       },
       {
@@ -675,27 +675,27 @@
         "rank": 6,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 50.3,
-        "display": "50.3%",
+        "value": 50.8,
+        "display": "50.8%",
         "matches": 6
       }
     ],
     "shotAccuracy": [
       {
         "rank": 1,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 49.2,
-        "display": "49.2%",
-        "matches": 6
-      },
-      {
-        "rank": 2,
         "team": "Switzerland",
         "flag": "🇨🇭",
         "value": 48.6,
         "display": "48.6%",
         "matches": 4
+      },
+      {
+        "rank": 2,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 47.5,
+        "display": "47.5%",
+        "matches": 6
       },
       {
         "rank": 3,
@@ -733,18 +733,18 @@
     "tackleSuccess": [
       {
         "rank": 1,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 68.2,
-        "display": "68.2%",
-        "matches": 6
-      },
-      {
-        "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 67.1,
         "display": "67.1%",
+        "matches": 6
+      },
+      {
+        "rank": 2,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 66.3,
+        "display": "66.3%",
         "matches": 6
       },
       {
@@ -783,14 +783,6 @@
     "crossCompletion": [
       {
         "rank": 1,
-        "team": "Norway",
-        "flag": "🇳🇴",
-        "value": 35.4,
-        "display": "35.4%",
-        "matches": 6
-      },
-      {
-        "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 33.9,
@@ -798,11 +790,19 @@
         "matches": 5
       },
       {
+        "rank": 2,
+        "team": "Norway",
+        "flag": "🇳🇴",
+        "value": 33.8,
+        "display": "33.8%",
+        "matches": 6
+      },
+      {
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 24.2,
-        "display": "24.2%",
+        "value": 24.8,
+        "display": "24.8%",
         "matches": 6
       },
       {
@@ -851,8 +851,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 53,
-        "display": "53.0%",
+        "value": 52.5,
+        "display": "52.5%",
         "matches": 6
       },
       {
@@ -867,8 +867,8 @@
         "rank": 5,
         "team": "Norway",
         "flag": "🇳🇴",
-        "value": 48.1,
-        "display": "48.1%",
+        "value": 47.7,
+        "display": "47.7%",
         "matches": 6
       },
       {
@@ -3954,7 +3954,7 @@
           "sot": 11,
           "tackles": 2,
           "blocks": 4,
-          "passes": 79,
+          "passes": 80,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3971,7 +3971,7 @@
           "sot": 10,
           "tackles": 12,
           "blocks": 2,
-          "passes": 191,
+          "passes": 193,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4022,7 +4022,7 @@
           "sot": 3,
           "tackles": 5,
           "blocks": 1,
-          "passes": 89,
+          "passes": 92,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4039,7 +4039,7 @@
           "sot": 1,
           "tackles": 15,
           "blocks": 3,
-          "passes": 350,
+          "passes": 357,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4073,7 +4073,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 0,
-          "passes": 200,
+          "passes": 201,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4090,7 +4090,7 @@
           "sot": 1,
           "tackles": 2,
           "blocks": 1,
-          "passes": 405,
+          "passes": 407,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4107,8 +4107,8 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 179,
-          "saves": 13,
+          "passes": 181,
+          "saves": 11,
           "yellow": 0,
           "red": 0,
           "penScored": 0,
@@ -4124,7 +4124,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 374,
+          "passes": 379,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4192,7 +4192,7 @@
           "sot": 0,
           "tackles": 1,
           "blocks": 0,
-          "passes": 117,
+          "passes": 120,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4694,7 +4694,7 @@
           "goals": 7,
           "assists": 0,
           "shots": 20,
-          "sot": 14,
+          "sot": 13,
           "tackles": 1,
           "blocks": 3,
           "passes": 49,
@@ -4712,9 +4712,9 @@
           "assists": 3,
           "shots": 3,
           "sot": 2,
-          "tackles": 4,
+          "tackles": 8,
           "blocks": 0,
-          "passes": 99,
+          "passes": 102,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4799,7 +4799,7 @@
           "sot": 3,
           "tackles": 6,
           "blocks": 3,
-          "passes": 292,
+          "passes": 302,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4816,7 +4816,7 @@
           "sot": 0,
           "tackles": 10,
           "blocks": 1,
-          "passes": 157,
+          "passes": 159,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4833,7 +4833,7 @@
           "sot": 0,
           "tackles": 5,
           "blocks": 0,
-          "passes": 163,
+          "passes": 165,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4843,14 +4843,31 @@
         },
         {
           "name": "Fredrik Aursnes",
-          "apps": 5,
+          "apps": 6,
           "goals": 0,
           "assists": 0,
           "shots": 1,
           "sot": 0,
           "tackles": 10,
           "blocks": 0,
-          "passes": 119,
+          "passes": 126,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
+          "name": "Oscar Bobb",
+          "apps": 6,
+          "goals": 0,
+          "assists": 0,
+          "shots": 3,
+          "sot": 1,
+          "tackles": 3,
+          "blocks": 1,
+          "passes": 86,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4867,7 +4884,7 @@
           "sot": 1,
           "tackles": 9,
           "blocks": 0,
-          "passes": 255,
+          "passes": 258,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4884,7 +4901,7 @@
           "sot": 0,
           "tackles": 7,
           "blocks": 0,
-          "passes": 286,
+          "passes": 291,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4901,24 +4918,7 @@
           "sot": 0,
           "tackles": 6,
           "blocks": 0,
-          "passes": 358,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Oscar Bobb",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 3,
-          "sot": 1,
-          "tackles": 3,
-          "blocks": 1,
-          "passes": 86,
+          "passes": 368,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4935,7 +4935,7 @@
           "sot": 0,
           "tackles": 1,
           "blocks": 3,
-          "passes": 118,
+          "passes": 121,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4952,7 +4952,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 158,
+          "passes": 161,
           "saves": 11,
           "yellow": 0,
           "red": 0,
@@ -38477,31 +38477,31 @@
         "teamBox": [
           {
             "team": "Norway",
-            "possessionPct": 36.2,
-            "accuratePasses": 181,
-            "totalPasses": 216,
-            "shotsOnTarget": 5,
-            "totalShots": 8,
-            "effectiveTackles": 8,
-            "totalTackles": 13,
-            "accurateCrosses": 4,
+            "possessionPct": 39.2,
+            "accuratePasses": 221,
+            "totalPasses": 264,
+            "shotsOnTarget": 3,
+            "totalShots": 6,
+            "effectiveTackles": 9,
+            "totalTackles": 17,
+            "accurateCrosses": 3,
             "totalCrosses": 6,
             "accurateLongBalls": 9,
-            "totalLongBalls": 20
+            "totalLongBalls": 22
           },
           {
             "team": "England",
-            "possessionPct": 63.8,
-            "accuratePasses": 357,
-            "totalPasses": 378,
+            "possessionPct": 60.8,
+            "accuratePasses": 380,
+            "totalPasses": 404,
             "shotsOnTarget": 2,
             "totalShots": 6,
             "effectiveTackles": 3,
             "totalTackles": 3,
-            "accurateCrosses": 3,
-            "totalCrosses": 9,
+            "accurateCrosses": 4,
+            "totalCrosses": 10,
             "accurateLongBalls": 18,
-            "totalLongBalls": 22
+            "totalLongBalls": 24
           }
         ],
         "players": [
@@ -38516,7 +38516,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 19
           },
           {
             "n": "Torbjørn Heggem",
@@ -38527,7 +38527,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 27
+            "ps": 32
           },
           {
             "n": "Kristoffer Ajer",
@@ -38538,7 +38538,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 24
+            "ps": 27
           },
           {
             "n": "David Møller Wolfe",
@@ -38549,7 +38549,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 17
+            "ps": 19
           },
           {
             "n": "Julian Ryerson",
@@ -38571,7 +38571,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 34
+            "ps": 44
           },
           {
             "n": "Patrick Berg",
@@ -38582,7 +38582,7 @@
             "st": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 16
+            "ps": 18
           },
           {
             "n": "Martin Ødegaard",
@@ -38593,7 +38593,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 29
+            "ps": 39
           },
           {
             "n": "Erling Haaland",
@@ -38601,7 +38601,7 @@
             "aid": "253989",
             "tid": "464",
             "sh": 2,
-            "st": 2,
+            "st": 1,
             "tk": 1,
             "bk": 0,
             "ps": 6
@@ -38613,9 +38613,9 @@
             "tid": "464",
             "sh": 1,
             "st": 1,
-            "tk": 2,
+            "tk": 6,
             "bk": 0,
-            "ps": 17
+            "ps": 20
           },
           {
             "n": "Alexander Sørloth",
@@ -38626,7 +38626,29 @@
             "st": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 18
+            "ps": 21
+          },
+          {
+            "n": "Fredrik Aursnes",
+            "t": "Norway",
+            "aid": "212900",
+            "tid": "464",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 7
+          },
+          {
+            "n": "Oscar Bobb",
+            "t": "Norway",
+            "aid": "307111",
+            "tid": "464",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
           },
           {
             "n": "Jordan Pickford",
@@ -38634,12 +38656,12 @@
             "aid": "159443",
             "tid": "448",
             "gk": 1,
-            "sv": 4,
+            "sv": 2,
             "sh": 0,
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 11
+            "ps": 13
           },
           {
             "n": "Marc Guéhi",
@@ -38650,7 +38672,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 57
+            "ps": 62
           },
           {
             "n": "John Stones",
@@ -38661,7 +38683,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 51
+            "ps": 54
           },
           {
             "n": "Nico O'Reilly",
@@ -38672,7 +38694,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 33
+            "ps": 34
           },
           {
             "n": "Ezri Konsa",
@@ -38683,7 +38705,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 42
+            "ps": 44
           },
           {
             "n": "Jude Bellingham",
@@ -38694,7 +38716,7 @@
             "st": 1,
             "tk": 0,
             "bk": 1,
-            "ps": 30
+            "ps": 32
           },
           {
             "n": "Elliot Anderson",
@@ -38705,7 +38727,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 54
+            "ps": 61
           },
           {
             "n": "Declan Rice",
@@ -38727,7 +38749,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 9
           },
           {
             "n": "Anthony Gordon",
@@ -38738,7 +38760,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 25
+            "ps": 28
           },
           {
             "n": "Noni Madueke",
