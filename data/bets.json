@@ -17623,6 +17623,202 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863586258462093313",
+      "slipNo": "863586258462093313",
+      "matchId": "nor-eng-2026-07-11",
+      "player": "Treble · Norway/England + Argentina/Switzerland + France/Spain",
+      "market": "Treble (3 parlays) · 17 legs",
+      "label": "REAL 1xBet TREBLE 863586258462093313 (11/07 09:03) @154.51, RM8 -> RM1,236.12. 3 parlays: [NOR-ENG @21.47] Total O1.5 · 1H Total O0.5 · BTTS Yes · Kane scorer · Haaland scorer · Norway-or-England DC · Bellingham score/assist · Pickford O1.5 saves · Patrick Berg O1.5 tackles. [ARG-SWI @3.46] Total O1.5 · Argentina to qualify · Messi scorer · Embolo O0.5 shots · Ndoye O0.5 shots · Lautaro O0.5 shots · Romero O0.5 tackles. [FRA-ESP @2.08] Mbappé anytime scorer.",
+      "odds": 154.51,
+      "stake": 8,
+      "placedAt": "11/07 09:03",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "btts"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scored",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scored",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "gkSavesOver",
+            "player": "Jordan Pickford",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerTacklesOver",
+            "player": "Patrick Berg",
+            "line": 1.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Breel Embolo",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Dan Ndoye",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Lautaro Martinez",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerTacklesOver",
+            "player": "Cristian Romero",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "scored",
+            "player": "Kylian Mbappe"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-863580958073962497",
+      "slipNo": "863580958073962497",
+      "matchId": "nor-eng-2026-07-11",
+      "player": "Double · Norway/England + Argentina/Switzerland",
+      "market": "Double (2 parlays) · 13 legs",
+      "label": "REAL 1xBet DOUBLE 863580958073962497 (11/07 08:42) @12.24, RM242 -> RM2,964.11. 2 parlays: [NOR-ENG @3.46] Pickford O1.5 saves · Elliot Anderson O1.5 tackles · Bellingham O0.5 shots · Anthony Gordon O0.5 SoT · Kane score/assist · Total O1.5. [ARG-SWI @3.54] Argentina to qualify · Total O0.5 · Messi scorer · Embolo O0.5 shots · Argentina-or-Switzerland DC · Lautaro O0.5 SoT · Ndoye O0.5 shots.",
+      "odds": 12.24,
+      "stake": 242,
+      "placedAt": "11/07 08:42",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "gkSavesOver",
+            "player": "Jordan Pickford",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerTacklesOver",
+            "player": "Elliot Anderson",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerShotsOver",
+            "player": "Jude Bellingham",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerSotOver",
+            "player": "Anthony Gordon",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Harry Kane"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Breel Embolo",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerSotOver",
+            "player": "Lautaro Martinez",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Dan Ndoye",
+            "line": 0.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
