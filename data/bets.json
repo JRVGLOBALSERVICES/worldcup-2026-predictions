@@ -17819,6 +17819,120 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863862551220985856",
+      "slipNo": "863862551220985856",
+      "matchId": "nor-eng-2026-07-11",
+      "player": "Double · Norway/England + Argentina/Switzerland",
+      "market": "Double (2 parlays) · 18 legs",
+      "label": "REAL 1xBet DOUBLE 863862551220985856 (11/07) @101.04, RM25 -> RM2,526.11. 2 parlays: [NOR-ENG @12.71] Haaland score/assist · Pickford O1.5 saves · Total U6.5 · Corners FT O9.5 · Norway-or-England DC · Bellingham O0.5 SoT · Kane O1.5 SoT · Elliot Anderson O0.5 tackles · 1H Total O0.5. [ARG-SWI @7.95] Argentina to qualify · Total O0.5 · Total U5.5 · Messi scorer · Embolo O0.5 shots · Mac Allister O0.5 tackles · Lautaro score/assist · Ndoye O0.5 shots · Argentina to win either half.",
+      "odds": 101.04,
+      "stake": 25,
+      "placedAt": "11/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "scoredOrAssisted",
+            "player": "Erling Haaland"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "gkSavesOver",
+            "player": "Jordan Pickford",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "totalUnder",
+            "line": 6.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "cornersTotalOver",
+            "line": 9.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "doubleChance",
+            "outcome": "12"
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerSotOver",
+            "player": "Jude Bellingham",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerSotOver",
+            "player": "Harry Kane",
+            "line": 1.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "playerTacklesOver",
+            "player": "Elliot Anderson",
+            "line": 0.5
+          },
+          {
+            "matchId": "nor-eng-2026-07-11",
+            "kind": "firstHalfTotalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Breel Embolo",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerTacklesOver",
+            "player": "Alexis Mac Allister",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "scoredOrAssisted",
+            "player": "Lautaro Martinez"
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Dan Ndoye",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-swi-2026-07-12",
+            "kind": "winsAtLeastOneHalf",
+            "side": "home"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
