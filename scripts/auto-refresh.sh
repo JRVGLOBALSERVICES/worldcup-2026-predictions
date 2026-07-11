@@ -25,6 +25,17 @@ if ! flock -n 9; then
   exit 0
 fi
 
+# Game-window gate — only refresh from 30 min before kickoff to 30 min after
+# full time. Outside a live match nothing changes, so skip the whole build
+# chain (and the redeploy it would trigger). Override with FORCE_REFRESH=1.
+if [ "${FORCE_REFRESH:-0}" != "1" ]; then
+  if ! window="$(node scripts/in-game-window.mjs 2>>"$LOG")"; then
+    log "skip — $window"
+    exit 0
+  fi
+  log "$window"
+fi
+
 before="$(node scripts/content-hash.mjs 2>>"$LOG")"
 
 # Fail-soft chain — build-odds is already fail-soft on a geo-block; if any step
