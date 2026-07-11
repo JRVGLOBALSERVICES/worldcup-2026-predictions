@@ -13,7 +13,7 @@ REPO="/root/repos/worldcup-2026"
 cd "$REPO" || exit 1
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 LOG="$REPO/data/auto-refresh.log"
-GEN="data/results.json data/standings.json data/stats.json data/odds.json data/predictions.json data/history.json data/acca-recs.json"
+GEN="data/fixtures.json data/results.json data/standings.json data/stats.json data/odds.json data/predictions.json data/history.json data/acca-recs.json"
 
 stamp() { date -u +%FT%TZ; }
 log() { echo "$(stamp) $*" >> "$LOG"; }
@@ -25,12 +25,29 @@ if ! flock -n 9; then
   exit 0
 fi
 
+# Seed knockout-bracket fixtures FIRST, every tick, regardless of the game
+# window. As each round's teams resolve on ESPN, the semi/3rd-place/final ties
+# become concrete — this pulls them into fixtures.json so predictions + pages
+# pick them up automatically (no human needing to mention a missing match).
+# Runs before the window gate because future fixtures must seed even when no
+# match is live right now.
+node scripts/build-standings.mjs         >>"$LOG" 2>&1
+node scripts/build-knockout-fixtures.mjs >>"$LOG" 2>&1
+NEW_FIXTURE=0
+if ! git diff --quiet -- data/fixtures.json 2>>"$LOG"; then
+  NEW_FIXTURE=1
+  log "new/changed knockout fixture seeded — forcing refresh"
+fi
+
 # Game-window gate — only refresh from 30 min before kickoff to 30 min after
 # full time. Outside a live match nothing changes, so skip the whole build
-# chain (and the redeploy it would trigger). Override with FORCE_REFRESH=1.
-if [ "${FORCE_REFRESH:-0}" != "1" ]; then
+# chain (and the redeploy it would trigger). Override with FORCE_REFRESH=1, or
+# when a new knockout tie was just seeded (it needs a prediction + commit now).
+if [ "${FORCE_REFRESH:-0}" != "1" ] && [ "$NEW_FIXTURE" != "1" ]; then
   if ! window="$(node scripts/in-game-window.mjs 2>>"$LOG")"; then
     log "skip — $window"
+    # drop the standings timestamp churn from the always-on seed step
+    git checkout -- data/standings.json data/fixtures.json 2>>"$LOG"
     exit 0
   fi
   log "$window"
@@ -39,9 +56,9 @@ fi
 before="$(node scripts/content-hash.mjs 2>>"$LOG")"
 
 # Fail-soft chain — build-odds is already fail-soft on a geo-block; if any step
-# errors we still re-hash and only commit a genuine change.
+# errors we still re-hash and only commit a genuine change. (standings +
+# knockout fixtures already built above.)
 node scripts/build-results.mjs     >>"$LOG" 2>&1
-node scripts/build-standings.mjs   >>"$LOG" 2>&1
 node scripts/build-stats.mjs       >>"$LOG" 2>&1
 node scripts/build-odds.mjs        >>"$LOG" 2>&1
 node scripts/build-predictions.mjs >>"$LOG" 2>&1
@@ -50,7 +67,7 @@ node scripts/build-acca-recs.mjs   >>"$LOG" 2>&1
 
 after="$(node scripts/content-hash.mjs 2>>"$LOG")"
 
-if [ -n "$before" ] && [ "$before" = "$after" ]; then
+if [ -n "$before" ] && [ "$before" = "$after" ] && [ "$NEW_FIXTURE" != "1" ]; then
   # Timestamp-only churn — drop it so we don't spam redeploys.
   git checkout -- $GEN 2>>"$LOG"
   log "no meaningful change"
