@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-11T21:30:07.786Z",
+    "generatedAt": "2026-07-11T21:40:06.895Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 78,
     "live": 1
@@ -92863,11 +92863,20 @@
       "ft90": null,
       "finishPhase": null,
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "home",
+          "scorer": "Andreas Schjelderup",
+          "minute": 35,
+          "assist": "Martin Ødegaard",
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
       "cards": [],
       "updatedAt": "2026-07-11T21:00:00.000Z",
       "stats": {
@@ -92876,11 +92885,11 @@
           "away": 1
         },
         "sot": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "shots": {
-          "home": 0,
+          "home": 2,
           "away": 1
         },
         "yellow": {
@@ -92896,7 +92905,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 2,
+          "home": 4,
           "away": 2
         },
         "cornersByHalf": {
@@ -92911,7 +92920,7 @@
         },
         "sotByHalf": {
           "home": [
-            0,
+            1,
             0
           ],
           "away": [
@@ -92919,9 +92928,40 @@
             0
           ]
         },
-        "playerSot": {},
-        "playerShots": {},
-        "playerShotBreakdown": {},
+        "playerSot": {
+          "Erling Haaland": 1
+        },
+        "playerShots": {
+          "Harry Kane": 1,
+          "Erling Haaland": 1,
+          "Andreas Schjelderup": 1
+        },
+        "playerShotBreakdown": {
+          "Harry Kane": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Erling Haaland": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Andreas Schjelderup": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 1
+          }
+        },
         "players": [
           {
             "team": "home",
@@ -92944,7 +92984,7 @@
             "gc": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 6
           },
           {
             "team": "home",
@@ -92962,9 +93002,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 5
+            "ps": 10
           },
           {
             "team": "home",
@@ -92984,7 +93024,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 10
+            "ps": 11
           },
           {
             "team": "home",
@@ -93004,7 +93044,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 9
           },
           {
             "team": "home",
@@ -93017,7 +93057,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -93044,7 +93084,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 11
+            "ps": 15
           },
           {
             "team": "home",
@@ -93064,7 +93104,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 10
           },
           {
             "team": "home",
@@ -93074,7 +93114,7 @@
             "starter": true,
             "aid": "203669",
             "g": 0,
-            "a": 0,
+            "a": 1,
             "sh": 0,
             "sot": 0,
             "fc": 0,
@@ -93084,7 +93124,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 10
+            "ps": 12
           },
           {
             "team": "home",
@@ -93095,16 +93135,16 @@
             "aid": "253989",
             "g": 0,
             "a": 0,
-            "sh": 0,
-            "sot": 0,
+            "sh": 1,
+            "sot": 1,
             "fc": 0,
             "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 1
+            "ps": 3
           },
           {
             "team": "home",
@@ -93113,18 +93153,18 @@
             "num": 21,
             "starter": true,
             "aid": "313415",
-            "g": 0,
+            "g": 1,
             "a": 0,
-            "sh": 0,
-            "sot": 0,
+            "sh": 1,
+            "sot": 1,
             "fc": 0,
             "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 2,
             "bk": 0,
-            "ps": 5
+            "ps": 8
           },
           {
             "team": "home",
@@ -93137,7 +93177,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -93163,11 +93203,11 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "sv": 0,
-            "gc": 0,
+            "sv": 1,
+            "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 3
           },
           {
             "team": "away",
@@ -93187,7 +93227,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 34
           },
           {
             "team": "away",
@@ -93207,7 +93247,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 22
+            "ps": 38
           },
           {
             "team": "away",
@@ -93221,13 +93261,13 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 19
           },
           {
             "team": "away",
@@ -93247,7 +93287,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 20
+            "ps": 29
           },
           {
             "team": "away",
@@ -93267,7 +93307,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 17
           },
           {
             "team": "away",
@@ -93287,7 +93327,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 28
+            "ps": 37
           },
           {
             "team": "away",
@@ -93307,7 +93347,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 35
           },
           {
             "team": "away",
@@ -93318,7 +93358,7 @@
             "aid": "142200",
             "g": 0,
             "a": 0,
-            "sh": 0,
+            "sh": 1,
             "sot": 0,
             "fc": 0,
             "fs": 0,
@@ -93327,7 +93367,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 5
           },
           {
             "team": "away",
@@ -93341,13 +93381,13 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 10
+            "ps": 16
           },
           {
             "team": "away",
@@ -93367,11 +93407,11 @@
             "off": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 12
           }
         ],
         "subs": [],
-        "firstGoalMethod": null,
+        "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
           "h1": {
@@ -93387,20 +93427,20 @@
         },
         "tempo": {
           "possession": {
-            "home": 28.5,
-            "away": 71.5
+            "home": 35.6,
+            "away": 64.4
           },
           "passes": {
-            "home": 99,
-            "away": 245
+            "home": 155,
+            "away": 274
           },
           "tackles": {
-            "home": 7,
+            "home": 11,
             "away": 1
           },
           "saves": {
             "home": 0,
-            "away": 0
+            "away": 1
           },
           "offsides": {
             "home": 0,
@@ -93415,7 +93455,7 @@
             "away": 1
           },
           "clearances": {
-            "home": 5,
+            "home": 7,
             "away": 2
           }
         },
@@ -93423,7 +93463,7 @@
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "2",
+            "home": "4",
             "away": "2"
           },
           {
@@ -93454,30 +93494,30 @@
             "key": "saves",
             "label": "Saves",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "28.5",
-            "away": "71.5"
+            "home": "35.6",
+            "away": "64.4"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "0",
+            "home": "2",
             "away": "1"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
-            "home": "0",
+            "home": "2",
             "away": "0"
           },
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "0.0",
+            "home": "1.0",
             "away": "0.0"
           },
           {
@@ -93495,55 +93535,55 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "81",
-            "away": "233"
+            "home": "134",
+            "away": "261"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "99",
-            "away": "245"
+            "home": "155",
+            "away": "274"
           },
           {
             "key": "passPct",
             "label": "Pass Completion %",
-            "home": "0.8",
+            "home": "0.9",
             "away": "1.0"
           },
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "0",
+            "home": "1",
             "away": "2"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "0",
-            "away": "6"
+            "home": "1",
+            "away": "7"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
-            "home": "0.0",
+            "home": "1.0",
             "away": "0.3"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "8",
-            "away": "16"
+            "home": "9",
+            "away": "18"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
             "home": "3",
-            "away": "11"
+            "away": "13"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.4",
+            "home": "0.3",
             "away": "0.7"
           },
           {
@@ -93555,19 +93595,19 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "3",
+            "home": "6",
             "away": "1"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "7",
+            "home": "11",
             "away": "1"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.4",
+            "home": "0.5",
             "away": "1.0"
           },
           {
@@ -93579,18 +93619,18 @@
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "5",
+            "home": "7",
             "away": "2"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "5",
+            "home": "7",
             "away": "2"
           }
         ],
         "playerTackles": {
-          "Patrick Berg": 0,
+          "Patrick Berg": 2,
           "Elliot Anderson": 0
         }
       }
