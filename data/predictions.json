@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T00:36:15.000Z",
+    "generatedAt": "2026-07-12T00:40:08.438Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-11T23:50:10.158Z"
+    "modelUpdatedAt": "2026-07-12T00:40:08.437Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -24086,19 +24086,19 @@
       ],
       "pitchReport": {
         "facts": [
-          "Argentina: 5 wins from 5; Messi leads with 8 goals + 9 assists.",
-          "Switzerland: topped Group B, beat Colombia on pens after 120 goalless min — didn't concede in the knockouts.",
-          "Manzambi (Switzerland's group-stage top scorer) is OUT injured — forces the deep-block, counter-only mode.",
-          "Confirmed XIs out: Álvarez starts over Lautaro for ARG; Sow replaces Jashari for SUI, Vargas benched."
+          "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
+          "Switzerland: 7 pts, +4 GD across 3 group games (7 for / 3 against).",
+          "Argentina's Lionel Messi leads them with 8 goals in 5 games.",
+          "Switzerland's Johan Manzambi leads them with 3 goals in 4 games."
         ],
         "assumptions": [
           "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Switzerland to sit compact and play on the break.",
           "Goal expectancy 1.9–0.9 (Argentina–Switzerland) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "CONFIRMED. Argentina 4-3-3 (Messi/Álvarez/Mac Allister front three). Switzerland 4-3-3/4-2-3-1 deep block: Embolo lone striker, Ndoye + Rieder + Sow, Xhaka pivot.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Argentina shade the chance-creation (1.9 vs 0.9 xG) — they should make the running.",
-        "drawRisk": "Live — Switzerland's block already produced 120 goalless min vs Colombia; draw/penalties genuinely in play.",
+        "drawRisk": "Moderate — 21.6% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
         "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
         "caseFor": [
           "Argentina are the model's 60.5% favourite — higher attack rating and the better recent goal-rate.",
@@ -24110,7 +24110,7 @@
           "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result."
         ],
         "verdict": "Bet",
-        "changeMind": "Already updated on confirmed XIs — the remaining swing is whether Argentina breaks the block or gets caught by Embolo/Ndoye on the counter."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -24135,6 +24135,11 @@
             "why": "Goals/margin profile doesn't scream stalemate."
           },
           {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
             "name": "Ignoring the draw",
             "tripped": false,
             "why": "Draw chance (21.6%) is low enough to discount."
@@ -24143,21 +24148,16 @@
             "name": "Emotional / a chase / just for action",
             "tripped": false,
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
-          },
-          {
-            "name": "Favourite win-to-nil trap",
-            "tripped": true,
-            "why": "Argentina's defence is leaky (trailed Egypt 0-2) and Embolo/Ndoye counter well — win-to-nil is the shakiest ARG derivative; fade it."
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 0,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "PLAYABLE",
-        "call": "Argentina to win, but narrowly — value clusters on Under 2.5 and the draw being live.",
+        "call": "Argentina to win is a clean call.",
         "read": {
           "tag": "Bet",
           "line": "Argentina are the model's 61% pick."
@@ -24167,8 +24167,8 @@
           "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "XIs confirmed — but Argentina win-to-nil is a trap; their defence is leaky and the Swiss counter through Embolo/Ndoye."
+          "tag": "Clean",
+          "line": "Nothing trips the filter — about as solid as a call gets."
         }
       },
       "resolution": {
