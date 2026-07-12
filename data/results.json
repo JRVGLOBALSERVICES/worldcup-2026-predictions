@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T02:30:10.678Z",
+    "generatedAt": "2026-07-12T02:40:07.514Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 79,
     "live": 1
@@ -94156,6 +94156,12 @@
           "player": "Breel Embolo",
           "minute": 44,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Breel Embolo",
+          "minute": 71,
+          "type": "red"
         }
       ],
       "updatedAt": "2026-07-12T01:00:00.000Z",
@@ -94173,20 +94179,20 @@
           "away": 9
         },
         "yellow": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "red": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "cards": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
         "fouls": {
           "home": 8,
-          "away": 14
+          "away": 15
         },
         "cornersByHalf": {
           "home": [
@@ -94302,6 +94308,23 @@
         "players": [
           {
             "team": "home",
+            "name": "Nico González",
+            "pos": "",
+            "num": 15,
+            "starter": false,
+            "aid": "76017",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
             "name": "Emiliano Martínez",
             "pos": "G",
             "num": 23,
@@ -94321,7 +94344,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 24
+            "ps": 31
           },
           {
             "team": "home",
@@ -94339,9 +94362,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 2,
             "bk": 0,
-            "ps": 30
+            "ps": 34
           },
           {
             "team": "home",
@@ -94361,7 +94384,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 28
+            "ps": 29
           },
           {
             "team": "home",
@@ -94381,7 +94404,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 38
+            "ps": 48
           },
           {
             "team": "home",
@@ -94398,10 +94421,10 @@
             "fs": 4,
             "yc": 0,
             "rc": 0,
-            "off": 0,
+            "off": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 17
+            "ps": 21
           },
           {
             "team": "home",
@@ -94421,7 +94444,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 30
+            "ps": 33
           },
           {
             "team": "home",
@@ -94441,7 +94464,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 29
           },
           {
             "team": "home",
@@ -94461,7 +94484,7 @@
             "off": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 14
+            "ps": 16
           },
           {
             "team": "home",
@@ -94481,7 +94504,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 26
+            "ps": 30
           },
           {
             "team": "home",
@@ -94499,9 +94522,9 @@
             "yc": 0,
             "rc": 0,
             "off": 1,
-            "tk": 0,
+            "tk": 1,
             "bk": 1,
-            "ps": 14
+            "ps": 16
           },
           {
             "team": "home",
@@ -94519,9 +94542,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 19
+            "ps": 22
           },
           {
             "team": "away",
@@ -94544,7 +94567,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 13
+            "ps": 16
           },
           {
             "team": "away",
@@ -94564,7 +94587,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 35
+            "ps": 42
           },
           {
             "team": "away",
@@ -94584,7 +94607,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 41
+            "ps": 50
           },
           {
             "team": "away",
@@ -94594,7 +94617,7 @@
             "starter": true,
             "aid": "136865",
             "g": 0,
-            "a": 0,
+            "a": 1,
             "sh": 0,
             "sot": 0,
             "fc": 2,
@@ -94604,7 +94627,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 29
+            "ps": 33
           },
           {
             "team": "away",
@@ -94624,7 +94647,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 39
+            "ps": 43
           },
           {
             "team": "away",
@@ -94644,7 +94667,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 13
+            "ps": 16
           },
           {
             "team": "away",
@@ -94664,7 +94687,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 44
+            "ps": 56
           },
           {
             "team": "away",
@@ -94684,7 +94707,7 @@
             "off": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 37
+            "ps": 45
           },
           {
             "team": "away",
@@ -94697,14 +94720,14 @@
             "a": 0,
             "sh": 1,
             "sot": 1,
-            "fc": 1,
+            "fc": 2,
             "fs": 3,
-            "yc": 1,
-            "rc": 0,
+            "yc": 0,
+            "rc": 1,
             "off": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 10
           },
           {
             "team": "away",
@@ -94724,7 +94747,7 @@
             "off": 1,
             "tk": 0,
             "bk": 1,
-            "ps": 17
+            "ps": 20
           },
           {
             "team": "away",
@@ -94744,10 +94767,18 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 25
           }
         ],
-        "subs": [],
+        "subs": [
+          {
+            "team": "home",
+            "minute": 77,
+            "on": "Nico González",
+            "off": "Nicolás Tagliafico",
+            "injury": false
+          }
+        ],
         "firstGoalMethod": "header",
         "firstPenalty": null,
         "waterBreak": {
@@ -94760,16 +94791,26 @@
             "firstActionMinute": 27,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "anchor",
+            "breakEndMinute": null,
+            "firstActionType": "VAR - Referee decision cancelled",
+            "firstActionMinute": 70,
+            "isCorner": false,
+            "reliable": true
           }
         },
         "tempo": {
           "possession": {
-            "home": 46,
-            "away": 54
+            "home": 48,
+            "away": 52
           },
           "passes": {
-            "home": 308,
-            "away": 356
+            "home": 337,
+            "away": 359
           },
           "tackles": {
             "home": 8,
@@ -94780,7 +94821,7 @@
             "away": 0
           },
           "offsides": {
-            "home": 1,
+            "home": 2,
             "away": 2
           },
           "blockedShots": {
@@ -94801,24 +94842,24 @@
             "key": "foulsCommitted",
             "label": "Fouls",
             "home": "8",
-            "away": "14"
+            "away": "15"
           },
           {
             "key": "yellowCards",
             "label": "Yellow Cards",
-            "home": "0",
+            "home": "1",
             "away": "1"
           },
           {
             "key": "redCards",
             "label": "Red Cards",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "offsides",
             "label": "Offsides",
-            "home": "1",
+            "home": "2",
             "away": "2"
           },
           {
@@ -94836,8 +94877,8 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "46",
-            "away": "54"
+            "home": "48",
+            "away": "52"
           },
           {
             "key": "totalShots",
@@ -94872,14 +94913,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "256",
-            "away": "318"
+            "home": "284",
+            "away": "320"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "308",
-            "away": "356"
+            "home": "337",
+            "away": "359"
           },
           {
             "key": "passPct",
@@ -94908,20 +94949,20 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "32",
-            "away": "23"
+            "home": "34",
+            "away": "24"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "10",
+            "home": "11",
             "away": "15"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
             "home": "0.3",
-            "away": "0.7"
+            "away": "0.6"
           },
           {
             "key": "blockedShots",
@@ -94967,8 +95008,8 @@
           }
         ],
         "playerTackles": {
-          "Cristian Romero": 1,
-          "Alexis Mac Allister": 1
+          "Alexis Mac Allister": 1,
+          "Cristian Romero": 1
         }
       }
     }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T02:30:14.115Z",
+    "generatedAt": "2026-07-12T02:40:10.934Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 83
   },
@@ -274,6 +274,13 @@
       }
     ],
     "redCards": [
+      {
+        "rank": 1,
+        "name": "Breel Embolo",
+        "team": "Switzerland",
+        "flag": "🇨🇭",
+        "value": 1
+      },
       {
         "rank": 1,
         "name": "Jarell Quansah",
@@ -620,8 +627,8 @@
         "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 58,
-        "display": "58.0%",
+        "value": 58.3,
+        "display": "58.3%",
         "matches": 6
       },
       {
@@ -636,8 +643,8 @@
         "rank": 5,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 53.9,
-        "display": "53.9%",
+        "value": 53.5,
+        "display": "53.5%",
         "matches": 5
       }
     ],
@@ -804,8 +811,8 @@
         "rank": 5,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 47.4,
-        "display": "47.4%",
+        "value": 47.2,
+        "display": "47.2%",
         "matches": 5
       }
     ]
@@ -1852,7 +1859,12 @@
           "value": 1
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "name": "Breel Embolo",
+          "value": 1
+        }
+      ]
     },
     "bosnia": {
       "team": "Bosnia-Herzegovina",
@@ -3482,7 +3494,7 @@
           "sot": 14,
           "tackles": 7,
           "blocks": 3,
-          "passes": 215,
+          "passes": 217,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3499,7 +3511,7 @@
           "sot": 3,
           "tackles": 16,
           "blocks": 3,
-          "passes": 320,
+          "passes": 323,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3516,7 +3528,7 @@
           "sot": 1,
           "tackles": 9,
           "blocks": 0,
-          "passes": 347,
+          "passes": 349,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3550,7 +3562,7 @@
           "sot": 1,
           "tackles": 9,
           "blocks": 0,
-          "passes": 324,
+          "passes": 325,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3567,7 +3579,7 @@
           "sot": 3,
           "tackles": 8,
           "blocks": 4,
-          "passes": 357,
+          "passes": 363,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3601,7 +3613,24 @@
           "sot": 1,
           "tackles": 6,
           "blocks": 0,
-          "passes": 257,
+          "passes": 260,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
+          "name": "Nico González",
+          "apps": 5,
+          "goals": 0,
+          "assists": 1,
+          "shots": 4,
+          "sot": 0,
+          "tackles": 3,
+          "blocks": 1,
+          "passes": 58,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3621,23 +3650,6 @@
           "passes": 126,
           "saves": 0,
           "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Nico González",
-          "apps": 4,
-          "goals": 0,
-          "assists": 1,
-          "shots": 4,
-          "sot": 0,
-          "tackles": 3,
-          "blocks": 1,
-          "passes": 58,
-          "saves": 0,
-          "yellow": 0,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -3669,7 +3681,7 @@
           "sot": 3,
           "tackles": 3,
           "blocks": 2,
-          "passes": 126,
+          "passes": 127,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3686,7 +3698,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 158,
+          "passes": 159,
           "saves": 8,
           "yellow": 0,
           "red": 0,
@@ -3720,7 +3732,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 1,
-          "passes": 381,
+          "passes": 389,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3737,7 +3749,7 @@
           "sot": 0,
           "tackles": 3,
           "blocks": 0,
-          "passes": 126,
+          "passes": 127,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5022,7 +5034,7 @@
           "passes": 66,
           "saves": 0,
           "yellow": 1,
-          "red": 0,
+          "red": 1,
           "penScored": 0,
           "penMissed": 0,
           "gk": false
@@ -5155,7 +5167,7 @@
           "sot": 0,
           "tackles": 4,
           "blocks": 1,
-          "passes": 347,
+          "passes": 348,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5189,7 +5201,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 2,
-          "passes": 75,
+          "passes": 76,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5257,7 +5269,7 @@
           "sot": 1,
           "tackles": 4,
           "blocks": 1,
-          "passes": 99,
+          "passes": 100,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -38412,23 +38424,23 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 46,
-            "accuratePasses": 256,
-            "totalPasses": 308,
+            "possessionPct": 48,
+            "accuratePasses": 284,
+            "totalPasses": 337,
             "shotsOnTarget": 1,
             "totalShots": 5,
             "effectiveTackles": 2,
             "totalTackles": 8,
             "accurateCrosses": 3,
             "totalCrosses": 6,
-            "accurateLongBalls": 10,
-            "totalLongBalls": 32
+            "accurateLongBalls": 11,
+            "totalLongBalls": 34
           },
           {
             "team": "Switzerland",
-            "possessionPct": 54,
-            "accuratePasses": 318,
-            "totalPasses": 356,
+            "possessionPct": 52,
+            "accuratePasses": 320,
+            "totalPasses": 359,
             "shotsOnTarget": 5,
             "totalShots": 9,
             "effectiveTackles": 2,
@@ -38436,10 +38448,21 @@
             "accurateCrosses": 3,
             "totalCrosses": 13,
             "accurateLongBalls": 15,
-            "totalLongBalls": 23
+            "totalLongBalls": 24
           }
         ],
         "players": [
+          {
+            "n": "Nico González",
+            "t": "Argentina",
+            "aid": "76017",
+            "tid": "202",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
+          },
           {
             "n": "Emiliano Martínez",
             "t": "Argentina",
@@ -38451,7 +38474,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 31
+            "ps": 32
           },
           {
             "n": "Lisandro Martínez",
@@ -38462,7 +38485,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 34
+            "ps": 36
           },
           {
             "n": "Cristian Romero",
@@ -38473,7 +38496,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 29
+            "ps": 30
           },
           {
             "n": "Leandro Paredes",
@@ -38484,7 +38507,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 48
+            "ps": 56
           },
           {
             "n": "Nicolás Tagliafico",
@@ -38495,7 +38518,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 21
+            "ps": 22
           },
           {
             "n": "Nahuel Molina",
@@ -38517,7 +38540,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 29
+            "ps": 35
           },
           {
             "n": "Alexis Mac Allister",
@@ -38528,7 +38551,7 @@
             "st": 1,
             "tk": 1,
             "bk": 1,
-            "ps": 16
+            "ps": 19
           },
           {
             "n": "Rodrigo De Paul",
@@ -38539,7 +38562,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 30
+            "ps": 33
           },
           {
             "n": "Julián Álvarez",
@@ -38550,7 +38573,7 @@
             "st": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 16
+            "ps": 17
           },
           {
             "n": "Lionel Messi",
@@ -38561,7 +38584,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 22
+            "ps": 24
           },
           {
             "n": "Gregor Kobel",
@@ -38596,7 +38619,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 50
+            "ps": 51
           },
           {
             "n": "Ricardo Rodríguez",
@@ -38618,7 +38641,7 @@
             "st": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 43
+            "ps": 44
           },
           {
             "n": "Fabian Rieder",
@@ -38629,7 +38652,7 @@
             "st": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 16
+            "ps": 17
           },
           {
             "n": "Granit Xhaka",
