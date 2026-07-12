@@ -201,6 +201,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${m} — under ${leg.line} fouls`;
     case "totalShotsUnder":
       return `${m} — under ${leg.line} match shots`;
+    case "totalShotsOver":
+      return `${m} — ${plus(leg.line)} match shots`;
     case "halfCornersOver":
       return `${m} — ${plus(leg.line)} corners in the ${leg.half === 1 ? "1st" : "2nd"} half`;
     case "mostCorners":
@@ -1384,6 +1386,28 @@ export function inPlayMultiLeg(
       } else if (doneFull && total != null) {
         wonCount++;
         parts.push(`${legLabel} ✓`);
+      } else if (total != null) {
+        onTrack = true;
+        parts.push(`${legLabel} ⋯`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "totalShotsOver") {
+      // Combined shots OVER the line — mirror of totalShotsUnder. Shots only
+      // accrue, so it CLINCHES the moment the running total clears the line;
+      // at the true whistle a total still at/under the line is dead. With no
+      // stats snapshot at all it stays neutral (static holds pending).
+      const s = lm.stats?.shots;
+      const total = s ? s.home + s.away : null;
+      if (total != null && total > leg.line) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (doneFull && total != null) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
       } else if (total != null) {
         onTrack = true;
         parts.push(`${legLabel} ⋯`);

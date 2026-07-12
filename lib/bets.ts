@@ -652,6 +652,12 @@ export type MultiLegCond = { odds?: number } & (
   // mid-match the moment the running total goes over; wins only at FT. A
   // finished match with no stats snapshot holds pending for a human.
   | { matchId: string; kind: "totalShotsUnder"; line: number }
+  // Total shots by BOTH sides OVER the line ("Over 22.5 — Total Match Shots"),
+  // from MatchStats.shots (boxscore totalShots). Mirror of totalShotsUnder:
+  // shots only accrue, so this CLINCHES mid-match the moment the running total
+  // clears the line; at FT a total still at/under the line is lost. A finished
+  // match with no stats snapshot holds pending for a human.
+  | { matchId: string; kind: "totalShotsOver"; line: number }
   // Corners (both sides) in ONE half OVER the line, from MatchStats.cornersByHalf
   // (tallied per-period from ESPN commentary). Accrues → clinches mid-match the
   // moment the half's total clears the line; the H1 line locks dead at the HT
@@ -1471,6 +1477,25 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
             continue;
           }
           continue; // under at the whistle → leg won
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "totalShotsOver") {
+        // Combined shots OVER the line — mirror of totalShotsUnder. Shots only
+        // accrue, so the running total clearing the line clinches the leg
+        // mid-match; at FT a total still at/under the line is lost. A finished
+        // match with no stats snapshot holds pending for a human.
+        const s = getStats(leg.matchId)?.shots;
+        const total = s ? s.home + s.away : null;
+        if (total != null && total > leg.line) continue; // cleared → leg won
+        if (finished) {
+          if (total == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost"; // FT total at/under the line → leg lost
         }
         pending = true;
         continue;
