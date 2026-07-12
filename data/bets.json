@@ -18362,6 +18362,84 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-864092228837670913",
+      "slipNo": "864092228837670913",
+      "matchId": "eng-arg-2026-07-15",
+      "player": "Double · England/Argentina + France/Spain",
+      "market": "Double (2 parlays) · 11 legs",
+      "label": "REAL 1xBet DOUBLE 864092228837670913 (12/07) @48.46, RM50 -> RM2,423.16. 2 parlays: [ENG-ARG @6.36] Draw (X) · Total U3.5 · Bellingham O0.5 SOT · Messi O0.5 SOT. [FRA-ESP @7.62] France to qualify · Total U4.5 · Doue O0.5 SOT · Mbappe O0.5 SOT · Dembele O0.5 SOT · Oyarzabal O0.5 shots · France team corners O4.5.",
+      "odds": 48.46,
+      "stake": 50,
+      "placedAt": "12/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "playerSotOver",
+            "player": "Jude Bellingham",
+            "line": 0.5
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "playerSotOver",
+            "player": "Lionel Messi",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Désiré Doué",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Kylian Mbappe",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Ousmane Dembélé",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerShotsOver",
+            "player": "Mikel Oyarzabal",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "teamCornersOver",
+            "side": "home",
+            "line": 4.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
