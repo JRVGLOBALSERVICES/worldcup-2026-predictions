@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T03:20:08.226Z",
+    "generatedAt": "2026-07-12T03:30:07.311Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 79,
     "live": 1
@@ -94179,7 +94179,7 @@
       "updatedAt": "2026-07-12T01:00:00.000Z",
       "stats": {
         "corners": {
-          "home": 6,
+          "home": 7,
           "away": 2
         },
         "sot": {
@@ -94187,8 +94187,8 @@
           "away": 5
         },
         "shots": {
-          "home": 14,
-          "away": 10
+          "home": 17,
+          "away": 11
         },
         "yellow": {
           "home": 2,
@@ -94203,7 +94203,7 @@
           "away": 2
         },
         "fouls": {
-          "home": 12,
+          "home": 13,
           "away": 17
         },
         "cornersByHalf": {
@@ -94244,11 +94244,13 @@
           "Julián Álvarez": 2,
           "Dan Ndoye": 3,
           "Breel Embolo": 1,
-          "Lionel Messi": 1,
+          "Lionel Messi": 2,
           "Nico González": 2,
-          "Lisandro Martínez": 1,
+          "Lisandro Martínez": 2,
           "Lautaro Martínez": 1,
-          "Thiago Almada": 2
+          "Thiago Almada": 2,
+          "Ardon Jashari": 1,
+          "Cristian Romero": 1
         },
         "playerShotBreakdown": {
           "Denis Zakaria": {
@@ -94325,10 +94327,10 @@
           },
           "Lionel Messi": {
             "team": "home",
-            "shots": 1,
+            "shots": 2,
             "sot": 0,
             "off": 1,
-            "blocked": 0,
+            "blocked": 1,
             "goals": 0
           },
           "Nico González": {
@@ -94341,10 +94343,10 @@
           },
           "Lisandro Martínez": {
             "team": "home",
-            "shots": 1,
+            "shots": 2,
             "sot": 1,
             "off": 0,
-            "blocked": 0,
+            "blocked": 1,
             "goals": 0
           },
           "Lautaro Martínez": {
@@ -94362,9 +94364,42 @@
             "off": 1,
             "blocked": 0,
             "goals": 0
+          },
+          "Ardon Jashari": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Cristian Romero": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
           }
         },
         "players": [
+          {
+            "team": "home",
+            "name": "Nicolás Otamendi",
+            "pos": "",
+            "num": 19,
+            "starter": false,
+            "aid": "119289",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
           {
             "team": "home",
             "name": "Lautaro Martínez",
@@ -94383,7 +94418,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 3
+            "ps": 4
           },
           {
             "team": "home",
@@ -94403,7 +94438,7 @@
             "off": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 15
+            "ps": 20
           },
           {
             "team": "home",
@@ -94423,7 +94458,24 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 14
+          },
+          {
+            "team": "home",
+            "name": "José Manuel López",
+            "pos": "",
+            "num": 21,
+            "starter": false,
+            "aid": "311743",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           },
           {
             "team": "home",
@@ -94443,7 +94495,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 11
           },
           {
             "team": "home",
@@ -94466,7 +94518,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 35
+            "ps": 37
           },
           {
             "team": "home",
@@ -94477,16 +94529,16 @@
             "aid": "233937",
             "g": 0,
             "a": 0,
-            "sh": 1,
+            "sh": 2,
             "sot": 1,
             "fc": 2,
             "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 3,
+            "tk": 4,
             "bk": 0,
-            "ps": 58
+            "ps": 65
           },
           {
             "team": "home",
@@ -94497,7 +94549,7 @@
             "aid": "96970",
             "g": 0,
             "a": 0,
-            "sh": 0,
+            "sh": 1,
             "sot": 0,
             "fc": 1,
             "fs": 0,
@@ -94506,7 +94558,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 38
+            "ps": 42
           },
           {
             "team": "home",
@@ -94526,7 +94578,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 101
+            "ps": 111
           },
           {
             "team": "home",
@@ -94599,14 +94651,14 @@
             "a": 0,
             "sh": 4,
             "sot": 1,
-            "fc": 0,
+            "fc": 1,
             "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 3,
             "bk": 1,
-            "ps": 35
+            "ps": 44
           },
           {
             "team": "home",
@@ -94646,7 +94698,7 @@
             "off": 1,
             "tk": 1,
             "bk": 1,
-            "ps": 35
+            "ps": 37
           },
           {
             "team": "home",
@@ -94657,7 +94709,7 @@
             "aid": "45843",
             "g": 0,
             "a": 1,
-            "sh": 1,
+            "sh": 2,
             "sot": 0,
             "fc": 0,
             "fs": 1,
@@ -94666,7 +94718,7 @@
             "off": 1,
             "tk": 3,
             "bk": 0,
-            "ps": 50
+            "ps": 61
           },
           {
             "team": "away",
@@ -94689,7 +94741,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 25
+            "ps": 29
           },
           {
             "team": "away",
@@ -94707,9 +94759,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 51
+            "ps": 53
           },
           {
             "team": "away",
@@ -94729,7 +94781,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 56
+            "ps": 57
           },
           {
             "team": "away",
@@ -94829,7 +94881,7 @@
             "off": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 51
+            "ps": 52
           },
           {
             "team": "away",
@@ -94900,13 +94952,16 @@
             "aid": "303973",
             "g": 0,
             "a": 0,
-            "sh": 0,
+            "sh": 1,
             "sot": 0,
             "fc": 0,
             "fs": 0,
             "yc": 0,
             "rc": 0,
-            "off": 0
+            "off": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 2
           },
           {
             "team": "away",
@@ -94920,13 +94975,13 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 0
+            "ps": 1
           },
           {
             "team": "away",
@@ -94946,7 +95001,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 0
+            "ps": 1
           },
           {
             "team": "away",
@@ -94966,7 +95021,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 3
+            "ps": 4
           },
           {
             "team": "away",
@@ -95052,6 +95107,13 @@
             "on": "Ardon Jashari",
             "off": "Denis Zakaria",
             "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 105,
+            "on": "Nicolás Otamendi",
+            "off": "Cristian Romero",
+            "injury": true
           }
         ],
         "firstGoalMethod": "header",
@@ -95080,15 +95142,15 @@
         },
         "tempo": {
           "possession": {
-            "home": 58.2,
-            "away": 41.8
+            "home": 59.5,
+            "away": 40.5
           },
           "passes": {
-            "home": 601,
-            "away": 428
+            "home": 656,
+            "away": 444
           },
           "tackles": {
-            "home": 15,
+            "home": 16,
             "away": 12
           },
           "saves": {
@@ -95100,23 +95162,23 @@
             "away": 2
           },
           "blockedShots": {
-            "home": 4,
+            "home": 6,
             "away": 3
           },
           "interceptions": {
-            "home": 10,
+            "home": 12,
             "away": 6
           },
           "clearances": {
-            "home": 17,
-            "away": 24
+            "home": 18,
+            "away": 26
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "12",
+            "home": "13",
             "away": "17"
           },
           {
@@ -95140,7 +95202,7 @@
           {
             "key": "wonCorners",
             "label": "Corner Kicks",
-            "home": "6",
+            "home": "7",
             "away": "2"
           },
           {
@@ -95152,14 +95214,14 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "58.2",
-            "away": "41.8"
+            "home": "59.5",
+            "away": "40.5"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "14",
-            "away": "10"
+            "home": "17",
+            "away": "11"
           },
           {
             "key": "shotsOnTarget",
@@ -95188,14 +95250,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "532",
-            "away": "368"
+            "home": "582",
+            "away": "381"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "601",
-            "away": "428"
+            "home": "656",
+            "away": "444"
           },
           {
             "key": "passPct",
@@ -95206,14 +95268,14 @@
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "5",
+            "home": "7",
             "away": "3"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "16",
-            "away": "14"
+            "home": "21",
+            "away": "16"
           },
           {
             "key": "crossPct",
@@ -95224,14 +95286,14 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "43",
-            "away": "41"
+            "home": "47",
+            "away": "44"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "18",
-            "away": "20"
+            "home": "20",
+            "away": "21"
           },
           {
             "key": "longballPct",
@@ -95242,7 +95304,7 @@
           {
             "key": "blockedShots",
             "label": "Blocked Shots",
-            "home": "4",
+            "home": "6",
             "away": "3"
           },
           {
@@ -95254,32 +95316,32 @@
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "15",
+            "home": "16",
             "away": "12"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.5",
+            "home": "0.4",
             "away": "0.4"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "10",
+            "home": "12",
             "away": "6"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "17",
-            "away": "24"
+            "home": "18",
+            "away": "26"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "17",
-            "away": "24"
+            "home": "18",
+            "away": "26"
           }
         ],
         "playerTackles": {
