@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T03:40:02.861Z",
+    "generatedAt": "2026-07-12T03:50:04.461Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -950,7 +950,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Semi-final",
+            "opponent": "England",
+            "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "kickoffUTC": "2026-07-15T19:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Austria",
@@ -1150,11 +1157,11 @@
           ],
           "next": {
             "round": "Semi-final",
-            "opponent": "Quarterfinal 4 Winner",
-            "opponentFlag": null,
+            "opponent": "Argentina",
+            "opponentFlag": "🇦🇷",
             "kickoffUTC": "2026-07-15T19:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
