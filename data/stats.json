@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T02:50:11.447Z",
+    "generatedAt": "2026-07-12T03:00:15.231Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 83
   },
@@ -359,6 +359,14 @@
     "tackles": [
       {
         "rank": 1,
+        "name": "Alexis Mac Allister",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 18,
+        "matches": 6
+      },
+      {
+        "rank": 2,
         "name": "Rodri",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -366,15 +374,7 @@
         "matches": 5
       },
       {
-        "rank": 2,
-        "name": "Alexis Mac Allister",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 16,
-        "matches": 6
-      },
-      {
-        "rank": 2,
+        "rank": 3,
         "name": "Elliot Anderson",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -567,19 +567,19 @@
     "passCompletion": [
       {
         "rank": 1,
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 90.3,
+        "display": "90.3%",
+        "matches": 6
+      },
+      {
+        "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 90.2,
         "display": "90.2%",
         "matches": 5
-      },
-      {
-        "rank": 2,
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 90.1,
-        "display": "90.1%",
-        "matches": 6
       },
       {
         "rank": 3,
@@ -601,8 +601,8 @@
         "rank": 5,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 85.7,
-        "display": "85.7%",
+        "value": 85.5,
+        "display": "85.5%",
         "matches": 5
       }
     ],
@@ -619,12 +619,12 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 58.4,
-        "display": "58.4%",
+        "value": 59.3,
+        "display": "59.3%",
         "matches": 6
       },
       {
-        "rank": 2,
+        "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
         "value": 58.4,
@@ -643,8 +643,8 @@
         "rank": 5,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 53.4,
-        "display": "53.4%",
+        "value": 52.3,
+        "display": "52.3%",
         "matches": 5
       }
     ],
@@ -677,8 +677,8 @@
         "rank": 4,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 41.3,
-        "display": "41.3%",
+        "value": 39.3,
+        "display": "39.3%",
         "matches": 6
       },
       {
@@ -719,16 +719,16 @@
         "rank": 4,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 59.2,
-        "display": "59.2%",
+        "value": 57.9,
+        "display": "57.9%",
         "matches": 5
       },
       {
         "rank": 5,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 57.9,
-        "display": "57.9%",
+        "value": 57.8,
+        "display": "57.8%",
         "matches": 6
       }
     ],
@@ -737,8 +737,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 35.5,
-        "display": "35.5%",
+        "value": 35.8,
+        "display": "35.8%",
         "matches": 6
       },
       {
@@ -787,8 +787,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 52.4,
-        "display": "52.4%",
+        "value": 53.1,
+        "display": "53.1%",
         "matches": 6
       },
       {
@@ -811,8 +811,8 @@
         "rank": 5,
         "team": "Switzerland",
         "flag": "🇨🇭",
-        "value": 46.4,
-        "display": "46.4%",
+        "value": 45.9,
+        "display": "45.9%",
         "matches": 5
       }
     ]
@@ -3490,11 +3490,11 @@
           "apps": 6,
           "goals": 8,
           "assists": 2,
-          "shots": 27,
+          "shots": 28,
           "sot": 14,
           "tackles": 7,
           "blocks": 3,
-          "passes": 223,
+          "passes": 234,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3507,11 +3507,11 @@
           "apps": 6,
           "goals": 1,
           "assists": 1,
-          "shots": 9,
+          "shots": 10,
           "sot": 3,
-          "tackles": 16,
+          "tackles": 18,
           "blocks": 3,
-          "passes": 327,
+          "passes": 337,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3528,7 +3528,7 @@
           "sot": 2,
           "tackles": 3,
           "blocks": 1,
-          "passes": 64,
+          "passes": 66,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3541,11 +3541,11 @@
           "apps": 5,
           "goals": 1,
           "assists": 1,
-          "shots": 2,
+          "shots": 3,
           "sot": 1,
           "tackles": 10,
-          "blocks": 0,
-          "passes": 352,
+          "blocks": 1,
+          "passes": 365,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3562,7 +3562,7 @@
           "sot": 1,
           "tackles": 10,
           "blocks": 0,
-          "passes": 329,
+          "passes": 333,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3579,7 +3579,7 @@
           "sot": 3,
           "tackles": 8,
           "blocks": 4,
-          "passes": 372,
+          "passes": 389,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3626,11 +3626,11 @@
           "apps": 5,
           "goals": 0,
           "assists": 1,
-          "shots": 4,
+          "shots": 5,
           "sot": 0,
           "tackles": 3,
           "blocks": 1,
-          "passes": 63,
+          "passes": 71,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3664,7 +3664,7 @@
           "sot": 0,
           "tackles": 2,
           "blocks": 1,
-          "passes": 40,
+          "passes": 44,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3681,7 +3681,7 @@
           "sot": 3,
           "tackles": 3,
           "blocks": 2,
-          "passes": 129,
+          "passes": 141,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3698,7 +3698,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 160,
+          "passes": 162,
           "saves": 8,
           "yellow": 0,
           "red": 0,
@@ -3732,7 +3732,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 1,
-          "passes": 400,
+          "passes": 421,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5046,7 +5046,7 @@
           "assists": 0,
           "shots": 10,
           "sot": 6,
-          "tackles": 7,
+          "tackles": 6,
           "blocks": 2,
           "passes": 73,
           "saves": 0,
@@ -5116,7 +5116,7 @@
           "sot": 0,
           "tackles": 11,
           "blocks": 0,
-          "passes": 201,
+          "passes": 202,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5150,7 +5150,7 @@
           "sot": 0,
           "tackles": 7,
           "blocks": 0,
-          "passes": 379,
+          "passes": 381,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5167,7 +5167,7 @@
           "sot": 0,
           "tackles": 4,
           "blocks": 1,
-          "passes": 352,
+          "passes": 353,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5184,7 +5184,7 @@
           "sot": 0,
           "tackles": 3,
           "blocks": 0,
-          "passes": 53,
+          "passes": 55,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -5201,7 +5201,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 187,
+          "passes": 191,
           "saves": 13,
           "yellow": 0,
           "red": 0,
@@ -5250,9 +5250,9 @@
           "assists": 0,
           "shots": 3,
           "sot": 1,
-          "tackles": 5,
+          "tackles": 6,
           "blocks": 1,
-          "passes": 101,
+          "passes": 103,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -5355,6 +5355,23 @@
           "tackles": 1,
           "blocks": 0,
           "passes": 5,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
+          "name": "Eray Cömert",
+          "apps": 1,
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "sot": 0,
+          "tackles": 0,
+          "blocks": 0,
+          "passes": 0,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -38424,31 +38441,31 @@
         "teamBox": [
           {
             "team": "Argentina",
-            "possessionPct": 48.6,
-            "accuratePasses": 329,
-            "totalPasses": 386,
+            "possessionPct": 54,
+            "accuratePasses": 427,
+            "totalPasses": 490,
             "shotsOnTarget": 1,
-            "totalShots": 5,
-            "effectiveTackles": 3,
-            "totalTackles": 10,
-            "accurateCrosses": 3,
-            "totalCrosses": 6,
-            "accurateLongBalls": 12,
-            "totalLongBalls": 36
+            "totalShots": 9,
+            "effectiveTackles": 4,
+            "totalTackles": 12,
+            "accurateCrosses": 5,
+            "totalCrosses": 11,
+            "accurateLongBalls": 15,
+            "totalLongBalls": 39
           },
           {
             "team": "Switzerland",
-            "possessionPct": 51.4,
-            "accuratePasses": 353,
-            "totalPasses": 400,
+            "possessionPct": 46,
+            "accuratePasses": 358,
+            "totalPasses": 412,
             "shotsOnTarget": 5,
             "totalShots": 9,
-            "effectiveTackles": 4,
+            "effectiveTackles": 3,
             "totalTackles": 9,
             "accurateCrosses": 3,
             "totalCrosses": 13,
-            "accurateLongBalls": 16,
-            "totalLongBalls": 30
+            "accurateLongBalls": 17,
+            "totalLongBalls": 35
           }
         ],
         "players": [
@@ -38461,18 +38478,18 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 0
+            "ps": 2
           },
           {
             "n": "Nico González",
             "t": "Argentina",
             "aid": "76017",
             "tid": "202",
-            "sh": 0,
+            "sh": 1,
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 13
           },
           {
             "n": "Gonzalo Montiel",
@@ -38483,7 +38500,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 0
+            "ps": 4
           },
           {
             "n": "Emiliano Martínez",
@@ -38496,18 +38513,18 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 33
+            "ps": 35
           },
           {
             "n": "Lisandro Martínez",
             "t": "Argentina",
             "aid": "233937",
             "tid": "202",
-            "sh": 0,
+            "sh": 1,
             "st": 0,
             "tk": 3,
-            "bk": 0,
-            "ps": 39
+            "bk": 1,
+            "ps": 52
           },
           {
             "n": "Cristian Romero",
@@ -38518,7 +38535,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 34
+            "ps": 38
           },
           {
             "n": "Leandro Paredes",
@@ -38529,7 +38546,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 67
+            "ps": 88
           },
           {
             "n": "Nicolás Tagliafico",
@@ -38562,18 +38579,18 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 44
+            "ps": 61
           },
           {
             "n": "Alexis Mac Allister",
             "t": "Argentina",
             "aid": "249299",
             "tid": "202",
-            "sh": 3,
+            "sh": 4,
             "st": 1,
-            "tk": 1,
+            "tk": 3,
             "bk": 1,
-            "ps": 23
+            "ps": 33
           },
           {
             "n": "Rodrigo De Paul",
@@ -38595,18 +38612,18 @@
             "st": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 19
+            "ps": 31
           },
           {
             "n": "Lionel Messi",
             "t": "Argentina",
             "aid": "45843",
             "tid": "202",
-            "sh": 0,
+            "sh": 1,
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 30
+            "ps": 41
           },
           {
             "n": "Gregor Kobel",
@@ -38619,7 +38636,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 19
+            "ps": 23
           },
           {
             "n": "Manuel Akanji",
@@ -38630,7 +38647,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 49
+            "ps": 51
           },
           {
             "n": "Nico Elvedi",
@@ -38641,7 +38658,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 55
+            "ps": 56
           },
           {
             "n": "Ricardo Rodríguez",
@@ -38652,7 +38669,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 37
+            "ps": 38
           },
           {
             "n": "Denis Zakaria",
@@ -38661,9 +38678,9 @@
             "tid": "475",
             "sh": 1,
             "st": 0,
-            "tk": 1,
+            "tk": 2,
             "bk": 1,
-            "ps": 45
+            "ps": 47
           },
           {
             "n": "Fabian Rieder",
@@ -38716,7 +38733,7 @@
             "tid": "475",
             "sh": 3,
             "st": 2,
-            "tk": 1,
+            "tk": 0,
             "bk": 1,
             "ps": 21
           },
@@ -38743,6 +38760,17 @@
             "ps": 0
           },
           {
+            "n": "Eray Cömert",
+            "t": "Switzerland",
+            "aid": "231697",
+            "tid": "475",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
+          },
+          {
             "n": "Silvan Widmer",
             "t": "Switzerland",
             "aid": "175905",
@@ -38751,7 +38779,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 0
+            "ps": 2
           },
           {
             "n": "Zeki Amdouni",
