@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T00:40:06.298Z",
+    "generatedAt": "2026-07-12T01:10:07.779Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 79,
-    "live": 0
+    "live": 1
   },
   "results": {
     "por-drc-2026-06-17": {
@@ -94117,6 +94117,688 @@
         }
       },
       "assistsChecked": true
+    },
+    "arg-sui-2026-07-12": {
+      "state": "live",
+      "ht": null,
+      "ft": null,
+      "ft90": null,
+      "finishPhase": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "advanced": null,
+      "goals": [],
+      "cards": [],
+      "updatedAt": "2026-07-12T01:00:00.000Z",
+      "stats": {
+        "corners": {
+          "home": 0,
+          "away": 0
+        },
+        "sot": {
+          "home": 0,
+          "away": 0
+        },
+        "shots": {
+          "home": 0,
+          "away": 2
+        },
+        "yellow": {
+          "home": 0,
+          "away": 0
+        },
+        "red": {
+          "home": 0,
+          "away": 0
+        },
+        "cards": {
+          "home": 0,
+          "away": 0
+        },
+        "fouls": {
+          "home": 1,
+          "away": 2
+        },
+        "cornersByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "sotByHalf": {
+          "home": [
+            0,
+            0
+          ],
+          "away": [
+            0,
+            0
+          ]
+        },
+        "playerSot": {},
+        "playerShots": {
+          "Denis Zakaria": 1,
+          "Granit Xhaka": 1
+        },
+        "playerShotBreakdown": {
+          "Denis Zakaria": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Granit Xhaka": {
+            "team": "away",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
+            "blocked": 0,
+            "goals": 0
+          }
+        },
+        "players": [
+          {
+            "team": "home",
+            "name": "Emiliano Martínez",
+            "pos": "G",
+            "num": 23,
+            "starter": true,
+            "aid": "158626",
+            "gk": true,
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0,
+            "sv": 0,
+            "gc": 0
+          },
+          {
+            "team": "home",
+            "name": "Lisandro Martínez",
+            "pos": "CD-L",
+            "num": 6,
+            "starter": true,
+            "aid": "233937",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Cristian Romero",
+            "pos": "CD-R",
+            "num": 13,
+            "starter": true,
+            "aid": "96970",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Leandro Paredes",
+            "pos": "SW",
+            "num": 5,
+            "starter": true,
+            "aid": "153115",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Nicolás Tagliafico",
+            "pos": "LB",
+            "num": 3,
+            "starter": true,
+            "aid": "145190",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Nahuel Molina",
+            "pos": "RB",
+            "num": 26,
+            "starter": true,
+            "aid": "164826",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Enzo Fernández",
+            "pos": "CM",
+            "num": 24,
+            "starter": true,
+            "aid": "285450",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Alexis Mac Allister",
+            "pos": "LM",
+            "num": 20,
+            "starter": true,
+            "aid": "249299",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 1,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Rodrigo De Paul",
+            "pos": "RM",
+            "num": 7,
+            "starter": true,
+            "aid": "174466",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Julián Álvarez",
+            "pos": "CF-L",
+            "num": 9,
+            "starter": true,
+            "aid": "277206",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 1,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Lionel Messi",
+            "pos": "CF-R",
+            "num": 10,
+            "starter": true,
+            "aid": "45843",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Gregor Kobel",
+            "pos": "G",
+            "num": 1,
+            "starter": true,
+            "aid": "238544",
+            "gk": true,
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0,
+            "sv": 0,
+            "gc": 0
+          },
+          {
+            "team": "away",
+            "name": "Manuel Akanji",
+            "pos": "CD-L",
+            "num": 5,
+            "starter": true,
+            "aid": "214562",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Nico Elvedi",
+            "pos": "CD-R",
+            "num": 4,
+            "starter": true,
+            "aid": "212237",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Ricardo Rodríguez",
+            "pos": "LB",
+            "num": 13,
+            "starter": true,
+            "aid": "136865",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 1,
+            "fs": 1,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Denis Zakaria",
+            "pos": "RB",
+            "num": 6,
+            "starter": true,
+            "aid": "222628",
+            "g": 0,
+            "a": 0,
+            "sh": 1,
+            "sot": 0,
+            "fc": 1,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Fabian Rieder",
+            "pos": "AM",
+            "num": 22,
+            "starter": true,
+            "aid": "308908",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Granit Xhaka",
+            "pos": "LM",
+            "num": 10,
+            "starter": true,
+            "aid": "149981",
+            "g": 0,
+            "a": 0,
+            "sh": 1,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Remo Freuler",
+            "pos": "RM",
+            "num": 8,
+            "starter": true,
+            "aid": "152600",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Breel Embolo",
+            "pos": "F",
+            "num": 7,
+            "starter": true,
+            "aid": "202099",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Dan Ndoye",
+            "pos": "AM-L",
+            "num": 11,
+            "starter": true,
+            "aid": "275842",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
+            "name": "Djibril Sow",
+            "pos": "AM-R",
+            "num": 15,
+            "starter": true,
+            "aid": "222446",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          }
+        ],
+        "subs": [],
+        "firstGoalMethod": null,
+        "firstPenalty": null,
+        "waterBreak": {},
+        "tempo": {
+          "possession": {
+            "home": 41.1,
+            "away": 58.9
+          },
+          "passes": {
+            "home": 39,
+            "away": 53
+          },
+          "tackles": {
+            "home": 0,
+            "away": 2
+          },
+          "saves": {
+            "home": 0,
+            "away": 0
+          },
+          "offsides": {
+            "home": 0,
+            "away": 0
+          },
+          "blockedShots": {
+            "home": 0,
+            "away": 1
+          },
+          "interceptions": {
+            "home": 1,
+            "away": 0
+          },
+          "clearances": {
+            "home": 4,
+            "away": 3
+          }
+        },
+        "full": [
+          {
+            "key": "foulsCommitted",
+            "label": "Fouls",
+            "home": "1",
+            "away": "2"
+          },
+          {
+            "key": "yellowCards",
+            "label": "Yellow Cards",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "redCards",
+            "label": "Red Cards",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "offsides",
+            "label": "Offsides",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "wonCorners",
+            "label": "Corner Kicks",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "saves",
+            "label": "Saves",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "possessionPct",
+            "label": "POSSESSION",
+            "home": "41.1",
+            "away": "58.9"
+          },
+          {
+            "key": "totalShots",
+            "label": "SHOTS",
+            "home": "0",
+            "away": "2"
+          },
+          {
+            "key": "shotsOnTarget",
+            "label": "ON GOAL",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "shotPct",
+            "label": "On Target %",
+            "home": "0.0",
+            "away": "0.0"
+          },
+          {
+            "key": "penaltyKickGoals",
+            "label": "Penalty Goals",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "penaltyKickShots",
+            "label": "Penalty Kicks Taken",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "accuratePasses",
+            "label": "Accurate Passes",
+            "home": "31",
+            "away": "48"
+          },
+          {
+            "key": "totalPasses",
+            "label": "Passes",
+            "home": "39",
+            "away": "53"
+          },
+          {
+            "key": "passPct",
+            "label": "Pass Completion %",
+            "home": "0.8",
+            "away": "0.9"
+          },
+          {
+            "key": "accurateCrosses",
+            "label": "Accurate Crosses",
+            "home": "0",
+            "away": "0"
+          },
+          {
+            "key": "totalCrosses",
+            "label": "Crosses",
+            "home": "0",
+            "away": "3"
+          },
+          {
+            "key": "crossPct",
+            "label": "Cross %",
+            "home": "0.0",
+            "away": "0.0"
+          },
+          {
+            "key": "totalLongBalls",
+            "label": "Long Balls",
+            "home": "4",
+            "away": "8"
+          },
+          {
+            "key": "accurateLongBalls",
+            "label": "Accurate Long Balls",
+            "home": "0",
+            "away": "5"
+          },
+          {
+            "key": "longballPct",
+            "label": "Long Balls %",
+            "home": "0.0",
+            "away": "0.6"
+          },
+          {
+            "key": "blockedShots",
+            "label": "Blocked Shots",
+            "home": "0",
+            "away": "1"
+          },
+          {
+            "key": "effectiveTackles",
+            "label": "Effective Tackles",
+            "home": "0",
+            "away": "1"
+          },
+          {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "0",
+            "away": "2"
+          },
+          {
+            "key": "tacklePct",
+            "label": "Tackle %",
+            "home": "0.0",
+            "away": "0.5"
+          },
+          {
+            "key": "interceptions",
+            "label": "Interceptions",
+            "home": "1",
+            "away": "0"
+          },
+          {
+            "key": "effectiveClearance",
+            "label": "Effective Clearances",
+            "home": "4",
+            "away": "3"
+          },
+          {
+            "key": "totalClearance",
+            "label": "Clearances",
+            "home": "4",
+            "away": "3"
+          }
+        ],
+        "playerTackles": {
+          "Cristian Romero": 0,
+          "Alexis Mac Allister": 0
+        }
+      }
     }
   }
 }
