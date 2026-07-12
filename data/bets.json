@@ -18023,6 +18023,110 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-863947367408951296",
+      "slipNo": "863947367408951296",
+      "matchId": "arg-sui-2026-07-12",
+      "player": "Double · Argentina/Switzerland + France/Spain",
+      "market": "Double (2 parlays) · 16 legs",
+      "label": "REAL 1xBet DOUBLE 863947367408951296 (12/07) @11.22, RM100 -> RM1,122.36. 2 parlays: [ARG-SUI @2.82] Messi score/assist · Mac Allister O0.5 tackles · Embolo O0.5 shots · Ndoye O0.5 shots · Total U5.5 · Argentina to qualify · Argentina team-total O0.5 · Switzerland team-total U2.5 · Argentina-or-Tie 1H DC · Argentina to win either half. [FRA-ESP @3.98] Mbappe score/assist · Rabiot O0.5 shots · Oyarzabal O0.5 shots · Upamecano O0.5 tackles · Total U5.5 · France-or-Tie DC.",
+      "odds": 11.22,
+      "stake": 100,
+      "placedAt": "12/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "playerTacklesOver",
+            "player": "Alexis Mac Allister",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Breel Embolo",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "playerShotsOver",
+            "player": "Dan Ndoye",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "individualTotalOver",
+            "side": "home",
+            "line": 0.5
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "individualTotalUnder",
+            "side": "away",
+            "line": 2.5
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "firstHalfDoubleChance",
+            "outcome": "1X"
+          },
+          {
+            "matchId": "arg-sui-2026-07-12",
+            "kind": "winsAtLeastOneHalf",
+            "side": "home"
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "scoredOrAssisted",
+            "player": "Kylian Mbappe"
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerShotsOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerShotsOver",
+            "player": "Mikel Oyarzabal",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerTacklesOver",
+            "player": "Dayot Upamecano",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "doubleChance",
+            "outcome": "1X"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
