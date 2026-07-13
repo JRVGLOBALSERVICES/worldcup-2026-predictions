@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-12T03:50:09.566Z",
+    "generatedAt": "2026-07-13T12:50:48.078Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-12T03:50:09.565Z"
+    "modelUpdatedAt": "2026-07-13T12:50:48.074Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -245,7 +245,95 @@
         "https://www.aljazeera.com/sports/2026/6/16/ronaldos-last-dance-as-portugal-face-dr-congo-in-world-cup",
         "https://bolavip.com/en/world-cup/lineups-uniforms-and-referee-for-portugal-vs-dr-congo-with-cristiano-ronaldo-for-2026-world-cup",
         "https://www.lineups.com/betting/portugal-vs-dr-congo-starting-11-starting-lineups-for-june-17-2026"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Portugal: 5 pts, +5 GD across 3 group games (6 for / 1 against).",
+          "DR Congo: 4 pts, +1 GD across 3 group games (4 for / 3 against).",
+          "Portugal's Cristiano Ronaldo leads them with 3 goals in 5 games.",
+          "DR Congo's Yoane Wissa leads them with 3 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Portugal to carry more of the ball and the better chances (higher attack rating); DR Congo to sit compact and play on the break.",
+          "Goal expectancy 1.6–0.7 (Portugal–DR Congo) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Portugal shade the chance-creation (1.6 vs 0.7 xG) — they should make the running.",
+        "drawRisk": "High. Low combined xG (2.3) and a 24.8% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "caseFor": [
+          "Portugal are the model's 59.8% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Cristiano Ronaldo carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Portugal can manage."
+        ],
+        "caseAgainst": [
+          "24.8% draw + DR Congo's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Portugal's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Lean",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (24.8%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Portugal to win is a clean call.",
+        "read": {
+          "tag": "Lean",
+          "line": "Portugal are the model's 60% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "eng-cro-2026-06-17": {
       "win": {
@@ -484,7 +572,94 @@
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
         "https://sports.yahoo.com/articles/england-world-cup-roster-2026-110001429.html",
         "https://www.fotmob.com/players/709796/petar-musa"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "England: 7 pts, +4 GD across 3 group games (6 for / 2 against).",
+          "Croatia: 6 pts, +0 GD across 3 group games (5 for / 5 against).",
+          "England's Harry Kane leads them with 6 goals in 6 games."
+        ],
+        "assumptions": [
+          "Model projects England to carry more of the ball and the better chances (higher attack rating); Croatia to sit compact and play on the break.",
+          "Goal expectancy 2.1–0.9 (England–Croatia) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "England shade the chance-creation (2.1 vs 0.9 xG) — they should make the running.",
+        "drawRisk": "Moderate — 19.8% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "caseFor": [
+          "England are the model's 64.3% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Harry Kane carrying the scoring load.",
+          "Conditions (heat) suit a controlled game England can manage."
+        ],
+        "caseAgainst": [
+          "19.8% draw + Croatia's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; England's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (19.8%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "England to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "England are the model's 64% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "gha-pan-2026-06-17": {
       "win": {
@@ -724,7 +899,92 @@
         "https://en.wikipedia.org/wiki/Cecilio_Waterman",
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
         "https://sports.yahoo.com/articles/ghana-vs-panama-predicted-lineup-060000349.html"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Ghana: 4 pts, +0 GD across 3 group games (2 for / 2 against).",
+          "Panama: 0 pts, -4 GD across 3 group games (0 for / 4 against)."
+        ],
+        "assumptions": [
+          "Model projects Ghana to carry more of the ball and the better chances (higher attack rating); Panama to sit compact and play on the break.",
+          "Goal expectancy 1.1–0.3 (Ghana–Panama) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Ghana shade the chance-creation (1.1 vs 0.3 xG) — they should make the running.",
+        "drawRisk": "High. Low combined xG (1.5) and a 32.4% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Ghana are the model's 57.4% favourite — higher attack rating and the better recent goal-rate.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "32.4% draw + Panama's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Ghana's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Lean",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": true,
+            "why": "32.4% draw is live."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 2,
+        "edge": "edge-leaning",
+        "verdict": "LEAN",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "Ghana to win is a lean, not a lock.",
+        "read": {
+          "tag": "Lean",
+          "line": "Ghana are the model's 57% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "2 warnings",
+          "line": "The draw is live and a level game kills a straight win bet."
+        }
+      }
     },
     "uzb-col-2026-06-17": {
       "win": {
@@ -962,7 +1222,94 @@
         "https://www.foxsports.com/stories/soccer/2026-world-cup-uzbekistan-colombia-odds-predictions-picks",
         "https://colombiaone.com/2026/06/17/james-rodriguez-luis-diaz-colombian-world-cup/",
         "https://www.rotowire.com/soccer/article/uzbekistan-vs-colombia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-118365"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Uzbekistan: 0 pts, -9 GD across 3 group games (2 for / 11 against).",
+          "Colombia: 7 pts, +3 GD across 3 group games (4 for / 1 against).",
+          "Colombia's Daniel Muñoz leads them with 2 goals in 5 games."
+        ],
+        "assumptions": [
+          "Model projects Colombia to carry more of the ball and the better chances (higher attack rating); Uzbekistan to sit compact and play on the break.",
+          "Goal expectancy 0.4–3.1 (Uzbekistan–Colombia) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Colombia shade the chance-creation (3.1 vs 0.4 xG) — they should make the running.",
+        "drawRisk": "Moderate — 8.1% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Mexico City sits at ~2,240m — thin air saps high-press legs after the hour; the deeper-block side tires less.",
+        "caseFor": [
+          "Colombia are the model's 87.7% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Daniel Muñoz carrying the scoring load.",
+          "Conditions (altitude) suit a controlled game Colombia can manage."
+        ],
+        "caseAgainst": [
+          "8.1% draw + Uzbekistan's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Colombia's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (8.1%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Colombia to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Colombia are the model's 88% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "cze-sou-2026-06-18": {
       "win": {
@@ -2160,7 +2507,94 @@
         "https://www.espn.com/soccer/story/_/id/49093966/fifa-world-cup-2026-usmnt-vs-australia-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
         "https://www.si.com/soccer/usmnt-predicted-lineup-vs-australia-world-cup-group-d-6-19-26"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "USA: 6 pts, +4 GD across 3 group games (8 for / 4 against).",
+          "Australia: 4 pts, +0 GD across 3 group games (2 for / 2 against).",
+          "USA's Folarin Balogun leads them with 3 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects USA to carry more of the ball and the better chances (higher attack rating); Australia to sit compact and play on the break.",
+          "Goal expectancy 1.7–0.8 (USA–Australia) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "USA shade the chance-creation (1.7 vs 0.8 xG) — they should make the running.",
+        "drawRisk": "Moderate — 24.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "caseFor": [
+          "USA are the model's 57.2% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Folarin Balogun carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "24.3% draw + Australia's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; USA's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (24.3%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "USA to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "USA are the model's 57% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "sco-mor-2026-06-19": {
       "win": {
@@ -2398,7 +2832,94 @@
         "https://uk.sports.yahoo.com/news/scotland-xi-vs-morocco-confirmed-222257430.html",
         "https://www.rotowire.com/soccer/article/scotland-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-118659",
         "https://www.squawka.com/en/news/world-cup/world-cup-2026-every-teams-set-piece-takers/"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Scotland: 3 pts, -3 GD across 3 group games (1 for / 4 against).",
+          "Morocco: 7 pts, +3 GD across 3 group games (6 for / 3 against).",
+          "Morocco's Ismael Saibari leads them with 3 goals in 5 games."
+        ],
+        "assumptions": [
+          "Model projects Morocco to carry more of the ball and the better chances (higher attack rating); Scotland to sit compact and play on the break.",
+          "Goal expectancy 0.6–1.8 (Scotland–Morocco) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Morocco shade the chance-creation (1.8 vs 0.6 xG) — they should make the running.",
+        "drawRisk": "Moderate — 21.9% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "caseFor": [
+          "Morocco are the model's 66.4% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Ismael Saibari carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "21.9% draw + Scotland's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Morocco's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (21.9%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Morocco to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Morocco are the model's 66% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "bra-hai-2026-06-19": {
       "win": {
@@ -2638,7 +3159,94 @@
         "https://www.aljazeera.com/sports/2026/6/14/vinicius-drags-brazil-level-against-dominant-morocco-at-world-cup",
         "https://andysbetclub.co.uk/predictions/world-cup-2026-set-piece-takers/",
         "https://www.espn.com/soccer/story/_/id/49097937/brazil-haiti-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Brazil: 7 pts, +6 GD across 3 group games (7 for / 1 against).",
+          "Haiti: 0 pts, -6 GD across 3 group games (2 for / 8 against).",
+          "Brazil's Vinícius Júnior leads them with 4 goals in 5 games."
+        ],
+        "assumptions": [
+          "Model projects Brazil to carry more of the ball and the better chances (higher attack rating); Haiti to sit compact and play on the break.",
+          "Goal expectancy 4.0–0.4 (Brazil–Haiti) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Brazil shade the chance-creation (4.0 vs 0.4 xG) — they should make the running.",
+        "drawRisk": "Moderate — 4.2% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Brazil are the model's 89.8% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Vinícius Júnior carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "4.2% draw + Haiti's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Brazil's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (4.2%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Brazil to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Brazil are the model's 90% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "tur-par-2026-06-19": {
       "win": {
@@ -2877,7 +3485,92 @@
         "https://www.si.com/soccer/turkiye-vs-paraguay-world-cup-preview-predictions-lineups-6-19-26",
         "https://us.soccerway.com/game/paraguay-YaNlqp6j/turkey-QeijuHo5/summary/lineups/",
         "https://www.fotmob.com/matches/turkiye-vs-paraguay/1gte1s"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Turkiye: 3 pts, -2 GD across 3 group games (3 for / 5 against).",
+          "Paraguay: 4 pts, -2 GD across 3 group games (2 for / 4 against)."
+        ],
+        "assumptions": [
+          "Model projects Turkiye to carry more of the ball and the better chances (higher attack rating); Paraguay to sit compact and play on the break.",
+          "Goal expectancy 1.1–1.1 (Turkiye–Paraguay) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Chances project close (1.1–1.1 xG) — a true coin-flip for territory; small margins decide it.",
+        "drawRisk": "High. Low combined xG (2.2) and a 29.2% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "caseFor": [
+          "Turkiye are the model's 37.3% favourite — higher attack rating and the better recent goal-rate.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "29.2% draw + Paraguay's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Turkiye's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": true,
+            "why": "29.2% draw is live."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 2,
+        "edge": "edge-leaning",
+        "verdict": "LEAN",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "Turkiye to win is a lean, not a lock.",
+        "read": {
+          "tag": "Pass",
+          "line": "Turkiye are the model's 37% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "2 warnings",
+          "line": "The draw is live and a level game kills a straight win bet."
+        }
+      }
     },
     "net-swe-2026-06-20": {
       "win": {
@@ -3116,7 +3809,95 @@
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
         "https://www.football-oranje.com/gakpos-penalties-help-netherlands-edge-out-uzbekistan/",
         "https://www.fourfourtwo.com/team/sweden-world-cup-2026-squad"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Netherlands: 7 pts, +6 GD across 3 group games (10 for / 4 against).",
+          "Sweden: 4 pts, +0 GD across 3 group games (7 for / 7 against).",
+          "Netherlands's Brian Brobbey leads them with 3 goals in 4 games.",
+          "Sweden's Anthony Elanga leads them with 2 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Draw No Bet — Netherlands to carry more of the ball and the better chances (higher attack rating); Netherlands to sit compact and play on the break.",
+          "Goal expectancy 4.1–1.6 (Netherlands–Sweden) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Netherlands shade the chance-creation (4.1 vs 1.6 xG) — they should make the running.",
+        "drawRisk": "Moderate — 10.2% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "caseFor": [
+          "Draw No Bet — Netherlands are the model's 10.2% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Anthony Elanga carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Draw No Bet — Netherlands can manage."
+        ],
+        "caseAgainst": [
+          "10.2% draw + Netherlands's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Draw No Bet — Netherlands's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (10.2%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Draw No Bet — Netherlands to win is a clean call.",
+        "read": {
+          "tag": "Pass",
+          "line": "Draw No Bet — Netherlands are the model's 10% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "ger-ivo-2026-06-20": {
       "win": {
@@ -3357,7 +4138,95 @@
         "https://www.skysports.com/football/news/12098/13552703/world-cup-2026-ivory-coast-1-0-ecuador-amad-diallo-nets-90th-minute-winner",
         "https://www.cbssports.com/soccer/news/germany-ivory-coast-odds-prediction-time-2026-world-cup-picks-best-bets/",
         "https://www.fanduel.com/research/germany-vs-ivory-coast-prediction-lineups-picks-and-best-bets-world-cup-2026-group-e-today"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Germany: 6 pts, +6 GD across 3 group games (10 for / 4 against).",
+          "Ivory Coast: 6 pts, +2 GD across 3 group games (4 for / 2 against).",
+          "Germany's Deniz Undav leads them with 3 goals in 4 games.",
+          "Ivory Coast's Amad Diallo leads them with 2 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Germany to carry more of the ball and the better chances (higher attack rating); Ivory Coast to sit compact and play on the break.",
+          "Goal expectancy 1.9–1.2 (Germany–Ivory Coast) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Germany shade the chance-creation (1.9 vs 1.2 xG) — they should make the running.",
+        "drawRisk": "Moderate — 22.6% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Germany are the model's 52.9% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Deniz Undav carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "22.6% draw + Ivory Coast's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Germany's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Lean",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (22.6%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Germany to win is a clean call.",
+        "read": {
+          "tag": "Lean",
+          "line": "Germany are the model's 53% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "ecu-cur-2026-06-20": {
       "win": {
@@ -3595,7 +4464,92 @@
         "https://www.sportsmole.co.uk/football/ecuador/world-cup-2026/predicted-lineups/valencia-reliance-caicedo-anchors-predicted-ecuador-xi-vs-curacao_599569.html",
         "https://www.si.com/soccer/ecuador-vs-curacao-world-cup-preview-predictions-lineups-6-20-26",
         "https://www.skysports.com/football/germany-vs-curacao/549774"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Ecuador: 4 pts, +0 GD across 3 group games (2 for / 2 against).",
+          "Curacao: 1 pts, -8 GD across 3 group games (1 for / 9 against)."
+        ],
+        "assumptions": [
+          "Model projects Ecuador to carry more of the ball and the better chances (higher attack rating); Curacao to sit compact and play on the break.",
+          "Goal expectancy 1.8–0.5 (Ecuador–Curacao) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Ecuador shade the chance-creation (1.8 vs 0.5 xG) — they should make the running.",
+        "drawRisk": "High. Low combined xG (2.3) and a 20.5% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
+        "caseFor": [
+          "Ecuador are the model's 70.9% favourite — higher attack rating and the better recent goal-rate.",
+          "Conditions (heat) suit a controlled game Ecuador can manage."
+        ],
+        "caseAgainst": [
+          "20.5% draw + Curacao's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Ecuador's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Lean",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (20.5%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Ecuador to win is a clean call.",
+        "read": {
+          "tag": "Lean",
+          "line": "Ecuador are the model's 71% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "tun-jap-2026-06-20": {
       "win": {
@@ -5480,7 +6434,95 @@
         "https://www.rotowire.com/soccer/article/argentina-vs-austria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119066",
         "https://en.wikipedia.org/wiki/Paul_Wanner",
         "https://www.si.com/soccer/austria-2026-world-cup-preview"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
+          "Austria: 4 pts, +0 GD across 3 group games (6 for / 6 against).",
+          "Argentina's Lionel Messi leads them with 8 goals in 6 games.",
+          "Austria's Marko Arnautovic leads them with 2 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Austria to sit compact and play on the break.",
+          "Goal expectancy 3.2–0.8 (Argentina–Austria) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Argentina shade the chance-creation (3.2 vs 0.8 xG) — they should make the running.",
+        "drawRisk": "Moderate — 10.2% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "caseFor": [
+          "Argentina are the model's 82.4% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Lionel Messi carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Argentina can manage."
+        ],
+        "caseAgainst": [
+          "10.2% draw + Austria's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (10.2%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Argentina to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Argentina are the model's 82% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "fra-ira-2026-06-22": {
       "win": {
@@ -5732,7 +6774,94 @@
         "https://sports.yahoo.com/articles/takes-france-penalties-why-kylian-170056348.html",
         "https://www.rotowire.com/soccer/article/france-vs-iraq-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119062",
         "https://www.skysports.com/football/news/11095/13552714/world-cup-2026-france-3-1-senegal-kylian-mbappe-becomes-leading-scorer-in-les-bleus-history-with-stunning-double"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "France: 9 pts, +8 GD across 3 group games (10 for / 2 against).",
+          "Iraq: 0 pts, -11 GD across 3 group games (1 for / 12 against).",
+          "France's Kylian Mbappé leads them with 8 goals in 6 games."
+        ],
+        "assumptions": [
+          "Model projects France to carry more of the ball and the better chances (higher attack rating); Iraq to sit compact and play on the break.",
+          "Goal expectancy 7.3–0.4 (France–Iraq) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "France shade the chance-creation (7.3 vs 0.4 xG) — they should make the running.",
+        "drawRisk": "Moderate — 0.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "France are the model's 54.9% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Kylian Mbappé carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "0.3% draw + Iraq's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; France's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Lean",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (0.3%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "France to win is a clean call.",
+        "read": {
+          "tag": "Lean",
+          "line": "France are the model's 55% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "nor-sen-2026-06-22": {
       "win": {
@@ -5982,7 +7111,95 @@
         "https://worldsoccertalk.com/world-cup/is-erling-haaland-playing-norway-vs-senegal-projected-lineups-for-the-2026-world-cup-group-i-game/",
         "https://www.cpfc.co.uk/news/first-team/world-cup-2026-spotlight-on-sarr-and-senegal/",
         "https://www.espn.com/soccer/story/_/id/49127342/norway-senegal-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Norway: 6 pts, +1 GD across 3 group games (8 for / 7 against).",
+          "Senegal: 3 pts, +2 GD across 3 group games (8 for / 6 against).",
+          "Norway's Erling Haaland leads them with 7 goals in 5 games.",
+          "Senegal's Ismaïla Sarr leads them with 4 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Norway to carry more of the ball and the better chances (higher attack rating); Senegal to sit compact and play on the break.",
+          "Goal expectancy 3.2–2.4 (Norway–Senegal) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Norway shade the chance-creation (3.2 vs 2.4 xG) — they should make the running.",
+        "drawRisk": "Moderate — 16.5% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Norway are the model's 52.3% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Erling Haaland carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "16.5% draw + Senegal's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Norway's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Lean",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (16.5%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Norway to win is a clean call.",
+        "read": {
+          "tag": "Lean",
+          "line": "Norway are the model's 52% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "jor-alg-2026-06-22": {
       "win": {
@@ -6231,7 +7448,94 @@
         "https://worldsoccertalk.com/world-cup/jordan-2026-world-cup-preview-squad-breakdown-key-player-and-tactical-analysis/",
         "https://www.fotmob.com/players/844437/amine-gouiri",
         "https://www.sportsmole.co.uk/football/jordan/world-cup-2026/preview/jordan-vs-algeria-prediction-team-news-lineups_599697.html"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Jordan: 0 pts, -5 GD across 3 group games (3 for / 8 against).",
+          "Algeria: 4 pts, -2 GD across 3 group games (5 for / 7 against).",
+          "Algeria's Riyad Mahrez leads them with 2 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Algeria to carry more of the ball and the better chances (higher attack rating); Jordan to sit compact and play on the break.",
+          "Goal expectancy 1.5–2.5 (Jordan–Algeria) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Algeria shade the chance-creation (2.5 vs 1.5 xG) — they should make the running.",
+        "drawRisk": "Moderate — 18.2% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Temperate, controlled venue — climate is neutral; the football decides it.",
+        "caseFor": [
+          "Algeria are the model's 60.6% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Riyad Mahrez carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "18.2% draw + Jordan's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Algeria's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (18.2%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Algeria to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Algeria are the model's 61% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "por-uzb-2026-06-23": {
       "win": {
@@ -12839,7 +14143,94 @@
         "https://bulinews.com/world-cup-several-bundesliga-stars-action-austria-and-algeria-lock-horns",
         "https://allaboutfpl.com/2026/06/fifa-world-cup-2026-penalty-and-set-piece-takers-of-all-48-teams/",
         "https://www.espn.com/soccer/story/_/id/49154542/why-algeria-austria-2026-world-cup-biggest-grudge-match-west-germany-1982-disgrace-gijon"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Algeria: 4 pts, -2 GD across 3 group games (5 for / 7 against).",
+          "Austria: 4 pts, +0 GD across 3 group games (6 for / 6 against).",
+          "Algeria's Riyad Mahrez leads them with 2 goals in 4 games.",
+          "Austria's Marko Arnautovic leads them with 2 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects Austria to carry more of the ball and the better chances (higher attack rating); Algeria to sit compact and play on the break.",
+          "Goal expectancy 2.0–2.3 (Algeria–Austria) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Austria shade the chance-creation (2.3 vs 2.0 xG) — they should make the running.",
+        "drawRisk": "Moderate — 19.7% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
+        "caseFor": [
+          "Tightest projection on the board — 19.7% draw on low combined xG.",
+          "Knockout caution pulls both sides toward a level 90 minutes."
+        ],
+        "caseAgainst": [
+          "One moment of quality (set-piece, individual) breaks any draw.",
+          "Draw is the lowest-confidence headline call there is."
+        ],
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "tripped": false,
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "The pick IS the draw — fully accounted for."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "narrative-leaning",
+        "verdict": "LEAN",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "A draw is a lean, not a lock.",
+        "read": {
+          "tag": "Pass",
+          "line": "The model leans level — a 19.7% draw on low goals, the tightest call on the board."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "jor-arg-2026-06-27": {
       "win": {
@@ -13090,7 +14481,94 @@
         "https://worldsoccertalk.com/world-cup/is-lionel-messi-playing-jordan-vs-argentina-projected-lineups-for-the-2026-world-cup-group-j-game/",
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
         "https://en.wikipedia.org/wiki/Ali_Olwan"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Jordan: 0 pts, -5 GD across 3 group games (3 for / 8 against).",
+          "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
+          "Argentina's Lionel Messi leads them with 8 goals in 6 games."
+        ],
+        "assumptions": [
+          "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Jordan to sit compact and play on the break.",
+          "Goal expectancy 0.5–4.0 (Jordan–Argentina) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Argentina shade the chance-creation (4.0 vs 0.5 xG) — they should make the running.",
+        "drawRisk": "Moderate — 4.5% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Texas summer heat/humidity — afternoon kickoffs slow the tempo and favour the patient, lower-block side.",
+        "caseFor": [
+          "Argentina are the model's 88.6% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Lionel Messi carrying the scoring load.",
+          "Conditions (heat) suit a controlled game Argentina can manage."
+        ],
+        "caseAgainst": [
+          "4.5% draw + Jordan's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (4.5%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "Argentina to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "Argentina are the model's 89% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "col-por-2026-06-27": {
       "win": {
@@ -13340,7 +14818,94 @@
         "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021505",
         "https://www.flashscore.com/match/football/colombia-G02s4PCS/portugal-WvJrjFVN/summary/lineups/",
         "Method: cross-checked live confirmed-lineup sources to resolve predicted-vs-confirmed conflicts. Confirmed Santiago Arias (RB) and Deiver Machado (LB) over Munoz/Mojica, Jhon Cordoba over Suarez up front, and RUBEN Neves (not Joao Neves) in Portugal's pivot with Ronaldo starting. Penalty taker reassigned from Munoz (benched) to James Rodriguez (Colombia) and Ronaldo (Portugal)."
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Colombia: 7 pts, +3 GD across 3 group games (4 for / 1 against).",
+          "Portugal: 5 pts, +5 GD across 3 group games (6 for / 1 against).",
+          "Colombia's Daniel Muñoz leads them with 2 goals in 5 games.",
+          "Portugal's Cristiano Ronaldo leads them with 3 goals in 5 games."
+        ],
+        "assumptions": [
+          "Model projects Portugal to carry more of the ball and the better chances (higher attack rating); Colombia to sit compact and play on the break.",
+          "Goal expectancy 0.8–0.8 (Colombia–Portugal) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Chances project close (0.8–0.8 xG) — a true coin-flip for territory; small margins decide it.",
+        "drawRisk": "High. Low combined xG (1.7) and a 34.3% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Miami humidity drags the second-half tempo; hydration breaks reset momentum.",
+        "caseFor": [
+          "Tightest projection on the board — 34.3% draw on low combined xG.",
+          "Knockout caution pulls both sides toward a level 90 minutes."
+        ],
+        "caseAgainst": [
+          "One moment of quality (set-piece, individual) breaks any draw.",
+          "Draw is the lowest-confidence headline call there is."
+        ],
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "tripped": false,
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "The pick IS the draw — fully accounted for."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "narrative-leaning",
+        "verdict": "LEAN",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "A draw is a lean, not a lock.",
+        "read": {
+          "tag": "Pass",
+          "line": "The model leans level — a 34.3% draw on low goals, the tightest call on the board."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "drc-uzb-2026-06-27": {
       "win": {
@@ -13593,7 +15158,94 @@
         "https://www.aljazeera.com/sports/2026/6/17/meet-yoane-wissa-who-scored-dr-congos-first-ever-goal-at-a-world-cup",
         "https://en.wikipedia.org/wiki/Eldor_Shomurodov",
         "ESPN FIFA World Cup summary feed (confirmed team sheet)"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "DR Congo: 4 pts, +1 GD across 3 group games (4 for / 3 against).",
+          "Uzbekistan: 0 pts, -9 GD across 3 group games (2 for / 11 against).",
+          "DR Congo's Yoane Wissa leads them with 3 goals in 4 games."
+        ],
+        "assumptions": [
+          "Model projects DR Congo to carry more of the ball and the better chances (higher attack rating); Uzbekistan to sit compact and play on the break.",
+          "Goal expectancy 3.2–0.6 (DR Congo–Uzbekistan) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "DR Congo shade the chance-creation (3.2 vs 0.6 xG) — they should make the running.",
+        "drawRisk": "Moderate — 9.6% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
+        "caseFor": [
+          "DR Congo are the model's 84.3% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Yoane Wissa carrying the scoring load.",
+          "Conditions (heat) suit a controlled game DR Congo can manage."
+        ],
+        "caseAgainst": [
+          "9.6% draw + Uzbekistan's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; DR Congo's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (9.6%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "DR Congo to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "DR Congo are the model's 84% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "pan-eng-2026-06-27": {
       "win": {
@@ -13847,7 +15499,94 @@
         "https://www.rotowire.com/soccer/article/panama-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119774",
         "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/panama/team-news",
         "https://www.squawka.com/us/news/bukayo-saka-stats/"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Panama: 0 pts, -4 GD across 3 group games (0 for / 4 against).",
+          "England: 7 pts, +4 GD across 3 group games (6 for / 2 against).",
+          "England's Harry Kane leads them with 6 goals in 6 games."
+        ],
+        "assumptions": [
+          "Model projects England to carry more of the ball and the better chances (higher attack rating); Panama to sit compact and play on the break.",
+          "Goal expectancy 0.3–2.0 (Panama–England) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "England shade the chance-creation (2.0 vs 0.3 xG) — they should make the running.",
+        "drawRisk": "Moderate — 17% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "England are the model's 77.9% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Harry Kane carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "17% draw + Panama's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; England's number may be inflated by one result.",
+          "Rotation/motivation risk if the table is already settled."
+        ],
+        "verdict": "Bet",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (17%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "England to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "England are the model's 78% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "cro-gha-2026-06-27": {
       "win": {
@@ -14099,7 +15838,92 @@
         "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
         "https://www.covers.com/world-cup/croatia-vs-ghana-prediction-picks-odds-saturday-6-27-2026",
         "https://www.cbssports.com/soccer/news/croatia-ghana-odds-prediction-line-time-2026-world-cup-picks-best-bets/"
-      ]
+      ],
+      "pitchReport": {
+        "facts": [
+          "Croatia: 6 pts, +0 GD across 3 group games (5 for / 5 against).",
+          "Ghana: 4 pts, +0 GD across 3 group games (2 for / 2 against)."
+        ],
+        "assumptions": [
+          "Model projects Croatia to carry more of the ball and the better chances (higher attack rating); Ghana to sit compact and play on the break.",
+          "Goal expectancy 1.2–1.0 (Croatia–Ghana) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Group stage — motivation depends on the table; a side already qualified may rest legs, an eliminated side may throw caution out. Check standings before staking lineup-sensitive props.",
+        "xgRead": "Chances project close (1.2–1.0 xG) — a true coin-flip for territory; small margins decide it.",
+        "drawRisk": "High. Low combined xG (2.1) and a 29.4% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Tightest projection on the board — 29.4% draw on low combined xG.",
+          "Knockout caution pulls both sides toward a level 90 minutes."
+        ],
+        "caseAgainst": [
+          "One moment of quality (set-piece, individual) breaks any draw.",
+          "Draw is the lowest-confidence headline call there is."
+        ],
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "tripped": false,
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": true,
+            "why": "Group stage — qualification state could trigger rotation; check the table."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "The pick IS the draw — fully accounted for."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "narrative-leaning",
+        "verdict": "LEAN",
+        "discipline": "Price beats prediction: only stake when the number is wrong, not when the team is good. When in doubt, pass — there's another match tomorrow."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "A draw is a lean, not a lock.",
+        "read": {
+          "tag": "Pass",
+          "line": "The model leans level — a 29.4% draw on low goals, the tightest call on the board."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "Lineups could be rotated — check the table first."
+        }
+      }
     },
     "rsa-can-2026-06-28": {
       "win": {
