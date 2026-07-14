@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-13T13:00:46.727Z",
+    "generatedAt": "2026-07-14T09:03:34.264Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-13T13:00:46.726Z"
@@ -26008,250 +26008,132 @@
     "fra-esp-2026-07-14": {
       "win": {
         "pick": "France",
-        "fairOdds": "2.49",
-        "reason": "Model: France to win at 40% (France 40% / draw 30% / Spain 30%). Expected goals 1.1–0.9 from group-stage attack/defence rates (France 2.6 for / 1.0 against per game, Spain 1.6 / 0.6). Most likely score 1-0.",
-        "strength": 2
+        "fairOdds": "2.35",
+        "reason": "France reached a third straight semi with three knockout clean sheets and Mbappe (8 goals) + Dembele (5) in scintillating form, but Spain are European champions with Rodri back to his best; Opta gives France only ~42% in 90 mins so this is a lean, not a lock.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.50",
+        "fairOdds": "2.30",
         "alt": "1-0",
-        "altOdds": "4.10"
+        "altOdds": "4.00",
+        "strength": 3
       },
       "htft": {
         "pick": "Draw/France",
-        "fairOdds": "6.22"
+        "fairOdds": "5.00",
+        "strength": 2
       },
       "fullTime": {
-        "score": "1-0",
-        "fairOdds": "7.03"
+        "score": "1-1",
+        "fairOdds": "6.50",
+        "strength": 2
       },
       "scorers": [
         {
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "fairOdds": "2.40",
-          "banker": true,
-          "note": "8 goals in 6 group games; 42% modelled anytime chance on 1.1 team xG.",
+          "player": "Kylian Mbappe",
+          "fairOdds": "2.90",
+          "banker": false,
+          "note": "8 goals this WC, France penalty taker and shootout ace (4/5), level with Messi in the Golden Boot race; but Spain's Laporte/Cubarsi back line and Rodri screen make him no lock in a tight semi",
+          "strength": 3
+        },
+        {
+          "player": "Ousmane Dembele",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "Reigning Ballon d'Or winner, 5 goals incl. a hat-trick vs Norway, primary FK taker; live threat cutting in but faces a compact Spanish block",
           "strength": 3
         },
         {
           "player": "Mikel Oyarzabal",
-          "team": "Spain",
-          "fairOdds": "3.13",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "4 goals in 6 group games; 32% modelled anytime chance on 0.9 team xG.",
+          "note": "Spain's in-form striker (brace vs Austria) and first-choice penalty taker (3/3 for La Roja); best Spanish scoring bet",
+          "strength": 3
+        },
+        {
+          "player": "Lamine Yamal",
+          "fairOdds": "4.50",
+          "banker": false,
+          "note": "Spain's talisman on his birthday, key playmaker/corner + FK taker; can decide games but has carried tournament 'anxiety' talk and faces Theo Hernandez/Saliba side",
           "strength": 2
-        },
-        {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "fairOdds": "3.40",
-          "banker": false,
-          "note": "5 goals in 6 group games; 29% modelled anytime chance on 1.1 team xG.",
-          "strength": 2
-        },
-        {
-          "player": "Mikel Merino",
-          "team": "Spain",
-          "fairOdds": "5.20",
-          "banker": false,
-          "note": "2 goals in 6 group games; 19% modelled anytime chance on 0.9 team xG.",
-          "strength": 1
-        },
-        {
-          "player": "Bradley Barcola",
-          "team": "France",
-          "fairOdds": "6.83",
-          "banker": false,
-          "note": "2 goals in 6 group games; 15% modelled anytime chance on 1.1 team xG.",
-          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Michael Olise",
-          "team": "France",
-          "fairOdds": "2.81",
-          "banker": true,
-          "note": "5 assists in the group stage; 36% modelled chance to set one up."
+          "player": "Lamine Yamal",
+          "fairOdds": "4.00",
+          "banker": false,
+          "note": "Spain's chief creator and set-piece/corner taker; most likely Spanish assist source",
+          "strength": 3
         },
         {
-          "player": "Marc Cucurella",
-          "team": "Spain",
-          "fairOdds": "4.07",
+          "player": "Kylian Mbappe",
+          "fairOdds": "5.50",
           "banker": false,
-          "note": "2 assists in the group stage; 25% modelled chance to set one up."
+          "note": "Captain drops and links play as well as scoring; can tee up Barcola/Dembele on the counter",
+          "strength": 2
         },
         {
-          "player": "Kylian Mbappé",
-          "team": "France",
-          "fairOdds": "4.13",
+          "player": "Pedri",
+          "fairOdds": "6.00",
           "banker": false,
-          "note": "3 assists in the group stage; 24% modelled chance to set one up."
-        },
-        {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "fairOdds": "5.63",
-          "banker": false,
-          "note": "2 assists in the group stage; 18% modelled chance to set one up."
+          "note": "Spain's rhythm-setter and FK taker if restored over Fabian Ruiz; primary progressive passer",
+          "strength": 2
         }
       ],
       "penalty": {
-        "likelihood": "medium",
-        "taker": "Kylian Mbappé",
-        "backup": "Ousmane Dembélé",
-        "note": "Tight model margin (10 pts) raises the odds a spot-kick decides it; Kylian Mbappé is France's group-stage top scorer and likely taker."
+        "likelihood": "Medium",
+        "taker": "Kylian Mbappe",
+        "backup": "Mikel Oyarzabal",
+        "note": "In open play Mbappe takes France's spot-kicks (Oyarzabal takes Spain's, 3/3). This is a knockout, so a shootout is a live outcome: Mbappe (4/5 in shootouts), Dembele, Rabiot for France; Oyarzabal, Yamal, Pedri for Spain likely lead the order."
       },
       "lineups": {
-        "home": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Manu Koné, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Désiré Doué, Kylian Mbappé",
-        "away": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Fabian Ruiz, Rodri, Dani Olmo, Lamine Yamal, Mikel Oyarzabal, Alex Baena",
-        "status": "unconfirmed",
-        "homeXI": {
-          "formation": "4-2-3-1",
-          "players": [
-            {
-              "num": 16,
-              "name": "Mike Maignan",
-              "pos": "G"
-            },
-            {
-              "num": 5,
-              "name": "Jules Koundé",
-              "pos": "RB"
-            },
-            {
-              "num": 4,
-              "name": "Dayot Upamecano",
-              "pos": "CD-R"
-            },
-            {
-              "num": 17,
-              "name": "William Saliba",
-              "pos": "CD-L"
-            },
-            {
-              "num": 21,
-              "name": "Lucas Digne",
-              "pos": "LB"
-            },
-            {
-              "num": 18,
-              "name": "Manu Koné",
-              "pos": "CM-R"
-            },
-            {
-              "num": 14,
-              "name": "Adrien Rabiot",
-              "pos": "CM-L"
-            },
-            {
-              "num": 7,
-              "name": "Ousmane Dembélé",
-              "pos": "RW"
-            },
-            {
-              "num": 11,
-              "name": "Michael Olise",
-              "pos": "AM"
-            },
-            {
-              "num": 20,
-              "name": "Désiré Doué",
-              "pos": "LW"
-            },
-            {
-              "num": 10,
-              "name": "Kylian Mbappé",
-              "pos": "CF"
-            }
-          ]
-        },
-        "awayXI": {
-          "formation": "4-3-3",
-          "players": [
-            {
-              "num": 23,
-              "name": "Unai Simon",
-              "pos": "G"
-            },
-            {
-              "num": 2,
-              "name": "Pedro Porro",
-              "pos": "RB"
-            },
-            {
-              "num": 22,
-              "name": "Pau Cubarsi",
-              "pos": "CB-R"
-            },
-            {
-              "num": 14,
-              "name": "Aymeric Laporte",
-              "pos": "CB-L"
-            },
-            {
-              "num": 24,
-              "name": "Marc Cucurella",
-              "pos": "LB"
-            },
-            {
-              "num": 16,
-              "name": "Rodri",
-              "pos": "DM"
-            },
-            {
-              "num": 8,
-              "name": "Fabian Ruiz",
-              "pos": "CM-R"
-            },
-            {
-              "num": 21,
-              "name": "Dani Olmo",
-              "pos": "CM-L"
-            },
-            {
-              "num": 19,
-              "name": "Lamine Yamal",
-              "pos": "RW"
-            },
-            {
-              "num": 9,
-              "name": "Mikel Oyarzabal",
-              "pos": "F"
-            },
-            {
-              "num": 10,
-              "name": "Alex Baena",
-              "pos": "LW"
-            }
-          ]
-        }
+        "home": "France (4-3-3): Maignan; Gusto, Saliba, Upamecano, T. Hernandez; Tchouameni, Kante, Rabiot; Dembele, Mbappe (c), Barcola.",
+        "away": "Spain (4-3-3): Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri (c), Pedri, Zubimendi; Yamal, Oyarzabal, N. Williams. (Fabian Ruiz/Olmo and Baena in contention for the No.8 and left-forward roles; Merino a decisive bench option.)",
+        "status": "probable"
       },
       "playerNotes": [
         {
-          "player": "Kylian Mbappé",
+          "player": "Kylian Mbappe",
           "team": "France",
-          "note": "8 goals in 6 group games; 42% modelled anytime chance on 1.1 team xG."
+          "note": "8 WC26 goals, captain, penalty + shootout taker; France's focal point but faces the tournament's most organised block"
+        },
+        {
+          "player": "Ousmane Dembele",
+          "team": "France",
+          "note": "Ballon d'Or holder, 5 goals + hat-trick vs Norway, primary free-kick taker; in the form of his life"
+        },
+        {
+          "player": "Rodri",
+          "team": "Spain",
+          "note": "Back to full fitness and commanding the double pivot; the key to Spain smothering France's transitions"
+        },
+        {
+          "player": "Lamine Yamal",
+          "team": "Spain",
+          "note": "Talisman, main corner/FK taker; birthday semi-final, some 'anxiety'/pressure narrative but a match-winner"
         },
         {
           "player": "Mikel Oyarzabal",
           "team": "Spain",
-          "note": "4 goals in 6 group games; 32% modelled anytime chance on 0.9 team xG."
+          "note": "In-form striker and Spain's first-choice penalty taker (3/3); brace vs Austria"
         },
         {
-          "player": "Michael Olise",
-          "team": "France",
-          "note": "5 assists in the group stage; 36% modelled chance to set one up."
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "note": "Decisive 88th-min winner vs Belgium; likely a game-changing substitute again rather than a starter"
         }
       ],
       "confidence": "medium",
-      "strength": 2,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "https://www.espn.com/soccer/story/_/id/49341955/france-vs-spain-fifa-world-cup-2026-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups",
+        "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-spain-prediction-team-news-lineups_601083.html",
+        "https://www.sportsmole.co.uk/football/spain/injury-news/injuries-and-suspensions/pino-williams-munoz-latest-spain-injury-suspension-list-vs-france_601071.html",
+        "https://www.aljazeera.com/sports/2026/7/12/france-spain-fifa-world-cup-semifinals-mbappe-yamal-prediction-stats-venue",
+        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://www.cbssports.com/soccer/news/france-spain-odds-prediction-line-time-2026-world-cup-semifinal-picks/"
       ],
       "pitchReport": {
         "facts": [
