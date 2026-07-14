@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-14T21:00:04.760Z",
+    "generatedAt": "2026-07-14T22:00:47.926Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -736,7 +736,14 @@
             "W",
             "D"
           ],
-          "next": null
+          "next": {
+            "round": "Final",
+            "opponent": "Semifinal 2 Winner",
+            "opponentFlag": null,
+            "kickoffUTC": "2026-07-19T19:00Z",
+            "home": true,
+            "placeholder": true
+          }
         },
         {
           "name": "Cape Verde",
@@ -836,7 +843,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Group",
+            "opponent": "Semifinal 2 Loser",
+            "opponentFlag": "🏳️",
+            "kickoffUTC": "2026-07-18T21:00Z",
+            "home": true,
+            "placeholder": false
+          }
         },
         {
           "name": "Norway",
