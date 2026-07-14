@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-14T19:20:08.155Z",
+    "generatedAt": "2026-07-14T19:30:09.489Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 80,
     "live": 1
@@ -95431,10 +95431,19 @@
       "finishPhase": null,
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "advanced": null,
-      "goals": [],
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Mikel Oyarzabal",
+          "minute": 22,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        }
+      ],
       "cards": [
         {
           "team": "home",
@@ -95451,11 +95460,11 @@
         },
         "sot": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "shots": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "yellow": {
           "home": 1,
@@ -95470,7 +95479,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "cornersByHalf": {
@@ -95496,7 +95505,8 @@
         "playerSot": {},
         "playerShots": {
           "Adrien Rabiot": 1,
-          "Álex Baena": 1
+          "Álex Baena": 1,
+          "Mikel Oyarzabal": 1
         },
         "playerShotBreakdown": {
           "Adrien Rabiot": {
@@ -95514,6 +95524,14 @@
             "off": 0,
             "blocked": 1,
             "goals": 0
+          },
+          "Mikel Oyarzabal": {
+            "team": "away",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
+            "blocked": 0,
+            "goals": 1
           }
         },
         "players": [
@@ -95535,10 +95553,10 @@
             "rc": 0,
             "off": 0,
             "sv": 0,
-            "gc": 0,
+            "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 8
           },
           {
             "team": "home",
@@ -95558,7 +95576,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 3
+            "ps": 10
           },
           {
             "team": "home",
@@ -95578,7 +95596,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 11
           },
           {
             "team": "home",
@@ -95591,14 +95609,14 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 7
           },
           {
             "team": "home",
@@ -95618,7 +95636,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 6
           },
           {
             "team": "home",
@@ -95638,7 +95656,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 11
           },
           {
             "team": "home",
@@ -95656,9 +95674,9 @@
             "yc": 1,
             "rc": 0,
             "off": 0,
-            "tk": 1,
+            "tk": 2,
             "bk": 0,
-            "ps": 9
+            "ps": 13
           },
           {
             "team": "home",
@@ -95678,7 +95696,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 10
           },
           {
             "team": "home",
@@ -95698,7 +95716,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 3
+            "ps": 6
           },
           {
             "team": "home",
@@ -95718,7 +95736,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 6
           },
           {
             "team": "home",
@@ -95738,7 +95756,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 7
           },
           {
             "team": "away",
@@ -95761,7 +95779,7 @@
             "gc": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 4
           },
           {
             "team": "away",
@@ -95781,7 +95799,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 14
+            "ps": 28
           },
           {
             "team": "away",
@@ -95801,7 +95819,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 9
           },
           {
             "team": "away",
@@ -95821,7 +95839,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 13
           },
           {
             "team": "away",
@@ -95839,9 +95857,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 4
+            "ps": 6
           },
           {
             "team": "away",
@@ -95861,7 +95879,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 6
+            "ps": 10
           },
           {
             "team": "away",
@@ -95879,9 +95897,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 12
+            "ps": 21
           },
           {
             "team": "away",
@@ -95901,7 +95919,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 10
+            "ps": 16
           },
           {
             "team": "away",
@@ -95910,10 +95928,10 @@
             "num": 21,
             "starter": true,
             "aid": "229018",
-            "g": 0,
+            "g": 1,
             "a": 0,
-            "sh": 0,
-            "sot": 0,
+            "sh": 1,
+            "sot": 1,
             "fc": 0,
             "fs": 0,
             "yc": 0,
@@ -95921,7 +95939,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 7
           },
           {
             "team": "away",
@@ -95940,8 +95958,8 @@
             "rc": 0,
             "off": 0,
             "tk": 0,
-            "bk": 0,
-            "ps": 7
+            "bk": 1,
+            "ps": 9
           },
           {
             "team": "away",
@@ -95955,7 +95973,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -95965,21 +95983,21 @@
           }
         ],
         "subs": [],
-        "firstGoalMethod": null,
+        "firstGoalMethod": "penalty",
         "firstPenalty": null,
         "waterBreak": {},
         "tempo": {
           "possession": {
-            "home": 41.4,
-            "away": 58.6
+            "home": 44,
+            "away": 56
           },
           "passes": {
-            "home": 77,
-            "away": 113
+            "home": 104,
+            "away": 137
           },
           "tackles": {
-            "home": 2,
-            "away": 3
+            "home": 3,
+            "away": 4
           },
           "saves": {
             "home": 0,
@@ -95994,19 +96012,19 @@
             "away": 1
           },
           "interceptions": {
-            "home": 1,
+            "home": 2,
             "away": 1
           },
           "clearances": {
             "home": 3,
-            "away": 1
+            "away": 2
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "2",
+            "home": "3",
             "away": "0"
           },
           {
@@ -96042,26 +96060,26 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "41.4",
-            "away": "58.6"
+            "home": "44",
+            "away": "56"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
             "home": "1",
-            "away": "1"
+            "away": "2"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "shotPct",
             "label": "On Target %",
             "home": "0.0",
-            "away": "0.0"
+            "away": "0.5"
           },
           {
             "key": "penaltyKickGoals",
@@ -96073,61 +96091,61 @@
             "key": "penaltyKickShots",
             "label": "Penalty Kicks Taken",
             "home": "0",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "67",
-            "away": "104"
+            "home": "86",
+            "away": "122"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "77",
-            "away": "113"
+            "home": "104",
+            "away": "137"
           },
           {
             "key": "passPct",
             "label": "Pass Completion %",
-            "home": "0.9",
+            "home": "0.8",
             "away": "0.9"
           },
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "0",
+            "home": "1",
             "away": "0"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "4",
-            "away": "3"
+            "home": "6",
+            "away": "4"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
-            "home": "0.0",
+            "home": "0.2",
             "away": "0.0"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "11",
-            "away": "8"
+            "home": "15",
+            "away": "10"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "7",
+            "home": "10",
             "away": "4"
           },
           {
             "key": "longballPct",
             "label": "Long Balls %",
-            "home": "0.6",
-            "away": "0.5"
+            "home": "0.7",
+            "away": "0.4"
           },
           {
             "key": "blockedShots",
@@ -96138,38 +96156,38 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "1",
-            "away": "2"
-          },
-          {
-            "key": "totalTackles",
-            "label": "Tackles",
             "home": "2",
             "away": "3"
           },
           {
+            "key": "totalTackles",
+            "label": "Tackles",
+            "home": "3",
+            "away": "4"
+          },
+          {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.5",
-            "away": "0.7"
+            "home": "0.7",
+            "away": "0.8"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "1",
+            "home": "2",
             "away": "1"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
             "home": "3",
-            "away": "1"
+            "away": "2"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
             "home": "3",
-            "away": "1"
+            "away": "2"
           }
         ],
         "playerTackles": {
