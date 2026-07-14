@@ -217,6 +217,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.player} — ${plus(leg.line)} shots on target`;
     case "gkSavesOver":
       return `${leg.player} — ${plus(leg.line)} saves`;
+    case "eachTeamKeeperSavesEachHalfAtLeast":
+      return `${m} — each team ${plus(leg.line)} keeper saves in each half`;
     case "cardsTotalOver":
       return `${m} — Over ${leg.line} cards`;
     case "teamCardsOver":
@@ -1432,6 +1434,26 @@ export function inPlayMultiLeg(
         tot != null &&
         (doneFull || (leg.half === 1 && lm.htScore))
       ) {
+        dead = true;
+        parts.push(`${legLabel} ✗`);
+      } else {
+        parts.push(`${legLabel} —`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "eachTeamKeeperSavesEachHalfAtLeast") {
+      // Both keepers 2+ saves in each half — a keeper's saves in a half = the
+      // opponent's on-target-non-goal shots (sotByHalf). Locks WON once both
+      // halves are cleared by both sides; the H1 requirement locks dead at the
+      // HT whistle; a half short at FT is dead. No by-half tally yet → neutral.
+      const s = lm.stats?.sotByHalf;
+      const okH1 = s ? s.home[0] >= leg.line && s.away[0] >= leg.line : null;
+      const okH2 = s ? s.home[1] >= leg.line && s.away[1] >= leg.line : null;
+      if (okH1 && okH2) {
+        wonCount++;
+        parts.push(`${legLabel} ✓`);
+      } else if (s != null && (doneFull || (okH1 === false && lm.htScore))) {
         dead = true;
         parts.push(`${legLabel} ✗`);
       } else {
