@@ -8,8 +8,6 @@ const ITEMS: { key: NavKey; href: string; label: string }[] = [
   { key: "stats", href: "/stats", label: "Stats" },
   { key: "rj", href: "/tracker", label: "Rj's Tracker" },
   { key: "ruhan", href: "/tracker/ruhan", label: "Ruhan's Tracker" },
-  { key: "tharma", href: "/tracker/tharma", label: "Tharma's Tracker" },
-  { key: "suriyati", href: "/tracker/suriyati", label: "Suriyati's Tracker" },
 ];
 
 /** Shared site nav — Predictions + both bet trackers, active one in acid.
