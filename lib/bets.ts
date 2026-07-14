@@ -693,6 +693,18 @@ export type MultiLegCond = { odds?: number } & (
   // line; at FT still short it's dead; no tempo snapshot (pre-2026-07-06 shape)
   // → holds pending for a human rather than blind-grading.
   | { matchId: string; kind: "gkSavesOver"; player: string; side: "home" | "away"; line: number }
+  // "Each team to have N+ goalkeeper saves in EACH half" (1xBet Enhanced Daily
+  // Special — one leg per match in the acca; `line` is the AT-LEAST threshold,
+  // e.g. 2 for "2+"). A keeper's saves in a half = the OPPONENT's on-target-
+  // but-not-goal shots that half — precisely what sotByHalf buckets, since a
+  // scored shot logs as its own "Goal" event and never lands in the SOT tally.
+  // So "both keepers clear the line in both halves" ⟺ sotByHalf for BOTH sides
+  // ≥ line in each half. Saves only accrue → clinches the moment both halves are
+  // cleared; the H1 requirement locks dead at the HT whistle (H1 split final once
+  // `ht` is in); at FT a half short of the line is a loss; no by-half snapshot →
+  // pending for a human. (Off-the-line clearances count as SOT but aren't keeper
+  // saves — a rare ±1 at the boundary; the slip is flagged for an eyeball.)
+  | { matchId: string; kind: "eachTeamKeeperSavesEachHalfAtLeast"; line: number }
   // Total cards BOTH sides (yellow + red, same MatchStats.cards count the combo
   // cardsTotalOver StatCond settles on) strictly over `line` ("Over 3.5 — Cards
   // FT O/U"). Cards only accrue → clinches mid-match once the running total
@@ -1520,6 +1532,30 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         }
         // H1 portion is fixed the instant the half ends — short then is dead.
         if (leg.half === 1 && tot != null && getResult(leg.matchId).ht) return "lost";
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "eachTeamKeeperSavesEachHalfAtLeast") {
+        // "Each team 2+ GK saves in each half" for THIS match. A keeper's saves
+        // in a half = the opponent's on-target-non-goal shots that half, which is
+        // exactly sotByHalf (goals log separately, never in this bucket). So the
+        // leg wins iff BOTH sides' sotByHalf ≥ line in BOTH halves. Saves accrue,
+        // so it clinches once both halves are cleared; H1 locks at the HT whistle.
+        const s = getStats(leg.matchId)?.sotByHalf;
+        const ht = getResult(leg.matchId).ht;
+        const okH1 = s ? s.home[0] >= leg.line && s.away[0] >= leg.line : null;
+        const okH2 = s ? s.home[1] >= leg.line && s.away[1] >= leg.line : null;
+        // H1 portion is fixed the instant the half ends — a keeper short then is dead.
+        if (ht && okH1 === false) return "lost";
+        if (okH1 && okH2) continue; // both keepers cleared both halves → leg won
+        if (finished) {
+          if (s == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost"; // FT and a half fell short of the line → acca dead
+        }
         pending = true;
         continue;
       }

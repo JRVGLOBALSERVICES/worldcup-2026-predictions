@@ -18772,11 +18772,27 @@
       "slipNo": "84405934229",
       "matchId": "fra-esp-2026-07-14",
       "player": "Enhanced Daily Special",
-      "market": "GK saves 2+ each half, each team (both matches)",
-      "label": "REAL 1xBet SINGLE 84405934229 (14/07) @100, RM9.40 -> RM940.00. Each team to have 2+ goalkeeper saves in EACH HALF in the World Cup 2026 matches — Yes. [FRA-ESP + ENG-ARG]. Ungradable per-half GK split → pends until manual settle.",
+      "market": "Each team 2+ GK saves each half — acca (FRA-ESP + ENG-ARG)",
+      "label": "REAL 1xBet ACCA 84405934229 (14/07) @100, RM9.40 -> RM940.00. Enhanced Daily Special: each team to have 2+ goalkeeper saves in EACH HALF — France-Spain + England-Argentina. Auto-grades off ESPN per-half saves (sotByHalf).",
       "odds": 100,
       "stake": 9.4,
-      "placedAt": "14/07 22:30"
+      "placedAt": "14/07 22:30",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "eachTeamKeeperSavesEachHalfAtLeast",
+            "line": 2
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "eachTeamKeeperSavesEachHalfAtLeast",
+            "line": 2
+          }
+        ]
+      },
+      "reliable": false
     }
   ],
   "matchStats": {
