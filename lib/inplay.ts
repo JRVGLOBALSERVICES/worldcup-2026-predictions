@@ -219,6 +219,8 @@ export function legLabelFor(leg: MultiLegCond): string {
       return `${leg.player} — ${plus(leg.line)} saves`;
     case "eachTeamKeeperSavesEachHalfAtLeast":
       return `${m} — each team ${plus(leg.line)} keeper saves in each half`;
+    case "eachTeamSotEachHalfAtLeast":
+      return `${m} — each team ${plus(leg.line)} shots on target in each half`;
     case "cardsTotalOver":
       return `${m} — Over ${leg.line} cards`;
     case "teamCardsOver":
@@ -1458,6 +1460,32 @@ export function inPlayMultiLeg(
         const gk = (name: string, h1: number, h2: number) =>
           `${name} GK ${h1 + h2} (H1 ${h1}, H2 ${h2})`;
         detail = ` — ${gk(hName, s.away[0], s.away[1])} · ${gk(aName, s.home[0], s.home[1])}`;
+      }
+      if (okH1 && okH2) {
+        wonCount++;
+        parts.push(`${legLabel} ✓${detail}`);
+      } else if (s != null && (doneFull || (okH1 === false && lm.htScore))) {
+        dead = true;
+        parts.push(`${legLabel} ✗${detail}`);
+      } else {
+        parts.push(`${legLabel} —${detail}`);
+      }
+      continue;
+    }
+
+    if (leg.kind === "eachTeamSotEachHalfAtLeast") {
+      // Both teams 2+ shots on target in each half — raw SOT per team per half
+      // (sotByHalf). Locks WON once both halves are cleared by both sides; the
+      // H1 requirement locks dead at the HT whistle; a half short at FT is dead.
+      const s = lm.stats?.sotByHalf;
+      const okH1 = s ? s.home[0] >= leg.line && s.away[0] >= leg.line : null;
+      const okH2 = s ? s.home[1] >= leg.line && s.away[1] >= leg.line : null;
+      let detail = "";
+      if (s) {
+        const { home: hName, away: aName } = legTeams(leg.matchId);
+        const sot = (name: string, h1: number, h2: number) =>
+          `${name} SOT ${h1 + h2} (H1 ${h1}, H2 ${h2})`;
+        detail = ` — ${sot(hName, s.home[0], s.home[1])} · ${sot(aName, s.away[0], s.away[1])}`;
       }
       if (okH1 && okH2) {
         wonCount++;

@@ -18793,6 +18793,33 @@
         ]
       },
       "reliable": false
+    },
+    {
+      "id": "sp-84411861699",
+      "slipNo": "84411861699",
+      "matchId": "fra-esp-2026-07-14",
+      "player": "Enhanced Daily Special",
+      "market": "Each team 2+ shots on target each half — acca (FRA-ESP + ENG-ARG)",
+      "label": "REAL 1xBet ACCA 84411861699 (15/07) @26, RM30.00 -> RM780.00. Enhanced Daily Special: each team to have 2+ shots on target in EACH HALF — France-Spain + England-Argentina. Auto-grades off ESPN per-half SOT.",
+      "odds": 26,
+      "stake": 30,
+      "placedAt": "15/07 00:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "eachTeamSotEachHalfAtLeast",
+            "line": 2
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "eachTeamSotEachHalfAtLeast",
+            "line": 2
+          }
+        ]
+      },
+      "reliable": false
     }
   ],
   "matchStats": {

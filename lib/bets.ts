@@ -705,6 +705,12 @@ export type MultiLegCond = { odds?: number } & (
   // pending for a human. (Off-the-line clearances count as SOT but aren't keeper
   // saves — a rare ±1 at the boundary; the slip is flagged for an eyeball.)
   | { matchId: string; kind: "eachTeamKeeperSavesEachHalfAtLeast"; line: number }
+  // Each team's SHOTS ON TARGET ≥ `line` in BOTH halves (raw SOT, goals
+  // included — unlike the keeper-saves market above which is on-target NON-goal
+  // shots). Source is sotByHalf; leg wins iff home & away both cleared the line
+  // in H1 and H2. Accrues, so clinches once both halves are cleared; H1 locks
+  // dead at the HT whistle; a half short at FT is dead.
+  | { matchId: string; kind: "eachTeamSotEachHalfAtLeast"; line: number }
   // Total cards BOTH sides (yellow + red, same MatchStats.cards count the combo
   // cardsTotalOver StatCond settles on) strictly over `line` ("Over 3.5 — Cards
   // FT O/U"). Cards only accrue → clinches mid-match once the running total
@@ -1549,6 +1555,29 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         // H1 portion is fixed the instant the half ends — a keeper short then is dead.
         if (ht && okH1 === false) return "lost";
         if (okH1 && okH2) continue; // both keepers cleared both halves → leg won
+        if (finished) {
+          if (s == null) {
+            pending = true; // stats never snapshotted → manual settle
+            continue;
+          }
+          return "lost"; // FT and a half fell short of the line → acca dead
+        }
+        pending = true;
+        continue;
+      }
+
+      if (leg.kind === "eachTeamSotEachHalfAtLeast") {
+        // "Each team 2+ shots on target in each half" for THIS match. Raw SOT per
+        // team per half from sotByHalf; the leg wins iff BOTH sides' sotByHalf ≥
+        // line in BOTH halves. SOT accrues, so it clinches once both halves are
+        // cleared; H1 locks at the HT whistle.
+        const s = getStats(leg.matchId)?.sotByHalf;
+        const ht = getResult(leg.matchId).ht;
+        const okH1 = s ? s.home[0] >= leg.line && s.away[0] >= leg.line : null;
+        const okH2 = s ? s.home[1] >= leg.line && s.away[1] >= leg.line : null;
+        // H1 portion is fixed the instant the half ends — a team short then is dead.
+        if (ht && okH1 === false) return "lost";
+        if (okH1 && okH2) continue; // both teams cleared both halves → leg won
         if (finished) {
           if (s == null) {
             pending = true; // stats never snapshotted → manual settle
