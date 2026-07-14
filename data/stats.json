@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-14T19:50:11.848Z",
+    "generatedAt": "2026-07-14T20:00:15.026Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 84
   },
@@ -325,17 +325,17 @@
     "tackles": [
       {
         "rank": 1,
-        "name": "Alexis Mac Allister",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 18,
-        "matches": 6
-      },
-      {
-        "rank": 1,
         "name": "Rodri",
         "team": "Spain",
         "flag": "🇪🇸",
+        "value": 20,
+        "matches": 6
+      },
+      {
+        "rank": 2,
+        "name": "Alexis Mac Allister",
+        "team": "Argentina",
+        "flag": "🇦🇷",
         "value": 18,
         "matches": 6
       },
@@ -535,8 +535,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 89.9,
-        "display": "89.9%",
+        "value": 89.8,
+        "display": "89.8%",
         "matches": 6
       },
       {
@@ -561,8 +561,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 63.2,
-        "display": "63.2%",
+        "value": 62.9,
+        "display": "62.9%",
         "matches": 6
       },
       {
@@ -585,8 +585,8 @@
         "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 56.2,
-        "display": "56.2%",
+        "value": 56.4,
+        "display": "56.4%",
         "matches": 7
       }
     ],
@@ -627,14 +627,6 @@
     "tackleSuccess": [
       {
         "rank": 1,
-        "team": "Spain",
-        "flag": "🇪🇸",
-        "value": 65.1,
-        "display": "65.1%",
-        "matches": 6
-      },
-      {
-        "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 64.7,
@@ -642,12 +634,20 @@
         "matches": 6
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "France",
         "flag": "🇫🇷",
         "value": 63.8,
         "display": "63.8%",
         "matches": 7
+      },
+      {
+        "rank": 3,
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 63.5,
+        "display": "63.5%",
+        "matches": 6
       },
       {
         "rank": 4,
@@ -687,8 +687,8 @@
         "rank": 4,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 19.1,
-        "display": "19.1%",
+        "value": 18.9,
+        "display": "18.9%",
         "matches": 7
       }
     ],
@@ -697,8 +697,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 56.7,
-        "display": "56.7%",
+        "value": 56.6,
+        "display": "56.6%",
         "matches": 6
       },
       {
@@ -713,8 +713,8 @@
         "rank": 3,
         "team": "France",
         "flag": "🇫🇷",
-        "value": 51.8,
-        "display": "51.8%",
+        "value": 52,
+        "display": "52.0%",
         "matches": 7
       },
       {
@@ -4231,7 +4231,7 @@
           "sot": 4,
           "tackles": 4,
           "blocks": 0,
-          "passes": 107,
+          "passes": 110,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4265,7 +4265,7 @@
           "sot": 5,
           "tackles": 8,
           "blocks": 6,
-          "passes": 337,
+          "passes": 339,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4299,7 +4299,7 @@
           "sot": 0,
           "tackles": 15,
           "blocks": 0,
-          "passes": 227,
+          "passes": 229,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4316,7 +4316,7 @@
           "sot": 1,
           "tackles": 14,
           "blocks": 1,
-          "passes": 397,
+          "passes": 401,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4333,7 +4333,7 @@
           "sot": 0,
           "tackles": 13,
           "blocks": 2,
-          "passes": 296,
+          "passes": 299,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4350,7 +4350,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 151,
+          "passes": 152,
           "saves": 9,
           "yellow": 0,
           "red": 0,
@@ -4384,7 +4384,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 0,
-          "passes": 222,
+          "passes": 223,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4486,7 +4486,7 @@
           "sot": 0,
           "tackles": 2,
           "blocks": 0,
-          "passes": 61,
+          "passes": 67,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4611,7 +4611,7 @@
           "sot": 4,
           "tackles": 7,
           "blocks": 4,
-          "passes": 183,
+          "passes": 184,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4628,7 +4628,7 @@
           "sot": 9,
           "tackles": 8,
           "blocks": 5,
-          "passes": 177,
+          "passes": 178,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4662,7 +4662,7 @@
           "sot": 2,
           "tackles": 11,
           "blocks": 0,
-          "passes": 246,
+          "passes": 248,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4696,7 +4696,7 @@
           "sot": 1,
           "tackles": 7,
           "blocks": 4,
-          "passes": 183,
+          "passes": 184,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4713,7 +4713,7 @@
           "sot": 0,
           "tackles": 5,
           "blocks": 0,
-          "passes": 430,
+          "passes": 431,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4762,9 +4762,9 @@
           "assists": 0,
           "shots": 4,
           "sot": 0,
-          "tackles": 18,
+          "tackles": 20,
           "blocks": 2,
-          "passes": 547,
+          "passes": 550,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4781,7 +4781,7 @@
           "sot": 1,
           "tackles": 6,
           "blocks": 0,
-          "passes": 447,
+          "passes": 449,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4798,7 +4798,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 172,
+          "passes": 173,
           "saves": 6,
           "yellow": 0,
           "red": 0,
@@ -38389,31 +38389,31 @@
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 42.8,
-            "accuratePasses": 143,
-            "totalPasses": 173,
+            "possessionPct": 44.5,
+            "accuratePasses": 163,
+            "totalPasses": 195,
             "shotsOnTarget": 0,
             "totalShots": 2,
             "effectiveTackles": 3,
             "totalTackles": 7,
             "accurateCrosses": 3,
-            "totalCrosses": 10,
-            "accurateLongBalls": 11,
-            "totalLongBalls": 19
+            "totalCrosses": 11,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 20
           },
           {
             "team": "Spain",
-            "possessionPct": 57.2,
-            "accuratePasses": 209,
-            "totalPasses": 240,
+            "possessionPct": 55.5,
+            "accuratePasses": 219,
+            "totalPasses": 252,
             "shotsOnTarget": 1,
             "totalShots": 5,
             "effectiveTackles": 5,
-            "totalTackles": 8,
+            "totalTackles": 10,
             "accurateCrosses": 1,
             "totalCrosses": 6,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 19
+            "accurateLongBalls": 7,
+            "totalLongBalls": 21
           }
         ],
         "players": [
@@ -38428,7 +38428,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 12
+            "ps": 13
           },
           {
             "n": "William Saliba",
@@ -38450,7 +38450,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 19
+            "ps": 23
           },
           {
             "n": "Lucas Digne",
@@ -38461,7 +38461,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 20
+            "ps": 21
           },
           {
             "n": "Jules Koundé",
@@ -38472,7 +38472,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 12
           },
           {
             "n": "Michael Olise",
@@ -38483,7 +38483,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 17
+            "ps": 19
           },
           {
             "n": "Adrien Rabiot",
@@ -38505,7 +38505,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 21
+            "ps": 23
           },
           {
             "n": "Kylian Mbappé",
@@ -38527,7 +38527,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 12
           },
           {
             "n": "Ousmane Dembélé",
@@ -38549,7 +38549,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 15
+            "ps": 21
           },
           {
             "n": "Unai Simón",
@@ -38562,7 +38562,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 11
+            "ps": 12
           },
           {
             "n": "Aymeric Laporte",
@@ -38573,7 +38573,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 49
+            "ps": 50
           },
           {
             "n": "Pau Cubarsí",
@@ -38584,7 +38584,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 16
+            "ps": 18
           },
           {
             "n": "Marc Cucurella",
@@ -38606,7 +38606,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 12
+            "ps": 14
           },
           {
             "n": "Dani Olmo",
@@ -38617,7 +38617,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 16
+            "ps": 17
           },
           {
             "n": "Fabián Ruiz",
@@ -38637,9 +38637,9 @@
             "tid": "164",
             "sh": 0,
             "st": 0,
-            "tk": 1,
+            "tk": 3,
             "bk": 0,
-            "ps": 35
+            "ps": 38
           },
           {
             "n": "Mikel Oyarzabal",
@@ -38661,7 +38661,7 @@
             "st": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 15
+            "ps": 16
           },
           {
             "n": "Lamine Yamal",
@@ -38672,7 +38672,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 10
           }
         ]
       }
