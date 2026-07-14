@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-14T20:00:11.152Z",
+    "generatedAt": "2026-07-14T20:10:57.502Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 80,
     "live": 1
@@ -95425,7 +95425,10 @@
     },
     "fra-esp-2026-07-14": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 1
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -95598,7 +95601,7 @@
             "gc": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 12
+            "ps": 13
           },
           {
             "team": "home",
@@ -95638,7 +95641,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 19
+            "ps": 23
           },
           {
             "team": "home",
@@ -95658,7 +95661,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 20
+            "ps": 21
           },
           {
             "team": "home",
@@ -95678,7 +95681,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 12
           },
           {
             "team": "home",
@@ -95698,7 +95701,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 17
+            "ps": 19
           },
           {
             "team": "home",
@@ -95738,7 +95741,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 21
+            "ps": 23
           },
           {
             "team": "home",
@@ -95778,7 +95781,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 12
           },
           {
             "team": "home",
@@ -95802,6 +95805,23 @@
           },
           {
             "team": "home",
+            "name": "Manu Koné",
+            "pos": "SUB",
+            "num": 6,
+            "starter": false,
+            "aid": "285226",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
             "name": "Maxence Lacroix",
             "pos": "SUB",
             "num": 26,
@@ -95818,7 +95838,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 15
+            "ps": 21
           },
           {
             "team": "away",
@@ -95841,7 +95861,7 @@
             "gc": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 11
+            "ps": 12
           },
           {
             "team": "away",
@@ -95861,7 +95881,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 49
+            "ps": 50
           },
           {
             "team": "away",
@@ -95881,7 +95901,7 @@
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 16
+            "ps": 18
           },
           {
             "team": "away",
@@ -95921,7 +95941,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 12
+            "ps": 14
           },
           {
             "team": "away",
@@ -95941,7 +95961,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 16
+            "ps": 17
           },
           {
             "team": "away",
@@ -95979,9 +95999,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 1,
+            "tk": 3,
             "bk": 0,
-            "ps": 35
+            "ps": 38
           },
           {
             "team": "away",
@@ -96021,7 +96041,7 @@
             "off": 1,
             "tk": 1,
             "bk": 1,
-            "ps": 15
+            "ps": 16
           },
           {
             "team": "away",
@@ -96041,7 +96061,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 9
+            "ps": 10
           }
         ],
         "subs": [
@@ -96051,6 +96071,13 @@
             "on": "Maxence Lacroix",
             "off": "William Saliba",
             "injury": true
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Manu Koné",
+            "off": "Adrien Rabiot",
+            "injury": false
           }
         ],
         "firstGoalMethod": "penalty",
@@ -96069,16 +96096,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 44.5,
-            "away": 55.5
+            "home": 44.7,
+            "away": 55.3
           },
           "passes": {
-            "home": 195,
+            "home": 196,
             "away": 252
           },
           "tackles": {
             "home": 7,
-            "away": 10
+            "away": 9
           },
           "saves": {
             "home": 0,
@@ -96098,7 +96125,7 @@
           },
           "clearances": {
             "home": 8,
-            "away": 7
+            "away": 10
           }
         },
         "full": [
@@ -96141,8 +96168,8 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "44.5",
-            "away": "55.5"
+            "home": "44.7",
+            "away": "55.3"
           },
           {
             "key": "totalShots",
@@ -96177,13 +96204,13 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "163",
-            "away": "219"
+            "home": "164",
+            "away": "218"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "195",
+            "home": "196",
             "away": "252"
           },
           {
@@ -96195,7 +96222,7 @@
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "3",
+            "home": "2",
             "away": "1"
           },
           {
@@ -96207,20 +96234,20 @@
           {
             "key": "crossPct",
             "label": "Cross %",
-            "home": "0.3",
+            "home": "0.2",
             "away": "0.2"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "20",
+            "home": "21",
             "away": "21"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
             "home": "12",
-            "away": "7"
+            "away": "6"
           },
           {
             "key": "longballPct",
@@ -96238,19 +96265,19 @@
             "key": "effectiveTackles",
             "label": "Effective Tackles",
             "home": "3",
-            "away": "5"
+            "away": "4"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
             "home": "7",
-            "away": "10"
+            "away": "9"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
             "home": "0.4",
-            "away": "0.5"
+            "away": "0.4"
           },
           {
             "key": "interceptions",
@@ -96262,13 +96289,13 @@
             "key": "effectiveClearance",
             "label": "Effective Clearances",
             "home": "8",
-            "away": "7"
+            "away": "10"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
             "home": "8",
-            "away": "7"
+            "away": "10"
           }
         ],
         "playerTackles": {
