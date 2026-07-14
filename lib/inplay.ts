@@ -1450,14 +1450,23 @@ export function inPlayMultiLeg(
       const s = lm.stats?.sotByHalf;
       const okH1 = s ? s.home[0] >= leg.line && s.away[0] >= leg.line : null;
       const okH2 = s ? s.home[1] >= leg.line && s.away[1] >= leg.line : null;
+      // Live per-keeper breakdown so far. Each keeper faces the OPPONENT's SOT,
+      // so {home} GK saves = away's sotByHalf, and {away} GK saves = home's.
+      let detail = "";
+      if (s) {
+        const { home: hName, away: aName } = legTeams(leg.matchId);
+        const gk = (name: string, h1: number, h2: number) =>
+          `${name} GK ${h1 + h2} (H1 ${h1}, H2 ${h2})`;
+        detail = ` — ${gk(hName, s.away[0], s.away[1])} · ${gk(aName, s.home[0], s.home[1])}`;
+      }
       if (okH1 && okH2) {
         wonCount++;
-        parts.push(`${legLabel} ✓`);
+        parts.push(`${legLabel} ✓${detail}`);
       } else if (s != null && (doneFull || (okH1 === false && lm.htScore))) {
         dead = true;
-        parts.push(`${legLabel} ✗`);
+        parts.push(`${legLabel} ✗${detail}`);
       } else {
-        parts.push(`${legLabel} —`);
+        parts.push(`${legLabel} —${detail}`);
       }
       continue;
     }
