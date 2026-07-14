@@ -106,7 +106,7 @@ const nameMatch = (a, b) => {
 /** matchId → players named in a playerTacklesOver leg, across every slip file. */
 function loadTackleTargets() {
   const byMatch = {};
-  for (const file of ["bets.json", "bets-ruhan.json", "bets-tharma.json"]) {
+  for (const file of ["bets.json", "bets-ruhan.json"]) {
     let slip;
     try {
       slip = JSON.parse(readFileSync(join(__dirname, "..", "data", file), "utf8"));

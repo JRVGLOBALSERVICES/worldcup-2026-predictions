@@ -6,8 +6,6 @@ export type NavKey =
   | "stats"
   | "rj"
   | "ruhan"
-  | "tharma"
-  | "suriyati"
   | "thasyan"
   | "sivesh";
 

@@ -1,5 +1,5 @@
 import { fixtures } from "./data";
-import { betSlip, ruhanSlip, tharmaSlip, nameMatch } from "./bets";
+import { betSlip, ruhanSlip, nameMatch } from "./bets";
 import type {
   Goal,
   Card,
@@ -72,7 +72,7 @@ const ESPN_CORE_EVENT =
 /** matchId → players named in a playerTacklesOver leg, across every slip. */
 function tackleTargetsFor(matchId: string): string[] {
   const names = new Set<string>();
-  for (const slip of [betSlip, ruhanSlip, tharmaSlip]) {
+  for (const slip of [betSlip, ruhanSlip]) {
     for (const sp of slip.specials ?? []) {
       if (sp.grade?.type !== "multiLeg") continue;
       for (const leg of sp.grade.legs) {
