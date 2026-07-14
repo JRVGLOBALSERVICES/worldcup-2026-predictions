@@ -1,19 +1,11 @@
 {
   "meta": {
-    "generatedAt": "2026-07-14T20:50:09.726Z",
+    "generatedAt": "2026-07-14T21:00:12.856Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
-    "finished": 84
+    "finished": 85
   },
   "categories": {
     "scorers": [
-      {
-        "rank": 1,
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 8,
-        "matches": 6
-      },
       {
         "rank": 1,
         "name": "Lionel Messi",
@@ -23,7 +15,7 @@
         "matches": 6
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -31,7 +23,7 @@
         "matches": 6
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Jude Bellingham",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -39,7 +31,7 @@
         "matches": 6
       },
       {
-        "rank": 5,
+        "rank": 4,
         "name": "Mikel Oyarzabal",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -48,22 +40,6 @@
       },
       {
         "rank": 5,
-        "name": "Ousmane Dembélé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 5,
-        "matches": 6
-      },
-      {
-        "rank": 7,
-        "name": "Bradley Barcola",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 2,
-        "matches": 6
-      },
-      {
-        "rank": 7,
         "name": "Lautaro Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -71,7 +47,7 @@
         "matches": 6
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "Mikel Merino",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -79,25 +55,41 @@
         "matches": 6
       },
       {
-        "rank": 7,
+        "rank": 5,
         "name": "Pedro Porro",
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 2,
         "matches": 2
+      },
+      {
+        "rank": 8,
+        "name": "Álex Baena",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 1,
+        "matches": 1
+      },
+      {
+        "rank": 8,
+        "name": "Alexis Mac Allister",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 1,
+        "matches": 1
+      },
+      {
+        "rank": 8,
+        "name": "Cristian Romero",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 1,
+        "matches": 1
       }
     ],
     "assists": [
       {
         "rank": 1,
-        "name": "Michael Olise",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 5,
-        "matches": 6
-      },
-      {
-        "rank": 2,
         "name": "Anthony Gordon",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -105,7 +97,7 @@
         "matches": 5
       },
       {
-        "rank": 2,
+        "rank": 1,
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -113,15 +105,7 @@
         "matches": 6
       },
       {
-        "rank": 2,
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 3,
-        "matches": 6
-      },
-      {
-        "rank": 5,
+        "rank": 3,
         "name": "Dani Olmo",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -129,7 +113,7 @@
         "matches": 6
       },
       {
-        "rank": 5,
+        "rank": 3,
         "name": "Lionel Messi",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -137,7 +121,7 @@
         "matches": 6
       },
       {
-        "rank": 5,
+        "rank": 3,
         "name": "Marc Cucurella",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -145,51 +129,61 @@
         "matches": 6
       },
       {
-        "rank": 5,
-        "name": "Ousmane Dembélé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 2,
-        "matches": 6
-      },
-      {
-        "rank": 9,
-        "name": "Adrien Rabiot",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 1,
-        "matches": 1
-      },
-      {
-        "rank": 9,
+        "rank": 6,
         "name": "Álex Baena",
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 1,
         "matches": 1
+      },
+      {
+        "rank": 6,
+        "name": "Alexis Mac Allister",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 1,
+        "matches": 6
+      },
+      {
+        "rank": 6,
+        "name": "Aymeric Laporte",
+        "team": "Spain",
+        "flag": "🇪🇸",
+        "value": 1,
+        "matches": 6
+      },
+      {
+        "rank": 6,
+        "name": "Declan Rice",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 1,
+        "matches": 1
+      },
+      {
+        "rank": 6,
+        "name": "Elliot Anderson",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 1,
+        "matches": 6
       }
     ],
     "cleanSheets": [
       {
         "rank": 1,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 4
-      },
-      {
-        "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 4
+        "value": 5
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 2
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 2
@@ -205,13 +199,6 @@
       },
       {
         "rank": 2,
-        "name": "Adrien Rabiot",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 1
-      },
-      {
-        "rank": 2,
         "name": "Álex Baena",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -219,23 +206,9 @@
       },
       {
         "rank": 2,
-        "name": "Aurélien Tchouaméni",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 1
-      },
-      {
-        "rank": 2,
         "name": "Aymeric Laporte",
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 1
-      },
-      {
-        "rank": 2,
-        "name": "Bradley Barcola",
-        "team": "France",
-        "flag": "🇫🇷",
         "value": 1
       },
       {
@@ -265,6 +238,27 @@
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 1
+      },
+      {
+        "rank": 2,
+        "name": "Jordan Henderson",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 1
+      },
+      {
+        "rank": 2,
+        "name": "José Manuel López",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 1
+      },
+      {
+        "rank": 2,
+        "name": "Jude Bellingham",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 1
       }
     ],
     "redCards": [
@@ -283,13 +277,6 @@
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 2
-      },
-      {
-        "rank": 2,
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 1
       },
       {
         "rank": 2,
@@ -313,13 +300,6 @@
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 2
-      },
-      {
-        "rank": 2,
-        "name": "Kylian Mbappé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 1
       }
     ],
     "tackles": [
@@ -341,14 +321,6 @@
       },
       {
         "rank": 3,
-        "name": "Aurélien Tchouaméni",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 17,
-        "matches": 4
-      },
-      {
-        "rank": 4,
         "name": "Elliot Anderson",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -356,23 +328,7 @@
         "matches": 6
       },
       {
-        "rank": 5,
-        "name": "Dayot Upamecano",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 14,
-        "matches": 7
-      },
-      {
-        "rank": 5,
-        "name": "Jules Koundé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 14,
-        "matches": 7
-      },
-      {
-        "rank": 7,
+        "rank": 4,
         "name": "Jude Bellingham",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -380,7 +336,7 @@
         "matches": 6
       },
       {
-        "rank": 8,
+        "rank": 5,
         "name": "Pedro Porro",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -388,7 +344,7 @@
         "matches": 5
       },
       {
-        "rank": 9,
+        "rank": 6,
         "name": "Lisandro Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -396,25 +352,41 @@
         "matches": 5
       },
       {
-        "rank": 10,
+        "rank": 7,
         "name": "Bukayo Saka",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 10,
+        "matches": 6
+      },
+      {
+        "rank": 7,
+        "name": "Cristian Romero",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 10,
+        "matches": 5
+      },
+      {
+        "rank": 7,
+        "name": "Nahuel Molina",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 10,
+        "matches": 5
+      },
+      {
+        "rank": 10,
+        "name": "Djed Spence",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 9,
         "matches": 6
       }
     ],
     "blocks": [
       {
         "rank": 1,
-        "name": "Michael Olise",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 6,
-        "matches": 7
-      },
-      {
-        "rank": 2,
         "name": "Álex Baena",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -422,7 +394,7 @@
         "matches": 6
       },
       {
-        "rank": 2,
+        "rank": 1,
         "name": "Lamine Yamal",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -430,7 +402,7 @@
         "matches": 6
       },
       {
-        "rank": 2,
+        "rank": 1,
         "name": "Lionel Messi",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -438,15 +410,7 @@
         "matches": 6
       },
       {
-        "rank": 2,
-        "name": "Ousmane Dembélé",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 5,
-        "matches": 7
-      },
-      {
-        "rank": 6,
+        "rank": 4,
         "name": "Dani Olmo",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -454,7 +418,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
+        "rank": 4,
         "name": "Enzo Fernández",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -462,7 +426,7 @@
         "matches": 5
       },
       {
-        "rank": 6,
+        "rank": 4,
         "name": "Harry Kane",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -470,7 +434,7 @@
         "matches": 6
       },
       {
-        "rank": 6,
+        "rank": 4,
         "name": "Noni Madueke",
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -478,11 +442,27 @@
         "matches": 5
       },
       {
-        "rank": 10,
+        "rank": 8,
         "name": "Alexis Mac Allister",
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 3,
+        "matches": 6
+      },
+      {
+        "rank": 8,
+        "name": "Elliot Anderson",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 3,
+        "matches": 6
+      },
+      {
+        "rank": 10,
+        "name": "Bukayo Saka",
+        "team": "England",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "value": 2,
         "matches": 6
       }
     ],
@@ -497,14 +477,6 @@
       },
       {
         "rank": 2,
-        "name": "Mike Maignan",
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 9,
-        "matches": 7
-      },
-      {
-        "rank": 3,
         "name": "Emiliano Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -512,7 +484,7 @@
         "matches": 6
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "Unai Simón",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -546,14 +518,6 @@
         "value": 88.8,
         "display": "88.8%",
         "matches": 6
-      },
-      {
-        "rank": 4,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 87.7,
-        "display": "87.7%",
-        "matches": 7
       }
     ],
     "possession": [
@@ -580,14 +544,6 @@
         "value": 57.2,
         "display": "57.2%",
         "matches": 6
-      },
-      {
-        "rank": 4,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 57.1,
-        "display": "57.1%",
-        "matches": 7
       }
     ],
     "shotAccuracy": [
@@ -601,14 +557,6 @@
       },
       {
         "rank": 2,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 41.4,
-        "display": "41.4%",
-        "matches": 7
-      },
-      {
-        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 40.2,
@@ -616,7 +564,7 @@
         "matches": 6
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 38,
@@ -635,14 +583,6 @@
       },
       {
         "rank": 2,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 64,
-        "display": "64.0%",
-        "matches": 7
-      },
-      {
-        "rank": 3,
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 63.4,
@@ -650,7 +590,7 @@
         "matches": 6
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 58.7,
@@ -682,14 +622,6 @@
         "value": 20.6,
         "display": "20.6%",
         "matches": 6
-      },
-      {
-        "rank": 4,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 18.6,
-        "display": "18.6%",
-        "matches": 7
       }
     ],
     "longBallAccuracy": [
@@ -711,14 +643,6 @@
       },
       {
         "rank": 3,
-        "team": "France",
-        "flag": "🇫🇷",
-        "value": 50.9,
-        "display": "50.9%",
-        "matches": 7
-      },
-      {
-        "rank": 4,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 50,
@@ -4175,386 +4099,6 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 1,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        }
-      ]
-    },
-    {
-      "team": "France",
-      "flag": "🇫🇷",
-      "players": [
-        {
-          "name": "Kylian Mbappé",
-          "apps": 7,
-          "goals": 8,
-          "assists": 3,
-          "shots": 30,
-          "sot": 18,
-          "tackles": 1,
-          "blocks": 3,
-          "passes": 201,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 1,
-          "penMissed": 1,
-          "gk": false
-        },
-        {
-          "name": "Ousmane Dembélé",
-          "apps": 7,
-          "goals": 5,
-          "assists": 2,
-          "shots": 16,
-          "sot": 6,
-          "tackles": 3,
-          "blocks": 5,
-          "passes": 259,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Bradley Barcola",
-          "apps": 7,
-          "goals": 2,
-          "assists": 1,
-          "shots": 8,
-          "sot": 4,
-          "tackles": 4,
-          "blocks": 0,
-          "passes": 112,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Désiré Doué",
-          "apps": 7,
-          "goals": 1,
-          "assists": 1,
-          "shots": 13,
-          "sot": 8,
-          "tackles": 8,
-          "blocks": 3,
-          "passes": 171,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Michael Olise",
-          "apps": 7,
-          "goals": 0,
-          "assists": 5,
-          "shots": 17,
-          "sot": 5,
-          "tackles": 10,
-          "blocks": 6,
-          "passes": 354,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Adrien Rabiot",
-          "apps": 6,
-          "goals": 0,
-          "assists": 1,
-          "shots": 8,
-          "sot": 1,
-          "tackles": 7,
-          "blocks": 1,
-          "passes": 321,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Aurélien Tchouaméni",
-          "apps": 4,
-          "goals": 0,
-          "assists": 1,
-          "shots": 3,
-          "sot": 0,
-          "tackles": 17,
-          "blocks": 0,
-          "passes": 261,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Dayot Upamecano",
-          "apps": 7,
-          "goals": 0,
-          "assists": 0,
-          "shots": 3,
-          "sot": 1,
-          "tackles": 14,
-          "blocks": 1,
-          "passes": 428,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Jules Koundé",
-          "apps": 7,
-          "goals": 0,
-          "assists": 0,
-          "shots": 2,
-          "sot": 0,
-          "tackles": 14,
-          "blocks": 2,
-          "passes": 313,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Mike Maignan",
-          "apps": 7,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 175,
-          "saves": 9,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": true
-        },
-        {
-          "name": "William Saliba",
-          "apps": 6,
-          "goals": 0,
-          "assists": 0,
-          "shots": 1,
-          "sot": 0,
-          "tackles": 2,
-          "blocks": 0,
-          "passes": 325,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Rayan Cherki",
-          "apps": 6,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 1,
-          "blocks": 0,
-          "passes": 69,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Manu Koné",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 6,
-          "sot": 2,
-          "tackles": 7,
-          "blocks": 2,
-          "passes": 256,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Lucas Digne",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 2,
-          "sot": 1,
-          "tackles": 5,
-          "blocks": 0,
-          "passes": 236,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Malo Gusto",
-          "apps": 4,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 2,
-          "blocks": 0,
-          "passes": 34,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Theo Hernández",
-          "apps": 4,
-          "goals": 0,
-          "assists": 0,
-          "shots": 3,
-          "sot": 0,
-          "tackles": 2,
-          "blocks": 1,
-          "passes": 112,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Jean-Philippe Mateta",
-          "apps": 3,
-          "goals": 0,
-          "assists": 0,
-          "shots": 3,
-          "sot": 1,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 2,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Maxence Lacroix",
-          "apps": 2,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 2,
-          "blocks": 0,
-          "passes": 96,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Maghnes Akliouche",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 1,
-          "blocks": 0,
-          "passes": 8,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Ibrahima Konaté",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 12,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Marcus Thuram",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 0,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Warren Zaïre-Emery",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 12,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -38778,7 +38322,8 @@
             "bk": 0,
             "ps": 4
           }
-        ]
+        ],
+        "coreDone": 1
       }
     }
   }
