@@ -1005,6 +1005,78 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-864914105696927744",
+      "slipNo": "864914105696927744",
+      "matchId": "fra-esp-2026-07-14",
+      "player": "Double · France/Spain + England/Argentina",
+      "market": "Double (2 parlays) · 4 legs · score or assist",
+      "label": "REAL 1xBet DOUBLE 864914105696927744 (15/07) @28.69, RM30 -> RM860.98. 2 parlays: [FRA-ESP @3.91] Mbappé score or assist · Yamal score or assist. [ENG-ARG @7.34] Bellingham score or assist · Álvarez score or assist.",
+      "odds": 28.69,
+      "stake": 30,
+      "placedAt": "15/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "scoredOrAssisted",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "scoredOrAssisted",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "scoredOrAssisted",
+            "player": "Julián Álvarez"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-864914018220515328",
+      "slipNo": "864914018220515328",
+      "matchId": "fra-esp-2026-07-14",
+      "player": "Double · France/Spain + England/Argentina",
+      "market": "Double (2 parlays) · 4 legs · score or assist",
+      "label": "REAL 1xBet DOUBLE 864914018220515328 (15/07) @21.02, RM20 -> RM420.42. 2 parlays: [FRA-ESP @3.90] Mbappé score or assist · Yamal score or assist. [ENG-ARG @5.39] Messi score or assist · Bellingham score or assist.",
+      "odds": 21.02,
+      "stake": 20,
+      "placedAt": "15/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "scoredOrAssisted",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "scoredOrAssisted",
+            "player": "Lamine Yamal"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          }
+        ]
+      }
     }
   ]
 }
