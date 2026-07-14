@@ -2,6 +2,8 @@ import betsJson from "@/data/bets.json";
 import ruhanJson from "@/data/bets-ruhan.json";
 import tharmaJson from "@/data/bets-tharma.json";
 import suriyatiJson from "@/data/bets-suriyati.json";
+import thasyanJson from "@/data/bets-thasyan.json";
+import siveshJson from "@/data/bets-sivesh.json";
 import { getFixture, getPrediction } from "./data";
 import type { Fixture } from "./types";
 
@@ -802,6 +804,12 @@ export const tharmaSlip = tharmaJson as BetSlipFile;
 
 // Suriyati's slip — own meta/specials, reads the shared truth above.
 export const suriyatiSlip = suriyatiJson as BetSlipFile;
+
+// Thasyan's slip — own meta/specials, reads the shared truth above.
+export const thasyanSlip = thasyanJson as BetSlipFile;
+
+// Sivesh's slip — own meta/specials, reads the shared truth above.
+export const siveshSlip = siveshJson as BetSlipFile;
 
 export function getResult(matchId: string): MatchResult {
   return betSlip.results[matchId] ?? { ht: null, ft: null };

@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "owner": "Sivesh",
+    "placedAt": "2026-07-14T07:05:00.000Z",
+    "currency": "RM",
+    "unitStake": 100,
+    "note": "Sivesh's Double (1xBet) — two match parlays combined, so it wins only if BOTH parlays land (all nine legs). Parlay 1 (France v Spain @3.09): Yamal / Dembele over 0.5 SOT, Mbappe over 1.5 SOT, France to qualify. Parlay 2 (England v Argentina @3.46): over 1.5 total goals, both teams to score, Kane / Messi / Alvarez over 0.5 SOT. All legs auto-settle against verified ESPN results; the qualify leg settles on advancement (90 min, extra time, or penalties).",
+    "disclaimer": "Fun-money tracking only. Returns shown are stake x odds (includes the stake back). Legs settle against ESPN's official match result and statistics."
+  },
+  "results": {},
+  "matchEvents": {},
+  "bets": [],
+  "specials": [
+    {
+      "id": "sp-sivesh-864764443295920129",
+      "slipNo": "864764443295920129",
+      "matchId": "fra-esp-2026-07-14",
+      "player": "Double · France/Spain + England/Argentina",
+      "market": "Double (2 parlays) · 9 legs",
+      "label": "REAL 1xBet DOUBLE 864764443295920129 (14/07 15:05) @10.69, RM100 -> RM1,069.14. [FRA-ESP @3.09] Yamal O0.5 SOT · Dembele O0.5 SOT · Mbappe O1.5 SOT · France to qualify. [ENG-ARG @3.46] Total O1.5 · BTTS Yes · Kane O0.5 SOT · Messi O0.5 SOT · Alvarez O0.5 SOT.",
+      "odds": 10.69,
+      "stake": 100,
+      "potential": 1069.14,
+      "placedAt": "14/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Lamine Yamal",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Ousmane Dembele",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Kylian Mbappe",
+            "line": 1.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "btts"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "playerSotOver",
+            "player": "Harry Kane",
+            "line": 0.5
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "playerSotOver",
+            "player": "Lionel Messi",
+            "line": 0.5
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "playerSotOver",
+            "player": "Julian Alvarez",
+            "line": 0.5
+          }
+        ]
+      }
+    }
+  ]
+}

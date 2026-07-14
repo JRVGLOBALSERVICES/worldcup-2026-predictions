@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "owner": "Thasyan",
+    "placedAt": "2026-07-14T11:01:00.000Z",
+    "currency": "RM",
+    "unitStake": 100,
+    "note": "Thasyan's France v Spain semi-final match parlay (1xBet). Five legs on one slip — the draw (FT 1X2), Yamal / Dembele over 0.5 shots on target, Mbappe over 1.5 shots on target, and under 3.5 total goals. All five auto-settle against verified ESPN results once the match is final; the FT 1X2 leg settles on the 90-minute result.",
+    "disclaimer": "Fun-money tracking only. Returns shown are stake x odds (includes the stake back). Legs settle against ESPN's official match result and statistics."
+  },
+  "results": {},
+  "matchEvents": {},
+  "bets": [],
+  "specials": [
+    {
+      "id": "sp-thasyan-864823821449437185",
+      "slipNo": "864823821449437185",
+      "matchId": "fra-esp-2026-07-14",
+      "player": "France v Spain",
+      "market": "Match Parlay · 5 legs",
+      "label": "REAL 1xBet MATCH PARLAY 864823821449437185 (14/07 19:01) @11.14, RM100 -> RM1,114.00. [FRA-ESP] Draw (FT 1X2) · Yamal O0.5 SOT · Dembele O0.5 SOT · Under 3.5 total · Mbappe O1.5 SOT.",
+      "odds": 11.14,
+      "stake": 100,
+      "potential": 1114.0,
+      "placedAt": "14/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Lamine Yamal",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Ousmane Dembele",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "totalUnder",
+            "line": 3.5
+          },
+          {
+            "matchId": "fra-esp-2026-07-14",
+            "kind": "playerSotOver",
+            "player": "Kylian Mbappe",
+            "line": 1.5
+          }
+        ]
+      }
+    }
+  ]
+}

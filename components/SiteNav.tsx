@@ -1,13 +1,23 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 
-export type NavKey = "predictions" | "stats" | "rj" | "ruhan" | "tharma" | "suriyati";
+export type NavKey =
+  | "predictions"
+  | "stats"
+  | "rj"
+  | "ruhan"
+  | "tharma"
+  | "suriyati"
+  | "thasyan"
+  | "sivesh";
 
 const ITEMS: { key: NavKey; href: string; label: string }[] = [
   { key: "predictions", href: "/", label: "Predictions" },
   { key: "stats", href: "/stats", label: "Stats" },
   { key: "rj", href: "/tracker", label: "Rj's Tracker" },
   { key: "ruhan", href: "/tracker/ruhan", label: "Ruhan's Tracker" },
+  { key: "thasyan", href: "/tracker/thasyan", label: "Thasyan's Tracker" },
+  { key: "sivesh", href: "/tracker/sivesh", label: "Sivesh's Tracker" },
 ];
 
 /** Shared site nav — Predictions + both bet trackers, active one in acid.
