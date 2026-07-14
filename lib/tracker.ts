@@ -221,9 +221,29 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
   // Hero summary is scoped to the featured (today's) bets — staked / max return /
   // counts off today, not the whole season. Season-to-date is shown as a sub-line.
   const featuredDay = days.find((d) => d.isFeatured);
-  // Exclude mirror copies (same acca shown on multiple cards) so the hero
-  // staked/return/count figures don't multi-count it.
-  const featuredRows = (featuredDay?.matches ?? []).flatMap((m) => [...m.bets, ...m.specials.filter((s) => !s.mirror)]);
+  const featuredMatches = featuredDay?.matches ?? [];
+  // "Bets today" = every bet still RIDING on today's featured game — counted by
+  // whether a leg lands on the featured match, NOT by which game the slip is
+  // anchored to. A multi-leg acca is anchored to its FIRST leg's match, so a slip
+  // whose live leg is tonight's featured game but whose first leg was a past
+  // qualifier used to bucket under that past day and vanish from "today" — the
+  // 5-vs-9 mismatch (hero said 5, "Running · 9" said 9, and all 9 running slips
+  // do ride today's game). The mirror mechanism already copies each still-live acca
+  // onto every leg's card (incl. the featured one), so we count those copies here
+  // rather than excluding them: dedupe by slipNo (one row per slip) and keep only
+  // still-live (pending) slips, so hero "N bets today" == the "Running · N" badge.
+  const todayRegular = featuredMatches.flatMap((m) => m.bets);
+  const seenTodaySlip = new Set<string>();
+  const todaySpecials = featuredMatches
+    .flatMap((m) => m.specials)
+    .filter((s) => {
+      if (s.staticStatus !== "pending") return false;
+      const key = s.slipNo ?? s.id;
+      if (seenTodaySlip.has(key)) return false;
+      seenTodaySlip.add(key);
+      return true;
+    });
+  const featuredRows = [...todayRegular, ...todaySpecials];
   // An accumulator is a single combined slip carrying its full payout in one
   // line (e.g. a 7290.0-odds 5-fold pays RM72,900 off a RM10 stake). Folding
   // those lottery-ticket potentials into "Max return" balloons it into a
@@ -242,8 +262,8 @@ export function buildTrackerBase(slip: BetSlipFile): TrackerBase {
     potential: featuredRows
       .filter((r) => !isAcca(r) && winnable(r))
       .reduce((s, r) => s + r.potential, 0),
-    score: (featuredDay?.matches ?? []).reduce((n, m) => n + m.bets.length, 0),
-    props: (featuredDay?.matches ?? []).reduce((n, m) => n + m.specials.filter((s) => !s.mirror).length, 0),
+    score: todayRegular.length,
+    props: todaySpecials.length,
   };
 
   const placedLabel = new Intl.DateTimeFormat("en-GB", {
