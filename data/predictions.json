@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T18:10:03.000Z",
+    "generatedAt": "2026-07-15T18:30:11.477Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-14T21:00:13.931Z"
+    "modelUpdatedAt": "2026-07-15T18:30:11.474Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -26485,25 +26485,25 @@
           "Argentina's Lionel Messi leads them with 8 goals in 6 games."
         ],
         "assumptions": [
-          "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); England to sit compact and play on the break.",
+          "Model projects England to carry more of the ball and the better chances (higher attack rating); Argentina to sit compact and play on the break.",
           "Goal expectancy 1.0–1.4 (England–Argentina) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs CONFIRMED. England (4-2-3-1): Stones + Spence in, Saka dropped for Rogers. Argentina (4-3-3): De Paul dropped for Giuliano Simeone. Both name strongest available — scorer/assist props are now firm, not provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both accept a cagey, low-risk game, which compresses goals and lifts the draw/extra-time chance.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "Argentina shade the chance-creation (1.4 vs 1.0 xG) — they should make the running.",
         "drawRisk": "Moderate — 26.8% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
         "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
         "caseFor": [
-          "Argentina are the model's 48% favourite — higher attack rating and the better recent goal-rate.",
-          "A genuine match-winner in Lionel Messi carrying the scoring load.",
-          "Conditions (heat) suit a controlled game Argentina can manage."
+          "England are the model's 25.2% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Harry Kane carrying the scoring load.",
+          "Conditions (heat) suit a controlled game England can manage."
         ],
         "caseAgainst": [
-          "26.8% draw + England's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
-          "Group goal-rates are a tiny sample; Argentina's number may be inflated by one result."
+          "26.8% draw + Argentina's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; England's number may be inflated by one result."
         ],
-        "verdict": "Lean",
-        "changeMind": "A confirmed XI resting Lionel Messi, or news the underdog is missing a defensive linchpin."
+        "verdict": "Pass",
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -26530,7 +26530,7 @@
           {
             "name": "Lineups unconfirmed and the bet depends on them",
             "tripped": false,
-            "why": "XIs now confirmed (Stones/Spence/Rogers in for England; Simeone in, De Paul out for Argentina) — scorer/lineup angles are firm."
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
@@ -26543,25 +26543,25 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 2,
+        "trapsTripped": 1,
         "edge": "edge-leaning",
         "verdict": "LEAN",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
       },
       "brainSummary": {
         "verdict": "LEAN",
-        "call": "England to reach the final is a lean, not a lock — respect the very live draw.",
+        "call": "England to win is a lean, not a lock. Respect the live draw.",
         "read": {
-          "tag": "Lean",
-          "line": "Coin-flip that Opta shades to England (~52% to advance), but a ~31% 90-min draw is very much alive."
+          "tag": "Pass",
+          "line": "England are the model's 25% pick, but a 26.8% draw is very much alive."
         },
         "price": {
-          "tag": "Model-only",
-          "line": "No live odds baked in — this is a reasoned model call, not a market price."
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
           "tag": "1 warning",
-          "line": "The draw is live; a level 90 then extra time/pens is a real path — don't over-index on a clean 90-min winner."
+          "line": "The draw is live and a level game kills a straight win bet."
         }
       },
       "resolution": {
@@ -26569,8 +26569,8 @@
         "extraTime": 12.8,
         "penalties": 14,
         "mostLikely": "Regulation",
-        "etWinner": "England",
-        "shootout": "Near coin-flip; England carry the marginal penalty-shootout edge (Kane + Rice, and E. Martinez aside, England's spot-kick record is elite).",
+        "etWinner": "Argentina",
+        "shootout": "Near coin-flip, with the marginal nerve edge to England.",
         "note": "Most likely settled inside 90 (73.2%). But a 26.8% level 90 keeps extra time (12.8%) and penalties (14%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
