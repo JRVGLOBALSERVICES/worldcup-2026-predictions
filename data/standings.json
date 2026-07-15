@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T21:00:04.698Z",
+    "generatedAt": "2026-07-15T21:10:03.780Z",
     "source": "ESPN keyless FIFA World Cup standings endpoint (authoritative)",
     "groups": 12
   },
@@ -738,11 +738,11 @@
           ],
           "next": {
             "round": "Final",
-            "opponent": "Semifinal 2 Winner",
-            "opponentFlag": null,
+            "opponent": "Argentina",
+            "opponentFlag": "🇦🇷",
             "kickoffUTC": "2026-07-19T19:00Z",
             "home": true,
-            "placeholder": true
+            "placeholder": false
           }
         },
         {
@@ -845,8 +845,8 @@
           ],
           "next": {
             "round": "Group",
-            "opponent": "Semifinal 2 Loser",
-            "opponentFlag": "🏳️",
+            "opponent": "England",
+            "opponentFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
             "kickoffUTC": "2026-07-18T21:00Z",
             "home": true,
             "placeholder": false
@@ -950,7 +950,14 @@
             "W",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Final",
+            "opponent": "Spain",
+            "opponentFlag": "🇪🇸",
+            "kickoffUTC": "2026-07-19T19:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Austria",
@@ -1148,7 +1155,14 @@
             "D",
             "W"
           ],
-          "next": null
+          "next": {
+            "round": "Group",
+            "opponent": "France",
+            "opponentFlag": "🇫🇷",
+            "kickoffUTC": "2026-07-18T21:00Z",
+            "home": false,
+            "placeholder": false
+          }
         },
         {
           "name": "Croatia",

@@ -1,24 +1,39 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T21:00:15.954Z",
-    "mu": 1.5
+    "generatedAt": "2026-07-15T21:10:11.542Z",
+    "mu": 1.49
   },
   "recs": {
-    "eng-arg-2026-07-15": {
-      "match": "England vs Argentina",
-      "kickoffUTC": "2026-07-15T19:00:00.000Z",
-      "stage": "Semi-final",
+    "esp-arg-2026-07-19": {
+      "match": "Spain vs Argentina",
+      "kickoffUTC": "2026-07-19T19:00:00.000Z",
+      "stage": "Final",
       "xg": {
-        "England": 1.34,
-        "Argentina": 1.38
+        "Spain": 1.44,
+        "Argentina": 0.59
       },
       "elo": {
-        "England": 1991,
+        "Spain": 2049,
         "Argentina": 2074
       },
-      "expCorners": 9.8,
-      "expFouls": 25.2,
+      "expCorners": 8.3,
+      "expFouls": 24.3,
       "legs": [
+        {
+          "market": "Team Goals",
+          "pick": "Argentina Under 3.5",
+          "p": 0.997
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 5.5",
+          "p": 0.982
+        },
+        {
+          "market": "Team Goals",
+          "pick": "Argentina Under 2.5",
+          "p": 0.978
+        },
         {
           "market": "Player 1+ Shot",
           "pick": "Lionel Messi (Argentina)",
@@ -27,40 +42,23 @@
         },
         {
           "market": "Player 1+ Shot",
-          "pick": "Harry Kane (England)",
-          "p": 0.963,
-          "note": "3.3 shots/gm over 7 gms"
-        },
-        {
-          "market": "Team Goals",
-          "pick": "England Under 3.5",
-          "p": 0.953
-        },
-        {
-          "market": "Player 1+ Shot",
-          "pick": "Marcus Rashford (England)",
-          "p": 0.95,
-          "note": "3.0 shots/gm over 3 gms"
-        },
-        {
-          "market": "Player 1+ Shot",
           "pick": "Enzo Fernández (Argentina)",
           "p": 0.95,
           "note": "3.0 shots/gm over 4 gms"
         },
         {
-          "market": "Team Goals",
-          "pick": "Argentina Under 3.5",
-          "p": 0.949
+          "market": "Total Goals",
+          "pick": "Under 4.5",
+          "p": 0.944
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 5.5",
-          "p": 0.942
+          "market": "Team Goals",
+          "pick": "Spain Under 3.5",
+          "p": 0.941
         },
         {
           "market": "Player 1+ Shot",
-          "pick": "Jude Bellingham (England)",
+          "pick": "Mikel Oyarzabal (Spain)",
           "p": 0.941,
           "note": "2.8 shots/gm over 6 gms"
         },
@@ -71,15 +69,9 @@
           "note": "2.8 shots/gm over 4 gms"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 0.5",
-          "p": 0.934
-        },
-        {
-          "market": "Fouls",
-          "pick": "Over 18.5",
-          "p": 0.914,
-          "note": "exp 25.2"
+          "market": "1st Half Goals",
+          "pick": "Under 2.5",
+          "p": 0.913
         },
         {
           "market": "Player 1+ Shot",
@@ -88,112 +80,126 @@
           "note": "2.3 shots/gm over 4 gms"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 4.5",
-          "p": 0.861
-        },
-        {
-          "market": "Team Goals",
-          "pick": "England Under 2.5",
-          "p": 0.849
-        },
-        {
-          "market": "Team Goals",
-          "pick": "Argentina Under 2.5",
-          "p": 0.839
-        },
-        {
-          "market": "1st Half Goals",
-          "pick": "Under 2.5",
-          "p": 0.832
-        },
-        {
-          "market": "Player 1+ Shot",
-          "pick": "Elliot Anderson (England)",
-          "p": 0.826,
-          "note": "1.8 shots/gm over 4 gms"
-        },
-        {
-          "market": "Player 1+ Shot",
-          "pick": "Declan Rice (England)",
-          "p": 0.811,
-          "note": "1.7 shots/gm over 3 gms"
-        },
-        {
           "market": "Fouls",
-          "pick": "Over 21.5",
-          "p": 0.765,
-          "note": "exp 25.2"
-        },
-        {
-          "market": "Corners",
-          "pick": "Over 7.5",
-          "p": 0.764,
-          "note": "exp 9.8"
+          "pick": "Over 18.5",
+          "p": 0.885,
+          "note": "exp 24.3"
         },
         {
           "market": "Total Goals",
-          "pick": "Over 1.5",
-          "p": 0.754
-        },
-        {
-          "market": "1st Half Goals",
           "pick": "Over 0.5",
-          "p": 0.754,
-          "note": "1H shares 0.47/0.57"
-        },
-        {
-          "market": "Team Goals",
-          "pick": "Argentina Over 0.5",
-          "p": 0.748
-        },
-        {
-          "market": "Double Chance",
-          "pick": "England or Argentina",
-          "p": 0.743
-        },
-        {
-          "market": "1st Half DC",
-          "pick": "Argentina or Draw",
-          "p": 0.739
-        },
-        {
-          "market": "Team Goals",
-          "pick": "England Over 0.5",
-          "p": 0.737
+          "p": 0.869
         },
         {
           "market": "Total Goals",
           "pick": "Under 3.5",
-          "p": 0.711
+          "p": 0.851
+        },
+        {
+          "market": "Double Chance",
+          "pick": "Spain or Draw",
+          "p": 0.847
+        },
+        {
+          "market": "1st Half DC",
+          "pick": "Spain or Draw",
+          "p": 0.842
         },
         {
           "market": "Player 1+ Shot",
-          "pick": "Anthony Gordon (England)",
-          "p": 0.699,
-          "note": "1.2 shots/gm over 5 gms"
+          "pick": "Álex Baena (Spain)",
+          "p": 0.84,
+          "note": "1.8 shots/gm over 6 gms"
+        },
+        {
+          "market": "Player 1+ Shot",
+          "pick": "Dani Olmo (Spain)",
+          "p": 0.84,
+          "note": "1.8 shots/gm over 6 gms"
+        },
+        {
+          "market": "Team Goals",
+          "pick": "Spain Under 2.5",
+          "p": 0.823
+        },
+        {
+          "market": "Corners",
+          "pick": "Under 10.5",
+          "p": 0.781,
+          "note": "exp 8.3"
+        },
+        {
+          "market": "Team Goals",
+          "pick": "Spain Over 0.5",
+          "p": 0.764
+        },
+        {
+          "market": "Player 1+ Shot",
+          "pick": "Pedro Porro (Spain)",
+          "p": 0.753,
+          "note": "1.4 shots/gm over 5 gms"
+        },
+        {
+          "market": "Player 1+ Shot",
+          "pick": "Ferran Torres (Spain)",
+          "p": 0.753,
+          "note": "1.4 shots/gm over 5 gms"
         },
         {
           "market": "Fouls",
           "pick": "Under 27.5",
-          "p": 0.686,
-          "note": "exp 25.2"
-        },
-        {
-          "market": "Corners",
-          "pick": "Over 8.5",
-          "p": 0.648,
-          "note": "exp 9.8"
-        },
-        {
-          "market": "1st Half DC",
-          "pick": "England or Draw",
-          "p": 0.641
+          "p": 0.746,
+          "note": "exp 24.3"
         },
         {
           "market": "Double Chance",
-          "pick": "Argentina or Draw",
-          "p": 0.639
+          "pick": "Spain or Argentina",
+          "p": 0.731
+        },
+        {
+          "market": "1st Half Goals",
+          "pick": "Under 1.5",
+          "p": 0.722
+        },
+        {
+          "market": "Fouls",
+          "pick": "Over 21.5",
+          "p": 0.709,
+          "note": "exp 24.3"
+        },
+        {
+          "market": "To Qualify",
+          "pick": "Spain",
+          "p": 0.693,
+          "note": "Elo 2049 v 2074"
+        },
+        {
+          "market": "Corners",
+          "pick": "Under 9.5",
+          "p": 0.675,
+          "note": "exp 8.3"
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 2.5",
+          "p": 0.667
+        },
+        {
+          "market": "BTTS",
+          "pick": "No",
+          "p": 0.646
+        },
+        {
+          "market": "1st Half Goals",
+          "pick": "Over 0.5",
+          "p": 0.646,
+          "note": "1H shares 0.49/0.57"
+        },
+        {
+          "market": "Player 1+ Shot",
+          "pick": "Mikel Merino (Spain)",
+          "p": 0.632,
+          "note": "1.0 shots/gm over 3 gms"
         },
         {
           "market": "Player 1+ Shot",
@@ -202,184 +208,178 @@
           "note": "1.0 shots/gm over 3 gms"
         },
         {
-          "market": "Double Chance",
-          "pick": "England or Draw",
-          "p": 0.619
-        },
-        {
-          "market": "Corners",
-          "pick": "Under 10.5",
-          "p": 0.604,
-          "note": "exp 9.8"
-        },
-        {
-          "market": "1st Half Goals",
-          "pick": "Under 1.5",
-          "p": 0.59
-        },
-        {
-          "market": "To Qualify",
-          "pick": "Argentina",
-          "p": 0.545,
-          "note": "Elo 2074 v 1991"
-        },
-        {
-          "market": "Fouls",
-          "pick": "Over 24.5",
-          "p": 0.542,
-          "note": "exp 25.2"
-        },
-        {
-          "market": "Corners",
-          "pick": "Over 9.5",
-          "p": 0.521,
-          "note": "exp 9.8"
-        },
-        {
           "market": "Total Goals",
-          "pick": "Over 2.5",
-          "p": 0.51
+          "pick": "Over 1.5",
+          "p": 0.604
         },
         {
-          "market": "BTTS",
-          "pick": "Yes",
-          "p": 0.502,
-          "note": "8y base 37%/34%"
-        },
-        {
-          "market": "BTTS",
-          "pick": "No",
-          "p": 0.498
-        },
-        {
-          "market": "Total Goals",
-          "pick": "Under 2.5",
-          "p": 0.49
+          "market": "1st Half DC",
+          "pick": "Argentina or Draw",
+          "p": 0.601
         },
         {
           "market": "Corners",
-          "pick": "Under 9.5",
-          "p": 0.479,
-          "note": "exp 9.8"
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Lionel Messi (Argentina)",
-          "p": 0.467,
-          "note": "8 this WC · 22 in 4y (0.415/gm)"
-        },
-        {
-          "market": "Fouls",
-          "pick": "Under 24.5",
-          "p": 0.458,
-          "note": "exp 25.2"
-        },
-        {
-          "market": "To Qualify",
-          "pick": "England",
-          "p": 0.455,
-          "note": "Elo 1991 v 2074"
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Harry Kane (England)",
-          "p": 0.402,
-          "note": "6 this WC · 30 in 4y (0.566/gm)"
-        },
-        {
-          "market": "Corners",
-          "pick": "Over 10.5",
-          "p": 0.396,
-          "note": "exp 9.8"
+          "pick": "Over 7.5",
+          "p": 0.593,
+          "note": "exp 8.3"
         },
         {
           "market": "Result",
-          "pick": "Argentina",
-          "p": 0.381
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Jude Bellingham (England)",
-          "p": 0.371,
-          "note": "6 this WC · 8 in 4y (0.151/gm)"
-        },
-        {
-          "market": "Result",
-          "pick": "England",
-          "p": 0.361
+          "pick": "Spain",
+          "p": 0.579
         },
         {
           "market": "Corners",
           "pick": "Under 8.5",
-          "p": 0.352,
-          "note": "exp 9.8"
+          "p": 0.546,
+          "note": "exp 8.3"
         },
         {
           "market": "Fouls",
-          "pick": "Over 27.5",
-          "p": 0.314,
-          "note": "exp 25.2"
+          "pick": "Under 24.5",
+          "p": 0.527,
+          "note": "exp 24.3"
         },
         {
-          "market": "Total Goals",
-          "pick": "Over 3.5",
-          "p": 0.289
+          "market": "Fouls",
+          "pick": "Over 24.5",
+          "p": 0.473,
+          "note": "exp 24.3"
         },
         {
-          "market": "Result",
-          "pick": "Draw",
-          "p": 0.257
+          "market": "Corners",
+          "pick": "Over 8.5",
+          "p": 0.454,
+          "note": "exp 8.3"
         },
         {
-          "market": "Total Goals",
-          "pick": "Under 1.5",
-          "p": 0.246
+          "market": "Team Goals",
+          "pick": "Argentina Over 0.5",
+          "p": 0.448
+        },
+        {
+          "market": "Double Chance",
+          "pick": "Argentina or Draw",
+          "p": 0.421
         },
         {
           "market": "Corners",
           "pick": "Under 7.5",
-          "p": 0.236,
-          "note": "exp 9.8"
+          "p": 0.407,
+          "note": "exp 8.3"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Mikel Oyarzabal (Spain)",
+          "p": 0.407,
+          "note": "5 this WC · 16 in 4y (0.308/gm)"
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Under 1.5",
+          "p": 0.396
+        },
+        {
+          "market": "BTTS",
+          "pick": "Yes",
+          "p": 0.354,
+          "note": "8y base 44%/34%"
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Over 2.5",
+          "p": 0.333
+        },
+        {
+          "market": "Corners",
+          "pick": "Over 9.5",
+          "p": 0.325,
+          "note": "exp 8.3"
+        },
+        {
+          "market": "To Qualify",
+          "pick": "Argentina",
+          "p": 0.307,
+          "note": "Elo 2074 v 2049"
         },
         {
           "market": "Fouls",
           "pick": "Under 21.5",
-          "p": 0.235,
-          "note": "exp 25.2"
+          "p": 0.291,
+          "note": "exp 24.3"
+        },
+        {
+          "market": "Result",
+          "pick": "Draw",
+          "p": 0.269
+        },
+        {
+          "market": "Fouls",
+          "pick": "Over 27.5",
+          "p": 0.254,
+          "note": "exp 24.3"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Lionel Messi (Argentina)",
+          "p": 0.237,
+          "note": "8 this WC · 22 in 4y (0.415/gm)"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Pedro Porro (Spain)",
+          "p": 0.231,
+          "note": "2 this WC"
+        },
+        {
+          "market": "Corners",
+          "pick": "Over 10.5",
+          "p": 0.219,
+          "note": "exp 8.3"
+        },
+        {
+          "market": "Anytime Scorer",
+          "pick": "Mikel Merino (Spain)",
+          "p": 0.194,
+          "note": "2 this WC · 9 in 4y (0.173/gm)"
+        },
+        {
+          "market": "Result",
+          "pick": "Argentina",
+          "p": 0.153
+        },
+        {
+          "market": "Total Goals",
+          "pick": "Over 3.5",
+          "p": 0.149
+        },
+        {
+          "market": "Fouls",
+          "pick": "Under 18.5",
+          "p": 0.115,
+          "note": "exp 24.3"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Lautaro Martínez (Argentina)",
-          "p": 0.211,
+          "p": 0.097,
           "note": "3 this WC · 9 in 4y (0.17/gm)"
         },
         {
           "market": "Anytime Scorer",
           "pick": "Enzo Fernández (Argentina)",
-          "p": 0.141,
+          "p": 0.063,
           "note": "2 this WC · 3 in 4y (0.057/gm)"
         },
         {
           "market": "Total Goals",
           "pick": "Over 4.5",
-          "p": 0.139
-        },
-        {
-          "market": "Anytime Scorer",
-          "pick": "Anthony Gordon (England)",
-          "p": 0.091,
-          "note": "1 this WC"
-        },
-        {
-          "market": "Fouls",
-          "pick": "Under 18.5",
-          "p": 0.086,
-          "note": "exp 25.2"
+          "p": 0.056
         },
         {
           "market": "Total Goals",
           "pick": "Over 5.5",
-          "p": 0.058
+          "p": 0.018
         }
       ]
     }

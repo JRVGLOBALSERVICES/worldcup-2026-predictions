@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T21:00:14.151Z",
+    "generatedAt": "2026-07-15T21:10:09.555Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-15T21:00:14.150Z"
+    "modelUpdatedAt": "2026-07-15T21:10:09.554Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -26572,6 +26572,351 @@
         "etWinner": "Argentina",
         "shootout": "Near coin-flip, with the marginal nerve edge to England.",
         "note": "Most likely settled inside 90 (73.2%). But a 26.8% level 90 keeps extra time (12.8%) and penalties (14%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "esp-arg-2026-07-19": {
+      "win": {
+        "pick": "Draw",
+        "fairOdds": "2.94",
+        "reason": "Model: a draw at 34% (Spain 33% / draw 34% / Argentina 33%). Expected goals 0.8–0.9 from group-stage attack/defence rates (Spain 1.6 for / 0.6 against per game, Argentina 2.2 / 0.8). Most likely score 0-0.",
+        "strength": 1
+      },
+      "halfTime": {
+        "score": "0-0",
+        "fairOdds": "2.12",
+        "alt": "1-0",
+        "altOdds": "3.69"
+      },
+      "htft": {
+        "pick": "Draw/Draw",
+        "fairOdds": "3.68"
+      },
+      "fullTime": {
+        "score": "0-0",
+        "fairOdds": "5.49"
+      },
+      "scorers": [
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "fairOdds": "2.86",
+          "banker": true,
+          "note": "8 goals in 6 group games; 35% modelled anytime chance on 0.9 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "fairOdds": "3.33",
+          "banker": false,
+          "note": "5 goals in 7 group games; 30% modelled anytime chance on 0.8 team xG.",
+          "strength": 2
+        },
+        {
+          "player": "Lautaro Martínez",
+          "team": "Argentina",
+          "fairOdds": "6.17",
+          "banker": false,
+          "note": "3 goals in 6 group games; 16% modelled anytime chance on 0.9 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Mikel Merino",
+          "team": "Spain",
+          "fairOdds": "6.67",
+          "banker": false,
+          "note": "2 goals in 7 group games; 15% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
+        },
+        {
+          "player": "Pedro Porro",
+          "team": "Spain",
+          "fairOdds": "6.67",
+          "banker": false,
+          "note": "2 goals in 5 group games; 15% modelled anytime chance on 0.8 team xG.",
+          "strength": 1
+        }
+      ],
+      "assists": [
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "fairOdds": "3.18",
+          "banker": true,
+          "note": "4 assists in the group stage; 31% modelled chance to set one up."
+        },
+        {
+          "player": "Dani Olmo",
+          "team": "Spain",
+          "fairOdds": "4.96",
+          "banker": false,
+          "note": "2 assists in the group stage; 20% modelled chance to set one up."
+        },
+        {
+          "player": "Marc Cucurella",
+          "team": "Spain",
+          "fairOdds": "4.96",
+          "banker": false,
+          "note": "2 assists in the group stage; 20% modelled chance to set one up."
+        },
+        {
+          "player": "Álex Baena",
+          "team": "Spain",
+          "fairOdds": "8.12",
+          "banker": false,
+          "note": "1 assist in the group stage; 12% modelled chance to set one up."
+        }
+      ],
+      "penalty": {
+        "likelihood": "medium",
+        "taker": "Mikel Oyarzabal",
+        "backup": "Mikel Merino",
+        "note": "Tight model margin (1 pts) raises the odds a spot-kick decides it; Mikel Oyarzabal is Draw's group-stage top scorer and likely taker."
+      },
+      "lineups": {
+        "home": "Unai Simon, Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella, Fabian Ruiz, Rodri, Dani Olmo, Lamine Yamal, Mikel Oyarzabal, Alex Baena",
+        "away": "E. Martinez; Molina, Romero, L. Martinez, Tagliafico; Paredes, Simeone, Enzo Fernandez; Mac Allister, Messi, Alvarez",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 23,
+              "name": "Unai Simon",
+              "pos": "G"
+            },
+            {
+              "num": 2,
+              "name": "Pedro Porro",
+              "pos": "RB"
+            },
+            {
+              "num": 22,
+              "name": "Pau Cubarsi",
+              "pos": "CB-R"
+            },
+            {
+              "num": 14,
+              "name": "Aymeric Laporte",
+              "pos": "CB-L"
+            },
+            {
+              "num": 24,
+              "name": "Marc Cucurella",
+              "pos": "LB"
+            },
+            {
+              "num": 16,
+              "name": "Rodri",
+              "pos": "DM"
+            },
+            {
+              "num": 8,
+              "name": "Fabian Ruiz",
+              "pos": "CM-R"
+            },
+            {
+              "num": 21,
+              "name": "Dani Olmo",
+              "pos": "CM-L"
+            },
+            {
+              "num": 19,
+              "name": "Lamine Yamal",
+              "pos": "RW"
+            },
+            {
+              "num": 9,
+              "name": "Mikel Oyarzabal",
+              "pos": "F"
+            },
+            {
+              "num": 10,
+              "name": "Alex Baena",
+              "pos": "LW"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-3-3",
+          "players": [
+            {
+              "num": 23,
+              "name": "Emiliano Martínez",
+              "pos": "G"
+            },
+            {
+              "num": 26,
+              "name": "Nahuel Molina",
+              "pos": "RB"
+            },
+            {
+              "num": 13,
+              "name": "Cristian Romero",
+              "pos": "CD-R"
+            },
+            {
+              "num": 6,
+              "name": "Lisandro Martínez",
+              "pos": "CD-L"
+            },
+            {
+              "num": 3,
+              "name": "Nicolás Tagliafico",
+              "pos": "LB"
+            },
+            {
+              "num": 5,
+              "name": "Leandro Paredes",
+              "pos": "DM"
+            },
+            {
+              "num": 17,
+              "name": "Giuliano Simeone",
+              "pos": "CM-R"
+            },
+            {
+              "num": 24,
+              "name": "Enzo Fernández",
+              "pos": "CM-L"
+            },
+            {
+              "num": 20,
+              "name": "Alexis Mac Allister",
+              "pos": "LF"
+            },
+            {
+              "num": 10,
+              "name": "Lionel Messi",
+              "pos": "RF"
+            },
+            {
+              "num": 9,
+              "name": "Julián Álvarez",
+              "pos": "ST"
+            }
+          ]
+        }
+      },
+      "playerNotes": [
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "note": "8 goals in 6 group games; 35% modelled anytime chance on 0.9 team xG."
+        },
+        {
+          "player": "Mikel Oyarzabal",
+          "team": "Spain",
+          "note": "5 goals in 7 group games; 30% modelled anytime chance on 0.8 team xG."
+        },
+        {
+          "player": "Lionel Messi",
+          "team": "Argentina",
+          "note": "4 assists in the group stage; 31% modelled chance to set one up."
+        }
+      ],
+      "confidence": "medium",
+      "strength": 1,
+      "sources": [
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+      ],
+      "pitchReport": {
+        "facts": [
+          "Spain: 7 pts, +5 GD across 3 group games (5 for / 0 against).",
+          "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
+          "Spain's Mikel Oyarzabal leads them with 5 goals in 7 games.",
+          "Argentina's Lionel Messi leads them with 8 goals in 6 games."
+        ],
+        "assumptions": [
+          "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Spain to sit compact and play on the break.",
+          "Goal expectancy 0.8–0.9 (Spain–Argentina) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "Chances project close (0.8–0.9 xG) — a true coin-flip for territory; small margins decide it.",
+        "drawRisk": "High. Low combined xG (1.7) and a 34% modelled draw — this profiles as a 1-0 / 1-1 that can drift to extra time.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "Tightest projection on the board — 34% draw on low combined xG.",
+          "Knockout caution pulls both sides toward a level 90 minutes."
+        ],
+        "caseAgainst": [
+          "One moment of quality (set-piece, individual) breaks any draw.",
+          "Draw is the lowest-confidence headline call there is."
+        ],
+        "verdict": "Pass",
+        "changeMind": "A confirmed XI resting Lionel Messi, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "tripped": false,
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": true,
+            "why": "Low combined xG (1.7) + tight margin in a knockout — this is built for 1-0 / pens, not a comfortable win."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "The pick IS the draw — fully accounted for."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 2,
+        "edge": "narrative-leaning",
+        "verdict": "LEAN",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "LEAN",
+        "call": "A draw is a lean, not a lock.",
+        "read": {
+          "tag": "Pass",
+          "line": "The model leans level — a 34% draw on low goals, the tightest call on the board."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "2 warnings",
+          "line": "This is built for a 1-0 or penalties, not a comfortable win."
+        }
+      },
+      "resolution": {
+        "ninety": 66,
+        "extraTime": 13.1,
+        "penalties": 20.9,
+        "mostLikely": "Regulation",
+        "etWinner": "too close to call",
+        "shootout": "Essentially 50/50 — a true coin-flip from twelve yards.",
+        "note": "Most likely settled inside 90 (66%). But a 34% level 90 keeps extra time (13.1%) and penalties (20.9%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
   }
