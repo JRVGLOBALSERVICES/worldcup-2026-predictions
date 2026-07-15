@@ -1537,8 +1537,17 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
   for (const d of heroDays) {
     for (const m of d.matches) {
       const lm = live[m.matchId];
+      // Rj (2026-07-15): a cross-match parlay anchored to today's featured card
+      // (its LAST leg is today's game) but already terminally LOST on an EARLIER
+      // leg died on a PRIOR day — that loss belongs to that earlier slate, not
+      // today's P/L. If today's featured match hasn't been played yet, any "lost"
+      // row on it must have lost elsewhere, so keep it off today's Net P&L. Once
+      // the featured game is actually played the day rolls forward and it drops
+      // out of heroDays, so genuine same-day losses still count normally.
+      const mFinished = lm?.state === "finished";
       for (const b of m.bets) {
         const v = gradeBet(b, lm).verdict;
+        if (v === "lost" && !mFinished) continue; // lost on an earlier leg, not today
         const lean = leanFn(v);
         if (lean === "win") livePnl += b.potential - b.stake;
         else if (lean === "lose") livePnl -= b.stake;
@@ -1548,6 +1557,7 @@ export default function LiveTracker({ base, activeNav }: { base: TrackerBase; ac
       for (const s of m.specials) {
         if (s.mirror) continue; // counted on its home card only
         const v = gradeSpecial(s, lm, live).verdict;
+        if (v === "lost" && !mFinished) continue; // lost on an earlier leg, not today
         const lean = leanFn(v);
         if (lean === "win") livePnl += s.potential - s.stake;
         else if (lean === "lose") livePnl -= s.stake;
