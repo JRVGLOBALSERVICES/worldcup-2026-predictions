@@ -19117,6 +19117,53 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-865191065480216576",
+      "slipNo": "865191065480216576",
+      "matchId": "eng-arg-2026-07-15",
+      "player": "Match Parlay · England/Argentina",
+      "market": "Match Parlay · 6 legs",
+      "label": "REAL 1xBet MATCH PARLAY 865191065480216576 (15/07) @22.28, RM100 -> RM2,228.00. [ENG-ARG] Argentina (FT 1X2) · Total O1.5 · BTTS Yes · Messi score-or-assist · Bellingham score-or-assist · E.Martínez O1.5 GK saves.",
+      "odds": 22.28,
+      "stake": 100,
+      "placedAt": "15/07 19:20",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "result",
+            "outcome": "2"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "totalOver",
+            "line": 1.5
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "btts"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          },
+          {
+            "matchId": "eng-arg-2026-07-15",
+            "kind": "gkSavesOver",
+            "player": "Emiliano Martínez",
+            "side": "away",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
