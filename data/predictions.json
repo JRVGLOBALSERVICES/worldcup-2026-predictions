@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T09:03:09.226Z",
+    "generatedAt": "2026-07-15T18:10:03.000Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
     "modelUpdatedAt": "2026-07-14T21:00:13.931Z"
@@ -26235,52 +26235,52 @@
     },
     "eng-arg-2026-07-15": {
       "win": {
-        "pick": "Argentina",
-        "fairOdds": "2.90",
-        "reason": "Argentina carry World Cup pedigree, a settled midfield diamond and a Messi in record-breaking form (8 goals), but England's structure and set-piece threat make this genuinely tight — closer to a coin-flip with the draw very live.",
+        "pick": "England",
+        "fairOdds": "2.70",
+        "reason": "A genuine coin-flip that the model shades to England (Opta ~52% to advance, ~37% in 90 vs Argentina's 32%). England's confirmed XI trades Saka's creativity for Rogers' legs but Stones + Spence add ball-progression and left-side pace; Argentina drop De Paul for Giuliano Simeone (energy over control). The DRAW is very live (~31% in 90) and this likely goes deep — read the England pick as 'to reach the final', probably via extra time/pens.",
         "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "2.20",
-        "alt": "0-1",
-        "altOdds": "3.60",
+        "fairOdds": "2.15",
+        "alt": "1-0",
+        "altOdds": "4.20",
         "strength": 3
       },
       "htft": {
-        "pick": "Draw/Argentina",
-        "fairOdds": "4.80",
+        "pick": "Draw/England",
+        "fairOdds": "5.00",
         "strength": 2
       },
       "fullTime": {
-        "score": "1-2",
-        "fairOdds": "8.50",
+        "score": "1-1",
+        "fairOdds": "6.00",
         "strength": 2
       },
       "scorers": [
         {
           "player": "Harry Kane",
-          "fairOdds": "3.20",
+          "fairOdds": "3.00",
           "banker": false,
-          "note": "England's penalty taker and primary No.9; tournament-tested finisher and set-piece target."
+          "note": "England's No.9 and undisputed penalty taker; 6 tournament goals, feeds off Bellingham/Gordon service — highest floor on the pitch."
         },
         {
           "player": "Julian Alvarez",
-          "fairOdds": "3.60",
+          "fairOdds": "3.40",
           "banker": false,
-          "note": "In form after his decisive strike vs Switzerland and now Argentina's most-trusted penalty option."
-        },
-        {
-          "player": "Lionel Messi",
-          "fairOdds": "3.00",
-          "banker": false,
-          "note": "8 goals this WC and all-time top scorer, but at 39 with two missed pens — a threat, never a banker."
+          "note": "In-form finisher after his extra-time golazo vs Switzerland and Argentina's cleanest penalty option (~89.5%); central striker on the tournament's top-scoring side."
         },
         {
           "player": "Jude Bellingham",
-          "fairOdds": "4.50",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "Late-arriving No.10 with a goal threat from the second line off Kane's hold-up play."
+          "note": "6 goals with braces in back-to-back knockouts (first since Maradona '86); roams from the 10 and arrives late into the box."
+        },
+        {
+          "player": "Lionel Messi",
+          "fairOdds": "3.20",
+          "banker": false,
+          "note": "8 goals (joint tournament-high) so a real open-play/FK threat — but at 39 with two missed penalties this WC, a threat and never a banker."
         }
       ],
       "assists": [
@@ -26288,31 +26288,31 @@
           "player": "Lionel Messi",
           "fairOdds": "3.80",
           "banker": false,
-          "note": "Argentina's primary creator and free-kick taker; the fulcrum for Alvarez's runs."
+          "note": "Argentina's primary creator and corner/free-kick taker; already assisting when not scoring (Switzerland) — the hub for Alvarez/Mac Allister."
         },
         {
-          "player": "Bukayo Saka",
+          "player": "Jude Bellingham",
+          "fairOdds": "4.80",
+          "banker": false,
+          "note": "With Saka benched, England's central creative hub; links to Kane and feeds Gordon's runs."
+        },
+        {
+          "player": "Anthony Gordon",
           "fairOdds": "5.00",
           "banker": false,
-          "note": "Corner taker and right-side creator; deliveries and cutbacks feed Kane."
-        },
-        {
-          "player": "Declan Rice",
-          "fairOdds": "6.00",
-          "banker": false,
-          "note": "England's main set-piece deliverer (corners/free kicks) — a real assist route vs a physical mismatch."
+          "note": "Highest-volume dribbler/crosser from the left (10 dribbles vs Norway); cutbacks to Kane and Bellingham are England's likeliest assist route vs Molina."
         }
       ],
       "penalty": {
         "likelihood": "Medium",
         "taker": "Julian Alvarez",
-        "backup": "Enzo Fernandez",
-        "note": "Argentina have moved off Messi after two missed pens this tournament; Alvarez (89.5%) trusted, with Enzo/Paredes ~92% behind. England's taker is Kane if they win one."
+        "backup": "Lionel Messi (nominal) / Enzo Fernandez",
+        "note": "Messi is the nominal first-choice but has missed TWO penalties this tournament (a WC record) — Alvarez (~89.5%) is the smarter, de-facto taker if Argentina switch. England's taker is Harry Kane if they win one."
       },
       "lineups": {
-        "home": "Pickford; James, Konsa, Guehi, O'Reilly; Rice, Anderson; Saka, Bellingham, Gordon; Kane",
-        "away": "E. Martinez; Molina, Romero, L. Martinez, Tagliafico; De Paul, Paredes, Enzo Fernandez, Mac Allister; Messi, Alvarez",
-        "status": "probable",
+        "home": "Pickford; James, Stones, Guehi, Spence; Rice, Anderson; Rogers, Bellingham, Gordon; Kane",
+        "away": "E. Martinez; Molina, Romero, L. Martinez, Tagliafico; Paredes, Simeone, Enzo Fernandez; Mac Allister, Messi, Alvarez",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -26322,13 +26322,13 @@
               "pos": "G"
             },
             {
-              "num": 16,
-              "name": "Jarell Quansah",
+              "num": 24,
+              "name": "Reece James",
               "pos": "RB"
             },
             {
-              "num": 2,
-              "name": "Ezri Konsa",
+              "num": 5,
+              "name": "John Stones",
               "pos": "CD-R"
             },
             {
@@ -26337,8 +26337,8 @@
               "pos": "CD-L"
             },
             {
-              "num": 3,
-              "name": "Nico O'Reilly",
+              "num": 25,
+              "name": "Djed Spence",
               "pos": "LB"
             },
             {
@@ -26352,9 +26352,9 @@
               "pos": "DM-L"
             },
             {
-              "num": 7,
-              "name": "Bukayo Saka",
-              "pos": "RM"
+              "num": 17,
+              "name": "Morgan Rogers",
+              "pos": "RW"
             },
             {
               "num": 10,
@@ -26362,19 +26362,19 @@
               "pos": "AM"
             },
             {
-              "num": 19,
+              "num": 18,
               "name": "Anthony Gordon",
-              "pos": "LM"
+              "pos": "LW"
             },
             {
               "num": 9,
               "name": "Harry Kane",
-              "pos": "F"
+              "pos": "ST"
             }
           ]
         },
         "awayXI": {
-          "formation": "4-4-2",
+          "formation": "4-3-3",
           "players": [
             {
               "num": 23,
@@ -26389,45 +26389,45 @@
             {
               "num": 13,
               "name": "Cristian Romero",
-              "pos": "CD"
+              "pos": "CD-R"
             },
             {
-              "num": 25,
+              "num": 6,
               "name": "Lisandro Martínez",
-              "pos": "CD"
+              "pos": "CD-L"
             },
             {
-              "num": null,
+              "num": 3,
               "name": "Nicolás Tagliafico",
               "pos": "LB"
             },
             {
-              "num": 7,
-              "name": "Rodrigo De Paul",
-              "pos": "RM"
-            },
-            {
-              "num": null,
+              "num": 5,
               "name": "Leandro Paredes",
-              "pos": "CM"
+              "pos": "DM"
             },
             {
-              "num": 20,
-              "name": "Alexis Mac Allister",
-              "pos": "CM"
+              "num": 17,
+              "name": "Giuliano Simeone",
+              "pos": "CM-R"
             },
             {
               "num": 24,
               "name": "Enzo Fernández",
-              "pos": "LM"
+              "pos": "CM-L"
+            },
+            {
+              "num": 20,
+              "name": "Alexis Mac Allister",
+              "pos": "LF"
             },
             {
               "num": 10,
               "name": "Lionel Messi",
-              "pos": "ST"
+              "pos": "RF"
             },
             {
-              "num": null,
+              "num": 9,
               "name": "Julián Álvarez",
               "pos": "ST"
             }
@@ -26436,45 +26436,46 @@
       },
       "playerNotes": [
         {
-          "player": "Declan Rice",
+          "player": "Morgan Rogers",
           "team": "England",
-          "note": "Recovered from illness/fatigue and confirmed to start after full training in Kansas City; key set-piece deliverer."
+          "note": "IN for Saka on the right after scoring the extra-time winner vs Norway; direct carrier + late box threat, but England lose Saka's tournament-best assist rate."
         },
         {
-          "player": "Marc Guehi",
-          "team": "England",
-          "note": "Battled a hamstring issue but avoided cards vs Norway; expected to make the back line as CB."
+          "player": "Giuliano Simeone",
+          "team": "Argentina",
+          "note": "IN for the dropped Rodrigo De Paul; brings vertical running, high pressing and right-side energy — pins Reece James, but trades De Paul's midfield control for legs."
         },
         {
-          "player": "Reece James",
+          "player": "John Stones",
           "team": "England",
-          "note": "Only fit right-back; Tuchel may start him at RB, pushing Konsa inside — a fitness/rotation swing factor."
+          "note": "Starts CB over Konsa for composure and ball-progression to break Argentina's central press."
+        },
+        {
+          "player": "Djed Spence",
+          "team": "England",
+          "note": "Promoted to start LB after his overlapping cameo vs Norway; pace and overlap to support Gordon down England's left vs Molina."
         },
         {
           "player": "Lionel Messi",
           "team": "Argentina",
-          "note": "Majestic tournament (8 goals, now all-time WC top scorer at 21) but has missed two penalties and took a knock vs Switzerland; primary FK taker."
+          "note": "8 goals (joint tournament-high) and primary corner/FK taker, but 39 with TWO missed penalties this WC — a threat, never a penalty banker."
         },
         {
           "player": "Julian Alvarez",
           "team": "Argentina",
-          "note": "Scored the decisive long-range strike vs Switzerland and is now Argentina's trusted penalty taker."
-        },
-        {
-          "player": "Nicolas Tagliafico",
-          "team": "Argentina",
-          "note": "Managed minutes and was subbed in extra time vs Switzerland but deemed fresh enough to start at left-back."
+          "note": "Extra-time golazo vs Switzerland; Argentina's cleanest penalty option (~89.5%) and central striker on the tournament's top-scoring side."
         }
       ],
       "confidence": "medium",
       "strength": 3,
       "sources": [
-        "https://www.skysports.com/football/news/11095/13563231/england-vs-argentina-declan-rice-fit-for-world-cup-semi-final-as-thomas-tuchels-squad-issues-begin-to-ease",
-        "https://sports.yahoo.com/articles/england-xi-vs-argentina-confirmed-064857130.html",
-        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/alvarez-or-lautaro-who-will-join-messi-predicted-argentina-lineup-vs-england_601142.html",
-        "https://www.rotowire.com/soccer/article/2026-world-cup-penalty-corner-and-free-kick-takers-by-team-114076",
+        "https://sports.yahoo.com/articles/england-v-argentina-predicted-line-141115857.html",
+        "https://www.football365.com/news/england-starting-xi-vs-argentina-revealed-one-change",
+        "https://www.si.com/soccer/england-vs-argentina-world-cup-preview-predictions-lineups-7-15-26",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021540?gender=2&date=2026-07-15",
         "https://theanalyst.com/articles/lionel-messi-penalties-miss-argentina-world-cup-record",
-        "https://www.si.com/soccer/england-vs-argentina-world-cup-preview-predictions-lineups-7-15-26"
+        "https://theanalyst.com/articles/england-vs-argentina-prediction-world-cup-2026-match-preview",
+        "https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09"
       ],
       "pitchReport": {
         "facts": [
@@ -26487,8 +26488,8 @@
           "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); England to sit compact and play on the break.",
           "Goal expectancy 1.0–1.4 (England–Argentina) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
-        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "lineups": "XIs CONFIRMED. England (4-2-3-1): Stones + Spence in, Saka dropped for Rogers. Argentina (4-3-3): De Paul dropped for Giuliano Simeone. Both name strongest available — scorer/assist props are now firm, not provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both accept a cagey, low-risk game, which compresses goals and lifts the draw/extra-time chance.",
         "xgRead": "Argentina shade the chance-creation (1.4 vs 1.0 xG) — they should make the running.",
         "drawRisk": "Moderate — 26.8% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
         "travel": "Warm, humid venue — expect a hydration break and a cagier final 20.",
@@ -26528,8 +26529,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs now confirmed (Stones/Spence/Rogers in for England; Simeone in, De Paul out for Argentina) — scorer/lineup angles are firm."
           },
           {
             "name": "Ignoring the draw",
@@ -26549,18 +26550,18 @@
       },
       "brainSummary": {
         "verdict": "LEAN",
-        "call": "Argentina to win is a lean, not a lock. Respect the live draw.",
+        "call": "England to reach the final is a lean, not a lock — respect the very live draw.",
         "read": {
           "tag": "Lean",
-          "line": "Argentina are the model's 48% pick, but a 26.8% draw is very much alive."
+          "line": "Coin-flip that Opta shades to England (~52% to advance), but a ~31% 90-min draw is very much alive."
         },
         "price": {
-          "tag": "Not priced yet",
-          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+          "tag": "Model-only",
+          "line": "No live odds baked in — this is a reasoned model call, not a market price."
         },
         "trap": {
-          "tag": "2 warnings",
-          "line": "The draw is live and a level game kills a straight win bet."
+          "tag": "1 warning",
+          "line": "The draw is live; a level 90 then extra time/pens is a real path — don't over-index on a clean 90-min winner."
         }
       },
       "resolution": {
@@ -26568,8 +26569,8 @@
         "extraTime": 12.8,
         "penalties": 14,
         "mostLikely": "Regulation",
-        "etWinner": "Argentina",
-        "shootout": "Near coin-flip, with the marginal nerve edge to Argentina.",
+        "etWinner": "England",
+        "shootout": "Near coin-flip; England carry the marginal penalty-shootout edge (Kane + Rice, and E. Martinez aside, England's spot-kick record is elite).",
         "note": "Most likely settled inside 90 (73.2%). But a 26.8% level 90 keeps extra time (12.8%) and penalties (14%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
