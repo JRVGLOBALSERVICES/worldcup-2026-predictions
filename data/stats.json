@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T20:40:10.116Z",
+    "generatedAt": "2026-07-15T20:50:11.814Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 85
   },
@@ -40,6 +40,14 @@
       },
       {
         "rank": 5,
+        "name": "Enzo Fernández",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 2,
+        "matches": 2
+      },
+      {
+        "rank": 5,
         "name": "Lautaro Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -63,7 +71,7 @@
         "matches": 5
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Álex Baena",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -71,18 +79,10 @@
         "matches": 1
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "Alexis Mac Allister",
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 1,
-        "matches": 1
-      },
-      {
-        "rank": 8,
-        "name": "Anthony Gordon",
-        "team": "England",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "value": 1,
         "matches": 1
       }
@@ -105,7 +105,15 @@
         "matches": 6
       },
       {
-        "rank": 3,
+        "rank": 1,
+        "name": "Lionel Messi",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 3,
+        "matches": 6
+      },
+      {
+        "rank": 4,
         "name": "Dani Olmo",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -113,15 +121,7 @@
         "matches": 7
       },
       {
-        "rank": 3,
-        "name": "Lionel Messi",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 2,
-        "matches": 6
-      },
-      {
-        "rank": 3,
+        "rank": 4,
         "name": "Marc Cucurella",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -499,8 +499,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 90.4,
-        "display": "90.4%",
+        "value": 90.5,
+        "display": "90.5%",
         "matches": 7
       },
       {
@@ -515,8 +515,8 @@
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 88.7,
-        "display": "88.7%",
+        "value": 88.6,
+        "display": "88.6%",
         "matches": 7
       }
     ],
@@ -533,16 +533,16 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 60.6,
-        "display": "60.6%",
+        "value": 61,
+        "display": "61.0%",
         "matches": 7
       },
       {
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 54.2,
-        "display": "54.2%",
+        "value": 53.8,
+        "display": "53.8%",
         "matches": 7
       }
     ],
@@ -551,16 +551,16 @@
         "rank": 1,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 42.9,
-        "display": "42.9%",
+        "value": 42.4,
+        "display": "42.4%",
         "matches": 7
       },
       {
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 39.3,
-        "display": "39.3%",
+        "value": 39.1,
+        "display": "39.1%",
         "matches": 7
       },
       {
@@ -603,8 +603,8 @@
         "rank": 1,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 33.3,
-        "display": "33.3%",
+        "value": 32.3,
+        "display": "32.3%",
         "matches": 7
       },
       {
@@ -637,16 +637,16 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 52.5,
-        "display": "52.5%",
+        "value": 53.3,
+        "display": "53.3%",
         "matches": 7
       },
       {
         "rank": 3,
         "team": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "value": 48.4,
-        "display": "48.4%",
+        "value": 48.3,
+        "display": "48.3%",
         "matches": 7
       }
     ]
@@ -917,6 +917,11 @@
           "matches": 6
         },
         {
+          "name": "Enzo Fernández",
+          "value": 2,
+          "matches": 2
+        },
+        {
           "name": "Lautaro Martínez",
           "value": 2,
           "matches": 6
@@ -930,17 +935,12 @@
           "name": "Cristian Romero",
           "value": 1,
           "matches": 1
-        },
-        {
-          "name": "Enzo Fernández",
-          "value": 1,
-          "matches": 1
         }
       ],
       "assists": [
         {
           "name": "Lionel Messi",
-          "value": 2,
+          "value": 3,
           "matches": 6
         },
         {
@@ -3344,12 +3344,12 @@
           "name": "Lionel Messi",
           "apps": 7,
           "goals": 8,
-          "assists": 2,
+          "assists": 3,
           "shots": 32,
           "sot": 15,
           "tackles": 10,
           "blocks": 6,
-          "passes": 303,
+          "passes": 313,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3359,7 +3359,7 @@
         },
         {
           "name": "Lautaro Martínez",
-          "apps": 6,
+          "apps": 7,
           "goals": 2,
           "assists": 1,
           "shots": 9,
@@ -3375,6 +3375,23 @@
           "gk": false
         },
         {
+          "name": "Enzo Fernández",
+          "apps": 6,
+          "goals": 2,
+          "assists": 0,
+          "shots": 12,
+          "sot": 4,
+          "tackles": 10,
+          "blocks": 4,
+          "passes": 471,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
           "name": "Alexis Mac Allister",
           "apps": 7,
           "goals": 1,
@@ -3383,7 +3400,7 @@
           "sot": 4,
           "tackles": 19,
           "blocks": 3,
-          "passes": 394,
+          "passes": 395,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3417,7 +3434,7 @@
           "sot": 5,
           "tackles": 4,
           "blocks": 2,
-          "passes": 180,
+          "passes": 189,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3434,26 +3451,9 @@
           "sot": 1,
           "tackles": 14,
           "blocks": 0,
-          "passes": 386,
+          "passes": 389,
           "saves": 0,
           "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Enzo Fernández",
-          "apps": 6,
-          "goals": 1,
-          "assists": 0,
-          "shots": 10,
-          "sot": 3,
-          "tackles": 10,
-          "blocks": 4,
-          "passes": 459,
-          "saves": 0,
-          "yellow": 0,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -3481,11 +3481,11 @@
           "apps": 6,
           "goals": 0,
           "assists": 1,
-          "shots": 1,
+          "shots": 2,
           "sot": 1,
           "tackles": 6,
-          "blocks": 0,
-          "passes": 273,
+          "blocks": 1,
+          "passes": 286,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3502,7 +3502,7 @@
           "sot": 1,
           "tackles": 3,
           "blocks": 2,
-          "passes": 92,
+          "passes": 98,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3519,7 +3519,7 @@
           "sot": 0,
           "tackles": 2,
           "blocks": 1,
-          "passes": 65,
+          "passes": 70,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3570,7 +3570,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 188,
+          "passes": 189,
           "saves": 9,
           "yellow": 0,
           "red": 0,
@@ -3621,7 +3621,7 @@
           "sot": 0,
           "tackles": 5,
           "blocks": 0,
-          "passes": 160,
+          "passes": 164,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3638,7 +3638,7 @@
           "sot": 0,
           "tackles": 4,
           "blocks": 0,
-          "passes": 155,
+          "passes": 162,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3763,7 +3763,7 @@
           "sot": 11,
           "tackles": 14,
           "blocks": 2,
-          "passes": 221,
+          "passes": 222,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3848,7 +3848,7 @@
           "sot": 1,
           "tackles": 19,
           "blocks": 3,
-          "passes": 433,
+          "passes": 434,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3878,10 +3878,10 @@
           "apps": 6,
           "goals": 0,
           "assists": 1,
-          "shots": 1,
+          "shots": 2,
           "sot": 1,
           "tackles": 4,
-          "blocks": 0,
+          "blocks": 1,
           "passes": 74,
           "saves": 0,
           "yellow": 0,
@@ -3902,6 +3902,23 @@
           "passes": 137,
           "saves": 0,
           "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
+          "name": "Nico O'Reilly",
+          "apps": 7,
+          "goals": 0,
+          "assists": 0,
+          "shots": 7,
+          "sot": 1,
+          "tackles": 6,
+          "blocks": 0,
+          "passes": 206,
+          "saves": 0,
+          "yellow": 1,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -3933,7 +3950,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 227,
+          "passes": 230,
           "saves": 15,
           "yellow": 0,
           "red": 0,
@@ -3951,23 +3968,6 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 455,
-          "saves": 0,
-          "yellow": 1,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Nico O'Reilly",
-          "apps": 6,
-          "goals": 0,
-          "assists": 0,
-          "shots": 7,
-          "sot": 1,
-          "tackles": 6,
-          "blocks": 0,
-          "passes": 206,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -4044,6 +4044,23 @@
           "gk": false
         },
         {
+          "name": "Dan Burn",
+          "apps": 3,
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "sot": 0,
+          "tackles": 0,
+          "blocks": 0,
+          "passes": 3,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
           "name": "Jarell Quansah",
           "apps": 2,
           "goals": 0,
@@ -4056,23 +4073,6 @@
           "saves": 0,
           "yellow": 1,
           "red": 1,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Dan Burn",
-          "apps": 2,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 3,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
           "penScored": 0,
           "penMissed": 0,
           "gk": false
@@ -38336,36 +38336,40 @@
           {
             "name": "Morgan Rogers",
             "team": "England"
+          },
+          {
+            "name": "Lionel Messi",
+            "team": "Argentina"
           }
         ],
         "teamBox": [
           {
             "team": "England",
-            "possessionPct": 36.4,
-            "accuratePasses": 247,
-            "totalPasses": 283,
+            "possessionPct": 33.7,
+            "accuratePasses": 249,
+            "totalPasses": 288,
             "shotsOnTarget": 2,
-            "totalShots": 4,
+            "totalShots": 5,
             "effectiveTackles": 8,
             "totalTackles": 14,
             "accurateCrosses": 3,
             "totalCrosses": 10,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 26
+            "accurateLongBalls": 10,
+            "totalLongBalls": 29
           },
           {
             "team": "Argentina",
-            "possessionPct": 63.6,
-            "accuratePasses": 448,
-            "totalPasses": 493,
-            "shotsOnTarget": 3,
-            "totalShots": 10,
+            "possessionPct": 66.3,
+            "accuratePasses": 516,
+            "totalPasses": 564,
+            "shotsOnTarget": 4,
+            "totalShots": 13,
             "effectiveTackles": 9,
             "totalTackles": 18,
             "accurateCrosses": 5,
-            "totalCrosses": 15,
-            "accurateLongBalls": 8,
-            "totalLongBalls": 19
+            "totalCrosses": 18,
+            "accurateLongBalls": 12,
+            "totalLongBalls": 23
           }
         ],
         "players": [
@@ -38380,7 +38384,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 32
+            "ps": 35
           },
           {
             "n": "Marc Guéhi",
@@ -38435,7 +38439,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 19
+            "ps": 20
           },
           {
             "n": "Elliot Anderson",
@@ -38446,7 +38450,7 @@
             "st": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 44
+            "ps": 45
           },
           {
             "n": "Declan Rice",
@@ -38486,16 +38490,38 @@
             "t": "England",
             "aid": "265653",
             "tid": "448",
-            "sh": 0,
+            "sh": 1,
             "st": 0,
             "tk": 1,
-            "bk": 0,
+            "bk": 1,
             "ps": 7
+          },
+          {
+            "n": "Dan Burn",
+            "t": "England",
+            "aid": "198138",
+            "tid": "448",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
           },
           {
             "n": "Ezri Konsa",
             "t": "England",
             "aid": "231859",
+            "tid": "448",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
+          },
+          {
+            "n": "Nico O'Reilly",
+            "t": "England",
+            "aid": "328464",
             "tid": "448",
             "sh": 0,
             "st": 0,
@@ -38514,7 +38540,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 19
+            "ps": 20
           },
           {
             "n": "Lisandro Martínez",
@@ -38536,7 +38562,7 @@
             "st": 0,
             "tk": 4,
             "bk": 0,
-            "ps": 48
+            "ps": 51
           },
           {
             "n": "Leandro Paredes",
@@ -38558,7 +38584,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 33
+            "ps": 37
           },
           {
             "n": "Nahuel Molina",
@@ -38580,18 +38606,18 @@
             "st": 1,
             "tk": 1,
             "bk": 0,
-            "ps": 37
+            "ps": 38
           },
           {
             "n": "Enzo Fernández",
             "t": "Argentina",
             "aid": "285450",
             "tid": "202",
-            "sh": 2,
-            "st": 0,
+            "sh": 4,
+            "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 68
+            "ps": 80
           },
           {
             "n": "Julián Álvarez",
@@ -38602,7 +38628,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 28
+            "ps": 37
           },
           {
             "n": "Giuliano Simeone",
@@ -38624,7 +38650,7 @@
             "st": 0,
             "tk": 1,
             "bk": 1,
-            "ps": 41
+            "ps": 51
           },
           {
             "n": "Gonzalo Montiel",
@@ -38635,7 +38661,18 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 7
+            "ps": 12
+          },
+          {
+            "n": "Lautaro Martínez",
+            "t": "Argentina",
+            "aid": "219713",
+            "tid": "202",
+            "sh": 0,
+            "st": 0,
+            "tk": 0,
+            "bk": 0,
+            "ps": 0
           },
           {
             "n": "Nico González",
@@ -38646,7 +38683,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 5
+            "ps": 11
           },
           {
             "n": "Nicolás Otamendi",
@@ -38657,18 +38694,18 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 10
+            "ps": 17
           },
           {
             "n": "Rodrigo De Paul",
             "t": "Argentina",
             "aid": "174466",
             "tid": "202",
-            "sh": 0,
+            "sh": 1,
             "st": 0,
             "tk": 0,
-            "bk": 0,
-            "ps": 10
+            "bk": 1,
+            "ps": 23
           }
         ]
       }
