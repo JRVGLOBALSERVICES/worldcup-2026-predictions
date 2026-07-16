@@ -19565,6 +19565,179 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-865436838872702977",
+      "slipNo": "865436838872702977",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "Match Parlay · France/England",
+      "market": "Match Parlay · 3 legs",
+      "label": "REAL 1xBet MATCH PARLAY 865436838872702977 (19/07, 3rd-place) @18.23, RM120 -> RM2187.60. [FRA-ENG] Draw (X) · Bellingham to score/assist · Mbappé anytime scorer.",
+      "odds": 18.23,
+      "stake": 120,
+      "placedAt": "16/07 11:37",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scored",
+            "player": "Kylian Mbappé"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-865435919124705281",
+      "slipNo": "865435919124705281",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "Double · France/England + Spain/Argentina",
+      "market": "Double (2 parlays) · 7 legs",
+      "label": "REAL 1xBet DOUBLE 865435919124705281 @75.78, RM34 -> RM2576.86. [FRA-ENG @11.00] Under 5.5 · BTTS Yes · Mbappé anytime scorer · Draw (X)  +  [ESP-ARG Final @6.89] Under 4.5 · Messi to score/assist · Draw (X).",
+      "odds": 75.78,
+      "stake": 34,
+      "placedAt": "16/07 11:33",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "btts"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scored",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-865435219359653889",
+      "slipNo": "865435219359653889",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "Double · France/England + Spain/Argentina",
+      "market": "Double (2 parlays) · 6 legs",
+      "label": "REAL 1xBet DOUBLE 865435219359653889 @68.14, RM41 -> RM2793.83. [FRA-ENG @9.89] Under 5.5 · France (1) · Bellingham to score/assist  +  [ESP-ARG Final @6.89] Under 4.5 · Messi to score/assist · Draw (X).",
+      "odds": 68.14,
+      "stake": 41,
+      "placedAt": "16/07 11:30",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-865434805465661441",
+      "slipNo": "865434805465661441",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "Double · France/England + Spain/Argentina",
+      "market": "Double (2 parlays) · 6 legs",
+      "label": "REAL 1xBet DOUBLE 865434805465661441 @61.45, RM45 -> RM2765.65. [FRA-ENG @8.92] Draw (X) · Under 5.5 · Mbappé to score/assist  +  [ESP-ARG Final @6.89] Draw (X) · Under 4.5 · Messi to score/assist.",
+      "odds": 61.45,
+      "stake": 45,
+      "placedAt": "16/07 11:28",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scoredOrAssisted",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
