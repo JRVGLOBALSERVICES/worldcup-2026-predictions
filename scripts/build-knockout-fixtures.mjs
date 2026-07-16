@@ -15,7 +15,7 @@
  *
  * Run AFTER build-standings.mjs and BEFORE build-predictions.mjs.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -51,6 +51,39 @@ const ROUND_LABEL = {
 };
 const isKnockoutSlug = (slug) =>
   /round-of|quarter|semi|third-place|^final$/i.test(slug || "");
+
+/**
+ * Merge hand-added knockout ties from data/fixtures-manual.json.
+ *
+ * ESPN only publishes a knockout tie once its slot resolves (both teams known).
+ * A bet slip can reference a tie before that — e.g. a third-place play-off whose
+ * semis haven't been played — and the slip needs a fixture to render a match
+ * header and grade against. This cron rebuilds fixtures.json every tick, keeping
+ * only group games (`!f.round`) plus the fresh ESPN knockout feed, so any manual
+ * knockout entry is stripped on the next run. This seed survives that: it is
+ * re-merged here, deduped by id, so the moment ESPN publishes the real tie (same
+ * id) the authoritative entry wins and the manual stub is dropped automatically.
+ * Mirrors the odds-manual.json seed pattern in build-odds.mjs.
+ */
+function mergeManual(merged) {
+  const path = P("fixtures-manual.json");
+  if (!existsSync(path)) return merged;
+  let seed;
+  try {
+    seed = JSON.parse(readFileSync(path, "utf8"));
+  } catch {
+    return merged; // malformed seed never breaks the build
+  }
+  const ids = new Set(merged.map((f) => f.id));
+  const add = (Array.isArray(seed) ? seed : []).filter((f) => f?.id && !ids.has(f.id));
+  if (add.length) {
+    console.log(
+      `fixtures-manual seed: +${add.length}`,
+      add.map((f) => `${f.round} · ${f.home?.name} v ${f.away?.name}`).join(", "),
+    );
+  }
+  return [...merged, ...add];
+}
 
 async function fetchJson(url) {
   const r = await fetch(url, { headers: { accept: "application/json" } });
@@ -146,7 +179,7 @@ async function main() {
   // Keep only the group-stage fixtures from the existing file, then append the
   // freshly-resolved knockout ties.
   const groupStage = existing.filter((f) => !f.round);
-  const merged = [...groupStage, ...knockout];
+  const merged = mergeManual([...groupStage, ...knockout]);
 
   writeFileSync(P("fixtures.json"), JSON.stringify(merged, null, 2) + "\n");
 
