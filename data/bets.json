@@ -19738,6 +19738,68 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-865471969889005568",
+      "slipNo": "865471969889005568",
+      "matchId": "esp-arg-2026-07-19",
+      "player": "Double · Spain/Argentina + France/England",
+      "market": "Double (2 parlays) · 9 legs",
+      "label": "REAL 1xBet DOUBLE 865471969889005568 @272.26, RM10 -> RM2722.68. [ESP-ARG Final @28.04] Draw (X) · Messi to score/assist · Under 4.5 · Oyarzabal to score/assist · HT-FT Draw/Draw  +  [FRA-ENG 3rd place @9.71] Draw (X) · Over 0.5 · Under 4.5 · Mbappé anytime scorer.",
+      "odds": 272.26,
+      "stake": 10,
+      "placedAt": "16/07",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scoredOrAssisted",
+            "player": "Mikel Oyarzabal"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "htft",
+            "ht": "X",
+            "ft": "X"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scored",
+            "player": "Kylian Mbappé"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
