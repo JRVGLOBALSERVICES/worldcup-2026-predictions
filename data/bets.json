@@ -20007,6 +20007,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-84542628999",
+      "slipNo": "84542628999",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "—",
+      "market": "Acca · 2 legs",
+      "label": "Acca — France–England draw + Spain–Argentina draw (2 legs)",
+      "odds": 12.678,
+      "stake": 150,
+      "placedAt": "18/07 01:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X",
+            "odds": 4.025
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X",
+            "odds": 3.15
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
