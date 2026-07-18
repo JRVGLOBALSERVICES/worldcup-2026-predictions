@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-18T22:20:22.683Z",
+    "generatedAt": "2026-07-18T22:30:17.588Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 86
   },
@@ -581,7 +581,7 @@
       "scorers": [
         {
           "name": "Kylian Mbappé",
-          "value": 9,
+          "value": 10,
           "matches": 7
         },
         {
@@ -603,7 +603,7 @@
       "assists": [
         {
           "name": "Michael Olise",
-          "value": 6,
+          "value": 7,
           "matches": 7
         },
         {
@@ -38323,36 +38323,40 @@
           {
             "name": "Kylian Mbappé",
             "team": "France"
+          },
+          {
+            "name": "Michael Olise",
+            "team": "France"
           }
         ],
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 43.9,
-            "accuratePasses": 257,
-            "totalPasses": 288,
-            "shotsOnTarget": 4,
-            "totalShots": 8,
-            "effectiveTackles": 6,
-            "totalTackles": 10,
+            "possessionPct": 44.6,
+            "accuratePasses": 305,
+            "totalPasses": 339,
+            "shotsOnTarget": 7,
+            "totalShots": 12,
+            "effectiveTackles": 7,
+            "totalTackles": 11,
             "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 13,
-            "totalLongBalls": 22
+            "accurateLongBalls": 15,
+            "totalLongBalls": 24
           },
           {
             "team": "England",
-            "possessionPct": 56.1,
-            "accuratePasses": 336,
-            "totalPasses": 363,
-            "shotsOnTarget": 7,
-            "totalShots": 13,
+            "possessionPct": 55.4,
+            "accuratePasses": 379,
+            "totalPasses": 413,
+            "shotsOnTarget": 8,
+            "totalShots": 15,
             "effectiveTackles": 6,
-            "totalTackles": 16,
-            "accurateCrosses": 3,
-            "totalCrosses": 10,
-            "accurateLongBalls": 9,
-            "totalLongBalls": 20
+            "totalTackles": 18,
+            "accurateCrosses": 4,
+            "totalCrosses": 12,
+            "accurateLongBalls": 11,
+            "totalLongBalls": 24
           }
         ],
         "players": [
@@ -38362,12 +38366,12 @@
             "aid": "189026",
             "tid": "478",
             "gk": 1,
-            "sv": 2,
+            "sv": 3,
             "sh": 0,
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 10
           },
           {
             "n": "Maxence Lacroix",
@@ -38376,9 +38380,9 @@
             "tid": "478",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 26
+            "ps": 29
           },
           {
             "n": "Ibrahima Konaté",
@@ -38411,7 +38415,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 30
+            "ps": 37
           },
           {
             "n": "Rayan Cherki",
@@ -38433,7 +38437,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 30
+            "ps": 33
           },
           {
             "n": "Warren Zaïre-Emery",
@@ -38444,18 +38448,18 @@
             "st": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 32
+            "ps": 41
           },
           {
             "n": "Kylian Mbappé",
             "t": "France",
             "aid": "231388",
             "tid": "478",
-            "sh": 4,
-            "st": 2,
+            "sh": 5,
+            "st": 3,
             "tk": 0,
             "bk": 1,
-            "ps": 18
+            "ps": 21
           },
           {
             "n": "Désiré Doué",
@@ -38473,11 +38477,11 @@
             "t": "France",
             "aid": "286831",
             "tid": "478",
-            "sh": 0,
+            "sh": 1,
             "st": 0,
             "tk": 4,
             "bk": 0,
-            "ps": 32
+            "ps": 40
           },
           {
             "n": "Bradley Barcola",
@@ -38488,29 +38492,29 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 1
+            "ps": 6
           },
           {
             "n": "Dayot Upamecano",
             "t": "France",
             "aid": "222793",
             "tid": "478",
-            "sh": 0,
-            "st": 0,
+            "sh": 1,
+            "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 3
+            "ps": 5
           },
           {
             "n": "Ousmane Dembélé",
             "t": "France",
             "aid": "229744",
             "tid": "478",
-            "sh": 0,
-            "st": 0,
+            "sh": 1,
+            "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 13
           },
           {
             "n": "Lucas Digne",
@@ -38521,7 +38525,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 8
           },
           {
             "n": "Dean Henderson",
@@ -38529,12 +38533,12 @@
             "aid": "234172",
             "tid": "448",
             "gk": 1,
-            "sv": 2,
+            "sv": 4,
             "sh": 0,
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 24
+            "ps": 27
           },
           {
             "n": "Marc Guéhi",
@@ -38545,7 +38549,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 56
+            "ps": 65
           },
           {
             "n": "Ezri Konsa",
@@ -38556,7 +38560,7 @@
             "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 32
+            "ps": 36
           },
           {
             "n": "Declan Rice",
@@ -38567,7 +38571,7 @@
             "st": 1,
             "tk": 5,
             "bk": 0,
-            "ps": 66
+            "ps": 76
           },
           {
             "n": "Djed Spence",
@@ -38578,7 +38582,7 @@
             "st": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 22
+            "ps": 27
           },
           {
             "n": "Jarell Quansah",
@@ -38587,20 +38591,20 @@
             "tid": "448",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 31
+            "ps": 32
           },
           {
             "n": "Eberechi Eze",
             "t": "England",
             "aid": "251400",
             "tid": "448",
-            "sh": 2,
+            "sh": 3,
             "st": 0,
             "tk": 0,
-            "bk": 1,
-            "ps": 47
+            "bk": 2,
+            "ps": 53
           },
           {
             "n": "Morgan Rogers",
@@ -38611,7 +38615,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 31
+            "ps": 34
           },
           {
             "n": "Marcus Rashford",
@@ -38631,20 +38635,20 @@
             "tid": "448",
             "sh": 4,
             "st": 2,
-            "tk": 1,
+            "tk": 2,
             "bk": 1,
-            "ps": 17
+            "ps": 20
           },
           {
             "n": "Ivan Toney",
             "t": "England",
             "aid": "180639",
             "tid": "448",
-            "sh": 1,
-            "st": 0,
+            "sh": 2,
+            "st": 1,
             "tk": 2,
             "bk": 1,
-            "ps": 15
+            "ps": 17
           },
           {
             "n": "Ollie Watkins",
@@ -38655,7 +38659,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 2
+            "ps": 6
           }
         ]
       }
