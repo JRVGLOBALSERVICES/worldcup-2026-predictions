@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-18T22:00:41.061Z",
+    "generatedAt": "2026-07-18T22:10:16.923Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 82,
     "live": 1
@@ -97816,7 +97816,10 @@
     },
     "fra-eng-2026-07-18": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 4
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -97889,7 +97892,7 @@
         },
         "fouls": {
           "home": 5,
-          "away": 5
+          "away": 6
         },
         "cornersByHalf": {
           "home": [
@@ -98015,7 +98018,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 1,
+            "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98057,7 +98060,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 2,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98226,6 +98229,74 @@
             "ps": 25
           },
           {
+            "team": "home",
+            "name": "Bradley Barcola",
+            "pos": "SUB",
+            "num": 12,
+            "starter": false,
+            "aid": "328238",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Dayot Upamecano",
+            "pos": "SUB",
+            "num": 4,
+            "starter": false,
+            "aid": "222793",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Ousmane Dembélé",
+            "pos": "SUB",
+            "num": 7,
+            "starter": false,
+            "aid": "229744",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 1,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
+            "name": "Lucas Digne",
+            "pos": "SUB",
+            "num": 3,
+            "starter": false,
+            "aid": "160115",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
             "team": "away",
             "name": "Dean Henderson",
             "pos": "G",
@@ -98319,7 +98390,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 1,
+            "fc": 2,
             "fs": 1,
             "yc": 0,
             "rc": 0,
@@ -98447,9 +98518,62 @@
             "tk": 1,
             "bk": 1,
             "ps": 10
+          },
+          {
+            "team": "away",
+            "name": "Ollie Watkins",
+            "pos": "SUB",
+            "num": 19,
+            "starter": false,
+            "aid": "198825",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           }
         ],
-        "subs": [],
+        "subs": [
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Ousmane Dembélé",
+            "off": "Rayan Cherki",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Bradley Barcola",
+            "off": "Désiré Doué",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Lucas Digne",
+            "off": "Théo Hernández",
+            "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 45,
+            "on": "Dayot Upamecano",
+            "off": "Ibrahima Konaté",
+            "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 45,
+            "on": "Ollie Watkins",
+            "off": "Marcus Rashford",
+            "injury": false
+          }
+        ],
         "firstGoalMethod": "shot",
         "firstPenalty": null,
         "waterBreak": {
@@ -98466,15 +98590,15 @@
         },
         "tempo": {
           "possession": {
-            "home": 44.6,
-            "away": 55.4
+            "home": 44,
+            "away": 56
           },
           "passes": {
-            "home": 238,
-            "away": 290
+            "home": 239,
+            "away": 299
           },
           "tackles": {
-            "home": 7,
+            "home": 8,
             "away": 12
           },
           "saves": {
@@ -98503,7 +98627,7 @@
             "key": "foulsCommitted",
             "label": "Fouls",
             "home": "5",
-            "away": "5"
+            "away": "6"
           },
           {
             "key": "yellowCards",
@@ -98538,8 +98662,8 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "44.6",
-            "away": "55.4"
+            "home": "44",
+            "away": "56"
           },
           {
             "key": "totalShots",
@@ -98575,13 +98699,13 @@
             "key": "accuratePasses",
             "label": "Accurate Passes",
             "home": "216",
-            "away": "272"
+            "away": "280"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "238",
-            "away": "290"
+            "home": "239",
+            "away": "299"
           },
           {
             "key": "passPct",
@@ -98610,14 +98734,14 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "17",
-            "away": "14"
+            "home": "18",
+            "away": "15"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
             "home": "10",
-            "away": "7"
+            "away": "8"
           },
           {
             "key": "longballPct",
@@ -98634,13 +98758,13 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "4",
+            "home": "5",
             "away": "5"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "7",
+            "home": "8",
             "away": "12"
           },
           {
