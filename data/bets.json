@@ -1307,6 +1307,22 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "fra-eng-2026-07-18": {
+      "ht": {
+        "home": 0,
+        "away": 4
+      },
+      "ft": {
+        "home": 4,
+        "away": 6
+      },
+      "ft90": {
+        "home": 4,
+        "away": 6
+      },
+      "finishPhase": "regulation",
+      "advanced": "away"
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -5136,6 +5152,93 @@
           "type": "yellow"
         }
       ]
+    },
+    "fra-eng-2026-07-18": {
+      "status": "finished",
+      "goals": [
+        {
+          "team": "away",
+          "scorer": "Declan Rice",
+          "minute": 2,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false,
+          "outsideBox": true
+        },
+        {
+          "team": "away",
+          "scorer": "Ezri Konsa",
+          "minute": 18,
+          "assist": "Declan Rice",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Bukayo Saka",
+          "minute": 36,
+          "assist": "Marcus Rashford",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Bukayo Saka",
+          "minute": 45,
+          "assist": "Eberechi Eze",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 48,
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Bradley Barcola",
+          "minute": 54,
+          "assist": "Kylian Mbappé",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Kylian Mbappé",
+          "minute": 66,
+          "assist": "Michael Olise",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Bukayo Saka",
+          "minute": 87,
+          "assist": null,
+          "penalty": true,
+          "ownGoal": false
+        },
+        {
+          "team": "home",
+          "scorer": "Ousmane Dembélé",
+          "minute": 90,
+          "assist": "Dayot Upamecano",
+          "penalty": false,
+          "ownGoal": false
+        },
+        {
+          "team": "away",
+          "scorer": "Jude Bellingham",
+          "minute": 90,
+          "assist": null,
+          "penalty": false,
+          "ownGoal": false
+        }
+      ],
+      "cards": []
     }
   },
   "bets": [
@@ -112493,11 +112596,11 @@
       },
       "sot": {
         "home": 9,
-        "away": 10
+        "away": 11
       },
       "shots": {
-        "home": 20,
-        "away": 18
+        "home": 19,
+        "away": 19
       },
       "yellow": {
         "home": 0,
@@ -112558,9 +112661,9 @@
         "Adrien Rabiot": 1,
         "Bradley Barcola": 2,
         "Michael Olise": 3,
-        "Ousmane Dembélé": 3,
+        "Ousmane Dembélé": 2,
         "Dayot Upamecano": 1,
-        "Jude Bellingham": 1,
+        "Jude Bellingham": 2,
         "Morgan Rogers": 1
       },
       "playerShotBreakdown": {
@@ -112670,9 +112773,9 @@
         },
         "Ousmane Dembélé": {
           "team": "home",
-          "shots": 3,
+          "shots": 2,
           "sot": 2,
-          "off": 1,
+          "off": 0,
           "blocked": 0,
           "goals": 1
         },
@@ -112686,11 +112789,11 @@
         },
         "Jude Bellingham": {
           "team": "away",
-          "shots": 1,
-          "sot": 1,
+          "shots": 2,
+          "sot": 2,
           "off": 0,
           "blocked": 0,
-          "goals": 0
+          "goals": 1
         },
         "Morgan Rogers": {
           "team": "away",
@@ -112720,7 +112823,7 @@
           "rc": 0,
           "off": 0,
           "sv": 4,
-          "gc": 5,
+          "gc": 6,
           "tk": 0,
           "bk": 0,
           "ps": 12
@@ -112994,7 +113097,7 @@
           "aid": "229744",
           "g": 1,
           "a": 0,
-          "sh": 3,
+          "sh": 2,
           "sot": 2,
           "fc": 0,
           "fs": 1,
@@ -113046,7 +113149,7 @@
           "gc": 4,
           "tk": 0,
           "bk": 0,
-          "ps": 36
+          "ps": 37
         },
         {
           "team": "away",
@@ -113226,7 +113329,7 @@
           "off": 1,
           "tk": 3,
           "bk": 1,
-          "ps": 21
+          "ps": 23
         },
         {
           "team": "away",
@@ -113255,10 +113358,10 @@
           "num": 10,
           "starter": false,
           "aid": "291281",
-          "g": 0,
+          "g": 1,
           "a": 0,
-          "sh": 1,
-          "sot": 1,
+          "sh": 2,
+          "sot": 2,
           "fc": 0,
           "fs": 1,
           "yc": 0,
@@ -113447,16 +113550,16 @@
       },
       "tempo": {
         "possession": {
-          "home": 46.4,
-          "away": 53.6
+          "home": 45.9,
+          "away": 54.1
         },
         "passes": {
-          "home": 441,
-          "away": 503
+          "home": 444,
+          "away": 517
         },
         "tackles": {
-          "home": 15,
-          "away": 24
+          "home": 16,
+          "away": 25
         },
         "saves": {
           "home": 4,
@@ -113471,12 +113574,12 @@
           "away": 6
         },
         "interceptions": {
-          "home": 7,
+          "home": 8,
           "away": 11
         },
         "clearances": {
           "home": 10,
-          "away": 11
+          "away": 12
         }
       },
       "full": [
@@ -113518,21 +113621,21 @@
         },
         {
           "key": "possessionPct",
-          "label": "POSSESSION",
-          "home": "46.4",
-          "away": "53.6"
+          "label": "Possession",
+          "home": "45.9",
+          "away": "54.1"
         },
         {
           "key": "totalShots",
           "label": "SHOTS",
-          "home": "20",
-          "away": "18"
+          "home": "19",
+          "away": "19"
         },
         {
           "key": "shotsOnTarget",
           "label": "ON GOAL",
           "home": "9",
-          "away": "10"
+          "away": "11"
         },
         {
           "key": "shotPct",
@@ -113555,14 +113658,14 @@
         {
           "key": "accuratePasses",
           "label": "Accurate Passes",
-          "home": "401",
-          "away": "457"
+          "home": "403",
+          "away": "468"
         },
         {
           "key": "totalPasses",
           "label": "Passes",
-          "home": "441",
-          "away": "503"
+          "home": "444",
+          "away": "517"
         },
         {
           "key": "passPct",
@@ -113579,7 +113682,7 @@
         {
           "key": "totalCrosses",
           "label": "Crosses",
-          "home": "5",
+          "home": "6",
           "away": "12"
         },
         {
@@ -113592,13 +113695,13 @@
           "key": "totalLongBalls",
           "label": "Long Balls",
           "home": "26",
-          "away": "33"
+          "away": "35"
         },
         {
           "key": "accurateLongBalls",
           "label": "Accurate Long Balls",
           "home": "17",
-          "away": "14"
+          "away": "15"
         },
         {
           "key": "longballPct",
@@ -113615,14 +113718,14 @@
         {
           "key": "effectiveTackles",
           "label": "Effective Tackles",
-          "home": "9",
-          "away": "10"
+          "home": "10",
+          "away": "11"
         },
         {
           "key": "totalTackles",
           "label": "Tackles",
-          "home": "15",
-          "away": "24"
+          "home": "16",
+          "away": "25"
         },
         {
           "key": "tacklePct",
@@ -113633,20 +113736,20 @@
         {
           "key": "interceptions",
           "label": "Interceptions",
-          "home": "7",
+          "home": "8",
           "away": "11"
         },
         {
           "key": "effectiveClearance",
           "label": "Effective Clearances",
           "home": "10",
-          "away": "11"
+          "away": "12"
         },
         {
           "key": "totalClearance",
           "label": "Clearances",
           "home": "10",
-          "away": "11"
+          "away": "12"
         }
       ],
       "playerTackles": {
