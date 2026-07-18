@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-18T09:03:31.349Z",
+    "generatedAt": "2026-07-18T20:30:24.867Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-18T09:01:18.158Z"
+    "modelUpdatedAt": "2026-07-18T20:30:24.867Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -26922,134 +26922,250 @@
     "fra-eng-2026-07-18": {
       "win": {
         "pick": "France",
-        "fairOdds": "2.15",
-        "reason": "Opta/Squawka models make France ~57% favourites and they carry the sharper finishers even rotated, with Mbappe near-certain to start chasing the Golden Boot. But this is a bronze final neither side wants, both managers rotate heavily and Deschamps bows out, so the draw has genuine weight in an open game — France edged but not commanding.",
-        "strength": 3
+        "fairOdds": "1.76",
+        "reason": "Model: France to win at 57% (France 57% / draw 22% / England 21%). Expected goals 1.9–1.1 from group-stage attack/defence rates (France 2.6 for / 1.0 against per game, England 1.8 / 1.0). Most likely score 1-1.",
+        "strength": 4
       },
       "halfTime": {
-        "score": "1-1",
-        "fairOdds": "5.0",
+        "score": "0-0",
+        "fairOdds": "3.67",
         "alt": "1-0",
-        "altOdds": "4.5",
-        "strength": 3
+        "altOdds": "5.14"
       },
       "htft": {
         "pick": "Draw/France",
-        "fairOdds": "6.0",
-        "strength": 2
+        "fairOdds": "4.41"
       },
       "fullTime": {
-        "score": "2-1",
-        "fairOdds": "8.0",
-        "strength": 3
+        "score": "1-1",
+        "fairOdds": "9.56"
       },
       "scorers": [
         {
-          "player": "Kylian Mbappe",
-          "fairOdds": "2.60",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "fairOdds": "1.69",
+          "banker": true,
+          "note": "8 goals in 7 group games; 59% modelled anytime chance on 1.9 team xG.",
+          "strength": 5
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "team": "France",
+          "fairOdds": "2.27",
           "banker": false,
-          "note": "Starts to chase the Golden Boot (8 goals, level with Messi); primary France penalty and attacking threat, a level above on a rotated pitch",
-          "strength": 4
+          "note": "5 goals in 7 group games; 44% modelled anytime chance on 1.9 team xG.",
+          "strength": 3
         },
         {
           "player": "Harry Kane",
-          "fairOdds": "3.40",
+          "team": "England",
+          "fairOdds": "2.85",
           "banker": false,
-          "note": "England's penalty taker and joint-top scorer (6); likely features to chase Golden Boot, veteran so not a banker",
+          "note": "6 goals in 7 group games; 35% modelled anytime chance on 1.1 team xG.",
           "strength": 3
         },
         {
           "player": "Jude Bellingham",
-          "fairOdds": "3.80",
+          "team": "England",
+          "fairOdds": "2.85",
           "banker": false,
-          "note": "6 goals, secondary penalty option; he and Kane account for 92% of England's WC goals",
+          "note": "6 goals in 7 group games; 35% modelled anytime chance on 1.1 team xG.",
           "strength": 3
         },
         {
-          "player": "Ollie Watkins",
-          "fairOdds": "4.20",
+          "player": "Bradley Barcola",
+          "team": "France",
+          "fairOdds": "4.32",
           "banker": false,
-          "note": "Likely central striker if England rotate/rest Kane; fresh legs vs a rotated France back line",
-          "strength": 2
+          "note": "2 goals in 7 group games; 23% modelled anytime chance on 1.9 team xG.",
+          "strength": 1
         }
       ],
       "assists": [
         {
-          "player": "Ousmane Dembele",
-          "fairOdds": "5.0",
-          "banker": false,
-          "note": "Creator from the right in France's front line, feeds Mbappe",
-          "strength": 2
+          "player": "Michael Olise",
+          "team": "France",
+          "fairOdds": "1.93",
+          "banker": true,
+          "note": "5 assists in the group stage; 52% modelled chance to set one up."
         },
         {
-          "player": "Rayan Cherki",
-          "fairOdds": "6.0",
+          "player": "Kylian Mbappé",
+          "team": "France",
+          "fairOdds": "2.71",
           "banker": false,
-          "note": "Playmaker likely handed minutes as a No.10; direct creative threat",
-          "strength": 2
+          "note": "3 assists in the group stage; 37% modelled chance to set one up."
         },
         {
-          "player": "Eberechi Eze",
-          "fairOdds": "6.5",
+          "player": "Anthony Gordon",
+          "team": "England",
+          "fairOdds": "3.57",
           "banker": false,
-          "note": "England's chief creator behind the striker in the rotated XI",
-          "strength": 2
+          "note": "3 assists in the group stage; 28% modelled chance to set one up."
+        },
+        {
+          "player": "Bukayo Saka",
+          "team": "England",
+          "fairOdds": "3.57",
+          "banker": false,
+          "note": "3 assists in the group stage; 28% modelled chance to set one up."
         }
       ],
       "penalty": {
-        "likelihood": "Medium",
-        "taker": "Kylian Mbappe",
-        "backup": "Harry Kane",
-        "note": "Open end-to-end bronze finals draw fouls in the box; Mbappe takes France's spot-kicks (converted one vs Paraguay), Kane is England's designated taker with Bellingham as backup"
+        "likelihood": "low",
+        "taker": "Kylian Mbappé",
+        "backup": "Ousmane Dembélé",
+        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
       },
       "lineups": {
-        "home": "France (4-2-3-1): Maignan; Kounde, Upamecano, Lacroix, T.Hernandez; Rabiot, Kone; Dembele, Cherki, Doue; Mbappe — Saliba (back) & Samba (calf) out; heavy rotation, Mateta/Thuram/Kante in contention",
-        "away": "England (4-2-3-1): Pickford; Spence, Guehi, Konsa, O'Reilly; Mainoo, Anderson; Rogers, Eze, Rashford; Watkins — Kane/Bellingham may start to chase Golden Boot; Henderson (wrist) out, R.James doubtful",
-        "status": "probable"
+        "home": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Manu Koné, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Désiré Doué, Kylian Mbappé",
+        "away": "Pickford; James, Stones, Guehi, Spence; Rice, Anderson; Rogers, Bellingham, Gordon; Kane",
+        "status": "unconfirmed",
+        "homeXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 16,
+              "name": "Mike Maignan",
+              "pos": "G"
+            },
+            {
+              "num": 5,
+              "name": "Jules Koundé",
+              "pos": "RB"
+            },
+            {
+              "num": 4,
+              "name": "Dayot Upamecano",
+              "pos": "CD-R"
+            },
+            {
+              "num": 17,
+              "name": "William Saliba",
+              "pos": "CD-L"
+            },
+            {
+              "num": 21,
+              "name": "Lucas Digne",
+              "pos": "LB"
+            },
+            {
+              "num": 18,
+              "name": "Manu Koné",
+              "pos": "CM-R"
+            },
+            {
+              "num": 14,
+              "name": "Adrien Rabiot",
+              "pos": "CM-L"
+            },
+            {
+              "num": 7,
+              "name": "Ousmane Dembélé",
+              "pos": "RW"
+            },
+            {
+              "num": 11,
+              "name": "Michael Olise",
+              "pos": "AM"
+            },
+            {
+              "num": 20,
+              "name": "Désiré Doué",
+              "pos": "LW"
+            },
+            {
+              "num": 10,
+              "name": "Kylian Mbappé",
+              "pos": "CF"
+            }
+          ]
+        },
+        "awayXI": {
+          "formation": "4-2-3-1",
+          "players": [
+            {
+              "num": 1,
+              "name": "Jordan Pickford",
+              "pos": "G"
+            },
+            {
+              "num": 24,
+              "name": "Reece James",
+              "pos": "RB"
+            },
+            {
+              "num": 5,
+              "name": "John Stones",
+              "pos": "CD-R"
+            },
+            {
+              "num": 6,
+              "name": "Marc Guéhi",
+              "pos": "CD-L"
+            },
+            {
+              "num": 25,
+              "name": "Djed Spence",
+              "pos": "LB"
+            },
+            {
+              "num": 4,
+              "name": "Declan Rice",
+              "pos": "DM-R"
+            },
+            {
+              "num": 8,
+              "name": "Elliot Anderson",
+              "pos": "DM-L"
+            },
+            {
+              "num": 17,
+              "name": "Morgan Rogers",
+              "pos": "RW"
+            },
+            {
+              "num": 10,
+              "name": "Jude Bellingham",
+              "pos": "AM"
+            },
+            {
+              "num": 18,
+              "name": "Anthony Gordon",
+              "pos": "LW"
+            },
+            {
+              "num": 9,
+              "name": "Harry Kane",
+              "pos": "ST"
+            }
+          ]
+        }
       },
       "playerNotes": [
         {
-          "player": "Kylian Mbappe",
+          "player": "Kylian Mbappé",
           "team": "France",
-          "note": "8 goals, level with Messi for Golden Boot; starts despite rotation to chase award, minor prior ankle knock but declared fine"
+          "note": "8 goals in 7 group games; 59% modelled anytime chance on 1.9 team xG."
         },
         {
-          "player": "William Saliba",
+          "player": "Ousmane Dembélé",
           "team": "France",
-          "note": "Out — back injury sustained in the semi-final vs Spain (off after 29 mins); Lacroix deputises"
+          "note": "5 goals in 7 group games; 44% modelled anytime chance on 1.9 team xG."
         },
         {
-          "player": "Harry Kane",
-          "team": "England",
-          "note": "6 goals, England's penalty taker; likely features to chase Golden Boot then may be rested"
-        },
-        {
-          "player": "Jude Bellingham",
-          "team": "England",
-          "note": "6 goals, secondary penalty option; carries England's creative and scoring load with Kane"
-        },
-        {
-          "player": "Rayan Cherki",
+          "player": "Michael Olise",
           "team": "France",
-          "note": "Fringe playmaker in line for a rare start/minutes; genuine creative upside"
-        },
-        {
-          "player": "Reece James",
-          "team": "England",
-          "note": "Doubtful (muscle) after a tournament of defensive injuries; Spence likely covers right-back"
+          "note": "5 assists in the group stage; 52% modelled chance to set one up."
         }
       ],
       "confidence": "medium",
       "strength": 4,
       "sources": [
-        "https://www.aljazeera.com/sports/2026/7/17/france-england-fifa-world-cup-third-place-playoff-predictions-kickoff",
-        "https://www.rotowire.com/soccer/article/france-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-third-place-playoff-123027",
-        "https://www.squawka.com/us/news/world-cup/match-preview-france-vs-england-07-18-26-world-cup-2026-third-place-play-off/",
-        "https://www.si.com/soccer/france-predicted-lineup-vs-england-world-cup-third-place-playoff-7-18-26",
-        "https://www.si.com/soccer/england-predicted-lineup-vs-france-world-cup-third-place-playoff-7-18-26",
-        "https://www.goal.com/en/lists/england-best-penalty-takers-2026-world-cup-squad-shootout/blte9d631985ec95d02",
-        "https://www.covers.com/world-cup/england-vs-france-correct-score-odds-prediction-july-18-2026",
-        "https://www.foxsports.com/stories/soccer/2026-world-cup-third-place-odds-france-england"
+        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
+        "Scorer odds: ESPN per-team goal data (data/stats.json)",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
       ],
       "pitchReport": {
         "facts": [
