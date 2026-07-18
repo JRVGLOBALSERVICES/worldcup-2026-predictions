@@ -20035,6 +20035,181 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-866285832930811904",
+      "slipNo": "866285832930811904",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "France vs England (Parlay · 6 legs)",
+      "market": "Match Parlay · 6 legs",
+      "label": "REAL 1xBet PARLAY 866285832930811904 @38.72, RM54 -> RM2090.88. BTTS Yes · Rabiot Tackles o0.5 · Dembélé to score/assist · Mbappé anytime scorer · Bellingham SOT o0.5 · Draw (X).",
+      "odds": 38.72,
+      "stake": 54,
+      "placedAt": "18/07 19:50",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "btts"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerTacklesOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scoredOrAssisted",
+            "player": "Ousmane Dembélé"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scored",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Jude Bellingham",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-866283465270853632",
+      "slipNo": "866283465270853632",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "France vs England (Parlay · 8 legs)",
+      "market": "Match Parlay · 8 legs",
+      "label": "REAL 1xBet PARLAY 866283465270853632 @59.63, RM46 -> RM2742.98. Kane SOT o0.5 · Dembélé SOT o0.5 · Rabiot Tackles o0.5 · Mbappé anytime scorer · Draw (X) · Doué SOT o0.5 · Bellingham SOT o0.5 · England team corners Over 3.5.",
+      "odds": 59.63,
+      "stake": 46,
+      "placedAt": "18/07 19:41",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Harry Kane",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Ousmane Dembélé",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerTacklesOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scored",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Désiré Doué",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Jude Bellingham",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "teamCornersOver",
+            "side": "away",
+            "line": 3.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-866282910444056576",
+      "slipNo": "866282910444056576",
+      "matchId": "fra-eng-2026-07-18",
+      "player": "France vs England (Parlay · 9 legs)",
+      "market": "Match Parlay · 9 legs",
+      "label": "REAL 1xBet PARLAY 866282910444056576 @55.15, RM50 -> RM2757.50. France FT 1X2 (1) · Doué SOT o0.5 · Kane SOT o0.5 · Dembélé SOT o0.5 · Under 5.5 · Rabiot Tackles o0.5 · England team corners Over 3.5 · Mbappé anytime scorer · Bellingham to score/assist.",
+      "odds": 55.15,
+      "stake": 50,
+      "placedAt": "18/07 19:39",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "result",
+            "outcome": "1"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Désiré Doué",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Harry Kane",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerSotOver",
+            "player": "Ousmane Dembélé",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "totalUnder",
+            "line": 5.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "playerTacklesOver",
+            "player": "Adrien Rabiot",
+            "line": 0.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "teamCornersOver",
+            "side": "away",
+            "line": 3.5
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scored",
+            "player": "Kylian Mbappé"
+          },
+          {
+            "matchId": "fra-eng-2026-07-18",
+            "kind": "scoredOrAssisted",
+            "player": "Jude Bellingham"
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
