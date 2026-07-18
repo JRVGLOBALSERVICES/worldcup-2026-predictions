@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-18T22:30:35.252Z",
+    "generatedAt": "2026-07-18T22:40:13.592Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 82,
     "live": 1
@@ -97899,7 +97899,7 @@
           "away": 8
         },
         "shots": {
-          "home": 12,
+          "home": 14,
           "away": 15
         },
         "yellow": {
@@ -97915,7 +97915,7 @@
           "away": 0
         },
         "fouls": {
-          "home": 7,
+          "home": 10,
           "away": 7
         },
         "cornersByHalf": {
@@ -97948,7 +97948,7 @@
         },
         "playerShots": {
           "Declan Rice": 1,
-          "Kylian Mbappé": 5,
+          "Kylian Mbappé": 6,
           "Marcus Rashford": 3,
           "Eberechi Eze": 3,
           "Rayan Cherki": 1,
@@ -97959,7 +97959,7 @@
           "Ollie Watkins": 1,
           "Adrien Rabiot": 1,
           "Bradley Barcola": 1,
-          "Michael Olise": 1,
+          "Michael Olise": 2,
           "Ousmane Dembélé": 1,
           "Dayot Upamecano": 1
         },
@@ -97974,9 +97974,9 @@
           },
           "Kylian Mbappé": {
             "team": "home",
-            "shots": 5,
+            "shots": 6,
             "sot": 3,
-            "off": 1,
+            "off": 2,
             "blocked": 1,
             "goals": 2
           },
@@ -98062,9 +98062,9 @@
           },
           "Michael Olise": {
             "team": "home",
-            "shots": 1,
+            "shots": 2,
             "sot": 0,
-            "off": 1,
+            "off": 2,
             "blocked": 0,
             "goals": 0
           },
@@ -98220,7 +98220,7 @@
             "a": 0,
             "sh": 1,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 1,
             "yc": 0,
             "rc": 0,
@@ -98258,7 +98258,7 @@
             "aid": "231388",
             "g": 2,
             "a": 1,
-            "sh": 5,
+            "sh": 6,
             "sot": 3,
             "fc": 0,
             "fs": 0,
@@ -98298,9 +98298,9 @@
             "aid": "286831",
             "g": 0,
             "a": 2,
-            "sh": 1,
+            "sh": 2,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -98340,7 +98340,7 @@
             "a": 0,
             "sh": 1,
             "sot": 1,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -98424,7 +98424,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 1,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98504,7 +98504,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 1,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98604,7 +98604,7 @@
             "sh": 2,
             "sot": 1,
             "fc": 0,
-            "fs": 2,
+            "fs": 3,
             "yc": 0,
             "rc": 0,
             "off": 2,
@@ -98682,19 +98682,29 @@
             "firstActionMinute": 27,
             "isCorner": false,
             "reliable": true
+          },
+          "h2": {
+            "half": 2,
+            "anchorMinute": 67,
+            "source": "delay",
+            "breakEndMinute": 71,
+            "firstActionType": "Foul",
+            "firstActionMinute": 71,
+            "isCorner": false,
+            "reliable": true
           }
         },
         "tempo": {
           "possession": {
-            "home": 44.6,
-            "away": 55.4
+            "home": 44.5,
+            "away": 55.5
           },
           "passes": {
-            "home": 339,
-            "away": 413
+            "home": 363,
+            "away": 446
           },
           "tackles": {
-            "home": 11,
+            "home": 12,
             "away": 18
           },
           "saves": {
@@ -98722,7 +98732,7 @@
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "7",
+            "home": "10",
             "away": "7"
           },
           {
@@ -98758,13 +98768,13 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "44.6",
-            "away": "55.4"
+            "home": "44.5",
+            "away": "55.5"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "12",
+            "home": "14",
             "away": "15"
           },
           {
@@ -98776,7 +98786,7 @@
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "0.6",
+            "home": "0.5",
             "away": "0.5"
           },
           {
@@ -98794,14 +98804,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "305",
-            "away": "379"
+            "home": "328",
+            "away": "409"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "339",
-            "away": "413"
+            "home": "363",
+            "away": "446"
           },
           {
             "key": "passPct",
@@ -98812,13 +98822,13 @@
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "0",
+            "home": "1",
             "away": "4"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "2",
+            "home": "4",
             "away": "12"
           },
           {
@@ -98830,14 +98840,14 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "24",
-            "away": "24"
+            "home": "25",
+            "away": "28"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "15",
-            "away": "11"
+            "home": "16",
+            "away": "13"
           },
           {
             "key": "longballPct",
@@ -98854,19 +98864,19 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "7",
+            "home": "8",
             "away": "6"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "11",
+            "home": "12",
             "away": "18"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.6",
+            "home": "0.7",
             "away": "0.3"
           },
           {
@@ -98889,7 +98899,7 @@
           }
         ],
         "playerTackles": {
-          "Adrien Rabiot": 1
+          "Adrien Rabiot": 2
         }
       }
     }
