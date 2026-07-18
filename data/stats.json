@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-18T21:30:20.030Z",
+    "generatedAt": "2026-07-18T21:40:21.986Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 86
   },
@@ -1192,12 +1192,12 @@
           "matches": 1
         },
         {
-          "name": "Declan Rice",
+          "name": "Bukayo Saka",
           "value": 1,
           "matches": 1
         },
         {
-          "name": "Ezri Konsa",
+          "name": "Declan Rice",
           "value": 1,
           "matches": 1
         }
@@ -38307,36 +38307,40 @@
           {
             "name": "Declan Rice",
             "team": "England"
+          },
+          {
+            "name": "Marcus Rashford",
+            "team": "England"
           }
         ],
         "teamBox": [
           {
             "team": "France",
-            "possessionPct": 50.8,
-            "accuratePasses": 137,
-            "totalPasses": 153,
-            "shotsOnTarget": 1,
-            "totalShots": 4,
-            "effectiveTackles": 2,
-            "totalTackles": 3,
+            "possessionPct": 46.6,
+            "accuratePasses": 175,
+            "totalPasses": 194,
+            "shotsOnTarget": 2,
+            "totalShots": 5,
+            "effectiveTackles": 5,
+            "totalTackles": 7,
             "accurateCrosses": 0,
             "totalCrosses": 1,
-            "accurateLongBalls": 6,
-            "totalLongBalls": 12
+            "accurateLongBalls": 7,
+            "totalLongBalls": 13
           },
           {
             "team": "England",
-            "possessionPct": 49.2,
-            "accuratePasses": 134,
-            "totalPasses": 144,
-            "shotsOnTarget": 2,
-            "totalShots": 5,
-            "effectiveTackles": 1,
-            "totalTackles": 4,
+            "possessionPct": 53.4,
+            "accuratePasses": 204,
+            "totalPasses": 217,
+            "shotsOnTarget": 6,
+            "totalShots": 9,
+            "effectiveTackles": 3,
+            "totalTackles": 10,
             "accurateCrosses": 3,
-            "totalCrosses": 5,
-            "accurateLongBalls": 4,
-            "totalLongBalls": 8
+            "totalCrosses": 7,
+            "accurateLongBalls": 5,
+            "totalLongBalls": 9
           }
         ],
         "players": [
@@ -38346,7 +38350,7 @@
             "aid": "189026",
             "tid": "478",
             "gk": 1,
-            "sv": 0,
+            "sv": 2,
             "sh": 0,
             "st": 0,
             "tk": 0,
@@ -38362,7 +38366,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 14
+            "ps": 18
           },
           {
             "n": "Ibrahima Konaté",
@@ -38373,7 +38377,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 17
+            "ps": 18
           },
           {
             "n": "Theo Hernández",
@@ -38384,7 +38388,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 17
+            "ps": 18
           },
           {
             "n": "Malo Gusto",
@@ -38393,9 +38397,9 @@
             "tid": "478",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 18
+            "ps": 21
           },
           {
             "n": "Rayan Cherki",
@@ -38406,7 +38410,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 16
+            "ps": 24
           },
           {
             "n": "Adrien Rabiot",
@@ -38417,7 +38421,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 18
+            "ps": 22
           },
           {
             "n": "Warren Zaïre-Emery",
@@ -38428,18 +38432,18 @@
             "st": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 18
+            "ps": 22
           },
           {
             "n": "Kylian Mbappé",
             "t": "France",
             "aid": "231388",
             "tid": "478",
-            "sh": 2,
-            "st": 0,
+            "sh": 3,
+            "st": 1,
             "tk": 0,
             "bk": 1,
-            "ps": 11
+            "ps": 13
           },
           {
             "n": "Désiré Doué",
@@ -38448,9 +38452,9 @@
             "tid": "478",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 12
+            "ps": 16
           },
           {
             "n": "Michael Olise",
@@ -38459,9 +38463,9 @@
             "tid": "478",
             "sh": 0,
             "st": 0,
-            "tk": 2,
+            "tk": 4,
             "bk": 0,
-            "ps": 9
+            "ps": 19
           },
           {
             "n": "Dean Henderson",
@@ -38469,12 +38473,12 @@
             "aid": "234172",
             "tid": "448",
             "gk": 1,
-            "sv": 1,
+            "sv": 2,
             "sh": 0,
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 11
+            "ps": 12
           },
           {
             "n": "Marc Guéhi",
@@ -38485,7 +38489,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 24
+            "ps": 34
           },
           {
             "n": "Ezri Konsa",
@@ -38494,9 +38498,9 @@
             "tid": "448",
             "sh": 1,
             "st": 1,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 18
+            "ps": 25
           },
           {
             "n": "Declan Rice",
@@ -38505,9 +38509,9 @@
             "tid": "448",
             "sh": 1,
             "st": 1,
-            "tk": 0,
+            "tk": 4,
             "bk": 0,
-            "ps": 24
+            "ps": 37
           },
           {
             "n": "Djed Spence",
@@ -38518,7 +38522,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 11
+            "ps": 15
           },
           {
             "n": "Jarell Quansah",
@@ -38529,7 +38533,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 14
+            "ps": 23
           },
           {
             "n": "Eberechi Eze",
@@ -38540,7 +38544,7 @@
             "st": 0,
             "tk": 0,
             "bk": 1,
-            "ps": 16
+            "ps": 27
           },
           {
             "n": "Morgan Rogers",
@@ -38551,29 +38555,29 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 12
+            "ps": 17
           },
           {
             "n": "Marcus Rashford",
             "t": "England",
             "aid": "230945",
             "tid": "448",
-            "sh": 1,
-            "st": 0,
+            "sh": 3,
+            "st": 2,
             "tk": 0,
             "bk": 1,
-            "ps": 6
+            "ps": 12
           },
           {
             "n": "Bukayo Saka",
             "t": "England",
             "aid": "280555",
             "tid": "448",
-            "sh": 1,
-            "st": 0,
-            "tk": 0,
+            "sh": 3,
+            "st": 1,
+            "tk": 1,
             "bk": 1,
-            "ps": 4
+            "ps": 9
           },
           {
             "n": "Ivan Toney",
@@ -38584,7 +38588,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 4
+            "ps": 6
           }
         ]
       }
