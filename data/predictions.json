@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-16T03:50:12.502Z",
+    "generatedAt": "2026-07-18T09:03:31.349Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-16T03:50:12.501Z"
+    "modelUpdatedAt": "2026-07-18T09:01:18.158Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -26601,7 +26601,7 @@
           "team": "Argentina",
           "fairOdds": "2.86",
           "banker": true,
-          "note": "8 goals in 6 group games; 35% modelled anytime chance on 0.9 team xG.",
+          "note": "8 goals in 7 group games; 35% modelled anytime chance on 0.9 team xG.",
           "strength": 2
         },
         {
@@ -26617,7 +26617,7 @@
           "team": "Argentina",
           "fairOdds": "6.17",
           "banker": false,
-          "note": "3 goals in 6 group games; 16% modelled anytime chance on 0.9 team xG.",
+          "note": "3 goals in 7 group games; 16% modelled anytime chance on 0.9 team xG.",
           "strength": 1
         },
         {
@@ -26802,7 +26802,7 @@
         {
           "player": "Lionel Messi",
           "team": "Argentina",
-          "note": "8 goals in 6 group games; 35% modelled anytime chance on 0.9 team xG."
+          "note": "8 goals in 7 group games; 35% modelled anytime chance on 0.9 team xG."
         },
         {
           "player": "Mikel Oyarzabal",
@@ -26827,7 +26827,7 @@
           "Spain: 7 pts, +5 GD across 3 group games (5 for / 0 against).",
           "Argentina: 9 pts, +7 GD across 3 group games (8 for / 1 against).",
           "Spain's Mikel Oyarzabal leads them with 5 goals in 7 games.",
-          "Argentina's Lionel Messi leads them with 8 goals in 6 games."
+          "Argentina's Lionel Messi leads them with 8 goals in 7 games."
         ],
         "assumptions": [
           "Model projects Argentina to carry more of the ball and the better chances (higher attack rating); Spain to sit compact and play on the break.",
@@ -26917,6 +26917,235 @@
         "etWinner": "too close to call",
         "shootout": "Essentially 50/50 — a true coin-flip from twelve yards.",
         "note": "Most likely settled inside 90 (66%). But a 34% level 90 keeps extra time (13.1%) and penalties (20.9%) live — in a knockout, that's the bit a straight win bet ignores."
+      }
+    },
+    "fra-eng-2026-07-18": {
+      "win": {
+        "pick": "France",
+        "fairOdds": "2.15",
+        "reason": "Opta/Squawka models make France ~57% favourites and they carry the sharper finishers even rotated, with Mbappe near-certain to start chasing the Golden Boot. But this is a bronze final neither side wants, both managers rotate heavily and Deschamps bows out, so the draw has genuine weight in an open game — France edged but not commanding.",
+        "strength": 3
+      },
+      "halfTime": {
+        "score": "1-1",
+        "fairOdds": "5.0",
+        "alt": "1-0",
+        "altOdds": "4.5",
+        "strength": 3
+      },
+      "htft": {
+        "pick": "Draw/France",
+        "fairOdds": "6.0",
+        "strength": 2
+      },
+      "fullTime": {
+        "score": "2-1",
+        "fairOdds": "8.0",
+        "strength": 3
+      },
+      "scorers": [
+        {
+          "player": "Kylian Mbappe",
+          "fairOdds": "2.60",
+          "banker": false,
+          "note": "Starts to chase the Golden Boot (8 goals, level with Messi); primary France penalty and attacking threat, a level above on a rotated pitch",
+          "strength": 4
+        },
+        {
+          "player": "Harry Kane",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "England's penalty taker and joint-top scorer (6); likely features to chase Golden Boot, veteran so not a banker",
+          "strength": 3
+        },
+        {
+          "player": "Jude Bellingham",
+          "fairOdds": "3.80",
+          "banker": false,
+          "note": "6 goals, secondary penalty option; he and Kane account for 92% of England's WC goals",
+          "strength": 3
+        },
+        {
+          "player": "Ollie Watkins",
+          "fairOdds": "4.20",
+          "banker": false,
+          "note": "Likely central striker if England rotate/rest Kane; fresh legs vs a rotated France back line",
+          "strength": 2
+        }
+      ],
+      "assists": [
+        {
+          "player": "Ousmane Dembele",
+          "fairOdds": "5.0",
+          "banker": false,
+          "note": "Creator from the right in France's front line, feeds Mbappe",
+          "strength": 2
+        },
+        {
+          "player": "Rayan Cherki",
+          "fairOdds": "6.0",
+          "banker": false,
+          "note": "Playmaker likely handed minutes as a No.10; direct creative threat",
+          "strength": 2
+        },
+        {
+          "player": "Eberechi Eze",
+          "fairOdds": "6.5",
+          "banker": false,
+          "note": "England's chief creator behind the striker in the rotated XI",
+          "strength": 2
+        }
+      ],
+      "penalty": {
+        "likelihood": "Medium",
+        "taker": "Kylian Mbappe",
+        "backup": "Harry Kane",
+        "note": "Open end-to-end bronze finals draw fouls in the box; Mbappe takes France's spot-kicks (converted one vs Paraguay), Kane is England's designated taker with Bellingham as backup"
+      },
+      "lineups": {
+        "home": "France (4-2-3-1): Maignan; Kounde, Upamecano, Lacroix, T.Hernandez; Rabiot, Kone; Dembele, Cherki, Doue; Mbappe — Saliba (back) & Samba (calf) out; heavy rotation, Mateta/Thuram/Kante in contention",
+        "away": "England (4-2-3-1): Pickford; Spence, Guehi, Konsa, O'Reilly; Mainoo, Anderson; Rogers, Eze, Rashford; Watkins — Kane/Bellingham may start to chase Golden Boot; Henderson (wrist) out, R.James doubtful",
+        "status": "probable"
+      },
+      "playerNotes": [
+        {
+          "player": "Kylian Mbappe",
+          "team": "France",
+          "note": "8 goals, level with Messi for Golden Boot; starts despite rotation to chase award, minor prior ankle knock but declared fine"
+        },
+        {
+          "player": "William Saliba",
+          "team": "France",
+          "note": "Out — back injury sustained in the semi-final vs Spain (off after 29 mins); Lacroix deputises"
+        },
+        {
+          "player": "Harry Kane",
+          "team": "England",
+          "note": "6 goals, England's penalty taker; likely features to chase Golden Boot then may be rested"
+        },
+        {
+          "player": "Jude Bellingham",
+          "team": "England",
+          "note": "6 goals, secondary penalty option; carries England's creative and scoring load with Kane"
+        },
+        {
+          "player": "Rayan Cherki",
+          "team": "France",
+          "note": "Fringe playmaker in line for a rare start/minutes; genuine creative upside"
+        },
+        {
+          "player": "Reece James",
+          "team": "England",
+          "note": "Doubtful (muscle) after a tournament of defensive injuries; Spence likely covers right-back"
+        }
+      ],
+      "confidence": "medium",
+      "strength": 4,
+      "sources": [
+        "https://www.aljazeera.com/sports/2026/7/17/france-england-fifa-world-cup-third-place-playoff-predictions-kickoff",
+        "https://www.rotowire.com/soccer/article/france-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-third-place-playoff-123027",
+        "https://www.squawka.com/us/news/world-cup/match-preview-france-vs-england-07-18-26-world-cup-2026-third-place-play-off/",
+        "https://www.si.com/soccer/france-predicted-lineup-vs-england-world-cup-third-place-playoff-7-18-26",
+        "https://www.si.com/soccer/england-predicted-lineup-vs-france-world-cup-third-place-playoff-7-18-26",
+        "https://www.goal.com/en/lists/england-best-penalty-takers-2026-world-cup-squad-shootout/blte9d631985ec95d02",
+        "https://www.covers.com/world-cup/england-vs-france-correct-score-odds-prediction-july-18-2026",
+        "https://www.foxsports.com/stories/soccer/2026-world-cup-third-place-odds-france-england"
+      ],
+      "pitchReport": {
+        "facts": [
+          "France: 9 pts, +8 GD across 3 group games (10 for / 2 against).",
+          "England: 7 pts, +4 GD across 3 group games (6 for / 2 against).",
+          "France's Kylian Mbappé leads them with 8 goals in 7 games.",
+          "England's Harry Kane leads them with 6 goals in 7 games."
+        ],
+        "assumptions": [
+          "Model projects France to carry more of the ball and the better chances (higher attack rating); England to sit compact and play on the break.",
+          "Goal expectancy 1.9–1.1 (France–England) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
+        ],
+        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
+        "xgRead": "France shade the chance-creation (1.9 vs 1.1 xG) — they should make the running.",
+        "drawRisk": "Moderate — 22.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
+        "travel": "Climate broadly neutral at this venue — no heat/altitude tilt to price in.",
+        "caseFor": [
+          "France are the model's 56.7% favourite — higher attack rating and the better recent goal-rate.",
+          "A genuine match-winner in Kylian Mbappé carrying the scoring load.",
+          "Neutral conditions let the better side's quality tell."
+        ],
+        "caseAgainst": [
+          "22.3% draw + England's deep block — a classic possession-favourite-vs-low-block out-xG trap.",
+          "Group goal-rates are a tiny sample; France's number may be inflated by one result."
+        ],
+        "verdict": "Bet",
+        "changeMind": "A confirmed XI resting Kylian Mbappé, or news the underdog is missing a defensive linchpin."
+      },
+      "valueSpot": null,
+      "trapDetector": {
+        "flags": [
+          {
+            "name": "Favourite on reputation / at a poor price",
+            "why": "Not priced — can't confirm the favourite is good value."
+          },
+          {
+            "name": "Dead rubber / rotation risk",
+            "tripped": false,
+            "why": "Knockout — both name strongest XI, no rotation."
+          },
+          {
+            "name": "Built on one result / a short hot streak",
+            "tripped": false,
+            "why": "Scoring spread across games, not one rout — sample is thin but not a single-game mirage."
+          },
+          {
+            "name": "Cagey knockout the market underrates",
+            "tripped": false,
+            "why": "Goals/margin profile doesn't scream stalemate."
+          },
+          {
+            "name": "Lineups unconfirmed and the bet depends on them",
+            "tripped": true,
+            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+          },
+          {
+            "name": "Ignoring the draw",
+            "tripped": false,
+            "why": "Draw chance (22.3%) is low enough to discount."
+          },
+          {
+            "name": "Emotional / a chase / just for action",
+            "tripped": false,
+            "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
+          }
+        ],
+        "trapsTripped": 1,
+        "edge": "edge-leaning",
+        "verdict": "PLAYABLE",
+        "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
+      },
+      "brainSummary": {
+        "verdict": "PLAYABLE",
+        "call": "France to win is a clean call.",
+        "read": {
+          "tag": "Bet",
+          "line": "France are the model's 57% pick."
+        },
+        "price": {
+          "tag": "Not priced yet",
+          "line": "No live odds for this tie yet — this is a model-only call until the market lands."
+        },
+        "trap": {
+          "tag": "1 warning",
+          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+        }
+      },
+      "resolution": {
+        "ninety": 77.7,
+        "extraTime": 12,
+        "penalties": 10.3,
+        "mostLikely": "Regulation",
+        "etWinner": "France",
+        "shootout": "Near coin-flip, with the marginal nerve edge to France.",
+        "note": "Most likely settled inside 90 (77.7%). But a 22.3% level 90 keeps extra time (12%) and penalties (10.3%) live — in a knockout, that's the bit a straight win bet ignores."
       }
     }
   }
