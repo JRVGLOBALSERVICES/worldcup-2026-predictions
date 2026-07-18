@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-07-18T20:30:24.867Z",
+    "generatedAt": "2026-07-18T20:40:17.963Z",
     "disclaimer": "Reasoned analytical estimates from live team-news research, not live bookmaker prices. Fun-money only — always check the actual odds before you stake.",
     "method": "Upcoming matches: bivariate-Poisson model — expected goals from shrunk group-stage attack/defence rates with a form/quality tilt; scorer odds from real ESPN per-team goal data. Each upcoming call also carries The Brain — a Pitch Report (10-point read), a Value Spot (model vs real 1xBet/book prices), and a TRAP Detector (weak-bet filter). Finished matches retain their per-match research.",
-    "modelUpdatedAt": "2026-07-18T20:30:24.867Z"
+    "modelUpdatedAt": "2026-07-18T20:40:17.962Z"
   },
   "predictions": {
     "por-drc-2026-06-17": {
@@ -26922,106 +26922,91 @@
     "fra-eng-2026-07-18": {
       "win": {
         "pick": "France",
-        "fairOdds": "1.76",
-        "reason": "Model: France to win at 57% (France 57% / draw 22% / England 21%). Expected goals 1.9–1.1 from group-stage attack/defence rates (France 2.6 for / 1.0 against per game, England 1.8 / 1.0). Most likely score 1-1.",
-        "strength": 4
+        "fairOdds": "2.00",
+        "reason": "France soft-favourite (model ~50% / draw 26% / England 24%). Both sides heavily rotated for a bronze final neither wanted, but Mbappé (chasing the Golden Boot in his LAST France match) and Kane both start, and previews read this as an open, tired-legs game rather than a cagey dead-rubber. France carry the individual quality (Mbappé, Olise, Konaté); England counter with Bellingham + Gordon pace — a real draw/BTTS risk. Dembélé (5 goals) and Saka both benched.",
+        "strength": 3
       },
       "halfTime": {
         "score": "0-0",
-        "fairOdds": "3.67",
+        "fairOdds": "3.10",
         "alt": "1-0",
-        "altOdds": "5.14"
+        "altOdds": "4.90"
       },
       "htft": {
         "pick": "Draw/France",
-        "fairOdds": "4.41"
+        "fairOdds": "4.30"
       },
       "fullTime": {
-        "score": "1-1",
-        "fairOdds": "9.56"
+        "score": "2-1",
+        "fairOdds": "8.40"
       },
       "scorers": [
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "fairOdds": "1.69",
+          "fairOdds": "1.75",
           "banker": true,
-          "note": "8 goals in 7 group games; 59% modelled anytime chance on 1.9 team xG.",
+          "note": "8 goals — joint Golden Boot leader, in his final match as a France player; central, takes every French penalty tonight (Dembélé benched).",
           "strength": 5
-        },
-        {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "fairOdds": "2.27",
-          "banker": false,
-          "note": "5 goals in 7 group games; 44% modelled anytime chance on 1.9 team xG.",
-          "strength": 3
         },
         {
           "player": "Harry Kane",
           "team": "England",
-          "fairOdds": "2.85",
+          "fairOdds": "2.60",
           "banker": false,
-          "note": "6 goals in 7 group games; 35% modelled anytime chance on 1.1 team xG.",
-          "strength": 3
+          "note": "6 goals, England's #1 penalty taker (already scored WC26 spot-kicks); aerial focal point who drops to link.",
+          "strength": 4
         },
         {
           "player": "Jude Bellingham",
           "team": "England",
-          "fairOdds": "2.85",
+          "fairOdds": "2.90",
           "banker": false,
-          "note": "6 goals in 7 group games; 35% modelled anytime chance on 1.1 team xG.",
+          "note": "6 goals and red-hot — scored in three straight knockouts; late runs into the box from the No.10.",
           "strength": 3
         },
         {
-          "player": "Bradley Barcola",
+          "player": "Michael Olise",
           "team": "France",
-          "fairOdds": "4.32",
+          "fairOdds": "4.00",
           "banker": false,
-          "note": "2 goals in 7 group games; 23% modelled anytime chance on 1.9 team xG.",
-          "strength": 1
+          "note": "Primarily the creator (tournament-leading 5 assists) but shoots and is on set-pieces; edges Gordon/Cherki for the fourth scorer slot.",
+          "strength": 2
         }
       ],
       "assists": [
         {
           "player": "Michael Olise",
           "team": "France",
-          "fairOdds": "1.93",
+          "fairOdds": "2.00",
           "banker": true,
-          "note": "5 assists in the group stage; 52% modelled chance to set one up."
+          "note": "Tournament assist leader with 5 — every France chance routes through him."
         },
         {
-          "player": "Kylian Mbappé",
+          "player": "Jude Bellingham",
+          "team": "England",
+          "fairOdds": "3.40",
+          "banker": false,
+          "note": "England's chief creator-scorer from the No.10; feeds Kane and the wide runners."
+        },
+        {
+          "player": "Rayan Cherki",
           "team": "France",
-          "fairOdds": "2.71",
+          "fairOdds": "3.80",
           "banker": false,
-          "note": "3 assists in the group stage; 37% modelled chance to set one up."
-        },
-        {
-          "player": "Anthony Gordon",
-          "team": "England",
-          "fairOdds": "3.57",
-          "banker": false,
-          "note": "3 assists in the group stage; 28% modelled chance to set one up."
-        },
-        {
-          "player": "Bukayo Saka",
-          "team": "England",
-          "fairOdds": "3.57",
-          "banker": false,
-          "note": "3 assists in the group stage; 28% modelled chance to set one up."
+          "note": "Starts RW with Dembélé rested; dribble/through-ball threat down England's left at O'Reilly."
         }
       ],
       "penalty": {
-        "likelihood": "low",
+        "likelihood": "medium",
         "taker": "Kylian Mbappé",
-        "backup": "Ousmane Dembélé",
-        "note": "France favoured to control the game, so a penalty is less pivotal; Kylian Mbappé would take one if awarded."
+        "backup": "Michael Olise",
+        "note": "Open, end-to-end profile plus two penalty-takers on the pitch lifts the spot-kick chance. Mbappé is France's #1 (Dembélé, next in line, is benched) so he takes ALL French pens; Kane is England's designated taker."
       },
       "lineups": {
-        "home": "Mike Maignan, Jules Koundé, Dayot Upamecano, William Saliba, Lucas Digne, Manu Koné, Adrien Rabiot, Ousmane Dembélé, Michael Olise, Désiré Doué, Kylian Mbappé",
-        "away": "Pickford; James, Stones, Guehi, Spence; Rice, Anderson; Rogers, Bellingham, Gordon; Kane",
-        "status": "unconfirmed",
+        "home": "Mike Maignan; Jules Koundé, Ibrahima Konaté, Maxence Lacroix, Theo Hernandez; Manu Koné, Warren Zaïre-Emery; Rayan Cherki, Michael Olise, Désiré Doué; Kylian Mbappé",
+        "away": "Jordan Pickford; Djed Spence, Trevoh Chalobah, Marc Guéhi, Nico O'Reilly; Declan Rice, Kobbie Mainoo; Noni Madueke, Jude Bellingham, Anthony Gordon; Harry Kane",
+        "status": "confirmed",
         "homeXI": {
           "formation": "4-2-3-1",
           "players": [
@@ -27036,18 +27021,18 @@
               "pos": "RB"
             },
             {
-              "num": 4,
-              "name": "Dayot Upamecano",
+              "num": 15,
+              "name": "Ibrahima Konaté",
               "pos": "CD-R"
             },
             {
-              "num": 17,
-              "name": "William Saliba",
+              "num": 3,
+              "name": "Maxence Lacroix",
               "pos": "CD-L"
             },
             {
-              "num": 21,
-              "name": "Lucas Digne",
+              "num": 22,
+              "name": "Theo Hernandez",
               "pos": "LB"
             },
             {
@@ -27056,13 +27041,13 @@
               "pos": "CM-R"
             },
             {
-              "num": 14,
-              "name": "Adrien Rabiot",
+              "num": 8,
+              "name": "Warren Zaïre-Emery",
               "pos": "CM-L"
             },
             {
-              "num": 7,
-              "name": "Ousmane Dembélé",
+              "num": 12,
+              "name": "Rayan Cherki",
               "pos": "RW"
             },
             {
@@ -27091,13 +27076,13 @@
               "pos": "G"
             },
             {
-              "num": 24,
-              "name": "Reece James",
+              "num": 25,
+              "name": "Djed Spence",
               "pos": "RB"
             },
             {
-              "num": 5,
-              "name": "John Stones",
+              "num": 15,
+              "name": "Trevoh Chalobah",
               "pos": "CD-R"
             },
             {
@@ -27106,8 +27091,8 @@
               "pos": "CD-L"
             },
             {
-              "num": 25,
-              "name": "Djed Spence",
+              "num": 22,
+              "name": "Nico O'Reilly",
               "pos": "LB"
             },
             {
@@ -27116,13 +27101,13 @@
               "pos": "DM-R"
             },
             {
-              "num": 8,
-              "name": "Elliot Anderson",
+              "num": 26,
+              "name": "Kobbie Mainoo",
               "pos": "DM-L"
             },
             {
               "num": 17,
-              "name": "Morgan Rogers",
+              "name": "Noni Madueke",
               "pos": "RW"
             },
             {
@@ -27147,25 +27132,42 @@
         {
           "player": "Kylian Mbappé",
           "team": "France",
-          "note": "8 goals in 7 group games; 59% modelled anytime chance on 1.9 team xG."
+          "note": "8 goals — joint Golden Boot leader; maximum motivation in his final France appearance, central role and takes all French penalties."
         },
         {
-          "player": "Ousmane Dembélé",
-          "team": "France",
-          "note": "5 goals in 7 group games; 44% modelled anytime chance on 1.9 team xG."
+          "player": "Harry Kane",
+          "team": "England",
+          "note": "6 goals, England's penalty king; aerial focal point and best England scorer bet."
+        },
+        {
+          "player": "Jude Bellingham",
+          "team": "England",
+          "note": "6 goals, scored in three straight knockouts — England's in-form attacker arriving late in the box."
         },
         {
           "player": "Michael Olise",
           "team": "France",
-          "note": "5 assists in the group stage; 52% modelled chance to set one up."
+          "note": "Tournament assist leader (5); chief creator and a set-piece delivery threat."
+        },
+        {
+          "player": "Rayan Cherki",
+          "team": "France",
+          "note": "Promoted to start with Dembélé (5 goals) benched; dribble threat isolating O'Reilly."
+        },
+        {
+          "player": "Ibrahima Konaté",
+          "team": "France",
+          "note": "France's main aerial set-piece header threat off Olise deliveries; anchors a rotated back line alongside Lacroix."
         }
       ],
       "confidence": "medium",
-      "strength": 4,
+      "strength": 3,
       "sources": [
-        "Model: bivariate-Poisson xG from ESPN group-stage GF/GA + recency-weighted form",
-        "Scorer odds: ESPN per-team goal data (data/stats.json)",
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/standings"
+        "Confirmed XIs: FIFA match centre https://www.fifa.com/en/match-centre/match/17/285023/289291/400021542",
+        "Team news: https://sports.yahoo.com/articles/england-xi-vs-france-confirmed-135631926.html",
+        "France penalty taker: https://sports.yahoo.com/articles/takes-france-penalties-why-kylian-170056348.html",
+        "Olise tops assist chart: https://www.vanguardngr.com/2026/07/full-list-olise-tops-assists-chart-at-2026-world-cup/",
+        "Golden Boot standings: https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09"
       ],
       "pitchReport": {
         "facts": [
@@ -27178,7 +27180,7 @@
           "Model projects France to carry more of the ball and the better chances (higher attack rating); England to sit compact and play on the break.",
           "Goal expectancy 1.9–1.1 (France–England) assumes group-stage scoring rates hold — a big regression risk on a 2–3 game sample."
         ],
-        "lineups": "XIs not yet confirmed — but it's win-or-out, so expect both strongest available XI. Treat lineup-dependent props as provisional.",
+        "lineups": "XIs confirmed — picks below are tuned to the actual starters.",
         "motivation": "Knockout — win or go home. Neither side rotates; both will accept a cagey, low-risk game over an open one, which compresses goals and lifts draw/extra-time risk.",
         "xgRead": "France shade the chance-creation (1.9 vs 1.1 xG) — they should make the running.",
         "drawRisk": "Moderate — 22.3% modelled draw; not a stalemate profile, but never dismiss it in a knockout.",
@@ -27193,7 +27195,7 @@
           "Group goal-rates are a tiny sample; France's number may be inflated by one result."
         ],
         "verdict": "Bet",
-        "changeMind": "A confirmed XI resting Kylian Mbappé, or news the underdog is missing a defensive linchpin."
+        "changeMind": "An early goal flips the game state — the block either cracks open or locks shut."
       },
       "valueSpot": null,
       "trapDetector": {
@@ -27219,8 +27221,8 @@
           },
           {
             "name": "Lineups unconfirmed and the bet depends on them",
-            "tripped": true,
-            "why": "XIs not out — any scorer/lineup-dependent angle is provisional."
+            "tripped": false,
+            "why": "XIs confirmed — no lineup risk."
           },
           {
             "name": "Ignoring the draw",
@@ -27233,7 +27235,7 @@
             "why": "Model call — no tilt, no chase. (Only you can answer this one honestly for your own stake.)"
           }
         ],
-        "trapsTripped": 1,
+        "trapsTripped": 0,
         "edge": "edge-leaning",
         "verdict": "PLAYABLE",
         "discipline": "Being the better team and being a good bet are two different things — in a knockout, respect the draw, don't overpay the favourite, and never chase goals in a game built to produce few."
@@ -27250,8 +27252,8 @@
           "line": "No live odds for this tie yet — this is a model-only call until the market lands."
         },
         "trap": {
-          "tag": "1 warning",
-          "line": "XIs aren't confirmed — scorer/lineup picks are provisional."
+          "tag": "Clean",
+          "line": "Nothing trips the filter — about as solid as a call gets."
         }
       },
       "resolution": {
