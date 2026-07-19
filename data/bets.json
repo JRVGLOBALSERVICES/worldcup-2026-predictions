@@ -20929,6 +20929,121 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-866725989059809280",
+      "slipNo": "866725989059809280",
+      "matchId": "esp-arg-2026-07-19",
+      "player": "Spain vs Argentina (Final)",
+      "market": "Match Parlay · 7 legs",
+      "label": "REAL 1xBet PARLAY 866725989059809280 @35.03, RM60 -> RM2101.80. Romero tackles o0.5 · Total cards Over 3.5 · E.Martínez saves o1.5 · Messi anytime scorer · Argentina win the cup · BTTS Yes · Mac Allister SOT o0.5.",
+      "odds": 35.03,
+      "stake": 60,
+      "placedAt": "20/07 00:59",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerTacklesOver",
+            "player": "Cristian Romero",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "cardsTotalOver",
+            "line": 3.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "gkSavesOver",
+            "player": "Emiliano Martínez",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "btts"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Alexis Mac Allister",
+            "line": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-866725002186727424",
+      "slipNo": "866725002186727424",
+      "matchId": "esp-arg-2026-07-19",
+      "player": "Spain vs Argentina (Final)",
+      "market": "Match Parlay · 8 legs",
+      "label": "REAL 1xBet PARLAY 866725002186727424 @69.08, RM40 -> RM2763.20. Romero tackles o0.5 · Total cards Over 3.5 · E.Martínez saves o1.5 · Lautaro SOT o0.5 · Over 2.5 · Spain win the cup · Messi anytime scorer · Enzo SOT o0.5.",
+      "odds": 69.08,
+      "stake": 40,
+      "placedAt": "20/07 00:55",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerTacklesOver",
+            "player": "Cristian Romero",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "cardsTotalOver",
+            "line": 3.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "gkSavesOver",
+            "player": "Emiliano Martínez",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Lautaro Martínez",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalOver",
+            "line": 2.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Enzo Fernández",
+            "line": 0.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
