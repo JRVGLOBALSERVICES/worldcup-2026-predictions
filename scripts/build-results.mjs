@@ -579,6 +579,12 @@ function resultFromEvent(ev, fixture) {
     else finishPhase = "regulation";
   }
   const wentToEt = finishPhase === "extra_time" || finishPhase === "penalties";
+  // The match is PAST regulation right now — ESPN period ≥ 3 is ET (3|4) or the
+  // shootout (5). Once we're here the 90-minute score is frozen, so every
+  // 90-minute market can settle even though the tie is still "live" (ET/pens in
+  // progress). This is what lets a 0-0-at-90 draw's 1X2/scorer/total legs grade
+  // the instant ET kicks off, instead of hanging pending for the ~30 min of ET.
+  const liveEt = state === "live" && period >= 3;
 
   const score = {
     home: parseInt(ourHome.score ?? "0", 10) || 0,
@@ -601,11 +607,16 @@ function resultFromEvent(ev, fixture) {
       assist: athletes[1]?.displayName ?? null,
       penalty: d.penaltyKick === true,
       ownGoal: d.ownGoal === true,
-      // Real goal struck in extra time (minute > 90 in an ET/pens match). Tagged so
-      // 90-minute markets (1X2, correct score, first/anytime scorer, totals) can
-      // exclude it; only "to qualify" counts goals beyond 90. Regulation/group
+      // Real goal struck in extra time. Tagged so 90-minute markets (1X2, correct
+      // score, first/anytime scorer, totals) can exclude it; only "to qualify"
+      // counts goals beyond 90. Detected by the goal's own PERIOD (≥ 3 = ET) —
+      // authoritative and safe for a still-live ET, so a regulation stoppage goal
+      // (period 2, clock 90'+) is never misread as ET. Minute > 90 is a fallback
+      // only for a finished tie whose details lack a period. Group/regulation
       // games never set this (no ET played).
-      ...(wentToEt && minute != null && minute > 90 ? { et: true } : {}),
+      ...((d.period?.number ?? 0) >= 3 || (wentToEt && minute != null && minute > 90)
+        ? { et: true }
+        : {}),
     };
   });
 
@@ -649,8 +660,11 @@ function resultFromEvent(ev, fixture) {
   // 90-minute scoreline: the shootout-free ESPN aggregate MINUS any extra-time
   // goal. For a regulation/group game this equals `ft`. Every 90-minute market
   // settles on this; full `ft` (incl. ET) + `advanced` cover the qualify markets.
+  // Locked at full time AND the moment the tie enters ET (`liveEt`) — once
+  // regulation is over the 90-minute score can't change, so freezing it here lets
+  // the grader settle every 90-minute leg while ET/pens are still being played.
   let ft90 = null;
-  if (state === "finished") {
+  if (state === "finished" || liveEt) {
     const etHome = goals.filter((g) => g.et && g.team === "home").length;
     const etAway = goals.filter((g) => g.et && g.team === "away").length;
     ft90 = { home: Math.max(0, score.home - etHome), away: Math.max(0, score.away - etAway) };
@@ -701,17 +715,24 @@ function settleBetsFromResults(bets, results) {
       }
     }
 
-    if (r.state !== "finished") continue; // only settle final scores
+    // A tie still LIVE but past regulation (ESPN period ≥ 3) has its 90-minute
+    // score frozen — build-results sets r.ft90 in that window. Ingest it so every
+    // 90-minute leg (1X2, totals, anytime scorer, correct score…) settles the
+    // instant ET kicks off instead of hanging pending for the whole ET/pens phase.
+    const liveEt = r.state === "live" && r.ft90 != null;
+    if (r.state !== "finished" && !liveEt) continue; // else only settle final scores
 
     // Correct-score layer: fill ht/ft only where still null (a real score is a
     // fact; once set, leave it — the AI cron or a hand-fix may have refined it).
+    // ft (the FULL result incl. ET) stays null while the tie is still live.
     const rec = (bets.results[id] ??= { ht: null, ft: null });
-    if (rec.ft == null && r.ft) {
+    if (r.state === "finished" && rec.ft == null && r.ft) {
       rec.ft = { home: r.ft.home, away: r.ft.away };
       changed = true;
     }
     // 90-minute scoreline + the ESPN-verified finish phase (regulation/ET/pens),
     // so every 90-minute market settles on ft90 while qualify reads `advanced`.
+    // ft90 fills the moment ET starts (liveEt) — it can't change after regulation.
     if (rec.ft90 == null && r.ft90) {
       rec.ft90 = { home: r.ft90.home, away: r.ft90.away };
       changed = true;
@@ -755,8 +776,12 @@ function settleBetsFromResults(bets, results) {
       }
     }
     if (!ev || ev.status !== "finished") {
-      bets.matchEvents[id] = {
-        status: "finished",
+      // Write a FINISHED snapshot at full time, or a LIVE one during ET (liveEt) so
+      // 90-minute scorer/assist legs settle and a red-carded player's prop freezes
+      // mid-tie. A live snapshot is refreshed each run (goals/cards climb) but only
+      // when it actually changed, and never over an already-finished entry above.
+      const snapshot = {
+        status: r.state === "finished" ? "finished" : "live",
         goals: r.goals.map((g) => ({
           team: g.team,
           scorer: g.scorer,
@@ -774,7 +799,10 @@ function settleBetsFromResults(bets, results) {
           type: c.type,
         })),
       };
-      changed = true;
+      if (JSON.stringify(ev) !== JSON.stringify(snapshot)) {
+        bets.matchEvents[id] = snapshot;
+        changed = true;
+      }
     }
   }
   return changed;

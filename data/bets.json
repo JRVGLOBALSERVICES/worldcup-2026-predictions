@@ -1323,6 +1323,17 @@
       },
       "finishPhase": "regulation",
       "advanced": "away"
+    },
+    "esp-arg-2026-07-19": {
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
+      "ft": null,
+      "ft90": {
+        "home": 0,
+        "away": 0
+      }
     }
   },
   "matchEventsNote": "Per-match player events scraped after full-time by the settlement cron. `status` flips to \"finished\" once the match is over and goals are filled. `goals` is in chronological scoring order — the first non-own-goal entry is the first scorer. Each goal: team (home|away vs the fixture's listed sides), scorer (full name), minute, assist (full name or null), freeKick/penalty/ownGoal booleans. The specials auto-grade off this; never invent events — only fill from a verified live source.",
@@ -5239,6 +5250,42 @@
         }
       ],
       "cards": []
+    },
+    "esp-arg-2026-07-19": {
+      "status": "live",
+      "goals": [],
+      "cards": [
+        {
+          "team": "away",
+          "player": "Lisandro Martínez",
+          "minute": 40,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Leandro Paredes",
+          "minute": 51,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Enzo Fernández",
+          "minute": 82,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Cristian Romero",
+          "minute": 90,
+          "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Enzo Fernández",
+          "minute": 90,
+          "type": "red"
+        }
+      ]
     }
   },
   "bets": [
@@ -20814,7 +20861,7 @@
       "player": "Spain vs Argentina (Final)",
       "market": "Match Parlay · 8 legs",
       "label": "REAL 1xBet PARLAY 866703969203404800 @68.00, RM40 -> RM2720.00. Over 0.5 · Under 4.5 · Yamal SOT o0.5 · Draw (X) · Argentina win the cup · Messi anytime scorer · Mac Allister SOT o0.5 · Cucurella tackles o0.5.",
-      "odds": 68.0,
+      "odds": 68,
       "stake": 40,
       "placedAt": "19/07 23:32",
       "grade": {
@@ -114485,6 +114532,1151 @@
       ],
       "playerTackles": {
         "Adrien Rabiot": 2
+      }
+    },
+    "esp-arg-2026-07-19": {
+      "corners": {
+        "home": 9,
+        "away": 1
+      },
+      "sot": {
+        "home": 11,
+        "away": 0
+      },
+      "shots": {
+        "home": 16,
+        "away": 0
+      },
+      "yellow": {
+        "home": 0,
+        "away": 3
+      },
+      "red": {
+        "home": 0,
+        "away": 1
+      },
+      "cards": {
+        "home": 0,
+        "away": 4
+      },
+      "fouls": {
+        "home": 16,
+        "away": 21
+      },
+      "cornersByHalf": {
+        "home": [
+          2,
+          7
+        ],
+        "away": [
+          0,
+          1
+        ]
+      },
+      "sotByHalf": {
+        "home": [
+          2,
+          8
+        ],
+        "away": [
+          0,
+          0
+        ]
+      },
+      "playerSot": {
+        "Lamine Yamal": 2,
+        "Mikel Oyarzabal": 1,
+        "Álex Baena": 1,
+        "Dani Olmo": 1,
+        "Ferran Torres": 1,
+        "Pedri": 1,
+        "Pau Cubarsí": 1,
+        "Aymeric Laporte": 1,
+        "Nico Williams": 2
+      },
+      "playerShots": {
+        "Lamine Yamal": 3,
+        "Mikel Oyarzabal": 1,
+        "Marc Cucurella": 1,
+        "Álex Baena": 1,
+        "Dani Olmo": 2,
+        "Ferran Torres": 2,
+        "Pedri": 1,
+        "Pau Cubarsí": 1,
+        "Aymeric Laporte": 1,
+        "Rodri": 1,
+        "Nico Williams": 2
+      },
+      "playerShotBreakdown": {
+        "Lamine Yamal": {
+          "team": "home",
+          "shots": 3,
+          "sot": 2,
+          "off": 0,
+          "blocked": 1,
+          "goals": 0
+        },
+        "Mikel Oyarzabal": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Marc Cucurella": {
+          "team": "home",
+          "shots": 1,
+          "sot": 0,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Álex Baena": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Dani Olmo": {
+          "team": "home",
+          "shots": 2,
+          "sot": 1,
+          "off": 0,
+          "blocked": 1,
+          "goals": 0
+        },
+        "Ferran Torres": {
+          "team": "home",
+          "shots": 2,
+          "sot": 1,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Pedri": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Pau Cubarsí": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Aymeric Laporte": {
+          "team": "home",
+          "shots": 1,
+          "sot": 1,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Rodri": {
+          "team": "home",
+          "shots": 1,
+          "sot": 0,
+          "off": 1,
+          "blocked": 0,
+          "goals": 0
+        },
+        "Nico Williams": {
+          "team": "home",
+          "shots": 2,
+          "sot": 2,
+          "off": 0,
+          "blocked": 0,
+          "goals": 0
+        }
+      },
+      "players": [
+        {
+          "team": "home",
+          "name": "Unai Simón",
+          "pos": "G",
+          "num": 23,
+          "starter": true,
+          "aid": "222375",
+          "gk": true,
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "sv": 0,
+          "gc": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 33
+        },
+        {
+          "team": "home",
+          "name": "Aymeric Laporte",
+          "pos": "CD-L",
+          "num": 14,
+          "starter": true,
+          "aid": "159317",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 1,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 92
+        },
+        {
+          "team": "home",
+          "name": "Pau Cubarsí",
+          "pos": "CD-R",
+          "num": 22,
+          "starter": true,
+          "aid": "368992",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 0,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 113
+        },
+        {
+          "team": "home",
+          "name": "Marc Cucurella",
+          "pos": "LB",
+          "num": 24,
+          "starter": true,
+          "aid": "259910",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 1,
+          "tk": 1,
+          "bk": 0,
+          "ps": 61
+        },
+        {
+          "team": "home",
+          "name": "Pedro Porro",
+          "pos": "RB",
+          "num": 12,
+          "starter": true,
+          "aid": "268533",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 3,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 2,
+          "bk": 0,
+          "ps": 82
+        },
+        {
+          "team": "home",
+          "name": "Dani Olmo",
+          "pos": "AM",
+          "num": 10,
+          "starter": true,
+          "aid": "227765",
+          "g": 0,
+          "a": 0,
+          "sh": 2,
+          "sot": 1,
+          "fc": 1,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 1,
+          "ps": 25
+        },
+        {
+          "team": "home",
+          "name": "Fabián Ruiz",
+          "pos": "LM",
+          "num": 8,
+          "starter": true,
+          "aid": "214596",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 50
+        },
+        {
+          "team": "home",
+          "name": "Rodri",
+          "pos": "RM",
+          "num": 16,
+          "starter": true,
+          "aid": "231828",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 0,
+          "fc": 2,
+          "fs": 3,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 4,
+          "bk": 0,
+          "ps": 106
+        },
+        {
+          "team": "home",
+          "name": "Mikel Oyarzabal",
+          "pos": "F",
+          "num": 21,
+          "starter": true,
+          "aid": "229018",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 1,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 1,
+          "tk": 1,
+          "bk": 0,
+          "ps": 14
+        },
+        {
+          "team": "home",
+          "name": "Álex Baena",
+          "pos": "AM-L",
+          "num": 15,
+          "starter": true,
+          "aid": "297373",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 4,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 21
+        },
+        {
+          "team": "home",
+          "name": "Lamine Yamal",
+          "pos": "AM-R",
+          "num": 19,
+          "starter": true,
+          "aid": "362150",
+          "g": 0,
+          "a": 0,
+          "sh": 3,
+          "sot": 2,
+          "fc": 1,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 3,
+          "bk": 1,
+          "ps": 42
+        },
+        {
+          "team": "home",
+          "name": "Martín Zubimendi",
+          "pos": "SUB",
+          "num": 18,
+          "starter": false,
+          "aid": "287266",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 0
+        },
+        {
+          "team": "home",
+          "name": "Nico Williams",
+          "pos": "SUB",
+          "num": 17,
+          "starter": false,
+          "aid": "312146",
+          "g": 0,
+          "a": 0,
+          "sh": 2,
+          "sot": 2,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 15
+        },
+        {
+          "team": "home",
+          "name": "Ferran Torres",
+          "pos": "SUB",
+          "num": 7,
+          "starter": false,
+          "aid": "265869",
+          "g": 0,
+          "a": 0,
+          "sh": 2,
+          "sot": 1,
+          "fc": 1,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 6
+        },
+        {
+          "team": "home",
+          "name": "Pedri",
+          "pos": "SUB",
+          "num": 20,
+          "starter": false,
+          "aid": "250465",
+          "g": 0,
+          "a": 0,
+          "sh": 1,
+          "sot": 1,
+          "fc": 1,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 38
+        },
+        {
+          "team": "home",
+          "name": "Mikel Merino",
+          "pos": "SUB",
+          "num": 6,
+          "starter": false,
+          "aid": "209581",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 13
+        },
+        {
+          "team": "home",
+          "name": "Eric García",
+          "pos": "SUB",
+          "num": 4,
+          "starter": false,
+          "aid": "128714",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 0
+        },
+        {
+          "team": "away",
+          "name": "Emiliano Martínez",
+          "pos": "G",
+          "num": 23,
+          "starter": true,
+          "aid": "158626",
+          "gk": true,
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "sv": 11,
+          "gc": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 42
+        },
+        {
+          "team": "away",
+          "name": "Lisandro Martínez",
+          "pos": "CD-L",
+          "num": 6,
+          "starter": true,
+          "aid": "233937",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 0,
+          "yc": 1,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 29
+        },
+        {
+          "team": "away",
+          "name": "Cristian Romero",
+          "pos": "CD-R",
+          "num": 13,
+          "starter": true,
+          "aid": "96970",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 1,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 40
+        },
+        {
+          "team": "away",
+          "name": "Nicolás Tagliafico",
+          "pos": "LB",
+          "num": 3,
+          "starter": true,
+          "aid": "145190",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 3,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 3,
+          "bk": 0,
+          "ps": 29
+        },
+        {
+          "team": "away",
+          "name": "Gonzalo Montiel",
+          "pos": "RB",
+          "num": 4,
+          "starter": true,
+          "aid": "228262",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 13
+        },
+        {
+          "team": "away",
+          "name": "Alexis Mac Allister",
+          "pos": "CM-L",
+          "num": 20,
+          "starter": true,
+          "aid": "249299",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 2,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 2,
+          "bk": 0,
+          "ps": 27
+        },
+        {
+          "team": "away",
+          "name": "Enzo Fernández",
+          "pos": "CM-R",
+          "num": 24,
+          "starter": true,
+          "aid": "285450",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 3,
+          "fs": 1,
+          "yc": 0,
+          "rc": 1,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 36
+        },
+        {
+          "team": "away",
+          "name": "Nico González",
+          "pos": "LM",
+          "num": 15,
+          "starter": true,
+          "aid": "76017",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 1,
+          "tk": 0,
+          "bk": 0,
+          "ps": 9
+        },
+        {
+          "team": "away",
+          "name": "Rodrigo De Paul",
+          "pos": "RM",
+          "num": 7,
+          "starter": true,
+          "aid": "174466",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 29
+        },
+        {
+          "team": "away",
+          "name": "Julián Álvarez",
+          "pos": "CF-L",
+          "num": 9,
+          "starter": true,
+          "aid": "277206",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 3,
+          "fs": 1,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 16
+        },
+        {
+          "team": "away",
+          "name": "Lionel Messi",
+          "pos": "CF-R",
+          "num": 10,
+          "starter": true,
+          "aid": "45843",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 4,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 19
+        },
+        {
+          "team": "away",
+          "name": "Leandro Paredes",
+          "pos": "SUB",
+          "num": 5,
+          "starter": false,
+          "aid": "153115",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 4,
+          "fs": 0,
+          "yc": 1,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 19
+        },
+        {
+          "team": "away",
+          "name": "Nicolás Otamendi",
+          "pos": "SUB",
+          "num": 19,
+          "starter": false,
+          "aid": "119289",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 1,
+          "fs": 2,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 19
+        },
+        {
+          "team": "away",
+          "name": "Nahuel Molina",
+          "pos": "SUB",
+          "num": 26,
+          "starter": false,
+          "aid": "164826",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 2,
+          "bk": 0,
+          "ps": 8
+        },
+        {
+          "team": "away",
+          "name": "Giuliano Simeone",
+          "pos": "SUB",
+          "num": 17,
+          "starter": false,
+          "aid": "323838",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 2,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 0,
+          "bk": 0,
+          "ps": 7
+        },
+        {
+          "team": "away",
+          "name": "Facundo Medina",
+          "pos": "SUB",
+          "num": 25,
+          "starter": false,
+          "aid": "249663",
+          "g": 0,
+          "a": 0,
+          "sh": 0,
+          "sot": 0,
+          "fc": 0,
+          "fs": 0,
+          "yc": 0,
+          "rc": 0,
+          "off": 0,
+          "tk": 1,
+          "bk": 0,
+          "ps": 11
+        }
+      ],
+      "subs": [
+        {
+          "team": "away",
+          "minute": 44,
+          "on": "Nicolás Otamendi",
+          "off": "Lisandro Martínez",
+          "injury": true
+        },
+        {
+          "team": "away",
+          "minute": 45,
+          "on": "Leandro Paredes",
+          "off": "Nico González",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 57,
+          "on": "Nahuel Molina",
+          "off": "Gonzalo Montiel",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 61,
+          "on": "Ferran Torres",
+          "off": "Mikel Oyarzabal",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 61,
+          "on": "Pedri",
+          "off": "Fabián Ruiz",
+          "injury": false
+        },
+        {
+          "team": "away",
+          "minute": 70,
+          "on": "Facundo Medina",
+          "off": "Cristian Romero",
+          "injury": true
+        },
+        {
+          "team": "away",
+          "minute": 70,
+          "on": "Giuliano Simeone",
+          "off": "Rodrigo De Paul",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 75,
+          "on": "Nico Williams",
+          "off": "Álex Baena",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 75,
+          "on": "Mikel Merino",
+          "off": "Dani Olmo",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 98,
+          "on": "Martín Zubimendi",
+          "off": "Rodri",
+          "injury": false
+        },
+        {
+          "team": "home",
+          "minute": 98,
+          "on": "Eric García",
+          "off": "Aymeric Laporte",
+          "injury": false
+        }
+      ],
+      "firstGoalMethod": null,
+      "firstPenalty": null,
+      "waterBreak": {
+        "h1": {
+          "half": 1,
+          "anchorMinute": 22,
+          "source": "delay",
+          "breakEndMinute": 27,
+          "firstActionType": "Handball",
+          "firstActionMinute": 28,
+          "isCorner": false,
+          "reliable": true
+        },
+        "h2": {
+          "half": 2,
+          "anchorMinute": 67,
+          "source": "delay",
+          "breakEndMinute": 70,
+          "firstActionType": "Foul",
+          "firstActionMinute": 75,
+          "isCorner": false,
+          "reliable": true
+        }
+      },
+      "tempo": {
+        "possession": {
+          "home": 67.5,
+          "away": 32.5
+        },
+        "passes": {
+          "home": 722,
+          "away": 356
+        },
+        "tackles": {
+          "home": 14,
+          "away": 15
+        },
+        "saves": {
+          "home": 0,
+          "away": 11
+        },
+        "offsides": {
+          "home": 2,
+          "away": 1
+        },
+        "blockedShots": {
+          "home": 2,
+          "away": 0
+        },
+        "interceptions": {
+          "home": 8,
+          "away": 14
+        },
+        "clearances": {
+          "home": 11,
+          "away": 19
+        }
+      },
+      "full": [
+        {
+          "key": "foulsCommitted",
+          "label": "Fouls",
+          "home": "16",
+          "away": "21"
+        },
+        {
+          "key": "yellowCards",
+          "label": "Yellow Cards",
+          "home": "0",
+          "away": "3"
+        },
+        {
+          "key": "redCards",
+          "label": "Red Cards",
+          "home": "0",
+          "away": "1"
+        },
+        {
+          "key": "offsides",
+          "label": "Offsides",
+          "home": "2",
+          "away": "1"
+        },
+        {
+          "key": "wonCorners",
+          "label": "Corner Kicks",
+          "home": "9",
+          "away": "1"
+        },
+        {
+          "key": "saves",
+          "label": "Saves",
+          "home": "0",
+          "away": "11"
+        },
+        {
+          "key": "possessionPct",
+          "label": "POSSESSION",
+          "home": "67.5",
+          "away": "32.5"
+        },
+        {
+          "key": "totalShots",
+          "label": "SHOTS",
+          "home": "16",
+          "away": "0"
+        },
+        {
+          "key": "shotsOnTarget",
+          "label": "ON GOAL",
+          "home": "11",
+          "away": "0"
+        },
+        {
+          "key": "shotPct",
+          "label": "On Target %",
+          "home": "0.7",
+          "away": "0.0"
+        },
+        {
+          "key": "penaltyKickGoals",
+          "label": "Penalty Goals",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "penaltyKickShots",
+          "label": "Penalty Kicks Taken",
+          "home": "0",
+          "away": "0"
+        },
+        {
+          "key": "accuratePasses",
+          "label": "Accurate Passes",
+          "home": "653",
+          "away": "280"
+        },
+        {
+          "key": "totalPasses",
+          "label": "Passes",
+          "home": "722",
+          "away": "356"
+        },
+        {
+          "key": "passPct",
+          "label": "Pass Completion %",
+          "home": "0.9",
+          "away": "0.8"
+        },
+        {
+          "key": "accurateCrosses",
+          "label": "Accurate Crosses",
+          "home": "3",
+          "away": "0"
+        },
+        {
+          "key": "totalCrosses",
+          "label": "Crosses",
+          "home": "24",
+          "away": "2"
+        },
+        {
+          "key": "crossPct",
+          "label": "Cross %",
+          "home": "0.1",
+          "away": "0.0"
+        },
+        {
+          "key": "totalLongBalls",
+          "label": "Long Balls",
+          "home": "41",
+          "away": "49"
+        },
+        {
+          "key": "accurateLongBalls",
+          "label": "Accurate Long Balls",
+          "home": "21",
+          "away": "15"
+        },
+        {
+          "key": "longballPct",
+          "label": "Long Balls %",
+          "home": "0.5",
+          "away": "0.3"
+        },
+        {
+          "key": "blockedShots",
+          "label": "Blocked Shots",
+          "home": "2",
+          "away": "0"
+        },
+        {
+          "key": "effectiveTackles",
+          "label": "Effective Tackles",
+          "home": "9",
+          "away": "11"
+        },
+        {
+          "key": "totalTackles",
+          "label": "Tackles",
+          "home": "14",
+          "away": "15"
+        },
+        {
+          "key": "tacklePct",
+          "label": "Tackle %",
+          "home": "0.6",
+          "away": "0.7"
+        },
+        {
+          "key": "interceptions",
+          "label": "Interceptions",
+          "home": "8",
+          "away": "14"
+        },
+        {
+          "key": "effectiveClearance",
+          "label": "Effective Clearances",
+          "home": "11",
+          "away": "19"
+        },
+        {
+          "key": "totalClearance",
+          "label": "Clearances",
+          "home": "11",
+          "away": "19"
+        }
+      ],
+      "playerTackles": {
+        "Álex Baena": 1,
+        "Marc Cucurella": 1,
+        "Pau Cubarsí": 1,
+        "Cristian Romero": 1
       }
     }
   }

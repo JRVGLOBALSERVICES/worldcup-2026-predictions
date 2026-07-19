@@ -1022,6 +1022,17 @@ export const playerTacklesCount = (stats: MatchStats | null, player: string): nu
 export const subbedOff = (stats: MatchStats | null, player: string): boolean =>
   (stats?.subs ?? []).some((s) => nameMatch(s.off, player));
 
+/** Was `player` sent OFF — subbed off OR shown a red (straight or 2nd yellow)?
+ *  Football has no re-entry, so once he's gone his line is frozen: a must-do
+ *  player prop (score / assist / shots / SOT / tackles) short of its target can
+ *  never recover and locks dead. Reads the subs log plus the per-player card
+ *  list (matchEvents first, then the results snapshot). */
+export const playerOff = (matchId: string, player: string): boolean => {
+  if (subbedOff(getStats(matchId), player)) return true;
+  const cards = getEvents(matchId).cards ?? [];
+  return cardsBy(cards, player).some((c) => c.type === "red");
+};
+
 // `realGoals` = the 90-minute scoring goals: no own goals, no extra-time goals.
 // Every scorer/first-scorer/brace/total market reads through this, so they all
 // settle on regulation only — matching the bookmaker rule that those markets are
@@ -1287,6 +1298,11 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
     for (const leg of g.legs) {
       const ev = getEvents(leg.matchId);
       const finished = ev.status === "finished";
+      // Regulation is over — the tie is finished OR still live but past 90 (ET/
+      // pens), in which case build-results has frozen ft90. Every 90-minute
+      // market (1X2, correct score, totals, anytime scorer — all read off ft90 /
+      // regulation goals) settles here, without waiting out ET/pens.
+      const reg90 = finished || getResult(leg.matchId).ft90 != null;
 
       if (leg.kind === "scored") {
         const scoredIt = goalsBy(ev.goals, leg.player).length > 0;
@@ -1298,7 +1314,8 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
           continue;
         }
         if (scoredIt) continue; // leg won, even mid-match
-        if (finished) return "lost"; // his match ended, no goal → whole acca dead
+        if (playerOff(leg.matchId, leg.player)) return "lost"; // off the pitch → can't score in 90
+        if (reg90) return "lost"; // regulation over, never scored → dead (don't wait out ET/pens)
         pending = true;
         continue;
       }
@@ -1323,7 +1340,8 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         const tally =
           goalsBy(ev.goals, leg.player).length + assistsBy(ev.goals, leg.player).length;
         if (tally > leg.line) continue; // leg won, even mid-match
-        if (finished) return "lost"; // match over, never cleared → acca dead
+        if (playerOff(leg.matchId, leg.player)) return "lost"; // off the pitch → line frozen short
+        if (reg90) return "lost"; // regulation over, never cleared → acca dead
         pending = true;
         continue;
       }
@@ -1333,7 +1351,8 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         const involved =
           goalsBy(ev.goals, leg.player).length + assistsBy(ev.goals, leg.player).length;
         if (involved > 0) continue; // leg won
-        if (finished) return "lost";
+        if (playerOff(leg.matchId, leg.player)) return "lost"; // off the pitch → can't get involved in 90
+        if (reg90) return "lost";
         pending = true;
         continue;
       }
@@ -1350,7 +1369,8 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
           continue;
         }
         if (assistedIt) continue; // leg won, even mid-match
-        if (finished) return "lost"; // his match ended, no assist → whole acca dead
+        if (playerOff(leg.matchId, leg.player)) return "lost"; // off the pitch → can't assist in 90
+        if (reg90) return "lost"; // regulation over, never assisted → whole acca dead
         pending = true;
         continue;
       }
@@ -1359,7 +1379,8 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         // Named player's GOALS only (no assists) over the line — clinches
         // mid-match like `scored`; dies only when the match ends short.
         if (goalsBy(ev.goals, leg.player).length > leg.line) continue; // leg won
-        if (finished) return "lost";
+        if (playerOff(leg.matchId, leg.player)) return "lost"; // off the pitch → line frozen short
+        if (reg90) return "lost";
         pending = true;
         continue;
       }
@@ -1401,9 +1422,9 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
           goalsBy(ev.goals, leg.player).length,
         );
         if (shots > leg.line) continue; // leg won, even mid-match
-        // Subbed off still under the line → his tally is frozen, acca dead —
-        // but only trust it when the shot map was actually snapshotted.
-        if (st?.playerShots && subbedOff(st, leg.player)) return "lost";
+        // Off the pitch (subbed or sent off) still under the line → his tally is
+        // frozen, acca dead — but only trust it when the shot map was snapshotted.
+        if (st?.playerShots && playerOff(leg.matchId, leg.player)) return "lost";
         if (finished) {
           if (!st?.playerShots) {
             pending = true; // stats never snapshotted → manual settle
@@ -1427,9 +1448,9 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
           goalsBy(ev.goals, leg.player).length,
         );
         if (sot > leg.line) continue; // leg won, even mid-match
-        // Subbed off still under the line → his tally is frozen, acca dead —
-        // but only trust it when the SOT map was actually snapshotted.
-        if (st?.playerSot && subbedOff(st, leg.player)) return "lost";
+        // Off the pitch (subbed or sent off) still under the line → his tally is
+        // frozen, acca dead — but only trust it when the SOT map was snapshotted.
+        if (st?.playerSot && playerOff(leg.matchId, leg.player)) return "lost";
         if (finished) {
           if (!st?.playerSot) {
             pending = true; // stats never snapshotted → manual settle
@@ -1448,9 +1469,9 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         const st = getStats(leg.matchId);
         const tackles = playerTacklesCount(st, leg.player);
         if (tackles != null && tackles > leg.line) continue; // leg won, even mid-match
-        // Subbed off still under the line → his tally is frozen, acca dead —
-        // but only trust it when his tackle count was actually verified.
-        if (tackles != null && subbedOff(st, leg.player)) return "lost";
+        // Off the pitch (subbed or sent off) still under the line → his tally is
+        // frozen, acca dead — but only trust it when his tackle count was verified.
+        if (tackles != null && playerOff(leg.matchId, leg.player)) return "lost";
         if (finished) {
           if (tackles == null) {
             pending = true; // count never landed → manual settle
@@ -1816,9 +1837,11 @@ export function gradeSpecial(special: Special, adj?: PayoutAdj): BetStatus {
         continue;
       }
 
-      // Every remaining leg kind needs the FINAL score, so it can't decide
-      // until the leg match is finished.
-      if (!finished) {
+      // Every remaining leg kind is a 90-MINUTE market (all read ft90 below), so
+      // it decides the moment regulation is over — the tie need not be fully
+      // finished. `qualify` is the one full-match exception and self-guards to
+      // pending on a level ft90 until the actual advancer is on record.
+      if (!reg90) {
         pending = true;
         continue;
       }
