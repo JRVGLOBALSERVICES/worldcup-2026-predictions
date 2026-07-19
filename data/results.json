@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19T21:20:05.853Z",
+    "generatedAt": "2026-07-19T21:30:06.312Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 83,
     "live": 1
@@ -97821,7 +97821,10 @@
         "away": 0
       },
       "ft": null,
-      "ft90": null,
+      "ft90": {
+        "home": 0,
+        "away": 0
+      },
       "finishPhase": null,
       "score": {
         "home": 0,
@@ -97868,11 +97871,11 @@
           "away": 1
         },
         "sot": {
-          "home": 10,
+          "home": 11,
           "away": 0
         },
         "shots": {
-          "home": 15,
+          "home": 16,
           "away": 0
         },
         "yellow": {
@@ -97888,8 +97891,8 @@
           "away": 4
         },
         "fouls": {
-          "home": 13,
-          "away": 19
+          "home": 16,
+          "away": 20
         },
         "cornersByHalf": {
           "home": [
@@ -97920,7 +97923,7 @@
           "Pedri": 1,
           "Pau Cubarsí": 1,
           "Aymeric Laporte": 1,
-          "Nico Williams": 1
+          "Nico Williams": 2
         },
         "playerShots": {
           "Lamine Yamal": 3,
@@ -97933,7 +97936,7 @@
           "Pau Cubarsí": 1,
           "Aymeric Laporte": 1,
           "Rodri": 1,
-          "Nico Williams": 1
+          "Nico Williams": 2
         },
         "playerShotBreakdown": {
           "Lamine Yamal": {
@@ -98018,8 +98021,8 @@
           },
           "Nico Williams": {
             "team": "home",
-            "shots": 1,
-            "sot": 1,
+            "shots": 2,
+            "sot": 2,
             "off": 0,
             "blocked": 0,
             "goals": 0
@@ -98061,13 +98064,13 @@
             "sh": 1,
             "sot": 1,
             "fc": 1,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 85
+            "ps": 87
           },
           {
             "team": "home",
@@ -98087,7 +98090,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 101
+            "ps": 106
           },
           {
             "team": "home",
@@ -98107,7 +98110,7 @@
             "off": 1,
             "tk": 1,
             "bk": 0,
-            "ps": 53
+            "ps": 55
           },
           {
             "team": "home",
@@ -98120,14 +98123,14 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 2,
+            "fc": 3,
             "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 71
+            "ps": 73
           },
           {
             "team": "home",
@@ -98185,9 +98188,9 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "tk": 3,
+            "tk": 4,
             "bk": 0,
-            "ps": 94
+            "ps": 96
           },
           {
             "team": "home",
@@ -98251,6 +98254,23 @@
           },
           {
             "team": "home",
+            "name": "Martín Zubimendi",
+            "pos": "SUB",
+            "num": 18,
+            "starter": false,
+            "aid": "287266",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "home",
             "name": "Nico Williams",
             "pos": "SUB",
             "num": 17,
@@ -98258,8 +98278,8 @@
             "aid": "312146",
             "g": 0,
             "a": 0,
-            "sh": 1,
-            "sot": 1,
+            "sh": 2,
+            "sot": 2,
             "fc": 0,
             "fs": 0,
             "yc": 0,
@@ -98267,7 +98287,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 10
           },
           {
             "team": "home",
@@ -98300,14 +98320,14 @@
             "a": 0,
             "sh": 1,
             "sot": 1,
-            "fc": 0,
+            "fc": 1,
             "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 27
+            "ps": 29
           },
           {
             "team": "home",
@@ -98320,7 +98340,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 0,
+            "fc": 1,
             "fs": 2,
             "yc": 0,
             "rc": 0,
@@ -98328,6 +98348,23 @@
             "tk": 0,
             "bk": 0,
             "ps": 12
+          },
+          {
+            "team": "home",
+            "name": "Eric García",
+            "pos": "SUB",
+            "num": 4,
+            "starter": false,
+            "aid": "128714",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           },
           {
             "team": "away",
@@ -98346,7 +98383,7 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "sv": 10,
+            "sv": 11,
             "gc": 0,
             "tk": 0,
             "bk": 0,
@@ -98404,13 +98441,13 @@
             "sh": 0,
             "sot": 0,
             "fc": 3,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 25
+            "ps": 26
           },
           {
             "team": "away",
@@ -98444,7 +98481,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 2,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98470,7 +98507,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 35
+            "ps": 36
           },
           {
             "team": "away",
@@ -98530,7 +98567,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 13
+            "ps": 15
           },
           {
             "team": "away",
@@ -98550,7 +98587,7 @@
             "off": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 17
+            "ps": 19
           },
           {
             "team": "away",
@@ -98570,7 +98607,7 @@
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 15
+            "ps": 16
           },
           {
             "team": "away",
@@ -98584,7 +98621,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 1,
-            "fs": 1,
+            "fs": 2,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98623,14 +98660,14 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 1,
+            "fc": 2,
             "fs": 0,
             "yc": 0,
             "rc": 0,
             "off": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 4
           },
           {
             "team": "away",
@@ -98716,6 +98753,13 @@
             "on": "Mikel Merino",
             "off": "Dani Olmo",
             "injury": false
+          },
+          {
+            "team": "home",
+            "minute": 98,
+            "on": "Martín Zubimendi",
+            "off": "Rodri",
+            "injury": false
           }
         ],
         "firstGoalMethod": null,
@@ -98744,12 +98788,12 @@
         },
         "tempo": {
           "possession": {
-            "home": 66.3,
-            "away": 33.7
+            "home": 67.3,
+            "away": 32.7
           },
           "passes": {
-            "home": 647,
-            "away": 337
+            "home": 711,
+            "away": 353
           },
           "tackles": {
             "home": 14,
@@ -98757,7 +98801,7 @@
           },
           "saves": {
             "home": 0,
-            "away": 10
+            "away": 11
           },
           "offsides": {
             "home": 2,
@@ -98773,15 +98817,15 @@
           },
           "clearances": {
             "home": 11,
-            "away": 16
+            "away": 18
           }
         },
         "full": [
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "13",
-            "away": "19"
+            "home": "16",
+            "away": "20"
           },
           {
             "key": "yellowCards",
@@ -98811,24 +98855,24 @@
             "key": "saves",
             "label": "Saves",
             "home": "0",
-            "away": "10"
+            "away": "11"
           },
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "66.3",
-            "away": "33.7"
+            "home": "67.3",
+            "away": "32.7"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "15",
+            "home": "16",
             "away": "0"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
-            "home": "10",
+            "home": "11",
             "away": "0"
           },
           {
@@ -98852,14 +98896,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "583",
-            "away": "268"
+            "home": "643",
+            "away": "278"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "647",
-            "away": "337"
+            "home": "711",
+            "away": "353"
           },
           {
             "key": "passPct",
@@ -98870,13 +98914,13 @@
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "2",
+            "home": "3",
             "away": "0"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "23",
+            "home": "24",
             "away": "2"
           },
           {
@@ -98888,14 +98932,14 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "37",
-            "away": "45"
+            "home": "40",
+            "away": "48"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "18",
-            "away": "13"
+            "home": "20",
+            "away": "14"
           },
           {
             "key": "longballPct",
@@ -98937,20 +98981,20 @@
             "key": "effectiveClearance",
             "label": "Effective Clearances",
             "home": "11",
-            "away": "16"
+            "away": "18"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
             "home": "11",
-            "away": "16"
+            "away": "18"
           }
         ],
         "playerTackles": {
-          "Cristian Romero": 1,
+          "Pau Cubarsí": 1,
           "Marc Cucurella": 1,
           "Álex Baena": 1,
-          "Pau Cubarsí": 1
+          "Cristian Romero": 1
         }
       }
     },
