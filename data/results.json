@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19T20:10:06.518Z",
+    "generatedAt": "2026-07-19T20:30:06.398Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 83,
     "live": 1
@@ -97816,7 +97816,10 @@
     },
     "esp-arg-2026-07-19": {
       "state": "live",
-      "ht": null,
+      "ht": {
+        "home": 0,
+        "away": 0
+      },
       "ft": null,
       "ft90": null,
       "finishPhase": null,
@@ -97832,25 +97835,31 @@
           "player": "Lisandro Martínez",
           "minute": 40,
           "type": "yellow"
+        },
+        {
+          "team": "away",
+          "player": "Leandro Paredes",
+          "minute": 51,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-19T19:00:00.000Z",
       "stats": {
         "corners": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
         "sot": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "shots": {
-          "home": 3,
+          "home": 4,
           "away": 0
         },
         "yellow": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "red": {
           "home": 0,
@@ -97858,11 +97867,11 @@
         },
         "cards": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "fouls": {
-          "home": 7,
-          "away": 9
+          "home": 9,
+          "away": 10
         },
         "cornersByHalf": {
           "home": [
@@ -97871,13 +97880,13 @@
           ],
           "away": [
             0,
-            0
+            1
           ]
         },
         "sotByHalf": {
           "home": [
             2,
-            0
+            1
           ],
           "away": [
             0,
@@ -97886,12 +97895,14 @@
         },
         "playerSot": {
           "Lamine Yamal": 1,
-          "Mikel Oyarzabal": 1
+          "Mikel Oyarzabal": 1,
+          "Álex Baena": 1
         },
         "playerShots": {
           "Lamine Yamal": 1,
           "Mikel Oyarzabal": 1,
-          "Marc Cucurella": 1
+          "Marc Cucurella": 1,
+          "Álex Baena": 1
         },
         "playerShotBreakdown": {
           "Lamine Yamal": {
@@ -97915,6 +97926,14 @@
             "shots": 1,
             "sot": 0,
             "off": 1,
+            "blocked": 0,
+            "goals": 0
+          },
+          "Álex Baena": {
+            "team": "home",
+            "shots": 1,
+            "sot": 1,
+            "off": 0,
             "blocked": 0,
             "goals": 0
           }
@@ -98075,7 +98094,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 2,
-            "fs": 2,
+            "fs": 3,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98112,9 +98131,9 @@
             "aid": "297373",
             "g": 0,
             "a": 0,
-            "sh": 0,
-            "sot": 0,
-            "fc": 1,
+            "sh": 1,
+            "sot": 1,
+            "fc": 3,
             "fs": 1,
             "yc": 0,
             "rc": 0,
@@ -98160,7 +98179,7 @@
             "yc": 0,
             "rc": 0,
             "off": 0,
-            "sv": 2,
+            "sv": 3,
             "gc": 0,
             "tk": 0,
             "bk": 0,
@@ -98238,7 +98257,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 1,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98318,7 +98337,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 0,
-            "fs": 0,
+            "fs": 1,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98368,6 +98387,23 @@
           },
           {
             "team": "away",
+            "name": "Leandro Paredes",
+            "pos": "SUB",
+            "num": 5,
+            "starter": false,
+            "aid": "153115",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 1,
+            "fs": 0,
+            "yc": 1,
+            "rc": 0,
+            "off": 0
+          },
+          {
+            "team": "away",
             "name": "Nicolás Otamendi",
             "pos": "SUB",
             "num": 19,
@@ -98394,6 +98430,13 @@
             "on": "Nicolás Otamendi",
             "off": "Lisandro Martínez",
             "injury": true
+          },
+          {
+            "team": "away",
+            "minute": 45,
+            "on": "Leandro Paredes",
+            "off": "Nico González",
+            "injury": false
           }
         ],
         "firstGoalMethod": null,
@@ -98412,20 +98455,20 @@
         },
         "tempo": {
           "possession": {
-            "home": 64.6,
-            "away": 35.4
+            "home": 60.8,
+            "away": 39.2
           },
           "passes": {
-            "home": 348,
-            "away": 196
+            "home": 370,
+            "away": 245
           },
           "tackles": {
-            "home": 7,
+            "home": 8,
             "away": 8
           },
           "saves": {
             "home": 0,
-            "away": 2
+            "away": 3
           },
           "offsides": {
             "home": 2,
@@ -98436,11 +98479,11 @@
             "away": 0
           },
           "interceptions": {
-            "home": 4,
+            "home": 5,
             "away": 5
           },
           "clearances": {
-            "home": 5,
+            "home": 8,
             "away": 4
           }
         },
@@ -98448,14 +98491,14 @@
           {
             "key": "foulsCommitted",
             "label": "Fouls",
-            "home": "7",
-            "away": "9"
+            "home": "9",
+            "away": "10"
           },
           {
             "key": "yellowCards",
             "label": "Yellow Cards",
             "home": "0",
-            "away": "1"
+            "away": "2"
           },
           {
             "key": "redCards",
@@ -98473,36 +98516,36 @@
             "key": "wonCorners",
             "label": "Corner Kicks",
             "home": "2",
-            "away": "0"
+            "away": "1"
           },
           {
             "key": "saves",
             "label": "Saves",
             "home": "0",
-            "away": "2"
+            "away": "3"
           },
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "64.6",
-            "away": "35.4"
+            "home": "60.8",
+            "away": "39.2"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "3",
+            "home": "4",
             "away": "0"
           },
           {
             "key": "shotsOnTarget",
             "label": "ON GOAL",
-            "home": "2",
+            "home": "3",
             "away": "0"
           },
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "0.7",
+            "home": "0.8",
             "away": "0.0"
           },
           {
@@ -98520,14 +98563,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "313",
-            "away": "155"
+            "home": "331",
+            "away": "199"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "348",
-            "away": "196"
+            "home": "370",
+            "away": "245"
           },
           {
             "key": "passPct",
@@ -98545,7 +98588,7 @@
             "key": "totalCrosses",
             "label": "Crosses",
             "home": "10",
-            "away": "1"
+            "away": "2"
           },
           {
             "key": "crossPct",
@@ -98556,14 +98599,14 @@
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "23",
-            "away": "27"
+            "home": "24",
+            "away": "30"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
             "home": "10",
-            "away": "7"
+            "away": "8"
           },
           {
             "key": "longballPct",
@@ -98580,13 +98623,13 @@
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "6",
+            "home": "7",
             "away": "6"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "7",
+            "home": "8",
             "away": "8"
           },
           {
@@ -98598,27 +98641,27 @@
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "4",
+            "home": "5",
             "away": "5"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "5",
+            "home": "8",
             "away": "4"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "5",
+            "home": "8",
             "away": "4"
           }
         ],
         "playerTackles": {
           "Álex Baena": 1,
-          "Marc Cucurella": 0,
           "Cristian Romero": 1,
-          "Pau Cubarsí": 0
+          "Pau Cubarsí": 0,
+          "Marc Cucurella": 0
         }
       }
     },
