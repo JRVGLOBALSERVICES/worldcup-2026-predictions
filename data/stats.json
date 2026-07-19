@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19T21:10:07.980Z",
+    "generatedAt": "2026-07-19T21:20:08.994Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 87
   },
@@ -186,6 +186,13 @@
     "yellowCards": [
       {
         "rank": 1,
+        "name": "Cristian Romero",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 2
+      },
+      {
+        "rank": 1,
         "name": "Leandro Paredes",
         "team": "Argentina",
         "flag": "🇦🇷",
@@ -199,63 +206,64 @@
         "value": 2
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Álex Baena",
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 1
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Aymeric Laporte",
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 1
       },
       {
-        "rank": 3,
-        "name": "Cristian Romero",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 1
-      },
-      {
-        "rank": 3,
+        "rank": 4,
         "name": "Enzo Fernández",
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 1
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Facundo Medina",
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 1
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Ferran Torres",
         "team": "Spain",
         "flag": "🇪🇸",
         "value": 1
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Gonzalo Montiel",
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 1
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "José Manuel López",
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 1
       }
     ],
-    "redCards": [],
+    "redCards": [
+      {
+        "rank": 1,
+        "name": "Enzo Fernández",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 1
+      }
+    ],
     "penaltyScored": [
       {
         "rank": 1,
@@ -287,7 +295,7 @@
         "name": "Rodri",
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 24,
+        "value": 25,
         "matches": 7
       },
       {
@@ -451,7 +459,7 @@
         "name": "Emiliano Martínez",
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 17,
+        "value": 19,
         "matches": 8
       },
       {
@@ -506,8 +514,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 41,
-        "display": "41.0%",
+        "value": 42.1,
+        "display": "42.1%",
         "matches": 7
       },
       {
@@ -524,8 +532,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 64.2,
-        "display": "64.2%",
+        "value": 63.6,
+        "display": "63.6%",
         "matches": 7
       },
       {
@@ -550,8 +558,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 18.5,
-        "display": "18.5%",
+        "value": 18.4,
+        "display": "18.4%",
         "matches": 7
       }
     ],
@@ -560,8 +568,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 53.2,
-        "display": "53.2%",
+        "value": 53,
+        "display": "53.0%",
         "matches": 7
       },
       {
@@ -889,16 +897,16 @@
       ],
       "yellowCards": [
         {
+          "name": "Cristian Romero",
+          "value": 2
+        },
+        {
           "name": "Leandro Paredes",
           "value": 2
         },
         {
           "name": "Lisandro Martínez",
           "value": 2
-        },
-        {
-          "name": "Cristian Romero",
-          "value": 1
         },
         {
           "name": "Enzo Fernández",
@@ -909,7 +917,12 @@
           "value": 1
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "name": "Enzo Fernández",
+          "value": 1
+        }
+      ]
     },
     "austria": {
       "team": "Austria",
@@ -3277,7 +3290,7 @@
           "sot": 15,
           "tackles": 11,
           "blocks": 6,
-          "passes": 332,
+          "passes": 334,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3311,10 +3324,10 @@
           "sot": 4,
           "tackles": 11,
           "blocks": 4,
-          "passes": 510,
+          "passes": 511,
           "saves": 0,
           "yellow": 1,
-          "red": 0,
+          "red": 1,
           "penScored": 0,
           "penMissed": 0,
           "gk": false
@@ -3362,7 +3375,7 @@
           "sot": 5,
           "tackles": 5,
           "blocks": 2,
-          "passes": 205,
+          "passes": 207,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3381,7 +3394,7 @@
           "blocks": 0,
           "passes": 431,
           "saves": 0,
-          "yellow": 1,
+          "yellow": 2,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -3499,7 +3512,7 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 230,
-          "saves": 17,
+          "saves": 19,
           "yellow": 0,
           "red": 0,
           "penScored": 0,
@@ -3532,7 +3545,7 @@
           "sot": 1,
           "tackles": 9,
           "blocks": 1,
-          "passes": 537,
+          "passes": 538,
           "saves": 0,
           "yellow": 2,
           "red": 0,
@@ -3549,7 +3562,7 @@
           "sot": 0,
           "tackles": 8,
           "blocks": 0,
-          "passes": 189,
+          "passes": 190,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3600,7 +3613,7 @@
           "sot": 0,
           "tackles": 4,
           "blocks": 0,
-          "passes": 71,
+          "passes": 73,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3725,7 +3738,7 @@
           "sot": 3,
           "tackles": 14,
           "blocks": 0,
-          "passes": 333,
+          "passes": 335,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3755,8 +3768,8 @@
           "apps": 7,
           "goals": 1,
           "assists": 0,
-          "shots": 23,
-          "sot": 10,
+          "shots": 24,
+          "sot": 11,
           "tackles": 11,
           "blocks": 6,
           "passes": 228,
@@ -3810,7 +3823,7 @@
           "sot": 2,
           "tackles": 5,
           "blocks": 0,
-          "passes": 326,
+          "passes": 328,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3827,7 +3840,7 @@
           "sot": 1,
           "tackles": 5,
           "blocks": 0,
-          "passes": 539,
+          "passes": 541,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3876,9 +3889,9 @@
           "assists": 0,
           "shots": 5,
           "sot": 0,
-          "tackles": 24,
+          "tackles": 25,
           "blocks": 2,
-          "passes": 669,
+          "passes": 671,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3895,7 +3908,7 @@
           "sot": 1,
           "tackles": 8,
           "blocks": 1,
-          "passes": 327,
+          "passes": 329,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3912,7 +3925,7 @@
           "sot": 2,
           "tackles": 7,
           "blocks": 0,
-          "passes": 560,
+          "passes": 565,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3942,11 +3955,11 @@
           "apps": 5,
           "goals": 0,
           "assists": 0,
-          "shots": 0,
-          "sot": 0,
+          "shots": 1,
+          "sot": 1,
           "tackles": 0,
           "blocks": 0,
-          "passes": 31,
+          "passes": 33,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -38730,22 +38743,22 @@
           {
             "team": "Spain",
             "possessionPct": 66.3,
-            "accuratePasses": 568,
-            "totalPasses": 630,
-            "shotsOnTarget": 8,
-            "totalShots": 13,
+            "accuratePasses": 583,
+            "totalPasses": 647,
+            "shotsOnTarget": 10,
+            "totalShots": 15,
             "effectiveTackles": 9,
-            "totalTackles": 13,
+            "totalTackles": 14,
             "accurateCrosses": 2,
-            "totalCrosses": 22,
+            "totalCrosses": 23,
             "accurateLongBalls": 18,
-            "totalLongBalls": 36
+            "totalLongBalls": 37
           },
           {
             "team": "Argentina",
             "possessionPct": 33.7,
-            "accuratePasses": 261,
-            "totalPasses": 328,
+            "accuratePasses": 268,
+            "totalPasses": 337,
             "shotsOnTarget": 0,
             "totalShots": 0,
             "effectiveTackles": 10,
@@ -38779,7 +38792,7 @@
             "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 85
+            "ps": 87
           },
           {
             "n": "Pau Cubarsí",
@@ -38790,7 +38803,7 @@
             "st": 1,
             "tk": 1,
             "bk": 0,
-            "ps": 101
+            "ps": 106
           },
           {
             "n": "Marc Cucurella",
@@ -38801,7 +38814,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 53
+            "ps": 55
           },
           {
             "n": "Pedro Porro",
@@ -38812,7 +38825,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 71
+            "ps": 73
           },
           {
             "n": "Dani Olmo",
@@ -38843,9 +38856,9 @@
             "tid": "164",
             "sh": 1,
             "st": 0,
-            "tk": 3,
+            "tk": 4,
             "bk": 0,
-            "ps": 94
+            "ps": 96
           },
           {
             "n": "Mikel Oyarzabal",
@@ -38874,8 +38887,8 @@
             "t": "Spain",
             "aid": "362150",
             "tid": "164",
-            "sh": 2,
-            "st": 1,
+            "sh": 3,
+            "st": 2,
             "tk": 3,
             "bk": 1,
             "ps": 35
@@ -38885,11 +38898,11 @@
             "t": "Spain",
             "aid": "312146",
             "tid": "164",
-            "sh": 0,
-            "st": 0,
+            "sh": 1,
+            "st": 1,
             "tk": 0,
             "bk": 0,
-            "ps": 8
+            "ps": 10
           },
           {
             "n": "Ferran Torres",
@@ -38911,7 +38924,7 @@
             "st": 1,
             "tk": 1,
             "bk": 0,
-            "ps": 27
+            "ps": 29
           },
           {
             "n": "Mikel Merino",
@@ -38930,7 +38943,7 @@
             "aid": "158626",
             "tid": "202",
             "gk": 1,
-            "sv": 8,
+            "sv": 10,
             "sh": 0,
             "st": 0,
             "tk": 0,
@@ -38968,7 +38981,7 @@
             "st": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 25
+            "ps": 26
           },
           {
             "n": "Gonzalo Montiel",
@@ -39001,7 +39014,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 35
+            "ps": 36
           },
           {
             "n": "Nico González",
@@ -39034,7 +39047,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 13
+            "ps": 15
           },
           {
             "n": "Lionel Messi",
@@ -39045,7 +39058,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 17
+            "ps": 19
           },
           {
             "n": "Leandro Paredes",
@@ -39056,7 +39069,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 15
+            "ps": 16
           },
           {
             "n": "Nicolás Otamendi",
@@ -39089,7 +39102,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 2
+            "ps": 4
           },
           {
             "n": "Facundo Medina",
