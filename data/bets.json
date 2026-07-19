@@ -20754,6 +20754,181 @@
           }
         ]
       }
+    },
+    {
+      "id": "sp-866705002981445632",
+      "slipNo": "866705002981445632",
+      "matchId": "esp-arg-2026-07-19",
+      "player": "Spain vs Argentina (Final)",
+      "market": "Match Parlay · 6 legs",
+      "label": "REAL 1xBet PARLAY 866705002981445632 @81.73, RM32 -> RM2615.36. Messi score/assist · Unai Simón saves o1.5 · E.Martínez saves o1.5 · Baena tackles o0.5 · Argentina corners Over 3.5 · Romero anytime scorer.",
+      "odds": 81.73,
+      "stake": 32,
+      "placedAt": "19/07 23:36",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scoredOrAssisted",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "gkSavesOver",
+            "player": "Unai Simón",
+            "side": "home",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "gkSavesOver",
+            "player": "Emiliano Martínez",
+            "side": "away",
+            "line": 1.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerTacklesOver",
+            "player": "Álex Baena",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "teamCornersOver",
+            "side": "away",
+            "line": 3.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scored",
+            "player": "Cristian Romero"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-866703969203404800",
+      "slipNo": "866703969203404800",
+      "matchId": "esp-arg-2026-07-19",
+      "player": "Spain vs Argentina (Final)",
+      "market": "Match Parlay · 8 legs",
+      "label": "REAL 1xBet PARLAY 866703969203404800 @68.00, RM40 -> RM2720.00. Over 0.5 · Under 4.5 · Yamal SOT o0.5 · Draw (X) · Argentina win the cup · Messi anytime scorer · Mac Allister SOT o0.5 · Cucurella tackles o0.5.",
+      "odds": 68.0,
+      "stake": 40,
+      "placedAt": "19/07 23:32",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Lamine Yamal",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "qualify",
+            "side": "away"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Alexis Mac Allister",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerTacklesOver",
+            "player": "Marc Cucurella",
+            "line": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "sp-866703244116840448",
+      "slipNo": "866703244116840448",
+      "matchId": "esp-arg-2026-07-19",
+      "player": "Spain vs Argentina (Final)",
+      "market": "Match Parlay · 9 legs",
+      "label": "REAL 1xBet PARLAY 866703244116840448 @96.25, RM28 -> RM2695.00. Draw (X) · Spain win the cup · Over 0.5 · Under 4.5 · Total corners Over 8.5 · Messi anytime scorer · Yamal SOT o0.5 · Oyarzabal SOT o0.5 · Cucurella tackles o1.5.",
+      "odds": 96.25,
+      "stake": 28,
+      "placedAt": "19/07 23:29",
+      "grade": {
+        "type": "multiLeg",
+        "legs": [
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "result",
+            "outcome": "X"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "qualify",
+            "side": "home"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalOver",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "totalUnder",
+            "line": 4.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "cornersTotalOver",
+            "line": 8.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "scored",
+            "player": "Lionel Messi"
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Lamine Yamal",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerSotOver",
+            "player": "Mikel Oyarzabal",
+            "line": 0.5
+          },
+          {
+            "matchId": "esp-arg-2026-07-19",
+            "kind": "playerTacklesOver",
+            "player": "Marc Cucurella",
+            "line": 1.5
+          }
+        ]
+      }
     }
   ],
   "matchStats": {
