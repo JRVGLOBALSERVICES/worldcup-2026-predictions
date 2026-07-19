@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19T21:40:09.703Z",
+    "generatedAt": "2026-07-19T21:50:09.167Z",
     "source": "ESPN keyless FIFA World Cup feed (statistics + scoreboard + summary)",
     "finished": 87
   },
@@ -214,6 +214,13 @@
       },
       {
         "rank": 4,
+        "name": "Alexis Mac Allister",
+        "team": "Argentina",
+        "flag": "🇦🇷",
+        "value": 1
+      },
+      {
+        "rank": 4,
         "name": "Aymeric Laporte",
         "team": "Spain",
         "flag": "🇪🇸",
@@ -243,13 +250,6 @@
       {
         "rank": 4,
         "name": "Gonzalo Montiel",
-        "team": "Argentina",
-        "flag": "🇦🇷",
-        "value": 1
-      },
-      {
-        "rank": 4,
-        "name": "José Manuel López",
         "team": "Argentina",
         "flag": "🇦🇷",
         "value": 1
@@ -486,8 +486,8 @@
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 89.6,
-        "display": "89.6%",
+        "value": 89.4,
+        "display": "89.4%",
         "matches": 8
       }
     ],
@@ -514,8 +514,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 41.4,
-        "display": "41.4%",
+        "value": 42,
+        "display": "42.0%",
         "matches": 7
       },
       {
@@ -532,16 +532,16 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 64.2,
-        "display": "64.2%",
+        "value": 63.6,
+        "display": "63.6%",
         "matches": 7
       },
       {
         "rank": 2,
         "team": "Argentina",
         "flag": "🇦🇷",
-        "value": 59.6,
-        "display": "59.6%",
+        "value": 59.5,
+        "display": "59.5%",
         "matches": 8
       }
     ],
@@ -558,8 +558,8 @@
         "rank": 2,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 19.5,
-        "display": "19.5%",
+        "value": 20.2,
+        "display": "20.2%",
         "matches": 7
       }
     ],
@@ -568,8 +568,8 @@
         "rank": 1,
         "team": "Spain",
         "flag": "🇪🇸",
-        "value": 53.1,
-        "display": "53.1%",
+        "value": 52.9,
+        "display": "52.9%",
         "matches": 7
       },
       {
@@ -909,11 +909,11 @@
           "value": 2
         },
         {
-          "name": "Enzo Fernández",
+          "name": "Alexis Mac Allister",
           "value": 1
         },
         {
-          "name": "Facundo Medina",
+          "name": "Enzo Fernández",
           "value": 1
         }
       ],
@@ -3290,7 +3290,7 @@
           "sot": 15,
           "tackles": 11,
           "blocks": 6,
-          "passes": 337,
+          "passes": 341,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3341,9 +3341,9 @@
           "sot": 4,
           "tackles": 21,
           "blocks": 4,
-          "passes": 422,
+          "passes": 423,
           "saves": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -3477,7 +3477,7 @@
           "sot": 0,
           "tackles": 9,
           "blocks": 0,
-          "passes": 137,
+          "passes": 140,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3528,7 +3528,7 @@
           "sot": 0,
           "tackles": 15,
           "blocks": 0,
-          "passes": 237,
+          "passes": 241,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3545,7 +3545,7 @@
           "sot": 1,
           "tackles": 9,
           "blocks": 1,
-          "passes": 546,
+          "passes": 554,
           "saves": 0,
           "yellow": 2,
           "red": 0,
@@ -3579,7 +3579,7 @@
           "sot": 0,
           "tackles": 4,
           "blocks": 0,
-          "passes": 185,
+          "passes": 189,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3613,7 +3613,7 @@
           "sot": 0,
           "tackles": 6,
           "blocks": 0,
-          "passes": 82,
+          "passes": 83,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3645,9 +3645,9 @@
           "assists": 0,
           "shots": 1,
           "sot": 0,
-          "tackles": 0,
+          "tackles": 1,
           "blocks": 0,
-          "passes": 76,
+          "passes": 78,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3721,7 +3721,7 @@
           "sot": 2,
           "tackles": 2,
           "blocks": 1,
-          "passes": 85,
+          "passes": 89,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3738,7 +3738,7 @@
           "sot": 3,
           "tackles": 14,
           "blocks": 0,
-          "passes": 353,
+          "passes": 359,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3764,6 +3764,23 @@
           "gk": false
         },
         {
+          "name": "Ferran Torres",
+          "apps": 7,
+          "goals": 1,
+          "assists": 1,
+          "shots": 10,
+          "sot": 3,
+          "tackles": 0,
+          "blocks": 0,
+          "passes": 49,
+          "saves": 0,
+          "yellow": 1,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
           "name": "Lamine Yamal",
           "apps": 7,
           "goals": 1,
@@ -3772,7 +3789,7 @@
           "sot": 11,
           "tackles": 11,
           "blocks": 6,
-          "passes": 240,
+          "passes": 244,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3823,7 +3840,7 @@
           "sot": 2,
           "tackles": 5,
           "blocks": 0,
-          "passes": 340,
+          "passes": 349,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3849,17 +3866,17 @@
           "gk": false
         },
         {
-          "name": "Ferran Torres",
-          "apps": 7,
+          "name": "Nico Williams",
+          "apps": 5,
           "goals": 0,
           "assists": 1,
-          "shots": 9,
+          "shots": 3,
           "sot": 2,
           "tackles": 0,
-          "blocks": 0,
-          "passes": 48,
+          "blocks": 1,
+          "passes": 44,
           "saves": 0,
-          "yellow": 1,
+          "yellow": 0,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
@@ -3908,7 +3925,7 @@
           "sot": 1,
           "tackles": 9,
           "blocks": 1,
-          "passes": 352,
+          "passes": 360,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -3925,7 +3942,7 @@
           "sot": 2,
           "tackles": 8,
           "blocks": 0,
-          "passes": 576,
+          "passes": 585,
           "saves": 0,
           "yellow": 1,
           "red": 0,
@@ -3942,30 +3959,13 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 224,
+          "passes": 225,
           "saves": 7,
           "yellow": 0,
           "red": 0,
           "penScored": 0,
           "penMissed": 0,
           "gk": true
-        },
-        {
-          "name": "Nico Williams",
-          "apps": 5,
-          "goals": 0,
-          "assists": 0,
-          "shots": 3,
-          "sot": 2,
-          "tackles": 0,
-          "blocks": 1,
-          "passes": 41,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
         },
         {
           "name": "Yéremy Pino",
@@ -3977,6 +3977,23 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 30,
+          "saves": 0,
+          "yellow": 0,
+          "red": 0,
+          "penScored": 0,
+          "penMissed": 0,
+          "gk": false
+        },
+        {
+          "name": "Martín Zubimendi",
+          "apps": 1,
+          "goals": 0,
+          "assists": 0,
+          "shots": 0,
+          "sot": 0,
+          "tackles": 1,
+          "blocks": 0,
+          "passes": 21,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4010,7 +4027,7 @@
           "sot": 0,
           "tackles": 0,
           "blocks": 0,
-          "passes": 4,
+          "passes": 10,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -4045,23 +4062,6 @@
           "tackles": 0,
           "blocks": 0,
           "passes": 2,
-          "saves": 0,
-          "yellow": 0,
-          "red": 0,
-          "penScored": 0,
-          "penMissed": 0,
-          "gk": false
-        },
-        {
-          "name": "Martín Zubimendi",
-          "apps": 1,
-          "goals": 0,
-          "assists": 0,
-          "shots": 0,
-          "sot": 0,
-          "tackles": 0,
-          "blocks": 0,
-          "passes": 10,
           "saves": 0,
           "yellow": 0,
           "red": 0,
@@ -38772,35 +38772,40 @@
       },
       "760517": {
         "penMiss": [],
-        "assists": [],
+        "assists": [
+          {
+            "name": "Nico Williams",
+            "team": "Spain"
+          }
+        ],
         "teamBox": [
           {
             "team": "Spain",
-            "possessionPct": 67.3,
-            "accuratePasses": 698,
-            "totalPasses": 771,
-            "shotsOnTarget": 11,
-            "totalShots": 19,
+            "possessionPct": 67.5,
+            "accuratePasses": 755,
+            "totalPasses": 833,
+            "shotsOnTarget": 12,
+            "totalShots": 20,
             "effectiveTackles": 11,
-            "totalTackles": 16,
-            "accurateCrosses": 4,
-            "totalCrosses": 26,
+            "totalTackles": 17,
+            "accurateCrosses": 5,
+            "totalCrosses": 27,
             "accurateLongBalls": 22,
-            "totalLongBalls": 44
+            "totalLongBalls": 45
           },
           {
             "team": "Argentina",
-            "possessionPct": 32.7,
-            "accuratePasses": 301,
-            "totalPasses": 384,
+            "possessionPct": 32.5,
+            "accuratePasses": 318,
+            "totalPasses": 411,
             "shotsOnTarget": 0,
             "totalShots": 0,
-            "effectiveTackles": 12,
-            "totalTackles": 16,
+            "effectiveTackles": 13,
+            "totalTackles": 18,
             "accurateCrosses": 0,
             "totalCrosses": 2,
-            "accurateLongBalls": 17,
-            "totalLongBalls": 57
+            "accurateLongBalls": 19,
+            "totalLongBalls": 61
           }
         ],
         "players": [
@@ -38815,7 +38820,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 33
+            "ps": 34
           },
           {
             "n": "Aymeric Laporte",
@@ -38837,7 +38842,7 @@
             "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 117
+            "ps": 126
           },
           {
             "n": "Marc Cucurella",
@@ -38848,7 +38853,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 67
+            "ps": 76
           },
           {
             "n": "Pedro Porro",
@@ -38859,7 +38864,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 91
+            "ps": 97
           },
           {
             "n": "Dani Olmo",
@@ -38925,7 +38930,7 @@
             "st": 2,
             "tk": 3,
             "bk": 1,
-            "ps": 47
+            "ps": 51
           },
           {
             "n": "Martín Zubimendi",
@@ -38934,9 +38939,9 @@
             "tid": "164",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 10
+            "ps": 21
           },
           {
             "n": "Nico Williams",
@@ -38947,18 +38952,18 @@
             "st": 2,
             "tk": 0,
             "bk": 1,
-            "ps": 18
+            "ps": 21
           },
           {
             "n": "Ferran Torres",
             "t": "Spain",
             "aid": "265869",
             "tid": "164",
-            "sh": 2,
-            "st": 1,
+            "sh": 3,
+            "st": 2,
             "tk": 0,
             "bk": 0,
-            "ps": 7
+            "ps": 8
           },
           {
             "n": "Pedri",
@@ -38969,7 +38974,7 @@
             "st": 1,
             "tk": 2,
             "bk": 0,
-            "ps": 52
+            "ps": 60
           },
           {
             "n": "Mikel Merino",
@@ -38980,7 +38985,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 17
+            "ps": 21
           },
           {
             "n": "Eric García",
@@ -38991,7 +38996,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 4
+            "ps": 10
           },
           {
             "n": "Emiliano Martínez",
@@ -39059,7 +39064,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 27
+            "ps": 28
           },
           {
             "n": "Enzo Fernández",
@@ -39114,7 +39119,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 22
+            "ps": 26
           },
           {
             "n": "Leandro Paredes",
@@ -39125,7 +39130,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 24
+            "ps": 32
           },
           {
             "n": "Nicolás Otamendi",
@@ -39136,7 +39141,7 @@
             "st": 0,
             "tk": 0,
             "bk": 0,
-            "ps": 23
+            "ps": 27
           },
           {
             "n": "Nahuel Molina",
@@ -39147,7 +39152,7 @@
             "st": 0,
             "tk": 3,
             "bk": 0,
-            "ps": 12
+            "ps": 16
           },
           {
             "n": "Giuliano Simeone",
@@ -39158,7 +39163,7 @@
             "st": 0,
             "tk": 2,
             "bk": 0,
-            "ps": 13
+            "ps": 14
           },
           {
             "n": "Marcos Senesi",
@@ -39167,9 +39172,9 @@
             "tid": "202",
             "sh": 0,
             "st": 0,
-            "tk": 0,
+            "tk": 1,
             "bk": 0,
-            "ps": 4
+            "ps": 6
           },
           {
             "n": "Facundo Medina",
@@ -39180,7 +39185,7 @@
             "st": 0,
             "tk": 1,
             "bk": 0,
-            "ps": 11
+            "ps": 14
           }
         ]
       }
