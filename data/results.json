@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19T21:31:32.273Z",
+    "generatedAt": "2026-07-19T21:40:06.211Z",
     "source": "ESPN keyless FIFA World Cup scoreboard",
     "finished": 83,
     "live": 1
@@ -97862,6 +97862,12 @@
           "player": "Enzo Fernández",
           "minute": 90,
           "type": "red"
+        },
+        {
+          "team": "away",
+          "player": "Unknown",
+          "minute": 104,
+          "type": "yellow"
         }
       ],
       "updatedAt": "2026-07-19T19:00:00.000Z",
@@ -97875,7 +97881,7 @@
           "away": 0
         },
         "shots": {
-          "home": 16,
+          "home": 19,
           "away": 0
         },
         "yellow": {
@@ -97892,7 +97898,7 @@
         },
         "fouls": {
           "home": 16,
-          "away": 21
+          "away": 22
         },
         "cornersByHalf": {
           "home": [
@@ -97926,7 +97932,7 @@
           "Nico Williams": 2
         },
         "playerShots": {
-          "Lamine Yamal": 3,
+          "Lamine Yamal": 4,
           "Mikel Oyarzabal": 1,
           "Marc Cucurella": 1,
           "Álex Baena": 1,
@@ -97936,14 +97942,15 @@
           "Pau Cubarsí": 1,
           "Aymeric Laporte": 1,
           "Rodri": 1,
-          "Nico Williams": 2
+          "Nico Williams": 3,
+          "Mikel Merino": 1
         },
         "playerShotBreakdown": {
           "Lamine Yamal": {
             "team": "home",
-            "shots": 3,
+            "shots": 4,
             "sot": 2,
-            "off": 0,
+            "off": 1,
             "blocked": 1,
             "goals": 0
           },
@@ -98021,9 +98028,17 @@
           },
           "Nico Williams": {
             "team": "home",
-            "shots": 2,
+            "shots": 3,
             "sot": 2,
             "off": 0,
+            "blocked": 1,
+            "goals": 0
+          },
+          "Mikel Merino": {
+            "team": "home",
+            "shots": 1,
+            "sot": 0,
+            "off": 1,
             "blocked": 0,
             "goals": 0
           }
@@ -98124,7 +98139,7 @@
             "sh": 0,
             "sot": 0,
             "fc": 3,
-            "fs": 2,
+            "fs": 3,
             "yc": 0,
             "rc": 0,
             "off": 0,
@@ -98241,7 +98256,7 @@
             "aid": "362150",
             "g": 0,
             "a": 0,
-            "sh": 3,
+            "sh": 4,
             "sot": 2,
             "fc": 1,
             "fs": 1,
@@ -98281,7 +98296,7 @@
             "aid": "312146",
             "g": 0,
             "a": 0,
-            "sh": 2,
+            "sh": 3,
             "sot": 2,
             "fc": 0,
             "fs": 0,
@@ -98341,7 +98356,7 @@
             "aid": "209581",
             "g": 0,
             "a": 0,
-            "sh": 0,
+            "sh": 1,
             "sot": 0,
             "fc": 1,
             "fs": 2,
@@ -98666,7 +98681,7 @@
             "a": 0,
             "sh": 0,
             "sot": 0,
-            "fc": 2,
+            "fc": 3,
             "fs": 0,
             "yc": 0,
             "rc": 0,
@@ -98674,6 +98689,23 @@
             "tk": 0,
             "bk": 0,
             "ps": 7
+          },
+          {
+            "team": "away",
+            "name": "Marcos Senesi",
+            "pos": "SUB",
+            "num": 2,
+            "starter": false,
+            "aid": "233945",
+            "g": 0,
+            "a": 0,
+            "sh": 0,
+            "sot": 0,
+            "fc": 0,
+            "fs": 0,
+            "yc": 0,
+            "rc": 0,
+            "off": 0
           },
           {
             "team": "away",
@@ -98773,6 +98805,13 @@
             "on": "Eric García",
             "off": "Aymeric Laporte",
             "injury": false
+          },
+          {
+            "team": "away",
+            "minute": 101,
+            "on": "Marcos Senesi",
+            "off": "Julián Alvarez",
+            "injury": false
           }
         ],
         "firstGoalMethod": null,
@@ -98801,16 +98840,16 @@
         },
         "tempo": {
           "possession": {
-            "home": 67.5,
-            "away": 32.5
+            "home": 67.3,
+            "away": 32.7
           },
           "passes": {
-            "home": 722,
-            "away": 356
+            "home": 771,
+            "away": 384
           },
           "tackles": {
-            "home": 14,
-            "away": 15
+            "home": 16,
+            "away": 16
           },
           "saves": {
             "home": 0,
@@ -98821,16 +98860,16 @@
             "away": 1
           },
           "blockedShots": {
-            "home": 2,
+            "home": 3,
             "away": 0
           },
           "interceptions": {
-            "home": 8,
+            "home": 10,
             "away": 14
           },
           "clearances": {
-            "home": 11,
-            "away": 19
+            "home": 12,
+            "away": 21
           }
         },
         "full": [
@@ -98838,7 +98877,7 @@
             "key": "foulsCommitted",
             "label": "Fouls",
             "home": "16",
-            "away": "21"
+            "away": "22"
           },
           {
             "key": "yellowCards",
@@ -98873,13 +98912,13 @@
           {
             "key": "possessionPct",
             "label": "POSSESSION",
-            "home": "67.5",
-            "away": "32.5"
+            "home": "67.3",
+            "away": "32.7"
           },
           {
             "key": "totalShots",
             "label": "SHOTS",
-            "home": "16",
+            "home": "19",
             "away": "0"
           },
           {
@@ -98891,7 +98930,7 @@
           {
             "key": "shotPct",
             "label": "On Target %",
-            "home": "0.7",
+            "home": "0.6",
             "away": "0.0"
           },
           {
@@ -98909,14 +98948,14 @@
           {
             "key": "accuratePasses",
             "label": "Accurate Passes",
-            "home": "653",
-            "away": "280"
+            "home": "698",
+            "away": "301"
           },
           {
             "key": "totalPasses",
             "label": "Passes",
-            "home": "722",
-            "away": "356"
+            "home": "771",
+            "away": "384"
           },
           {
             "key": "passPct",
@@ -98927,32 +98966,32 @@
           {
             "key": "accurateCrosses",
             "label": "Accurate Crosses",
-            "home": "3",
+            "home": "4",
             "away": "0"
           },
           {
             "key": "totalCrosses",
             "label": "Crosses",
-            "home": "24",
+            "home": "26",
             "away": "2"
           },
           {
             "key": "crossPct",
             "label": "Cross %",
-            "home": "0.1",
+            "home": "0.2",
             "away": "0.0"
           },
           {
             "key": "totalLongBalls",
             "label": "Long Balls",
-            "home": "41",
-            "away": "49"
+            "home": "44",
+            "away": "57"
           },
           {
             "key": "accurateLongBalls",
             "label": "Accurate Long Balls",
-            "home": "21",
-            "away": "15"
+            "home": "22",
+            "away": "17"
           },
           {
             "key": "longballPct",
@@ -98963,50 +99002,50 @@
           {
             "key": "blockedShots",
             "label": "Blocked Shots",
-            "home": "2",
+            "home": "3",
             "away": "0"
           },
           {
             "key": "effectiveTackles",
             "label": "Effective Tackles",
-            "home": "9",
-            "away": "11"
+            "home": "11",
+            "away": "12"
           },
           {
             "key": "totalTackles",
             "label": "Tackles",
-            "home": "14",
-            "away": "15"
+            "home": "16",
+            "away": "16"
           },
           {
             "key": "tacklePct",
             "label": "Tackle %",
-            "home": "0.6",
-            "away": "0.7"
+            "home": "0.7",
+            "away": "0.8"
           },
           {
             "key": "interceptions",
             "label": "Interceptions",
-            "home": "8",
+            "home": "10",
             "away": "14"
           },
           {
             "key": "effectiveClearance",
             "label": "Effective Clearances",
-            "home": "11",
-            "away": "19"
+            "home": "12",
+            "away": "21"
           },
           {
             "key": "totalClearance",
             "label": "Clearances",
-            "home": "11",
-            "away": "19"
+            "home": "12",
+            "away": "21"
           }
         ],
         "playerTackles": {
-          "Álex Baena": 1,
           "Marc Cucurella": 1,
-          "Pau Cubarsí": 1,
+          "Pau Cubarsí": 2,
+          "Álex Baena": 1,
           "Cristian Romero": 1
         }
       }
